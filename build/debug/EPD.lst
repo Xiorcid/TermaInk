@@ -1,0 +1,1952 @@
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"EPD.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/EPD.c"
+  20              		.section	.text.EPD_Reset,"ax",%progbits
+  21              		.align	1
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	EPD_Reset:
+  27              	.LFB322:
+   1:Core/Src/EPD.c **** /*****************************************************************************
+   2:Core/Src/EPD.c **** * | File      	:  	EPD.c
+   3:Core/Src/EPD.c **** * | Author      :   Waveshare team
+   4:Core/Src/EPD.c **** * | Function    :   2.13inch e-paper V3
+   5:Core/Src/EPD.c **** * | Info        :
+   6:Core/Src/EPD.c **** *----------------
+   7:Core/Src/EPD.c **** * |	This version:   V1.1
+   8:Core/Src/EPD.c **** * | Date        :   2021-10-30
+   9:Core/Src/EPD.c **** * | Info        :
+  10:Core/Src/EPD.c **** * -----------------------------------------------------------------------------
+  11:Core/Src/EPD.c **** #
+  12:Core/Src/EPD.c **** # Permission is hereby granted, free of charge, to any person obtaining a copy
+  13:Core/Src/EPD.c **** # of this software and associated documnetation files (the "Software"), to deal
+  14:Core/Src/EPD.c **** # in the Software without restriction, including without limitation the rights
+  15:Core/Src/EPD.c **** # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  16:Core/Src/EPD.c **** # copies of the Software, and to permit persons to  whom the Software is
+  17:Core/Src/EPD.c **** # furished to do so, subject to the following conditions:
+  18:Core/Src/EPD.c **** #
+  19:Core/Src/EPD.c **** # The above copyright notice and this permission notice shall be included in
+  20:Core/Src/EPD.c **** # all copies or substantial portions of the Software.
+  21:Core/Src/EPD.c **** #
+  22:Core/Src/EPD.c **** # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  23:Core/Src/EPD.c **** # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  24:Core/Src/EPD.c **** # FITNESS OR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  25:Core/Src/EPD.c **** # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  26:Core/Src/EPD.c **** # LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  27:Core/Src/EPD.c **** # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  28:Core/Src/EPD.c **** # THE SOFTWARE.
+  29:Core/Src/EPD.c **** #
+  30:Core/Src/EPD.c **** ******************************************************************************/
+  31:Core/Src/EPD.c **** #include "EPD.h"
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 2
+
+
+  32:Core/Src/EPD.c **** 
+  33:Core/Src/EPD.c **** UBYTE WF_PARTIAL[159] =
+  34:Core/Src/EPD.c **** {
+  35:Core/Src/EPD.c **** 	0x0,0x40,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  36:Core/Src/EPD.c **** 	0x80,0x80,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  37:Core/Src/EPD.c **** 	0x40,0x40,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  38:Core/Src/EPD.c **** 	0x0,0x80,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  39:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  40:Core/Src/EPD.c **** 	0x14,0x0,0x0,0x0,0x0,0x0,0x0,  
+  41:Core/Src/EPD.c **** 	0x1,0x0,0x0,0x0,0x0,0x0,0x0,
+  42:Core/Src/EPD.c **** 	0x1,0x0,0x0,0x0,0x0,0x0,0x0,
+  43:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  44:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  45:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  46:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  47:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  48:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  49:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  50:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  51:Core/Src/EPD.c **** 	0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  52:Core/Src/EPD.c **** 	0x22,0x22,0x22,0x22,0x22,0x22,0x0,0x0,0x0,
+  53:Core/Src/EPD.c **** 	0x22,0x17,0x41,0x00,0x32,0x36,
+  54:Core/Src/EPD.c **** };
+  55:Core/Src/EPD.c **** 
+  56:Core/Src/EPD.c **** UBYTE WS_20_30[159] =
+  57:Core/Src/EPD.c **** {											
+  58:Core/Src/EPD.c **** 	0x80,	0x4A,	0x40,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,
+  59:Core/Src/EPD.c **** 	0x40,	0x4A,	0x80,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,
+  60:Core/Src/EPD.c **** 	0x80,	0x4A,	0x40,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,
+  61:Core/Src/EPD.c **** 	0x40,	0x4A,	0x80,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,
+  62:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,
+  63:Core/Src/EPD.c **** 	0xF,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  64:Core/Src/EPD.c **** 	0xF,	0x0,	0x0,	0xF,	0x0,	0x0,	0x2,					
+  65:Core/Src/EPD.c **** 	0xF,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  66:Core/Src/EPD.c **** 	0x1,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  67:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  68:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  69:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  70:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  71:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  72:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  73:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  74:Core/Src/EPD.c **** 	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,	0x0,					
+  75:Core/Src/EPD.c **** 	0x22,	0x22,	0x22,	0x22,	0x22,	0x22,	0x0,	0x0,	0x0,			
+  76:Core/Src/EPD.c **** 	0x22,	0x17,	0x41,	0x0,	0x32,	0x36						
+  77:Core/Src/EPD.c **** };
+  78:Core/Src/EPD.c **** 
+  79:Core/Src/EPD.c **** /******************************************************************************
+  80:Core/Src/EPD.c **** function :	Software reset
+  81:Core/Src/EPD.c **** parameter:
+  82:Core/Src/EPD.c **** ******************************************************************************/
+  83:Core/Src/EPD.c **** static void EPD_Reset(void)
+  84:Core/Src/EPD.c **** {
+  28              		.loc 1 84 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 3
+
+
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  85:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_RST_PIN, 1);
+  36              		.loc 1 85 5 view .LVU1
+  37 0002 0122     		movs	r2, #1
+  38 0004 0821     		movs	r1, #8
+  39 0006 4FF09040 		mov	r0, #1207959552
+  40 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  41              	.LVL0:
+  86:Core/Src/EPD.c ****     DEV_Delay_ms(20);
+  42              		.loc 1 86 5 view .LVU2
+  43 000e 1420     		movs	r0, #20
+  44 0010 FFF7FEFF 		bl	HAL_Delay
+  45              	.LVL1:
+  46              		.loc 1 86 21 discriminator 1 view .LVU3
+  87:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_RST_PIN, 0);
+  47              		.loc 1 87 5 view .LVU4
+  48 0014 0022     		movs	r2, #0
+  49 0016 0821     		movs	r1, #8
+  50 0018 4FF09040 		mov	r0, #1207959552
+  51 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  52              	.LVL2:
+  88:Core/Src/EPD.c ****     DEV_Delay_ms(2);
+  53              		.loc 1 88 5 view .LVU5
+  54 0020 0220     		movs	r0, #2
+  55 0022 FFF7FEFF 		bl	HAL_Delay
+  56              	.LVL3:
+  57              		.loc 1 88 20 discriminator 1 view .LVU6
+  89:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_RST_PIN, 1);
+  58              		.loc 1 89 5 view .LVU7
+  59 0026 0122     		movs	r2, #1
+  60 0028 0821     		movs	r1, #8
+  61 002a 4FF09040 		mov	r0, #1207959552
+  62 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  63              	.LVL4:
+  90:Core/Src/EPD.c ****     DEV_Delay_ms(20);
+  64              		.loc 1 90 5 view .LVU8
+  65 0032 1420     		movs	r0, #20
+  66 0034 FFF7FEFF 		bl	HAL_Delay
+  67              	.LVL5:
+  68              		.loc 1 90 21 discriminator 1 view .LVU9
+  91:Core/Src/EPD.c **** }
+  69              		.loc 1 91 1 is_stmt 0 view .LVU10
+  70 0038 08BD     		pop	{r3, pc}
+  71              		.cfi_endproc
+  72              	.LFE322:
+  74              		.section	.text.EPD_SendCommand,"ax",%progbits
+  75              		.align	1
+  76              		.syntax unified
+  77              		.thumb
+  78              		.thumb_func
+  80              	EPD_SendCommand:
+  81              	.LVL6:
+  82              	.LFB323:
+  92:Core/Src/EPD.c **** 
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 4
+
+
+  93:Core/Src/EPD.c **** /******************************************************************************
+  94:Core/Src/EPD.c **** function :	send command
+  95:Core/Src/EPD.c **** parameter:
+  96:Core/Src/EPD.c ****      Reg : Command register
+  97:Core/Src/EPD.c **** ******************************************************************************/
+  98:Core/Src/EPD.c **** static void EPD_SendCommand(UBYTE Reg)
+  99:Core/Src/EPD.c **** {
+  83              		.loc 1 99 1 is_stmt 1 view -0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87              		.loc 1 99 1 is_stmt 0 view .LVU12
+  88 0000 10B5     		push	{r4, lr}
+  89              		.cfi_def_cfa_offset 8
+  90              		.cfi_offset 4, -8
+  91              		.cfi_offset 14, -4
+  92 0002 0446     		mov	r4, r0
+ 100:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_DC_PIN, 0);
+  93              		.loc 1 100 5 is_stmt 1 view .LVU13
+  94 0004 0022     		movs	r2, #0
+  95 0006 4021     		movs	r1, #64
+  96 0008 4FF09040 		mov	r0, #1207959552
+  97              	.LVL7:
+  98              		.loc 1 100 5 is_stmt 0 view .LVU14
+  99 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 100              	.LVL8:
+ 101:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_CS_PIN, 0);
+ 101              		.loc 1 101 5 is_stmt 1 view .LVU15
+ 102 0010 0022     		movs	r2, #0
+ 103 0012 1021     		movs	r1, #16
+ 104 0014 4FF09040 		mov	r0, #1207959552
+ 105 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 106              	.LVL9:
+ 102:Core/Src/EPD.c ****     DEV_SPI_WriteByte(Reg);
+ 107              		.loc 1 102 5 view .LVU16
+ 108 001c 2046     		mov	r0, r4
+ 109 001e FFF7FEFF 		bl	DEV_SPI_WriteByte
+ 110              	.LVL10:
+ 103:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_CS_PIN, 1);
+ 111              		.loc 1 103 5 view .LVU17
+ 112 0022 0122     		movs	r2, #1
+ 113 0024 1021     		movs	r1, #16
+ 114 0026 4FF09040 		mov	r0, #1207959552
+ 115 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 116              	.LVL11:
+ 104:Core/Src/EPD.c **** }
+ 117              		.loc 1 104 1 is_stmt 0 view .LVU18
+ 118 002e 10BD     		pop	{r4, pc}
+ 119              		.loc 1 104 1 view .LVU19
+ 120              		.cfi_endproc
+ 121              	.LFE323:
+ 123              		.section	.text.EPD_SendData,"ax",%progbits
+ 124              		.align	1
+ 125              		.syntax unified
+ 126              		.thumb
+ 127              		.thumb_func
+ 129              	EPD_SendData:
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 5
+
+
+ 130              	.LVL12:
+ 131              	.LFB324:
+ 105:Core/Src/EPD.c **** 
+ 106:Core/Src/EPD.c **** /******************************************************************************
+ 107:Core/Src/EPD.c **** function :	send data
+ 108:Core/Src/EPD.c **** parameter:
+ 109:Core/Src/EPD.c ****     Data : Write data
+ 110:Core/Src/EPD.c **** ******************************************************************************/
+ 111:Core/Src/EPD.c **** static void EPD_SendData(UBYTE Data)
+ 112:Core/Src/EPD.c **** {
+ 132              		.loc 1 112 1 is_stmt 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136              		.loc 1 112 1 is_stmt 0 view .LVU21
+ 137 0000 10B5     		push	{r4, lr}
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 4, -8
+ 140              		.cfi_offset 14, -4
+ 141 0002 0446     		mov	r4, r0
+ 113:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_DC_PIN, 1);
+ 142              		.loc 1 113 5 is_stmt 1 view .LVU22
+ 143 0004 0122     		movs	r2, #1
+ 144 0006 4021     		movs	r1, #64
+ 145 0008 4FF09040 		mov	r0, #1207959552
+ 146              	.LVL13:
+ 147              		.loc 1 113 5 is_stmt 0 view .LVU23
+ 148 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 149              	.LVL14:
+ 114:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_CS_PIN, 0);
+ 150              		.loc 1 114 5 is_stmt 1 view .LVU24
+ 151 0010 0022     		movs	r2, #0
+ 152 0012 1021     		movs	r1, #16
+ 153 0014 4FF09040 		mov	r0, #1207959552
+ 154 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 155              	.LVL15:
+ 115:Core/Src/EPD.c ****     DEV_SPI_WriteByte(Data);
+ 156              		.loc 1 115 5 view .LVU25
+ 157 001c 2046     		mov	r0, r4
+ 158 001e FFF7FEFF 		bl	DEV_SPI_WriteByte
+ 159              	.LVL16:
+ 116:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_CS_PIN, 1);
+ 160              		.loc 1 116 5 view .LVU26
+ 161 0022 0122     		movs	r2, #1
+ 162 0024 1021     		movs	r1, #16
+ 163 0026 4FF09040 		mov	r0, #1207959552
+ 164 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 165              	.LVL17:
+ 117:Core/Src/EPD.c **** }
+ 166              		.loc 1 117 1 is_stmt 0 view .LVU27
+ 167 002e 10BD     		pop	{r4, pc}
+ 168              		.loc 1 117 1 view .LVU28
+ 169              		.cfi_endproc
+ 170              	.LFE324:
+ 172              		.section	.text.EPD_SetWindows,"ax",%progbits
+ 173              		.align	1
+ 174              		.syntax unified
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 6
+
+
+ 175              		.thumb
+ 176              		.thumb_func
+ 178              	EPD_SetWindows:
+ 179              	.LVL18:
+ 180              	.LFB330:
+ 118:Core/Src/EPD.c **** 
+ 119:Core/Src/EPD.c **** /******************************************************************************
+ 120:Core/Src/EPD.c **** function :	Wait until the busy_pin goes LOW
+ 121:Core/Src/EPD.c **** parameter:
+ 122:Core/Src/EPD.c **** ******************************************************************************/
+ 123:Core/Src/EPD.c **** void EPD_ReadBusy(void)
+ 124:Core/Src/EPD.c **** {
+ 125:Core/Src/EPD.c **** 	while(1)
+ 126:Core/Src/EPD.c **** 	{	 //=1 BUSY
+ 127:Core/Src/EPD.c **** 		if(DEV_Digital_Read(EPD_BUSY_PIN)==0) 
+ 128:Core/Src/EPD.c **** 			break;
+ 129:Core/Src/EPD.c **** 		DEV_Delay_ms(10);
+ 130:Core/Src/EPD.c **** 	}
+ 131:Core/Src/EPD.c **** 	DEV_Delay_ms(10);
+ 132:Core/Src/EPD.c **** }
+ 133:Core/Src/EPD.c **** 
+ 134:Core/Src/EPD.c **** /******************************************************************************
+ 135:Core/Src/EPD.c **** function :	Turn On Display
+ 136:Core/Src/EPD.c **** parameter:
+ 137:Core/Src/EPD.c **** ******************************************************************************/
+ 138:Core/Src/EPD.c **** static void EPD_TurnOnDisplay(void)
+ 139:Core/Src/EPD.c **** {
+ 140:Core/Src/EPD.c **** 	EPD_SendCommand(0x22); // Display Update Control
+ 141:Core/Src/EPD.c **** 	EPD_SendData(0xc7);
+ 142:Core/Src/EPD.c **** 	EPD_SendCommand(0x20); // Activate Display Update Sequence
+ 143:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ 144:Core/Src/EPD.c **** }
+ 145:Core/Src/EPD.c **** 
+ 146:Core/Src/EPD.c **** /******************************************************************************
+ 147:Core/Src/EPD.c **** function :	Turn On Display
+ 148:Core/Src/EPD.c **** parameter:	
+ 149:Core/Src/EPD.c **** ******************************************************************************/
+ 150:Core/Src/EPD.c **** static void EPD_TurnOnDisplay_Partial(void)
+ 151:Core/Src/EPD.c **** {
+ 152:Core/Src/EPD.c **** 	EPD_SendCommand(0x22); // Display Update Control
+ 153:Core/Src/EPD.c **** 	EPD_SendData(0x0f);	// fast:0x0c, quality:0x0f, 0xcf
+ 154:Core/Src/EPD.c **** 	EPD_SendCommand(0x20); // Activate Display Update Sequence
+ 155:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ 156:Core/Src/EPD.c **** }
+ 157:Core/Src/EPD.c **** 
+ 158:Core/Src/EPD.c **** /******************************************************************************
+ 159:Core/Src/EPD.c **** function :	Set lut
+ 160:Core/Src/EPD.c **** parameter:	
+ 161:Core/Src/EPD.c ****     lut :   lut data
+ 162:Core/Src/EPD.c **** ******************************************************************************/
+ 163:Core/Src/EPD.c **** static void EPD_LUT(UBYTE *lut)
+ 164:Core/Src/EPD.c **** {
+ 165:Core/Src/EPD.c **** 	UBYTE count;
+ 166:Core/Src/EPD.c **** 	EPD_SendCommand(0x32);
+ 167:Core/Src/EPD.c **** 	for(count=0; count<153; count++) 
+ 168:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 169:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 7
+
+
+ 170:Core/Src/EPD.c **** }
+ 171:Core/Src/EPD.c **** 
+ 172:Core/Src/EPD.c **** /******************************************************************************
+ 173:Core/Src/EPD.c **** function :	Send lut data and configuration
+ 174:Core/Src/EPD.c **** parameter:	
+ 175:Core/Src/EPD.c ****     lut :   lut data
+ 176:Core/Src/EPD.c **** ******************************************************************************/
+ 177:Core/Src/EPD.c **** static void EPD_2IN13_V2_LUT_by_host(UBYTE *lut)
+ 178:Core/Src/EPD.c **** {
+ 179:Core/Src/EPD.c **** 	EPD_LUT((UBYTE *)lut);			//lut
+ 180:Core/Src/EPD.c **** 	EPD_SendCommand(0x3f);
+ 181:Core/Src/EPD.c **** 	EPD_SendData(*(lut+153));
+ 182:Core/Src/EPD.c **** 	EPD_SendCommand(0x03);	// gate voltage
+ 183:Core/Src/EPD.c **** 	EPD_SendData(*(lut+154));
+ 184:Core/Src/EPD.c **** 	EPD_SendCommand(0x04);	// source voltage
+ 185:Core/Src/EPD.c **** 	EPD_SendData(*(lut+155));	// VSH
+ 186:Core/Src/EPD.c **** 	EPD_SendData(*(lut+156));	// VSH2
+ 187:Core/Src/EPD.c **** 	EPD_SendData(*(lut+157));	// VSL
+ 188:Core/Src/EPD.c **** 	EPD_SendCommand(0x2c);		// VCOM
+ 189:Core/Src/EPD.c **** 	EPD_SendData(*(lut+158));
+ 190:Core/Src/EPD.c **** }
+ 191:Core/Src/EPD.c **** 
+ 192:Core/Src/EPD.c **** /******************************************************************************
+ 193:Core/Src/EPD.c **** function :	Setting the display window
+ 194:Core/Src/EPD.c **** parameter:
+ 195:Core/Src/EPD.c **** 	Xstart : X-axis starting position
+ 196:Core/Src/EPD.c **** 	Ystart : Y-axis starting position
+ 197:Core/Src/EPD.c **** 	Xend : End position of X-axis
+ 198:Core/Src/EPD.c **** 	Yend : End position of Y-axis
+ 199:Core/Src/EPD.c **** ******************************************************************************/
+ 200:Core/Src/EPD.c **** static void EPD_SetWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend)
+ 201:Core/Src/EPD.c **** {
+ 181              		.loc 1 201 1 is_stmt 1 view -0
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 0
+ 184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 185              		.loc 1 201 1 is_stmt 0 view .LVU30
+ 186 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 187              		.cfi_def_cfa_offset 24
+ 188              		.cfi_offset 3, -24
+ 189              		.cfi_offset 4, -20
+ 190              		.cfi_offset 5, -16
+ 191              		.cfi_offset 6, -12
+ 192              		.cfi_offset 7, -8
+ 193              		.cfi_offset 14, -4
+ 194 0002 0746     		mov	r7, r0
+ 195 0004 0D46     		mov	r5, r1
+ 196 0006 1646     		mov	r6, r2
+ 197 0008 1C46     		mov	r4, r3
+ 202:Core/Src/EPD.c ****     EPD_SendCommand(0x44); // SET_RAM_X_ADDRESS_START_END_POSITION
+ 198              		.loc 1 202 5 is_stmt 1 view .LVU31
+ 199 000a 4420     		movs	r0, #68
+ 200              	.LVL19:
+ 201              		.loc 1 202 5 is_stmt 0 view .LVU32
+ 202 000c FFF7FEFF 		bl	EPD_SendCommand
+ 203              	.LVL20:
+ 203:Core/Src/EPD.c ****     EPD_SendData((Xstart>>3) & 0xFF);
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 8
+
+
+ 204              		.loc 1 203 5 is_stmt 1 view .LVU33
+ 205 0010 C7F3C700 		ubfx	r0, r7, #3, #8
+ 206 0014 FFF7FEFF 		bl	EPD_SendData
+ 207              	.LVL21:
+ 204:Core/Src/EPD.c ****     EPD_SendData((Xend>>3) & 0xFF);
+ 208              		.loc 1 204 5 view .LVU34
+ 209 0018 C6F3C700 		ubfx	r0, r6, #3, #8
+ 210 001c FFF7FEFF 		bl	EPD_SendData
+ 211              	.LVL22:
+ 205:Core/Src/EPD.c **** 	
+ 206:Core/Src/EPD.c ****     EPD_SendCommand(0x45); // SET_RAM_Y_ADDRESS_START_END_POSITION
+ 212              		.loc 1 206 5 view .LVU35
+ 213 0020 4520     		movs	r0, #69
+ 214 0022 FFF7FEFF 		bl	EPD_SendCommand
+ 215              	.LVL23:
+ 207:Core/Src/EPD.c ****     EPD_SendData(Ystart & 0xFF);
+ 216              		.loc 1 207 5 view .LVU36
+ 217 0026 E8B2     		uxtb	r0, r5
+ 218 0028 FFF7FEFF 		bl	EPD_SendData
+ 219              	.LVL24:
+ 208:Core/Src/EPD.c ****     EPD_SendData((Ystart >> 8) & 0xFF);
+ 220              		.loc 1 208 5 view .LVU37
+ 221 002c 280A     		lsrs	r0, r5, #8
+ 222 002e FFF7FEFF 		bl	EPD_SendData
+ 223              	.LVL25:
+ 209:Core/Src/EPD.c ****     EPD_SendData(Yend & 0xFF);
+ 224              		.loc 1 209 5 view .LVU38
+ 225 0032 E0B2     		uxtb	r0, r4
+ 226 0034 FFF7FEFF 		bl	EPD_SendData
+ 227              	.LVL26:
+ 210:Core/Src/EPD.c ****     EPD_SendData((Yend >> 8) & 0xFF);
+ 228              		.loc 1 210 5 view .LVU39
+ 229 0038 200A     		lsrs	r0, r4, #8
+ 230 003a FFF7FEFF 		bl	EPD_SendData
+ 231              	.LVL27:
+ 211:Core/Src/EPD.c **** }
+ 232              		.loc 1 211 1 is_stmt 0 view .LVU40
+ 233 003e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 234              		.loc 1 211 1 view .LVU41
+ 235              		.cfi_endproc
+ 236              	.LFE330:
+ 238              		.section	.text.EPD_SetCursor,"ax",%progbits
+ 239              		.align	1
+ 240              		.syntax unified
+ 241              		.thumb
+ 242              		.thumb_func
+ 244              	EPD_SetCursor:
+ 245              	.LVL28:
+ 246              	.LFB331:
+ 212:Core/Src/EPD.c **** 
+ 213:Core/Src/EPD.c **** /******************************************************************************
+ 214:Core/Src/EPD.c **** function :	Set Cursor
+ 215:Core/Src/EPD.c **** parameter:
+ 216:Core/Src/EPD.c **** 	Xstart : X-axis starting position
+ 217:Core/Src/EPD.c **** 	Ystart : Y-axis starting position
+ 218:Core/Src/EPD.c **** ******************************************************************************/
+ 219:Core/Src/EPD.c **** static void EPD_SetCursor(UWORD Xstart, UWORD Ystart)
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 9
+
+
+ 220:Core/Src/EPD.c **** {
+ 247              		.loc 1 220 1 is_stmt 1 view -0
+ 248              		.cfi_startproc
+ 249              		@ args = 0, pretend = 0, frame = 0
+ 250              		@ frame_needed = 0, uses_anonymous_args = 0
+ 251              		.loc 1 220 1 is_stmt 0 view .LVU43
+ 252 0000 38B5     		push	{r3, r4, r5, lr}
+ 253              		.cfi_def_cfa_offset 16
+ 254              		.cfi_offset 3, -16
+ 255              		.cfi_offset 4, -12
+ 256              		.cfi_offset 5, -8
+ 257              		.cfi_offset 14, -4
+ 258 0002 0546     		mov	r5, r0
+ 259 0004 0C46     		mov	r4, r1
+ 221:Core/Src/EPD.c ****     EPD_SendCommand(0x4E); // SET_RAM_X_ADDRESS_COUNTER
+ 260              		.loc 1 221 5 is_stmt 1 view .LVU44
+ 261 0006 4E20     		movs	r0, #78
+ 262              	.LVL29:
+ 263              		.loc 1 221 5 is_stmt 0 view .LVU45
+ 264 0008 FFF7FEFF 		bl	EPD_SendCommand
+ 265              	.LVL30:
+ 222:Core/Src/EPD.c ****     EPD_SendData(Xstart & 0xFF);
+ 266              		.loc 1 222 5 is_stmt 1 view .LVU46
+ 267 000c E8B2     		uxtb	r0, r5
+ 268 000e FFF7FEFF 		bl	EPD_SendData
+ 269              	.LVL31:
+ 223:Core/Src/EPD.c **** 
+ 224:Core/Src/EPD.c ****     EPD_SendCommand(0x4F); // SET_RAM_Y_ADDRESS_COUNTER
+ 270              		.loc 1 224 5 view .LVU47
+ 271 0012 4F20     		movs	r0, #79
+ 272 0014 FFF7FEFF 		bl	EPD_SendCommand
+ 273              	.LVL32:
+ 225:Core/Src/EPD.c ****     EPD_SendData(Ystart & 0xFF);
+ 274              		.loc 1 225 5 view .LVU48
+ 275 0018 E0B2     		uxtb	r0, r4
+ 276 001a FFF7FEFF 		bl	EPD_SendData
+ 277              	.LVL33:
+ 226:Core/Src/EPD.c ****     EPD_SendData((Ystart >> 8) & 0xFF);
+ 278              		.loc 1 226 5 view .LVU49
+ 279 001e 200A     		lsrs	r0, r4, #8
+ 280 0020 FFF7FEFF 		bl	EPD_SendData
+ 281              	.LVL34:
+ 227:Core/Src/EPD.c **** }
+ 282              		.loc 1 227 1 is_stmt 0 view .LVU50
+ 283 0024 38BD     		pop	{r3, r4, r5, pc}
+ 284              		.loc 1 227 1 view .LVU51
+ 285              		.cfi_endproc
+ 286              	.LFE331:
+ 288              		.section	.text.EPD_ReadBusy,"ax",%progbits
+ 289              		.align	1
+ 290              		.global	EPD_ReadBusy
+ 291              		.syntax unified
+ 292              		.thumb
+ 293              		.thumb_func
+ 295              	EPD_ReadBusy:
+ 296              	.LFB325:
+ 124:Core/Src/EPD.c **** 	while(1)
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 10
+
+
+ 297              		.loc 1 124 1 is_stmt 1 view -0
+ 298              		.cfi_startproc
+ 299              		@ args = 0, pretend = 0, frame = 0
+ 300              		@ frame_needed = 0, uses_anonymous_args = 0
+ 301 0000 08B5     		push	{r3, lr}
+ 302              		.cfi_def_cfa_offset 8
+ 303              		.cfi_offset 3, -8
+ 304              		.cfi_offset 14, -4
+ 305 0002 02E0     		b	.L13
+ 306              	.L15:
+ 129:Core/Src/EPD.c **** 	}
+ 307              		.loc 1 129 3 view .LVU53
+ 308 0004 0A20     		movs	r0, #10
+ 309 0006 FFF7FEFF 		bl	HAL_Delay
+ 310              	.LVL35:
+ 129:Core/Src/EPD.c **** 	}
+ 311              		.loc 1 129 19 discriminator 1 view .LVU54
+ 125:Core/Src/EPD.c **** 	{	 //=1 BUSY
+ 312              		.loc 1 125 7 view .LVU55
+ 313              	.L13:
+ 125:Core/Src/EPD.c **** 	{	 //=1 BUSY
+ 314              		.loc 1 125 2 view .LVU56
+ 127:Core/Src/EPD.c **** 			break;
+ 315              		.loc 1 127 3 view .LVU57
+ 127:Core/Src/EPD.c **** 			break;
+ 316              		.loc 1 127 6 is_stmt 0 view .LVU58
+ 317 000a 2021     		movs	r1, #32
+ 318 000c 4FF09040 		mov	r0, #1207959552
+ 319 0010 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 320              	.LVL36:
+ 127:Core/Src/EPD.c **** 			break;
+ 321              		.loc 1 127 5 discriminator 1 view .LVU59
+ 322 0014 0028     		cmp	r0, #0
+ 323 0016 F5D1     		bne	.L15
+ 131:Core/Src/EPD.c **** }
+ 324              		.loc 1 131 2 is_stmt 1 view .LVU60
+ 325 0018 0A20     		movs	r0, #10
+ 326 001a FFF7FEFF 		bl	HAL_Delay
+ 327              	.LVL37:
+ 131:Core/Src/EPD.c **** }
+ 328              		.loc 1 131 18 discriminator 1 view .LVU61
+ 132:Core/Src/EPD.c **** 
+ 329              		.loc 1 132 1 is_stmt 0 view .LVU62
+ 330 001e 08BD     		pop	{r3, pc}
+ 331              		.cfi_endproc
+ 332              	.LFE325:
+ 334              		.section	.text.EPD_LUT,"ax",%progbits
+ 335              		.align	1
+ 336              		.syntax unified
+ 337              		.thumb
+ 338              		.thumb_func
+ 340              	EPD_LUT:
+ 341              	.LVL38:
+ 342              	.LFB328:
+ 164:Core/Src/EPD.c **** 	UBYTE count;
+ 343              		.loc 1 164 1 is_stmt 1 view -0
+ 344              		.cfi_startproc
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 11
+
+
+ 345              		@ args = 0, pretend = 0, frame = 0
+ 346              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164:Core/Src/EPD.c **** 	UBYTE count;
+ 347              		.loc 1 164 1 is_stmt 0 view .LVU64
+ 348 0000 38B5     		push	{r3, r4, r5, lr}
+ 349              		.cfi_def_cfa_offset 16
+ 350              		.cfi_offset 3, -16
+ 351              		.cfi_offset 4, -12
+ 352              		.cfi_offset 5, -8
+ 353              		.cfi_offset 14, -4
+ 354 0002 0546     		mov	r5, r0
+ 165:Core/Src/EPD.c **** 	EPD_SendCommand(0x32);
+ 355              		.loc 1 165 2 is_stmt 1 view .LVU65
+ 166:Core/Src/EPD.c **** 	for(count=0; count<153; count++) 
+ 356              		.loc 1 166 2 view .LVU66
+ 357 0004 3220     		movs	r0, #50
+ 358              	.LVL39:
+ 166:Core/Src/EPD.c **** 	for(count=0; count<153; count++) 
+ 359              		.loc 1 166 2 is_stmt 0 view .LVU67
+ 360 0006 FFF7FEFF 		bl	EPD_SendCommand
+ 361              	.LVL40:
+ 167:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 362              		.loc 1 167 2 is_stmt 1 view .LVU68
+ 167:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 363              		.loc 1 167 11 is_stmt 0 view .LVU69
+ 364 000a 0024     		movs	r4, #0
+ 167:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 365              		.loc 1 167 2 view .LVU70
+ 366 000c 04E0     		b	.L17
+ 367              	.LVL41:
+ 368              	.L18:
+ 168:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ 369              		.loc 1 168 3 is_stmt 1 view .LVU71
+ 370 000e 285D     		ldrb	r0, [r5, r4]	@ zero_extendqisi2
+ 371 0010 FFF7FEFF 		bl	EPD_SendData
+ 372              	.LVL42:
+ 167:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 373              		.loc 1 167 31 discriminator 3 view .LVU72
+ 374 0014 0134     		adds	r4, r4, #1
+ 375              	.LVL43:
+ 167:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 376              		.loc 1 167 31 is_stmt 0 discriminator 3 view .LVU73
+ 377 0016 E4B2     		uxtb	r4, r4
+ 378              	.LVL44:
+ 379              	.L17:
+ 167:Core/Src/EPD.c **** 		EPD_SendData(lut[count]); 
+ 380              		.loc 1 167 20 is_stmt 1 discriminator 1 view .LVU74
+ 381 0018 982C     		cmp	r4, #152
+ 382 001a F8D9     		bls	.L18
+ 169:Core/Src/EPD.c **** }
+ 383              		.loc 1 169 2 view .LVU75
+ 384 001c FFF7FEFF 		bl	EPD_ReadBusy
+ 385              	.LVL45:
+ 170:Core/Src/EPD.c **** 
+ 386              		.loc 1 170 1 is_stmt 0 view .LVU76
+ 387 0020 38BD     		pop	{r3, r4, r5, pc}
+ 170:Core/Src/EPD.c **** 
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 12
+
+
+ 388              		.loc 1 170 1 view .LVU77
+ 389              		.cfi_endproc
+ 390              	.LFE328:
+ 392              		.section	.text.EPD_2IN13_V2_LUT_by_host,"ax",%progbits
+ 393              		.align	1
+ 394              		.syntax unified
+ 395              		.thumb
+ 396              		.thumb_func
+ 398              	EPD_2IN13_V2_LUT_by_host:
+ 399              	.LVL46:
+ 400              	.LFB329:
+ 178:Core/Src/EPD.c **** 	EPD_LUT((UBYTE *)lut);			//lut
+ 401              		.loc 1 178 1 is_stmt 1 view -0
+ 402              		.cfi_startproc
+ 403              		@ args = 0, pretend = 0, frame = 0
+ 404              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178:Core/Src/EPD.c **** 	EPD_LUT((UBYTE *)lut);			//lut
+ 405              		.loc 1 178 1 is_stmt 0 view .LVU79
+ 406 0000 10B5     		push	{r4, lr}
+ 407              		.cfi_def_cfa_offset 8
+ 408              		.cfi_offset 4, -8
+ 409              		.cfi_offset 14, -4
+ 410 0002 0446     		mov	r4, r0
+ 179:Core/Src/EPD.c **** 	EPD_SendCommand(0x3f);
+ 411              		.loc 1 179 2 is_stmt 1 view .LVU80
+ 412 0004 FFF7FEFF 		bl	EPD_LUT
+ 413              	.LVL47:
+ 180:Core/Src/EPD.c **** 	EPD_SendData(*(lut+153));
+ 414              		.loc 1 180 2 view .LVU81
+ 415 0008 3F20     		movs	r0, #63
+ 416 000a FFF7FEFF 		bl	EPD_SendCommand
+ 417              	.LVL48:
+ 181:Core/Src/EPD.c **** 	EPD_SendCommand(0x03);	// gate voltage
+ 418              		.loc 1 181 2 view .LVU82
+ 419 000e 94F89900 		ldrb	r0, [r4, #153]	@ zero_extendqisi2
+ 420 0012 FFF7FEFF 		bl	EPD_SendData
+ 421              	.LVL49:
+ 182:Core/Src/EPD.c **** 	EPD_SendData(*(lut+154));
+ 422              		.loc 1 182 2 view .LVU83
+ 423 0016 0320     		movs	r0, #3
+ 424 0018 FFF7FEFF 		bl	EPD_SendCommand
+ 425              	.LVL50:
+ 183:Core/Src/EPD.c **** 	EPD_SendCommand(0x04);	// source voltage
+ 426              		.loc 1 183 2 view .LVU84
+ 427 001c 94F89A00 		ldrb	r0, [r4, #154]	@ zero_extendqisi2
+ 428 0020 FFF7FEFF 		bl	EPD_SendData
+ 429              	.LVL51:
+ 184:Core/Src/EPD.c **** 	EPD_SendData(*(lut+155));	// VSH
+ 430              		.loc 1 184 2 view .LVU85
+ 431 0024 0420     		movs	r0, #4
+ 432 0026 FFF7FEFF 		bl	EPD_SendCommand
+ 433              	.LVL52:
+ 185:Core/Src/EPD.c **** 	EPD_SendData(*(lut+156));	// VSH2
+ 434              		.loc 1 185 2 view .LVU86
+ 435 002a 94F89B00 		ldrb	r0, [r4, #155]	@ zero_extendqisi2
+ 436 002e FFF7FEFF 		bl	EPD_SendData
+ 437              	.LVL53:
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 13
+
+
+ 186:Core/Src/EPD.c **** 	EPD_SendData(*(lut+157));	// VSL
+ 438              		.loc 1 186 2 view .LVU87
+ 439 0032 94F89C00 		ldrb	r0, [r4, #156]	@ zero_extendqisi2
+ 440 0036 FFF7FEFF 		bl	EPD_SendData
+ 441              	.LVL54:
+ 187:Core/Src/EPD.c **** 	EPD_SendCommand(0x2c);		// VCOM
+ 442              		.loc 1 187 2 view .LVU88
+ 443 003a 94F89D00 		ldrb	r0, [r4, #157]	@ zero_extendqisi2
+ 444 003e FFF7FEFF 		bl	EPD_SendData
+ 445              	.LVL55:
+ 188:Core/Src/EPD.c **** 	EPD_SendData(*(lut+158));
+ 446              		.loc 1 188 2 view .LVU89
+ 447 0042 2C20     		movs	r0, #44
+ 448 0044 FFF7FEFF 		bl	EPD_SendCommand
+ 449              	.LVL56:
+ 189:Core/Src/EPD.c **** }
+ 450              		.loc 1 189 2 view .LVU90
+ 451 0048 94F89E00 		ldrb	r0, [r4, #158]	@ zero_extendqisi2
+ 452 004c FFF7FEFF 		bl	EPD_SendData
+ 453              	.LVL57:
+ 190:Core/Src/EPD.c **** 
+ 454              		.loc 1 190 1 is_stmt 0 view .LVU91
+ 455 0050 10BD     		pop	{r4, pc}
+ 190:Core/Src/EPD.c **** 
+ 456              		.loc 1 190 1 view .LVU92
+ 457              		.cfi_endproc
+ 458              	.LFE329:
+ 460              		.section	.text.EPD_TurnOnDisplay,"ax",%progbits
+ 461              		.align	1
+ 462              		.syntax unified
+ 463              		.thumb
+ 464              		.thumb_func
+ 466              	EPD_TurnOnDisplay:
+ 467              	.LFB326:
+ 139:Core/Src/EPD.c **** 	EPD_SendCommand(0x22); // Display Update Control
+ 468              		.loc 1 139 1 is_stmt 1 view -0
+ 469              		.cfi_startproc
+ 470              		@ args = 0, pretend = 0, frame = 0
+ 471              		@ frame_needed = 0, uses_anonymous_args = 0
+ 472 0000 08B5     		push	{r3, lr}
+ 473              		.cfi_def_cfa_offset 8
+ 474              		.cfi_offset 3, -8
+ 475              		.cfi_offset 14, -4
+ 140:Core/Src/EPD.c **** 	EPD_SendData(0xc7);
+ 476              		.loc 1 140 2 view .LVU94
+ 477 0002 2220     		movs	r0, #34
+ 478 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 479              	.LVL58:
+ 141:Core/Src/EPD.c **** 	EPD_SendCommand(0x20); // Activate Display Update Sequence
+ 480              		.loc 1 141 2 view .LVU95
+ 481 0008 C720     		movs	r0, #199
+ 482 000a FFF7FEFF 		bl	EPD_SendData
+ 483              	.LVL59:
+ 142:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ 484              		.loc 1 142 2 view .LVU96
+ 485 000e 2020     		movs	r0, #32
+ 486 0010 FFF7FEFF 		bl	EPD_SendCommand
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 14
+
+
+ 487              	.LVL60:
+ 143:Core/Src/EPD.c **** }
+ 488              		.loc 1 143 2 view .LVU97
+ 489 0014 FFF7FEFF 		bl	EPD_ReadBusy
+ 490              	.LVL61:
+ 144:Core/Src/EPD.c **** 
+ 491              		.loc 1 144 1 is_stmt 0 view .LVU98
+ 492 0018 08BD     		pop	{r3, pc}
+ 493              		.cfi_endproc
+ 494              	.LFE326:
+ 496              		.section	.text.EPD_TurnOnDisplay_Partial,"ax",%progbits
+ 497              		.align	1
+ 498              		.syntax unified
+ 499              		.thumb
+ 500              		.thumb_func
+ 502              	EPD_TurnOnDisplay_Partial:
+ 503              	.LFB327:
+ 151:Core/Src/EPD.c **** 	EPD_SendCommand(0x22); // Display Update Control
+ 504              		.loc 1 151 1 is_stmt 1 view -0
+ 505              		.cfi_startproc
+ 506              		@ args = 0, pretend = 0, frame = 0
+ 507              		@ frame_needed = 0, uses_anonymous_args = 0
+ 508 0000 08B5     		push	{r3, lr}
+ 509              		.cfi_def_cfa_offset 8
+ 510              		.cfi_offset 3, -8
+ 511              		.cfi_offset 14, -4
+ 152:Core/Src/EPD.c **** 	EPD_SendData(0x0f);	// fast:0x0c, quality:0x0f, 0xcf
+ 512              		.loc 1 152 2 view .LVU100
+ 513 0002 2220     		movs	r0, #34
+ 514 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 515              	.LVL62:
+ 153:Core/Src/EPD.c **** 	EPD_SendCommand(0x20); // Activate Display Update Sequence
+ 516              		.loc 1 153 2 view .LVU101
+ 517 0008 0F20     		movs	r0, #15
+ 518 000a FFF7FEFF 		bl	EPD_SendData
+ 519              	.LVL63:
+ 154:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ 520              		.loc 1 154 2 view .LVU102
+ 521 000e 2020     		movs	r0, #32
+ 522 0010 FFF7FEFF 		bl	EPD_SendCommand
+ 523              	.LVL64:
+ 155:Core/Src/EPD.c **** }
+ 524              		.loc 1 155 2 view .LVU103
+ 525 0014 FFF7FEFF 		bl	EPD_ReadBusy
+ 526              	.LVL65:
+ 156:Core/Src/EPD.c **** 
+ 527              		.loc 1 156 1 is_stmt 0 view .LVU104
+ 528 0018 08BD     		pop	{r3, pc}
+ 529              		.cfi_endproc
+ 530              	.LFE327:
+ 532              		.section	.text.EPD_Init,"ax",%progbits
+ 533              		.align	1
+ 534              		.global	EPD_Init
+ 535              		.syntax unified
+ 536              		.thumb
+ 537              		.thumb_func
+ 539              	EPD_Init:
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 15
+
+
+ 540              	.LFB332:
+ 228:Core/Src/EPD.c **** 
+ 229:Core/Src/EPD.c **** /******************************************************************************
+ 230:Core/Src/EPD.c **** function :	Initialize the e-Paper register
+ 231:Core/Src/EPD.c **** parameter:
+ 232:Core/Src/EPD.c **** ******************************************************************************/
+ 233:Core/Src/EPD.c **** void EPD_Init(void)
+ 234:Core/Src/EPD.c **** {
+ 541              		.loc 1 234 1 is_stmt 1 view -0
+ 542              		.cfi_startproc
+ 543              		@ args = 0, pretend = 0, frame = 0
+ 544              		@ frame_needed = 0, uses_anonymous_args = 0
+ 545 0000 08B5     		push	{r3, lr}
+ 546              		.cfi_def_cfa_offset 8
+ 547              		.cfi_offset 3, -8
+ 548              		.cfi_offset 14, -4
+ 235:Core/Src/EPD.c **** 	DEV_Digital_Write(EPD_PWR_PIN, 0);
+ 549              		.loc 1 235 2 view .LVU106
+ 550 0002 0022     		movs	r2, #0
+ 551 0004 0221     		movs	r1, #2
+ 552 0006 2448     		ldr	r0, .L28
+ 553 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 554              	.LVL66:
+ 236:Core/Src/EPD.c **** 	DEV_Delay_ms(100);
+ 555              		.loc 1 236 2 view .LVU107
+ 556 000c 6420     		movs	r0, #100
+ 557 000e FFF7FEFF 		bl	HAL_Delay
+ 558              	.LVL67:
+ 559              		.loc 1 236 19 discriminator 1 view .LVU108
+ 237:Core/Src/EPD.c **** 	EPD_Reset();
+ 560              		.loc 1 237 2 view .LVU109
+ 561 0012 FFF7FEFF 		bl	EPD_Reset
+ 562              	.LVL68:
+ 238:Core/Src/EPD.c **** 	DEV_Delay_ms(100);
+ 563              		.loc 1 238 2 view .LVU110
+ 564 0016 6420     		movs	r0, #100
+ 565 0018 FFF7FEFF 		bl	HAL_Delay
+ 566              	.LVL69:
+ 567              		.loc 1 238 19 discriminator 1 view .LVU111
+ 239:Core/Src/EPD.c **** 
+ 240:Core/Src/EPD.c **** 	EPD_ReadBusy();   
+ 568              		.loc 1 240 2 view .LVU112
+ 569 001c FFF7FEFF 		bl	EPD_ReadBusy
+ 570              	.LVL70:
+ 241:Core/Src/EPD.c **** 	EPD_SendCommand(0x12);  //SWRESET
+ 571              		.loc 1 241 2 view .LVU113
+ 572 0020 1220     		movs	r0, #18
+ 573 0022 FFF7FEFF 		bl	EPD_SendCommand
+ 574              	.LVL71:
+ 242:Core/Src/EPD.c **** 	EPD_ReadBusy();   
+ 575              		.loc 1 242 2 view .LVU114
+ 576 0026 FFF7FEFF 		bl	EPD_ReadBusy
+ 577              	.LVL72:
+ 243:Core/Src/EPD.c **** 
+ 244:Core/Src/EPD.c **** 	EPD_SendCommand(0x01); //Driver output control      
+ 578              		.loc 1 244 2 view .LVU115
+ 579 002a 0120     		movs	r0, #1
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 16
+
+
+ 580 002c FFF7FEFF 		bl	EPD_SendCommand
+ 581              	.LVL73:
+ 245:Core/Src/EPD.c **** 	EPD_SendData(0xf9);
+ 582              		.loc 1 245 2 view .LVU116
+ 583 0030 F920     		movs	r0, #249
+ 584 0032 FFF7FEFF 		bl	EPD_SendData
+ 585              	.LVL74:
+ 246:Core/Src/EPD.c **** 	EPD_SendData(0x00);
+ 586              		.loc 1 246 2 view .LVU117
+ 587 0036 0020     		movs	r0, #0
+ 588 0038 FFF7FEFF 		bl	EPD_SendData
+ 589              	.LVL75:
+ 247:Core/Src/EPD.c **** 	EPD_SendData(0x00);
+ 590              		.loc 1 247 2 view .LVU118
+ 591 003c 0020     		movs	r0, #0
+ 592 003e FFF7FEFF 		bl	EPD_SendData
+ 593              	.LVL76:
+ 248:Core/Src/EPD.c **** 
+ 249:Core/Src/EPD.c **** 	EPD_SendCommand(0x11); //data entry mode       
+ 594              		.loc 1 249 2 view .LVU119
+ 595 0042 1120     		movs	r0, #17
+ 596 0044 FFF7FEFF 		bl	EPD_SendCommand
+ 597              	.LVL77:
+ 250:Core/Src/EPD.c **** 	EPD_SendData(0x03);
+ 598              		.loc 1 250 2 view .LVU120
+ 599 0048 0320     		movs	r0, #3
+ 600 004a FFF7FEFF 		bl	EPD_SendData
+ 601              	.LVL78:
+ 251:Core/Src/EPD.c **** 
+ 252:Core/Src/EPD.c **** 	EPD_SetWindows(0, 0, EPD_WIDTH-1, EPD_HEIGHT-1);
+ 602              		.loc 1 252 2 view .LVU121
+ 603 004e F923     		movs	r3, #249
+ 604 0050 7922     		movs	r2, #121
+ 605 0052 0021     		movs	r1, #0
+ 606 0054 0846     		mov	r0, r1
+ 607 0056 FFF7FEFF 		bl	EPD_SetWindows
+ 608              	.LVL79:
+ 253:Core/Src/EPD.c **** 	EPD_SetCursor(0, 0);
+ 609              		.loc 1 253 2 view .LVU122
+ 610 005a 0021     		movs	r1, #0
+ 611 005c 0846     		mov	r0, r1
+ 612 005e FFF7FEFF 		bl	EPD_SetCursor
+ 613              	.LVL80:
+ 254:Core/Src/EPD.c **** 	
+ 255:Core/Src/EPD.c **** 	EPD_SendCommand(0x3C); //BorderWavefrom
+ 614              		.loc 1 255 2 view .LVU123
+ 615 0062 3C20     		movs	r0, #60
+ 616 0064 FFF7FEFF 		bl	EPD_SendCommand
+ 617              	.LVL81:
+ 256:Core/Src/EPD.c **** 	EPD_SendData(0x05);	
+ 618              		.loc 1 256 2 view .LVU124
+ 619 0068 0520     		movs	r0, #5
+ 620 006a FFF7FEFF 		bl	EPD_SendData
+ 621              	.LVL82:
+ 257:Core/Src/EPD.c **** 
+ 258:Core/Src/EPD.c **** 	EPD_SendCommand(0x21); //  Display update control
+ 622              		.loc 1 258 2 view .LVU125
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 17
+
+
+ 623 006e 2120     		movs	r0, #33
+ 624 0070 FFF7FEFF 		bl	EPD_SendCommand
+ 625              	.LVL83:
+ 259:Core/Src/EPD.c **** 	EPD_SendData(0x00);
+ 626              		.loc 1 259 2 view .LVU126
+ 627 0074 0020     		movs	r0, #0
+ 628 0076 FFF7FEFF 		bl	EPD_SendData
+ 629              	.LVL84:
+ 260:Core/Src/EPD.c **** 	EPD_SendData(0x80);	
+ 630              		.loc 1 260 2 view .LVU127
+ 631 007a 8020     		movs	r0, #128
+ 632 007c FFF7FEFF 		bl	EPD_SendData
+ 633              	.LVL85:
+ 261:Core/Src/EPD.c **** 
+ 262:Core/Src/EPD.c **** 	EPD_SendCommand(0x18); //Read built-in temperature sensor
+ 634              		.loc 1 262 2 view .LVU128
+ 635 0080 1820     		movs	r0, #24
+ 636 0082 FFF7FEFF 		bl	EPD_SendCommand
+ 637              	.LVL86:
+ 263:Core/Src/EPD.c **** 	EPD_SendData(0x80);	
+ 638              		.loc 1 263 2 view .LVU129
+ 639 0086 8020     		movs	r0, #128
+ 640 0088 FFF7FEFF 		bl	EPD_SendData
+ 641              	.LVL87:
+ 264:Core/Src/EPD.c **** 
+ 265:Core/Src/EPD.c **** 	EPD_ReadBusy();
+ 642              		.loc 1 265 2 view .LVU130
+ 643 008c FFF7FEFF 		bl	EPD_ReadBusy
+ 644              	.LVL88:
+ 266:Core/Src/EPD.c **** 	EPD_2IN13_V2_LUT_by_host(WS_20_30);
+ 645              		.loc 1 266 2 view .LVU131
+ 646 0090 0248     		ldr	r0, .L28+4
+ 647 0092 FFF7FEFF 		bl	EPD_2IN13_V2_LUT_by_host
+ 648              	.LVL89:
+ 267:Core/Src/EPD.c **** }
+ 649              		.loc 1 267 1 is_stmt 0 view .LVU132
+ 650 0096 08BD     		pop	{r3, pc}
+ 651              	.L29:
+ 652              		.align	2
+ 653              	.L28:
+ 654 0098 00040048 		.word	1207960576
+ 655 009c 00000000 		.word	WS_20_30
+ 656              		.cfi_endproc
+ 657              	.LFE332:
+ 659              		.section	.text.EPD_SYS_Clear,"ax",%progbits
+ 660              		.align	1
+ 661              		.global	EPD_SYS_Clear
+ 662              		.syntax unified
+ 663              		.thumb
+ 664              		.thumb_func
+ 666              	EPD_SYS_Clear:
+ 667              	.LFB333:
+ 268:Core/Src/EPD.c **** 
+ 269:Core/Src/EPD.c **** /******************************************************************************
+ 270:Core/Src/EPD.c **** function :	Clear screen
+ 271:Core/Src/EPD.c **** parameter:
+ 272:Core/Src/EPD.c **** ******************************************************************************/
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 18
+
+
+ 273:Core/Src/EPD.c **** void EPD_SYS_Clear(void)
+ 274:Core/Src/EPD.c **** {
+ 668              		.loc 1 274 1 is_stmt 1 view -0
+ 669              		.cfi_startproc
+ 670              		@ args = 0, pretend = 0, frame = 0
+ 671              		@ frame_needed = 0, uses_anonymous_args = 0
+ 672 0000 38B5     		push	{r3, r4, r5, lr}
+ 673              		.cfi_def_cfa_offset 16
+ 674              		.cfi_offset 3, -16
+ 675              		.cfi_offset 4, -12
+ 676              		.cfi_offset 5, -8
+ 677              		.cfi_offset 14, -4
+ 275:Core/Src/EPD.c **** 	UWORD Width, Height;
+ 678              		.loc 1 275 2 view .LVU134
+ 276:Core/Src/EPD.c ****     Width = (EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1);
+ 679              		.loc 1 276 5 view .LVU135
+ 680              	.LVL90:
+ 277:Core/Src/EPD.c ****     Height = EPD_HEIGHT;
+ 681              		.loc 1 277 5 view .LVU136
+ 278:Core/Src/EPD.c **** 	
+ 279:Core/Src/EPD.c ****     EPD_SendCommand(0x24);
+ 682              		.loc 1 279 5 view .LVU137
+ 683 0002 2420     		movs	r0, #36
+ 684 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 685              	.LVL91:
+ 280:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 686              		.loc 1 280 5 view .LVU138
+ 687              	.LBB2:
+ 688              		.loc 1 280 10 view .LVU139
+ 689              		.loc 1 280 16 is_stmt 0 view .LVU140
+ 690 0008 0025     		movs	r5, #0
+ 691              		.loc 1 280 5 view .LVU141
+ 692 000a 08E0     		b	.L31
+ 693              	.LVL92:
+ 694              	.L32:
+ 695              	.LBB3:
+ 281:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 282:Core/Src/EPD.c ****             EPD_SendData(0XFF);
+ 696              		.loc 1 282 13 is_stmt 1 view .LVU142
+ 697 000c FF20     		movs	r0, #255
+ 698 000e FFF7FEFF 		bl	EPD_SendData
+ 699              	.LVL93:
+ 281:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 700              		.loc 1 281 39 discriminator 3 view .LVU143
+ 701 0012 0134     		adds	r4, r4, #1
+ 702              	.LVL94:
+ 281:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 703              		.loc 1 281 39 is_stmt 0 discriminator 3 view .LVU144
+ 704 0014 A4B2     		uxth	r4, r4
+ 705              	.LVL95:
+ 706              	.L33:
+ 281:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 707              		.loc 1 281 29 is_stmt 1 discriminator 1 view .LVU145
+ 708 0016 0F2C     		cmp	r4, #15
+ 709 0018 F8D9     		bls	.L32
+ 710              	.LBE3:
+ 280:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 19
+
+
+ 711              		.loc 1 280 36 discriminator 2 view .LVU146
+ 712 001a 0135     		adds	r5, r5, #1
+ 713              	.LVL96:
+ 280:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 714              		.loc 1 280 36 is_stmt 0 discriminator 2 view .LVU147
+ 715 001c ADB2     		uxth	r5, r5
+ 716              	.LVL97:
+ 717              	.L31:
+ 280:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 718              		.loc 1 280 25 is_stmt 1 discriminator 1 view .LVU148
+ 719 001e F92D     		cmp	r5, #249
+ 720 0020 01D8     		bhi	.L36
+ 721              	.LBB4:
+ 281:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 722              		.loc 1 281 20 is_stmt 0 view .LVU149
+ 723 0022 0024     		movs	r4, #0
+ 724 0024 F7E7     		b	.L33
+ 725              	.L36:
+ 726              	.LBE4:
+ 727              	.LBE2:
+ 283:Core/Src/EPD.c ****         }
+ 284:Core/Src/EPD.c ****     }	
+ 285:Core/Src/EPD.c **** 
+ 286:Core/Src/EPD.c **** 	EPD_TurnOnDisplay();
+ 728              		.loc 1 286 2 is_stmt 1 view .LVU150
+ 729 0026 FFF7FEFF 		bl	EPD_TurnOnDisplay
+ 730              	.LVL98:
+ 287:Core/Src/EPD.c **** }
+ 731              		.loc 1 287 1 is_stmt 0 view .LVU151
+ 732 002a 38BD     		pop	{r3, r4, r5, pc}
+ 733              		.loc 1 287 1 view .LVU152
+ 734              		.cfi_endproc
+ 735              	.LFE333:
+ 737              		.section	.text.EPD_Display,"ax",%progbits
+ 738              		.align	1
+ 739              		.global	EPD_Display
+ 740              		.syntax unified
+ 741              		.thumb
+ 742              		.thumb_func
+ 744              	EPD_Display:
+ 745              	.LVL99:
+ 746              	.LFB334:
+ 288:Core/Src/EPD.c **** 
+ 289:Core/Src/EPD.c **** /******************************************************************************
+ 290:Core/Src/EPD.c **** function :	Sends the image buffer in RAM to e-Paper and displays
+ 291:Core/Src/EPD.c **** parameter:
+ 292:Core/Src/EPD.c **** 	image : Image data
+ 293:Core/Src/EPD.c **** ******************************************************************************/
+ 294:Core/Src/EPD.c **** void EPD_Display(UBYTE *Image)
+ 295:Core/Src/EPD.c **** {
+ 747              		.loc 1 295 1 is_stmt 1 view -0
+ 748              		.cfi_startproc
+ 749              		@ args = 0, pretend = 0, frame = 0
+ 750              		@ frame_needed = 0, uses_anonymous_args = 0
+ 751              		.loc 1 295 1 is_stmt 0 view .LVU154
+ 752 0000 70B5     		push	{r4, r5, r6, lr}
+ 753              		.cfi_def_cfa_offset 16
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 20
+
+
+ 754              		.cfi_offset 4, -16
+ 755              		.cfi_offset 5, -12
+ 756              		.cfi_offset 6, -8
+ 757              		.cfi_offset 14, -4
+ 758 0002 0646     		mov	r6, r0
+ 296:Core/Src/EPD.c **** 	UWORD Width, Height;
+ 759              		.loc 1 296 2 is_stmt 1 view .LVU155
+ 297:Core/Src/EPD.c ****     Width = (EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1);
+ 760              		.loc 1 297 5 view .LVU156
+ 761              	.LVL100:
+ 298:Core/Src/EPD.c ****     Height = EPD_HEIGHT;
+ 762              		.loc 1 298 5 view .LVU157
+ 299:Core/Src/EPD.c **** 	
+ 300:Core/Src/EPD.c ****     EPD_SendCommand(0x24);
+ 763              		.loc 1 300 5 view .LVU158
+ 764 0004 2420     		movs	r0, #36
+ 765              	.LVL101:
+ 766              		.loc 1 300 5 is_stmt 0 view .LVU159
+ 767 0006 FFF7FEFF 		bl	EPD_SendCommand
+ 768              	.LVL102:
+ 301:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 769              		.loc 1 301 5 is_stmt 1 view .LVU160
+ 770              	.LBB5:
+ 771              		.loc 1 301 10 view .LVU161
+ 772              		.loc 1 301 16 is_stmt 0 view .LVU162
+ 773 000a 0025     		movs	r5, #0
+ 774              		.loc 1 301 5 view .LVU163
+ 775 000c 0AE0     		b	.L38
+ 776              	.LVL103:
+ 777              	.L39:
+ 778              	.LBB6:
+ 302:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 303:Core/Src/EPD.c ****             EPD_SendData(Image[i + j * Width]);
+ 779              		.loc 1 303 13 is_stmt 1 view .LVU164
+ 780              		.loc 1 303 34 is_stmt 0 view .LVU165
+ 781 000e 04EB0513 		add	r3, r4, r5, lsl #4
+ 782              		.loc 1 303 13 view .LVU166
+ 783 0012 F05C     		ldrb	r0, [r6, r3]	@ zero_extendqisi2
+ 784 0014 FFF7FEFF 		bl	EPD_SendData
+ 785              	.LVL104:
+ 302:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 786              		.loc 1 302 39 is_stmt 1 discriminator 3 view .LVU167
+ 787 0018 0134     		adds	r4, r4, #1
+ 788              	.LVL105:
+ 302:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 789              		.loc 1 302 39 is_stmt 0 discriminator 3 view .LVU168
+ 790 001a A4B2     		uxth	r4, r4
+ 791              	.LVL106:
+ 792              	.L40:
+ 302:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 793              		.loc 1 302 29 is_stmt 1 discriminator 1 view .LVU169
+ 794 001c 0F2C     		cmp	r4, #15
+ 795 001e F6D9     		bls	.L39
+ 796              	.LBE6:
+ 301:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 797              		.loc 1 301 36 discriminator 2 view .LVU170
+ 798 0020 0135     		adds	r5, r5, #1
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 21
+
+
+ 799              	.LVL107:
+ 301:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 800              		.loc 1 301 36 is_stmt 0 discriminator 2 view .LVU171
+ 801 0022 ADB2     		uxth	r5, r5
+ 802              	.LVL108:
+ 803              	.L38:
+ 301:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 804              		.loc 1 301 25 is_stmt 1 discriminator 1 view .LVU172
+ 805 0024 F92D     		cmp	r5, #249
+ 806 0026 01D8     		bhi	.L43
+ 807              	.LBB7:
+ 302:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 808              		.loc 1 302 20 is_stmt 0 view .LVU173
+ 809 0028 0024     		movs	r4, #0
+ 810 002a F7E7     		b	.L40
+ 811              	.L43:
+ 812              	.LBE7:
+ 813              	.LBE5:
+ 304:Core/Src/EPD.c ****         }
+ 305:Core/Src/EPD.c ****     }	
+ 306:Core/Src/EPD.c **** 	
+ 307:Core/Src/EPD.c **** 	EPD_TurnOnDisplay();	
+ 814              		.loc 1 307 2 is_stmt 1 view .LVU174
+ 815 002c FFF7FEFF 		bl	EPD_TurnOnDisplay
+ 816              	.LVL109:
+ 308:Core/Src/EPD.c **** }
+ 817              		.loc 1 308 1 is_stmt 0 view .LVU175
+ 818 0030 70BD     		pop	{r4, r5, r6, pc}
+ 819              		.loc 1 308 1 view .LVU176
+ 820              		.cfi_endproc
+ 821              	.LFE334:
+ 823              		.section	.text.EPD_Display_Base,"ax",%progbits
+ 824              		.align	1
+ 825              		.global	EPD_Display_Base
+ 826              		.syntax unified
+ 827              		.thumb
+ 828              		.thumb_func
+ 830              	EPD_Display_Base:
+ 831              	.LVL110:
+ 832              	.LFB335:
+ 309:Core/Src/EPD.c **** 
+ 310:Core/Src/EPD.c **** /******************************************************************************
+ 311:Core/Src/EPD.c **** function :	Refresh a base image
+ 312:Core/Src/EPD.c **** parameter:
+ 313:Core/Src/EPD.c **** 	image : Image data	
+ 314:Core/Src/EPD.c **** ******************************************************************************/
+ 315:Core/Src/EPD.c **** void EPD_Display_Base(UBYTE *Image)
+ 316:Core/Src/EPD.c **** {  
+ 833              		.loc 1 316 1 is_stmt 1 view -0
+ 834              		.cfi_startproc
+ 835              		@ args = 0, pretend = 0, frame = 0
+ 836              		@ frame_needed = 0, uses_anonymous_args = 0
+ 837              		.loc 1 316 1 is_stmt 0 view .LVU178
+ 838 0000 70B5     		push	{r4, r5, r6, lr}
+ 839              		.cfi_def_cfa_offset 16
+ 840              		.cfi_offset 4, -16
+ 841              		.cfi_offset 5, -12
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 22
+
+
+ 842              		.cfi_offset 6, -8
+ 843              		.cfi_offset 14, -4
+ 844 0002 0546     		mov	r5, r0
+ 317:Core/Src/EPD.c **** 	UWORD Width, Height;
+ 845              		.loc 1 317 2 is_stmt 1 view .LVU179
+ 318:Core/Src/EPD.c ****     Width = (EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1);
+ 846              		.loc 1 318 5 view .LVU180
+ 847              	.LVL111:
+ 319:Core/Src/EPD.c ****     Height = EPD_HEIGHT;
+ 848              		.loc 1 319 5 view .LVU181
+ 320:Core/Src/EPD.c **** 	
+ 321:Core/Src/EPD.c **** 	EPD_SendCommand(0x24);   //Write Black and White image to RAM
+ 849              		.loc 1 321 2 view .LVU182
+ 850 0004 2420     		movs	r0, #36
+ 851              	.LVL112:
+ 852              		.loc 1 321 2 is_stmt 0 view .LVU183
+ 853 0006 FFF7FEFF 		bl	EPD_SendCommand
+ 854              	.LVL113:
+ 322:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 855              		.loc 1 322 5 is_stmt 1 view .LVU184
+ 856              	.LBB8:
+ 857              		.loc 1 322 10 view .LVU185
+ 858              		.loc 1 322 16 is_stmt 0 view .LVU186
+ 859 000a 0026     		movs	r6, #0
+ 860              		.loc 1 322 5 view .LVU187
+ 861 000c 01E0     		b	.L45
+ 862              	.LVL114:
+ 863              	.L55:
+ 864              		.loc 1 322 36 is_stmt 1 discriminator 2 view .LVU188
+ 865 000e 0136     		adds	r6, r6, #1
+ 866              	.LVL115:
+ 867              		.loc 1 322 36 is_stmt 0 discriminator 2 view .LVU189
+ 868 0010 B6B2     		uxth	r6, r6
+ 869              	.LVL116:
+ 870              	.L45:
+ 871              		.loc 1 322 25 is_stmt 1 discriminator 1 view .LVU190
+ 872 0012 F92E     		cmp	r6, #249
+ 873 0014 0AD8     		bhi	.L54
+ 874              	.LBB9:
+ 323:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {        
+ 875              		.loc 1 323 20 is_stmt 0 view .LVU191
+ 876 0016 0024     		movs	r4, #0
+ 877              	.L47:
+ 878              	.LVL117:
+ 879              		.loc 1 323 29 is_stmt 1 discriminator 1 view .LVU192
+ 880 0018 0F2C     		cmp	r4, #15
+ 881 001a F8D8     		bhi	.L55
+ 324:Core/Src/EPD.c **** 			EPD_SendData(Image[i + j * Width]);
+ 882              		.loc 1 324 4 view .LVU193
+ 883              		.loc 1 324 25 is_stmt 0 view .LVU194
+ 884 001c 04EB0613 		add	r3, r4, r6, lsl #4
+ 885              		.loc 1 324 4 view .LVU195
+ 886 0020 E85C     		ldrb	r0, [r5, r3]	@ zero_extendqisi2
+ 887 0022 FFF7FEFF 		bl	EPD_SendData
+ 888              	.LVL118:
+ 323:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {        
+ 889              		.loc 1 323 39 is_stmt 1 discriminator 3 view .LVU196
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 23
+
+
+ 890 0026 0134     		adds	r4, r4, #1
+ 891              	.LVL119:
+ 323:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {        
+ 892              		.loc 1 323 39 is_stmt 0 discriminator 3 view .LVU197
+ 893 0028 A4B2     		uxth	r4, r4
+ 894              	.LVL120:
+ 323:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {        
+ 895              		.loc 1 323 39 discriminator 3 view .LVU198
+ 896 002a F5E7     		b	.L47
+ 897              	.LVL121:
+ 898              	.L54:
+ 323:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {        
+ 899              		.loc 1 323 39 discriminator 3 view .LVU199
+ 900              	.LBE9:
+ 901              	.LBE8:
+ 325:Core/Src/EPD.c **** 		}
+ 326:Core/Src/EPD.c **** 	}
+ 327:Core/Src/EPD.c **** 	EPD_SendCommand(0x26);   //Write Black and White image to RAM
+ 902              		.loc 1 327 2 is_stmt 1 view .LVU200
+ 903 002c 2620     		movs	r0, #38
+ 904 002e FFF7FEFF 		bl	EPD_SendCommand
+ 905              	.LVL122:
+ 328:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 906              		.loc 1 328 5 view .LVU201
+ 907              	.LBB10:
+ 908              		.loc 1 328 10 view .LVU202
+ 909              		.loc 1 328 16 is_stmt 0 view .LVU203
+ 910 0032 0026     		movs	r6, #0
+ 911              	.LVL123:
+ 912              		.loc 1 328 5 view .LVU204
+ 913 0034 0AE0     		b	.L48
+ 914              	.LVL124:
+ 915              	.L49:
+ 916              	.LBB11:
+ 329:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 330:Core/Src/EPD.c **** 			EPD_SendData(Image[i + j * Width]);
+ 917              		.loc 1 330 4 is_stmt 1 view .LVU205
+ 918              		.loc 1 330 25 is_stmt 0 view .LVU206
+ 919 0036 04EB0613 		add	r3, r4, r6, lsl #4
+ 920              		.loc 1 330 4 view .LVU207
+ 921 003a E85C     		ldrb	r0, [r5, r3]	@ zero_extendqisi2
+ 922 003c FFF7FEFF 		bl	EPD_SendData
+ 923              	.LVL125:
+ 329:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 924              		.loc 1 329 39 is_stmt 1 discriminator 3 view .LVU208
+ 925 0040 0134     		adds	r4, r4, #1
+ 926              	.LVL126:
+ 329:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 927              		.loc 1 329 39 is_stmt 0 discriminator 3 view .LVU209
+ 928 0042 A4B2     		uxth	r4, r4
+ 929              	.LVL127:
+ 930              	.L50:
+ 329:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 931              		.loc 1 329 29 is_stmt 1 discriminator 1 view .LVU210
+ 932 0044 0F2C     		cmp	r4, #15
+ 933 0046 F6D9     		bls	.L49
+ 934              	.LBE11:
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 24
+
+
+ 328:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 935              		.loc 1 328 36 discriminator 2 view .LVU211
+ 936 0048 0136     		adds	r6, r6, #1
+ 937              	.LVL128:
+ 328:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 938              		.loc 1 328 36 is_stmt 0 discriminator 2 view .LVU212
+ 939 004a B6B2     		uxth	r6, r6
+ 940              	.LVL129:
+ 941              	.L48:
+ 328:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 942              		.loc 1 328 25 is_stmt 1 discriminator 1 view .LVU213
+ 943 004c F92E     		cmp	r6, #249
+ 944 004e 01D8     		bhi	.L56
+ 945              	.LBB12:
+ 329:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 946              		.loc 1 329 20 is_stmt 0 view .LVU214
+ 947 0050 0024     		movs	r4, #0
+ 948 0052 F7E7     		b	.L50
+ 949              	.L56:
+ 950              	.LBE12:
+ 951              	.LBE10:
+ 331:Core/Src/EPD.c **** 		}
+ 332:Core/Src/EPD.c **** 	}
+ 333:Core/Src/EPD.c **** 	EPD_TurnOnDisplay();	
+ 952              		.loc 1 333 2 is_stmt 1 view .LVU215
+ 953 0054 FFF7FEFF 		bl	EPD_TurnOnDisplay
+ 954              	.LVL130:
+ 334:Core/Src/EPD.c **** }
+ 955              		.loc 1 334 1 is_stmt 0 view .LVU216
+ 956 0058 70BD     		pop	{r4, r5, r6, pc}
+ 957              		.loc 1 334 1 view .LVU217
+ 958              		.cfi_endproc
+ 959              	.LFE335:
+ 961              		.section	.text.EPD_Display_Partial,"ax",%progbits
+ 962              		.align	1
+ 963              		.global	EPD_Display_Partial
+ 964              		.syntax unified
+ 965              		.thumb
+ 966              		.thumb_func
+ 968              	EPD_Display_Partial:
+ 969              	.LVL131:
+ 970              	.LFB336:
+ 335:Core/Src/EPD.c **** 
+ 336:Core/Src/EPD.c **** /******************************************************************************
+ 337:Core/Src/EPD.c **** function :	Sends the image buffer in RAM to e-Paper and partial refresh
+ 338:Core/Src/EPD.c **** parameter:
+ 339:Core/Src/EPD.c **** 	image : Image data
+ 340:Core/Src/EPD.c **** ******************************************************************************/
+ 341:Core/Src/EPD.c **** void EPD_Display_Partial(UBYTE *Image)
+ 342:Core/Src/EPD.c **** {
+ 971              		.loc 1 342 1 is_stmt 1 view -0
+ 972              		.cfi_startproc
+ 973              		@ args = 0, pretend = 0, frame = 0
+ 974              		@ frame_needed = 0, uses_anonymous_args = 0
+ 975              		.loc 1 342 1 is_stmt 0 view .LVU219
+ 976 0000 70B5     		push	{r4, r5, r6, lr}
+ 977              		.cfi_def_cfa_offset 16
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 25
+
+
+ 978              		.cfi_offset 4, -16
+ 979              		.cfi_offset 5, -12
+ 980              		.cfi_offset 6, -8
+ 981              		.cfi_offset 14, -4
+ 982 0002 0646     		mov	r6, r0
+ 343:Core/Src/EPD.c **** 	UWORD Width, Height;
+ 983              		.loc 1 343 2 is_stmt 1 view .LVU220
+ 344:Core/Src/EPD.c ****     Width = (EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1);
+ 984              		.loc 1 344 5 view .LVU221
+ 985              	.LVL132:
+ 345:Core/Src/EPD.c ****     Height = EPD_HEIGHT;
+ 986              		.loc 1 345 5 view .LVU222
+ 346:Core/Src/EPD.c **** 	
+ 347:Core/Src/EPD.c **** 	//Reset
+ 348:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_RST_PIN, 0);
+ 987              		.loc 1 348 5 view .LVU223
+ 988 0004 0022     		movs	r2, #0
+ 989 0006 0821     		movs	r1, #8
+ 990 0008 4FF09040 		mov	r0, #1207959552
+ 991              	.LVL133:
+ 992              		.loc 1 348 5 is_stmt 0 view .LVU224
+ 993 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 994              	.LVL134:
+ 349:Core/Src/EPD.c ****     DEV_Delay_ms(1);
+ 995              		.loc 1 349 5 is_stmt 1 view .LVU225
+ 996 0010 0120     		movs	r0, #1
+ 997 0012 FFF7FEFF 		bl	HAL_Delay
+ 998              	.LVL135:
+ 999              		.loc 1 349 20 discriminator 1 view .LVU226
+ 350:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_RST_PIN, 1);
+ 1000              		.loc 1 350 5 view .LVU227
+ 1001 0016 0122     		movs	r2, #1
+ 1002 0018 0821     		movs	r1, #8
+ 1003 001a 4FF09040 		mov	r0, #1207959552
+ 1004 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1005              	.LVL136:
+ 351:Core/Src/EPD.c **** 
+ 352:Core/Src/EPD.c **** 	EPD_2IN13_V2_LUT_by_host(WF_PARTIAL);
+ 1006              		.loc 1 352 2 view .LVU228
+ 1007 0022 2B48     		ldr	r0, .L64
+ 1008 0024 FFF7FEFF 		bl	EPD_2IN13_V2_LUT_by_host
+ 1009              	.LVL137:
+ 353:Core/Src/EPD.c **** 
+ 354:Core/Src/EPD.c **** 	EPD_SendCommand(0x37); 
+ 1010              		.loc 1 354 2 view .LVU229
+ 1011 0028 3720     		movs	r0, #55
+ 1012 002a FFF7FEFF 		bl	EPD_SendCommand
+ 1013              	.LVL138:
+ 355:Core/Src/EPD.c **** 	EPD_SendData(0x00);  
+ 1014              		.loc 1 355 2 view .LVU230
+ 1015 002e 0020     		movs	r0, #0
+ 1016 0030 FFF7FEFF 		bl	EPD_SendData
+ 1017              	.LVL139:
+ 356:Core/Src/EPD.c **** 	EPD_SendData(0x00);  
+ 1018              		.loc 1 356 2 view .LVU231
+ 1019 0034 0020     		movs	r0, #0
+ 1020 0036 FFF7FEFF 		bl	EPD_SendData
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 26
+
+
+ 1021              	.LVL140:
+ 357:Core/Src/EPD.c **** 	EPD_SendData(0x00);  
+ 1022              		.loc 1 357 2 view .LVU232
+ 1023 003a 0020     		movs	r0, #0
+ 1024 003c FFF7FEFF 		bl	EPD_SendData
+ 1025              	.LVL141:
+ 358:Core/Src/EPD.c **** 	EPD_SendData(0x00); 
+ 1026              		.loc 1 358 2 view .LVU233
+ 1027 0040 0020     		movs	r0, #0
+ 1028 0042 FFF7FEFF 		bl	EPD_SendData
+ 1029              	.LVL142:
+ 359:Core/Src/EPD.c **** 	EPD_SendData(0x00);  
+ 1030              		.loc 1 359 2 view .LVU234
+ 1031 0046 0020     		movs	r0, #0
+ 1032 0048 FFF7FEFF 		bl	EPD_SendData
+ 1033              	.LVL143:
+ 360:Core/Src/EPD.c **** 	EPD_SendData(0x40);  ///RAM Ping-Pong enable 
+ 1034              		.loc 1 360 2 view .LVU235
+ 1035 004c 4020     		movs	r0, #64
+ 1036 004e FFF7FEFF 		bl	EPD_SendData
+ 1037              	.LVL144:
+ 361:Core/Src/EPD.c **** 	EPD_SendData(0x00);  
+ 1038              		.loc 1 361 2 view .LVU236
+ 1039 0052 0020     		movs	r0, #0
+ 1040 0054 FFF7FEFF 		bl	EPD_SendData
+ 1041              	.LVL145:
+ 362:Core/Src/EPD.c **** 	EPD_SendData(0x00);   
+ 1042              		.loc 1 362 2 view .LVU237
+ 1043 0058 0020     		movs	r0, #0
+ 1044 005a FFF7FEFF 		bl	EPD_SendData
+ 1045              	.LVL146:
+ 363:Core/Src/EPD.c **** 	EPD_SendData(0x00);  
+ 1046              		.loc 1 363 2 view .LVU238
+ 1047 005e 0020     		movs	r0, #0
+ 1048 0060 FFF7FEFF 		bl	EPD_SendData
+ 1049              	.LVL147:
+ 364:Core/Src/EPD.c **** 	EPD_SendData(0x00);
+ 1050              		.loc 1 364 2 view .LVU239
+ 1051 0064 0020     		movs	r0, #0
+ 1052 0066 FFF7FEFF 		bl	EPD_SendData
+ 1053              	.LVL148:
+ 365:Core/Src/EPD.c **** 
+ 366:Core/Src/EPD.c **** 	EPD_SendCommand(0x3C); //BorderWavefrom
+ 1054              		.loc 1 366 2 view .LVU240
+ 1055 006a 3C20     		movs	r0, #60
+ 1056 006c FFF7FEFF 		bl	EPD_SendCommand
+ 1057              	.LVL149:
+ 367:Core/Src/EPD.c **** 	EPD_SendData(0x80);	
+ 1058              		.loc 1 367 2 view .LVU241
+ 1059 0070 8020     		movs	r0, #128
+ 1060 0072 FFF7FEFF 		bl	EPD_SendData
+ 1061              	.LVL150:
+ 368:Core/Src/EPD.c **** 
+ 369:Core/Src/EPD.c **** 	EPD_SendCommand(0x22); //Display Update Sequence Option
+ 1062              		.loc 1 369 2 view .LVU242
+ 1063 0076 2220     		movs	r0, #34
+ 1064 0078 FFF7FEFF 		bl	EPD_SendCommand
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 27
+
+
+ 1065              	.LVL151:
+ 370:Core/Src/EPD.c **** 	EPD_SendData(0xC0);    // Enable clock and  Enable analog
+ 1066              		.loc 1 370 2 view .LVU243
+ 1067 007c C020     		movs	r0, #192
+ 1068 007e FFF7FEFF 		bl	EPD_SendData
+ 1069              	.LVL152:
+ 371:Core/Src/EPD.c **** 	EPD_SendCommand(0x20);  //Activate Display Update Sequence
+ 1070              		.loc 1 371 2 view .LVU244
+ 1071 0082 2020     		movs	r0, #32
+ 1072 0084 FFF7FEFF 		bl	EPD_SendCommand
+ 1073              	.LVL153:
+ 372:Core/Src/EPD.c **** 	EPD_ReadBusy();  
+ 1074              		.loc 1 372 2 view .LVU245
+ 1075 0088 FFF7FEFF 		bl	EPD_ReadBusy
+ 1076              	.LVL154:
+ 373:Core/Src/EPD.c **** 	
+ 374:Core/Src/EPD.c **** 	EPD_SetWindows(0, 0, EPD_WIDTH-1, EPD_HEIGHT-1);
+ 1077              		.loc 1 374 2 view .LVU246
+ 1078 008c F923     		movs	r3, #249
+ 1079 008e 7922     		movs	r2, #121
+ 1080 0090 0021     		movs	r1, #0
+ 1081 0092 0846     		mov	r0, r1
+ 1082 0094 FFF7FEFF 		bl	EPD_SetWindows
+ 1083              	.LVL155:
+ 375:Core/Src/EPD.c **** 	EPD_SetCursor(0, 0);
+ 1084              		.loc 1 375 2 view .LVU247
+ 1085 0098 0021     		movs	r1, #0
+ 1086 009a 0846     		mov	r0, r1
+ 1087 009c FFF7FEFF 		bl	EPD_SetCursor
+ 1088              	.LVL156:
+ 376:Core/Src/EPD.c **** 
+ 377:Core/Src/EPD.c **** 	EPD_SendCommand(0x24);   //Write Black and White image to RAM
+ 1089              		.loc 1 377 2 view .LVU248
+ 1090 00a0 2420     		movs	r0, #36
+ 1091 00a2 FFF7FEFF 		bl	EPD_SendCommand
+ 1092              	.LVL157:
+ 378:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 1093              		.loc 1 378 5 view .LVU249
+ 1094              	.LBB13:
+ 1095              		.loc 1 378 10 view .LVU250
+ 1096              		.loc 1 378 16 is_stmt 0 view .LVU251
+ 1097 00a6 0025     		movs	r5, #0
+ 1098              		.loc 1 378 5 view .LVU252
+ 1099 00a8 0AE0     		b	.L58
+ 1100              	.LVL158:
+ 1101              	.L59:
+ 1102              	.LBB14:
+ 379:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 380:Core/Src/EPD.c **** 			EPD_SendData(Image[i + j * Width]);
+ 1103              		.loc 1 380 4 is_stmt 1 view .LVU253
+ 1104              		.loc 1 380 25 is_stmt 0 view .LVU254
+ 1105 00aa 04EB0513 		add	r3, r4, r5, lsl #4
+ 1106              		.loc 1 380 4 view .LVU255
+ 1107 00ae F05C     		ldrb	r0, [r6, r3]	@ zero_extendqisi2
+ 1108 00b0 FFF7FEFF 		bl	EPD_SendData
+ 1109              	.LVL159:
+ 379:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 28
+
+
+ 1110              		.loc 1 379 39 is_stmt 1 discriminator 3 view .LVU256
+ 1111 00b4 0134     		adds	r4, r4, #1
+ 1112              	.LVL160:
+ 379:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 1113              		.loc 1 379 39 is_stmt 0 discriminator 3 view .LVU257
+ 1114 00b6 A4B2     		uxth	r4, r4
+ 1115              	.LVL161:
+ 1116              	.L60:
+ 379:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 1117              		.loc 1 379 29 is_stmt 1 discriminator 1 view .LVU258
+ 1118 00b8 0F2C     		cmp	r4, #15
+ 1119 00ba F6D9     		bls	.L59
+ 1120              	.LBE14:
+ 378:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 1121              		.loc 1 378 36 discriminator 2 view .LVU259
+ 1122 00bc 0135     		adds	r5, r5, #1
+ 1123              	.LVL162:
+ 378:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 1124              		.loc 1 378 36 is_stmt 0 discriminator 2 view .LVU260
+ 1125 00be ADB2     		uxth	r5, r5
+ 1126              	.LVL163:
+ 1127              	.L58:
+ 378:Core/Src/EPD.c ****     for (UWORD j = 0; j < Height; j++) {
+ 1128              		.loc 1 378 25 is_stmt 1 discriminator 1 view .LVU261
+ 1129 00c0 F92D     		cmp	r5, #249
+ 1130 00c2 01D8     		bhi	.L63
+ 1131              	.LBB15:
+ 379:Core/Src/EPD.c ****         for (UWORD i = 0; i < Width; i++) {
+ 1132              		.loc 1 379 20 is_stmt 0 view .LVU262
+ 1133 00c4 0024     		movs	r4, #0
+ 1134 00c6 F7E7     		b	.L60
+ 1135              	.L63:
+ 1136              	.LBE15:
+ 1137              	.LBE13:
+ 381:Core/Src/EPD.c **** 		}
+ 382:Core/Src/EPD.c **** 	}
+ 383:Core/Src/EPD.c **** 	EPD_TurnOnDisplay_Partial();
+ 1138              		.loc 1 383 2 is_stmt 1 view .LVU263
+ 1139 00c8 FFF7FEFF 		bl	EPD_TurnOnDisplay_Partial
+ 1140              	.LVL164:
+ 384:Core/Src/EPD.c **** }
+ 1141              		.loc 1 384 1 is_stmt 0 view .LVU264
+ 1142 00cc 70BD     		pop	{r4, r5, r6, pc}
+ 1143              	.LVL165:
+ 1144              	.L65:
+ 1145              		.loc 1 384 1 view .LVU265
+ 1146 00ce 00BF     		.align	2
+ 1147              	.L64:
+ 1148 00d0 00000000 		.word	WF_PARTIAL
+ 1149              		.cfi_endproc
+ 1150              	.LFE336:
+ 1152              		.section	.text.EPD_Sleep,"ax",%progbits
+ 1153              		.align	1
+ 1154              		.global	EPD_Sleep
+ 1155              		.syntax unified
+ 1156              		.thumb
+ 1157              		.thumb_func
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 29
+
+
+ 1159              	EPD_Sleep:
+ 1160              	.LFB337:
+ 385:Core/Src/EPD.c **** 
+ 386:Core/Src/EPD.c **** /******************************************************************************
+ 387:Core/Src/EPD.c **** function :	Enter sleep mode
+ 388:Core/Src/EPD.c **** parameter:
+ 389:Core/Src/EPD.c **** ******************************************************************************/
+ 390:Core/Src/EPD.c **** void EPD_Sleep(void)
+ 391:Core/Src/EPD.c **** {	
+ 1161              		.loc 1 391 1 is_stmt 1 view -0
+ 1162              		.cfi_startproc
+ 1163              		@ args = 0, pretend = 0, frame = 0
+ 1164              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1165 0000 08B5     		push	{r3, lr}
+ 1166              		.cfi_def_cfa_offset 8
+ 1167              		.cfi_offset 3, -8
+ 1168              		.cfi_offset 14, -4
+ 392:Core/Src/EPD.c **** 	// EPD_SendCommand(0x22); //enter deep sleep
+ 393:Core/Src/EPD.c **** 	// EPD_SendData(0xC3); 
+ 394:Core/Src/EPD.c **** 	// EPD_SendCommand(0x20); //enter deep sleep
+ 395:Core/Src/EPD.c **** 	EPD_SendCommand(0x10); //enter deep sleep
+ 1169              		.loc 1 395 2 view .LVU267
+ 1170 0002 1020     		movs	r0, #16
+ 1171 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 1172              	.LVL166:
+ 396:Core/Src/EPD.c **** 	EPD_SendData(0x01); 
+ 1173              		.loc 1 396 2 view .LVU268
+ 1174 0008 0120     		movs	r0, #1
+ 1175 000a FFF7FEFF 		bl	EPD_SendData
+ 1176              	.LVL167:
+ 397:Core/Src/EPD.c **** 	DEV_Delay_ms(100);
+ 1177              		.loc 1 397 2 view .LVU269
+ 1178 000e 6420     		movs	r0, #100
+ 1179 0010 FFF7FEFF 		bl	HAL_Delay
+ 1180              	.LVL168:
+ 1181              		.loc 1 397 19 discriminator 1 view .LVU270
+ 398:Core/Src/EPD.c **** }
+ 1182              		.loc 1 398 1 is_stmt 0 view .LVU271
+ 1183 0014 08BD     		pop	{r3, pc}
+ 1184              		.cfi_endproc
+ 1185              	.LFE337:
+ 1187              		.section	.text.EPD_Exit,"ax",%progbits
+ 1188              		.align	1
+ 1189              		.global	EPD_Exit
+ 1190              		.syntax unified
+ 1191              		.thumb
+ 1192              		.thumb_func
+ 1194              	EPD_Exit:
+ 1195              	.LFB338:
+ 399:Core/Src/EPD.c **** 
+ 400:Core/Src/EPD.c **** void EPD_Exit(void)
+ 401:Core/Src/EPD.c **** {
+ 1196              		.loc 1 401 1 is_stmt 1 view -0
+ 1197              		.cfi_startproc
+ 1198              		@ args = 0, pretend = 0, frame = 0
+ 1199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1200 0000 08B5     		push	{r3, lr}
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 30
+
+
+ 1201              		.cfi_def_cfa_offset 8
+ 1202              		.cfi_offset 3, -8
+ 1203              		.cfi_offset 14, -4
+ 402:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_DC_PIN, 0);
+ 1204              		.loc 1 402 5 view .LVU273
+ 1205 0002 0022     		movs	r2, #0
+ 1206 0004 4021     		movs	r1, #64
+ 1207 0006 4FF09040 		mov	r0, #1207959552
+ 1208 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1209              	.LVL169:
+ 403:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_CS_PIN, 0);
+ 1210              		.loc 1 403 5 view .LVU274
+ 1211 000e 0022     		movs	r2, #0
+ 1212 0010 1021     		movs	r1, #16
+ 1213 0012 4FF09040 		mov	r0, #1207959552
+ 1214 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1215              	.LVL170:
+ 404:Core/Src/EPD.c **** 
+ 405:Core/Src/EPD.c ****     //close 5V
+ 406:Core/Src/EPD.c **** 	DEV_Digital_Write(EPD_PWR_PIN, 1);
+ 1216              		.loc 1 406 2 view .LVU275
+ 1217 001a 0122     		movs	r2, #1
+ 1218 001c 0221     		movs	r1, #2
+ 1219 001e 0548     		ldr	r0, .L70
+ 1220 0020 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1221              	.LVL171:
+ 407:Core/Src/EPD.c ****     DEV_Digital_Write(EPD_RST_PIN, 0);
+ 1222              		.loc 1 407 5 view .LVU276
+ 1223 0024 0022     		movs	r2, #0
+ 1224 0026 0821     		movs	r1, #8
+ 1225 0028 4FF09040 		mov	r0, #1207959552
+ 1226 002c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1227              	.LVL172:
+ 408:Core/Src/EPD.c **** }...
+ 1228              		.loc 1 408 1 is_stmt 0 view .LVU277
+ 1229 0030 08BD     		pop	{r3, pc}
+ 1230              	.L71:
+ 1231 0032 00BF     		.align	2
+ 1232              	.L70:
+ 1233 0034 00040048 		.word	1207960576
+ 1234              		.cfi_endproc
+ 1235              	.LFE338:
+ 1237              		.global	WS_20_30
+ 1238              		.section	.data.WS_20_30,"aw"
+ 1239              		.align	2
+ 1242              	WS_20_30:
+ 1243 0000 804A4000 		.ascii	"\200J@\000\000\000\000\000\000\000\000\000@J\200\000"
+ 1243      00000000 
+ 1243      00000000 
+ 1243      404A8000 
+ 1244 0010 00000000 		.ascii	"\000\000\000\000\000\000\000\000\200J@\000\000\000\000"
+ 1244      00000000 
+ 1244      804A4000 
+ 1244      000000
+ 1245 001f 00000000 		.ascii	"\000\000\000\000\000@J\200\000\000\000\000\000\000\000"
+ 1245      00404A80 
+ 1245      00000000 
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 31
+
+
+ 1245      000000
+ 1246 002e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1246      00000000 
+ 1246      00000000 
+ 1246      00
+ 1247 003b 000F0000 		.ascii	"\000\017\000\000\000\000\000\000\017\000\000\017\000"
+ 1247      00000000 
+ 1247      0F00000F 
+ 1247      00
+ 1248 0048 00020F00 		.ascii	"\000\002\017\000\000\000\000\000\000\001\000\000\000"
+ 1248      00000000 
+ 1248      00010000 
+ 1248      00
+ 1249 0055 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1249      00000000 
+ 1249      00000000 
+ 1249      00
+ 1250 0062 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1250      00000000 
+ 1250      00000000 
+ 1250      00
+ 1251 006f 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1251      00000000 
+ 1251      00000000 
+ 1251      00
+ 1252 007c 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1252      00000000 
+ 1252      00000000 
+ 1252      00
+ 1253 0089 00000000 		.ascii	"\000\000\000\000\000\000\000\"\"\"\"\"\"\000\000\000"
+ 1253      00000022 
+ 1253      22222222 
+ 1253      22000000 
+ 1254 0099 22174100 		.ascii	"\"\027A\00026"
+ 1254      3236
+ 1255              		.global	WF_PARTIAL
+ 1256              		.section	.data.WF_PARTIAL,"aw"
+ 1257              		.align	2
+ 1260              	WF_PARTIAL:
+ 1261 0000 00400000 		.ascii	"\000@\000\000\000\000\000\000\000\000\000\000\200\200"
+ 1261      00000000 
+ 1261      00000000 
+ 1261      8080
+ 1262 000e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000@@\000\000\000"
+ 1262      00000000 
+ 1262      00004040 
+ 1262      000000
+ 1263 001d 00000000 		.ascii	"\000\000\000\000\000\000\000\000\200\000\000\000\000"
+ 1263      00000000 
+ 1263      80000000 
+ 1263      00
+ 1264 002a 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1264      00000000 
+ 1264      00000000 
+ 1264      00
+ 1265 0037 00000000 		.ascii	"\000\000\000\000\000\024\000\000\000\000\000\000\001"
+ 1265      00140000 
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 32
+
+
+ 1265      00000000 
+ 1265      01
+ 1266 0044 00000000 		.ascii	"\000\000\000\000\000\000\001\000\000\000\000\000\000"
+ 1266      00000100 
+ 1266      00000000 
+ 1266      00
+ 1267 0051 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1267      00000000 
+ 1267      00000000 
+ 1267      00
+ 1268 005e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1268      00000000 
+ 1268      00000000 
+ 1268      00
+ 1269 006b 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1269      00000000 
+ 1269      00000000 
+ 1269      00
+ 1270 0078 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 1270      00000000 
+ 1270      00000000 
+ 1270      00
+ 1271 0085 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\"\"\"\""
+ 1271      00000000 
+ 1271      00000022 
+ 1271      222222
+ 1272 0094 22220000 		.ascii	"\"\"\000\000\000\"\027A\00026"
+ 1272      00221741 
+ 1272      003236
+ 1273              		.text
+ 1274              	.Letext0:
+ 1275              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 1276              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 1277              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 1278              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1279              		.file 6 "Core/Inc/EPD_Conf.h"
+ 1280              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s 			page 33
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 EPD.c
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:21     .text.EPD_Reset:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:26     .text.EPD_Reset:00000000 EPD_Reset
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:75     .text.EPD_SendCommand:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:80     .text.EPD_SendCommand:00000000 EPD_SendCommand
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:124    .text.EPD_SendData:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:129    .text.EPD_SendData:00000000 EPD_SendData
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:173    .text.EPD_SetWindows:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:178    .text.EPD_SetWindows:00000000 EPD_SetWindows
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:239    .text.EPD_SetCursor:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:244    .text.EPD_SetCursor:00000000 EPD_SetCursor
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:289    .text.EPD_ReadBusy:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:295    .text.EPD_ReadBusy:00000000 EPD_ReadBusy
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:335    .text.EPD_LUT:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:340    .text.EPD_LUT:00000000 EPD_LUT
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:393    .text.EPD_2IN13_V2_LUT_by_host:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:398    .text.EPD_2IN13_V2_LUT_by_host:00000000 EPD_2IN13_V2_LUT_by_host
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:461    .text.EPD_TurnOnDisplay:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:466    .text.EPD_TurnOnDisplay:00000000 EPD_TurnOnDisplay
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:497    .text.EPD_TurnOnDisplay_Partial:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:502    .text.EPD_TurnOnDisplay_Partial:00000000 EPD_TurnOnDisplay_Partial
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:533    .text.EPD_Init:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:539    .text.EPD_Init:00000000 EPD_Init
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:654    .text.EPD_Init:00000098 $d
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1242   .data.WS_20_30:00000000 WS_20_30
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:660    .text.EPD_SYS_Clear:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:666    .text.EPD_SYS_Clear:00000000 EPD_SYS_Clear
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:738    .text.EPD_Display:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:744    .text.EPD_Display:00000000 EPD_Display
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:824    .text.EPD_Display_Base:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:830    .text.EPD_Display_Base:00000000 EPD_Display_Base
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:962    .text.EPD_Display_Partial:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:968    .text.EPD_Display_Partial:00000000 EPD_Display_Partial
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1148   .text.EPD_Display_Partial:000000d0 $d
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1260   .data.WF_PARTIAL:00000000 WF_PARTIAL
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1153   .text.EPD_Sleep:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1159   .text.EPD_Sleep:00000000 EPD_Sleep
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1188   .text.EPD_Exit:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1194   .text.EPD_Exit:00000000 EPD_Exit
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1233   .text.EPD_Exit:00000034 $d
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1239   .data.WS_20_30:00000000 $d
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccq6ERLF.s:1257   .data.WF_PARTIAL:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_Delay
+DEV_SPI_WriteByte
+HAL_GPIO_ReadPin

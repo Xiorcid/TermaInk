@@ -1,0 +1,400 @@
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"buttons.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/buttons.c"
+  20              		.section	.text.init,"ax",%progbits
+  21              		.align	1
+  22              		.global	init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	init:
+  28              	.LVL0:
+  29              	.LFB319:
+   1:Core/Src/buttons.c **** #include "buttons.h"
+   2:Core/Src/buttons.c **** 
+   3:Core/Src/buttons.c **** void init(Button *btt){
+  30              		.loc 1 3 23 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   4:Core/Src/buttons.c ****     //gpio_SetGPIOmode_In(btt->port, btt->pin, 0);
+   5:Core/Src/buttons.c ****     btt->btn_flag = true;
+  35              		.loc 1 5 5 view .LVU1
+  36              		.loc 1 5 19 is_stmt 0 view .LVU2
+  37 0000 0123     		movs	r3, #1
+  38 0002 0374     		strb	r3, [r0, #16]
+   6:Core/Src/buttons.c **** }
+  39              		.loc 1 6 1 view .LVU3
+  40 0004 7047     		bx	lr
+  41              		.cfi_endproc
+  42              	.LFE319:
+  44              		.section	.text.tick,"ax",%progbits
+  45              		.align	1
+  46              		.global	tick
+  47              		.syntax unified
+  48              		.thumb
+  49              		.thumb_func
+  51              	tick:
+  52              	.LVL1:
+  53              	.LFB320:
+   7:Core/Src/buttons.c **** 
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 2
+
+
+   8:Core/Src/buttons.c **** bool tick(Button *btt){
+  54              		.loc 1 8 23 is_stmt 1 view -0
+  55              		.cfi_startproc
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		.loc 1 8 23 is_stmt 0 view .LVU5
+  59 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  60              		.cfi_def_cfa_offset 24
+  61              		.cfi_offset 3, -24
+  62              		.cfi_offset 4, -20
+  63              		.cfi_offset 5, -16
+  64              		.cfi_offset 6, -12
+  65              		.cfi_offset 7, -8
+  66              		.cfi_offset 14, -4
+  67 0002 0446     		mov	r4, r0
+   9:Core/Src/buttons.c ****     bool btn_state = !HAL_GPIO_ReadPin(btt->port, btt->pin);
+  68              		.loc 1 9 5 is_stmt 1 view .LVU6
+  69              		.loc 1 9 23 is_stmt 0 view .LVU7
+  70 0004 8188     		ldrh	r1, [r0, #4]
+  71 0006 0068     		ldr	r0, [r0]
+  72              	.LVL2:
+  73              		.loc 1 9 23 view .LVU8
+  74 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  75              	.LVL3:
+  76              		.loc 1 9 10 discriminator 1 view .LVU9
+  77 000c B0FA80F5 		clz	r5, r0
+  78 0010 6D09     		lsrs	r5, r5, #5
+  79              	.LVL4:
+  10:Core/Src/buttons.c ****     btn_state ^= !btt->type;
+  80              		.loc 1 10 5 is_stmt 1 view .LVU10
+  81              		.loc 1 10 22 is_stmt 0 view .LVU11
+  82 0012 A779     		ldrb	r7, [r4, #6]	@ zero_extendqisi2
+  83 0014 AF42     		cmp	r7, r5
+  84 0016 0CBF     		ite	eq
+  85 0018 0126     		moveq	r6, #1
+  86 001a 0026     		movne	r6, #0
+  87              	.LVL5:
+  11:Core/Src/buttons.c **** 
+  12:Core/Src/buttons.c ****     if (!btn_state && !btt->btn_flag && HAL_GetTick() - btt->btn_timer > 100) {
+  88              		.loc 1 12 5 is_stmt 1 view .LVU12
+  89              		.loc 1 12 8 is_stmt 0 view .LVU13
+  90 001c 01D0     		beq	.L3
+  91              		.loc 1 12 27 discriminator 1 view .LVU14
+  92 001e 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+  93              		.loc 1 12 20 discriminator 1 view .LVU15
+  94 0020 3BB1     		cbz	r3, .L8
+  95              	.L3:
+  13:Core/Src/buttons.c ****         btt->btn_flag = true;
+  14:Core/Src/buttons.c ****         if(!btt->btn_hold){btt->btn_single = true;}
+  15:Core/Src/buttons.c ****         btt->btn_hold = false;
+  16:Core/Src/buttons.c ****         btt->btn_timer = HAL_GetTick();
+  17:Core/Src/buttons.c ****     }
+  18:Core/Src/buttons.c ****     if (btn_state && btt->btn_flag && HAL_GetTick() - btt->btn_timer > 100) {
+  96              		.loc 1 18 5 is_stmt 1 view .LVU16
+  97              		.loc 1 18 8 is_stmt 0 view .LVU17
+  98 0022 AF42     		cmp	r7, r5
+  99 0024 17D0     		beq	.L9
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 3
+
+
+ 100              	.L5:
+  19:Core/Src/buttons.c ****         btt->btn_flag = false;
+  20:Core/Src/buttons.c ****         btt->btn_timer = HAL_GetTick();
+  21:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+  22:Core/Src/buttons.c ****     }
+  23:Core/Src/buttons.c **** 
+  24:Core/Src/buttons.c ****     if (!btt->btn_flag && btn_state && (HAL_GetTick() - btt->btn_hold_timer >= 200) && !btt->btn_ho
+ 101              		.loc 1 24 5 is_stmt 1 view .LVU18
+ 102              		.loc 1 24 13 is_stmt 0 view .LVU19
+ 103 0026 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+ 104              		.loc 1 24 8 view .LVU20
+ 105 0028 0BB9     		cbnz	r3, .L6
+ 106              		.loc 1 24 24 discriminator 1 view .LVU21
+ 107 002a AF42     		cmp	r7, r5
+ 108 002c 25D0     		beq	.L10
+ 109              	.L6:
+  25:Core/Src/buttons.c ****         btt->btn_hold = true;
+  26:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+  27:Core/Src/buttons.c ****     }
+  28:Core/Src/buttons.c **** 
+  29:Core/Src/buttons.c ****     return btn_state;
+ 110              		.loc 1 29 5 is_stmt 1 view .LVU22
+  30:Core/Src/buttons.c **** }
+ 111              		.loc 1 30 1 is_stmt 0 view .LVU23
+ 112 002e 3046     		mov	r0, r6
+ 113 0030 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 114              	.LVL6:
+ 115              	.L8:
+  12:Core/Src/buttons.c ****         btt->btn_flag = true;
+ 116              		.loc 1 12 41 discriminator 2 view .LVU24
+ 117 0032 FFF7FEFF 		bl	HAL_GetTick
+ 118              	.LVL7:
+  12:Core/Src/buttons.c ****         btt->btn_flag = true;
+ 119              		.loc 1 12 60 discriminator 1 view .LVU25
+ 120 0036 A368     		ldr	r3, [r4, #8]
+  12:Core/Src/buttons.c ****         btt->btn_flag = true;
+ 121              		.loc 1 12 55 discriminator 1 view .LVU26
+ 122 0038 C01A     		subs	r0, r0, r3
+  12:Core/Src/buttons.c ****         btt->btn_flag = true;
+ 123              		.loc 1 12 38 discriminator 1 view .LVU27
+ 124 003a 6428     		cmp	r0, #100
+ 125 003c F1D9     		bls	.L3
+  13:Core/Src/buttons.c ****         if(!btt->btn_hold){btt->btn_single = true;}
+ 126              		.loc 1 13 9 is_stmt 1 view .LVU28
+  13:Core/Src/buttons.c ****         if(!btt->btn_hold){btt->btn_single = true;}
+ 127              		.loc 1 13 23 is_stmt 0 view .LVU29
+ 128 003e 0123     		movs	r3, #1
+ 129 0040 2374     		strb	r3, [r4, #16]
+  14:Core/Src/buttons.c ****         btt->btn_hold = false;
+ 130              		.loc 1 14 9 is_stmt 1 view .LVU30
+  14:Core/Src/buttons.c ****         btt->btn_hold = false;
+ 131              		.loc 1 14 16 is_stmt 0 view .LVU31
+ 132 0042 637C     		ldrb	r3, [r4, #17]	@ zero_extendqisi2
+  14:Core/Src/buttons.c ****         btt->btn_hold = false;
+ 133              		.loc 1 14 11 view .LVU32
+ 134 0044 0BB9     		cbnz	r3, .L4
+  14:Core/Src/buttons.c ****         btt->btn_hold = false;
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 4
+
+
+ 135              		.loc 1 14 28 is_stmt 1 discriminator 1 view .LVU33
+  14:Core/Src/buttons.c ****         btt->btn_hold = false;
+ 136              		.loc 1 14 44 is_stmt 0 discriminator 1 view .LVU34
+ 137 0046 0123     		movs	r3, #1
+ 138 0048 E374     		strb	r3, [r4, #19]
+ 139              	.L4:
+  15:Core/Src/buttons.c ****         btt->btn_timer = HAL_GetTick();
+ 140              		.loc 1 15 9 is_stmt 1 view .LVU35
+  15:Core/Src/buttons.c ****         btt->btn_timer = HAL_GetTick();
+ 141              		.loc 1 15 23 is_stmt 0 view .LVU36
+ 142 004a 0023     		movs	r3, #0
+ 143 004c 6374     		strb	r3, [r4, #17]
+  16:Core/Src/buttons.c ****     }
+ 144              		.loc 1 16 9 is_stmt 1 view .LVU37
+  16:Core/Src/buttons.c ****     }
+ 145              		.loc 1 16 26 is_stmt 0 view .LVU38
+ 146 004e FFF7FEFF 		bl	HAL_GetTick
+ 147              	.LVL8:
+  16:Core/Src/buttons.c ****     }
+ 148              		.loc 1 16 24 discriminator 1 view .LVU39
+ 149 0052 A060     		str	r0, [r4, #8]
+ 150 0054 E5E7     		b	.L3
+ 151              	.L9:
+  18:Core/Src/buttons.c ****         btt->btn_flag = false;
+ 152              		.loc 1 18 25 discriminator 1 view .LVU40
+ 153 0056 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+  18:Core/Src/buttons.c ****         btt->btn_flag = false;
+ 154              		.loc 1 18 19 discriminator 1 view .LVU41
+ 155 0058 002B     		cmp	r3, #0
+ 156 005a E4D0     		beq	.L5
+  18:Core/Src/buttons.c ****         btt->btn_flag = false;
+ 157              		.loc 1 18 39 discriminator 2 view .LVU42
+ 158 005c FFF7FEFF 		bl	HAL_GetTick
+ 159              	.LVL9:
+  18:Core/Src/buttons.c ****         btt->btn_flag = false;
+ 160              		.loc 1 18 58 discriminator 1 view .LVU43
+ 161 0060 A368     		ldr	r3, [r4, #8]
+  18:Core/Src/buttons.c ****         btt->btn_flag = false;
+ 162              		.loc 1 18 53 discriminator 1 view .LVU44
+ 163 0062 C01A     		subs	r0, r0, r3
+  18:Core/Src/buttons.c ****         btt->btn_flag = false;
+ 164              		.loc 1 18 36 discriminator 1 view .LVU45
+ 165 0064 6428     		cmp	r0, #100
+ 166 0066 DED9     		bls	.L5
+  19:Core/Src/buttons.c ****         btt->btn_timer = HAL_GetTick();
+ 167              		.loc 1 19 9 is_stmt 1 view .LVU46
+  19:Core/Src/buttons.c ****         btt->btn_timer = HAL_GetTick();
+ 168              		.loc 1 19 23 is_stmt 0 view .LVU47
+ 169 0068 0023     		movs	r3, #0
+ 170 006a 2374     		strb	r3, [r4, #16]
+  20:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+ 171              		.loc 1 20 9 is_stmt 1 view .LVU48
+  20:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+ 172              		.loc 1 20 26 is_stmt 0 view .LVU49
+ 173 006c FFF7FEFF 		bl	HAL_GetTick
+ 174              	.LVL10:
+  20:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 5
+
+
+ 175              		.loc 1 20 24 discriminator 1 view .LVU50
+ 176 0070 A060     		str	r0, [r4, #8]
+  21:Core/Src/buttons.c ****     }
+ 177              		.loc 1 21 9 is_stmt 1 view .LVU51
+  21:Core/Src/buttons.c ****     }
+ 178              		.loc 1 21 31 is_stmt 0 view .LVU52
+ 179 0072 FFF7FEFF 		bl	HAL_GetTick
+ 180              	.LVL11:
+  21:Core/Src/buttons.c ****     }
+ 181              		.loc 1 21 29 discriminator 1 view .LVU53
+ 182 0076 E060     		str	r0, [r4, #12]
+ 183 0078 D5E7     		b	.L5
+ 184              	.L10:
+  24:Core/Src/buttons.c ****         btt->btn_hold = true;
+ 185              		.loc 1 24 41 discriminator 2 view .LVU54
+ 186 007a FFF7FEFF 		bl	HAL_GetTick
+ 187              	.LVL12:
+  24:Core/Src/buttons.c ****         btt->btn_hold = true;
+ 188              		.loc 1 24 60 discriminator 1 view .LVU55
+ 189 007e E368     		ldr	r3, [r4, #12]
+  24:Core/Src/buttons.c ****         btt->btn_hold = true;
+ 190              		.loc 1 24 55 discriminator 1 view .LVU56
+ 191 0080 C01A     		subs	r0, r0, r3
+  24:Core/Src/buttons.c ****         btt->btn_hold = true;
+ 192              		.loc 1 24 37 discriminator 1 view .LVU57
+ 193 0082 C728     		cmp	r0, #199
+ 194 0084 D3D9     		bls	.L6
+  24:Core/Src/buttons.c ****         btt->btn_hold = true;
+ 195              		.loc 1 24 92 discriminator 3 view .LVU58
+ 196 0086 637C     		ldrb	r3, [r4, #17]	@ zero_extendqisi2
+  24:Core/Src/buttons.c ****         btt->btn_hold = true;
+ 197              		.loc 1 24 85 discriminator 3 view .LVU59
+ 198 0088 002B     		cmp	r3, #0
+ 199 008a D0D1     		bne	.L6
+  25:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+ 200              		.loc 1 25 9 is_stmt 1 view .LVU60
+  25:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
+ 201              		.loc 1 25 23 is_stmt 0 view .LVU61
+ 202 008c 0123     		movs	r3, #1
+ 203 008e 6374     		strb	r3, [r4, #17]
+  26:Core/Src/buttons.c ****     }
+ 204              		.loc 1 26 9 is_stmt 1 view .LVU62
+  26:Core/Src/buttons.c ****     }
+ 205              		.loc 1 26 31 is_stmt 0 view .LVU63
+ 206 0090 FFF7FEFF 		bl	HAL_GetTick
+ 207              	.LVL13:
+  26:Core/Src/buttons.c ****     }
+ 208              		.loc 1 26 29 discriminator 1 view .LVU64
+ 209 0094 E060     		str	r0, [r4, #12]
+ 210 0096 CAE7     		b	.L6
+ 211              		.cfi_endproc
+ 212              	.LFE320:
+ 214              		.section	.text.isClicked,"ax",%progbits
+ 215              		.align	1
+ 216              		.global	isClicked
+ 217              		.syntax unified
+ 218              		.thumb
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 6
+
+
+ 219              		.thumb_func
+ 221              	isClicked:
+ 222              	.LVL14:
+ 223              	.LFB321:
+  31:Core/Src/buttons.c **** 
+  32:Core/Src/buttons.c **** bool isClicked(Button *btt){
+ 224              		.loc 1 32 28 is_stmt 1 view -0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              		@ link register save eliminated.
+ 229              		.loc 1 32 28 is_stmt 0 view .LVU66
+ 230 0000 0346     		mov	r3, r0
+  33:Core/Src/buttons.c ****     if(btt->btn_single){
+ 231              		.loc 1 33 5 is_stmt 1 view .LVU67
+ 232              		.loc 1 33 11 is_stmt 0 view .LVU68
+ 233 0002 C07C     		ldrb	r0, [r0, #19]	@ zero_extendqisi2
+ 234              	.LVL15:
+ 235              		.loc 1 33 7 view .LVU69
+ 236 0004 00B9     		cbnz	r0, .L13
+ 237              	.L12:
+  34:Core/Src/buttons.c ****         btt->btn_single = false;
+  35:Core/Src/buttons.c ****         return true;
+  36:Core/Src/buttons.c ****     } return false;
+  37:Core/Src/buttons.c **** }
+ 238              		.loc 1 37 1 view .LVU70
+ 239 0006 7047     		bx	lr
+ 240              	.L13:
+  34:Core/Src/buttons.c ****         btt->btn_single = false;
+ 241              		.loc 1 34 9 is_stmt 1 view .LVU71
+  34:Core/Src/buttons.c ****         btt->btn_single = false;
+ 242              		.loc 1 34 25 is_stmt 0 view .LVU72
+ 243 0008 0022     		movs	r2, #0
+ 244 000a DA74     		strb	r2, [r3, #19]
+  35:Core/Src/buttons.c ****     } return false;
+ 245              		.loc 1 35 9 is_stmt 1 view .LVU73
+  35:Core/Src/buttons.c ****     } return false;
+ 246              		.loc 1 35 16 is_stmt 0 view .LVU74
+ 247 000c FBE7     		b	.L12
+ 248              		.cfi_endproc
+ 249              	.LFE321:
+ 251              		.section	.text.isHold,"ax",%progbits
+ 252              		.align	1
+ 253              		.global	isHold
+ 254              		.syntax unified
+ 255              		.thumb
+ 256              		.thumb_func
+ 258              	isHold:
+ 259              	.LVL16:
+ 260              	.LFB322:
+  38:Core/Src/buttons.c **** 
+  39:Core/Src/buttons.c **** bool isHold(Button *btt){
+ 261              		.loc 1 39 25 is_stmt 1 view -0
+ 262              		.cfi_startproc
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265              		@ link register save eliminated.
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 7
+
+
+  40:Core/Src/buttons.c ****     if(btt->btn_hold){
+ 266              		.loc 1 40 5 view .LVU76
+  41:Core/Src/buttons.c ****         return true;
+  42:Core/Src/buttons.c ****     } return false;
+  43:Core/Src/buttons.c **** }...
+ 267              		.loc 1 43 1 is_stmt 0 view .LVU77
+ 268 0000 407C     		ldrb	r0, [r0, #17]	@ zero_extendqisi2
+ 269              	.LVL17:
+ 270              		.loc 1 43 1 view .LVU78
+ 271 0002 7047     		bx	lr
+ 272              		.cfi_endproc
+ 273              	.LFE322:
+ 275              		.text
+ 276              	.Letext0:
+ 277              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 278              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 279              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 280              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 281              		.file 6 "Core/Inc/buttons.h"
+ 282              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 buttons.c
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:21     .text.init:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:27     .text.init:00000000 init
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:45     .text.tick:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:51     .text.tick:00000000 tick
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:215    .text.isClicked:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:221    .text.isClicked:00000000 isClicked
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:252    .text.isHold:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:258    .text.isHold:00000000 isHold
+
+UNDEFINED SYMBOLS
+HAL_GPIO_ReadPin
+HAL_GetTick

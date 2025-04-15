@@ -1,0 +1,233 @@
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"EPD_Conf.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/EPD_Conf.c"
+  20              		.section	.text.DEV_SPI_WriteByte,"ax",%progbits
+  21              		.align	1
+  22              		.global	DEV_SPI_WriteByte
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	DEV_SPI_WriteByte:
+  28              	.LVL0:
+  29              	.LFB322:
+   1:Core/Src/EPD_Conf.c **** /*****************************************************************************
+   2:Core/Src/EPD_Conf.c **** * | File      	:   DEV_Config.c
+   3:Core/Src/EPD_Conf.c **** * | Author      :   Waveshare team
+   4:Core/Src/EPD_Conf.c **** * | Function    :   Hardware underlying interface
+   5:Core/Src/EPD_Conf.c **** * | Info        :
+   6:Core/Src/EPD_Conf.c **** *                Used to shield the underlying layers of each master
+   7:Core/Src/EPD_Conf.c **** *                and enhance portability
+   8:Core/Src/EPD_Conf.c **** *----------------
+   9:Core/Src/EPD_Conf.c **** * |	This version:   V2.0
+  10:Core/Src/EPD_Conf.c **** * | Date        :   2018-10-30
+  11:Core/Src/EPD_Conf.c **** * | Info        :
+  12:Core/Src/EPD_Conf.c **** # ******************************************************************************
+  13:Core/Src/EPD_Conf.c **** # Permission is hereby granted, free of charge, to any person obtaining a copy
+  14:Core/Src/EPD_Conf.c **** # of this software and associated documnetation files (the "Software"), to deal
+  15:Core/Src/EPD_Conf.c **** # in the Software without restriction, including without limitation the rights
+  16:Core/Src/EPD_Conf.c **** # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  17:Core/Src/EPD_Conf.c **** # copies of the Software, and to permit persons to  whom the Software is
+  18:Core/Src/EPD_Conf.c **** # furished to do so, subject to the following conditions:
+  19:Core/Src/EPD_Conf.c **** #
+  20:Core/Src/EPD_Conf.c **** # The above copyright notice and this permission notice shall be included in
+  21:Core/Src/EPD_Conf.c **** # all copies or substantial portions of the Software.
+  22:Core/Src/EPD_Conf.c **** #
+  23:Core/Src/EPD_Conf.c **** # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  24:Core/Src/EPD_Conf.c **** # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  25:Core/Src/EPD_Conf.c **** # FITNESS OR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  26:Core/Src/EPD_Conf.c **** # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  27:Core/Src/EPD_Conf.c **** # LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  28:Core/Src/EPD_Conf.c **** # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  29:Core/Src/EPD_Conf.c **** # THE SOFTWARE.
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s 			page 2
+
+
+  30:Core/Src/EPD_Conf.c **** #
+  31:Core/Src/EPD_Conf.c **** ******************************************************************************/
+  32:Core/Src/EPD_Conf.c **** #include "EPD_Conf.h"
+  33:Core/Src/EPD_Conf.c **** #include "stm32l4xx_hal_spi.h"
+  34:Core/Src/EPD_Conf.c **** 
+  35:Core/Src/EPD_Conf.c **** extern SPI_HandleTypeDef hspi1;
+  36:Core/Src/EPD_Conf.c **** void DEV_SPI_WriteByte(UBYTE value)
+  37:Core/Src/EPD_Conf.c **** {
+  30              		.loc 1 37 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 8
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 37 1 is_stmt 0 view .LVU1
+  35 0000 00B5     		push	{lr}
+  36              		.cfi_def_cfa_offset 4
+  37              		.cfi_offset 14, -4
+  38 0002 83B0     		sub	sp, sp, #12
+  39              		.cfi_def_cfa_offset 16
+  40 0004 8DF80700 		strb	r0, [sp, #7]
+  38:Core/Src/EPD_Conf.c ****     HAL_SPI_Transmit(&hspi1, &value, 1, 1000);
+  41              		.loc 1 38 5 is_stmt 1 view .LVU2
+  42 0008 4FF47A73 		mov	r3, #1000
+  43 000c 0122     		movs	r2, #1
+  44 000e 0DF10701 		add	r1, sp, #7
+  45 0012 0348     		ldr	r0, .L3
+  46              	.LVL1:
+  47              		.loc 1 38 5 is_stmt 0 view .LVU3
+  48 0014 FFF7FEFF 		bl	HAL_SPI_Transmit
+  49              	.LVL2:
+  39:Core/Src/EPD_Conf.c **** }
+  50              		.loc 1 39 1 view .LVU4
+  51 0018 03B0     		add	sp, sp, #12
+  52              		.cfi_def_cfa_offset 4
+  53              		@ sp needed
+  54 001a 5DF804FB 		ldr	pc, [sp], #4
+  55              	.L4:
+  56 001e 00BF     		.align	2
+  57              	.L3:
+  58 0020 00000000 		.word	hspi1
+  59              		.cfi_endproc
+  60              	.LFE322:
+  62              		.section	.text.DEV_Module_Init,"ax",%progbits
+  63              		.align	1
+  64              		.global	DEV_Module_Init
+  65              		.syntax unified
+  66              		.thumb
+  67              		.thumb_func
+  69              	DEV_Module_Init:
+  70              	.LFB323:
+  40:Core/Src/EPD_Conf.c **** 
+  41:Core/Src/EPD_Conf.c **** int DEV_Module_Init(void)
+  42:Core/Src/EPD_Conf.c **** {
+  71              		.loc 1 42 1 is_stmt 1 view -0
+  72              		.cfi_startproc
+  73              		@ args = 0, pretend = 0, frame = 0
+  74              		@ frame_needed = 0, uses_anonymous_args = 0
+  75 0000 08B5     		push	{r3, lr}
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s 			page 3
+
+
+  76              		.cfi_def_cfa_offset 8
+  77              		.cfi_offset 3, -8
+  78              		.cfi_offset 14, -4
+  43:Core/Src/EPD_Conf.c ****     DEV_Digital_Write(EPD_DC_PIN, 0);
+  79              		.loc 1 43 5 view .LVU6
+  80 0002 0022     		movs	r2, #0
+  81 0004 4021     		movs	r1, #64
+  82 0006 4FF09040 		mov	r0, #1207959552
+  83 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  84              	.LVL3:
+  44:Core/Src/EPD_Conf.c ****     DEV_Digital_Write(EPD_CS_PIN, 0);
+  85              		.loc 1 44 5 view .LVU7
+  86 000e 0022     		movs	r2, #0
+  87 0010 1021     		movs	r1, #16
+  88 0012 4FF09040 		mov	r0, #1207959552
+  89 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  90              	.LVL4:
+  45:Core/Src/EPD_Conf.c **** 	// DEV_Digital_Write(EPD_PWR_PIN, 1);
+  46:Core/Src/EPD_Conf.c ****     DEV_Digital_Write(EPD_RST_PIN, 1);
+  91              		.loc 1 46 5 view .LVU8
+  92 001a 0122     		movs	r2, #1
+  93 001c 0821     		movs	r1, #8
+  94 001e 4FF09040 		mov	r0, #1207959552
+  95 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  96              	.LVL5:
+  47:Core/Src/EPD_Conf.c **** 		return 0;
+  97              		.loc 1 47 3 view .LVU9
+  48:Core/Src/EPD_Conf.c **** }
+  98              		.loc 1 48 1 is_stmt 0 view .LVU10
+  99 0026 0020     		movs	r0, #0
+ 100 0028 08BD     		pop	{r3, pc}
+ 101              		.cfi_endproc
+ 102              	.LFE323:
+ 104              		.section	.text.DEV_Module_Exit,"ax",%progbits
+ 105              		.align	1
+ 106              		.global	DEV_Module_Exit
+ 107              		.syntax unified
+ 108              		.thumb
+ 109              		.thumb_func
+ 111              	DEV_Module_Exit:
+ 112              	.LFB324:
+  49:Core/Src/EPD_Conf.c **** 
+  50:Core/Src/EPD_Conf.c **** void DEV_Module_Exit(void)
+  51:Core/Src/EPD_Conf.c **** {
+ 113              		.loc 1 51 1 is_stmt 1 view -0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117 0000 08B5     		push	{r3, lr}
+ 118              		.cfi_def_cfa_offset 8
+ 119              		.cfi_offset 3, -8
+ 120              		.cfi_offset 14, -4
+  52:Core/Src/EPD_Conf.c ****     DEV_Digital_Write(EPD_DC_PIN, 0);
+ 121              		.loc 1 52 5 view .LVU12
+ 122 0002 0022     		movs	r2, #0
+ 123 0004 4021     		movs	r1, #64
+ 124 0006 4FF09040 		mov	r0, #1207959552
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s 			page 4
+
+
+ 125 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 126              	.LVL6:
+  53:Core/Src/EPD_Conf.c ****     DEV_Digital_Write(EPD_CS_PIN, 0);
+ 127              		.loc 1 53 5 view .LVU13
+ 128 000e 0022     		movs	r2, #0
+ 129 0010 1021     		movs	r1, #16
+ 130 0012 4FF09040 		mov	r0, #1207959552
+ 131 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 132              	.LVL7:
+  54:Core/Src/EPD_Conf.c **** 
+  55:Core/Src/EPD_Conf.c ****     //close 5V
+  56:Core/Src/EPD_Conf.c **** 	// DEV_Digital_Write(EPD_PWR_PIN, 0);
+  57:Core/Src/EPD_Conf.c ****     DEV_Digital_Write(EPD_RST_PIN, 0);
+ 133              		.loc 1 57 5 view .LVU14
+ 134 001a 0022     		movs	r2, #0
+ 135 001c 0821     		movs	r1, #8
+ 136 001e 4FF09040 		mov	r0, #1207959552
+ 137 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 138              	.LVL8:
+  58:Core/Src/EPD_Conf.c **** }
+ 139              		.loc 1 58 1 is_stmt 0 view .LVU15
+ 140 0026 08BD     		pop	{r3, pc}
+ 141              		.cfi_endproc
+ 142              	.LFE324:
+ 144              		.text
+ 145              	.Letext0:
+ 146              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 147              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 148              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 149              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 150              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 151              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 152              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
+ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 EPD_Conf.c
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:21     .text.DEV_SPI_WriteByte:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:27     .text.DEV_SPI_WriteByte:00000000 DEV_SPI_WriteByte
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:58     .text.DEV_SPI_WriteByte:00000020 $d
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:63     .text.DEV_Module_Init:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:69     .text.DEV_Module_Init:00000000 DEV_Module_Init
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:105    .text.DEV_Module_Exit:00000000 $t
+/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccMNCkZj.s:111    .text.DEV_Module_Exit:00000000 DEV_Module_Exit
+
+UNDEFINED SYMBOLS
+HAL_SPI_Transmit
+hspi1
+HAL_GPIO_WritePin

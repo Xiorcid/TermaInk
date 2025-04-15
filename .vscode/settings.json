@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stm32l4xx_hal_spi.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "span": "c"
+    },
+    "cortex-debug.armToolchainPath": "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/13.3.1-1.1.1/.content/bin",
+    "cortex-debug.openocdPath": "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/openocd/0.12.0-4.1/.content/bin/openocd"
+}
