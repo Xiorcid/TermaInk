@@ -1,0 +1,1694 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_rcc_ex.c"
+  16              		.text
+  17              		.section	.text.HAL_RCCEx_PeriphCLKConfig,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_RCCEx_PeriphCLKConfig
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_RCCEx_PeriphCLKConfig:
+  25              		@ args = 0, pretend = 0, frame = 8
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  28 0002 83B0     		sub	sp, sp, #12
+  29 0004 0446     		mov	r4, r0
+  30 0006 0368     		ldr	r3, [r0]
+  31 0008 13F4003F 		tst	r3, #131072
+  32 000c 69D0     		beq	.L23
+  33 000e 874B     		ldr	r3, .L32
+  34 0010 9B6D     		ldr	r3, [r3, #88]
+  35 0012 13F0805F 		tst	r3, #268435456
+  36 0016 1ED1     		bne	.L24
+  37 0018 844B     		ldr	r3, .L32
+  38 001a 9A6D     		ldr	r2, [r3, #88]
+  39 001c 42F08052 		orr	r2, r2, #268435456
+  40 0020 9A65     		str	r2, [r3, #88]
+  41 0022 9B6D     		ldr	r3, [r3, #88]
+  42 0024 03F08053 		and	r3, r3, #268435456
+  43 0028 0193     		str	r3, [sp, #4]
+  44 002a 019B     		ldr	r3, [sp, #4]
+  45 002c 0126     		movs	r6, #1
+  46              	.L3:
+  47 002e 804A     		ldr	r2, .L32+4
+  48 0030 1368     		ldr	r3, [r2]
+  49 0032 43F48073 		orr	r3, r3, #256
+  50 0036 1360     		str	r3, [r2]
+  51 0038 FFF7FEFF 		bl	HAL_GetTick
+  52 003c 0546     		mov	r5, r0
+  53              	.L4:
+  54 003e 7C4B     		ldr	r3, .L32+4
+  55 0040 1B68     		ldr	r3, [r3]
+  56 0042 13F4807F 		tst	r3, #256
+  57 0046 08D1     		bne	.L28
+  58 0048 FFF7FEFF 		bl	HAL_GetTick
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 2
+
+
+  59 004c 401B     		subs	r0, r0, r5
+  60 004e 0228     		cmp	r0, #2
+  61 0050 F5D9     		bls	.L4
+  62 0052 0325     		movs	r5, #3
+  63 0054 02E0     		b	.L5
+  64              	.L24:
+  65 0056 0026     		movs	r6, #0
+  66 0058 E9E7     		b	.L3
+  67              	.L28:
+  68 005a 0025     		movs	r5, #0
+  69              	.L5:
+  70 005c 45BB     		cbnz	r5, .L7
+  71 005e 734B     		ldr	r3, .L32
+  72 0060 D3F89030 		ldr	r3, [r3, #144]
+  73 0064 13F44073 		ands	r3, r3, #768
+  74 0068 18D0     		beq	.L8
+  75 006a 226B     		ldr	r2, [r4, #48]
+  76 006c 9A42     		cmp	r2, r3
+  77 006e 12D0     		beq	.L9
+  78 0070 6E4A     		ldr	r2, .L32
+  79 0072 D2F89030 		ldr	r3, [r2, #144]
+  80 0076 23F44073 		bic	r3, r3, #768
+  81 007a D2F89010 		ldr	r1, [r2, #144]
+  82 007e 41F48031 		orr	r1, r1, #65536
+  83 0082 C2F89010 		str	r1, [r2, #144]
+  84 0086 D2F89010 		ldr	r1, [r2, #144]
+  85 008a 21F48031 		bic	r1, r1, #65536
+  86 008e C2F89010 		str	r1, [r2, #144]
+  87 0092 C2F89030 		str	r3, [r2, #144]
+  88              	.L9:
+  89 0096 13F0010F 		tst	r3, #1
+  90 009a 10D1     		bne	.L29
+  91              	.L8:
+  92 009c 45B9     		cbnz	r5, .L7
+  93 009e 634A     		ldr	r2, .L32
+  94 00a0 D2F89030 		ldr	r3, [r2, #144]
+  95 00a4 23F44073 		bic	r3, r3, #768
+  96 00a8 216B     		ldr	r1, [r4, #48]
+  97 00aa 0B43     		orrs	r3, r3, r1
+  98 00ac C2F89030 		str	r3, [r2, #144]
+  99              	.L7:
+ 100 00b0 C6B1     		cbz	r6, .L2
+ 101 00b2 5E4A     		ldr	r2, .L32
+ 102 00b4 936D     		ldr	r3, [r2, #88]
+ 103 00b6 23F08053 		bic	r3, r3, #268435456
+ 104 00ba 9365     		str	r3, [r2, #88]
+ 105 00bc 12E0     		b	.L2
+ 106              	.L29:
+ 107 00be FFF7FEFF 		bl	HAL_GetTick
+ 108 00c2 0746     		mov	r7, r0
+ 109              	.L10:
+ 110 00c4 594B     		ldr	r3, .L32
+ 111 00c6 D3F89030 		ldr	r3, [r3, #144]
+ 112 00ca 13F0020F 		tst	r3, #2
+ 113 00ce E5D1     		bne	.L8
+ 114 00d0 FFF7FEFF 		bl	HAL_GetTick
+ 115 00d4 C01B     		subs	r0, r0, r7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 3
+
+
+ 116 00d6 41F28833 		movw	r3, #5000
+ 117 00da 9842     		cmp	r0, r3
+ 118 00dc F2D9     		bls	.L10
+ 119 00de 0325     		movs	r5, #3
+ 120 00e0 DCE7     		b	.L8
+ 121              	.L23:
+ 122 00e2 0025     		movs	r5, #0
+ 123              	.L2:
+ 124 00e4 2368     		ldr	r3, [r4]
+ 125 00e6 13F0010F 		tst	r3, #1
+ 126 00ea 08D0     		beq	.L12
+ 127 00ec 4F4A     		ldr	r2, .L32
+ 128 00ee D2F88830 		ldr	r3, [r2, #136]
+ 129 00f2 23F00303 		bic	r3, r3, #3
+ 130 00f6 6168     		ldr	r1, [r4, #4]
+ 131 00f8 0B43     		orrs	r3, r3, r1
+ 132 00fa C2F88830 		str	r3, [r2, #136]
+ 133              	.L12:
+ 134 00fe 2368     		ldr	r3, [r4]
+ 135 0100 13F0020F 		tst	r3, #2
+ 136 0104 08D0     		beq	.L13
+ 137 0106 494A     		ldr	r2, .L32
+ 138 0108 D2F88830 		ldr	r3, [r2, #136]
+ 139 010c 23F00C03 		bic	r3, r3, #12
+ 140 0110 A168     		ldr	r1, [r4, #8]
+ 141 0112 0B43     		orrs	r3, r3, r1
+ 142 0114 C2F88830 		str	r3, [r2, #136]
+ 143              	.L13:
+ 144 0118 2368     		ldr	r3, [r4]
+ 145 011a 13F0040F 		tst	r3, #4
+ 146 011e 08D0     		beq	.L14
+ 147 0120 424A     		ldr	r2, .L32
+ 148 0122 D2F88830 		ldr	r3, [r2, #136]
+ 149 0126 23F03003 		bic	r3, r3, #48
+ 150 012a E168     		ldr	r1, [r4, #12]
+ 151 012c 0B43     		orrs	r3, r3, r1
+ 152 012e C2F88830 		str	r3, [r2, #136]
+ 153              	.L14:
+ 154 0132 2368     		ldr	r3, [r4]
+ 155 0134 13F0200F 		tst	r3, #32
+ 156 0138 08D0     		beq	.L15
+ 157 013a 3C4A     		ldr	r2, .L32
+ 158 013c D2F88830 		ldr	r3, [r2, #136]
+ 159 0140 23F44063 		bic	r3, r3, #3072
+ 160 0144 2169     		ldr	r1, [r4, #16]
+ 161 0146 0B43     		orrs	r3, r3, r1
+ 162 0148 C2F88830 		str	r3, [r2, #136]
+ 163              	.L15:
+ 164 014c 2368     		ldr	r3, [r4]
+ 165 014e 13F4007F 		tst	r3, #512
+ 166 0152 08D0     		beq	.L16
+ 167 0154 354A     		ldr	r2, .L32
+ 168 0156 D2F88830 		ldr	r3, [r2, #136]
+ 169 015a 23F44023 		bic	r3, r3, #786432
+ 170 015e 216A     		ldr	r1, [r4, #32]
+ 171 0160 0B43     		orrs	r3, r3, r1
+ 172 0162 C2F88830 		str	r3, [r2, #136]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 4
+
+
+ 173              	.L16:
+ 174 0166 2368     		ldr	r3, [r4]
+ 175 0168 13F4806F 		tst	r3, #1024
+ 176 016c 08D0     		beq	.L17
+ 177 016e 2F4A     		ldr	r2, .L32
+ 178 0170 D2F88830 		ldr	r3, [r2, #136]
+ 179 0174 23F44013 		bic	r3, r3, #3145728
+ 180 0178 616A     		ldr	r1, [r4, #36]
+ 181 017a 0B43     		orrs	r3, r3, r1
+ 182 017c C2F88830 		str	r3, [r2, #136]
+ 183              	.L17:
+ 184 0180 2368     		ldr	r3, [r4]
+ 185 0182 13F0400F 		tst	r3, #64
+ 186 0186 08D0     		beq	.L18
+ 187 0188 284A     		ldr	r2, .L32
+ 188 018a D2F88830 		ldr	r3, [r2, #136]
+ 189 018e 23F44053 		bic	r3, r3, #12288
+ 190 0192 6169     		ldr	r1, [r4, #20]
+ 191 0194 0B43     		orrs	r3, r3, r1
+ 192 0196 C2F88830 		str	r3, [r2, #136]
+ 193              	.L18:
+ 194 019a 2368     		ldr	r3, [r4]
+ 195 019c 13F0800F 		tst	r3, #128
+ 196 01a0 08D0     		beq	.L19
+ 197 01a2 224A     		ldr	r2, .L32
+ 198 01a4 D2F88830 		ldr	r3, [r2, #136]
+ 199 01a8 23F44043 		bic	r3, r3, #49152
+ 200 01ac A169     		ldr	r1, [r4, #24]
+ 201 01ae 0B43     		orrs	r3, r3, r1
+ 202 01b0 C2F88830 		str	r3, [r2, #136]
+ 203              	.L19:
+ 204 01b4 2368     		ldr	r3, [r4]
+ 205 01b6 13F4807F 		tst	r3, #256
+ 206 01ba 08D0     		beq	.L20
+ 207 01bc 1B4A     		ldr	r2, .L32
+ 208 01be D2F88830 		ldr	r3, [r2, #136]
+ 209 01c2 23F44033 		bic	r3, r3, #196608
+ 210 01c6 E169     		ldr	r1, [r4, #28]
+ 211 01c8 0B43     		orrs	r3, r3, r1
+ 212 01ca C2F88830 		str	r3, [r2, #136]
+ 213              	.L20:
+ 214 01ce 2368     		ldr	r3, [r4]
+ 215 01d0 13F4005F 		tst	r3, #8192
+ 216 01d4 0CD0     		beq	.L21
+ 217 01d6 154A     		ldr	r2, .L32
+ 218 01d8 D2F88830 		ldr	r3, [r2, #136]
+ 219 01dc 23F04063 		bic	r3, r3, #201326592
+ 220 01e0 A16A     		ldr	r1, [r4, #40]
+ 221 01e2 0B43     		orrs	r3, r3, r1
+ 222 01e4 C2F88830 		str	r3, [r2, #136]
+ 223 01e8 A36A     		ldr	r3, [r4, #40]
+ 224 01ea B3F1006F 		cmp	r3, #134217728
+ 225 01ee 13D0     		beq	.L30
+ 226              	.L21:
+ 227 01f0 2368     		ldr	r3, [r4]
+ 228 01f2 13F4802F 		tst	r3, #262144
+ 229 01f6 0CD0     		beq	.L22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 5
+
+
+ 230 01f8 0C4A     		ldr	r2, .L32
+ 231 01fa D2F88830 		ldr	r3, [r2, #136]
+ 232 01fe 23F04063 		bic	r3, r3, #201326592
+ 233 0202 E16A     		ldr	r1, [r4, #44]
+ 234 0204 0B43     		orrs	r3, r3, r1
+ 235 0206 C2F88830 		str	r3, [r2, #136]
+ 236 020a E36A     		ldr	r3, [r4, #44]
+ 237 020c B3F1006F 		cmp	r3, #134217728
+ 238 0210 07D0     		beq	.L31
+ 239              	.L22:
+ 240 0212 2846     		mov	r0, r5
+ 241 0214 03B0     		add	sp, sp, #12
+ 242              		@ sp needed
+ 243 0216 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 244              	.L30:
+ 245 0218 D368     		ldr	r3, [r2, #12]
+ 246 021a 43F48013 		orr	r3, r3, #1048576
+ 247 021e D360     		str	r3, [r2, #12]
+ 248 0220 E6E7     		b	.L21
+ 249              	.L31:
+ 250 0222 D368     		ldr	r3, [r2, #12]
+ 251 0224 43F48013 		orr	r3, r3, #1048576
+ 252 0228 D360     		str	r3, [r2, #12]
+ 253 022a F2E7     		b	.L22
+ 254              	.L33:
+ 255              		.align	2
+ 256              	.L32:
+ 257 022c 00100240 		.word	1073876992
+ 258 0230 00700040 		.word	1073770496
+ 260              		.section	.text.HAL_RCCEx_GetPeriphCLKConfig,"ax",%progbits
+ 261              		.align	1
+ 262              		.global	HAL_RCCEx_GetPeriphCLKConfig
+ 263              		.syntax unified
+ 264              		.thumb
+ 265              		.thumb_func
+ 267              	HAL_RCCEx_GetPeriphCLKConfig:
+ 268              		@ args = 0, pretend = 0, frame = 0
+ 269              		@ frame_needed = 0, uses_anonymous_args = 0
+ 270              		@ link register save eliminated.
+ 271 0000 1F4B     		ldr	r3, .L35
+ 272 0002 0360     		str	r3, [r0]
+ 273 0004 1F4B     		ldr	r3, .L35+4
+ 274 0006 D3F88820 		ldr	r2, [r3, #136]
+ 275 000a 02F00302 		and	r2, r2, #3
+ 276 000e 4260     		str	r2, [r0, #4]
+ 277 0010 D3F88820 		ldr	r2, [r3, #136]
+ 278 0014 02F00C02 		and	r2, r2, #12
+ 279 0018 8260     		str	r2, [r0, #8]
+ 280 001a D3F88820 		ldr	r2, [r3, #136]
+ 281 001e 02F03002 		and	r2, r2, #48
+ 282 0022 C260     		str	r2, [r0, #12]
+ 283 0024 D3F88820 		ldr	r2, [r3, #136]
+ 284 0028 02F44062 		and	r2, r2, #3072
+ 285 002c 0261     		str	r2, [r0, #16]
+ 286 002e D3F88820 		ldr	r2, [r3, #136]
+ 287 0032 02F44052 		and	r2, r2, #12288
+ 288 0036 4261     		str	r2, [r0, #20]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 6
+
+
+ 289 0038 D3F88820 		ldr	r2, [r3, #136]
+ 290 003c 02F44042 		and	r2, r2, #49152
+ 291 0040 8261     		str	r2, [r0, #24]
+ 292 0042 D3F88820 		ldr	r2, [r3, #136]
+ 293 0046 02F44032 		and	r2, r2, #196608
+ 294 004a C261     		str	r2, [r0, #28]
+ 295 004c D3F88820 		ldr	r2, [r3, #136]
+ 296 0050 02F44022 		and	r2, r2, #786432
+ 297 0054 0262     		str	r2, [r0, #32]
+ 298 0056 D3F88820 		ldr	r2, [r3, #136]
+ 299 005a 02F44012 		and	r2, r2, #3145728
+ 300 005e 4262     		str	r2, [r0, #36]
+ 301 0060 D3F89020 		ldr	r2, [r3, #144]
+ 302 0064 02F44072 		and	r2, r2, #768
+ 303 0068 0263     		str	r2, [r0, #48]
+ 304 006a D3F88820 		ldr	r2, [r3, #136]
+ 305 006e 02F04062 		and	r2, r2, #201326592
+ 306 0072 8262     		str	r2, [r0, #40]
+ 307 0074 D3F88830 		ldr	r3, [r3, #136]
+ 308 0078 03F04063 		and	r3, r3, #201326592
+ 309 007c C362     		str	r3, [r0, #44]
+ 310 007e 7047     		bx	lr
+ 311              	.L36:
+ 312              		.align	2
+ 313              	.L35:
+ 314 0080 E7270600 		.word	403431
+ 315 0084 00100240 		.word	1073876992
+ 317              		.section	.text.HAL_RCCEx_GetPeriphCLKFreq,"ax",%progbits
+ 318              		.align	1
+ 319              		.global	HAL_RCCEx_GetPeriphCLKFreq
+ 320              		.syntax unified
+ 321              		.thumb
+ 322              		.thumb_func
+ 324              	HAL_RCCEx_GetPeriphCLKFreq:
+ 325              		@ args = 0, pretend = 0, frame = 0
+ 326              		@ frame_needed = 0, uses_anonymous_args = 0
+ 327 0000 08B5     		push	{r3, lr}
+ 328 0002 B0F5003F 		cmp	r0, #131072
+ 329 0006 1BD0     		beq	.L135
+ 330 0008 A54B     		ldr	r3, .L148
+ 331 000a DB68     		ldr	r3, [r3, #12]
+ 332 000c 03F00303 		and	r3, r3, #3
+ 333 0010 022B     		cmp	r3, #2
+ 334 0012 4BD0     		beq	.L42
+ 335 0014 032B     		cmp	r3, #3
+ 336 0016 50D0     		beq	.L43
+ 337 0018 012B     		cmp	r3, #1
+ 338 001a 55D1     		bne	.L107
+ 339 001c A04B     		ldr	r3, .L148
+ 340 001e 1B68     		ldr	r3, [r3]
+ 341 0020 13F00203 		ands	r3, r3, #2
+ 342 0024 51D0     		beq	.L44
+ 343 0026 9E4B     		ldr	r3, .L148
+ 344 0028 1B68     		ldr	r3, [r3]
+ 345 002a 13F0080F 		tst	r3, #8
+ 346 002e 37D0     		beq	.L45
+ 347 0030 9B4B     		ldr	r3, .L148
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 7
+
+
+ 348 0032 1B68     		ldr	r3, [r3]
+ 349 0034 C3F30313 		ubfx	r3, r3, #4, #4
+ 350              	.L46:
+ 351 0038 9A4A     		ldr	r2, .L148+4
+ 352 003a 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 353 003e 44E0     		b	.L44
+ 354              	.L135:
+ 355 0040 974B     		ldr	r3, .L148
+ 356 0042 D3F89030 		ldr	r3, [r3, #144]
+ 357 0046 03F44073 		and	r3, r3, #768
+ 358 004a B3F5007F 		cmp	r3, #512
+ 359 004e 10D0     		beq	.L39
+ 360 0050 B3F5407F 		cmp	r3, #768
+ 361 0054 1CD0     		beq	.L40
+ 362 0056 B3F5807F 		cmp	r3, #256
+ 363 005a 40F05282 		bne	.L103
+ 364 005e 904B     		ldr	r3, .L148
+ 365 0060 D3F89000 		ldr	r0, [r3, #144]
+ 366 0064 10F00200 		ands	r0, r0, #2
+ 367 0068 00F05382 		beq	.L37
+ 368 006c 4FF40040 		mov	r0, #32768
+ 369 0070 4FE2     		b	.L37
+ 370              	.L39:
+ 371 0072 8B4B     		ldr	r3, .L148
+ 372 0074 D3F89400 		ldr	r0, [r3, #148]
+ 373 0078 10F00200 		ands	r0, r0, #2
+ 374 007c 00F04982 		beq	.L37
+ 375 0080 D3F89430 		ldr	r3, [r3, #148]
+ 376 0084 13F0100F 		tst	r3, #16
+ 377 0088 00F03D82 		beq	.L105
+ 378 008c FA20     		movs	r0, #250
+ 379 008e 40E2     		b	.L37
+ 380              	.L40:
+ 381 0090 834B     		ldr	r3, .L148
+ 382 0092 1868     		ldr	r0, [r3]
+ 383 0094 10F40030 		ands	r0, r0, #131072
+ 384 0098 00F03B82 		beq	.L37
+ 385 009c 8248     		ldr	r0, .L148+8
+ 386 009e 38E2     		b	.L37
+ 387              	.L45:
+ 388 00a0 7F4B     		ldr	r3, .L148
+ 389 00a2 D3F89430 		ldr	r3, [r3, #148]
+ 390 00a6 C3F30323 		ubfx	r3, r3, #8, #4
+ 391 00aa C5E7     		b	.L46
+ 392              	.L42:
+ 393 00ac 7C4B     		ldr	r3, .L148
+ 394 00ae 1B68     		ldr	r3, [r3]
+ 395 00b0 13F48063 		ands	r3, r3, #1024
+ 396 00b4 09D0     		beq	.L44
+ 397 00b6 7D4B     		ldr	r3, .L148+12
+ 398 00b8 07E0     		b	.L44
+ 399              	.L43:
+ 400 00ba 794B     		ldr	r3, .L148
+ 401 00bc 1B68     		ldr	r3, [r3]
+ 402 00be 13F40033 		ands	r3, r3, #131072
+ 403 00c2 02D0     		beq	.L44
+ 404 00c4 7A4B     		ldr	r3, .L148+16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 8
+
+
+ 405 00c6 00E0     		b	.L44
+ 406              	.L107:
+ 407 00c8 0023     		movs	r3, #0
+ 408              	.L44:
+ 409 00ca 8028     		cmp	r0, #128
+ 410 00cc 00F09681 		beq	.L47
+ 411 00d0 20D9     		bls	.L136
+ 412 00d2 B0F5806F 		cmp	r0, #1024
+ 413 00d6 00F0E081 		beq	.L56
+ 414 00da 5DD9     		bls	.L137
+ 415 00dc B0F5804F 		cmp	r0, #16384
+ 416 00e0 00F07881 		beq	.L60
+ 417 00e4 B0F5802F 		cmp	r0, #262144
+ 418 00e8 03D0     		beq	.L61
+ 419 00ea B0F5005F 		cmp	r0, #8192
+ 420 00ee 40F01182 		bne	.L110
+ 421              	.L61:
+ 422 00f2 6B4A     		ldr	r2, .L148
+ 423 00f4 D2F88820 		ldr	r2, [r2, #136]
+ 424 00f8 02F04062 		and	r2, r2, #201326592
+ 425 00fc B2F1006F 		cmp	r2, #134217728
+ 426 0100 00F08C80 		beq	.L62
+ 427 0104 B2F1406F 		cmp	r2, #201326592
+ 428 0108 70D0     		beq	.L63
+ 429 010a 002A     		cmp	r2, #0
+ 430 010c 00F0A580 		beq	.L64
+ 431 0110 0020     		movs	r0, #0
+ 432 0112 FEE1     		b	.L37
+ 433              	.L136:
+ 434 0114 2028     		cmp	r0, #32
+ 435 0116 28D8     		bhi	.L49
+ 436 0118 0028     		cmp	r0, #0
+ 437 011a 00F0F781 		beq	.L108
+ 438 011e 0138     		subs	r0, r0, #1
+ 439 0120 1F28     		cmp	r0, #31
+ 440 0122 00F2F581 		bhi	.L109
+ 441 0126 DFE810F0 		tbh	[pc, r0, lsl #1]
+ 442              	.L51:
+ 443 012a A100     		.2byte	(.L54-.L51)/2
+ 444 012c D100     		.2byte	(.L53-.L51)/2
+ 445 012e F301     		.2byte	(.L109-.L51)/2
+ 446 0130 0001     		.2byte	(.L52-.L51)/2
+ 447 0132 F301     		.2byte	(.L109-.L51)/2
+ 448 0134 F301     		.2byte	(.L109-.L51)/2
+ 449 0136 F301     		.2byte	(.L109-.L51)/2
+ 450 0138 F301     		.2byte	(.L109-.L51)/2
+ 451 013a F301     		.2byte	(.L109-.L51)/2
+ 452 013c F301     		.2byte	(.L109-.L51)/2
+ 453 013e F301     		.2byte	(.L109-.L51)/2
+ 454 0140 F301     		.2byte	(.L109-.L51)/2
+ 455 0142 F301     		.2byte	(.L109-.L51)/2
+ 456 0144 F301     		.2byte	(.L109-.L51)/2
+ 457 0146 F301     		.2byte	(.L109-.L51)/2
+ 458 0148 F301     		.2byte	(.L109-.L51)/2
+ 459 014a F301     		.2byte	(.L109-.L51)/2
+ 460 014c F301     		.2byte	(.L109-.L51)/2
+ 461 014e F301     		.2byte	(.L109-.L51)/2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 9
+
+
+ 462 0150 F301     		.2byte	(.L109-.L51)/2
+ 463 0152 F301     		.2byte	(.L109-.L51)/2
+ 464 0154 F301     		.2byte	(.L109-.L51)/2
+ 465 0156 F301     		.2byte	(.L109-.L51)/2
+ 466 0158 F301     		.2byte	(.L109-.L51)/2
+ 467 015a F301     		.2byte	(.L109-.L51)/2
+ 468 015c F301     		.2byte	(.L109-.L51)/2
+ 469 015e F301     		.2byte	(.L109-.L51)/2
+ 470 0160 F301     		.2byte	(.L109-.L51)/2
+ 471 0162 F301     		.2byte	(.L109-.L51)/2
+ 472 0164 F301     		.2byte	(.L109-.L51)/2
+ 473 0166 F301     		.2byte	(.L109-.L51)/2
+ 474 0168 2901     		.2byte	(.L50-.L51)/2
+ 475              		.p2align 1
+ 476              	.L49:
+ 477 016a 4028     		cmp	r0, #64
+ 478 016c 12D1     		bne	.L138
+ 479 016e 4C4B     		ldr	r3, .L148
+ 480 0170 D3F88830 		ldr	r3, [r3, #136]
+ 481 0174 03F44053 		and	r3, r3, #12288
+ 482 0178 B3F5805F 		cmp	r3, #4096
+ 483 017c 00F03381 		beq	.L87
+ 484 0180 B3F5005F 		cmp	r3, #8192
+ 485 0184 00F03281 		beq	.L88
+ 486 0188 002B     		cmp	r3, #0
+ 487 018a 40F0C981 		bne	.L122
+ 488 018e FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 489 0192 BEE1     		b	.L37
+ 490              	.L138:
+ 491 0194 0020     		movs	r0, #0
+ 492 0196 BCE1     		b	.L37
+ 493              	.L137:
+ 494 0198 B0F5807F 		cmp	r0, #256
+ 495 019c 00F04981 		beq	.L58
+ 496 01a0 B0F5007F 		cmp	r0, #512
+ 497 01a4 20D1     		bne	.L139
+ 498 01a6 3E4B     		ldr	r3, .L148
+ 499 01a8 D3F88830 		ldr	r3, [r3, #136]
+ 500 01ac 03F44023 		and	r3, r3, #786432
+ 501 01b0 B3F5002F 		cmp	r3, #524288
+ 502 01b4 00F06A81 		beq	.L93
+ 503 01b8 00F25781 		bhi	.L94
+ 504 01bc 002B     		cmp	r3, #0
+ 505 01be 00F06281 		beq	.L95
+ 506 01c2 B3F5802F 		cmp	r3, #262144
+ 507 01c6 40F04E81 		bne	.L140
+ 508 01ca 354B     		ldr	r3, .L148
+ 509 01cc D3F89400 		ldr	r0, [r3, #148]
+ 510 01d0 10F00200 		ands	r0, r0, #2
+ 511 01d4 00F09D81 		beq	.L37
+ 512 01d8 D3F89430 		ldr	r3, [r3, #148]
+ 513 01dc 13F0100F 		tst	r3, #16
+ 514 01e0 00F0A481 		beq	.L128
+ 515 01e4 FA20     		movs	r0, #250
+ 516 01e6 94E1     		b	.L37
+ 517              	.L139:
+ 518 01e8 0020     		movs	r0, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 10
+
+
+ 519 01ea 92E1     		b	.L37
+ 520              	.L63:
+ 521 01ec 2C4B     		ldr	r3, .L148
+ 522 01ee 1868     		ldr	r0, [r3]
+ 523 01f0 10F00200 		ands	r0, r0, #2
+ 524 01f4 00F08D81 		beq	.L37
+ 525 01f8 1B68     		ldr	r3, [r3]
+ 526 01fa 13F0080F 		tst	r3, #8
+ 527 01fe 07D0     		beq	.L65
+ 528 0200 274B     		ldr	r3, .L148
+ 529 0202 1B68     		ldr	r3, [r3]
+ 530 0204 C3F30313 		ubfx	r3, r3, #4, #4
+ 531              	.L66:
+ 532 0208 264A     		ldr	r2, .L148+4
+ 533 020a 52F82300 		ldr	r0, [r2, r3, lsl #2]
+ 534 020e 80E1     		b	.L37
+ 535              	.L65:
+ 536 0210 234B     		ldr	r3, .L148
+ 537 0212 D3F89430 		ldr	r3, [r3, #148]
+ 538 0216 C3F30323 		ubfx	r3, r3, #8, #4
+ 539 021a F5E7     		b	.L66
+ 540              	.L62:
+ 541 021c 204A     		ldr	r2, .L148
+ 542 021e 1068     		ldr	r0, [r2]
+ 543 0220 10F00070 		ands	r0, r0, #33554432
+ 544 0224 00F07581 		beq	.L37
+ 545 0228 D068     		ldr	r0, [r2, #12]
+ 546 022a 10F48010 		ands	r0, r0, #1048576
+ 547 022e 00F07081 		beq	.L37
+ 548 0232 1146     		mov	r1, r2
+ 549 0234 D268     		ldr	r2, [r2, #12]
+ 550 0236 C2F30622 		ubfx	r2, r2, #8, #7
+ 551 023a 02FB03F3 		mul	r3, r2, r3
+ 552 023e CA68     		ldr	r2, [r1, #12]
+ 553 0240 C2F30212 		ubfx	r2, r2, #4, #3
+ 554 0244 0132     		adds	r2, r2, #1
+ 555 0246 B3FBF2F3 		udiv	r3, r3, r2
+ 556 024a C868     		ldr	r0, [r1, #12]
+ 557 024c C0F34150 		ubfx	r0, r0, #21, #2
+ 558 0250 0130     		adds	r0, r0, #1
+ 559 0252 4000     		lsls	r0, r0, #1
+ 560 0254 B3FBF0F0 		udiv	r0, r3, r0
+ 561 0258 5BE1     		b	.L37
+ 562              	.L64:
+ 563 025a 114B     		ldr	r3, .L148
+ 564 025c D3F89800 		ldr	r0, [r3, #152]
+ 565 0260 10F00200 		ands	r0, r0, #2
+ 566 0264 00F05581 		beq	.L37
+ 567 0268 1248     		ldr	r0, .L148+20
+ 568 026a 52E1     		b	.L37
+ 569              	.L54:
+ 570 026c 0C4B     		ldr	r3, .L148
+ 571 026e D3F88830 		ldr	r3, [r3, #136]
+ 572 0272 03F00303 		and	r3, r3, #3
+ 573 0276 032B     		cmp	r3, #3
+ 574 0278 00F24E81 		bhi	.L112
+ 575 027c DFE803F0 		tbb	[pc, r3]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 11
+
+
+ 576              	.L68:
+ 577 0280 02       		.byte	(.L71-.L68)/2
+ 578 0281 05       		.byte	(.L70-.L68)/2
+ 579 0282 08       		.byte	(.L69-.L68)/2
+ 580 0283 1C       		.byte	(.L67-.L68)/2
+ 581              		.p2align 1
+ 582              	.L71:
+ 583 0284 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
+ 584 0288 43E1     		b	.L37
+ 585              	.L70:
+ 586 028a FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 587 028e 40E1     		b	.L37
+ 588              	.L69:
+ 589 0290 034B     		ldr	r3, .L148
+ 590 0292 1868     		ldr	r0, [r3]
+ 591 0294 10F48060 		ands	r0, r0, #1024
+ 592 0298 00F03B81 		beq	.L37
+ 593 029c 0348     		ldr	r0, .L148+12
+ 594 029e 38E1     		b	.L37
+ 595              	.L149:
+ 596              		.align	2
+ 597              	.L148:
+ 598 02a0 00100240 		.word	1073876992
+ 599 02a4 00000000 		.word	MSIRangeTable
+ 600 02a8 90D00300 		.word	250000
+ 601 02ac 0024F400 		.word	16000000
+ 602 02b0 00127A00 		.word	8000000
+ 603 02b4 006CDC02 		.word	48000000
+ 604              	.L67:
+ 605 02b8 9F4B     		ldr	r3, .L150
+ 606 02ba D3F89000 		ldr	r0, [r3, #144]
+ 607 02be 10F00200 		ands	r0, r0, #2
+ 608 02c2 00F02681 		beq	.L37
+ 609 02c6 4FF40040 		mov	r0, #32768
+ 610 02ca 22E1     		b	.L37
+ 611              	.L53:
+ 612 02cc 9A4B     		ldr	r3, .L150
+ 613 02ce D3F88830 		ldr	r3, [r3, #136]
+ 614 02d2 03F00C03 		and	r3, r3, #12
+ 615 02d6 0C2B     		cmp	r3, #12
+ 616 02d8 00F22081 		bhi	.L115
+ 617 02dc DFE813F0 		tbh	[pc, r3, lsl #1]
+ 618              	.L73:
+ 619 02e0 0D00     		.2byte	(.L76-.L73)/2
+ 620 02e2 1E01     		.2byte	(.L115-.L73)/2
+ 621 02e4 1E01     		.2byte	(.L115-.L73)/2
+ 622 02e6 1E01     		.2byte	(.L115-.L73)/2
+ 623 02e8 1000     		.2byte	(.L75-.L73)/2
+ 624 02ea 1E01     		.2byte	(.L115-.L73)/2
+ 625 02ec 1E01     		.2byte	(.L115-.L73)/2
+ 626 02ee 1E01     		.2byte	(.L115-.L73)/2
+ 627 02f0 1300     		.2byte	(.L74-.L73)/2
+ 628 02f2 1E01     		.2byte	(.L115-.L73)/2
+ 629 02f4 1E01     		.2byte	(.L115-.L73)/2
+ 630 02f6 1E01     		.2byte	(.L115-.L73)/2
+ 631 02f8 1B00     		.2byte	(.L72-.L73)/2
+ 632              		.p2align 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 12
+
+
+ 633              	.L76:
+ 634 02fa FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 635 02fe 08E1     		b	.L37
+ 636              	.L75:
+ 637 0300 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 638 0304 05E1     		b	.L37
+ 639              	.L74:
+ 640 0306 8C4B     		ldr	r3, .L150
+ 641 0308 1868     		ldr	r0, [r3]
+ 642 030a 10F48060 		ands	r0, r0, #1024
+ 643 030e 00F00081 		beq	.L37
+ 644 0312 8A48     		ldr	r0, .L150+4
+ 645 0314 FDE0     		b	.L37
+ 646              	.L72:
+ 647 0316 884B     		ldr	r3, .L150
+ 648 0318 D3F89000 		ldr	r0, [r3, #144]
+ 649 031c 10F00200 		ands	r0, r0, #2
+ 650 0320 00F0F780 		beq	.L37
+ 651 0324 4FF40040 		mov	r0, #32768
+ 652 0328 F3E0     		b	.L37
+ 653              	.L52:
+ 654 032a 834B     		ldr	r3, .L150
+ 655 032c D3F88830 		ldr	r3, [r3, #136]
+ 656 0330 03F03003 		and	r3, r3, #48
+ 657 0334 202B     		cmp	r3, #32
+ 658 0336 19D0     		beq	.L77
+ 659 0338 07D8     		bhi	.L78
+ 660 033a A3B1     		cbz	r3, .L79
+ 661 033c 102B     		cmp	r3, #16
+ 662 033e 02D1     		bne	.L141
+ 663 0340 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 664 0344 E5E0     		b	.L37
+ 665              	.L141:
+ 666 0346 0020     		movs	r0, #0
+ 667 0348 E3E0     		b	.L37
+ 668              	.L78:
+ 669 034a 302B     		cmp	r3, #48
+ 670 034c 09D1     		bne	.L142
+ 671 034e 7A4B     		ldr	r3, .L150
+ 672 0350 D3F89000 		ldr	r0, [r3, #144]
+ 673 0354 10F00200 		ands	r0, r0, #2
+ 674 0358 00F0DB80 		beq	.L37
+ 675 035c 4FF40040 		mov	r0, #32768
+ 676 0360 D7E0     		b	.L37
+ 677              	.L142:
+ 678 0362 0020     		movs	r0, #0
+ 679 0364 D5E0     		b	.L37
+ 680              	.L79:
+ 681 0366 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 682 036a D2E0     		b	.L37
+ 683              	.L77:
+ 684 036c 724B     		ldr	r3, .L150
+ 685 036e 1868     		ldr	r0, [r3]
+ 686 0370 10F48060 		ands	r0, r0, #1024
+ 687 0374 00F0CD80 		beq	.L37
+ 688 0378 7048     		ldr	r0, .L150+4
+ 689 037a CAE0     		b	.L37
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 13
+
+
+ 690              	.L50:
+ 691 037c 6E4B     		ldr	r3, .L150
+ 692 037e D3F88830 		ldr	r3, [r3, #136]
+ 693 0382 03F44063 		and	r3, r3, #3072
+ 694 0386 B3F5006F 		cmp	r3, #2048
+ 695 038a 1BD0     		beq	.L82
+ 696 038c 08D8     		bhi	.L83
+ 697 038e B3B1     		cbz	r3, .L84
+ 698 0390 B3F5806F 		cmp	r3, #1024
+ 699 0394 02D1     		bne	.L143
+ 700 0396 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 701 039a BAE0     		b	.L37
+ 702              	.L143:
+ 703 039c 0020     		movs	r0, #0
+ 704 039e B8E0     		b	.L37
+ 705              	.L83:
+ 706 03a0 B3F5406F 		cmp	r3, #3072
+ 707 03a4 09D1     		bne	.L144
+ 708 03a6 644B     		ldr	r3, .L150
+ 709 03a8 D3F89000 		ldr	r0, [r3, #144]
+ 710 03ac 10F00200 		ands	r0, r0, #2
+ 711 03b0 00F0AF80 		beq	.L37
+ 712 03b4 4FF40040 		mov	r0, #32768
+ 713 03b8 ABE0     		b	.L37
+ 714              	.L144:
+ 715 03ba 0020     		movs	r0, #0
+ 716 03bc A9E0     		b	.L37
+ 717              	.L84:
+ 718 03be FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 719 03c2 A6E0     		b	.L37
+ 720              	.L82:
+ 721 03c4 5C4B     		ldr	r3, .L150
+ 722 03c6 1868     		ldr	r0, [r3]
+ 723 03c8 10F48060 		ands	r0, r0, #1024
+ 724 03cc 00F0A180 		beq	.L37
+ 725 03d0 5A48     		ldr	r0, .L150+4
+ 726 03d2 9EE0     		b	.L37
+ 727              	.L60:
+ 728 03d4 584B     		ldr	r3, .L150
+ 729 03d6 D86C     		ldr	r0, [r3, #76]
+ 730 03d8 10F40050 		ands	r0, r0, #8192
+ 731 03dc 00F09980 		beq	.L37
+ 732 03e0 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 733 03e4 95E0     		b	.L37
+ 734              	.L87:
+ 735 03e6 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 736 03ea 92E0     		b	.L37
+ 737              	.L88:
+ 738 03ec 524B     		ldr	r3, .L150
+ 739 03ee 1868     		ldr	r0, [r3]
+ 740 03f0 10F48060 		ands	r0, r0, #1024
+ 741 03f4 00F08D80 		beq	.L37
+ 742 03f8 5048     		ldr	r0, .L150+4
+ 743 03fa 8AE0     		b	.L37
+ 744              	.L47:
+ 745 03fc 4E4B     		ldr	r3, .L150
+ 746 03fe D3F88830 		ldr	r3, [r3, #136]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 14
+
+
+ 747 0402 03F44043 		and	r3, r3, #49152
+ 748 0406 B3F5804F 		cmp	r3, #16384
+ 749 040a 08D0     		beq	.L89
+ 750 040c B3F5004F 		cmp	r3, #32768
+ 751 0410 08D0     		beq	.L90
+ 752 0412 002B     		cmp	r3, #0
+ 753 0414 40F08680 		bne	.L124
+ 754 0418 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 755 041c 79E0     		b	.L37
+ 756              	.L89:
+ 757 041e FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 758 0422 76E0     		b	.L37
+ 759              	.L90:
+ 760 0424 444B     		ldr	r3, .L150
+ 761 0426 1868     		ldr	r0, [r3]
+ 762 0428 10F48060 		ands	r0, r0, #1024
+ 763 042c 71D0     		beq	.L37
+ 764 042e 4348     		ldr	r0, .L150+4
+ 765 0430 6FE0     		b	.L37
+ 766              	.L58:
+ 767 0432 414B     		ldr	r3, .L150
+ 768 0434 D3F88830 		ldr	r3, [r3, #136]
+ 769 0438 03F44033 		and	r3, r3, #196608
+ 770 043c B3F5803F 		cmp	r3, #65536
+ 771 0440 07D0     		beq	.L91
+ 772 0442 B3F5003F 		cmp	r3, #131072
+ 773 0446 07D0     		beq	.L92
+ 774 0448 002B     		cmp	r3, #0
+ 775 044a 6DD1     		bne	.L126
+ 776 044c FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 777 0450 5FE0     		b	.L37
+ 778              	.L91:
+ 779 0452 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 780 0456 5CE0     		b	.L37
+ 781              	.L92:
+ 782 0458 374B     		ldr	r3, .L150
+ 783 045a 1868     		ldr	r0, [r3]
+ 784 045c 10F48060 		ands	r0, r0, #1024
+ 785 0460 57D0     		beq	.L37
+ 786 0462 3648     		ldr	r0, .L150+4
+ 787 0464 55E0     		b	.L37
+ 788              	.L140:
+ 789 0466 0020     		movs	r0, #0
+ 790 0468 53E0     		b	.L37
+ 791              	.L94:
+ 792 046a B3F5402F 		cmp	r3, #786432
+ 793 046e 08D1     		bne	.L145
+ 794 0470 314B     		ldr	r3, .L150
+ 795 0472 D3F89000 		ldr	r0, [r3, #144]
+ 796 0476 10F00200 		ands	r0, r0, #2
+ 797 047a 4AD0     		beq	.L37
+ 798 047c 4FF40040 		mov	r0, #32768
+ 799 0480 47E0     		b	.L37
+ 800              	.L145:
+ 801 0482 0020     		movs	r0, #0
+ 802 0484 45E0     		b	.L37
+ 803              	.L95:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 15
+
+
+ 804 0486 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 805 048a 42E0     		b	.L37
+ 806              	.L93:
+ 807 048c 2A4B     		ldr	r3, .L150
+ 808 048e 1868     		ldr	r0, [r3]
+ 809 0490 10F48060 		ands	r0, r0, #1024
+ 810 0494 3DD0     		beq	.L37
+ 811 0496 2948     		ldr	r0, .L150+4
+ 812 0498 3BE0     		b	.L37
+ 813              	.L56:
+ 814 049a 274B     		ldr	r3, .L150
+ 815 049c D3F88830 		ldr	r3, [r3, #136]
+ 816 04a0 03F44013 		and	r3, r3, #3145728
+ 817 04a4 B3F5001F 		cmp	r3, #2097152
+ 818 04a8 24D0     		beq	.L98
+ 819 04aa 12D8     		bhi	.L99
+ 820 04ac FBB1     		cbz	r3, .L100
+ 821 04ae B3F5801F 		cmp	r3, #1048576
+ 822 04b2 0CD1     		bne	.L146
+ 823 04b4 204B     		ldr	r3, .L150
+ 824 04b6 D3F89400 		ldr	r0, [r3, #148]
+ 825 04ba 10F00200 		ands	r0, r0, #2
+ 826 04be 28D0     		beq	.L37
+ 827 04c0 D3F89430 		ldr	r3, [r3, #148]
+ 828 04c4 13F0100F 		tst	r3, #16
+ 829 04c8 33D0     		beq	.L131
+ 830 04ca FA20     		movs	r0, #250
+ 831 04cc 21E0     		b	.L37
+ 832              	.L146:
+ 833 04ce 0020     		movs	r0, #0
+ 834 04d0 1FE0     		b	.L37
+ 835              	.L99:
+ 836 04d2 B3F5401F 		cmp	r3, #3145728
+ 837 04d6 08D1     		bne	.L147
+ 838 04d8 174B     		ldr	r3, .L150
+ 839 04da D3F89000 		ldr	r0, [r3, #144]
+ 840 04de 10F00200 		ands	r0, r0, #2
+ 841 04e2 16D0     		beq	.L37
+ 842 04e4 4FF40040 		mov	r0, #32768
+ 843 04e8 13E0     		b	.L37
+ 844              	.L147:
+ 845 04ea 0020     		movs	r0, #0
+ 846 04ec 11E0     		b	.L37
+ 847              	.L100:
+ 848 04ee FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+ 849 04f2 0EE0     		b	.L37
+ 850              	.L98:
+ 851 04f4 104B     		ldr	r3, .L150
+ 852 04f6 1868     		ldr	r0, [r3]
+ 853 04f8 10F48060 		ands	r0, r0, #1024
+ 854 04fc 09D0     		beq	.L37
+ 855 04fe 0F48     		ldr	r0, .L150+4
+ 856 0500 07E0     		b	.L37
+ 857              	.L103:
+ 858 0502 0020     		movs	r0, #0
+ 859 0504 05E0     		b	.L37
+ 860              	.L105:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 16
+
+
+ 861 0506 4FF4FA40 		mov	r0, #32000
+ 862 050a 02E0     		b	.L37
+ 863              	.L108:
+ 864 050c 0020     		movs	r0, #0
+ 865 050e 00E0     		b	.L37
+ 866              	.L109:
+ 867 0510 0020     		movs	r0, #0
+ 868              	.L37:
+ 869 0512 08BD     		pop	{r3, pc}
+ 870              	.L110:
+ 871 0514 0020     		movs	r0, #0
+ 872 0516 FCE7     		b	.L37
+ 873              	.L112:
+ 874 0518 0020     		movs	r0, #0
+ 875 051a FAE7     		b	.L37
+ 876              	.L115:
+ 877 051c 0020     		movs	r0, #0
+ 878 051e F8E7     		b	.L37
+ 879              	.L122:
+ 880 0520 0020     		movs	r0, #0
+ 881 0522 F6E7     		b	.L37
+ 882              	.L124:
+ 883 0524 0020     		movs	r0, #0
+ 884 0526 F4E7     		b	.L37
+ 885              	.L126:
+ 886 0528 0020     		movs	r0, #0
+ 887 052a F2E7     		b	.L37
+ 888              	.L128:
+ 889 052c 4FF4FA40 		mov	r0, #32000
+ 890 0530 EFE7     		b	.L37
+ 891              	.L131:
+ 892 0532 4FF4FA40 		mov	r0, #32000
+ 893 0536 ECE7     		b	.L37
+ 894              	.L151:
+ 895              		.align	2
+ 896              	.L150:
+ 897 0538 00100240 		.word	1073876992
+ 898 053c 0024F400 		.word	16000000
+ 900              		.section	.text.HAL_RCCEx_WakeUpStopCLKConfig,"ax",%progbits
+ 901              		.align	1
+ 902              		.global	HAL_RCCEx_WakeUpStopCLKConfig
+ 903              		.syntax unified
+ 904              		.thumb
+ 905              		.thumb_func
+ 907              	HAL_RCCEx_WakeUpStopCLKConfig:
+ 908              		@ args = 0, pretend = 0, frame = 0
+ 909              		@ frame_needed = 0, uses_anonymous_args = 0
+ 910              		@ link register save eliminated.
+ 911 0000 034A     		ldr	r2, .L153
+ 912 0002 9368     		ldr	r3, [r2, #8]
+ 913 0004 23F40043 		bic	r3, r3, #32768
+ 914 0008 0343     		orrs	r3, r3, r0
+ 915 000a 9360     		str	r3, [r2, #8]
+ 916 000c 7047     		bx	lr
+ 917              	.L154:
+ 918 000e 00BF     		.align	2
+ 919              	.L153:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 17
+
+
+ 920 0010 00100240 		.word	1073876992
+ 922              		.section	.text.HAL_RCCEx_StandbyMSIRangeConfig,"ax",%progbits
+ 923              		.align	1
+ 924              		.global	HAL_RCCEx_StandbyMSIRangeConfig
+ 925              		.syntax unified
+ 926              		.thumb
+ 927              		.thumb_func
+ 929              	HAL_RCCEx_StandbyMSIRangeConfig:
+ 930              		@ args = 0, pretend = 0, frame = 0
+ 931              		@ frame_needed = 0, uses_anonymous_args = 0
+ 932              		@ link register save eliminated.
+ 933 0000 044A     		ldr	r2, .L156
+ 934 0002 D2F89430 		ldr	r3, [r2, #148]
+ 935 0006 23F47063 		bic	r3, r3, #3840
+ 936 000a 43EA0013 		orr	r3, r3, r0, lsl #4
+ 937 000e C2F89430 		str	r3, [r2, #148]
+ 938 0012 7047     		bx	lr
+ 939              	.L157:
+ 940              		.align	2
+ 941              	.L156:
+ 942 0014 00100240 		.word	1073876992
+ 944              		.section	.text.HAL_RCCEx_EnableLSECSS,"ax",%progbits
+ 945              		.align	1
+ 946              		.global	HAL_RCCEx_EnableLSECSS
+ 947              		.syntax unified
+ 948              		.thumb
+ 949              		.thumb_func
+ 951              	HAL_RCCEx_EnableLSECSS:
+ 952              		@ args = 0, pretend = 0, frame = 0
+ 953              		@ frame_needed = 0, uses_anonymous_args = 0
+ 954              		@ link register save eliminated.
+ 955 0000 034A     		ldr	r2, .L159
+ 956 0002 D2F89030 		ldr	r3, [r2, #144]
+ 957 0006 43F02003 		orr	r3, r3, #32
+ 958 000a C2F89030 		str	r3, [r2, #144]
+ 959 000e 7047     		bx	lr
+ 960              	.L160:
+ 961              		.align	2
+ 962              	.L159:
+ 963 0010 00100240 		.word	1073876992
+ 965              		.section	.text.HAL_RCCEx_DisableLSECSS,"ax",%progbits
+ 966              		.align	1
+ 967              		.global	HAL_RCCEx_DisableLSECSS
+ 968              		.syntax unified
+ 969              		.thumb
+ 970              		.thumb_func
+ 972              	HAL_RCCEx_DisableLSECSS:
+ 973              		@ args = 0, pretend = 0, frame = 0
+ 974              		@ frame_needed = 0, uses_anonymous_args = 0
+ 975              		@ link register save eliminated.
+ 976 0000 054B     		ldr	r3, .L162
+ 977 0002 D3F89020 		ldr	r2, [r3, #144]
+ 978 0006 22F02002 		bic	r2, r2, #32
+ 979 000a C3F89020 		str	r2, [r3, #144]
+ 980 000e 9A69     		ldr	r2, [r3, #24]
+ 981 0010 22F40072 		bic	r2, r2, #512
+ 982 0014 9A61     		str	r2, [r3, #24]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 18
+
+
+ 983 0016 7047     		bx	lr
+ 984              	.L163:
+ 985              		.align	2
+ 986              	.L162:
+ 987 0018 00100240 		.word	1073876992
+ 989              		.section	.text.HAL_RCCEx_EnableLSECSS_IT,"ax",%progbits
+ 990              		.align	1
+ 991              		.global	HAL_RCCEx_EnableLSECSS_IT
+ 992              		.syntax unified
+ 993              		.thumb
+ 994              		.thumb_func
+ 996              	HAL_RCCEx_EnableLSECSS_IT:
+ 997              		@ args = 0, pretend = 0, frame = 0
+ 998              		@ frame_needed = 0, uses_anonymous_args = 0
+ 999              		@ link register save eliminated.
+ 1000 0000 0A4B     		ldr	r3, .L165
+ 1001 0002 D3F89020 		ldr	r2, [r3, #144]
+ 1002 0006 42F02002 		orr	r2, r2, #32
+ 1003 000a C3F89020 		str	r2, [r3, #144]
+ 1004 000e 9A69     		ldr	r2, [r3, #24]
+ 1005 0010 42F40072 		orr	r2, r2, #512
+ 1006 0014 9A61     		str	r2, [r3, #24]
+ 1007 0016 A3F58633 		sub	r3, r3, #68608
+ 1008 001a 1A68     		ldr	r2, [r3]
+ 1009 001c 42F40022 		orr	r2, r2, #524288
+ 1010 0020 1A60     		str	r2, [r3]
+ 1011 0022 9A68     		ldr	r2, [r3, #8]
+ 1012 0024 42F40022 		orr	r2, r2, #524288
+ 1013 0028 9A60     		str	r2, [r3, #8]
+ 1014 002a 7047     		bx	lr
+ 1015              	.L166:
+ 1016              		.align	2
+ 1017              	.L165:
+ 1018 002c 00100240 		.word	1073876992
+ 1020              		.section	.text.HAL_RCCEx_LSECSS_Callback,"ax",%progbits
+ 1021              		.align	1
+ 1022              		.weak	HAL_RCCEx_LSECSS_Callback
+ 1023              		.syntax unified
+ 1024              		.thumb
+ 1025              		.thumb_func
+ 1027              	HAL_RCCEx_LSECSS_Callback:
+ 1028              		@ args = 0, pretend = 0, frame = 0
+ 1029              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1030              		@ link register save eliminated.
+ 1031 0000 7047     		bx	lr
+ 1033              		.section	.text.HAL_RCCEx_LSECSS_IRQHandler,"ax",%progbits
+ 1034              		.align	1
+ 1035              		.global	HAL_RCCEx_LSECSS_IRQHandler
+ 1036              		.syntax unified
+ 1037              		.thumb
+ 1038              		.thumb_func
+ 1040              	HAL_RCCEx_LSECSS_IRQHandler:
+ 1041              		@ args = 0, pretend = 0, frame = 0
+ 1042              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1043 0000 08B5     		push	{r3, lr}
+ 1044 0002 064B     		ldr	r3, .L172
+ 1045 0004 DB69     		ldr	r3, [r3, #28]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 19
+
+
+ 1046 0006 13F4007F 		tst	r3, #512
+ 1047 000a 00D1     		bne	.L171
+ 1048              	.L168:
+ 1049 000c 08BD     		pop	{r3, pc}
+ 1050              	.L171:
+ 1051 000e FFF7FEFF 		bl	HAL_RCCEx_LSECSS_Callback
+ 1052 0012 024B     		ldr	r3, .L172
+ 1053 0014 4FF40072 		mov	r2, #512
+ 1054 0018 1A62     		str	r2, [r3, #32]
+ 1055 001a F7E7     		b	.L168
+ 1056              	.L173:
+ 1057              		.align	2
+ 1058              	.L172:
+ 1059 001c 00100240 		.word	1073876992
+ 1061              		.section	.text.HAL_RCCEx_EnableLSCO,"ax",%progbits
+ 1062              		.align	1
+ 1063              		.global	HAL_RCCEx_EnableLSCO
+ 1064              		.syntax unified
+ 1065              		.thumb
+ 1066              		.thumb_func
+ 1068              	HAL_RCCEx_EnableLSCO:
+ 1069              		@ args = 0, pretend = 0, frame = 32
+ 1070              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1071 0000 30B5     		push	{r4, r5, lr}
+ 1072 0002 89B0     		sub	sp, sp, #36
+ 1073 0004 0546     		mov	r5, r0
+ 1074 0006 244C     		ldr	r4, .L185
+ 1075 0008 E36C     		ldr	r3, [r4, #76]
+ 1076 000a 43F00103 		orr	r3, r3, #1
+ 1077 000e E364     		str	r3, [r4, #76]
+ 1078 0010 E36C     		ldr	r3, [r4, #76]
+ 1079 0012 03F00103 		and	r3, r3, #1
+ 1080 0016 0193     		str	r3, [sp, #4]
+ 1081 0018 019B     		ldr	r3, [sp, #4]
+ 1082 001a 0423     		movs	r3, #4
+ 1083 001c 0393     		str	r3, [sp, #12]
+ 1084 001e 0323     		movs	r3, #3
+ 1085 0020 0493     		str	r3, [sp, #16]
+ 1086 0022 0223     		movs	r3, #2
+ 1087 0024 0693     		str	r3, [sp, #24]
+ 1088 0026 0023     		movs	r3, #0
+ 1089 0028 0593     		str	r3, [sp, #20]
+ 1090 002a 03A9     		add	r1, sp, #12
+ 1091 002c 4FF09040 		mov	r0, #1207959552
+ 1092 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 1093 0034 A36D     		ldr	r3, [r4, #88]
+ 1094 0036 13F0805F 		tst	r3, #268435456
+ 1095 003a 1DD1     		bne	.L179
+ 1096 003c A26D     		ldr	r2, [r4, #88]
+ 1097 003e 42F08052 		orr	r2, r2, #268435456
+ 1098 0042 A265     		str	r2, [r4, #88]
+ 1099 0044 A36D     		ldr	r3, [r4, #88]
+ 1100 0046 03F08053 		and	r3, r3, #268435456
+ 1101 004a 0293     		str	r3, [sp, #8]
+ 1102 004c 029B     		ldr	r3, [sp, #8]
+ 1103 004e 0124     		movs	r4, #1
+ 1104              	.L175:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 20
+
+
+ 1105 0050 124B     		ldr	r3, .L185+4
+ 1106 0052 1B68     		ldr	r3, [r3]
+ 1107 0054 13F4807F 		tst	r3, #256
+ 1108 0058 10D0     		beq	.L182
+ 1109 005a 0022     		movs	r2, #0
+ 1110              	.L176:
+ 1111 005c 0E4B     		ldr	r3, .L185
+ 1112 005e D3F89000 		ldr	r0, [r3, #144]
+ 1113 0062 20F04070 		bic	r0, r0, #50331648
+ 1114 0066 2843     		orrs	r0, r0, r5
+ 1115 0068 40F08070 		orr	r0, r0, #16777216
+ 1116 006c C3F89000 		str	r0, [r3, #144]
+ 1117 0070 42B9     		cbnz	r2, .L183
+ 1118              	.L177:
+ 1119 0072 54B9     		cbnz	r4, .L184
+ 1120              	.L174:
+ 1121 0074 09B0     		add	sp, sp, #36
+ 1122              		@ sp needed
+ 1123 0076 30BD     		pop	{r4, r5, pc}
+ 1124              	.L179:
+ 1125 0078 0024     		movs	r4, #0
+ 1126 007a E9E7     		b	.L175
+ 1127              	.L182:
+ 1128 007c FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
+ 1129 0080 0122     		movs	r2, #1
+ 1130 0082 EBE7     		b	.L176
+ 1131              	.L183:
+ 1132 0084 FFF7FEFF 		bl	HAL_PWR_DisableBkUpAccess
+ 1133 0088 F3E7     		b	.L177
+ 1134              	.L184:
+ 1135 008a 034A     		ldr	r2, .L185
+ 1136 008c 936D     		ldr	r3, [r2, #88]
+ 1137 008e 23F08053 		bic	r3, r3, #268435456
+ 1138 0092 9365     		str	r3, [r2, #88]
+ 1139 0094 EEE7     		b	.L174
+ 1140              	.L186:
+ 1141 0096 00BF     		.align	2
+ 1142              	.L185:
+ 1143 0098 00100240 		.word	1073876992
+ 1144 009c 00700040 		.word	1073770496
+ 1146              		.section	.text.HAL_RCCEx_DisableLSCO,"ax",%progbits
+ 1147              		.align	1
+ 1148              		.global	HAL_RCCEx_DisableLSCO
+ 1149              		.syntax unified
+ 1150              		.thumb
+ 1151              		.thumb_func
+ 1153              	HAL_RCCEx_DisableLSCO:
+ 1154              		@ args = 0, pretend = 0, frame = 8
+ 1155              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1156 0000 10B5     		push	{r4, lr}
+ 1157 0002 82B0     		sub	sp, sp, #8
+ 1158 0004 174B     		ldr	r3, .L198
+ 1159 0006 9B6D     		ldr	r3, [r3, #88]
+ 1160 0008 13F0805F 		tst	r3, #268435456
+ 1161 000c 1BD1     		bne	.L192
+ 1162 000e 154B     		ldr	r3, .L198
+ 1163 0010 9A6D     		ldr	r2, [r3, #88]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 21
+
+
+ 1164 0012 42F08052 		orr	r2, r2, #268435456
+ 1165 0016 9A65     		str	r2, [r3, #88]
+ 1166 0018 9B6D     		ldr	r3, [r3, #88]
+ 1167 001a 03F08053 		and	r3, r3, #268435456
+ 1168 001e 0193     		str	r3, [sp, #4]
+ 1169 0020 019B     		ldr	r3, [sp, #4]
+ 1170 0022 0124     		movs	r4, #1
+ 1171              	.L188:
+ 1172 0024 104B     		ldr	r3, .L198+4
+ 1173 0026 1B68     		ldr	r3, [r3]
+ 1174 0028 13F4807F 		tst	r3, #256
+ 1175 002c 0DD0     		beq	.L195
+ 1176 002e 0021     		movs	r1, #0
+ 1177              	.L189:
+ 1178 0030 0C4A     		ldr	r2, .L198
+ 1179 0032 D2F89030 		ldr	r3, [r2, #144]
+ 1180 0036 23F08073 		bic	r3, r3, #16777216
+ 1181 003a C2F89030 		str	r3, [r2, #144]
+ 1182 003e 41B9     		cbnz	r1, .L196
+ 1183              	.L190:
+ 1184 0040 54B9     		cbnz	r4, .L197
+ 1185              	.L187:
+ 1186 0042 02B0     		add	sp, sp, #8
+ 1187              		@ sp needed
+ 1188 0044 10BD     		pop	{r4, pc}
+ 1189              	.L192:
+ 1190 0046 0024     		movs	r4, #0
+ 1191 0048 ECE7     		b	.L188
+ 1192              	.L195:
+ 1193 004a FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
+ 1194 004e 0121     		movs	r1, #1
+ 1195 0050 EEE7     		b	.L189
+ 1196              	.L196:
+ 1197 0052 FFF7FEFF 		bl	HAL_PWR_DisableBkUpAccess
+ 1198 0056 F3E7     		b	.L190
+ 1199              	.L197:
+ 1200 0058 024A     		ldr	r2, .L198
+ 1201 005a 936D     		ldr	r3, [r2, #88]
+ 1202 005c 23F08053 		bic	r3, r3, #268435456
+ 1203 0060 9365     		str	r3, [r2, #88]
+ 1204 0062 EEE7     		b	.L187
+ 1205              	.L199:
+ 1206              		.align	2
+ 1207              	.L198:
+ 1208 0064 00100240 		.word	1073876992
+ 1209 0068 00700040 		.word	1073770496
+ 1211              		.section	.text.HAL_RCCEx_EnableMSIPLLMode,"ax",%progbits
+ 1212              		.align	1
+ 1213              		.global	HAL_RCCEx_EnableMSIPLLMode
+ 1214              		.syntax unified
+ 1215              		.thumb
+ 1216              		.thumb_func
+ 1218              	HAL_RCCEx_EnableMSIPLLMode:
+ 1219              		@ args = 0, pretend = 0, frame = 0
+ 1220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1221              		@ link register save eliminated.
+ 1222 0000 024A     		ldr	r2, .L201
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 22
+
+
+ 1223 0002 1368     		ldr	r3, [r2]
+ 1224 0004 43F00403 		orr	r3, r3, #4
+ 1225 0008 1360     		str	r3, [r2]
+ 1226 000a 7047     		bx	lr
+ 1227              	.L202:
+ 1228              		.align	2
+ 1229              	.L201:
+ 1230 000c 00100240 		.word	1073876992
+ 1232              		.section	.text.HAL_RCCEx_DisableMSIPLLMode,"ax",%progbits
+ 1233              		.align	1
+ 1234              		.global	HAL_RCCEx_DisableMSIPLLMode
+ 1235              		.syntax unified
+ 1236              		.thumb
+ 1237              		.thumb_func
+ 1239              	HAL_RCCEx_DisableMSIPLLMode:
+ 1240              		@ args = 0, pretend = 0, frame = 0
+ 1241              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1242              		@ link register save eliminated.
+ 1243 0000 024A     		ldr	r2, .L204
+ 1244 0002 1368     		ldr	r3, [r2]
+ 1245 0004 23F00403 		bic	r3, r3, #4
+ 1246 0008 1360     		str	r3, [r2]
+ 1247 000a 7047     		bx	lr
+ 1248              	.L205:
+ 1249              		.align	2
+ 1250              	.L204:
+ 1251 000c 00100240 		.word	1073876992
+ 1253              		.section	.text.HAL_RCCEx_CRSConfig,"ax",%progbits
+ 1254              		.align	1
+ 1255              		.global	HAL_RCCEx_CRSConfig
+ 1256              		.syntax unified
+ 1257              		.thumb
+ 1258              		.thumb_func
+ 1260              	HAL_RCCEx_CRSConfig:
+ 1261              		@ args = 0, pretend = 0, frame = 0
+ 1262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1263              		@ link register save eliminated.
+ 1264 0000 104B     		ldr	r3, .L207
+ 1265 0002 9A6B     		ldr	r2, [r3, #56]
+ 1266 0004 42F08072 		orr	r2, r2, #16777216
+ 1267 0008 9A63     		str	r2, [r3, #56]
+ 1268 000a 9A6B     		ldr	r2, [r3, #56]
+ 1269 000c 22F08072 		bic	r2, r2, #16777216
+ 1270 0010 9A63     		str	r2, [r3, #56]
+ 1271 0012 0368     		ldr	r3, [r0]
+ 1272 0014 4268     		ldr	r2, [r0, #4]
+ 1273 0016 1343     		orrs	r3, r3, r2
+ 1274 0018 8268     		ldr	r2, [r0, #8]
+ 1275 001a 1A43     		orrs	r2, r2, r3
+ 1276 001c C368     		ldr	r3, [r0, #12]
+ 1277 001e 1343     		orrs	r3, r3, r2
+ 1278 0020 0269     		ldr	r2, [r0, #16]
+ 1279 0022 43EA0242 		orr	r2, r3, r2, lsl #16
+ 1280 0026 084B     		ldr	r3, .L207+4
+ 1281 0028 5A60     		str	r2, [r3, #4]
+ 1282 002a 1A68     		ldr	r2, [r3]
+ 1283 002c 22F4FE42 		bic	r2, r2, #32512
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 23
+
+
+ 1284 0030 4169     		ldr	r1, [r0, #20]
+ 1285 0032 42EA0122 		orr	r2, r2, r1, lsl #8
+ 1286 0036 1A60     		str	r2, [r3]
+ 1287 0038 1A68     		ldr	r2, [r3]
+ 1288 003a 42F06002 		orr	r2, r2, #96
+ 1289 003e 1A60     		str	r2, [r3]
+ 1290 0040 7047     		bx	lr
+ 1291              	.L208:
+ 1292 0042 00BF     		.align	2
+ 1293              	.L207:
+ 1294 0044 00100240 		.word	1073876992
+ 1295 0048 00600040 		.word	1073766400
+ 1297              		.section	.text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate,"ax",%progbits
+ 1298              		.align	1
+ 1299              		.global	HAL_RCCEx_CRSSoftwareSynchronizationGenerate
+ 1300              		.syntax unified
+ 1301              		.thumb
+ 1302              		.thumb_func
+ 1304              	HAL_RCCEx_CRSSoftwareSynchronizationGenerate:
+ 1305              		@ args = 0, pretend = 0, frame = 0
+ 1306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1307              		@ link register save eliminated.
+ 1308 0000 024A     		ldr	r2, .L210
+ 1309 0002 1368     		ldr	r3, [r2]
+ 1310 0004 43F08003 		orr	r3, r3, #128
+ 1311 0008 1360     		str	r3, [r2]
+ 1312 000a 7047     		bx	lr
+ 1313              	.L211:
+ 1314              		.align	2
+ 1315              	.L210:
+ 1316 000c 00600040 		.word	1073766400
+ 1318              		.section	.text.HAL_RCCEx_CRSGetSynchronizationInfo,"ax",%progbits
+ 1319              		.align	1
+ 1320              		.global	HAL_RCCEx_CRSGetSynchronizationInfo
+ 1321              		.syntax unified
+ 1322              		.thumb
+ 1323              		.thumb_func
+ 1325              	HAL_RCCEx_CRSGetSynchronizationInfo:
+ 1326              		@ args = 0, pretend = 0, frame = 0
+ 1327              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1328              		@ link register save eliminated.
+ 1329 0000 074B     		ldr	r3, .L213
+ 1330 0002 5A68     		ldr	r2, [r3, #4]
+ 1331 0004 92B2     		uxth	r2, r2
+ 1332 0006 0260     		str	r2, [r0]
+ 1333 0008 1A68     		ldr	r2, [r3]
+ 1334 000a C2F30622 		ubfx	r2, r2, #8, #7
+ 1335 000e 4260     		str	r2, [r0, #4]
+ 1336 0010 9A68     		ldr	r2, [r3, #8]
+ 1337 0012 120C     		lsrs	r2, r2, #16
+ 1338 0014 8260     		str	r2, [r0, #8]
+ 1339 0016 9B68     		ldr	r3, [r3, #8]
+ 1340 0018 03F40043 		and	r3, r3, #32768
+ 1341 001c C360     		str	r3, [r0, #12]
+ 1342 001e 7047     		bx	lr
+ 1343              	.L214:
+ 1344              		.align	2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 24
+
+
+ 1345              	.L213:
+ 1346 0020 00600040 		.word	1073766400
+ 1348              		.section	.text.HAL_RCCEx_CRSWaitSynchronization,"ax",%progbits
+ 1349              		.align	1
+ 1350              		.global	HAL_RCCEx_CRSWaitSynchronization
+ 1351              		.syntax unified
+ 1352              		.thumb
+ 1353              		.thumb_func
+ 1355              	HAL_RCCEx_CRSWaitSynchronization:
+ 1356              		@ args = 0, pretend = 0, frame = 0
+ 1357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1358 0000 70B5     		push	{r4, r5, r6, lr}
+ 1359 0002 0546     		mov	r5, r0
+ 1360 0004 FFF7FEFF 		bl	HAL_GetTick
+ 1361 0008 0646     		mov	r6, r0
+ 1362 000a 0024     		movs	r4, #0
+ 1363 000c 0BE0     		b	.L223
+ 1364              	.L228:
+ 1365 000e FFF7FEFF 		bl	HAL_GetTick
+ 1366 0012 801B     		subs	r0, r0, r6
+ 1367 0014 A842     		cmp	r0, r5
+ 1368 0016 02D8     		bhi	.L224
+ 1369 0018 45B9     		cbnz	r5, .L216
+ 1370 001a 0124     		movs	r4, #1
+ 1371 001c 06E0     		b	.L216
+ 1372              	.L224:
+ 1373 001e 0124     		movs	r4, #1
+ 1374 0020 04E0     		b	.L216
+ 1375              	.L222:
+ 1376 0022 002C     		cmp	r4, #0
+ 1377 0024 3DD1     		bne	.L227
+ 1378              	.L223:
+ 1379 0026 B5F1FF3F 		cmp	r5, #-1
+ 1380 002a F0D1     		bne	.L228
+ 1381              	.L216:
+ 1382 002c 1E4B     		ldr	r3, .L229
+ 1383 002e 9B68     		ldr	r3, [r3, #8]
+ 1384 0030 13F0010F 		tst	r3, #1
+ 1385 0034 04D0     		beq	.L217
+ 1386 0036 44F00204 		orr	r4, r4, #2
+ 1387 003a 1B4B     		ldr	r3, .L229
+ 1388 003c 0122     		movs	r2, #1
+ 1389 003e DA60     		str	r2, [r3, #12]
+ 1390              	.L217:
+ 1391 0040 194B     		ldr	r3, .L229
+ 1392 0042 9B68     		ldr	r3, [r3, #8]
+ 1393 0044 13F0020F 		tst	r3, #2
+ 1394 0048 04D0     		beq	.L218
+ 1395 004a 44F00404 		orr	r4, r4, #4
+ 1396 004e 164B     		ldr	r3, .L229
+ 1397 0050 0222     		movs	r2, #2
+ 1398 0052 DA60     		str	r2, [r3, #12]
+ 1399              	.L218:
+ 1400 0054 144B     		ldr	r3, .L229
+ 1401 0056 9B68     		ldr	r3, [r3, #8]
+ 1402 0058 13F4806F 		tst	r3, #1024
+ 1403 005c 04D0     		beq	.L219
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 25
+
+
+ 1404 005e 44F02004 		orr	r4, r4, #32
+ 1405 0062 114B     		ldr	r3, .L229
+ 1406 0064 0422     		movs	r2, #4
+ 1407 0066 DA60     		str	r2, [r3, #12]
+ 1408              	.L219:
+ 1409 0068 0F4B     		ldr	r3, .L229
+ 1410 006a 9B68     		ldr	r3, [r3, #8]
+ 1411 006c 13F4807F 		tst	r3, #256
+ 1412 0070 04D0     		beq	.L220
+ 1413 0072 44F00804 		orr	r4, r4, #8
+ 1414 0076 0C4B     		ldr	r3, .L229
+ 1415 0078 0422     		movs	r2, #4
+ 1416 007a DA60     		str	r2, [r3, #12]
+ 1417              	.L220:
+ 1418 007c 0A4B     		ldr	r3, .L229
+ 1419 007e 9B68     		ldr	r3, [r3, #8]
+ 1420 0080 13F4007F 		tst	r3, #512
+ 1421 0084 04D0     		beq	.L221
+ 1422 0086 44F01004 		orr	r4, r4, #16
+ 1423 008a 074B     		ldr	r3, .L229
+ 1424 008c 0422     		movs	r2, #4
+ 1425 008e DA60     		str	r2, [r3, #12]
+ 1426              	.L221:
+ 1427 0090 054B     		ldr	r3, .L229
+ 1428 0092 9B68     		ldr	r3, [r3, #8]
+ 1429 0094 13F0080F 		tst	r3, #8
+ 1430 0098 C3D0     		beq	.L222
+ 1431 009a 034B     		ldr	r3, .L229
+ 1432 009c 0822     		movs	r2, #8
+ 1433 009e DA60     		str	r2, [r3, #12]
+ 1434 00a0 BFE7     		b	.L222
+ 1435              	.L227:
+ 1436 00a2 2046     		mov	r0, r4
+ 1437 00a4 70BD     		pop	{r4, r5, r6, pc}
+ 1438              	.L230:
+ 1439 00a6 00BF     		.align	2
+ 1440              	.L229:
+ 1441 00a8 00600040 		.word	1073766400
+ 1443              		.section	.text.HAL_RCCEx_CRS_SyncOkCallback,"ax",%progbits
+ 1444              		.align	1
+ 1445              		.weak	HAL_RCCEx_CRS_SyncOkCallback
+ 1446              		.syntax unified
+ 1447              		.thumb
+ 1448              		.thumb_func
+ 1450              	HAL_RCCEx_CRS_SyncOkCallback:
+ 1451              		@ args = 0, pretend = 0, frame = 0
+ 1452              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1453              		@ link register save eliminated.
+ 1454 0000 7047     		bx	lr
+ 1456              		.section	.text.HAL_RCCEx_CRS_SyncWarnCallback,"ax",%progbits
+ 1457              		.align	1
+ 1458              		.weak	HAL_RCCEx_CRS_SyncWarnCallback
+ 1459              		.syntax unified
+ 1460              		.thumb
+ 1461              		.thumb_func
+ 1463              	HAL_RCCEx_CRS_SyncWarnCallback:
+ 1464              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 26
+
+
+ 1465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1466              		@ link register save eliminated.
+ 1467 0000 7047     		bx	lr
+ 1469              		.section	.text.HAL_RCCEx_CRS_ExpectedSyncCallback,"ax",%progbits
+ 1470              		.align	1
+ 1471              		.weak	HAL_RCCEx_CRS_ExpectedSyncCallback
+ 1472              		.syntax unified
+ 1473              		.thumb
+ 1474              		.thumb_func
+ 1476              	HAL_RCCEx_CRS_ExpectedSyncCallback:
+ 1477              		@ args = 0, pretend = 0, frame = 0
+ 1478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1479              		@ link register save eliminated.
+ 1480 0000 7047     		bx	lr
+ 1482              		.section	.text.HAL_RCCEx_CRS_ErrorCallback,"ax",%progbits
+ 1483              		.align	1
+ 1484              		.weak	HAL_RCCEx_CRS_ErrorCallback
+ 1485              		.syntax unified
+ 1486              		.thumb
+ 1487              		.thumb_func
+ 1489              	HAL_RCCEx_CRS_ErrorCallback:
+ 1490              		@ args = 0, pretend = 0, frame = 0
+ 1491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1492              		@ link register save eliminated.
+ 1493 0000 7047     		bx	lr
+ 1495              		.section	.text.HAL_RCCEx_CRS_IRQHandler,"ax",%progbits
+ 1496              		.align	1
+ 1497              		.global	HAL_RCCEx_CRS_IRQHandler
+ 1498              		.syntax unified
+ 1499              		.thumb
+ 1500              		.thumb_func
+ 1502              	HAL_RCCEx_CRS_IRQHandler:
+ 1503              		@ args = 0, pretend = 0, frame = 0
+ 1504              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1505 0000 08B5     		push	{r3, lr}
+ 1506 0002 204A     		ldr	r2, .L248
+ 1507 0004 9368     		ldr	r3, [r2, #8]
+ 1508 0006 1268     		ldr	r2, [r2]
+ 1509 0008 13F0010F 		tst	r3, #1
+ 1510 000c 02D0     		beq	.L236
+ 1511 000e 12F0010F 		tst	r2, #1
+ 1512 0012 25D1     		bne	.L245
+ 1513              	.L236:
+ 1514 0014 13F0020F 		tst	r3, #2
+ 1515 0018 02D0     		beq	.L238
+ 1516 001a 12F0020F 		tst	r2, #2
+ 1517 001e 25D1     		bne	.L246
+ 1518              	.L238:
+ 1519 0020 13F0080F 		tst	r3, #8
+ 1520 0024 02D0     		beq	.L239
+ 1521 0026 12F0080F 		tst	r2, #8
+ 1522 002a 25D1     		bne	.L247
+ 1523              	.L239:
+ 1524 002c 13F0040F 		tst	r3, #4
+ 1525 0030 1BD0     		beq	.L235
+ 1526 0032 12F0040F 		tst	r2, #4
+ 1527 0036 18D0     		beq	.L235
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 27
+
+
+ 1528 0038 13F48070 		ands	r0, r3, #256
+ 1529 003c 00D0     		beq	.L240
+ 1530 003e 0820     		movs	r0, #8
+ 1531              	.L240:
+ 1532 0040 13F4007F 		tst	r3, #512
+ 1533 0044 01D0     		beq	.L241
+ 1534 0046 40F01000 		orr	r0, r0, #16
+ 1535              	.L241:
+ 1536 004a 13F4806F 		tst	r3, #1024
+ 1537 004e 01D0     		beq	.L242
+ 1538 0050 40F02000 		orr	r0, r0, #32
+ 1539              	.L242:
+ 1540 0054 0B4B     		ldr	r3, .L248
+ 1541 0056 0422     		movs	r2, #4
+ 1542 0058 DA60     		str	r2, [r3, #12]
+ 1543 005a FFF7FEFF 		bl	HAL_RCCEx_CRS_ErrorCallback
+ 1544 005e 04E0     		b	.L235
+ 1545              	.L245:
+ 1546 0060 084B     		ldr	r3, .L248
+ 1547 0062 0122     		movs	r2, #1
+ 1548 0064 DA60     		str	r2, [r3, #12]
+ 1549 0066 FFF7FEFF 		bl	HAL_RCCEx_CRS_SyncOkCallback
+ 1550              	.L235:
+ 1551 006a 08BD     		pop	{r3, pc}
+ 1552              	.L246:
+ 1553 006c 054B     		ldr	r3, .L248
+ 1554 006e 0222     		movs	r2, #2
+ 1555 0070 DA60     		str	r2, [r3, #12]
+ 1556 0072 FFF7FEFF 		bl	HAL_RCCEx_CRS_SyncWarnCallback
+ 1557 0076 F8E7     		b	.L235
+ 1558              	.L247:
+ 1559 0078 024B     		ldr	r3, .L248
+ 1560 007a 0822     		movs	r2, #8
+ 1561 007c DA60     		str	r2, [r3, #12]
+ 1562 007e FFF7FEFF 		bl	HAL_RCCEx_CRS_ExpectedSyncCallback
+ 1563 0082 F2E7     		b	.L235
+ 1564              	.L249:
+ 1565              		.align	2
+ 1566              	.L248:
+ 1567 0084 00600040 		.word	1073766400
+ 1569              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 28
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_rcc_ex.c
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:18     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:24     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:257    .text.HAL_RCCEx_PeriphCLKConfig:0000022c $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:261    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:267    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:314    .text.HAL_RCCEx_GetPeriphCLKConfig:00000080 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:318    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:324    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:443    .text.HAL_RCCEx_GetPeriphCLKFreq:0000012a $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:475    .text.HAL_RCCEx_GetPeriphCLKFreq:0000016a $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:577    .text.HAL_RCCEx_GetPeriphCLKFreq:00000280 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:581    .text.HAL_RCCEx_GetPeriphCLKFreq:00000284 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:598    .text.HAL_RCCEx_GetPeriphCLKFreq:000002a0 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:605    .text.HAL_RCCEx_GetPeriphCLKFreq:000002b8 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:619    .text.HAL_RCCEx_GetPeriphCLKFreq:000002e0 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:632    .text.HAL_RCCEx_GetPeriphCLKFreq:000002fa $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:897    .text.HAL_RCCEx_GetPeriphCLKFreq:00000538 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:901    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:907    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000000 HAL_RCCEx_WakeUpStopCLKConfig
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:920    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:923    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:929    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000000 HAL_RCCEx_StandbyMSIRangeConfig
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:942    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:945    .text.HAL_RCCEx_EnableLSECSS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:951    .text.HAL_RCCEx_EnableLSECSS:00000000 HAL_RCCEx_EnableLSECSS
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:963    .text.HAL_RCCEx_EnableLSECSS:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:966    .text.HAL_RCCEx_DisableLSECSS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:972    .text.HAL_RCCEx_DisableLSECSS:00000000 HAL_RCCEx_DisableLSECSS
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:987    .text.HAL_RCCEx_DisableLSECSS:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:990    .text.HAL_RCCEx_EnableLSECSS_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:996    .text.HAL_RCCEx_EnableLSECSS_IT:00000000 HAL_RCCEx_EnableLSECSS_IT
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1018   .text.HAL_RCCEx_EnableLSECSS_IT:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1021   .text.HAL_RCCEx_LSECSS_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1027   .text.HAL_RCCEx_LSECSS_Callback:00000000 HAL_RCCEx_LSECSS_Callback
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1034   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1040   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 HAL_RCCEx_LSECSS_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1059   .text.HAL_RCCEx_LSECSS_IRQHandler:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1062   .text.HAL_RCCEx_EnableLSCO:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1068   .text.HAL_RCCEx_EnableLSCO:00000000 HAL_RCCEx_EnableLSCO
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1143   .text.HAL_RCCEx_EnableLSCO:00000098 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1147   .text.HAL_RCCEx_DisableLSCO:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1153   .text.HAL_RCCEx_DisableLSCO:00000000 HAL_RCCEx_DisableLSCO
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1208   .text.HAL_RCCEx_DisableLSCO:00000064 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1212   .text.HAL_RCCEx_EnableMSIPLLMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1218   .text.HAL_RCCEx_EnableMSIPLLMode:00000000 HAL_RCCEx_EnableMSIPLLMode
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1230   .text.HAL_RCCEx_EnableMSIPLLMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1233   .text.HAL_RCCEx_DisableMSIPLLMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1239   .text.HAL_RCCEx_DisableMSIPLLMode:00000000 HAL_RCCEx_DisableMSIPLLMode
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1251   .text.HAL_RCCEx_DisableMSIPLLMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1254   .text.HAL_RCCEx_CRSConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1260   .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1294   .text.HAL_RCCEx_CRSConfig:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1298   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1304   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1316   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:0000000c $d
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 29
+
+
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1319   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1325   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1346   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1349   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1355   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1441   .text.HAL_RCCEx_CRSWaitSynchronization:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1444   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1450   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1457   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1463   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1470   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1476   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1483   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1489   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1496   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1502   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1567   .text.HAL_RCCEx_CRS_IRQHandler:00000084 $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_RCC_GetPCLK1Freq
+HAL_RCC_GetPCLK2Freq
+HAL_RCC_GetSysClockFreq
+MSIRangeTable
+HAL_GPIO_Init
+HAL_PWR_EnableBkUpAccess
+HAL_PWR_DisableBkUpAccess

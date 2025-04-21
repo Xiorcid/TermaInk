@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 1
   40 0065 20200000 		.ascii	"  \000\000\000\000p\000\000\000\000\000\000\000\000"
   40      00007000 
   40      00000000 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s 			page 2
 
 
   40      000000
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 1
   51      4048F800 
   52 0168 D8D8D8A8 		.ascii	"\330\330\330\250\210\330\000\000\330hhXX\350\000\000"
   52      88D80000 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s 			page 3
 
 
   52      D8686858 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 1
   63      60202020 
   64 0267 000000D0 		.ascii	"\000\000\000\320\250\250\250\000\000\000\000\360HH\310"
   64      A8A8A800 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s 			page 4
 
 
   64      000000F0 
@@ -216,17 +216,17 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 1
   71      0000
   72              		.text
   73              	.Letext0:
-  74              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
-  75              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+  74              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+  75              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
   76              		.file 4 "Core/Inc/Fonts/fonts.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 font8.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s:25     .data.Font8:00000000 Font8
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s:22     .data.Font8:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s:34     .rodata.Font8_Table:00000000 Font8_Table
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccJAlZ7d.s:31     .rodata.Font8_Table:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s:25     .data.Font8:00000000 Font8
+C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s:22     .data.Font8:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s:34     .rodata.Font8_Table:00000000 Font8_Table
+C:\Users\kroko\AppData\Local\Temp\cccLcb4h.s:31     .rodata.Font8_Table:00000000 $d
 
 NO UNDEFINED SYMBOLS

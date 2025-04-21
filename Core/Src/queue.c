@@ -1,5 +1,6 @@
 #include "queue.h"
 #include "time.h"
+#include "USB_storage.h"
 #include "stm32l4xx_hal_rtc.h"
 
 extern RTC_HandleTypeDef hrtc;
@@ -49,6 +50,8 @@ void q_push(uint16_t temp){
     if(flag ==0){
     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) t_of_day);
     flag = 1;}
+
+    UDISK_push(temp, (long) t_of_day);
     // TEST
     uint32_t testtime = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5)+1800;
     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) testtime);

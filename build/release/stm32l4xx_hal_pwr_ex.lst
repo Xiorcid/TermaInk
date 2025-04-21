@@ -1,0 +1,1539 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_pwr_ex.c"
+  16              		.text
+  17              		.section	.text.HAL_PWREx_GetVoltageRange,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_PWREx_GetVoltageRange
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_PWREx_GetVoltageRange:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 024B     		ldr	r3, .L2
+  29 0002 1868     		ldr	r0, [r3]
+  30 0004 00F4C060 		and	r0, r0, #1536
+  31 0008 7047     		bx	lr
+  32              	.L3:
+  33 000a 00BF     		.align	2
+  34              	.L2:
+  35 000c 00700040 		.word	1073770496
+  37              		.section	.text.HAL_PWREx_ControlVoltageScaling,"ax",%progbits
+  38              		.align	1
+  39              		.global	HAL_PWREx_ControlVoltageScaling
+  40              		.syntax unified
+  41              		.thumb
+  42              		.thumb_func
+  44              	HAL_PWREx_ControlVoltageScaling:
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 0, uses_anonymous_args = 0
+  47              		@ link register save eliminated.
+  48 0000 B0F5007F 		cmp	r0, #512
+  49 0004 0FD0     		beq	.L13
+  50 0006 1F4B     		ldr	r3, .L14
+  51 0008 1B68     		ldr	r3, [r3]
+  52 000a 03F4C063 		and	r3, r3, #1536
+  53 000e B3F5806F 		cmp	r3, #1024
+  54 0012 34D0     		beq	.L12
+  55 0014 1B4A     		ldr	r2, .L14
+  56 0016 1368     		ldr	r3, [r2]
+  57 0018 23F4C063 		bic	r3, r3, #1536
+  58 001c 43F48063 		orr	r3, r3, #1024
+  59 0020 1360     		str	r3, [r2]
+  60 0022 0020     		movs	r0, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 2
+
+
+  61 0024 7047     		bx	lr
+  62              	.L13:
+  63 0026 174B     		ldr	r3, .L14
+  64 0028 1B68     		ldr	r3, [r3]
+  65 002a 03F4C063 		and	r3, r3, #1536
+  66 002e B3F5007F 		cmp	r3, #512
+  67 0032 20D0     		beq	.L10
+  68 0034 134A     		ldr	r2, .L14
+  69 0036 1368     		ldr	r3, [r2]
+  70 0038 23F4C063 		bic	r3, r3, #1536
+  71 003c 43F40073 		orr	r3, r3, #512
+  72 0040 1360     		str	r3, [r2]
+  73 0042 114B     		ldr	r3, .L14+4
+  74 0044 1B68     		ldr	r3, [r3]
+  75 0046 3222     		movs	r2, #50
+  76 0048 02FB03F3 		mul	r3, r2, r3
+  77 004c 0F4A     		ldr	r2, .L14+8
+  78 004e A2FB0323 		umull	r2, r3, r2, r3
+  79 0052 9B0C     		lsrs	r3, r3, #18
+  80 0054 0133     		adds	r3, r3, #1
+  81 0056 00E0     		b	.L7
+  82              	.L9:
+  83 0058 013B     		subs	r3, r3, #1
+  84              	.L7:
+  85 005a 0A4A     		ldr	r2, .L14
+  86 005c 5269     		ldr	r2, [r2, #20]
+  87 005e 12F4806F 		tst	r2, #1024
+  88 0062 01D0     		beq	.L8
+  89 0064 002B     		cmp	r3, #0
+  90 0066 F7D1     		bne	.L9
+  91              	.L8:
+  92 0068 064B     		ldr	r3, .L14
+  93 006a 5B69     		ldr	r3, [r3, #20]
+  94 006c 13F4806F 		tst	r3, #1024
+  95 0070 03D1     		bne	.L11
+  96 0072 0020     		movs	r0, #0
+  97 0074 7047     		bx	lr
+  98              	.L10:
+  99 0076 0020     		movs	r0, #0
+ 100 0078 7047     		bx	lr
+ 101              	.L11:
+ 102 007a 0320     		movs	r0, #3
+ 103 007c 7047     		bx	lr
+ 104              	.L12:
+ 105 007e 0020     		movs	r0, #0
+ 106 0080 7047     		bx	lr
+ 107              	.L15:
+ 108 0082 00BF     		.align	2
+ 109              	.L14:
+ 110 0084 00700040 		.word	1073770496
+ 111 0088 00000000 		.word	SystemCoreClock
+ 112 008c 83DE1B43 		.word	1125899907
+ 114              		.section	.text.HAL_PWREx_EnableBatteryCharging,"ax",%progbits
+ 115              		.align	1
+ 116              		.global	HAL_PWREx_EnableBatteryCharging
+ 117              		.syntax unified
+ 118              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 3
+
+
+ 119              		.thumb_func
+ 121              	HAL_PWREx_EnableBatteryCharging:
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125 0000 054A     		ldr	r2, .L17
+ 126 0002 D368     		ldr	r3, [r2, #12]
+ 127 0004 23F40073 		bic	r3, r3, #512
+ 128 0008 0343     		orrs	r3, r3, r0
+ 129 000a D360     		str	r3, [r2, #12]
+ 130 000c D368     		ldr	r3, [r2, #12]
+ 131 000e 43F48073 		orr	r3, r3, #256
+ 132 0012 D360     		str	r3, [r2, #12]
+ 133 0014 7047     		bx	lr
+ 134              	.L18:
+ 135 0016 00BF     		.align	2
+ 136              	.L17:
+ 137 0018 00700040 		.word	1073770496
+ 139              		.section	.text.HAL_PWREx_DisableBatteryCharging,"ax",%progbits
+ 140              		.align	1
+ 141              		.global	HAL_PWREx_DisableBatteryCharging
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 146              	HAL_PWREx_DisableBatteryCharging:
+ 147              		@ args = 0, pretend = 0, frame = 0
+ 148              		@ frame_needed = 0, uses_anonymous_args = 0
+ 149              		@ link register save eliminated.
+ 150 0000 024A     		ldr	r2, .L20
+ 151 0002 D368     		ldr	r3, [r2, #12]
+ 152 0004 23F48073 		bic	r3, r3, #256
+ 153 0008 D360     		str	r3, [r2, #12]
+ 154 000a 7047     		bx	lr
+ 155              	.L21:
+ 156              		.align	2
+ 157              	.L20:
+ 158 000c 00700040 		.word	1073770496
+ 160              		.section	.text.HAL_PWREx_EnableVddUSB,"ax",%progbits
+ 161              		.align	1
+ 162              		.global	HAL_PWREx_EnableVddUSB
+ 163              		.syntax unified
+ 164              		.thumb
+ 165              		.thumb_func
+ 167              	HAL_PWREx_EnableVddUSB:
+ 168              		@ args = 0, pretend = 0, frame = 0
+ 169              		@ frame_needed = 0, uses_anonymous_args = 0
+ 170              		@ link register save eliminated.
+ 171 0000 024A     		ldr	r2, .L23
+ 172 0002 5368     		ldr	r3, [r2, #4]
+ 173 0004 43F48063 		orr	r3, r3, #1024
+ 174 0008 5360     		str	r3, [r2, #4]
+ 175 000a 7047     		bx	lr
+ 176              	.L24:
+ 177              		.align	2
+ 178              	.L23:
+ 179 000c 00700040 		.word	1073770496
+ 181              		.section	.text.HAL_PWREx_DisableVddUSB,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 4
+
+
+ 182              		.align	1
+ 183              		.global	HAL_PWREx_DisableVddUSB
+ 184              		.syntax unified
+ 185              		.thumb
+ 186              		.thumb_func
+ 188              	HAL_PWREx_DisableVddUSB:
+ 189              		@ args = 0, pretend = 0, frame = 0
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191              		@ link register save eliminated.
+ 192 0000 024A     		ldr	r2, .L26
+ 193 0002 5368     		ldr	r3, [r2, #4]
+ 194 0004 23F48063 		bic	r3, r3, #1024
+ 195 0008 5360     		str	r3, [r2, #4]
+ 196 000a 7047     		bx	lr
+ 197              	.L27:
+ 198              		.align	2
+ 199              	.L26:
+ 200 000c 00700040 		.word	1073770496
+ 202              		.section	.text.HAL_PWREx_EnableInternalWakeUpLine,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	HAL_PWREx_EnableInternalWakeUpLine
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 209              	HAL_PWREx_EnableInternalWakeUpLine:
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 0, uses_anonymous_args = 0
+ 212              		@ link register save eliminated.
+ 213 0000 024A     		ldr	r2, .L29
+ 214 0002 9368     		ldr	r3, [r2, #8]
+ 215 0004 43F40043 		orr	r3, r3, #32768
+ 216 0008 9360     		str	r3, [r2, #8]
+ 217 000a 7047     		bx	lr
+ 218              	.L30:
+ 219              		.align	2
+ 220              	.L29:
+ 221 000c 00700040 		.word	1073770496
+ 223              		.section	.text.HAL_PWREx_DisableInternalWakeUpLine,"ax",%progbits
+ 224              		.align	1
+ 225              		.global	HAL_PWREx_DisableInternalWakeUpLine
+ 226              		.syntax unified
+ 227              		.thumb
+ 228              		.thumb_func
+ 230              	HAL_PWREx_DisableInternalWakeUpLine:
+ 231              		@ args = 0, pretend = 0, frame = 0
+ 232              		@ frame_needed = 0, uses_anonymous_args = 0
+ 233              		@ link register save eliminated.
+ 234 0000 024A     		ldr	r2, .L32
+ 235 0002 9368     		ldr	r3, [r2, #8]
+ 236 0004 23F40043 		bic	r3, r3, #32768
+ 237 0008 9360     		str	r3, [r2, #8]
+ 238 000a 7047     		bx	lr
+ 239              	.L33:
+ 240              		.align	2
+ 241              	.L32:
+ 242 000c 00700040 		.word	1073770496
+ 244              		.section	.text.HAL_PWREx_EnableGPIOPullUp,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 5
+
+
+ 245              		.align	1
+ 246              		.global	HAL_PWREx_EnableGPIOPullUp
+ 247              		.syntax unified
+ 248              		.thumb
+ 249              		.thumb_func
+ 251              	HAL_PWREx_EnableGPIOPullUp:
+ 252              		@ args = 0, pretend = 0, frame = 0
+ 253              		@ frame_needed = 0, uses_anonymous_args = 0
+ 254              		@ link register save eliminated.
+ 255 0000 0728     		cmp	r0, #7
+ 256 0002 3FD8     		bhi	.L42
+ 257 0004 DFE800F0 		tbb	[pc, r0]
+ 258              	.L37:
+ 259 0008 04       		.byte	(.L41-.L37)/2
+ 260 0009 12       		.byte	(.L40-.L37)/2
+ 261 000a 1E       		.byte	(.L39-.L37)/2
+ 262 000b 28       		.byte	(.L38-.L37)/2
+ 263 000c 3E       		.byte	(.L42-.L37)/2
+ 264 000d 3E       		.byte	(.L42-.L37)/2
+ 265 000e 3E       		.byte	(.L42-.L37)/2
+ 266 000f 32       		.byte	(.L36-.L37)/2
+ 267              		.p2align 1
+ 268              	.L41:
+ 269 0010 1D4B     		ldr	r3, .L43
+ 270 0012 1A6A     		ldr	r2, [r3, #32]
+ 271 0014 21F48040 		bic	r0, r1, #16384
+ 272 0018 0243     		orrs	r2, r2, r0
+ 273 001a 1A62     		str	r2, [r3, #32]
+ 274 001c 5A6A     		ldr	r2, [r3, #36]
+ 275 001e 21F42041 		bic	r1, r1, #40960
+ 276 0022 22EA0102 		bic	r2, r2, r1
+ 277 0026 5A62     		str	r2, [r3, #36]
+ 278 0028 0020     		movs	r0, #0
+ 279 002a 7047     		bx	lr
+ 280              	.L40:
+ 281 002c 164B     		ldr	r3, .L43
+ 282 002e 9A6A     		ldr	r2, [r3, #40]
+ 283 0030 0A43     		orrs	r2, r2, r1
+ 284 0032 9A62     		str	r2, [r3, #40]
+ 285 0034 DA6A     		ldr	r2, [r3, #44]
+ 286 0036 21F01001 		bic	r1, r1, #16
+ 287 003a 22EA0102 		bic	r2, r2, r1
+ 288 003e DA62     		str	r2, [r3, #44]
+ 289 0040 0020     		movs	r0, #0
+ 290 0042 7047     		bx	lr
+ 291              	.L39:
+ 292 0044 104B     		ldr	r3, .L43
+ 293 0046 1A6B     		ldr	r2, [r3, #48]
+ 294 0048 0A43     		orrs	r2, r2, r1
+ 295 004a 1A63     		str	r2, [r3, #48]
+ 296 004c 5A6B     		ldr	r2, [r3, #52]
+ 297 004e 22EA0102 		bic	r2, r2, r1
+ 298 0052 5A63     		str	r2, [r3, #52]
+ 299 0054 0020     		movs	r0, #0
+ 300 0056 7047     		bx	lr
+ 301              	.L38:
+ 302 0058 0B4B     		ldr	r3, .L43
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 6
+
+
+ 303 005a 9A6B     		ldr	r2, [r3, #56]
+ 304 005c 0A43     		orrs	r2, r2, r1
+ 305 005e 9A63     		str	r2, [r3, #56]
+ 306 0060 DA6B     		ldr	r2, [r3, #60]
+ 307 0062 22EA0102 		bic	r2, r2, r1
+ 308 0066 DA63     		str	r2, [r3, #60]
+ 309 0068 0020     		movs	r0, #0
+ 310 006a 7047     		bx	lr
+ 311              	.L36:
+ 312 006c 064B     		ldr	r3, .L43
+ 313 006e 9A6D     		ldr	r2, [r3, #88]
+ 314 0070 01F00B01 		and	r1, r1, #11
+ 315 0074 0A43     		orrs	r2, r2, r1
+ 316 0076 9A65     		str	r2, [r3, #88]
+ 317 0078 DA6D     		ldr	r2, [r3, #92]
+ 318 007a 22EA0102 		bic	r2, r2, r1
+ 319 007e DA65     		str	r2, [r3, #92]
+ 320 0080 0020     		movs	r0, #0
+ 321 0082 7047     		bx	lr
+ 322              	.L42:
+ 323 0084 0120     		movs	r0, #1
+ 324 0086 7047     		bx	lr
+ 325              	.L44:
+ 326              		.align	2
+ 327              	.L43:
+ 328 0088 00700040 		.word	1073770496
+ 330              		.section	.text.HAL_PWREx_DisableGPIOPullUp,"ax",%progbits
+ 331              		.align	1
+ 332              		.global	HAL_PWREx_DisableGPIOPullUp
+ 333              		.syntax unified
+ 334              		.thumb
+ 335              		.thumb_func
+ 337              	HAL_PWREx_DisableGPIOPullUp:
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ 340              		@ link register save eliminated.
+ 341 0000 0728     		cmp	r0, #7
+ 342 0002 2CD8     		bhi	.L53
+ 343 0004 DFE800F0 		tbb	[pc, r0]
+ 344              	.L48:
+ 345 0008 04       		.byte	(.L52-.L48)/2
+ 346 0009 0D       		.byte	(.L51-.L48)/2
+ 347 000a 14       		.byte	(.L50-.L48)/2
+ 348 000b 1B       		.byte	(.L49-.L48)/2
+ 349 000c 2B       		.byte	(.L53-.L48)/2
+ 350 000d 2B       		.byte	(.L53-.L48)/2
+ 351 000e 2B       		.byte	(.L53-.L48)/2
+ 352 000f 22       		.byte	(.L47-.L48)/2
+ 353              		.p2align 1
+ 354              	.L52:
+ 355 0010 144A     		ldr	r2, .L54
+ 356 0012 136A     		ldr	r3, [r2, #32]
+ 357 0014 21F48041 		bic	r1, r1, #16384
+ 358 0018 23EA0103 		bic	r3, r3, r1
+ 359 001c 1362     		str	r3, [r2, #32]
+ 360 001e 0020     		movs	r0, #0
+ 361 0020 7047     		bx	lr
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 7
+
+
+ 362              	.L51:
+ 363 0022 104A     		ldr	r2, .L54
+ 364 0024 936A     		ldr	r3, [r2, #40]
+ 365 0026 23EA0103 		bic	r3, r3, r1
+ 366 002a 9362     		str	r3, [r2, #40]
+ 367 002c 0020     		movs	r0, #0
+ 368 002e 7047     		bx	lr
+ 369              	.L50:
+ 370 0030 0C4A     		ldr	r2, .L54
+ 371 0032 136B     		ldr	r3, [r2, #48]
+ 372 0034 23EA0103 		bic	r3, r3, r1
+ 373 0038 1363     		str	r3, [r2, #48]
+ 374 003a 0020     		movs	r0, #0
+ 375 003c 7047     		bx	lr
+ 376              	.L49:
+ 377 003e 094A     		ldr	r2, .L54
+ 378 0040 936B     		ldr	r3, [r2, #56]
+ 379 0042 23EA0103 		bic	r3, r3, r1
+ 380 0046 9363     		str	r3, [r2, #56]
+ 381 0048 0020     		movs	r0, #0
+ 382 004a 7047     		bx	lr
+ 383              	.L47:
+ 384 004c 054A     		ldr	r2, .L54
+ 385 004e 936D     		ldr	r3, [r2, #88]
+ 386 0050 01F00B01 		and	r1, r1, #11
+ 387 0054 23EA0103 		bic	r3, r3, r1
+ 388 0058 9365     		str	r3, [r2, #88]
+ 389 005a 0020     		movs	r0, #0
+ 390 005c 7047     		bx	lr
+ 391              	.L53:
+ 392 005e 0120     		movs	r0, #1
+ 393 0060 7047     		bx	lr
+ 394              	.L55:
+ 395 0062 00BF     		.align	2
+ 396              	.L54:
+ 397 0064 00700040 		.word	1073770496
+ 399              		.section	.text.HAL_PWREx_EnableGPIOPullDown,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	HAL_PWREx_EnableGPIOPullDown
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 406              	HAL_PWREx_EnableGPIOPullDown:
+ 407              		@ args = 0, pretend = 0, frame = 0
+ 408              		@ frame_needed = 0, uses_anonymous_args = 0
+ 409              		@ link register save eliminated.
+ 410 0000 0728     		cmp	r0, #7
+ 411 0002 3FD8     		bhi	.L64
+ 412 0004 DFE800F0 		tbb	[pc, r0]
+ 413              	.L59:
+ 414 0008 04       		.byte	(.L63-.L59)/2
+ 415 0009 12       		.byte	(.L62-.L59)/2
+ 416 000a 1E       		.byte	(.L61-.L59)/2
+ 417 000b 28       		.byte	(.L60-.L59)/2
+ 418 000c 3E       		.byte	(.L64-.L59)/2
+ 419 000d 3E       		.byte	(.L64-.L59)/2
+ 420 000e 3E       		.byte	(.L64-.L59)/2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 8
+
+
+ 421 000f 32       		.byte	(.L58-.L59)/2
+ 422              		.p2align 1
+ 423              	.L63:
+ 424 0010 1D4B     		ldr	r3, .L65
+ 425 0012 5A6A     		ldr	r2, [r3, #36]
+ 426 0014 21F42040 		bic	r0, r1, #40960
+ 427 0018 0243     		orrs	r2, r2, r0
+ 428 001a 5A62     		str	r2, [r3, #36]
+ 429 001c 1A6A     		ldr	r2, [r3, #32]
+ 430 001e 21F48041 		bic	r1, r1, #16384
+ 431 0022 22EA0102 		bic	r2, r2, r1
+ 432 0026 1A62     		str	r2, [r3, #32]
+ 433 0028 0020     		movs	r0, #0
+ 434 002a 7047     		bx	lr
+ 435              	.L62:
+ 436 002c 164B     		ldr	r3, .L65
+ 437 002e DA6A     		ldr	r2, [r3, #44]
+ 438 0030 21F01000 		bic	r0, r1, #16
+ 439 0034 0243     		orrs	r2, r2, r0
+ 440 0036 DA62     		str	r2, [r3, #44]
+ 441 0038 9A6A     		ldr	r2, [r3, #40]
+ 442 003a 22EA0102 		bic	r2, r2, r1
+ 443 003e 9A62     		str	r2, [r3, #40]
+ 444 0040 0020     		movs	r0, #0
+ 445 0042 7047     		bx	lr
+ 446              	.L61:
+ 447 0044 104B     		ldr	r3, .L65
+ 448 0046 5A6B     		ldr	r2, [r3, #52]
+ 449 0048 0A43     		orrs	r2, r2, r1
+ 450 004a 5A63     		str	r2, [r3, #52]
+ 451 004c 1A6B     		ldr	r2, [r3, #48]
+ 452 004e 22EA0102 		bic	r2, r2, r1
+ 453 0052 1A63     		str	r2, [r3, #48]
+ 454 0054 0020     		movs	r0, #0
+ 455 0056 7047     		bx	lr
+ 456              	.L60:
+ 457 0058 0B4B     		ldr	r3, .L65
+ 458 005a DA6B     		ldr	r2, [r3, #60]
+ 459 005c 0A43     		orrs	r2, r2, r1
+ 460 005e DA63     		str	r2, [r3, #60]
+ 461 0060 9A6B     		ldr	r2, [r3, #56]
+ 462 0062 22EA0102 		bic	r2, r2, r1
+ 463 0066 9A63     		str	r2, [r3, #56]
+ 464 0068 0020     		movs	r0, #0
+ 465 006a 7047     		bx	lr
+ 466              	.L58:
+ 467 006c 064B     		ldr	r3, .L65
+ 468 006e DA6D     		ldr	r2, [r3, #92]
+ 469 0070 01F00B01 		and	r1, r1, #11
+ 470 0074 0A43     		orrs	r2, r2, r1
+ 471 0076 DA65     		str	r2, [r3, #92]
+ 472 0078 9A6D     		ldr	r2, [r3, #88]
+ 473 007a 22EA0102 		bic	r2, r2, r1
+ 474 007e 9A65     		str	r2, [r3, #88]
+ 475 0080 0020     		movs	r0, #0
+ 476 0082 7047     		bx	lr
+ 477              	.L64:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 9
+
+
+ 478 0084 0120     		movs	r0, #1
+ 479 0086 7047     		bx	lr
+ 480              	.L66:
+ 481              		.align	2
+ 482              	.L65:
+ 483 0088 00700040 		.word	1073770496
+ 485              		.section	.text.HAL_PWREx_DisableGPIOPullDown,"ax",%progbits
+ 486              		.align	1
+ 487              		.global	HAL_PWREx_DisableGPIOPullDown
+ 488              		.syntax unified
+ 489              		.thumb
+ 490              		.thumb_func
+ 492              	HAL_PWREx_DisableGPIOPullDown:
+ 493              		@ args = 0, pretend = 0, frame = 0
+ 494              		@ frame_needed = 0, uses_anonymous_args = 0
+ 495              		@ link register save eliminated.
+ 496 0000 0728     		cmp	r0, #7
+ 497 0002 2ED8     		bhi	.L75
+ 498 0004 DFE800F0 		tbb	[pc, r0]
+ 499              	.L70:
+ 500 0008 04       		.byte	(.L74-.L70)/2
+ 501 0009 0D       		.byte	(.L73-.L70)/2
+ 502 000a 16       		.byte	(.L72-.L70)/2
+ 503 000b 1D       		.byte	(.L71-.L70)/2
+ 504 000c 2D       		.byte	(.L75-.L70)/2
+ 505 000d 2D       		.byte	(.L75-.L70)/2
+ 506 000e 2D       		.byte	(.L75-.L70)/2
+ 507 000f 24       		.byte	(.L69-.L70)/2
+ 508              		.p2align 1
+ 509              	.L74:
+ 510 0010 154A     		ldr	r2, .L76
+ 511 0012 536A     		ldr	r3, [r2, #36]
+ 512 0014 21F42041 		bic	r1, r1, #40960
+ 513 0018 23EA0103 		bic	r3, r3, r1
+ 514 001c 5362     		str	r3, [r2, #36]
+ 515 001e 0020     		movs	r0, #0
+ 516 0020 7047     		bx	lr
+ 517              	.L73:
+ 518 0022 114A     		ldr	r2, .L76
+ 519 0024 D36A     		ldr	r3, [r2, #44]
+ 520 0026 21F01001 		bic	r1, r1, #16
+ 521 002a 23EA0103 		bic	r3, r3, r1
+ 522 002e D362     		str	r3, [r2, #44]
+ 523 0030 0020     		movs	r0, #0
+ 524 0032 7047     		bx	lr
+ 525              	.L72:
+ 526 0034 0C4A     		ldr	r2, .L76
+ 527 0036 536B     		ldr	r3, [r2, #52]
+ 528 0038 23EA0103 		bic	r3, r3, r1
+ 529 003c 5363     		str	r3, [r2, #52]
+ 530 003e 0020     		movs	r0, #0
+ 531 0040 7047     		bx	lr
+ 532              	.L71:
+ 533 0042 094A     		ldr	r2, .L76
+ 534 0044 D36B     		ldr	r3, [r2, #60]
+ 535 0046 23EA0103 		bic	r3, r3, r1
+ 536 004a D363     		str	r3, [r2, #60]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 10
+
+
+ 537 004c 0020     		movs	r0, #0
+ 538 004e 7047     		bx	lr
+ 539              	.L69:
+ 540 0050 054A     		ldr	r2, .L76
+ 541 0052 D36D     		ldr	r3, [r2, #92]
+ 542 0054 01F00B01 		and	r1, r1, #11
+ 543 0058 23EA0103 		bic	r3, r3, r1
+ 544 005c D365     		str	r3, [r2, #92]
+ 545 005e 0020     		movs	r0, #0
+ 546 0060 7047     		bx	lr
+ 547              	.L75:
+ 548 0062 0120     		movs	r0, #1
+ 549 0064 7047     		bx	lr
+ 550              	.L77:
+ 551 0066 00BF     		.align	2
+ 552              	.L76:
+ 553 0068 00700040 		.word	1073770496
+ 555              		.section	.text.HAL_PWREx_EnablePullUpPullDownConfig,"ax",%progbits
+ 556              		.align	1
+ 557              		.global	HAL_PWREx_EnablePullUpPullDownConfig
+ 558              		.syntax unified
+ 559              		.thumb
+ 560              		.thumb_func
+ 562              	HAL_PWREx_EnablePullUpPullDownConfig:
+ 563              		@ args = 0, pretend = 0, frame = 0
+ 564              		@ frame_needed = 0, uses_anonymous_args = 0
+ 565              		@ link register save eliminated.
+ 566 0000 024A     		ldr	r2, .L79
+ 567 0002 9368     		ldr	r3, [r2, #8]
+ 568 0004 43F48063 		orr	r3, r3, #1024
+ 569 0008 9360     		str	r3, [r2, #8]
+ 570 000a 7047     		bx	lr
+ 571              	.L80:
+ 572              		.align	2
+ 573              	.L79:
+ 574 000c 00700040 		.word	1073770496
+ 576              		.section	.text.HAL_PWREx_DisablePullUpPullDownConfig,"ax",%progbits
+ 577              		.align	1
+ 578              		.global	HAL_PWREx_DisablePullUpPullDownConfig
+ 579              		.syntax unified
+ 580              		.thumb
+ 581              		.thumb_func
+ 583              	HAL_PWREx_DisablePullUpPullDownConfig:
+ 584              		@ args = 0, pretend = 0, frame = 0
+ 585              		@ frame_needed = 0, uses_anonymous_args = 0
+ 586              		@ link register save eliminated.
+ 587 0000 024A     		ldr	r2, .L82
+ 588 0002 9368     		ldr	r3, [r2, #8]
+ 589 0004 23F48063 		bic	r3, r3, #1024
+ 590 0008 9360     		str	r3, [r2, #8]
+ 591 000a 7047     		bx	lr
+ 592              	.L83:
+ 593              		.align	2
+ 594              	.L82:
+ 595 000c 00700040 		.word	1073770496
+ 597              		.section	.text.HAL_PWREx_SetSRAM2ContentRetention,"ax",%progbits
+ 598              		.align	1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 11
+
+
+ 599              		.global	HAL_PWREx_SetSRAM2ContentRetention
+ 600              		.syntax unified
+ 601              		.thumb
+ 602              		.thumb_func
+ 604              	HAL_PWREx_SetSRAM2ContentRetention:
+ 605              		@ args = 0, pretend = 0, frame = 0
+ 606              		@ frame_needed = 0, uses_anonymous_args = 0
+ 607              		@ link register save eliminated.
+ 608 0000 28B9     		cbnz	r0, .L85
+ 609 0002 094A     		ldr	r2, .L88
+ 610 0004 9368     		ldr	r3, [r2, #8]
+ 611 0006 23F48073 		bic	r3, r3, #256
+ 612 000a 9360     		str	r3, [r2, #8]
+ 613 000c 7047     		bx	lr
+ 614              	.L85:
+ 615 000e B0F5807F 		cmp	r0, #256
+ 616 0012 06D1     		bne	.L87
+ 617 0014 044A     		ldr	r2, .L88
+ 618 0016 9368     		ldr	r3, [r2, #8]
+ 619 0018 43F48073 		orr	r3, r3, #256
+ 620 001c 9360     		str	r3, [r2, #8]
+ 621 001e 0020     		movs	r0, #0
+ 622 0020 7047     		bx	lr
+ 623              	.L87:
+ 624 0022 0120     		movs	r0, #1
+ 625 0024 7047     		bx	lr
+ 626              	.L89:
+ 627 0026 00BF     		.align	2
+ 628              	.L88:
+ 629 0028 00700040 		.word	1073770496
+ 631              		.section	.text.HAL_PWREx_EnableSRAM2ContentRetention,"ax",%progbits
+ 632              		.align	1
+ 633              		.global	HAL_PWREx_EnableSRAM2ContentRetention
+ 634              		.syntax unified
+ 635              		.thumb
+ 636              		.thumb_func
+ 638              	HAL_PWREx_EnableSRAM2ContentRetention:
+ 639              		@ args = 0, pretend = 0, frame = 0
+ 640              		@ frame_needed = 0, uses_anonymous_args = 0
+ 641 0000 08B5     		push	{r3, lr}
+ 642 0002 4FF48070 		mov	r0, #256
+ 643 0006 FFF7FEFF 		bl	HAL_PWREx_SetSRAM2ContentRetention
+ 644 000a 08BD     		pop	{r3, pc}
+ 646              		.section	.text.HAL_PWREx_DisableSRAM2ContentRetention,"ax",%progbits
+ 647              		.align	1
+ 648              		.global	HAL_PWREx_DisableSRAM2ContentRetention
+ 649              		.syntax unified
+ 650              		.thumb
+ 651              		.thumb_func
+ 653              	HAL_PWREx_DisableSRAM2ContentRetention:
+ 654              		@ args = 0, pretend = 0, frame = 0
+ 655              		@ frame_needed = 0, uses_anonymous_args = 0
+ 656 0000 08B5     		push	{r3, lr}
+ 657 0002 0020     		movs	r0, #0
+ 658 0004 FFF7FEFF 		bl	HAL_PWREx_SetSRAM2ContentRetention
+ 659 0008 08BD     		pop	{r3, pc}
+ 661              		.section	.text.HAL_PWREx_EnableBORPVD_ULP,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 12
+
+
+ 662              		.align	1
+ 663              		.global	HAL_PWREx_EnableBORPVD_ULP
+ 664              		.syntax unified
+ 665              		.thumb
+ 666              		.thumb_func
+ 668              	HAL_PWREx_EnableBORPVD_ULP:
+ 669              		@ args = 0, pretend = 0, frame = 0
+ 670              		@ frame_needed = 0, uses_anonymous_args = 0
+ 671              		@ link register save eliminated.
+ 672 0000 024A     		ldr	r2, .L95
+ 673 0002 9368     		ldr	r3, [r2, #8]
+ 674 0004 43F40063 		orr	r3, r3, #2048
+ 675 0008 9360     		str	r3, [r2, #8]
+ 676 000a 7047     		bx	lr
+ 677              	.L96:
+ 678              		.align	2
+ 679              	.L95:
+ 680 000c 00700040 		.word	1073770496
+ 682              		.section	.text.HAL_PWREx_DisableBORPVD_ULP,"ax",%progbits
+ 683              		.align	1
+ 684              		.global	HAL_PWREx_DisableBORPVD_ULP
+ 685              		.syntax unified
+ 686              		.thumb
+ 687              		.thumb_func
+ 689              	HAL_PWREx_DisableBORPVD_ULP:
+ 690              		@ args = 0, pretend = 0, frame = 0
+ 691              		@ frame_needed = 0, uses_anonymous_args = 0
+ 692              		@ link register save eliminated.
+ 693 0000 024A     		ldr	r2, .L98
+ 694 0002 9368     		ldr	r3, [r2, #8]
+ 695 0004 23F40063 		bic	r3, r3, #2048
+ 696 0008 9360     		str	r3, [r2, #8]
+ 697 000a 7047     		bx	lr
+ 698              	.L99:
+ 699              		.align	2
+ 700              	.L98:
+ 701 000c 00700040 		.word	1073770496
+ 703              		.section	.text.HAL_PWREx_EnableExtSMPS_0V95,"ax",%progbits
+ 704              		.align	1
+ 705              		.global	HAL_PWREx_EnableExtSMPS_0V95
+ 706              		.syntax unified
+ 707              		.thumb
+ 708              		.thumb_func
+ 710              	HAL_PWREx_EnableExtSMPS_0V95:
+ 711              		@ args = 0, pretend = 0, frame = 0
+ 712              		@ frame_needed = 0, uses_anonymous_args = 0
+ 713              		@ link register save eliminated.
+ 714 0000 024A     		ldr	r2, .L101
+ 715 0002 D368     		ldr	r3, [r2, #12]
+ 716 0004 43F40053 		orr	r3, r3, #8192
+ 717 0008 D360     		str	r3, [r2, #12]
+ 718 000a 7047     		bx	lr
+ 719              	.L102:
+ 720              		.align	2
+ 721              	.L101:
+ 722 000c 00700040 		.word	1073770496
+ 724              		.section	.text.HAL_PWREx_DisableExtSMPS_0V95,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 13
+
+
+ 725              		.align	1
+ 726              		.global	HAL_PWREx_DisableExtSMPS_0V95
+ 727              		.syntax unified
+ 728              		.thumb
+ 729              		.thumb_func
+ 731              	HAL_PWREx_DisableExtSMPS_0V95:
+ 732              		@ args = 0, pretend = 0, frame = 0
+ 733              		@ frame_needed = 0, uses_anonymous_args = 0
+ 734              		@ link register save eliminated.
+ 735 0000 024A     		ldr	r2, .L104
+ 736 0002 D368     		ldr	r3, [r2, #12]
+ 737 0004 23F40053 		bic	r3, r3, #8192
+ 738 0008 D360     		str	r3, [r2, #12]
+ 739 000a 7047     		bx	lr
+ 740              	.L105:
+ 741              		.align	2
+ 742              	.L104:
+ 743 000c 00700040 		.word	1073770496
+ 745              		.section	.text.HAL_PWREx_EnablePVM1,"ax",%progbits
+ 746              		.align	1
+ 747              		.global	HAL_PWREx_EnablePVM1
+ 748              		.syntax unified
+ 749              		.thumb
+ 750              		.thumb_func
+ 752              	HAL_PWREx_EnablePVM1:
+ 753              		@ args = 0, pretend = 0, frame = 0
+ 754              		@ frame_needed = 0, uses_anonymous_args = 0
+ 755              		@ link register save eliminated.
+ 756 0000 024A     		ldr	r2, .L107
+ 757 0002 5368     		ldr	r3, [r2, #4]
+ 758 0004 43F01003 		orr	r3, r3, #16
+ 759 0008 5360     		str	r3, [r2, #4]
+ 760 000a 7047     		bx	lr
+ 761              	.L108:
+ 762              		.align	2
+ 763              	.L107:
+ 764 000c 00700040 		.word	1073770496
+ 766              		.section	.text.HAL_PWREx_DisablePVM1,"ax",%progbits
+ 767              		.align	1
+ 768              		.global	HAL_PWREx_DisablePVM1
+ 769              		.syntax unified
+ 770              		.thumb
+ 771              		.thumb_func
+ 773              	HAL_PWREx_DisablePVM1:
+ 774              		@ args = 0, pretend = 0, frame = 0
+ 775              		@ frame_needed = 0, uses_anonymous_args = 0
+ 776              		@ link register save eliminated.
+ 777 0000 024A     		ldr	r2, .L110
+ 778 0002 5368     		ldr	r3, [r2, #4]
+ 779 0004 23F01003 		bic	r3, r3, #16
+ 780 0008 5360     		str	r3, [r2, #4]
+ 781 000a 7047     		bx	lr
+ 782              	.L111:
+ 783              		.align	2
+ 784              	.L110:
+ 785 000c 00700040 		.word	1073770496
+ 787              		.section	.text.HAL_PWREx_EnablePVM3,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 14
+
+
+ 788              		.align	1
+ 789              		.global	HAL_PWREx_EnablePVM3
+ 790              		.syntax unified
+ 791              		.thumb
+ 792              		.thumb_func
+ 794              	HAL_PWREx_EnablePVM3:
+ 795              		@ args = 0, pretend = 0, frame = 0
+ 796              		@ frame_needed = 0, uses_anonymous_args = 0
+ 797              		@ link register save eliminated.
+ 798 0000 024A     		ldr	r2, .L113
+ 799 0002 5368     		ldr	r3, [r2, #4]
+ 800 0004 43F04003 		orr	r3, r3, #64
+ 801 0008 5360     		str	r3, [r2, #4]
+ 802 000a 7047     		bx	lr
+ 803              	.L114:
+ 804              		.align	2
+ 805              	.L113:
+ 806 000c 00700040 		.word	1073770496
+ 808              		.section	.text.HAL_PWREx_DisablePVM3,"ax",%progbits
+ 809              		.align	1
+ 810              		.global	HAL_PWREx_DisablePVM3
+ 811              		.syntax unified
+ 812              		.thumb
+ 813              		.thumb_func
+ 815              	HAL_PWREx_DisablePVM3:
+ 816              		@ args = 0, pretend = 0, frame = 0
+ 817              		@ frame_needed = 0, uses_anonymous_args = 0
+ 818              		@ link register save eliminated.
+ 819 0000 024A     		ldr	r2, .L116
+ 820 0002 5368     		ldr	r3, [r2, #4]
+ 821 0004 23F04003 		bic	r3, r3, #64
+ 822 0008 5360     		str	r3, [r2, #4]
+ 823 000a 7047     		bx	lr
+ 824              	.L117:
+ 825              		.align	2
+ 826              	.L116:
+ 827 000c 00700040 		.word	1073770496
+ 829              		.section	.text.HAL_PWREx_EnablePVM4,"ax",%progbits
+ 830              		.align	1
+ 831              		.global	HAL_PWREx_EnablePVM4
+ 832              		.syntax unified
+ 833              		.thumb
+ 834              		.thumb_func
+ 836              	HAL_PWREx_EnablePVM4:
+ 837              		@ args = 0, pretend = 0, frame = 0
+ 838              		@ frame_needed = 0, uses_anonymous_args = 0
+ 839              		@ link register save eliminated.
+ 840 0000 024A     		ldr	r2, .L119
+ 841 0002 5368     		ldr	r3, [r2, #4]
+ 842 0004 43F08003 		orr	r3, r3, #128
+ 843 0008 5360     		str	r3, [r2, #4]
+ 844 000a 7047     		bx	lr
+ 845              	.L120:
+ 846              		.align	2
+ 847              	.L119:
+ 848 000c 00700040 		.word	1073770496
+ 850              		.section	.text.HAL_PWREx_DisablePVM4,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 15
+
+
+ 851              		.align	1
+ 852              		.global	HAL_PWREx_DisablePVM4
+ 853              		.syntax unified
+ 854              		.thumb
+ 855              		.thumb_func
+ 857              	HAL_PWREx_DisablePVM4:
+ 858              		@ args = 0, pretend = 0, frame = 0
+ 859              		@ frame_needed = 0, uses_anonymous_args = 0
+ 860              		@ link register save eliminated.
+ 861 0000 024A     		ldr	r2, .L122
+ 862 0002 5368     		ldr	r3, [r2, #4]
+ 863 0004 23F08003 		bic	r3, r3, #128
+ 864 0008 5360     		str	r3, [r2, #4]
+ 865 000a 7047     		bx	lr
+ 866              	.L123:
+ 867              		.align	2
+ 868              	.L122:
+ 869 000c 00700040 		.word	1073770496
+ 871              		.section	.text.HAL_PWREx_ConfigPVM,"ax",%progbits
+ 872              		.align	1
+ 873              		.global	HAL_PWREx_ConfigPVM
+ 874              		.syntax unified
+ 875              		.thumb
+ 876              		.thumb_func
+ 878              	HAL_PWREx_ConfigPVM:
+ 879              		@ args = 0, pretend = 0, frame = 0
+ 880              		@ frame_needed = 0, uses_anonymous_args = 0
+ 881              		@ link register save eliminated.
+ 882 0000 0368     		ldr	r3, [r0]
+ 883 0002 402B     		cmp	r3, #64
+ 884 0004 3BD0     		beq	.L125
+ 885 0006 802B     		cmp	r3, #128
+ 886 0008 70D0     		beq	.L126
+ 887 000a 102B     		cmp	r3, #16
+ 888 000c 40F0A580 		bne	.L137
+ 889 0010 564B     		ldr	r3, .L141
+ 890 0012 5A6A     		ldr	r2, [r3, #36]
+ 891 0014 22F00802 		bic	r2, r2, #8
+ 892 0018 5A62     		str	r2, [r3, #36]
+ 893 001a 1A6A     		ldr	r2, [r3, #32]
+ 894 001c 22F00802 		bic	r2, r2, #8
+ 895 0020 1A62     		str	r2, [r3, #32]
+ 896 0022 DA6A     		ldr	r2, [r3, #44]
+ 897 0024 22F00802 		bic	r2, r2, #8
+ 898 0028 DA62     		str	r2, [r3, #44]
+ 899 002a 9A6A     		ldr	r2, [r3, #40]
+ 900 002c 22F00802 		bic	r2, r2, #8
+ 901 0030 9A62     		str	r2, [r3, #40]
+ 902 0032 4368     		ldr	r3, [r0, #4]
+ 903 0034 13F4803F 		tst	r3, #65536
+ 904 0038 04D0     		beq	.L128
+ 905 003a 4C4A     		ldr	r2, .L141
+ 906 003c 136A     		ldr	r3, [r2, #32]
+ 907 003e 43F00803 		orr	r3, r3, #8
+ 908 0042 1362     		str	r3, [r2, #32]
+ 909              	.L128:
+ 910 0044 4368     		ldr	r3, [r0, #4]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 16
+
+
+ 911 0046 13F4003F 		tst	r3, #131072
+ 912 004a 04D0     		beq	.L129
+ 913 004c 474A     		ldr	r2, .L141
+ 914 004e 536A     		ldr	r3, [r2, #36]
+ 915 0050 43F00803 		orr	r3, r3, #8
+ 916 0054 5362     		str	r3, [r2, #36]
+ 917              	.L129:
+ 918 0056 4368     		ldr	r3, [r0, #4]
+ 919 0058 13F0010F 		tst	r3, #1
+ 920 005c 04D0     		beq	.L130
+ 921 005e 434A     		ldr	r2, .L141
+ 922 0060 936A     		ldr	r3, [r2, #40]
+ 923 0062 43F00803 		orr	r3, r3, #8
+ 924 0066 9362     		str	r3, [r2, #40]
+ 925              	.L130:
+ 926 0068 4368     		ldr	r3, [r0, #4]
+ 927 006a 13F0020F 		tst	r3, #2
+ 928 006e 76D0     		beq	.L138
+ 929 0070 3E4A     		ldr	r2, .L141
+ 930 0072 D36A     		ldr	r3, [r2, #44]
+ 931 0074 43F00803 		orr	r3, r3, #8
+ 932 0078 D362     		str	r3, [r2, #44]
+ 933 007a 0020     		movs	r0, #0
+ 934 007c 7047     		bx	lr
+ 935              	.L125:
+ 936 007e 3B4B     		ldr	r3, .L141
+ 937 0080 5A6A     		ldr	r2, [r3, #36]
+ 938 0082 22F02002 		bic	r2, r2, #32
+ 939 0086 5A62     		str	r2, [r3, #36]
+ 940 0088 1A6A     		ldr	r2, [r3, #32]
+ 941 008a 22F02002 		bic	r2, r2, #32
+ 942 008e 1A62     		str	r2, [r3, #32]
+ 943 0090 DA6A     		ldr	r2, [r3, #44]
+ 944 0092 22F02002 		bic	r2, r2, #32
+ 945 0096 DA62     		str	r2, [r3, #44]
+ 946 0098 9A6A     		ldr	r2, [r3, #40]
+ 947 009a 22F02002 		bic	r2, r2, #32
+ 948 009e 9A62     		str	r2, [r3, #40]
+ 949 00a0 4368     		ldr	r3, [r0, #4]
+ 950 00a2 13F4803F 		tst	r3, #65536
+ 951 00a6 04D0     		beq	.L131
+ 952 00a8 304A     		ldr	r2, .L141
+ 953 00aa 136A     		ldr	r3, [r2, #32]
+ 954 00ac 43F02003 		orr	r3, r3, #32
+ 955 00b0 1362     		str	r3, [r2, #32]
+ 956              	.L131:
+ 957 00b2 4368     		ldr	r3, [r0, #4]
+ 958 00b4 13F4003F 		tst	r3, #131072
+ 959 00b8 04D0     		beq	.L132
+ 960 00ba 2C4A     		ldr	r2, .L141
+ 961 00bc 536A     		ldr	r3, [r2, #36]
+ 962 00be 43F02003 		orr	r3, r3, #32
+ 963 00c2 5362     		str	r3, [r2, #36]
+ 964              	.L132:
+ 965 00c4 4368     		ldr	r3, [r0, #4]
+ 966 00c6 13F0010F 		tst	r3, #1
+ 967 00ca 04D0     		beq	.L133
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 17
+
+
+ 968 00cc 274A     		ldr	r2, .L141
+ 969 00ce 936A     		ldr	r3, [r2, #40]
+ 970 00d0 43F02003 		orr	r3, r3, #32
+ 971 00d4 9362     		str	r3, [r2, #40]
+ 972              	.L133:
+ 973 00d6 4368     		ldr	r3, [r0, #4]
+ 974 00d8 13F0020F 		tst	r3, #2
+ 975 00dc 41D0     		beq	.L139
+ 976 00de 234A     		ldr	r2, .L141
+ 977 00e0 D36A     		ldr	r3, [r2, #44]
+ 978 00e2 43F02003 		orr	r3, r3, #32
+ 979 00e6 D362     		str	r3, [r2, #44]
+ 980 00e8 0020     		movs	r0, #0
+ 981 00ea 7047     		bx	lr
+ 982              	.L126:
+ 983 00ec 1F4B     		ldr	r3, .L141
+ 984 00ee 5A6A     		ldr	r2, [r3, #36]
+ 985 00f0 22F04002 		bic	r2, r2, #64
+ 986 00f4 5A62     		str	r2, [r3, #36]
+ 987 00f6 1A6A     		ldr	r2, [r3, #32]
+ 988 00f8 22F04002 		bic	r2, r2, #64
+ 989 00fc 1A62     		str	r2, [r3, #32]
+ 990 00fe DA6A     		ldr	r2, [r3, #44]
+ 991 0100 22F04002 		bic	r2, r2, #64
+ 992 0104 DA62     		str	r2, [r3, #44]
+ 993 0106 9A6A     		ldr	r2, [r3, #40]
+ 994 0108 22F04002 		bic	r2, r2, #64
+ 995 010c 9A62     		str	r2, [r3, #40]
+ 996 010e 4368     		ldr	r3, [r0, #4]
+ 997 0110 13F4803F 		tst	r3, #65536
+ 998 0114 04D0     		beq	.L134
+ 999 0116 154A     		ldr	r2, .L141
+ 1000 0118 136A     		ldr	r3, [r2, #32]
+ 1001 011a 43F04003 		orr	r3, r3, #64
+ 1002 011e 1362     		str	r3, [r2, #32]
+ 1003              	.L134:
+ 1004 0120 4368     		ldr	r3, [r0, #4]
+ 1005 0122 13F4003F 		tst	r3, #131072
+ 1006 0126 04D0     		beq	.L135
+ 1007 0128 104A     		ldr	r2, .L141
+ 1008 012a 536A     		ldr	r3, [r2, #36]
+ 1009 012c 43F04003 		orr	r3, r3, #64
+ 1010 0130 5362     		str	r3, [r2, #36]
+ 1011              	.L135:
+ 1012 0132 4368     		ldr	r3, [r0, #4]
+ 1013 0134 13F0010F 		tst	r3, #1
+ 1014 0138 04D0     		beq	.L136
+ 1015 013a 0C4A     		ldr	r2, .L141
+ 1016 013c 936A     		ldr	r3, [r2, #40]
+ 1017 013e 43F04003 		orr	r3, r3, #64
+ 1018 0142 9362     		str	r3, [r2, #40]
+ 1019              	.L136:
+ 1020 0144 4368     		ldr	r3, [r0, #4]
+ 1021 0146 13F0020F 		tst	r3, #2
+ 1022 014a 0CD0     		beq	.L140
+ 1023 014c 074A     		ldr	r2, .L141
+ 1024 014e D36A     		ldr	r3, [r2, #44]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 18
+
+
+ 1025 0150 43F04003 		orr	r3, r3, #64
+ 1026 0154 D362     		str	r3, [r2, #44]
+ 1027 0156 0020     		movs	r0, #0
+ 1028 0158 7047     		bx	lr
+ 1029              	.L137:
+ 1030 015a 0120     		movs	r0, #1
+ 1031 015c 7047     		bx	lr
+ 1032              	.L138:
+ 1033 015e 0020     		movs	r0, #0
+ 1034 0160 7047     		bx	lr
+ 1035              	.L139:
+ 1036 0162 0020     		movs	r0, #0
+ 1037 0164 7047     		bx	lr
+ 1038              	.L140:
+ 1039 0166 0020     		movs	r0, #0
+ 1040 0168 7047     		bx	lr
+ 1041              	.L142:
+ 1042 016a 00BF     		.align	2
+ 1043              	.L141:
+ 1044 016c 00040140 		.word	1073808384
+ 1046              		.section	.text.HAL_PWREx_EnableLowPowerRunMode,"ax",%progbits
+ 1047              		.align	1
+ 1048              		.global	HAL_PWREx_EnableLowPowerRunMode
+ 1049              		.syntax unified
+ 1050              		.thumb
+ 1051              		.thumb_func
+ 1053              	HAL_PWREx_EnableLowPowerRunMode:
+ 1054              		@ args = 0, pretend = 0, frame = 0
+ 1055              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1056              		@ link register save eliminated.
+ 1057 0000 024A     		ldr	r2, .L144
+ 1058 0002 1368     		ldr	r3, [r2]
+ 1059 0004 43F48043 		orr	r3, r3, #16384
+ 1060 0008 1360     		str	r3, [r2]
+ 1061 000a 7047     		bx	lr
+ 1062              	.L145:
+ 1063              		.align	2
+ 1064              	.L144:
+ 1065 000c 00700040 		.word	1073770496
+ 1067              		.section	.text.HAL_PWREx_DisableLowPowerRunMode,"ax",%progbits
+ 1068              		.align	1
+ 1069              		.global	HAL_PWREx_DisableLowPowerRunMode
+ 1070              		.syntax unified
+ 1071              		.thumb
+ 1072              		.thumb_func
+ 1074              	HAL_PWREx_DisableLowPowerRunMode:
+ 1075              		@ args = 0, pretend = 0, frame = 0
+ 1076              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1077              		@ link register save eliminated.
+ 1078 0000 104A     		ldr	r2, .L152
+ 1079 0002 1368     		ldr	r3, [r2]
+ 1080 0004 23F48043 		bic	r3, r3, #16384
+ 1081 0008 1360     		str	r3, [r2]
+ 1082 000a 0F4B     		ldr	r3, .L152+4
+ 1083 000c 1B68     		ldr	r3, [r3]
+ 1084 000e 3222     		movs	r2, #50
+ 1085 0010 02FB03F3 		mul	r3, r2, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 19
+
+
+ 1086 0014 0D4A     		ldr	r2, .L152+8
+ 1087 0016 A2FB0323 		umull	r2, r3, r2, r3
+ 1088 001a 9B0C     		lsrs	r3, r3, #18
+ 1089 001c 0133     		adds	r3, r3, #1
+ 1090 001e 00E0     		b	.L147
+ 1091              	.L149:
+ 1092 0020 013B     		subs	r3, r3, #1
+ 1093              	.L147:
+ 1094 0022 084A     		ldr	r2, .L152
+ 1095 0024 5269     		ldr	r2, [r2, #20]
+ 1096 0026 12F4007F 		tst	r2, #512
+ 1097 002a 01D0     		beq	.L148
+ 1098 002c 002B     		cmp	r3, #0
+ 1099 002e F7D1     		bne	.L149
+ 1100              	.L148:
+ 1101 0030 044B     		ldr	r3, .L152
+ 1102 0032 5B69     		ldr	r3, [r3, #20]
+ 1103 0034 13F4007F 		tst	r3, #512
+ 1104 0038 01D1     		bne	.L151
+ 1105 003a 0020     		movs	r0, #0
+ 1106 003c 7047     		bx	lr
+ 1107              	.L151:
+ 1108 003e 0320     		movs	r0, #3
+ 1109 0040 7047     		bx	lr
+ 1110              	.L153:
+ 1111 0042 00BF     		.align	2
+ 1112              	.L152:
+ 1113 0044 00700040 		.word	1073770496
+ 1114 0048 00000000 		.word	SystemCoreClock
+ 1115 004c 83DE1B43 		.word	1125899907
+ 1117              		.section	.text.HAL_PWREx_EnterSTOP0Mode,"ax",%progbits
+ 1118              		.align	1
+ 1119              		.global	HAL_PWREx_EnterSTOP0Mode
+ 1120              		.syntax unified
+ 1121              		.thumb
+ 1122              		.thumb_func
+ 1124              	HAL_PWREx_EnterSTOP0Mode:
+ 1125              		@ args = 0, pretend = 0, frame = 0
+ 1126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1127              		@ link register save eliminated.
+ 1128 0000 0B4A     		ldr	r2, .L158
+ 1129 0002 1368     		ldr	r3, [r2]
+ 1130 0004 23F00703 		bic	r3, r3, #7
+ 1131 0008 1360     		str	r3, [r2]
+ 1132 000a 0A4A     		ldr	r2, .L158+4
+ 1133 000c 1369     		ldr	r3, [r2, #16]
+ 1134 000e 43F00403 		orr	r3, r3, #4
+ 1135 0012 1361     		str	r3, [r2, #16]
+ 1136 0014 0128     		cmp	r0, #1
+ 1137 0016 08D0     		beq	.L157
+ 1138              		.syntax unified
+ 1139              	@ 1208 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1140 0018 40BF     		sev
+ 1141              	@ 0 "" 2
+ 1142              	@ 1209 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1143 001a 20BF     		wfe
+ 1144              	@ 0 "" 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 20
+
+
+ 1145              	@ 1210 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1146 001c 20BF     		wfe
+ 1147              	@ 0 "" 2
+ 1148              		.thumb
+ 1149              		.syntax unified
+ 1150              	.L156:
+ 1151 001e 054A     		ldr	r2, .L158+4
+ 1152 0020 1369     		ldr	r3, [r2, #16]
+ 1153 0022 23F00403 		bic	r3, r3, #4
+ 1154 0026 1361     		str	r3, [r2, #16]
+ 1155 0028 7047     		bx	lr
+ 1156              	.L157:
+ 1157              		.syntax unified
+ 1158              	@ 1203 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1159 002a 30BF     		wfi
+ 1160              	@ 0 "" 2
+ 1161              		.thumb
+ 1162              		.syntax unified
+ 1163 002c F7E7     		b	.L156
+ 1164              	.L159:
+ 1165 002e 00BF     		.align	2
+ 1166              	.L158:
+ 1167 0030 00700040 		.word	1073770496
+ 1168 0034 00ED00E0 		.word	-536810240
+ 1170              		.section	.text.HAL_PWREx_EnterSTOP1Mode,"ax",%progbits
+ 1171              		.align	1
+ 1172              		.global	HAL_PWREx_EnterSTOP1Mode
+ 1173              		.syntax unified
+ 1174              		.thumb
+ 1175              		.thumb_func
+ 1177              	HAL_PWREx_EnterSTOP1Mode:
+ 1178              		@ args = 0, pretend = 0, frame = 0
+ 1179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1180              		@ link register save eliminated.
+ 1181 0000 0C4A     		ldr	r2, .L164
+ 1182 0002 1368     		ldr	r3, [r2]
+ 1183 0004 23F00703 		bic	r3, r3, #7
+ 1184 0008 43F00103 		orr	r3, r3, #1
+ 1185 000c 1360     		str	r3, [r2]
+ 1186 000e 0A4A     		ldr	r2, .L164+4
+ 1187 0010 1369     		ldr	r3, [r2, #16]
+ 1188 0012 43F00403 		orr	r3, r3, #4
+ 1189 0016 1361     		str	r3, [r2, #16]
+ 1190 0018 0128     		cmp	r0, #1
+ 1191 001a 08D0     		beq	.L163
+ 1192              		.syntax unified
+ 1193              	@ 1259 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1194 001c 40BF     		sev
+ 1195              	@ 0 "" 2
+ 1196              	@ 1260 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1197 001e 20BF     		wfe
+ 1198              	@ 0 "" 2
+ 1199              	@ 1261 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1200 0020 20BF     		wfe
+ 1201              	@ 0 "" 2
+ 1202              		.thumb
+ 1203              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 21
+
+
+ 1204              	.L162:
+ 1205 0022 054A     		ldr	r2, .L164+4
+ 1206 0024 1369     		ldr	r3, [r2, #16]
+ 1207 0026 23F00403 		bic	r3, r3, #4
+ 1208 002a 1361     		str	r3, [r2, #16]
+ 1209 002c 7047     		bx	lr
+ 1210              	.L163:
+ 1211              		.syntax unified
+ 1212              	@ 1254 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1213 002e 30BF     		wfi
+ 1214              	@ 0 "" 2
+ 1215              		.thumb
+ 1216              		.syntax unified
+ 1217 0030 F7E7     		b	.L162
+ 1218              	.L165:
+ 1219 0032 00BF     		.align	2
+ 1220              	.L164:
+ 1221 0034 00700040 		.word	1073770496
+ 1222 0038 00ED00E0 		.word	-536810240
+ 1224              		.section	.text.HAL_PWREx_EnterSTOP2Mode,"ax",%progbits
+ 1225              		.align	1
+ 1226              		.global	HAL_PWREx_EnterSTOP2Mode
+ 1227              		.syntax unified
+ 1228              		.thumb
+ 1229              		.thumb_func
+ 1231              	HAL_PWREx_EnterSTOP2Mode:
+ 1232              		@ args = 0, pretend = 0, frame = 0
+ 1233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1234              		@ link register save eliminated.
+ 1235 0000 0C4A     		ldr	r2, .L170
+ 1236 0002 1368     		ldr	r3, [r2]
+ 1237 0004 23F00703 		bic	r3, r3, #7
+ 1238 0008 43F00203 		orr	r3, r3, #2
+ 1239 000c 1360     		str	r3, [r2]
+ 1240 000e 0A4A     		ldr	r2, .L170+4
+ 1241 0010 1369     		ldr	r3, [r2, #16]
+ 1242 0012 43F00403 		orr	r3, r3, #4
+ 1243 0016 1361     		str	r3, [r2, #16]
+ 1244 0018 0128     		cmp	r0, #1
+ 1245 001a 08D0     		beq	.L169
+ 1246              		.syntax unified
+ 1247              	@ 1312 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1248 001c 40BF     		sev
+ 1249              	@ 0 "" 2
+ 1250              	@ 1313 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1251 001e 20BF     		wfe
+ 1252              	@ 0 "" 2
+ 1253              	@ 1314 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1254 0020 20BF     		wfe
+ 1255              	@ 0 "" 2
+ 1256              		.thumb
+ 1257              		.syntax unified
+ 1258              	.L168:
+ 1259 0022 054A     		ldr	r2, .L170+4
+ 1260 0024 1369     		ldr	r3, [r2, #16]
+ 1261 0026 23F00403 		bic	r3, r3, #4
+ 1262 002a 1361     		str	r3, [r2, #16]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 22
+
+
+ 1263 002c 7047     		bx	lr
+ 1264              	.L169:
+ 1265              		.syntax unified
+ 1266              	@ 1307 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1267 002e 30BF     		wfi
+ 1268              	@ 0 "" 2
+ 1269              		.thumb
+ 1270              		.syntax unified
+ 1271 0030 F7E7     		b	.L168
+ 1272              	.L171:
+ 1273 0032 00BF     		.align	2
+ 1274              	.L170:
+ 1275 0034 00700040 		.word	1073770496
+ 1276 0038 00ED00E0 		.word	-536810240
+ 1278              		.section	.text.HAL_PWREx_EnterSHUTDOWNMode,"ax",%progbits
+ 1279              		.align	1
+ 1280              		.global	HAL_PWREx_EnterSHUTDOWNMode
+ 1281              		.syntax unified
+ 1282              		.thumb
+ 1283              		.thumb_func
+ 1285              	HAL_PWREx_EnterSHUTDOWNMode:
+ 1286              		@ args = 0, pretend = 0, frame = 0
+ 1287              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1288              		@ link register save eliminated.
+ 1289 0000 064A     		ldr	r2, .L173
+ 1290 0002 1368     		ldr	r3, [r2]
+ 1291 0004 23F00703 		bic	r3, r3, #7
+ 1292 0008 43F00403 		orr	r3, r3, #4
+ 1293 000c 1360     		str	r3, [r2]
+ 1294 000e 044A     		ldr	r2, .L173+4
+ 1295 0010 1369     		ldr	r3, [r2, #16]
+ 1296 0012 43F00403 		orr	r3, r3, #4
+ 1297 0016 1361     		str	r3, [r2, #16]
+ 1298              		.syntax unified
+ 1299              	@ 1348 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
+ 1300 0018 30BF     		wfi
+ 1301              	@ 0 "" 2
+ 1302              		.thumb
+ 1303              		.syntax unified
+ 1304 001a 7047     		bx	lr
+ 1305              	.L174:
+ 1306              		.align	2
+ 1307              	.L173:
+ 1308 001c 00700040 		.word	1073770496
+ 1309 0020 00ED00E0 		.word	-536810240
+ 1311              		.section	.text.HAL_PWREx_PVM1Callback,"ax",%progbits
+ 1312              		.align	1
+ 1313              		.weak	HAL_PWREx_PVM1Callback
+ 1314              		.syntax unified
+ 1315              		.thumb
+ 1316              		.thumb_func
+ 1318              	HAL_PWREx_PVM1Callback:
+ 1319              		@ args = 0, pretend = 0, frame = 0
+ 1320              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1321              		@ link register save eliminated.
+ 1322 0000 7047     		bx	lr
+ 1324              		.section	.text.HAL_PWREx_PVM3Callback,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 23
+
+
+ 1325              		.align	1
+ 1326              		.weak	HAL_PWREx_PVM3Callback
+ 1327              		.syntax unified
+ 1328              		.thumb
+ 1329              		.thumb_func
+ 1331              	HAL_PWREx_PVM3Callback:
+ 1332              		@ args = 0, pretend = 0, frame = 0
+ 1333              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1334              		@ link register save eliminated.
+ 1335 0000 7047     		bx	lr
+ 1337              		.section	.text.HAL_PWREx_PVM4Callback,"ax",%progbits
+ 1338              		.align	1
+ 1339              		.weak	HAL_PWREx_PVM4Callback
+ 1340              		.syntax unified
+ 1341              		.thumb
+ 1342              		.thumb_func
+ 1344              	HAL_PWREx_PVM4Callback:
+ 1345              		@ args = 0, pretend = 0, frame = 0
+ 1346              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1347              		@ link register save eliminated.
+ 1348 0000 7047     		bx	lr
+ 1350              		.section	.text.HAL_PWREx_PVD_PVM_IRQHandler,"ax",%progbits
+ 1351              		.align	1
+ 1352              		.global	HAL_PWREx_PVD_PVM_IRQHandler
+ 1353              		.syntax unified
+ 1354              		.thumb
+ 1355              		.thumb_func
+ 1357              	HAL_PWREx_PVD_PVM_IRQHandler:
+ 1358              		@ args = 0, pretend = 0, frame = 0
+ 1359              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1360 0000 08B5     		push	{r3, lr}
+ 1361 0002 174B     		ldr	r3, .L188
+ 1362 0004 5B69     		ldr	r3, [r3, #20]
+ 1363 0006 13F4803F 		tst	r3, #65536
+ 1364 000a 0FD1     		bne	.L184
+ 1365              	.L179:
+ 1366 000c 144B     		ldr	r3, .L188
+ 1367 000e 5B6B     		ldr	r3, [r3, #52]
+ 1368 0010 13F0080F 		tst	r3, #8
+ 1369 0014 11D1     		bne	.L185
+ 1370              	.L180:
+ 1371 0016 124B     		ldr	r3, .L188
+ 1372 0018 5B6B     		ldr	r3, [r3, #52]
+ 1373 001a 13F0200F 		tst	r3, #32
+ 1374 001e 12D1     		bne	.L186
+ 1375              	.L181:
+ 1376 0020 0F4B     		ldr	r3, .L188
+ 1377 0022 5B6B     		ldr	r3, [r3, #52]
+ 1378 0024 13F0400F 		tst	r3, #64
+ 1379 0028 13D1     		bne	.L187
+ 1380              	.L178:
+ 1381 002a 08BD     		pop	{r3, pc}
+ 1382              	.L184:
+ 1383 002c FFF7FEFF 		bl	HAL_PWR_PVDCallback
+ 1384 0030 0B4B     		ldr	r3, .L188
+ 1385 0032 4FF48032 		mov	r2, #65536
+ 1386 0036 5A61     		str	r2, [r3, #20]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 24
+
+
+ 1387 0038 E8E7     		b	.L179
+ 1388              	.L185:
+ 1389 003a FFF7FEFF 		bl	HAL_PWREx_PVM1Callback
+ 1390 003e 084B     		ldr	r3, .L188
+ 1391 0040 0822     		movs	r2, #8
+ 1392 0042 5A63     		str	r2, [r3, #52]
+ 1393 0044 E7E7     		b	.L180
+ 1394              	.L186:
+ 1395 0046 FFF7FEFF 		bl	HAL_PWREx_PVM3Callback
+ 1396 004a 054B     		ldr	r3, .L188
+ 1397 004c 2022     		movs	r2, #32
+ 1398 004e 5A63     		str	r2, [r3, #52]
+ 1399 0050 E6E7     		b	.L181
+ 1400              	.L187:
+ 1401 0052 FFF7FEFF 		bl	HAL_PWREx_PVM4Callback
+ 1402 0056 024B     		ldr	r3, .L188
+ 1403 0058 4022     		movs	r2, #64
+ 1404 005a 5A63     		str	r2, [r3, #52]
+ 1405 005c E5E7     		b	.L178
+ 1406              	.L189:
+ 1407 005e 00BF     		.align	2
+ 1408              	.L188:
+ 1409 0060 00040140 		.word	1073808384
+ 1411              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_pwr_ex.c
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:18     .text.HAL_PWREx_GetVoltageRange:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:24     .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:35     .text.HAL_PWREx_GetVoltageRange:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:38     .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:44     .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:110    .text.HAL_PWREx_ControlVoltageScaling:00000084 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:115    .text.HAL_PWREx_EnableBatteryCharging:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:121    .text.HAL_PWREx_EnableBatteryCharging:00000000 HAL_PWREx_EnableBatteryCharging
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:137    .text.HAL_PWREx_EnableBatteryCharging:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:140    .text.HAL_PWREx_DisableBatteryCharging:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:146    .text.HAL_PWREx_DisableBatteryCharging:00000000 HAL_PWREx_DisableBatteryCharging
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:158    .text.HAL_PWREx_DisableBatteryCharging:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:161    .text.HAL_PWREx_EnableVddUSB:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:167    .text.HAL_PWREx_EnableVddUSB:00000000 HAL_PWREx_EnableVddUSB
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:179    .text.HAL_PWREx_EnableVddUSB:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:182    .text.HAL_PWREx_DisableVddUSB:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:188    .text.HAL_PWREx_DisableVddUSB:00000000 HAL_PWREx_DisableVddUSB
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:200    .text.HAL_PWREx_DisableVddUSB:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:203    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:209    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 HAL_PWREx_EnableInternalWakeUpLine
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:221    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:224    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:230    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 HAL_PWREx_DisableInternalWakeUpLine
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:242    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:245    .text.HAL_PWREx_EnableGPIOPullUp:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:251    .text.HAL_PWREx_EnableGPIOPullUp:00000000 HAL_PWREx_EnableGPIOPullUp
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:259    .text.HAL_PWREx_EnableGPIOPullUp:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:267    .text.HAL_PWREx_EnableGPIOPullUp:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:328    .text.HAL_PWREx_EnableGPIOPullUp:00000088 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:331    .text.HAL_PWREx_DisableGPIOPullUp:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:337    .text.HAL_PWREx_DisableGPIOPullUp:00000000 HAL_PWREx_DisableGPIOPullUp
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:345    .text.HAL_PWREx_DisableGPIOPullUp:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:353    .text.HAL_PWREx_DisableGPIOPullUp:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:397    .text.HAL_PWREx_DisableGPIOPullUp:00000064 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:400    .text.HAL_PWREx_EnableGPIOPullDown:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:406    .text.HAL_PWREx_EnableGPIOPullDown:00000000 HAL_PWREx_EnableGPIOPullDown
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:414    .text.HAL_PWREx_EnableGPIOPullDown:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:422    .text.HAL_PWREx_EnableGPIOPullDown:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:483    .text.HAL_PWREx_EnableGPIOPullDown:00000088 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:486    .text.HAL_PWREx_DisableGPIOPullDown:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:492    .text.HAL_PWREx_DisableGPIOPullDown:00000000 HAL_PWREx_DisableGPIOPullDown
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:500    .text.HAL_PWREx_DisableGPIOPullDown:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:508    .text.HAL_PWREx_DisableGPIOPullDown:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:553    .text.HAL_PWREx_DisableGPIOPullDown:00000068 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:556    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:562    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 HAL_PWREx_EnablePullUpPullDownConfig
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:574    .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:577    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:583    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 HAL_PWREx_DisablePullUpPullDownConfig
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:595    .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:598    .text.HAL_PWREx_SetSRAM2ContentRetention:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:604    .text.HAL_PWREx_SetSRAM2ContentRetention:00000000 HAL_PWREx_SetSRAM2ContentRetention
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:629    .text.HAL_PWREx_SetSRAM2ContentRetention:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:632    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:638    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 HAL_PWREx_EnableSRAM2ContentRetention
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 26
+
+
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:647    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:653    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 HAL_PWREx_DisableSRAM2ContentRetention
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:662    .text.HAL_PWREx_EnableBORPVD_ULP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:668    .text.HAL_PWREx_EnableBORPVD_ULP:00000000 HAL_PWREx_EnableBORPVD_ULP
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:680    .text.HAL_PWREx_EnableBORPVD_ULP:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:683    .text.HAL_PWREx_DisableBORPVD_ULP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:689    .text.HAL_PWREx_DisableBORPVD_ULP:00000000 HAL_PWREx_DisableBORPVD_ULP
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:701    .text.HAL_PWREx_DisableBORPVD_ULP:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:704    .text.HAL_PWREx_EnableExtSMPS_0V95:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:710    .text.HAL_PWREx_EnableExtSMPS_0V95:00000000 HAL_PWREx_EnableExtSMPS_0V95
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:722    .text.HAL_PWREx_EnableExtSMPS_0V95:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:725    .text.HAL_PWREx_DisableExtSMPS_0V95:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:731    .text.HAL_PWREx_DisableExtSMPS_0V95:00000000 HAL_PWREx_DisableExtSMPS_0V95
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:743    .text.HAL_PWREx_DisableExtSMPS_0V95:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:746    .text.HAL_PWREx_EnablePVM1:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:752    .text.HAL_PWREx_EnablePVM1:00000000 HAL_PWREx_EnablePVM1
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:764    .text.HAL_PWREx_EnablePVM1:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:767    .text.HAL_PWREx_DisablePVM1:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:773    .text.HAL_PWREx_DisablePVM1:00000000 HAL_PWREx_DisablePVM1
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:785    .text.HAL_PWREx_DisablePVM1:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:788    .text.HAL_PWREx_EnablePVM3:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:794    .text.HAL_PWREx_EnablePVM3:00000000 HAL_PWREx_EnablePVM3
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:806    .text.HAL_PWREx_EnablePVM3:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:809    .text.HAL_PWREx_DisablePVM3:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:815    .text.HAL_PWREx_DisablePVM3:00000000 HAL_PWREx_DisablePVM3
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:827    .text.HAL_PWREx_DisablePVM3:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:830    .text.HAL_PWREx_EnablePVM4:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:836    .text.HAL_PWREx_EnablePVM4:00000000 HAL_PWREx_EnablePVM4
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:848    .text.HAL_PWREx_EnablePVM4:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:851    .text.HAL_PWREx_DisablePVM4:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:857    .text.HAL_PWREx_DisablePVM4:00000000 HAL_PWREx_DisablePVM4
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:869    .text.HAL_PWREx_DisablePVM4:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:872    .text.HAL_PWREx_ConfigPVM:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:878    .text.HAL_PWREx_ConfigPVM:00000000 HAL_PWREx_ConfigPVM
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1044   .text.HAL_PWREx_ConfigPVM:0000016c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1047   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1053   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 HAL_PWREx_EnableLowPowerRunMode
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1065   .text.HAL_PWREx_EnableLowPowerRunMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1068   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1074   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 HAL_PWREx_DisableLowPowerRunMode
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1113   .text.HAL_PWREx_DisableLowPowerRunMode:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1118   .text.HAL_PWREx_EnterSTOP0Mode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1124   .text.HAL_PWREx_EnterSTOP0Mode:00000000 HAL_PWREx_EnterSTOP0Mode
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1167   .text.HAL_PWREx_EnterSTOP0Mode:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1171   .text.HAL_PWREx_EnterSTOP1Mode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1177   .text.HAL_PWREx_EnterSTOP1Mode:00000000 HAL_PWREx_EnterSTOP1Mode
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1221   .text.HAL_PWREx_EnterSTOP1Mode:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1225   .text.HAL_PWREx_EnterSTOP2Mode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1231   .text.HAL_PWREx_EnterSTOP2Mode:00000000 HAL_PWREx_EnterSTOP2Mode
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1275   .text.HAL_PWREx_EnterSTOP2Mode:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1279   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1285   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 HAL_PWREx_EnterSHUTDOWNMode
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1308   .text.HAL_PWREx_EnterSHUTDOWNMode:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1312   .text.HAL_PWREx_PVM1Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1318   .text.HAL_PWREx_PVM1Callback:00000000 HAL_PWREx_PVM1Callback
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1325   .text.HAL_PWREx_PVM3Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1331   .text.HAL_PWREx_PVM3Callback:00000000 HAL_PWREx_PVM3Callback
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 27
+
+
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1338   .text.HAL_PWREx_PVM4Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1344   .text.HAL_PWREx_PVM4Callback:00000000 HAL_PWREx_PVM4Callback
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1351   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1357   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 HAL_PWREx_PVD_PVM_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1409   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000060 $d
+
+UNDEFINED SYMBOLS
+SystemCoreClock
+HAL_PWR_PVDCallback

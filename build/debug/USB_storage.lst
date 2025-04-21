@@ -1,0 +1,264 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"USB_storage.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/USB_storage.c"
+  20              		.section	.text.UDISK_push,"ax",%progbits
+  21              		.align	1
+  22              		.global	UDISK_push
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	UDISK_push:
+  28              	.LVL0:
+  29              	.LFB0:
+   1:Core/Src/USB_storage.c **** #include "USB_storage.h"
+   2:Core/Src/USB_storage.c **** #include "stdbool.h"
+   3:Core/Src/USB_storage.c **** 
+   4:Core/Src/USB_storage.c **** int16_t USBDisk[4080] __attribute__((section(".ram2_bss"))); // Space for 85 days
+   5:Core/Src/USB_storage.c **** 
+   6:Core/Src/USB_storage.c **** uint32_t last_timestamp __attribute__((section(".ram2_bss")));
+   7:Core/Src/USB_storage.c **** uint16_t last_pointer __attribute__((section(".ram2_bss")));
+   8:Core/Src/USB_storage.c **** uint16_t length __attribute__((section(".ram2_bss")));
+   9:Core/Src/USB_storage.c **** bool is_first_writing __attribute__((section(".ram2_bss")));
+  10:Core/Src/USB_storage.c **** uint32_t data_retention_code __attribute__((section(".ram2_bss"))) = 0xFDEBCADF;
+  11:Core/Src/USB_storage.c **** 
+  12:Core/Src/USB_storage.c **** void UDISK_push(uint16_t temp, uint32_t timestamp){
+  30              		.loc 1 12 51 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  13:Core/Src/USB_storage.c ****     if(data_retention_code != 0xFDEBCADF){
+  35              		.loc 1 13 5 view .LVU1
+  36              		.loc 1 13 28 is_stmt 0 view .LVU2
+  37 0000 154B     		ldr	r3, .L5
+  38 0002 1A68     		ldr	r2, [r3]
+  39              		.loc 1 13 7 view .LVU3
+  40 0004 154B     		ldr	r3, .L5+4
+  41 0006 9A42     		cmp	r2, r3
+  42 0008 07D0     		beq	.L2
+  14:Core/Src/USB_storage.c ****         is_first_writing = true;
+  43              		.loc 1 14 9 is_stmt 1 view .LVU4
+  44              		.loc 1 14 26 is_stmt 0 view .LVU5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s 			page 2
+
+
+  45 000a 154B     		ldr	r3, .L5+8
+  46 000c 0122     		movs	r2, #1
+  47 000e 1A70     		strb	r2, [r3]
+  15:Core/Src/USB_storage.c ****         last_pointer = 0;
+  48              		.loc 1 15 9 is_stmt 1 view .LVU6
+  49              		.loc 1 15 22 is_stmt 0 view .LVU7
+  50 0010 0023     		movs	r3, #0
+  51 0012 144A     		ldr	r2, .L5+12
+  52 0014 1380     		strh	r3, [r2]	@ movhi
+  16:Core/Src/USB_storage.c ****         length = 0;
+  53              		.loc 1 16 9 is_stmt 1 view .LVU8
+  54              		.loc 1 16 16 is_stmt 0 view .LVU9
+  55 0016 144A     		ldr	r2, .L5+16
+  56 0018 1380     		strh	r3, [r2]	@ movhi
+  57              	.L2:
+  17:Core/Src/USB_storage.c ****     }
+  18:Core/Src/USB_storage.c ****     last_timestamp = timestamp;
+  58              		.loc 1 18 5 is_stmt 1 view .LVU10
+  59              		.loc 1 18 20 is_stmt 0 view .LVU11
+  60 001a 144B     		ldr	r3, .L5+20
+  61 001c 1960     		str	r1, [r3]
+  19:Core/Src/USB_storage.c ****     USBDisk[last_pointer] = temp;
+  62              		.loc 1 19 5 is_stmt 1 view .LVU12
+  63              		.loc 1 19 12 is_stmt 0 view .LVU13
+  64 001e 114A     		ldr	r2, .L5+12
+  65 0020 1388     		ldrh	r3, [r2]
+  66              		.loc 1 19 27 view .LVU14
+  67 0022 1349     		ldr	r1, .L5+24
+  68              	.LVL1:
+  69              		.loc 1 19 27 view .LVU15
+  70 0024 21F81300 		strh	r0, [r1, r3, lsl #1]	@ movhi
+  20:Core/Src/USB_storage.c ****     last_pointer++;
+  71              		.loc 1 20 5 is_stmt 1 view .LVU16
+  72              		.loc 1 20 17 is_stmt 0 view .LVU17
+  73 0028 0133     		adds	r3, r3, #1
+  74 002a 9BB2     		uxth	r3, r3
+  75 002c 1380     		strh	r3, [r2]	@ movhi
+  21:Core/Src/USB_storage.c ****     length++;
+  76              		.loc 1 21 5 is_stmt 1 view .LVU18
+  77              		.loc 1 21 11 is_stmt 0 view .LVU19
+  78 002e 0E49     		ldr	r1, .L5+16
+  79 0030 0A88     		ldrh	r2, [r1]
+  80 0032 0132     		adds	r2, r2, #1
+  81 0034 0A80     		strh	r2, [r1]	@ movhi
+  22:Core/Src/USB_storage.c ****     if(last_pointer >= 4080){
+  82              		.loc 1 22 5 is_stmt 1 view .LVU20
+  83              		.loc 1 22 7 is_stmt 0 view .LVU21
+  84 0036 B3F57F6F 		cmp	r3, #4080
+  85 003a 04D3     		bcc	.L3
+  23:Core/Src/USB_storage.c ****         is_first_writing = false;
+  86              		.loc 1 23 9 is_stmt 1 view .LVU22
+  87              		.loc 1 23 26 is_stmt 0 view .LVU23
+  88 003c 0023     		movs	r3, #0
+  89 003e 084A     		ldr	r2, .L5+8
+  90 0040 1370     		strb	r3, [r2]
+  24:Core/Src/USB_storage.c ****         last_pointer = 0;
+  91              		.loc 1 24 9 is_stmt 1 view .LVU24
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s 			page 3
+
+
+  92              		.loc 1 24 22 is_stmt 0 view .LVU25
+  93 0042 084A     		ldr	r2, .L5+12
+  94 0044 1380     		strh	r3, [r2]	@ movhi
+  95              	.L3:
+  25:Core/Src/USB_storage.c ****     }
+  26:Core/Src/USB_storage.c ****     if(!is_first_writing){
+  96              		.loc 1 26 5 is_stmt 1 view .LVU26
+  97              		.loc 1 26 8 is_stmt 0 view .LVU27
+  98 0046 064B     		ldr	r3, .L5+8
+  99 0048 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 100              		.loc 1 26 7 view .LVU28
+ 101 004a 1BB9     		cbnz	r3, .L1
+  27:Core/Src/USB_storage.c ****         length = 4079;
+ 102              		.loc 1 27 9 is_stmt 1 view .LVU29
+ 103              		.loc 1 27 16 is_stmt 0 view .LVU30
+ 104 004c 064B     		ldr	r3, .L5+16
+ 105 004e 40F6EF72 		movw	r2, #4079
+ 106 0052 1A80     		strh	r2, [r3]	@ movhi
+ 107              	.L1:
+  28:Core/Src/USB_storage.c ****     }
+  29:Core/Src/USB_storage.c **** }
+ 108              		.loc 1 29 1 view .LVU31
+ 109 0054 7047     		bx	lr
+ 110              	.L6:
+ 111 0056 00BF     		.align	2
+ 112              	.L5:
+ 113 0058 00000000 		.word	data_retention_code
+ 114 005c DFCAEBFD 		.word	-34878753
+ 115 0060 00000000 		.word	is_first_writing
+ 116 0064 00000000 		.word	last_pointer
+ 117 0068 00000000 		.word	length
+ 118 006c 00000000 		.word	last_timestamp
+ 119 0070 00000000 		.word	USBDisk
+ 120              		.cfi_endproc
+ 121              	.LFE0:
+ 123              		.section	.text.UDISK_get,"ax",%progbits
+ 124              		.align	1
+ 125              		.global	UDISK_get
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 130              	UDISK_get:
+ 131              	.LVL2:
+ 132              	.LFB1:
+  30:Core/Src/USB_storage.c **** 
+  31:Core/Src/USB_storage.c **** int16_t UDISK_get(uint16_t i){
+ 133              		.loc 1 31 30 is_stmt 1 view -0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137              		@ link register save eliminated.
+  32:Core/Src/USB_storage.c ****     if(data_retention_code != 0xFDEBCADF){
+ 138              		.loc 1 32 5 view .LVU33
+ 139              		.loc 1 32 28 is_stmt 0 view .LVU34
+ 140 0000 034B     		ldr	r3, .L9
+ 141 0002 1A68     		ldr	r2, [r3]
+ 142              		.loc 1 32 7 view .LVU35
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s 			page 4
+
+
+ 143 0004 034B     		ldr	r3, .L9+4
+ 144 0006 9A42     		cmp	r2, r3
+ 145 0008 01D0     		beq	.L8
+  33:Core/Src/USB_storage.c ****         return -32768;
+ 146              		.loc 1 33 9 is_stmt 1 view .LVU36
+ 147              		.loc 1 33 16 is_stmt 0 discriminator 1 view .LVU37
+ 148 000a 0348     		ldr	r0, .L9+8
+ 149              	.LVL3:
+ 150              		.loc 1 33 16 view .LVU38
+ 151 000c 7047     		bx	lr
+ 152              	.LVL4:
+ 153              	.L8:
+ 154              	.LVL5:
+  34:Core/Src/USB_storage.c ****     }
+  35:Core/Src/USB_storage.c **** }...
+ 155              		.loc 1 35 1 view .LVU39
+ 156 000e 7047     		bx	lr
+ 157              	.L10:
+ 158              		.align	2
+ 159              	.L9:
+ 160 0010 00000000 		.word	data_retention_code
+ 161 0014 DFCAEBFD 		.word	-34878753
+ 162 0018 0080FFFF 		.word	-32768
+ 163              		.cfi_endproc
+ 164              	.LFE1:
+ 166              		.global	data_retention_code
+ 167              		.section	.ram2_bss,"aw"
+ 168              		.align	2
+ 171              	data_retention_code:
+ 172 0000 DFCAEBFD 		.word	-34878753
+ 173              		.global	is_first_writing
+ 176              	is_first_writing:
+ 177 0004 00       		.space	1
+ 178              		.global	length
+ 179 0005 00       		.align	1
+ 182              	length:
+ 183 0006 0000     		.space	2
+ 184              		.global	last_pointer
+ 185              		.align	1
+ 188              	last_pointer:
+ 189 0008 0000     		.space	2
+ 190              		.global	last_timestamp
+ 191 000a 0000     		.align	2
+ 194              	last_timestamp:
+ 195 000c 00000000 		.space	4
+ 196              		.global	USBDisk
+ 197              		.align	2
+ 200              	USBDisk:
+ 201 0010 00000000 		.space	8160
+ 201      00000000 
+ 201      00000000 
+ 201      00000000 
+ 201      00000000 
+ 202              		.text
+ 203              	.Letext0:
+ 204              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 205              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s 			page 5
+
+
+ 206              		.file 4 "Core/Inc/USB_storage.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 USB_storage.c
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:21     .text.UDISK_push:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:27     .text.UDISK_push:00000000 UDISK_push
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:113    .text.UDISK_push:00000058 $d
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:171    .ram2_bss:00000000 data_retention_code
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:176    .ram2_bss:00000004 is_first_writing
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:188    .ram2_bss:00000008 last_pointer
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:182    .ram2_bss:00000006 length
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:194    .ram2_bss:0000000c last_timestamp
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:200    .ram2_bss:00000010 USBDisk
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:124    .text.UDISK_get:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:130    .text.UDISK_get:00000000 UDISK_get
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:160    .text.UDISK_get:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccMIiGET.s:168    .ram2_bss:00000000 $d
+
+NO UNDEFINED SYMBOLS

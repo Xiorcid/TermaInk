@@ -1,0 +1,735 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_flash.c"
+  16              		.text
+  17              		.section	.text.FLASH_Program_DoubleWord,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	FLASH_Program_DoubleWord:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26              		@ link register save eliminated.
+  27 0000 10B4     		push	{r4}
+  28 0002 064C     		ldr	r4, .L3
+  29 0004 6169     		ldr	r1, [r4, #20]
+  30 0006 41F00101 		orr	r1, r1, #1
+  31 000a 6161     		str	r1, [r4, #20]
+  32 000c 0260     		str	r2, [r0]
+  33              		.syntax unified
+  34              	@ 935 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  35 000e BFF36F8F 		isb 0xF
+  36              	@ 0 "" 2
+  37              		.thumb
+  38              		.syntax unified
+  39 0012 4360     		str	r3, [r0, #4]
+  40 0014 5DF8044B 		ldr	r4, [sp], #4
+  41 0018 7047     		bx	lr
+  42              	.L4:
+  43 001a 00BF     		.align	2
+  44              	.L3:
+  45 001c 00200240 		.word	1073881088
+  47              		.section	.text.FLASH_Program_Fast,"ax",%progbits
+  48              		.align	1
+  49              		.syntax unified
+  50              		.thumb
+  51              		.thumb_func
+  53              	FLASH_Program_Fast:
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56              		@ link register save eliminated.
+  57 0000 094A     		ldr	r2, .L7
+  58 0002 5369     		ldr	r3, [r2, #20]
+  59 0004 43F48023 		orr	r3, r3, #262144
+  60 0008 5361     		str	r3, [r2, #20]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 2
+
+
+  61              		.syntax unified
+  62              	@ 453 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  63 000a EFF3108C 		MRS ip, primask
+  64              	@ 0 "" 2
+  65              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  66 000e 72B6     		cpsid i
+  67              	@ 0 "" 2
+  68              		.thumb
+  69              		.syntax unified
+  70 0010 4023     		movs	r3, #64
+  71              	.L6:
+  72 0012 51F8042B 		ldr	r2, [r1], #4
+  73 0016 40F8042B 		str	r2, [r0], #4
+  74 001a 013B     		subs	r3, r3, #1
+  75 001c 13F0FF03 		ands	r3, r3, #255
+  76 0020 F7D1     		bne	.L6
+  77              		.syntax unified
+  78              	@ 481 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  79 0022 8CF31088 		MSR primask, ip
+  80              	@ 0 "" 2
+  81              		.thumb
+  82              		.syntax unified
+  83 0026 7047     		bx	lr
+  84              	.L8:
+  85              		.align	2
+  86              	.L7:
+  87 0028 00200240 		.word	1073881088
+  89              		.section	.text.HAL_FLASH_Program_IT,"ax",%progbits
+  90              		.align	1
+  91              		.global	HAL_FLASH_Program_IT
+  92              		.syntax unified
+  93              		.thumb
+  94              		.thumb_func
+  96              	HAL_FLASH_Program_IT:
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99 0000 70B5     		push	{r4, r5, r6, lr}
+ 100 0002 1E4D     		ldr	r5, .L22
+ 101 0004 2D78     		ldrb	r5, [r5]	@ zero_extendqisi2
+ 102 0006 012D     		cmp	r5, #1
+ 103 0008 36D0     		beq	.L16
+ 104 000a 0446     		mov	r4, r0
+ 105 000c 0846     		mov	r0, r1
+ 106 000e 1B4D     		ldr	r5, .L22
+ 107 0010 0121     		movs	r1, #1
+ 108 0012 2970     		strb	r1, [r5]
+ 109 0014 0021     		movs	r1, #0
+ 110 0016 6960     		str	r1, [r5, #4]
+ 111 0018 1949     		ldr	r1, .L22+4
+ 112 001a 0968     		ldr	r1, [r1]
+ 113 001c 11F4806F 		tst	r1, #1024
+ 114 0020 19D0     		beq	.L11
+ 115 0022 174D     		ldr	r5, .L22+4
+ 116 0024 2968     		ldr	r1, [r5]
+ 117 0026 21F48061 		bic	r1, r1, #1024
+ 118 002a 2960     		str	r1, [r5]
+ 119 002c 1349     		ldr	r1, .L22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 3
+
+
+ 120 002e 0225     		movs	r5, #2
+ 121 0030 0D77     		strb	r5, [r1, #28]
+ 122              	.L12:
+ 123 0032 022C     		cmp	r4, #2
+ 124 0034 13D0     		beq	.L19
+ 125 0036 1149     		ldr	r1, .L22
+ 126 0038 0325     		movs	r5, #3
+ 127 003a 0D72     		strb	r5, [r1, #8]
+ 128              	.L14:
+ 129 003c 0F49     		ldr	r1, .L22
+ 130 003e C860     		str	r0, [r1, #12]
+ 131 0040 0F4E     		ldr	r6, .L22+4
+ 132 0042 7569     		ldr	r5, [r6, #20]
+ 133 0044 45F04075 		orr	r5, r5, #50331648
+ 134 0048 7561     		str	r5, [r6, #20]
+ 135 004a 64B1     		cbz	r4, .L20
+ 136 004c 013C     		subs	r4, r4, #1
+ 137 004e 012C     		cmp	r4, #1
+ 138 0050 0DD9     		bls	.L21
+ 139 0052 0020     		movs	r0, #0
+ 140              	.L10:
+ 141 0054 70BD     		pop	{r4, r5, r6, pc}
+ 142              	.L11:
+ 143 0056 0949     		ldr	r1, .L22
+ 144 0058 0025     		movs	r5, #0
+ 145 005a 0D77     		strb	r5, [r1, #28]
+ 146 005c E9E7     		b	.L12
+ 147              	.L19:
+ 148 005e 0749     		ldr	r1, .L22
+ 149 0060 0425     		movs	r5, #4
+ 150 0062 0D72     		strb	r5, [r1, #8]
+ 151 0064 EAE7     		b	.L14
+ 152              	.L20:
+ 153 0066 FFF7FEFF 		bl	FLASH_Program_DoubleWord
+ 154 006a 0020     		movs	r0, #0
+ 155 006c F2E7     		b	.L10
+ 156              	.L21:
+ 157 006e 1146     		mov	r1, r2
+ 158 0070 FFF7FEFF 		bl	FLASH_Program_Fast
+ 159 0074 0020     		movs	r0, #0
+ 160 0076 EDE7     		b	.L10
+ 161              	.L16:
+ 162 0078 0220     		movs	r0, #2
+ 163 007a EBE7     		b	.L10
+ 164              	.L23:
+ 165              		.align	2
+ 166              	.L22:
+ 167 007c 00000000 		.word	pFlash
+ 168 0080 00200240 		.word	1073881088
+ 170              		.section	.text.HAL_FLASH_EndOfOperationCallback,"ax",%progbits
+ 171              		.align	1
+ 172              		.weak	HAL_FLASH_EndOfOperationCallback
+ 173              		.syntax unified
+ 174              		.thumb
+ 175              		.thumb_func
+ 177              	HAL_FLASH_EndOfOperationCallback:
+ 178              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 4
+
+
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180              		@ link register save eliminated.
+ 181 0000 7047     		bx	lr
+ 183              		.section	.text.HAL_FLASH_OperationErrorCallback,"ax",%progbits
+ 184              		.align	1
+ 185              		.weak	HAL_FLASH_OperationErrorCallback
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 190              	HAL_FLASH_OperationErrorCallback:
+ 191              		@ args = 0, pretend = 0, frame = 0
+ 192              		@ frame_needed = 0, uses_anonymous_args = 0
+ 193              		@ link register save eliminated.
+ 194 0000 7047     		bx	lr
+ 196              		.section	.text.HAL_FLASH_IRQHandler,"ax",%progbits
+ 197              		.align	1
+ 198              		.global	HAL_FLASH_IRQHandler
+ 199              		.syntax unified
+ 200              		.thumb
+ 201              		.thumb_func
+ 203              	HAL_FLASH_IRQHandler:
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206 0000 10B5     		push	{r4, lr}
+ 207 0002 444A     		ldr	r2, .L47
+ 208 0004 5369     		ldr	r3, [r2, #20]
+ 209 0006 6FF30803 		bfc	r3, #0, #9
+ 210 000a 5361     		str	r3, [r2, #20]
+ 211 000c 424B     		ldr	r3, .L47+4
+ 212 000e 1B7A     		ldrb	r3, [r3, #8]	@ zero_extendqisi2
+ 213 0010 042B     		cmp	r3, #4
+ 214 0012 3BD0     		beq	.L41
+ 215              	.L27:
+ 216 0014 3F4B     		ldr	r3, .L47
+ 217 0016 1B69     		ldr	r3, [r3, #16]
+ 218 0018 404A     		ldr	r2, .L47+8
+ 219 001a 1340     		ands	r3, r3, r2
+ 220 001c 18D0     		beq	.L28
+ 221 001e 3E49     		ldr	r1, .L47+4
+ 222 0020 4A68     		ldr	r2, [r1, #4]
+ 223 0022 1A43     		orrs	r2, r2, r3
+ 224 0024 4A60     		str	r2, [r1, #4]
+ 225 0026 3B4A     		ldr	r2, .L47
+ 226 0028 1361     		str	r3, [r2, #16]
+ 227 002a FFF7FEFF 		bl	FLASH_FlushCaches
+ 228 002e 3A4B     		ldr	r3, .L47+4
+ 229 0030 1A7A     		ldrb	r2, [r3, #8]	@ zero_extendqisi2
+ 230 0032 D3B2     		uxtb	r3, r2
+ 231 0034 012A     		cmp	r2, #1
+ 232 0036 2ED0     		beq	.L42
+ 233 0038 022B     		cmp	r3, #2
+ 234 003a 31D0     		beq	.L43
+ 235 003c 033B     		subs	r3, r3, #3
+ 236 003e DBB2     		uxtb	r3, r3
+ 237 0040 012B     		cmp	r3, #1
+ 238 0042 32D9     		bls	.L44
+ 239 0044 0020     		movs	r0, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 5
+
+
+ 240 0046 FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 241              	.L31:
+ 242 004a 334B     		ldr	r3, .L47+4
+ 243 004c 0022     		movs	r2, #0
+ 244 004e 1A72     		strb	r2, [r3, #8]
+ 245              	.L28:
+ 246 0050 304B     		ldr	r3, .L47
+ 247 0052 1B69     		ldr	r3, [r3, #16]
+ 248 0054 13F0010F 		tst	r3, #1
+ 249 0058 46D0     		beq	.L34
+ 250 005a 2E4B     		ldr	r3, .L47
+ 251 005c 0122     		movs	r2, #1
+ 252 005e 1A61     		str	r2, [r3, #16]
+ 253 0060 2D4B     		ldr	r3, .L47+4
+ 254 0062 1B7A     		ldrb	r3, [r3, #8]	@ zero_extendqisi2
+ 255 0064 9342     		cmp	r3, r2
+ 256 0066 31D1     		bne	.L35
+ 257 0068 2B4B     		ldr	r3, .L47+4
+ 258 006a 9A69     		ldr	r2, [r3, #24]
+ 259 006c 013A     		subs	r2, r2, #1
+ 260 006e 9A61     		str	r2, [r3, #24]
+ 261 0070 9B69     		ldr	r3, [r3, #24]
+ 262 0072 FBB1     		cbz	r3, .L36
+ 263 0074 284C     		ldr	r4, .L47+4
+ 264 0076 6069     		ldr	r0, [r4, #20]
+ 265 0078 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 266 007c 6369     		ldr	r3, [r4, #20]
+ 267 007e 0133     		adds	r3, r3, #1
+ 268 0080 6361     		str	r3, [r4, #20]
+ 269 0082 6069     		ldr	r0, [r4, #20]
+ 270 0084 2169     		ldr	r1, [r4, #16]
+ 271 0086 FFF7FEFF 		bl	FLASH_PageErase
+ 272 008a 2DE0     		b	.L34
+ 273              	.L41:
+ 274 008c 5369     		ldr	r3, [r2, #20]
+ 275 008e 23F48023 		bic	r3, r3, #262144
+ 276 0092 5361     		str	r3, [r2, #20]
+ 277 0094 BEE7     		b	.L27
+ 278              	.L42:
+ 279 0096 204B     		ldr	r3, .L47+4
+ 280 0098 5869     		ldr	r0, [r3, #20]
+ 281 009a FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 282 009e D4E7     		b	.L31
+ 283              	.L43:
+ 284 00a0 1D4B     		ldr	r3, .L47+4
+ 285 00a2 1869     		ldr	r0, [r3, #16]
+ 286 00a4 FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 287 00a8 CFE7     		b	.L31
+ 288              	.L44:
+ 289 00aa 1B4B     		ldr	r3, .L47+4
+ 290 00ac D868     		ldr	r0, [r3, #12]
+ 291 00ae FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 292 00b2 CAE7     		b	.L31
+ 293              	.L36:
+ 294 00b4 184C     		ldr	r4, .L47+4
+ 295 00b6 4FF0FF33 		mov	r3, #-1
+ 296 00ba 6361     		str	r3, [r4, #20]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 6
+
+
+ 297 00bc 0023     		movs	r3, #0
+ 298 00be 2372     		strb	r3, [r4, #8]
+ 299 00c0 FFF7FEFF 		bl	FLASH_FlushCaches
+ 300 00c4 6069     		ldr	r0, [r4, #20]
+ 301 00c6 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 302 00ca 0DE0     		b	.L34
+ 303              	.L35:
+ 304 00cc FFF7FEFF 		bl	FLASH_FlushCaches
+ 305 00d0 114B     		ldr	r3, .L47+4
+ 306 00d2 1A7A     		ldrb	r2, [r3, #8]	@ zero_extendqisi2
+ 307 00d4 D3B2     		uxtb	r3, r2
+ 308 00d6 022A     		cmp	r2, #2
+ 309 00d8 12D0     		beq	.L45
+ 310 00da 033B     		subs	r3, r3, #3
+ 311 00dc DBB2     		uxtb	r3, r3
+ 312 00de 012B     		cmp	r3, #1
+ 313 00e0 13D9     		bls	.L46
+ 314              	.L38:
+ 315 00e2 0D4B     		ldr	r3, .L47+4
+ 316 00e4 0022     		movs	r2, #0
+ 317 00e6 1A72     		strb	r2, [r3, #8]
+ 318              	.L34:
+ 319 00e8 0B4B     		ldr	r3, .L47+4
+ 320 00ea 1B7A     		ldrb	r3, [r3, #8]	@ zero_extendqisi2
+ 321 00ec 3BB9     		cbnz	r3, .L26
+ 322 00ee 094A     		ldr	r2, .L47
+ 323 00f0 5369     		ldr	r3, [r2, #20]
+ 324 00f2 23F04073 		bic	r3, r3, #50331648
+ 325 00f6 5361     		str	r3, [r2, #20]
+ 326 00f8 074B     		ldr	r3, .L47+4
+ 327 00fa 0022     		movs	r2, #0
+ 328 00fc 1A70     		strb	r2, [r3]
+ 329              	.L26:
+ 330 00fe 10BD     		pop	{r4, pc}
+ 331              	.L45:
+ 332 0100 054B     		ldr	r3, .L47+4
+ 333 0102 1869     		ldr	r0, [r3, #16]
+ 334 0104 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 335 0108 EBE7     		b	.L38
+ 336              	.L46:
+ 337 010a 034B     		ldr	r3, .L47+4
+ 338 010c D868     		ldr	r0, [r3, #12]
+ 339 010e FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 340 0112 E6E7     		b	.L38
+ 341              	.L48:
+ 342              		.align	2
+ 343              	.L47:
+ 344 0114 00200240 		.word	1073881088
+ 345 0118 00000000 		.word	pFlash
+ 346 011c FAC30200 		.word	181242
+ 348              		.section	.text.HAL_FLASH_Unlock,"ax",%progbits
+ 349              		.align	1
+ 350              		.global	HAL_FLASH_Unlock
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 355              	HAL_FLASH_Unlock:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 7
+
+
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358              		@ link register save eliminated.
+ 359 0000 094B     		ldr	r3, .L54
+ 360 0002 5B69     		ldr	r3, [r3, #20]
+ 361 0004 002B     		cmp	r3, #0
+ 362 0006 01DB     		blt	.L53
+ 363 0008 0020     		movs	r0, #0
+ 364 000a 7047     		bx	lr
+ 365              	.L53:
+ 366 000c 064B     		ldr	r3, .L54
+ 367 000e 074A     		ldr	r2, .L54+4
+ 368 0010 9A60     		str	r2, [r3, #8]
+ 369 0012 02F18832 		add	r2, r2, #-2004318072
+ 370 0016 9A60     		str	r2, [r3, #8]
+ 371 0018 5B69     		ldr	r3, [r3, #20]
+ 372 001a 002B     		cmp	r3, #0
+ 373 001c 01DB     		blt	.L52
+ 374 001e 0020     		movs	r0, #0
+ 375 0020 7047     		bx	lr
+ 376              	.L52:
+ 377 0022 0120     		movs	r0, #1
+ 378 0024 7047     		bx	lr
+ 379              	.L55:
+ 380 0026 00BF     		.align	2
+ 381              	.L54:
+ 382 0028 00200240 		.word	1073881088
+ 383 002c 23016745 		.word	1164378403
+ 385              		.section	.text.HAL_FLASH_Lock,"ax",%progbits
+ 386              		.align	1
+ 387              		.global	HAL_FLASH_Lock
+ 388              		.syntax unified
+ 389              		.thumb
+ 390              		.thumb_func
+ 392              	HAL_FLASH_Lock:
+ 393              		@ args = 0, pretend = 0, frame = 0
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 395              		@ link register save eliminated.
+ 396 0000 034A     		ldr	r2, .L57
+ 397 0002 5369     		ldr	r3, [r2, #20]
+ 398 0004 43F00043 		orr	r3, r3, #-2147483648
+ 399 0008 5361     		str	r3, [r2, #20]
+ 400 000a 0020     		movs	r0, #0
+ 401 000c 7047     		bx	lr
+ 402              	.L58:
+ 403 000e 00BF     		.align	2
+ 404              	.L57:
+ 405 0010 00200240 		.word	1073881088
+ 407              		.section	.text.HAL_FLASH_OB_Unlock,"ax",%progbits
+ 408              		.align	1
+ 409              		.global	HAL_FLASH_OB_Unlock
+ 410              		.syntax unified
+ 411              		.thumb
+ 412              		.thumb_func
+ 414              	HAL_FLASH_OB_Unlock:
+ 415              		@ args = 0, pretend = 0, frame = 0
+ 416              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 8
+
+
+ 417              		@ link register save eliminated.
+ 418 0000 074B     		ldr	r3, .L62
+ 419 0002 5B69     		ldr	r3, [r3, #20]
+ 420 0004 13F0804F 		tst	r3, #1073741824
+ 421 0008 07D0     		beq	.L61
+ 422 000a 054B     		ldr	r3, .L62
+ 423 000c 054A     		ldr	r2, .L62+4
+ 424 000e DA60     		str	r2, [r3, #12]
+ 425 0010 02F14432 		add	r2, r2, #1145324612
+ 426 0014 DA60     		str	r2, [r3, #12]
+ 427 0016 0020     		movs	r0, #0
+ 428 0018 7047     		bx	lr
+ 429              	.L61:
+ 430 001a 0120     		movs	r0, #1
+ 431 001c 7047     		bx	lr
+ 432              	.L63:
+ 433 001e 00BF     		.align	2
+ 434              	.L62:
+ 435 0020 00200240 		.word	1073881088
+ 436 0024 3B2A1908 		.word	135866939
+ 438              		.section	.text.HAL_FLASH_OB_Lock,"ax",%progbits
+ 439              		.align	1
+ 440              		.global	HAL_FLASH_OB_Lock
+ 441              		.syntax unified
+ 442              		.thumb
+ 443              		.thumb_func
+ 445              	HAL_FLASH_OB_Lock:
+ 446              		@ args = 0, pretend = 0, frame = 0
+ 447              		@ frame_needed = 0, uses_anonymous_args = 0
+ 448              		@ link register save eliminated.
+ 449 0000 034A     		ldr	r2, .L65
+ 450 0002 5369     		ldr	r3, [r2, #20]
+ 451 0004 43F08043 		orr	r3, r3, #1073741824
+ 452 0008 5361     		str	r3, [r2, #20]
+ 453 000a 0020     		movs	r0, #0
+ 454 000c 7047     		bx	lr
+ 455              	.L66:
+ 456 000e 00BF     		.align	2
+ 457              	.L65:
+ 458 0010 00200240 		.word	1073881088
+ 460              		.section	.text.HAL_FLASH_GetError,"ax",%progbits
+ 461              		.align	1
+ 462              		.global	HAL_FLASH_GetError
+ 463              		.syntax unified
+ 464              		.thumb
+ 465              		.thumb_func
+ 467              	HAL_FLASH_GetError:
+ 468              		@ args = 0, pretend = 0, frame = 0
+ 469              		@ frame_needed = 0, uses_anonymous_args = 0
+ 470              		@ link register save eliminated.
+ 471 0000 014B     		ldr	r3, .L68
+ 472 0002 5868     		ldr	r0, [r3, #4]
+ 473 0004 7047     		bx	lr
+ 474              	.L69:
+ 475 0006 00BF     		.align	2
+ 476              	.L68:
+ 477 0008 00000000 		.word	pFlash
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 9
+
+
+ 479              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
+ 480              		.align	1
+ 481              		.global	FLASH_WaitForLastOperation
+ 482              		.syntax unified
+ 483              		.thumb
+ 484              		.thumb_func
+ 486              	FLASH_WaitForLastOperation:
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 489 0000 38B5     		push	{r3, r4, r5, lr}
+ 490 0002 0446     		mov	r4, r0
+ 491 0004 FFF7FEFF 		bl	HAL_GetTick
+ 492 0008 0546     		mov	r5, r0
+ 493              	.L72:
+ 494 000a 144B     		ldr	r3, .L82
+ 495 000c 1B69     		ldr	r3, [r3, #16]
+ 496 000e 13F4803F 		tst	r3, #65536
+ 497 0012 09D0     		beq	.L80
+ 498 0014 B4F1FF3F 		cmp	r4, #-1
+ 499 0018 F7D0     		beq	.L72
+ 500 001a FFF7FEFF 		bl	HAL_GetTick
+ 501 001e 401B     		subs	r0, r0, r5
+ 502 0020 A042     		cmp	r0, r4
+ 503 0022 F2D3     		bcc	.L72
+ 504 0024 0320     		movs	r0, #3
+ 505 0026 15E0     		b	.L73
+ 506              	.L80:
+ 507 0028 0C4B     		ldr	r3, .L82
+ 508 002a 1B69     		ldr	r3, [r3, #16]
+ 509 002c 0C4A     		ldr	r2, .L82+4
+ 510 002e 1340     		ands	r3, r3, r2
+ 511 0030 09D1     		bne	.L81
+ 512 0032 0A4B     		ldr	r3, .L82
+ 513 0034 1B69     		ldr	r3, [r3, #16]
+ 514 0036 13F0010F 		tst	r3, #1
+ 515 003a 0CD0     		beq	.L78
+ 516 003c 074B     		ldr	r3, .L82
+ 517 003e 0122     		movs	r2, #1
+ 518 0040 1A61     		str	r2, [r3, #16]
+ 519 0042 0020     		movs	r0, #0
+ 520 0044 06E0     		b	.L73
+ 521              	.L81:
+ 522 0046 0749     		ldr	r1, .L82+8
+ 523 0048 4A68     		ldr	r2, [r1, #4]
+ 524 004a 1A43     		orrs	r2, r2, r3
+ 525 004c 4A60     		str	r2, [r1, #4]
+ 526 004e 034A     		ldr	r2, .L82
+ 527 0050 1361     		str	r3, [r2, #16]
+ 528 0052 0120     		movs	r0, #1
+ 529              	.L73:
+ 530 0054 38BD     		pop	{r3, r4, r5, pc}
+ 531              	.L78:
+ 532 0056 0020     		movs	r0, #0
+ 533 0058 FCE7     		b	.L73
+ 534              	.L83:
+ 535 005a 00BF     		.align	2
+ 536              	.L82:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 10
+
+
+ 537 005c 00200240 		.word	1073881088
+ 538 0060 FAC30200 		.word	181242
+ 539 0064 00000000 		.word	pFlash
+ 541              		.section	.text.HAL_FLASH_Program,"ax",%progbits
+ 542              		.align	1
+ 543              		.global	HAL_FLASH_Program
+ 544              		.syntax unified
+ 545              		.thumb
+ 546              		.thumb_func
+ 548              	HAL_FLASH_Program:
+ 549              		@ args = 0, pretend = 0, frame = 0
+ 550              		@ frame_needed = 0, uses_anonymous_args = 0
+ 551 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 552 0004 1646     		mov	r6, r2
+ 553 0006 284A     		ldr	r2, .L98
+ 554 0008 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 555 000a 012A     		cmp	r2, #1
+ 556 000c 49D0     		beq	.L92
+ 557 000e 0446     		mov	r4, r0
+ 558 0010 0D46     		mov	r5, r1
+ 559 0012 9846     		mov	r8, r3
+ 560 0014 244B     		ldr	r3, .L98
+ 561 0016 0122     		movs	r2, #1
+ 562 0018 1A70     		strb	r2, [r3]
+ 563 001a 4CF25030 		movw	r0, #50000
+ 564 001e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 565 0022 0746     		mov	r7, r0
+ 566 0024 08BB     		cbnz	r0, .L86
+ 567 0026 204B     		ldr	r3, .L98
+ 568 0028 0022     		movs	r2, #0
+ 569 002a 5A60     		str	r2, [r3, #4]
+ 570 002c 1F4B     		ldr	r3, .L98+4
+ 571 002e 1B68     		ldr	r3, [r3]
+ 572 0030 13F4806F 		tst	r3, #1024
+ 573 0034 1FD0     		beq	.L87
+ 574 0036 1D4A     		ldr	r2, .L98+4
+ 575 0038 1368     		ldr	r3, [r2]
+ 576 003a 23F48063 		bic	r3, r3, #1024
+ 577 003e 1360     		str	r3, [r2]
+ 578 0040 194B     		ldr	r3, .L98
+ 579 0042 0222     		movs	r2, #2
+ 580 0044 1A77     		strb	r2, [r3, #28]
+ 581              	.L88:
+ 582 0046 D4B1     		cbz	r4, .L96
+ 583 0048 631E     		subs	r3, r4, #1
+ 584 004a 012B     		cmp	r3, #1
+ 585 004c 1ED9     		bls	.L97
+ 586 004e 0024     		movs	r4, #0
+ 587              	.L90:
+ 588 0050 4CF25030 		movw	r0, #50000
+ 589 0054 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 590 0058 0746     		mov	r7, r0
+ 591 005a 24B1     		cbz	r4, .L91
+ 592 005c 134A     		ldr	r2, .L98+4
+ 593 005e 5369     		ldr	r3, [r2, #20]
+ 594 0060 23EA0403 		bic	r3, r3, r4
+ 595 0064 5361     		str	r3, [r2, #20]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 11
+
+
+ 596              	.L91:
+ 597 0066 FFF7FEFF 		bl	FLASH_FlushCaches
+ 598              	.L86:
+ 599 006a 0F4B     		ldr	r3, .L98
+ 600 006c 0022     		movs	r2, #0
+ 601 006e 1A70     		strb	r2, [r3]
+ 602              	.L85:
+ 603 0070 3846     		mov	r0, r7
+ 604 0072 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 605              	.L87:
+ 606 0076 0C4B     		ldr	r3, .L98
+ 607 0078 0022     		movs	r2, #0
+ 608 007a 1A77     		strb	r2, [r3, #28]
+ 609 007c E3E7     		b	.L88
+ 610              	.L96:
+ 611 007e 3246     		mov	r2, r6
+ 612 0080 4346     		mov	r3, r8
+ 613 0082 2846     		mov	r0, r5
+ 614 0084 FFF7FEFF 		bl	FLASH_Program_DoubleWord
+ 615 0088 0124     		movs	r4, #1
+ 616 008a E1E7     		b	.L90
+ 617              	.L97:
+ 618 008c 3146     		mov	r1, r6
+ 619 008e 2846     		mov	r0, r5
+ 620 0090 FFF7FEFF 		bl	FLASH_Program_Fast
+ 621 0094 022C     		cmp	r4, #2
+ 622 0096 01D0     		beq	.L94
+ 623 0098 0024     		movs	r4, #0
+ 624 009a D9E7     		b	.L90
+ 625              	.L94:
+ 626 009c 4FF48024 		mov	r4, #262144
+ 627 00a0 D6E7     		b	.L90
+ 628              	.L92:
+ 629 00a2 0227     		movs	r7, #2
+ 630 00a4 E4E7     		b	.L85
+ 631              	.L99:
+ 632 00a6 00BF     		.align	2
+ 633              	.L98:
+ 634 00a8 00000000 		.word	pFlash
+ 635 00ac 00200240 		.word	1073881088
+ 637              		.section	.text.HAL_FLASH_OB_Launch,"ax",%progbits
+ 638              		.align	1
+ 639              		.global	HAL_FLASH_OB_Launch
+ 640              		.syntax unified
+ 641              		.thumb
+ 642              		.thumb_func
+ 644              	HAL_FLASH_OB_Launch:
+ 645              		@ args = 0, pretend = 0, frame = 0
+ 646              		@ frame_needed = 0, uses_anonymous_args = 0
+ 647 0000 08B5     		push	{r3, lr}
+ 648 0002 054A     		ldr	r2, .L102
+ 649 0004 5369     		ldr	r3, [r2, #20]
+ 650 0006 43F00063 		orr	r3, r3, #134217728
+ 651 000a 5361     		str	r3, [r2, #20]
+ 652 000c 4CF25030 		movw	r0, #50000
+ 653 0010 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 654 0014 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 12
+
+
+ 655              	.L103:
+ 656 0016 00BF     		.align	2
+ 657              	.L102:
+ 658 0018 00200240 		.word	1073881088
+ 660              		.global	pFlash
+ 661              		.section	.data.pFlash,"aw"
+ 662              		.align	2
+ 665              	pFlash:
+ 666 0000 00       		.byte	0
+ 667 0001 000000   		.space	3
+ 668 0004 00000000 		.word	0
+ 669 0008 00       		.byte	0
+ 670 0009 000000   		.space	3
+ 671 000c 00000000 		.word	0
+ 672 0010 01000000 		.word	1
+ 673 0014 00000000 		.word	0
+ 674 0018 00000000 		.word	0
+ 675 001c 00       		.byte	0
+ 676 001d 000000   		.space	3
+ 677              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_flash.c
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:18     .text.FLASH_Program_DoubleWord:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:23     .text.FLASH_Program_DoubleWord:00000000 FLASH_Program_DoubleWord
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:45     .text.FLASH_Program_DoubleWord:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:48     .text.FLASH_Program_Fast:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:53     .text.FLASH_Program_Fast:00000000 FLASH_Program_Fast
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:87     .text.FLASH_Program_Fast:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:90     .text.HAL_FLASH_Program_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:96     .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:167    .text.HAL_FLASH_Program_IT:0000007c $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:665    .data.pFlash:00000000 pFlash
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:171    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:177    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:184    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:190    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:197    .text.HAL_FLASH_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:203    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:344    .text.HAL_FLASH_IRQHandler:00000114 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:349    .text.HAL_FLASH_Unlock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:355    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:382    .text.HAL_FLASH_Unlock:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:386    .text.HAL_FLASH_Lock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:392    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:405    .text.HAL_FLASH_Lock:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:408    .text.HAL_FLASH_OB_Unlock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:414    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:435    .text.HAL_FLASH_OB_Unlock:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:439    .text.HAL_FLASH_OB_Lock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:445    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:458    .text.HAL_FLASH_OB_Lock:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:461    .text.HAL_FLASH_GetError:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:467    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:477    .text.HAL_FLASH_GetError:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:480    .text.FLASH_WaitForLastOperation:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:486    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:537    .text.FLASH_WaitForLastOperation:0000005c $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:542    .text.HAL_FLASH_Program:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:548    .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:634    .text.HAL_FLASH_Program:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:638    .text.HAL_FLASH_OB_Launch:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:644    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:658    .text.HAL_FLASH_OB_Launch:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:662    .data.pFlash:00000000 $d
+
+UNDEFINED SYMBOLS
+FLASH_FlushCaches
+FLASH_PageErase
+HAL_GetTick

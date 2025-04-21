@@ -1,0 +1,257 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"onewire.c"
+  16              		.text
+  17              		.section	.text.SetBaudrate,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	SetBaudrate:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26 0000 10B5     		push	{r4, lr}
+  27 0002 0446     		mov	r4, r0
+  28 0004 4160     		str	r1, [r0, #4]
+  29 0006 0268     		ldr	r2, [r0]
+  30 0008 304B     		ldr	r3, .L9
+  31 000a 9A42     		cmp	r2, r3
+  32 000c 30D0     		beq	.L7
+  33 000e FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+  34 0012 0246     		mov	r2, r0
+  35              	.L3:
+  36 0014 E369     		ldr	r3, [r4, #28]
+  37 0016 B3F5004F 		cmp	r3, #32768
+  38 001a 2DD0     		beq	.L8
+  39 001c 0021     		movs	r1, #0
+  40 001e 9018     		adds	r0, r2, r2
+  41 0020 4941     		adcs	r1, r1, r1
+  42 0022 8018     		adds	r0, r0, r2
+  43 0024 41F10001 		adc	r1, r1, #0
+  44 0028 C900     		lsls	r1, r1, #3
+  45 002a 41EA5071 		orr	r1, r1, r0, lsr #29
+  46 002e C000     		lsls	r0, r0, #3
+  47 0030 8018     		adds	r0, r0, r2
+  48 0032 6368     		ldr	r3, [r4, #4]
+  49 0034 4FEA8302 		lsl	r2, r3, #2
+  50 0038 4FEA9373 		lsr	r3, r3, #30
+  51 003c 41F10001 		adc	r1, r1, #0
+  52 0040 FFF7FEFF 		bl	__aeabi_uldivmod
+  53 0044 224A     		ldr	r2, .L9+4
+  54 0046 A2FB0031 		umull	r3, r1, r2, r0
+  55 004a 4909     		lsrs	r1, r1, #5
+  56 004c 6423     		movs	r3, #100
+  57 004e 03FB1103 		mls	r3, r3, r1, r0
+  58 0052 1B01     		lsls	r3, r3, #4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s 			page 2
+
+
+  59 0054 3233     		adds	r3, r3, #50
+  60 0056 A2FB0323 		umull	r2, r3, r2, r3
+  61 005a 5B09     		lsrs	r3, r3, #5
+  62 005c 03F0F002 		and	r2, r3, #240
+  63 0060 02EB0112 		add	r2, r2, r1, lsl #4
+  64 0064 03F00F03 		and	r3, r3, #15
+  65 0068 2168     		ldr	r1, [r4]
+  66 006a 1344     		add	r3, r3, r2
+  67 006c CB60     		str	r3, [r1, #12]
+  68              	.L1:
+  69 006e 10BD     		pop	{r4, pc}
+  70              	.L7:
+  71 0070 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+  72 0074 0246     		mov	r2, r0
+  73 0076 CDE7     		b	.L3
+  74              	.L8:
+  75 0078 0023     		movs	r3, #0
+  76 007a 9018     		adds	r0, r2, r2
+  77 007c 43EB0301 		adc	r1, r3, r3
+  78 0080 8018     		adds	r0, r0, r2
+  79 0082 41F10001 		adc	r1, r1, #0
+  80 0086 C900     		lsls	r1, r1, #3
+  81 0088 41EA5071 		orr	r1, r1, r0, lsr #29
+  82 008c C000     		lsls	r0, r0, #3
+  83 008e 8018     		adds	r0, r0, r2
+  84 0090 41F10001 		adc	r1, r1, #0
+  85 0094 6268     		ldr	r2, [r4, #4]
+  86 0096 9218     		adds	r2, r2, r2
+  87 0098 5B41     		adcs	r3, r3, r3
+  88 009a FFF7FEFF 		bl	__aeabi_uldivmod
+  89 009e 0C4A     		ldr	r2, .L9+4
+  90 00a0 A2FB0031 		umull	r3, r1, r2, r0
+  91 00a4 4909     		lsrs	r1, r1, #5
+  92 00a6 6423     		movs	r3, #100
+  93 00a8 03FB1103 		mls	r3, r3, r1, r0
+  94 00ac DB00     		lsls	r3, r3, #3
+  95 00ae 3233     		adds	r3, r3, #50
+  96 00b0 A2FB0323 		umull	r2, r3, r2, r3
+  97 00b4 5B09     		lsrs	r3, r3, #5
+  98 00b6 5A00     		lsls	r2, r3, #1
+  99 00b8 02F4F872 		and	r2, r2, #496
+ 100 00bc 02EB0112 		add	r2, r2, r1, lsl #4
+ 101 00c0 03F00703 		and	r3, r3, #7
+ 102 00c4 2168     		ldr	r1, [r4]
+ 103 00c6 1344     		add	r3, r3, r2
+ 104 00c8 CB60     		str	r3, [r1, #12]
+ 105 00ca D0E7     		b	.L1
+ 106              	.L10:
+ 107              		.align	2
+ 108              	.L9:
+ 109 00cc 00380140 		.word	1073821696
+ 110 00d0 1F85EB51 		.word	1374389535
+ 112              		.section	.text.OneWire_ProcessBit,"ax",%progbits
+ 113              		.align	1
+ 114              		.global	OneWire_ProcessBit
+ 115              		.syntax unified
+ 116              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s 			page 3
+
+
+ 117              		.thumb_func
+ 119              	OneWire_ProcessBit:
+ 120              		@ args = 0, pretend = 0, frame = 8
+ 121              		@ frame_needed = 0, uses_anonymous_args = 0
+ 122 0000 10B5     		push	{r4, lr}
+ 123 0002 82B0     		sub	sp, sp, #8
+ 124 0004 0446     		mov	r4, r0
+ 125 0006 FF23     		movs	r3, #255
+ 126 0008 8DF80730 		strb	r3, [sp, #7]
+ 127 000c 0023     		movs	r3, #0
+ 128 000e 8DF80630 		strb	r3, [sp, #6]
+ 129 0012 09B9     		cbnz	r1, .L12
+ 130 0014 8DF80730 		strb	r3, [sp, #7]
+ 131              	.L12:
+ 132 0018 0A23     		movs	r3, #10
+ 133 001a 0122     		movs	r2, #1
+ 134 001c 0DF10701 		add	r1, sp, #7
+ 135 0020 2046     		mov	r0, r4
+ 136 0022 FFF7FEFF 		bl	HAL_UART_Transmit
+ 137 0026 0A23     		movs	r3, #10
+ 138 0028 0122     		movs	r2, #1
+ 139 002a 0DF10601 		add	r1, sp, #6
+ 140 002e 2046     		mov	r0, r4
+ 141 0030 FFF7FEFF 		bl	HAL_UART_Receive
+ 142 0034 9DF80600 		ldrb	r0, [sp, #6]	@ zero_extendqisi2
+ 143 0038 02B0     		add	sp, sp, #8
+ 144              		@ sp needed
+ 145 003a 10BD     		pop	{r4, pc}
+ 147              		.section	.text.OneWire_ProcessByte,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	OneWire_ProcessByte
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 154              	OneWire_ProcessByte:
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 158 0004 0746     		mov	r7, r0
+ 159 0006 0E46     		mov	r6, r1
+ 160 0008 0024     		movs	r4, #0
+ 161 000a 2546     		mov	r5, r4
+ 162 000c 06E0     		b	.L15
+ 163              	.L18:
+ 164 000e 0123     		movs	r3, #1
+ 165              	.L16:
+ 166 0010 03FA08F3 		lsl	r3, r3, r8
+ 167 0014 2B43     		orrs	r3, r3, r5
+ 168 0016 DDB2     		uxtb	r5, r3
+ 169 0018 0134     		adds	r4, r4, #1
+ 170 001a E4B2     		uxtb	r4, r4
+ 171              	.L15:
+ 172 001c 072C     		cmp	r4, #7
+ 173 001e 0BD8     		bhi	.L20
+ 174 0020 A046     		mov	r8, r4
+ 175 0022 46FA04F1 		asr	r1, r6, r4
+ 176 0026 01F00101 		and	r1, r1, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s 			page 4
+
+
+ 177 002a 3846     		mov	r0, r7
+ 178 002c FFF7FEFF 		bl	OneWire_ProcessBit
+ 179 0030 FF28     		cmp	r0, #255
+ 180 0032 ECD0     		beq	.L18
+ 181 0034 0023     		movs	r3, #0
+ 182 0036 EBE7     		b	.L16
+ 183              	.L20:
+ 184 0038 2846     		mov	r0, r5
+ 185 003a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 187              		.section	.text.OneWire_Reset,"ax",%progbits
+ 188              		.align	1
+ 189              		.global	OneWire_Reset
+ 190              		.syntax unified
+ 191              		.thumb
+ 192              		.thumb_func
+ 194              	OneWire_Reset:
+ 195              		@ args = 0, pretend = 0, frame = 8
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197 0000 10B5     		push	{r4, lr}
+ 198 0002 82B0     		sub	sp, sp, #8
+ 199 0004 0446     		mov	r4, r0
+ 200 0006 F023     		movs	r3, #240
+ 201 0008 8DF80730 		strb	r3, [sp, #7]
+ 202 000c 0023     		movs	r3, #0
+ 203 000e 8DF80630 		strb	r3, [sp, #6]
+ 204 0012 4FF41651 		mov	r1, #9600
+ 205 0016 FFF7FEFF 		bl	SetBaudrate
+ 206 001a 0A23     		movs	r3, #10
+ 207 001c 0122     		movs	r2, #1
+ 208 001e 0DF10701 		add	r1, sp, #7
+ 209 0022 2046     		mov	r0, r4
+ 210 0024 FFF7FEFF 		bl	HAL_UART_Transmit
+ 211 0028 0A23     		movs	r3, #10
+ 212 002a 0122     		movs	r2, #1
+ 213 002c 0DF10601 		add	r1, sp, #6
+ 214 0030 2046     		mov	r0, r4
+ 215 0032 FFF7FEFF 		bl	HAL_UART_Receive
+ 216 0036 4FF4E131 		mov	r1, #115200
+ 217 003a 2046     		mov	r0, r4
+ 218 003c FFF7FEFF 		bl	SetBaudrate
+ 219 0040 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
+ 220 0044 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 221 0048 9A42     		cmp	r2, r3
+ 222 004a 02D0     		beq	.L23
+ 223 004c 0020     		movs	r0, #0
+ 224              	.L22:
+ 225 004e 02B0     		add	sp, sp, #8
+ 226              		@ sp needed
+ 227 0050 10BD     		pop	{r4, pc}
+ 228              	.L23:
+ 229 0052 0120     		movs	r0, #1
+ 230 0054 FBE7     		b	.L22
+ 232              		.global	__aeabi_uldivmod
+ 233              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 onewire.c
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:18     .text.SetBaudrate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:23     .text.SetBaudrate:00000000 SetBaudrate
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:109    .text.SetBaudrate:000000cc $d
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:113    .text.OneWire_ProcessBit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:119    .text.OneWire_ProcessBit:00000000 OneWire_ProcessBit
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:148    .text.OneWire_ProcessByte:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:154    .text.OneWire_ProcessByte:00000000 OneWire_ProcessByte
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:188    .text.OneWire_Reset:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccn7aHRT.s:194    .text.OneWire_Reset:00000000 OneWire_Reset
+
+UNDEFINED SYMBOLS
+HAL_RCC_GetPCLK1Freq
+__aeabi_uldivmod
+HAL_UART_Transmit
+HAL_UART_Receive

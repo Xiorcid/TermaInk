@@ -1,7 +1,9 @@
 #pragma once
 
 #include "stdint.h"
-#define STORAGE_BLK_NBR                  48  // enter twice the size of the RAM that you want to use
-#define STORAGE_BLK_SIZ                  0x200
 
-uint8_t USBDisk_buffer[STORAGE_BLK_NBR*STORAGE_BLK_SIZ];
+extern int16_t USBDisk[4080];
+
+void UDISK_push(uint16_t temp, uint32_t timestamp);
+
+int16_t UDISK_get(uint16_t i);

@@ -1,0 +1,782 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal.c"
+  16              		.text
+  17              		.section	.text.HAL_MspInit,"ax",%progbits
+  18              		.align	1
+  19              		.weak	HAL_MspInit
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_MspInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 7047     		bx	lr
+  30              		.section	.text.HAL_MspDeInit,"ax",%progbits
+  31              		.align	1
+  32              		.weak	HAL_MspDeInit
+  33              		.syntax unified
+  34              		.thumb
+  35              		.thumb_func
+  37              	HAL_MspDeInit:
+  38              		@ args = 0, pretend = 0, frame = 0
+  39              		@ frame_needed = 0, uses_anonymous_args = 0
+  40              		@ link register save eliminated.
+  41 0000 7047     		bx	lr
+  43              		.section	.text.HAL_DeInit,"ax",%progbits
+  44              		.align	1
+  45              		.global	HAL_DeInit
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  50              	HAL_DeInit:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53 0000 10B5     		push	{r4, lr}
+  54 0002 0A4B     		ldr	r3, .L5
+  55 0004 4FF0FF32 		mov	r2, #-1
+  56 0008 9A63     		str	r2, [r3, #56]
+  57 000a DA63     		str	r2, [r3, #60]
+  58 000c 0024     		movs	r4, #0
+  59 000e 9C63     		str	r4, [r3, #56]
+  60 0010 DC63     		str	r4, [r3, #60]
+  61 0012 1A64     		str	r2, [r3, #64]
+  62 0014 1C64     		str	r4, [r3, #64]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 2
+
+
+  63 0016 9A62     		str	r2, [r3, #40]
+  64 0018 9C62     		str	r4, [r3, #40]
+  65 001a DA62     		str	r2, [r3, #44]
+  66 001c DC62     		str	r4, [r3, #44]
+  67 001e 1A63     		str	r2, [r3, #48]
+  68 0020 1C63     		str	r4, [r3, #48]
+  69 0022 FFF7FEFF 		bl	HAL_MspDeInit
+  70 0026 2046     		mov	r0, r4
+  71 0028 10BD     		pop	{r4, pc}
+  72              	.L6:
+  73 002a 00BF     		.align	2
+  74              	.L5:
+  75 002c 00100240 		.word	1073876992
+  77              		.section	.text.HAL_InitTick,"ax",%progbits
+  78              		.align	1
+  79              		.weak	HAL_InitTick
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  84              	HAL_InitTick:
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87 0000 104B     		ldr	r3, .L18
+  88 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  89 0004 0BB9     		cbnz	r3, .L16
+  90 0006 0120     		movs	r0, #1
+  91 0008 7047     		bx	lr
+  92              	.L16:
+  93 000a 10B5     		push	{r4, lr}
+  94 000c 0446     		mov	r4, r0
+  95 000e 4FF47A70 		mov	r0, #1000
+  96 0012 B0FBF3F3 		udiv	r3, r0, r3
+  97 0016 0C4A     		ldr	r2, .L18+4
+  98 0018 1068     		ldr	r0, [r2]
+  99 001a B0FBF3F0 		udiv	r0, r0, r3
+ 100 001e FFF7FEFF 		bl	HAL_SYSTICK_Config
+ 101 0022 68B9     		cbnz	r0, .L10
+ 102 0024 0F2C     		cmp	r4, #15
+ 103 0026 01D9     		bls	.L17
+ 104 0028 0120     		movs	r0, #1
+ 105 002a 0AE0     		b	.L8
+ 106              	.L17:
+ 107 002c 0022     		movs	r2, #0
+ 108 002e 2146     		mov	r1, r4
+ 109 0030 4FF0FF30 		mov	r0, #-1
+ 110 0034 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 111 0038 044B     		ldr	r3, .L18+8
+ 112 003a 1C60     		str	r4, [r3]
+ 113 003c 0020     		movs	r0, #0
+ 114 003e 00E0     		b	.L8
+ 115              	.L10:
+ 116 0040 0120     		movs	r0, #1
+ 117              	.L8:
+ 118 0042 10BD     		pop	{r4, pc}
+ 119              	.L19:
+ 120              		.align	2
+ 121              	.L18:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 3
+
+
+ 122 0044 00000000 		.word	uwTickFreq
+ 123 0048 00000000 		.word	SystemCoreClock
+ 124 004c 00000000 		.word	uwTickPrio
+ 126              		.section	.text.HAL_Init,"ax",%progbits
+ 127              		.align	1
+ 128              		.global	HAL_Init
+ 129              		.syntax unified
+ 130              		.thumb
+ 131              		.thumb_func
+ 133              	HAL_Init:
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 10B5     		push	{r4, lr}
+ 137 0002 094A     		ldr	r2, .L25
+ 138 0004 1368     		ldr	r3, [r2]
+ 139 0006 43F48073 		orr	r3, r3, #256
+ 140 000a 1360     		str	r3, [r2]
+ 141 000c 0320     		movs	r0, #3
+ 142 000e FFF7FEFF 		bl	HAL_NVIC_SetPriorityGrouping
+ 143 0012 0F20     		movs	r0, #15
+ 144 0014 FFF7FEFF 		bl	HAL_InitTick
+ 145 0018 10B1     		cbz	r0, .L24
+ 146 001a 0124     		movs	r4, #1
+ 147              	.L21:
+ 148 001c 2046     		mov	r0, r4
+ 149 001e 10BD     		pop	{r4, pc}
+ 150              	.L24:
+ 151 0020 0446     		mov	r4, r0
+ 152 0022 FFF7FEFF 		bl	HAL_MspInit
+ 153 0026 F9E7     		b	.L21
+ 154              	.L26:
+ 155              		.align	2
+ 156              	.L25:
+ 157 0028 00200240 		.word	1073881088
+ 159              		.section	.text.HAL_IncTick,"ax",%progbits
+ 160              		.align	1
+ 161              		.weak	HAL_IncTick
+ 162              		.syntax unified
+ 163              		.thumb
+ 164              		.thumb_func
+ 166              	HAL_IncTick:
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ 169              		@ link register save eliminated.
+ 170 0000 034B     		ldr	r3, .L28
+ 171 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 172 0004 034A     		ldr	r2, .L28+4
+ 173 0006 1168     		ldr	r1, [r2]
+ 174 0008 0B44     		add	r3, r3, r1
+ 175 000a 1360     		str	r3, [r2]
+ 176 000c 7047     		bx	lr
+ 177              	.L29:
+ 178 000e 00BF     		.align	2
+ 179              	.L28:
+ 180 0010 00000000 		.word	uwTickFreq
+ 181 0014 00000000 		.word	uwTick
+ 183              		.section	.text.HAL_GetTick,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 4
+
+
+ 184              		.align	1
+ 185              		.weak	HAL_GetTick
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 190              	HAL_GetTick:
+ 191              		@ args = 0, pretend = 0, frame = 0
+ 192              		@ frame_needed = 0, uses_anonymous_args = 0
+ 193              		@ link register save eliminated.
+ 194 0000 014B     		ldr	r3, .L31
+ 195 0002 1868     		ldr	r0, [r3]
+ 196 0004 7047     		bx	lr
+ 197              	.L32:
+ 198 0006 00BF     		.align	2
+ 199              	.L31:
+ 200 0008 00000000 		.word	uwTick
+ 202              		.section	.text.HAL_GetTickPrio,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	HAL_GetTickPrio
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 209              	HAL_GetTickPrio:
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 0, uses_anonymous_args = 0
+ 212              		@ link register save eliminated.
+ 213 0000 014B     		ldr	r3, .L34
+ 214 0002 1868     		ldr	r0, [r3]
+ 215 0004 7047     		bx	lr
+ 216              	.L35:
+ 217 0006 00BF     		.align	2
+ 218              	.L34:
+ 219 0008 00000000 		.word	uwTickPrio
+ 221              		.section	.text.HAL_SetTickFreq,"ax",%progbits
+ 222              		.align	1
+ 223              		.global	HAL_SetTickFreq
+ 224              		.syntax unified
+ 225              		.thumb
+ 226              		.thumb_func
+ 228              	HAL_SetTickFreq:
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 0, uses_anonymous_args = 0
+ 231 0000 10B5     		push	{r4, lr}
+ 232 0002 084B     		ldr	r3, .L41
+ 233 0004 1C78     		ldrb	r4, [r3]	@ zero_extendqisi2
+ 234 0006 8442     		cmp	r4, r0
+ 235 0008 01D1     		bne	.L40
+ 236 000a 0020     		movs	r0, #0
+ 237              	.L37:
+ 238 000c 10BD     		pop	{r4, pc}
+ 239              	.L40:
+ 240 000e 1870     		strb	r0, [r3]
+ 241 0010 054B     		ldr	r3, .L41+4
+ 242 0012 1868     		ldr	r0, [r3]
+ 243 0014 FFF7FEFF 		bl	HAL_InitTick
+ 244 0018 0028     		cmp	r0, #0
+ 245 001a F7D0     		beq	.L37
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 5
+
+
+ 246 001c 014B     		ldr	r3, .L41
+ 247 001e 1C70     		strb	r4, [r3]
+ 248 0020 F4E7     		b	.L37
+ 249              	.L42:
+ 250 0022 00BF     		.align	2
+ 251              	.L41:
+ 252 0024 00000000 		.word	uwTickFreq
+ 253 0028 00000000 		.word	uwTickPrio
+ 255              		.section	.text.HAL_GetTickFreq,"ax",%progbits
+ 256              		.align	1
+ 257              		.global	HAL_GetTickFreq
+ 258              		.syntax unified
+ 259              		.thumb
+ 260              		.thumb_func
+ 262              	HAL_GetTickFreq:
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265              		@ link register save eliminated.
+ 266 0000 014B     		ldr	r3, .L44
+ 267 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 268 0004 7047     		bx	lr
+ 269              	.L45:
+ 270 0006 00BF     		.align	2
+ 271              	.L44:
+ 272 0008 00000000 		.word	uwTickFreq
+ 274              		.section	.text.HAL_Delay,"ax",%progbits
+ 275              		.align	1
+ 276              		.weak	HAL_Delay
+ 277              		.syntax unified
+ 278              		.thumb
+ 279              		.thumb_func
+ 281              	HAL_Delay:
+ 282              		@ args = 0, pretend = 0, frame = 0
+ 283              		@ frame_needed = 0, uses_anonymous_args = 0
+ 284 0000 38B5     		push	{r3, r4, r5, lr}
+ 285 0002 0446     		mov	r4, r0
+ 286 0004 FFF7FEFF 		bl	HAL_GetTick
+ 287 0008 0546     		mov	r5, r0
+ 288 000a B4F1FF3F 		cmp	r4, #-1
+ 289 000e 02D0     		beq	.L48
+ 290 0010 044B     		ldr	r3, .L50
+ 291 0012 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 292 0014 1C44     		add	r4, r4, r3
+ 293              	.L48:
+ 294 0016 FFF7FEFF 		bl	HAL_GetTick
+ 295 001a 401B     		subs	r0, r0, r5
+ 296 001c A042     		cmp	r0, r4
+ 297 001e FAD3     		bcc	.L48
+ 298 0020 38BD     		pop	{r3, r4, r5, pc}
+ 299              	.L51:
+ 300 0022 00BF     		.align	2
+ 301              	.L50:
+ 302 0024 00000000 		.word	uwTickFreq
+ 304              		.section	.text.HAL_SuspendTick,"ax",%progbits
+ 305              		.align	1
+ 306              		.weak	HAL_SuspendTick
+ 307              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 6
+
+
+ 308              		.thumb
+ 309              		.thumb_func
+ 311              	HAL_SuspendTick:
+ 312              		@ args = 0, pretend = 0, frame = 0
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+ 314              		@ link register save eliminated.
+ 315 0000 4FF0E022 		mov	r2, #-536813568
+ 316 0004 1369     		ldr	r3, [r2, #16]
+ 317 0006 23F00203 		bic	r3, r3, #2
+ 318 000a 1361     		str	r3, [r2, #16]
+ 319 000c 7047     		bx	lr
+ 321              		.section	.text.HAL_ResumeTick,"ax",%progbits
+ 322              		.align	1
+ 323              		.weak	HAL_ResumeTick
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 328              	HAL_ResumeTick:
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 331              		@ link register save eliminated.
+ 332 0000 4FF0E022 		mov	r2, #-536813568
+ 333 0004 1369     		ldr	r3, [r2, #16]
+ 334 0006 43F00203 		orr	r3, r3, #2
+ 335 000a 1361     		str	r3, [r2, #16]
+ 336 000c 7047     		bx	lr
+ 338              		.section	.text.HAL_GetHalVersion,"ax",%progbits
+ 339              		.align	1
+ 340              		.global	HAL_GetHalVersion
+ 341              		.syntax unified
+ 342              		.thumb
+ 343              		.thumb_func
+ 345              	HAL_GetHalVersion:
+ 346              		@ args = 0, pretend = 0, frame = 0
+ 347              		@ frame_needed = 0, uses_anonymous_args = 0
+ 348              		@ link register save eliminated.
+ 349 0000 0048     		ldr	r0, .L55
+ 350 0002 7047     		bx	lr
+ 351              	.L56:
+ 352              		.align	2
+ 353              	.L55:
+ 354 0004 00050D01 		.word	17630464
+ 356              		.section	.text.HAL_GetREVID,"ax",%progbits
+ 357              		.align	1
+ 358              		.global	HAL_GetREVID
+ 359              		.syntax unified
+ 360              		.thumb
+ 361              		.thumb_func
+ 363              	HAL_GetREVID:
+ 364              		@ args = 0, pretend = 0, frame = 0
+ 365              		@ frame_needed = 0, uses_anonymous_args = 0
+ 366              		@ link register save eliminated.
+ 367 0000 014B     		ldr	r3, .L58
+ 368 0002 1868     		ldr	r0, [r3]
+ 369 0004 000C     		lsrs	r0, r0, #16
+ 370 0006 7047     		bx	lr
+ 371              	.L59:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 7
+
+
+ 372              		.align	2
+ 373              	.L58:
+ 374 0008 002004E0 		.word	-536600576
+ 376              		.section	.text.HAL_GetDEVID,"ax",%progbits
+ 377              		.align	1
+ 378              		.global	HAL_GetDEVID
+ 379              		.syntax unified
+ 380              		.thumb
+ 381              		.thumb_func
+ 383              	HAL_GetDEVID:
+ 384              		@ args = 0, pretend = 0, frame = 0
+ 385              		@ frame_needed = 0, uses_anonymous_args = 0
+ 386              		@ link register save eliminated.
+ 387 0000 024B     		ldr	r3, .L61
+ 388 0002 1868     		ldr	r0, [r3]
+ 389 0004 C0F30B00 		ubfx	r0, r0, #0, #12
+ 390 0008 7047     		bx	lr
+ 391              	.L62:
+ 392 000a 00BF     		.align	2
+ 393              	.L61:
+ 394 000c 002004E0 		.word	-536600576
+ 396              		.section	.text.HAL_GetUIDw0,"ax",%progbits
+ 397              		.align	1
+ 398              		.global	HAL_GetUIDw0
+ 399              		.syntax unified
+ 400              		.thumb
+ 401              		.thumb_func
+ 403              	HAL_GetUIDw0:
+ 404              		@ args = 0, pretend = 0, frame = 0
+ 405              		@ frame_needed = 0, uses_anonymous_args = 0
+ 406              		@ link register save eliminated.
+ 407 0000 014B     		ldr	r3, .L64
+ 408 0002 D3F89005 		ldr	r0, [r3, #1424]
+ 409 0006 7047     		bx	lr
+ 410              	.L65:
+ 411              		.align	2
+ 412              	.L64:
+ 413 0008 0070FF1F 		.word	536834048
+ 415              		.section	.text.HAL_GetUIDw1,"ax",%progbits
+ 416              		.align	1
+ 417              		.global	HAL_GetUIDw1
+ 418              		.syntax unified
+ 419              		.thumb
+ 420              		.thumb_func
+ 422              	HAL_GetUIDw1:
+ 423              		@ args = 0, pretend = 0, frame = 0
+ 424              		@ frame_needed = 0, uses_anonymous_args = 0
+ 425              		@ link register save eliminated.
+ 426 0000 014B     		ldr	r3, .L67
+ 427 0002 D3F89405 		ldr	r0, [r3, #1428]
+ 428 0006 7047     		bx	lr
+ 429              	.L68:
+ 430              		.align	2
+ 431              	.L67:
+ 432 0008 0070FF1F 		.word	536834048
+ 434              		.section	.text.HAL_GetUIDw2,"ax",%progbits
+ 435              		.align	1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 8
+
+
+ 436              		.global	HAL_GetUIDw2
+ 437              		.syntax unified
+ 438              		.thumb
+ 439              		.thumb_func
+ 441              	HAL_GetUIDw2:
+ 442              		@ args = 0, pretend = 0, frame = 0
+ 443              		@ frame_needed = 0, uses_anonymous_args = 0
+ 444              		@ link register save eliminated.
+ 445 0000 014B     		ldr	r3, .L70
+ 446 0002 D3F89805 		ldr	r0, [r3, #1432]
+ 447 0006 7047     		bx	lr
+ 448              	.L71:
+ 449              		.align	2
+ 450              	.L70:
+ 451 0008 0070FF1F 		.word	536834048
+ 453              		.section	.text.HAL_DBGMCU_EnableDBGSleepMode,"ax",%progbits
+ 454              		.align	1
+ 455              		.global	HAL_DBGMCU_EnableDBGSleepMode
+ 456              		.syntax unified
+ 457              		.thumb
+ 458              		.thumb_func
+ 460              	HAL_DBGMCU_EnableDBGSleepMode:
+ 461              		@ args = 0, pretend = 0, frame = 0
+ 462              		@ frame_needed = 0, uses_anonymous_args = 0
+ 463              		@ link register save eliminated.
+ 464 0000 024A     		ldr	r2, .L73
+ 465 0002 5368     		ldr	r3, [r2, #4]
+ 466 0004 43F00103 		orr	r3, r3, #1
+ 467 0008 5360     		str	r3, [r2, #4]
+ 468 000a 7047     		bx	lr
+ 469              	.L74:
+ 470              		.align	2
+ 471              	.L73:
+ 472 000c 002004E0 		.word	-536600576
+ 474              		.section	.text.HAL_DBGMCU_DisableDBGSleepMode,"ax",%progbits
+ 475              		.align	1
+ 476              		.global	HAL_DBGMCU_DisableDBGSleepMode
+ 477              		.syntax unified
+ 478              		.thumb
+ 479              		.thumb_func
+ 481              	HAL_DBGMCU_DisableDBGSleepMode:
+ 482              		@ args = 0, pretend = 0, frame = 0
+ 483              		@ frame_needed = 0, uses_anonymous_args = 0
+ 484              		@ link register save eliminated.
+ 485 0000 024A     		ldr	r2, .L76
+ 486 0002 5368     		ldr	r3, [r2, #4]
+ 487 0004 23F00103 		bic	r3, r3, #1
+ 488 0008 5360     		str	r3, [r2, #4]
+ 489 000a 7047     		bx	lr
+ 490              	.L77:
+ 491              		.align	2
+ 492              	.L76:
+ 493 000c 002004E0 		.word	-536600576
+ 495              		.section	.text.HAL_DBGMCU_EnableDBGStopMode,"ax",%progbits
+ 496              		.align	1
+ 497              		.global	HAL_DBGMCU_EnableDBGStopMode
+ 498              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 9
+
+
+ 499              		.thumb
+ 500              		.thumb_func
+ 502              	HAL_DBGMCU_EnableDBGStopMode:
+ 503              		@ args = 0, pretend = 0, frame = 0
+ 504              		@ frame_needed = 0, uses_anonymous_args = 0
+ 505              		@ link register save eliminated.
+ 506 0000 024A     		ldr	r2, .L79
+ 507 0002 5368     		ldr	r3, [r2, #4]
+ 508 0004 43F00203 		orr	r3, r3, #2
+ 509 0008 5360     		str	r3, [r2, #4]
+ 510 000a 7047     		bx	lr
+ 511              	.L80:
+ 512              		.align	2
+ 513              	.L79:
+ 514 000c 002004E0 		.word	-536600576
+ 516              		.section	.text.HAL_DBGMCU_DisableDBGStopMode,"ax",%progbits
+ 517              		.align	1
+ 518              		.global	HAL_DBGMCU_DisableDBGStopMode
+ 519              		.syntax unified
+ 520              		.thumb
+ 521              		.thumb_func
+ 523              	HAL_DBGMCU_DisableDBGStopMode:
+ 524              		@ args = 0, pretend = 0, frame = 0
+ 525              		@ frame_needed = 0, uses_anonymous_args = 0
+ 526              		@ link register save eliminated.
+ 527 0000 024A     		ldr	r2, .L82
+ 528 0002 5368     		ldr	r3, [r2, #4]
+ 529 0004 23F00203 		bic	r3, r3, #2
+ 530 0008 5360     		str	r3, [r2, #4]
+ 531 000a 7047     		bx	lr
+ 532              	.L83:
+ 533              		.align	2
+ 534              	.L82:
+ 535 000c 002004E0 		.word	-536600576
+ 537              		.section	.text.HAL_DBGMCU_EnableDBGStandbyMode,"ax",%progbits
+ 538              		.align	1
+ 539              		.global	HAL_DBGMCU_EnableDBGStandbyMode
+ 540              		.syntax unified
+ 541              		.thumb
+ 542              		.thumb_func
+ 544              	HAL_DBGMCU_EnableDBGStandbyMode:
+ 545              		@ args = 0, pretend = 0, frame = 0
+ 546              		@ frame_needed = 0, uses_anonymous_args = 0
+ 547              		@ link register save eliminated.
+ 548 0000 024A     		ldr	r2, .L85
+ 549 0002 5368     		ldr	r3, [r2, #4]
+ 550 0004 43F00403 		orr	r3, r3, #4
+ 551 0008 5360     		str	r3, [r2, #4]
+ 552 000a 7047     		bx	lr
+ 553              	.L86:
+ 554              		.align	2
+ 555              	.L85:
+ 556 000c 002004E0 		.word	-536600576
+ 558              		.section	.text.HAL_DBGMCU_DisableDBGStandbyMode,"ax",%progbits
+ 559              		.align	1
+ 560              		.global	HAL_DBGMCU_DisableDBGStandbyMode
+ 561              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 10
+
+
+ 562              		.thumb
+ 563              		.thumb_func
+ 565              	HAL_DBGMCU_DisableDBGStandbyMode:
+ 566              		@ args = 0, pretend = 0, frame = 0
+ 567              		@ frame_needed = 0, uses_anonymous_args = 0
+ 568              		@ link register save eliminated.
+ 569 0000 024A     		ldr	r2, .L88
+ 570 0002 5368     		ldr	r3, [r2, #4]
+ 571 0004 23F00403 		bic	r3, r3, #4
+ 572 0008 5360     		str	r3, [r2, #4]
+ 573 000a 7047     		bx	lr
+ 574              	.L89:
+ 575              		.align	2
+ 576              	.L88:
+ 577 000c 002004E0 		.word	-536600576
+ 579              		.section	.text.HAL_SYSCFG_SRAM2Erase,"ax",%progbits
+ 580              		.align	1
+ 581              		.global	HAL_SYSCFG_SRAM2Erase
+ 582              		.syntax unified
+ 583              		.thumb
+ 584              		.thumb_func
+ 586              	HAL_SYSCFG_SRAM2Erase:
+ 587              		@ args = 0, pretend = 0, frame = 0
+ 588              		@ frame_needed = 0, uses_anonymous_args = 0
+ 589              		@ link register save eliminated.
+ 590 0000 044B     		ldr	r3, .L91
+ 591 0002 CA22     		movs	r2, #202
+ 592 0004 5A62     		str	r2, [r3, #36]
+ 593 0006 5322     		movs	r2, #83
+ 594 0008 5A62     		str	r2, [r3, #36]
+ 595 000a 034B     		ldr	r3, .L91+4
+ 596 000c 0122     		movs	r2, #1
+ 597 000e C3F80023 		str	r2, [r3, #768]
+ 598 0012 7047     		bx	lr
+ 599              	.L92:
+ 600              		.align	2
+ 601              	.L91:
+ 602 0014 00000140 		.word	1073807360
+ 603 0018 00002042 		.word	1109393408
+ 605              		.section	.text.HAL_SYSCFG_EnableMemorySwappingBank,"ax",%progbits
+ 606              		.align	1
+ 607              		.global	HAL_SYSCFG_EnableMemorySwappingBank
+ 608              		.syntax unified
+ 609              		.thumb
+ 610              		.thumb_func
+ 612              	HAL_SYSCFG_EnableMemorySwappingBank:
+ 613              		@ args = 0, pretend = 0, frame = 0
+ 614              		@ frame_needed = 0, uses_anonymous_args = 0
+ 615              		@ link register save eliminated.
+ 616 0000 014B     		ldr	r3, .L94
+ 617 0002 0122     		movs	r2, #1
+ 618 0004 1A62     		str	r2, [r3, #32]
+ 619 0006 7047     		bx	lr
+ 620              	.L95:
+ 621              		.align	2
+ 622              	.L94:
+ 623 0008 00002042 		.word	1109393408
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 11
+
+
+ 625              		.section	.text.HAL_SYSCFG_DisableMemorySwappingBank,"ax",%progbits
+ 626              		.align	1
+ 627              		.global	HAL_SYSCFG_DisableMemorySwappingBank
+ 628              		.syntax unified
+ 629              		.thumb
+ 630              		.thumb_func
+ 632              	HAL_SYSCFG_DisableMemorySwappingBank:
+ 633              		@ args = 0, pretend = 0, frame = 0
+ 634              		@ frame_needed = 0, uses_anonymous_args = 0
+ 635              		@ link register save eliminated.
+ 636 0000 014B     		ldr	r3, .L97
+ 637 0002 0022     		movs	r2, #0
+ 638 0004 1A62     		str	r2, [r3, #32]
+ 639 0006 7047     		bx	lr
+ 640              	.L98:
+ 641              		.align	2
+ 642              	.L97:
+ 643 0008 00002042 		.word	1109393408
+ 645              		.section	.text.HAL_SYSCFG_EnableIOAnalogSwitchBooster,"ax",%progbits
+ 646              		.align	1
+ 647              		.global	HAL_SYSCFG_EnableIOAnalogSwitchBooster
+ 648              		.syntax unified
+ 649              		.thumb
+ 650              		.thumb_func
+ 652              	HAL_SYSCFG_EnableIOAnalogSwitchBooster:
+ 653              		@ args = 0, pretend = 0, frame = 0
+ 654              		@ frame_needed = 0, uses_anonymous_args = 0
+ 655              		@ link register save eliminated.
+ 656 0000 024A     		ldr	r2, .L100
+ 657 0002 5368     		ldr	r3, [r2, #4]
+ 658 0004 43F48073 		orr	r3, r3, #256
+ 659 0008 5360     		str	r3, [r2, #4]
+ 660 000a 7047     		bx	lr
+ 661              	.L101:
+ 662              		.align	2
+ 663              	.L100:
+ 664 000c 00000140 		.word	1073807360
+ 666              		.section	.text.HAL_SYSCFG_DisableIOAnalogSwitchBooster,"ax",%progbits
+ 667              		.align	1
+ 668              		.global	HAL_SYSCFG_DisableIOAnalogSwitchBooster
+ 669              		.syntax unified
+ 670              		.thumb
+ 671              		.thumb_func
+ 673              	HAL_SYSCFG_DisableIOAnalogSwitchBooster:
+ 674              		@ args = 0, pretend = 0, frame = 0
+ 675              		@ frame_needed = 0, uses_anonymous_args = 0
+ 676              		@ link register save eliminated.
+ 677 0000 024A     		ldr	r2, .L103
+ 678 0002 5368     		ldr	r3, [r2, #4]
+ 679 0004 23F48073 		bic	r3, r3, #256
+ 680 0008 5360     		str	r3, [r2, #4]
+ 681 000a 7047     		bx	lr
+ 682              	.L104:
+ 683              		.align	2
+ 684              	.L103:
+ 685 000c 00000140 		.word	1073807360
+ 687              		.global	uwTickFreq
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 12
+
+
+ 688              		.section	.data.uwTickFreq,"aw"
+ 691              	uwTickFreq:
+ 692 0000 01       		.byte	1
+ 693              		.global	uwTickPrio
+ 694              		.section	.data.uwTickPrio,"aw"
+ 695              		.align	2
+ 698              	uwTickPrio:
+ 699 0000 10000000 		.word	16
+ 700              		.global	uwTick
+ 701              		.section	.bss.uwTick,"aw",%nobits
+ 702              		.align	2
+ 705              	uwTick:
+ 706 0000 00000000 		.space	4
+ 707              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal.c
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:18     .text.HAL_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:31     .text.HAL_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:37     .text.HAL_MspDeInit:00000000 HAL_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:44     .text.HAL_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:50     .text.HAL_DeInit:00000000 HAL_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:75     .text.HAL_DeInit:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:78     .text.HAL_InitTick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:84     .text.HAL_InitTick:00000000 HAL_InitTick
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:122    .text.HAL_InitTick:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:691    .data.uwTickFreq:00000000 uwTickFreq
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:698    .data.uwTickPrio:00000000 uwTickPrio
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:127    .text.HAL_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:133    .text.HAL_Init:00000000 HAL_Init
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:157    .text.HAL_Init:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:160    .text.HAL_IncTick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:166    .text.HAL_IncTick:00000000 HAL_IncTick
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:180    .text.HAL_IncTick:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:705    .bss.uwTick:00000000 uwTick
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:184    .text.HAL_GetTick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:190    .text.HAL_GetTick:00000000 HAL_GetTick
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:200    .text.HAL_GetTick:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:203    .text.HAL_GetTickPrio:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:209    .text.HAL_GetTickPrio:00000000 HAL_GetTickPrio
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:219    .text.HAL_GetTickPrio:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:222    .text.HAL_SetTickFreq:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:228    .text.HAL_SetTickFreq:00000000 HAL_SetTickFreq
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:252    .text.HAL_SetTickFreq:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:256    .text.HAL_GetTickFreq:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:262    .text.HAL_GetTickFreq:00000000 HAL_GetTickFreq
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:272    .text.HAL_GetTickFreq:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:275    .text.HAL_Delay:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:281    .text.HAL_Delay:00000000 HAL_Delay
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:302    .text.HAL_Delay:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:305    .text.HAL_SuspendTick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:311    .text.HAL_SuspendTick:00000000 HAL_SuspendTick
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:322    .text.HAL_ResumeTick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:328    .text.HAL_ResumeTick:00000000 HAL_ResumeTick
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:339    .text.HAL_GetHalVersion:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:345    .text.HAL_GetHalVersion:00000000 HAL_GetHalVersion
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:354    .text.HAL_GetHalVersion:00000004 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:357    .text.HAL_GetREVID:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:363    .text.HAL_GetREVID:00000000 HAL_GetREVID
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:374    .text.HAL_GetREVID:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:377    .text.HAL_GetDEVID:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:383    .text.HAL_GetDEVID:00000000 HAL_GetDEVID
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:394    .text.HAL_GetDEVID:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:397    .text.HAL_GetUIDw0:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:403    .text.HAL_GetUIDw0:00000000 HAL_GetUIDw0
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:413    .text.HAL_GetUIDw0:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:416    .text.HAL_GetUIDw1:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:422    .text.HAL_GetUIDw1:00000000 HAL_GetUIDw1
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:432    .text.HAL_GetUIDw1:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:435    .text.HAL_GetUIDw2:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:441    .text.HAL_GetUIDw2:00000000 HAL_GetUIDw2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s 			page 14
+
+
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:451    .text.HAL_GetUIDw2:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:454    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:460    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 HAL_DBGMCU_EnableDBGSleepMode
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:472    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:475    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:481    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 HAL_DBGMCU_DisableDBGSleepMode
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:493    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:496    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:502    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 HAL_DBGMCU_EnableDBGStopMode
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:514    .text.HAL_DBGMCU_EnableDBGStopMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:517    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:523    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 HAL_DBGMCU_DisableDBGStopMode
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:535    .text.HAL_DBGMCU_DisableDBGStopMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:538    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:544    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 HAL_DBGMCU_EnableDBGStandbyMode
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:556    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:559    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:565    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 HAL_DBGMCU_DisableDBGStandbyMode
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:577    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:580    .text.HAL_SYSCFG_SRAM2Erase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:586    .text.HAL_SYSCFG_SRAM2Erase:00000000 HAL_SYSCFG_SRAM2Erase
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:602    .text.HAL_SYSCFG_SRAM2Erase:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:606    .text.HAL_SYSCFG_EnableMemorySwappingBank:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:612    .text.HAL_SYSCFG_EnableMemorySwappingBank:00000000 HAL_SYSCFG_EnableMemorySwappingBank
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:623    .text.HAL_SYSCFG_EnableMemorySwappingBank:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:626    .text.HAL_SYSCFG_DisableMemorySwappingBank:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:632    .text.HAL_SYSCFG_DisableMemorySwappingBank:00000000 HAL_SYSCFG_DisableMemorySwappingBank
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:643    .text.HAL_SYSCFG_DisableMemorySwappingBank:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:646    .text.HAL_SYSCFG_EnableIOAnalogSwitchBooster:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:652    .text.HAL_SYSCFG_EnableIOAnalogSwitchBooster:00000000 HAL_SYSCFG_EnableIOAnalogSwitchBooster
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:664    .text.HAL_SYSCFG_EnableIOAnalogSwitchBooster:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:667    .text.HAL_SYSCFG_DisableIOAnalogSwitchBooster:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:673    .text.HAL_SYSCFG_DisableIOAnalogSwitchBooster:00000000 HAL_SYSCFG_DisableIOAnalogSwitchBooster
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:685    .text.HAL_SYSCFG_DisableIOAnalogSwitchBooster:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:695    .data.uwTickPrio:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccJsrya5.s:702    .bss.uwTick:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_SYSTICK_Config
+HAL_NVIC_SetPriority
+SystemCoreClock
+HAL_NVIC_SetPriorityGrouping

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
   27:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   * @{
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 2
 
 
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /** @defgroup PCDEx PCDEx
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
   84:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   Tx_Offset = hpcd->Instance->GRXFSIZ;
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 3
 
 
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   if (fifo == 0U)
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  141:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** HAL_StatusTypeDef HAL_PCDEx_DeActivateLPM(PCD_HandleTypeDef *hpcd)
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_OTG_GlobalTypeDef *USBx = hpcd->Instance;
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 4
 
 
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  198:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     Port or Dedicated Charging Port */
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     USBx->GCCFG &= ~(USB_OTG_GCCFG_PDEN);
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 5
 
 
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     USBx->GCCFG |= USB_OTG_GCCFG_SDEN;
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  255:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->GCCFG &= ~(USB_OTG_GCCFG_PDEN);
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->GCCFG &= ~(USB_OTG_GCCFG_SDEN);
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 6
 
 
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Power Down USB transceiver  */
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 7
 
 
   34              		@ link register save eliminated.
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  337:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     ep->pmaaddr0 = (uint16_t)(pmaadress & 0xFFFFU);
  338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     ep->pmaaddr1 = (uint16_t)((pmaadress & 0xFFFF0000U) >> 16);
  339:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   }
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 8
 
 
  340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* (USE_USB_DOUBLE_BUFFER == 1U) */
@@ -448,45 +448,46 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  320:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   }
   79              		.loc 1 320 8 view .LVU19
   80 002a F3E7     		b	.L3
-  81              	.L4:
+  81              	.LVL8:
+  82              	.L4:
  335:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     /* Configure the PMA */
-  82              		.loc 1 335 5 is_stmt 1 view .LVU20
+  83              		.loc 1 335 5 is_stmt 1 view .LVU20
  335:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     /* Configure the PMA */
-  83              		.loc 1 335 22 is_stmt 0 view .LVU21
-  84 002c 0122     		movs	r2, #1
-  85              	.LVL8:
+  84              		.loc 1 335 22 is_stmt 0 view .LVU21
+  85 002c 0122     		movs	r2, #1
+  86              	.LVL9:
  335:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     /* Configure the PMA */
-  86              		.loc 1 335 22 view .LVU22
-  87 002e 0273     		strb	r2, [r0, #12]
+  87              		.loc 1 335 22 view .LVU22
+  88 002e 0273     		strb	r2, [r0, #12]
  337:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     ep->pmaaddr1 = (uint16_t)((pmaadress & 0xFFFF0000U) >> 16);
-  88              		.loc 1 337 5 is_stmt 1 view .LVU23
+  89              		.loc 1 337 5 is_stmt 1 view .LVU23
  337:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     ep->pmaaddr1 = (uint16_t)((pmaadress & 0xFFFF0000U) >> 16);
-  89              		.loc 1 337 18 is_stmt 0 view .LVU24
-  90 0030 0381     		strh	r3, [r0, #8]	@ movhi
+  90              		.loc 1 337 18 is_stmt 0 view .LVU24
+  91 0030 0381     		strh	r3, [r0, #8]	@ movhi
  338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   }
-  91              		.loc 1 338 5 is_stmt 1 view .LVU25
+  92              		.loc 1 338 5 is_stmt 1 view .LVU25
  338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   }
-  92              		.loc 1 338 20 is_stmt 0 view .LVU26
-  93 0032 1B0C     		lsrs	r3, r3, #16
-  94              	.LVL9:
+  93              		.loc 1 338 20 is_stmt 0 view .LVU26
+  94 0032 1B0C     		lsrs	r3, r3, #16
+  95              	.LVL10:
  338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   }
-  95              		.loc 1 338 18 view .LVU27
-  96 0034 4381     		strh	r3, [r0, #10]	@ movhi
-  97 0036 F0E7     		b	.L5
-  98              		.cfi_endproc
-  99              	.LFE319:
- 101              		.section	.text.HAL_PCDEx_ActivateBCD,"ax",%progbits
- 102              		.align	1
- 103              		.global	HAL_PCDEx_ActivateBCD
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 9
+  96              		.loc 1 338 18 view .LVU27
+  97 0034 4381     		strh	r3, [r0, #10]	@ movhi
+  98 0036 F0E7     		b	.L5
+  99              		.cfi_endproc
+ 100              	.LFE319:
+ 102              		.section	.text.HAL_PCDEx_ActivateBCD,"ax",%progbits
+ 103              		.align	1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 9
 
 
- 104              		.syntax unified
- 105              		.thumb
- 106              		.thumb_func
- 108              	HAL_PCDEx_ActivateBCD:
- 109              	.LVL10:
- 110              	.LFB320:
+ 104              		.global	HAL_PCDEx_ActivateBCD
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 109              	HAL_PCDEx_ActivateBCD:
+ 110              	.LVL11:
+ 111              	.LFB320:
  344:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  345:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /**
  346:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   * @brief  Activate BatteryCharging feature.
@@ -495,82 +496,82 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  349:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
  350:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** HAL_StatusTypeDef HAL_PCDEx_ActivateBCD(PCD_HandleTypeDef *hpcd)
  351:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
- 111              		.loc 1 351 1 is_stmt 1 view -0
- 112              		.cfi_startproc
- 113              		@ args = 0, pretend = 0, frame = 0
- 114              		@ frame_needed = 0, uses_anonymous_args = 0
- 115              		@ link register save eliminated.
+ 112              		.loc 1 351 1 is_stmt 1 view -0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              		@ link register save eliminated.
  352:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_TypeDef *USBx = hpcd->Instance;
- 116              		.loc 1 352 3 view .LVU29
- 117              		.loc 1 352 16 is_stmt 0 view .LVU30
- 118 0000 0368     		ldr	r3, [r0]
- 119              	.LVL11:
+ 117              		.loc 1 352 3 view .LVU29
+ 118              		.loc 1 352 16 is_stmt 0 view .LVU30
+ 119 0000 0368     		ldr	r3, [r0]
+ 120              	.LVL12:
  353:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   hpcd->battery_charging_active = 1U;
- 120              		.loc 1 353 3 is_stmt 1 view .LVU31
- 121              		.loc 1 353 33 is_stmt 0 view .LVU32
- 122 0002 0122     		movs	r2, #1
- 123 0004 C0F8D822 		str	r2, [r0, #728]
+ 121              		.loc 1 353 3 is_stmt 1 view .LVU31
+ 122              		.loc 1 353 33 is_stmt 0 view .LVU32
+ 123 0002 0122     		movs	r2, #1
+ 124 0004 C0F8D822 		str	r2, [r0, #728]
  354:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  355:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Enable BCD feature */
  356:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR |= USB_BCDR_BCDEN;
- 124              		.loc 1 356 3 is_stmt 1 view .LVU33
- 125              		.loc 1 356 7 is_stmt 0 view .LVU34
- 126 0008 B3F85820 		ldrh	r2, [r3, #88]
- 127 000c 92B2     		uxth	r2, r2
- 128              		.loc 1 356 14 view .LVU35
- 129 000e 42F00102 		orr	r2, r2, #1
- 130 0012 A3F85820 		strh	r2, [r3, #88]	@ movhi
+ 125              		.loc 1 356 3 is_stmt 1 view .LVU33
+ 126              		.loc 1 356 7 is_stmt 0 view .LVU34
+ 127 0008 B3F85820 		ldrh	r2, [r3, #88]
+ 128 000c 92B2     		uxth	r2, r2
+ 129              		.loc 1 356 14 view .LVU35
+ 130 000e 42F00102 		orr	r2, r2, #1
+ 131 0012 A3F85820 		strh	r2, [r3, #88]	@ movhi
  357:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  358:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Enable DCD : Data Contact Detect */
  359:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR &= ~(USB_BCDR_PDEN);
- 131              		.loc 1 359 3 is_stmt 1 view .LVU36
- 132              		.loc 1 359 7 is_stmt 0 view .LVU37
- 133 0016 B3F85820 		ldrh	r2, [r3, #88]
- 134 001a 92B2     		uxth	r2, r2
- 135              		.loc 1 359 14 view .LVU38
- 136 001c 22F00402 		bic	r2, r2, #4
- 137 0020 92B2     		uxth	r2, r2
- 138 0022 A3F85820 		strh	r2, [r3, #88]	@ movhi
+ 132              		.loc 1 359 3 is_stmt 1 view .LVU36
+ 133              		.loc 1 359 7 is_stmt 0 view .LVU37
+ 134 0016 B3F85820 		ldrh	r2, [r3, #88]
+ 135 001a 92B2     		uxth	r2, r2
+ 136              		.loc 1 359 14 view .LVU38
+ 137 001c 22F00402 		bic	r2, r2, #4
+ 138 0020 92B2     		uxth	r2, r2
+ 139 0022 A3F85820 		strh	r2, [r3, #88]	@ movhi
  360:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR &= ~(USB_BCDR_SDEN);
- 139              		.loc 1 360 3 is_stmt 1 view .LVU39
- 140              		.loc 1 360 7 is_stmt 0 view .LVU40
- 141 0026 B3F85820 		ldrh	r2, [r3, #88]
- 142 002a 92B2     		uxth	r2, r2
- 143              		.loc 1 360 14 view .LVU41
- 144 002c 22F00802 		bic	r2, r2, #8
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 10
+ 140              		.loc 1 360 3 is_stmt 1 view .LVU39
+ 141              		.loc 1 360 7 is_stmt 0 view .LVU40
+ 142 0026 B3F85820 		ldrh	r2, [r3, #88]
+ 143 002a 92B2     		uxth	r2, r2
+ 144              		.loc 1 360 14 view .LVU41
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 10
 
 
- 145 0030 92B2     		uxth	r2, r2
- 146 0032 A3F85820 		strh	r2, [r3, #88]	@ movhi
+ 145 002c 22F00802 		bic	r2, r2, #8
+ 146 0030 92B2     		uxth	r2, r2
+ 147 0032 A3F85820 		strh	r2, [r3, #88]	@ movhi
  361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR |= USB_BCDR_DCDEN;
- 147              		.loc 1 361 3 is_stmt 1 view .LVU42
- 148              		.loc 1 361 7 is_stmt 0 view .LVU43
- 149 0036 B3F85820 		ldrh	r2, [r3, #88]
- 150 003a 92B2     		uxth	r2, r2
- 151              		.loc 1 361 14 view .LVU44
- 152 003c 42F00202 		orr	r2, r2, #2
- 153 0040 A3F85820 		strh	r2, [r3, #88]	@ movhi
+ 148              		.loc 1 361 3 is_stmt 1 view .LVU42
+ 149              		.loc 1 361 7 is_stmt 0 view .LVU43
+ 150 0036 B3F85820 		ldrh	r2, [r3, #88]
+ 151 003a 92B2     		uxth	r2, r2
+ 152              		.loc 1 361 14 view .LVU44
+ 153 003c 42F00202 		orr	r2, r2, #2
+ 154 0040 A3F85820 		strh	r2, [r3, #88]	@ movhi
  362:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  363:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   return HAL_OK;
- 154              		.loc 1 363 3 is_stmt 1 view .LVU45
+ 155              		.loc 1 363 3 is_stmt 1 view .LVU45
  364:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** }
- 155              		.loc 1 364 1 is_stmt 0 view .LVU46
- 156 0044 0020     		movs	r0, #0
- 157              	.LVL12:
- 158              		.loc 1 364 1 view .LVU47
- 159 0046 7047     		bx	lr
- 160              		.cfi_endproc
- 161              	.LFE320:
- 163              		.section	.text.HAL_PCDEx_DeActivateBCD,"ax",%progbits
- 164              		.align	1
- 165              		.global	HAL_PCDEx_DeActivateBCD
- 166              		.syntax unified
- 167              		.thumb
- 168              		.thumb_func
- 170              	HAL_PCDEx_DeActivateBCD:
- 171              	.LVL13:
- 172              	.LFB321:
+ 156              		.loc 1 364 1 is_stmt 0 view .LVU46
+ 157 0044 0020     		movs	r0, #0
+ 158              	.LVL13:
+ 159              		.loc 1 364 1 view .LVU47
+ 160 0046 7047     		bx	lr
+ 161              		.cfi_endproc
+ 162              	.LFE320:
+ 164              		.section	.text.HAL_PCDEx_DeActivateBCD,"ax",%progbits
+ 165              		.align	1
+ 166              		.global	HAL_PCDEx_DeActivateBCD
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 171              	HAL_PCDEx_DeActivateBCD:
+ 172              	.LVL14:
+ 173              	.LFB321:
  365:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  366:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /**
  367:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   * @brief  Deactivate BatteryCharging feature.
@@ -579,58 +580,58 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** HAL_StatusTypeDef HAL_PCDEx_DeActivateBCD(PCD_HandleTypeDef *hpcd)
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
- 173              		.loc 1 372 1 is_stmt 1 view -0
- 174              		.cfi_startproc
- 175              		@ args = 0, pretend = 0, frame = 0
- 176              		@ frame_needed = 0, uses_anonymous_args = 0
- 177              		@ link register save eliminated.
- 178              		.loc 1 372 1 is_stmt 0 view .LVU49
- 179 0000 0346     		mov	r3, r0
+ 174              		.loc 1 372 1 is_stmt 1 view -0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		@ link register save eliminated.
+ 179              		.loc 1 372 1 is_stmt 0 view .LVU49
+ 180 0000 0346     		mov	r3, r0
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_TypeDef *USBx = hpcd->Instance;
- 180              		.loc 1 373 3 is_stmt 1 view .LVU50
- 181              		.loc 1 373 16 is_stmt 0 view .LVU51
- 182 0002 0268     		ldr	r2, [r0]
- 183              	.LVL14:
+ 181              		.loc 1 373 3 is_stmt 1 view .LVU50
+ 182              		.loc 1 373 16 is_stmt 0 view .LVU51
+ 183 0002 0268     		ldr	r2, [r0]
+ 184              	.LVL15:
  374:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   hpcd->battery_charging_active = 0U;
- 184              		.loc 1 374 3 is_stmt 1 view .LVU52
- 185              		.loc 1 374 33 is_stmt 0 view .LVU53
- 186 0004 0020     		movs	r0, #0
- 187              	.LVL15:
- 188              		.loc 1 374 33 view .LVU54
- 189 0006 C3F8D802 		str	r0, [r3, #728]
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 11
+ 185              		.loc 1 374 3 is_stmt 1 view .LVU52
+ 186              		.loc 1 374 33 is_stmt 0 view .LVU53
+ 187 0004 0020     		movs	r0, #0
+ 188              	.LVL16:
+ 189              		.loc 1 374 33 view .LVU54
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 11
 
 
+ 190 0006 C3F8D802 		str	r0, [r3, #728]
  375:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  376:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Disable BCD feature */
  377:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR &= ~(USB_BCDR_BCDEN);
- 190              		.loc 1 377 3 is_stmt 1 view .LVU55
- 191              		.loc 1 377 7 is_stmt 0 view .LVU56
- 192 000a B2F85830 		ldrh	r3, [r2, #88]
- 193              	.LVL16:
- 194              		.loc 1 377 7 view .LVU57
- 195 000e 9BB2     		uxth	r3, r3
- 196              		.loc 1 377 14 view .LVU58
- 197 0010 23F00103 		bic	r3, r3, #1
- 198 0014 9BB2     		uxth	r3, r3
- 199 0016 A2F85830 		strh	r3, [r2, #88]	@ movhi
+ 191              		.loc 1 377 3 is_stmt 1 view .LVU55
+ 192              		.loc 1 377 7 is_stmt 0 view .LVU56
+ 193 000a B2F85830 		ldrh	r3, [r2, #88]
+ 194              	.LVL17:
+ 195              		.loc 1 377 7 view .LVU57
+ 196 000e 9BB2     		uxth	r3, r3
+ 197              		.loc 1 377 14 view .LVU58
+ 198 0010 23F00103 		bic	r3, r3, #1
+ 199 0014 9BB2     		uxth	r3, r3
+ 200 0016 A2F85830 		strh	r3, [r2, #88]	@ movhi
  378:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  379:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   return HAL_OK;
- 200              		.loc 1 379 3 is_stmt 1 view .LVU59
+ 201              		.loc 1 379 3 is_stmt 1 view .LVU59
  380:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** }
- 201              		.loc 1 380 1 is_stmt 0 view .LVU60
- 202 001a 7047     		bx	lr
- 203              		.cfi_endproc
- 204              	.LFE321:
- 206              		.section	.text.HAL_PCDEx_ActivateLPM,"ax",%progbits
- 207              		.align	1
- 208              		.global	HAL_PCDEx_ActivateLPM
- 209              		.syntax unified
- 210              		.thumb
- 211              		.thumb_func
- 213              	HAL_PCDEx_ActivateLPM:
- 214              	.LVL17:
- 215              	.LFB323:
+ 202              		.loc 1 380 1 is_stmt 0 view .LVU60
+ 203 001a 7047     		bx	lr
+ 204              		.cfi_endproc
+ 205              	.LFE321:
+ 207              		.section	.text.HAL_PCDEx_ActivateLPM,"ax",%progbits
+ 208              		.align	1
+ 209              		.global	HAL_PCDEx_ActivateLPM
+ 210              		.syntax unified
+ 211              		.thumb
+ 212              		.thumb_func
+ 214              	HAL_PCDEx_ActivateLPM:
+ 215              	.LVL18:
+ 216              	.LFB323:
  381:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  382:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /**
  383:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   * @brief  Handle BatteryCharging Process.
@@ -657,10 +658,10 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  404:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Primary detection: checks if connected to Standard Downstream Port
  405:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   (without charging capability) */
  406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR &= ~(USB_BCDR_DCDEN);
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 12
+
+
  407:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 12
-
-
  408:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR |= (USB_BCDR_PDEN);
  409:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
  410:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
@@ -717,10 +718,10 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  461:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
  462:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   }
  463:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   else
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 13
+
+
  464:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 13
-
-
  465:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
  466:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     hpcd->BCDCallback(hpcd, PCD_BCD_DISCOVERY_COMPLETED);
  467:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #else
@@ -736,70 +737,70 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  477:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
  478:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** HAL_StatusTypeDef HAL_PCDEx_ActivateLPM(PCD_HandleTypeDef *hpcd)
  479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
- 216              		.loc 1 479 1 is_stmt 1 view -0
- 217              		.cfi_startproc
- 218              		@ args = 0, pretend = 0, frame = 0
- 219              		@ frame_needed = 0, uses_anonymous_args = 0
- 220              		@ link register save eliminated.
- 221              		.loc 1 479 1 is_stmt 0 view .LVU62
- 222 0000 0346     		mov	r3, r0
+ 217              		.loc 1 479 1 is_stmt 1 view -0
+ 218              		.cfi_startproc
+ 219              		@ args = 0, pretend = 0, frame = 0
+ 220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 221              		@ link register save eliminated.
+ 222              		.loc 1 479 1 is_stmt 0 view .LVU62
+ 223 0000 0346     		mov	r3, r0
  480:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  481:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_TypeDef *USBx = hpcd->Instance;
- 223              		.loc 1 481 3 is_stmt 1 view .LVU63
- 224              		.loc 1 481 16 is_stmt 0 view .LVU64
- 225 0002 0268     		ldr	r2, [r0]
- 226              	.LVL18:
+ 224              		.loc 1 481 3 is_stmt 1 view .LVU63
+ 225              		.loc 1 481 16 is_stmt 0 view .LVU64
+ 226 0002 0268     		ldr	r2, [r0]
+ 227              	.LVL19:
  482:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   hpcd->lpm_active = 1U;
- 227              		.loc 1 482 3 is_stmt 1 view .LVU65
- 228              		.loc 1 482 20 is_stmt 0 view .LVU66
- 229 0004 0121     		movs	r1, #1
- 230 0006 C0F8D412 		str	r1, [r0, #724]
+ 228              		.loc 1 482 3 is_stmt 1 view .LVU65
+ 229              		.loc 1 482 20 is_stmt 0 view .LVU66
+ 230 0004 0121     		movs	r1, #1
+ 231 0006 C0F8D412 		str	r1, [r0, #724]
  483:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   hpcd->LPM_State = LPM_L0;
- 231              		.loc 1 483 3 is_stmt 1 view .LVU67
- 232              		.loc 1 483 19 is_stmt 0 view .LVU68
- 233 000a 0020     		movs	r0, #0
- 234              	.LVL19:
- 235              		.loc 1 483 19 view .LVU69
- 236 000c 83F8C802 		strb	r0, [r3, #712]
+ 232              		.loc 1 483 3 is_stmt 1 view .LVU67
+ 233              		.loc 1 483 19 is_stmt 0 view .LVU68
+ 234 000a 0020     		movs	r0, #0
+ 235              	.LVL20:
+ 236              		.loc 1 483 19 view .LVU69
+ 237 000c 83F8C802 		strb	r0, [r3, #712]
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->LPMCSR |= USB_LPMCSR_LMPEN;
- 237              		.loc 1 485 3 is_stmt 1 view .LVU70
- 238              		.loc 1 485 7 is_stmt 0 view .LVU71
- 239 0010 B2F85430 		ldrh	r3, [r2, #84]
- 240              	.LVL20:
- 241              		.loc 1 485 7 view .LVU72
- 242 0014 9BB2     		uxth	r3, r3
- 243              		.loc 1 485 16 view .LVU73
- 244 0016 0B43     		orrs	r3, r3, r1
- 245 0018 A2F85430 		strh	r3, [r2, #84]	@ movhi
+ 238              		.loc 1 485 3 is_stmt 1 view .LVU70
+ 239              		.loc 1 485 7 is_stmt 0 view .LVU71
+ 240 0010 B2F85430 		ldrh	r3, [r2, #84]
+ 241              	.LVL21:
+ 242              		.loc 1 485 7 view .LVU72
+ 243 0014 9BB2     		uxth	r3, r3
+ 244              		.loc 1 485 16 view .LVU73
+ 245 0016 0B43     		orrs	r3, r3, r1
+ 246 0018 A2F85430 		strh	r3, [r2, #84]	@ movhi
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->LPMCSR |= USB_LPMCSR_LPMACK;
- 246              		.loc 1 486 3 is_stmt 1 view .LVU74
- 247              		.loc 1 486 7 is_stmt 0 view .LVU75
- 248 001c B2F85430 		ldrh	r3, [r2, #84]
- 249 0020 9BB2     		uxth	r3, r3
- 250              		.loc 1 486 16 view .LVU76
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 14
+ 247              		.loc 1 486 3 is_stmt 1 view .LVU74
+ 248              		.loc 1 486 7 is_stmt 0 view .LVU75
+ 249 001c B2F85430 		ldrh	r3, [r2, #84]
+ 250 0020 9BB2     		uxth	r3, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 14
 
 
- 251 0022 43F00203 		orr	r3, r3, #2
- 252 0026 A2F85430 		strh	r3, [r2, #84]	@ movhi
+ 251              		.loc 1 486 16 view .LVU76
+ 252 0022 43F00203 		orr	r3, r3, #2
+ 253 0026 A2F85430 		strh	r3, [r2, #84]	@ movhi
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  488:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   return HAL_OK;
- 253              		.loc 1 488 3 is_stmt 1 view .LVU77
+ 254              		.loc 1 488 3 is_stmt 1 view .LVU77
  489:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** }
- 254              		.loc 1 489 1 is_stmt 0 view .LVU78
- 255 002a 7047     		bx	lr
- 256              		.cfi_endproc
- 257              	.LFE323:
- 259              		.section	.text.HAL_PCDEx_DeActivateLPM,"ax",%progbits
- 260              		.align	1
- 261              		.global	HAL_PCDEx_DeActivateLPM
- 262              		.syntax unified
- 263              		.thumb
- 264              		.thumb_func
- 266              	HAL_PCDEx_DeActivateLPM:
- 267              	.LVL21:
- 268              	.LFB324:
+ 255              		.loc 1 489 1 is_stmt 0 view .LVU78
+ 256 002a 7047     		bx	lr
+ 257              		.cfi_endproc
+ 258              	.LFE323:
+ 260              		.section	.text.HAL_PCDEx_DeActivateLPM,"ax",%progbits
+ 261              		.align	1
+ 262              		.global	HAL_PCDEx_DeActivateLPM
+ 263              		.syntax unified
+ 264              		.thumb
+ 265              		.thumb_func
+ 267              	HAL_PCDEx_DeActivateLPM:
+ 268              	.LVL22:
+ 269              	.LFB324:
  490:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  491:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /**
  492:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   * @brief  Deactivate LPM feature.
@@ -808,67 +809,67 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  495:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
  496:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** HAL_StatusTypeDef HAL_PCDEx_DeActivateLPM(PCD_HandleTypeDef *hpcd)
  497:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
- 269              		.loc 1 497 1 is_stmt 1 view -0
- 270              		.cfi_startproc
- 271              		@ args = 0, pretend = 0, frame = 0
- 272              		@ frame_needed = 0, uses_anonymous_args = 0
- 273              		@ link register save eliminated.
- 274              		.loc 1 497 1 is_stmt 0 view .LVU80
- 275 0000 0346     		mov	r3, r0
+ 270              		.loc 1 497 1 is_stmt 1 view -0
+ 271              		.cfi_startproc
+ 272              		@ args = 0, pretend = 0, frame = 0
+ 273              		@ frame_needed = 0, uses_anonymous_args = 0
+ 274              		@ link register save eliminated.
+ 275              		.loc 1 497 1 is_stmt 0 view .LVU80
+ 276 0000 0346     		mov	r3, r0
  498:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_TypeDef *USBx = hpcd->Instance;
- 276              		.loc 1 498 3 is_stmt 1 view .LVU81
- 277              		.loc 1 498 16 is_stmt 0 view .LVU82
- 278 0002 0268     		ldr	r2, [r0]
- 279              	.LVL22:
+ 277              		.loc 1 498 3 is_stmt 1 view .LVU81
+ 278              		.loc 1 498 16 is_stmt 0 view .LVU82
+ 279 0002 0268     		ldr	r2, [r0]
+ 280              	.LVL23:
  499:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  500:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   hpcd->lpm_active = 0U;
- 280              		.loc 1 500 3 is_stmt 1 view .LVU83
- 281              		.loc 1 500 20 is_stmt 0 view .LVU84
- 282 0004 0020     		movs	r0, #0
- 283              	.LVL23:
- 284              		.loc 1 500 20 view .LVU85
- 285 0006 C3F8D402 		str	r0, [r3, #724]
+ 281              		.loc 1 500 3 is_stmt 1 view .LVU83
+ 282              		.loc 1 500 20 is_stmt 0 view .LVU84
+ 283 0004 0020     		movs	r0, #0
+ 284              	.LVL24:
+ 285              		.loc 1 500 20 view .LVU85
+ 286 0006 C3F8D402 		str	r0, [r3, #724]
  501:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  502:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->LPMCSR &= ~(USB_LPMCSR_LMPEN);
- 286              		.loc 1 502 3 is_stmt 1 view .LVU86
- 287              		.loc 1 502 7 is_stmt 0 view .LVU87
- 288 000a B2F85430 		ldrh	r3, [r2, #84]
- 289              	.LVL24:
- 290              		.loc 1 502 7 view .LVU88
- 291 000e 9BB2     		uxth	r3, r3
- 292              		.loc 1 502 16 view .LVU89
- 293 0010 23F00103 		bic	r3, r3, #1
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 15
+ 287              		.loc 1 502 3 is_stmt 1 view .LVU86
+ 288              		.loc 1 502 7 is_stmt 0 view .LVU87
+ 289 000a B2F85430 		ldrh	r3, [r2, #84]
+ 290              	.LVL25:
+ 291              		.loc 1 502 7 view .LVU88
+ 292 000e 9BB2     		uxth	r3, r3
+ 293              		.loc 1 502 16 view .LVU89
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 15
 
 
- 294 0014 9BB2     		uxth	r3, r3
- 295 0016 A2F85430 		strh	r3, [r2, #84]	@ movhi
+ 294 0010 23F00103 		bic	r3, r3, #1
+ 295 0014 9BB2     		uxth	r3, r3
+ 296 0016 A2F85430 		strh	r3, [r2, #84]	@ movhi
  503:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->LPMCSR &= ~(USB_LPMCSR_LPMACK);
- 296              		.loc 1 503 3 is_stmt 1 view .LVU90
- 297              		.loc 1 503 7 is_stmt 0 view .LVU91
- 298 001a B2F85430 		ldrh	r3, [r2, #84]
- 299 001e 9BB2     		uxth	r3, r3
- 300              		.loc 1 503 16 view .LVU92
- 301 0020 23F00203 		bic	r3, r3, #2
- 302 0024 9BB2     		uxth	r3, r3
- 303 0026 A2F85430 		strh	r3, [r2, #84]	@ movhi
+ 297              		.loc 1 503 3 is_stmt 1 view .LVU90
+ 298              		.loc 1 503 7 is_stmt 0 view .LVU91
+ 299 001a B2F85430 		ldrh	r3, [r2, #84]
+ 300 001e 9BB2     		uxth	r3, r3
+ 301              		.loc 1 503 16 view .LVU92
+ 302 0020 23F00203 		bic	r3, r3, #2
+ 303 0024 9BB2     		uxth	r3, r3
+ 304 0026 A2F85430 		strh	r3, [r2, #84]	@ movhi
  504:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  505:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   return HAL_OK;
- 304              		.loc 1 505 3 is_stmt 1 view .LVU93
+ 305              		.loc 1 505 3 is_stmt 1 view .LVU93
  506:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** }
- 305              		.loc 1 506 1 is_stmt 0 view .LVU94
- 306 002a 7047     		bx	lr
- 307              		.cfi_endproc
- 308              	.LFE324:
- 310              		.section	.text.HAL_PCDEx_LPM_Callback,"ax",%progbits
- 311              		.align	1
- 312              		.weak	HAL_PCDEx_LPM_Callback
- 313              		.syntax unified
- 314              		.thumb
- 315              		.thumb_func
- 317              	HAL_PCDEx_LPM_Callback:
- 318              	.LVL25:
- 319              	.LFB325:
+ 306              		.loc 1 506 1 is_stmt 0 view .LVU94
+ 307 002a 7047     		bx	lr
+ 308              		.cfi_endproc
+ 309              	.LFE324:
+ 311              		.section	.text.HAL_PCDEx_LPM_Callback,"ax",%progbits
+ 312              		.align	1
+ 313              		.weak	HAL_PCDEx_LPM_Callback
+ 314              		.syntax unified
+ 315              		.thumb
+ 316              		.thumb_func
+ 318              	HAL_PCDEx_LPM_Callback:
+ 319              	.LVL26:
+ 320              	.LFB325:
  507:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* defined (USB) */
  508:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  509:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /**
@@ -879,37 +880,37 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  514:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
  515:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** __weak void HAL_PCDEx_LPM_Callback(PCD_HandleTypeDef *hpcd, PCD_LPM_MsgTypeDef msg)
  516:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
- 320              		.loc 1 516 1 is_stmt 1 view -0
- 321              		.cfi_startproc
- 322              		@ args = 0, pretend = 0, frame = 0
- 323              		@ frame_needed = 0, uses_anonymous_args = 0
- 324              		@ link register save eliminated.
+ 321              		.loc 1 516 1 is_stmt 1 view -0
+ 322              		.cfi_startproc
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 0, uses_anonymous_args = 0
+ 325              		@ link register save eliminated.
  517:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Prevent unused argument(s) compilation warning */
  518:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   UNUSED(hpcd);
- 325              		.loc 1 518 3 view .LVU96
+ 326              		.loc 1 518 3 view .LVU96
  519:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   UNUSED(msg);
- 326              		.loc 1 519 3 view .LVU97
+ 327              		.loc 1 519 3 view .LVU97
  520:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  521:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* NOTE : This function should not be modified, when the callback is needed,
  522:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****             the HAL_PCDEx_LPM_Callback could be implemented in the user file
  523:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****    */
  524:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** }
- 327              		.loc 1 524 1 is_stmt 0 view .LVU98
- 328 0000 7047     		bx	lr
- 329              		.cfi_endproc
- 330              	.LFE325:
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 16
+ 328              		.loc 1 524 1 is_stmt 0 view .LVU98
+ 329 0000 7047     		bx	lr
+ 330              		.cfi_endproc
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 16
 
 
- 332              		.section	.text.HAL_PCDEx_BCD_Callback,"ax",%progbits
- 333              		.align	1
- 334              		.weak	HAL_PCDEx_BCD_Callback
- 335              		.syntax unified
- 336              		.thumb
- 337              		.thumb_func
- 339              	HAL_PCDEx_BCD_Callback:
- 340              	.LVL26:
- 341              	.LFB326:
+ 331              	.LFE325:
+ 333              		.section	.text.HAL_PCDEx_BCD_Callback,"ax",%progbits
+ 334              		.align	1
+ 335              		.weak	HAL_PCDEx_BCD_Callback
+ 336              		.syntax unified
+ 337              		.thumb
+ 338              		.thumb_func
+ 340              	HAL_PCDEx_BCD_Callback:
+ 341              	.LVL27:
+ 342              	.LFB326:
  525:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  526:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** /**
  527:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   * @brief  Send BatteryCharging message to user layer callback.
@@ -919,278 +920,278 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 1
  531:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   */
  532:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** __weak void HAL_PCDEx_BCD_Callback(PCD_HandleTypeDef *hpcd, PCD_BCD_MsgTypeDef msg)
  533:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** {
- 342              		.loc 1 533 1 is_stmt 1 view -0
- 343              		.cfi_startproc
- 344              		@ args = 0, pretend = 0, frame = 0
- 345              		@ frame_needed = 0, uses_anonymous_args = 0
- 346              		@ link register save eliminated.
+ 343              		.loc 1 533 1 is_stmt 1 view -0
+ 344              		.cfi_startproc
+ 345              		@ args = 0, pretend = 0, frame = 0
+ 346              		@ frame_needed = 0, uses_anonymous_args = 0
+ 347              		@ link register save eliminated.
  534:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* Prevent unused argument(s) compilation warning */
  535:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   UNUSED(hpcd);
- 347              		.loc 1 535 3 view .LVU100
+ 348              		.loc 1 535 3 view .LVU100
  536:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   UNUSED(msg);
- 348              		.loc 1 536 3 view .LVU101
+ 349              		.loc 1 536 3 view .LVU101
  537:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
  538:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   /* NOTE : This function should not be modified, when the callback is needed,
  539:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****             the HAL_PCDEx_BCD_Callback could be implemented in the user file
  540:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****    */
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** }
- 349              		.loc 1 541 1 is_stmt 0 view .LVU102
- 350 0000 7047     		bx	lr
- 351              		.cfi_endproc
- 352              	.LFE326:
- 354              		.section	.text.HAL_PCDEx_BCD_VBUSDetect,"ax",%progbits
- 355              		.align	1
- 356              		.global	HAL_PCDEx_BCD_VBUSDetect
- 357              		.syntax unified
- 358              		.thumb
- 359              		.thumb_func
- 361              	HAL_PCDEx_BCD_VBUSDetect:
- 362              	.LVL27:
- 363              	.LFB322:
+ 350              		.loc 1 541 1 is_stmt 0 view .LVU102
+ 351 0000 7047     		bx	lr
+ 352              		.cfi_endproc
+ 353              	.LFE326:
+ 355              		.section	.text.HAL_PCDEx_BCD_VBUSDetect,"ax",%progbits
+ 356              		.align	1
+ 357              		.global	HAL_PCDEx_BCD_VBUSDetect
+ 358              		.syntax unified
+ 359              		.thumb
+ 360              		.thumb_func
+ 362              	HAL_PCDEx_BCD_VBUSDetect:
+ 363              	.LVL28:
+ 364              	.LFB322:
  388:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_TypeDef *USBx = hpcd->Instance;
- 364              		.loc 1 388 1 is_stmt 1 view -0
- 365              		.cfi_startproc
- 366              		@ args = 0, pretend = 0, frame = 0
- 367              		@ frame_needed = 0, uses_anonymous_args = 0
+ 365              		.loc 1 388 1 is_stmt 1 view -0
+ 366              		.cfi_startproc
+ 367              		@ args = 0, pretend = 0, frame = 0
+ 368              		@ frame_needed = 0, uses_anonymous_args = 0
  388:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USB_TypeDef *USBx = hpcd->Instance;
- 368              		.loc 1 388 1 is_stmt 0 view .LVU104
- 369 0000 70B5     		push	{r4, r5, r6, lr}
- 370              		.cfi_def_cfa_offset 16
- 371              		.cfi_offset 4, -16
- 372              		.cfi_offset 5, -12
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 17
+ 369              		.loc 1 388 1 is_stmt 0 view .LVU104
+ 370 0000 70B5     		push	{r4, r5, r6, lr}
+ 371              		.cfi_def_cfa_offset 16
+ 372              		.cfi_offset 4, -16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 17
 
 
- 373              		.cfi_offset 6, -8
- 374              		.cfi_offset 14, -4
- 375 0002 0546     		mov	r5, r0
+ 373              		.cfi_offset 5, -12
+ 374              		.cfi_offset 6, -8
+ 375              		.cfi_offset 14, -4
+ 376 0002 0546     		mov	r5, r0
  389:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   uint32_t tickstart = HAL_GetTick();
- 376              		.loc 1 389 3 is_stmt 1 view .LVU105
+ 377              		.loc 1 389 3 is_stmt 1 view .LVU105
  389:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   uint32_t tickstart = HAL_GetTick();
- 377              		.loc 1 389 16 is_stmt 0 view .LVU106
- 378 0004 0468     		ldr	r4, [r0]
- 379              	.LVL28:
+ 378              		.loc 1 389 16 is_stmt 0 view .LVU106
+ 379 0004 0468     		ldr	r4, [r0]
+ 380              	.LVL29:
  390:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 380              		.loc 1 390 3 is_stmt 1 view .LVU107
+ 381              		.loc 1 390 3 is_stmt 1 view .LVU107
  390:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 381              		.loc 1 390 24 is_stmt 0 view .LVU108
- 382 0006 FFF7FEFF 		bl	HAL_GetTick
- 383              	.LVL29:
+ 382              		.loc 1 390 24 is_stmt 0 view .LVU108
+ 383 0006 FFF7FEFF 		bl	HAL_GetTick
+ 384              	.LVL30:
  390:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 384              		.loc 1 390 24 view .LVU109
- 385 000a 0646     		mov	r6, r0
- 386              	.LVL30:
+ 385              		.loc 1 390 24 view .LVU109
+ 386 000a 0646     		mov	r6, r0
+ 387              	.LVL31:
  393:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 387              		.loc 1 393 3 is_stmt 1 view .LVU110
- 388 000c 4FF49670 		mov	r0, #300
- 389              	.LVL31:
+ 388              		.loc 1 393 3 is_stmt 1 view .LVU110
+ 389 000c 4FF49670 		mov	r0, #300
+ 390              	.LVL32:
  393:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 390              		.loc 1 393 3 is_stmt 0 view .LVU111
- 391 0010 FFF7FEFF 		bl	HAL_Delay
- 392              	.LVL32:
+ 391              		.loc 1 393 3 is_stmt 0 view .LVU111
+ 392 0010 FFF7FEFF 		bl	HAL_Delay
+ 393              	.LVL33:
  396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 393              		.loc 1 396 3 is_stmt 1 view .LVU112
+ 394              		.loc 1 396 3 is_stmt 1 view .LVU112
  396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 394              		.loc 1 396 12 is_stmt 0 view .LVU113
- 395 0014 B4F85830 		ldrh	r3, [r4, #88]
+ 395              		.loc 1 396 12 is_stmt 0 view .LVU113
+ 396 0014 B4F85830 		ldrh	r3, [r4, #88]
  396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 396              		.loc 1 396 6 view .LVU114
- 397 0018 13F0100F 		tst	r3, #16
- 398 001c 38D1     		bne	.L20
- 399              	.L13:
+ 397              		.loc 1 396 6 view .LVU114
+ 398 0018 13F0100F 		tst	r3, #16
+ 399 001c 38D1     		bne	.L20
+ 400              	.L13:
  406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
- 400              		.loc 1 406 3 is_stmt 1 view .LVU115
+ 401              		.loc 1 406 3 is_stmt 1 view .LVU115
  406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
- 401              		.loc 1 406 7 is_stmt 0 view .LVU116
- 402 001e B4F85830 		ldrh	r3, [r4, #88]
- 403 0022 9BB2     		uxth	r3, r3
+ 402              		.loc 1 406 7 is_stmt 0 view .LVU116
+ 403 001e B4F85830 		ldrh	r3, [r4, #88]
+ 404 0022 9BB2     		uxth	r3, r3
  406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
- 404              		.loc 1 406 14 view .LVU117
- 405 0024 23F00203 		bic	r3, r3, #2
- 406 0028 9BB2     		uxth	r3, r3
- 407 002a A4F85830 		strh	r3, [r4, #88]	@ movhi
+ 405              		.loc 1 406 14 view .LVU117
+ 406 0024 23F00203 		bic	r3, r3, #2
+ 407 0028 9BB2     		uxth	r3, r3
+ 408 002a A4F85830 		strh	r3, [r4, #88]	@ movhi
  407:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   USBx->BCDR |= (USB_BCDR_PDEN);
- 408              		.loc 1 407 3 is_stmt 1 view .LVU118
- 409 002e 3220     		movs	r0, #50
- 410 0030 FFF7FEFF 		bl	HAL_Delay
- 411              	.LVL33:
+ 409              		.loc 1 407 3 is_stmt 1 view .LVU118
+ 410 002e 3220     		movs	r0, #50
+ 411 0030 FFF7FEFF 		bl	HAL_Delay
+ 412              	.LVL34:
  408:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
- 412              		.loc 1 408 3 view .LVU119
+ 413              		.loc 1 408 3 view .LVU119
  408:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
- 413              		.loc 1 408 7 is_stmt 0 view .LVU120
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 18
 
 
- 414 0034 B4F85830 		ldrh	r3, [r4, #88]
- 415 0038 9BB2     		uxth	r3, r3
+ 414              		.loc 1 408 7 is_stmt 0 view .LVU120
+ 415 0034 B4F85830 		ldrh	r3, [r4, #88]
+ 416 0038 9BB2     		uxth	r3, r3
  408:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   HAL_Delay(50U);
- 416              		.loc 1 408 14 view .LVU121
- 417 003a 43F00403 		orr	r3, r3, #4
- 418 003e A4F85830 		strh	r3, [r4, #88]	@ movhi
+ 417              		.loc 1 408 14 view .LVU121
+ 418 003a 43F00403 		orr	r3, r3, #4
+ 419 003e A4F85830 		strh	r3, [r4, #88]	@ movhi
  409:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 419              		.loc 1 409 3 is_stmt 1 view .LVU122
- 420 0042 3220     		movs	r0, #50
- 421 0044 FFF7FEFF 		bl	HAL_Delay
- 422              	.LVL34:
+ 420              		.loc 1 409 3 is_stmt 1 view .LVU122
+ 421 0042 3220     		movs	r0, #50
+ 422 0044 FFF7FEFF 		bl	HAL_Delay
+ 423              	.LVL35:
  412:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 423              		.loc 1 412 3 view .LVU123
+ 424              		.loc 1 412 3 view .LVU123
  412:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 424              		.loc 1 412 12 is_stmt 0 view .LVU124
- 425 0048 B4F85830 		ldrh	r3, [r4, #88]
+ 425              		.loc 1 412 12 is_stmt 0 view .LVU124
+ 426 0048 B4F85830 		ldrh	r3, [r4, #88]
  412:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 426              		.loc 1 412 6 view .LVU125
- 427 004c 13F0200F 		tst	r3, #32
- 428 0050 28D0     		beq	.L14
+ 427              		.loc 1 412 6 view .LVU125
+ 428 004c 13F0200F 		tst	r3, #32
+ 429 0050 28D0     		beq	.L14
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
- 429              		.loc 1 416 5 is_stmt 1 view .LVU126
+ 430              		.loc 1 416 5 is_stmt 1 view .LVU126
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
- 430              		.loc 1 416 9 is_stmt 0 view .LVU127
- 431 0052 B4F85830 		ldrh	r3, [r4, #88]
- 432 0056 9BB2     		uxth	r3, r3
+ 431              		.loc 1 416 9 is_stmt 0 view .LVU127
+ 432 0052 B4F85830 		ldrh	r3, [r4, #88]
+ 433 0056 9BB2     		uxth	r3, r3
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
- 433              		.loc 1 416 16 view .LVU128
- 434 0058 23F00403 		bic	r3, r3, #4
- 435 005c 9BB2     		uxth	r3, r3
- 436 005e A4F85830 		strh	r3, [r4, #88]	@ movhi
+ 434              		.loc 1 416 16 view .LVU128
+ 435 0058 23F00403 		bic	r3, r3, #4
+ 436 005c 9BB2     		uxth	r3, r3
+ 437 005e A4F85830 		strh	r3, [r4, #88]	@ movhi
  417:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     USBx->BCDR |= (USB_BCDR_SDEN);
- 437              		.loc 1 417 5 is_stmt 1 view .LVU129
- 438 0062 3220     		movs	r0, #50
- 439 0064 FFF7FEFF 		bl	HAL_Delay
- 440              	.LVL35:
+ 438              		.loc 1 417 5 is_stmt 1 view .LVU129
+ 439 0062 3220     		movs	r0, #50
+ 440 0064 FFF7FEFF 		bl	HAL_Delay
+ 441              	.LVL36:
  418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
- 441              		.loc 1 418 5 view .LVU130
+ 442              		.loc 1 418 5 view .LVU130
  418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
- 442              		.loc 1 418 9 is_stmt 0 view .LVU131
- 443 0068 B4F85830 		ldrh	r3, [r4, #88]
- 444 006c 9BB2     		uxth	r3, r3
+ 443              		.loc 1 418 9 is_stmt 0 view .LVU131
+ 444 0068 B4F85830 		ldrh	r3, [r4, #88]
+ 445 006c 9BB2     		uxth	r3, r3
  418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     HAL_Delay(50U);
- 445              		.loc 1 418 16 view .LVU132
- 446 006e 43F00803 		orr	r3, r3, #8
- 447 0072 A4F85830 		strh	r3, [r4, #88]	@ movhi
+ 446              		.loc 1 418 16 view .LVU132
+ 447 006e 43F00803 		orr	r3, r3, #8
+ 448 0072 A4F85830 		strh	r3, [r4, #88]	@ movhi
  419:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 448              		.loc 1 419 5 is_stmt 1 view .LVU133
- 449 0076 3220     		movs	r0, #50
- 450 0078 FFF7FEFF 		bl	HAL_Delay
- 451              	.LVL36:
+ 449              		.loc 1 419 5 is_stmt 1 view .LVU133
+ 450 0076 3220     		movs	r0, #50
+ 451 0078 FFF7FEFF 		bl	HAL_Delay
+ 452              	.LVL37:
  422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     {
- 452              		.loc 1 422 5 view .LVU134
+ 453              		.loc 1 422 5 view .LVU134
  422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     {
- 453              		.loc 1 422 14 is_stmt 0 view .LVU135
- 454 007c B4F85830 		ldrh	r3, [r4, #88]
- 422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     {
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 19
+ 454              		.loc 1 422 14 is_stmt 0 view .LVU135
+ 455 007c B4F85830 		ldrh	r3, [r4, #88]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 19
 
 
- 455              		.loc 1 422 8 view .LVU136
- 456 0080 13F0400F 		tst	r3, #64
- 457 0084 09D0     		beq	.L15
+ 422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****     {
+ 456              		.loc 1 422 8 view .LVU136
+ 457 0080 13F0400F 		tst	r3, #64
+ 458 0084 09D0     		beq	.L15
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
- 458              		.loc 1 428 7 is_stmt 1 view .LVU137
- 459 0086 FB21     		movs	r1, #251
- 460 0088 2846     		mov	r0, r5
- 461 008a FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
- 462              	.LVL37:
- 463 008e 0DE0     		b	.L16
- 464              	.L20:
+ 459              		.loc 1 428 7 is_stmt 1 view .LVU137
+ 460 0086 FB21     		movs	r1, #251
+ 461 0088 2846     		mov	r0, r5
+ 462 008a FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 463              	.LVL38:
+ 464 008e 0DE0     		b	.L16
+ 465              	.L20:
  401:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
- 465              		.loc 1 401 5 view .LVU138
- 466 0090 FE21     		movs	r1, #254
- 467 0092 2846     		mov	r0, r5
- 468 0094 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
- 469              	.LVL38:
- 470 0098 C1E7     		b	.L13
- 471              	.L15:
+ 466              		.loc 1 401 5 view .LVU138
+ 467 0090 FE21     		movs	r1, #254
+ 468 0092 2846     		mov	r0, r5
+ 469 0094 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 470              	.LVL39:
+ 471 0098 C1E7     		b	.L13
+ 472              	.L15:
  437:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
- 472              		.loc 1 437 7 view .LVU139
- 473 009a FC21     		movs	r1, #252
- 474 009c 2846     		mov	r0, r5
- 475 009e FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
- 476              	.LVL39:
- 477 00a2 03E0     		b	.L16
- 478              	.L14:
+ 473              		.loc 1 437 7 view .LVU139
+ 474 009a FC21     		movs	r1, #252
+ 475 009c 2846     		mov	r0, r5
+ 476 009e FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 477              	.LVL40:
+ 478 00a2 03E0     		b	.L16
+ 479              	.L14:
  447:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
- 479              		.loc 1 447 5 view .LVU140
- 480 00a4 FD21     		movs	r1, #253
- 481 00a6 2846     		mov	r0, r5
- 482 00a8 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
- 483              	.LVL40:
- 484              	.L16:
+ 480              		.loc 1 447 5 view .LVU140
+ 481 00a4 FD21     		movs	r1, #253
+ 482 00a6 2846     		mov	r0, r5
+ 483 00a8 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 484              	.LVL41:
+ 485              	.L16:
  452:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 485              		.loc 1 452 3 view .LVU141
+ 486              		.loc 1 452 3 view .LVU141
  452:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 486              		.loc 1 452 9 is_stmt 0 view .LVU142
- 487 00ac 2846     		mov	r0, r5
- 488 00ae FFF7FEFF 		bl	HAL_PCDEx_DeActivateBCD
- 489              	.LVL41:
+ 487              		.loc 1 452 9 is_stmt 0 view .LVU142
+ 488 00ac 2846     		mov	r0, r5
+ 489 00ae FFF7FEFF 		bl	HAL_PCDEx_DeActivateBCD
+ 490              	.LVL42:
  455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 490              		.loc 1 455 3 is_stmt 1 view .LVU143
+ 491              		.loc 1 455 3 is_stmt 1 view .LVU143
  455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 491              		.loc 1 455 8 is_stmt 0 view .LVU144
- 492 00b2 FFF7FEFF 		bl	HAL_GetTick
- 493              	.LVL42:
+ 492              		.loc 1 455 8 is_stmt 0 view .LVU144
+ 493 00b2 FFF7FEFF 		bl	HAL_GetTick
+ 494              	.LVL43:
  455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 494              		.loc 1 455 22 discriminator 1 view .LVU145
- 495 00b6 801B     		subs	r0, r0, r6
+ 495              		.loc 1 455 22 discriminator 1 view .LVU145
+ 496 00b6 801B     		subs	r0, r0, r6
  455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c ****   {
- 496              		.loc 1 455 6 discriminator 1 view .LVU146
- 497 00b8 B0F57A7F 		cmp	r0, #1000
- 498 00bc 04D9     		bls	.L17
+ 497              		.loc 1 455 6 discriminator 1 view .LVU146
+ 498 00b8 B0F57A7F 		cmp	r0, #1000
+ 499 00bc 04D9     		bls	.L17
  460:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
- 499              		.loc 1 460 5 is_stmt 1 view .LVU147
- 500 00be FF21     		movs	r1, #255
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 20
+ 500              		.loc 1 460 5 is_stmt 1 view .LVU147
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 20
 
 
- 501 00c0 2846     		mov	r0, r5
- 502 00c2 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
- 503              	.LVL43:
- 504              	.L12:
+ 501 00be FF21     		movs	r1, #255
+ 502 00c0 2846     		mov	r0, r5
+ 503 00c2 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 504              	.LVL44:
+ 505              	.L12:
  471:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 505              		.loc 1 471 1 is_stmt 0 view .LVU148
- 506 00c6 70BD     		pop	{r4, r5, r6, pc}
- 507              	.LVL44:
- 508              	.L17:
+ 506              		.loc 1 471 1 is_stmt 0 view .LVU148
+ 507 00c6 70BD     		pop	{r4, r5, r6, pc}
+ 508              	.LVL45:
+ 509              	.L17:
  468:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
- 509              		.loc 1 468 5 is_stmt 1 view .LVU149
- 510 00c8 0021     		movs	r1, #0
- 511 00ca 2846     		mov	r0, r5
- 512 00cc FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
- 513              	.LVL45:
+ 510              		.loc 1 468 5 is_stmt 1 view .LVU149
+ 511 00c8 0021     		movs	r1, #0
+ 512 00ca 2846     		mov	r0, r5
+ 513 00cc FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 514              	.LVL46:
  471:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c **** 
- 514              		.loc 1 471 1 is_stmt 0 view .LVU150
- 515 00d0 F9E7     		b	.L12
- 516              		.cfi_endproc
- 517              	.LFE322:
- 519              		.text
- 520              	.Letext0:
- 521              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 522              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 523              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
- 524              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 525              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
- 526              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
- 527              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s 			page 21
+ 515              		.loc 1 471 1 is_stmt 0 view .LVU150
+ 516 00d0 F9E7     		b	.L12
+ 517              		.cfi_endproc
+ 518              	.LFE322:
+ 520              		.text
+ 521              	.Letext0:
+ 522              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 523              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ 524              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 525              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 526              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
+ 527              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
+ 528              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_pcd_ex.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:21     .text.HAL_PCDEx_PMAConfig:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:27     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:102    .text.HAL_PCDEx_ActivateBCD:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:108    .text.HAL_PCDEx_ActivateBCD:00000000 HAL_PCDEx_ActivateBCD
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:164    .text.HAL_PCDEx_DeActivateBCD:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:170    .text.HAL_PCDEx_DeActivateBCD:00000000 HAL_PCDEx_DeActivateBCD
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:207    .text.HAL_PCDEx_ActivateLPM:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:213    .text.HAL_PCDEx_ActivateLPM:00000000 HAL_PCDEx_ActivateLPM
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:260    .text.HAL_PCDEx_DeActivateLPM:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:266    .text.HAL_PCDEx_DeActivateLPM:00000000 HAL_PCDEx_DeActivateLPM
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:311    .text.HAL_PCDEx_LPM_Callback:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:317    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:333    .text.HAL_PCDEx_BCD_Callback:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:339    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:355    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc5tiFuQ.s:361    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 HAL_PCDEx_BCD_VBUSDetect
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:21     .text.HAL_PCDEx_PMAConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:27     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:103    .text.HAL_PCDEx_ActivateBCD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:109    .text.HAL_PCDEx_ActivateBCD:00000000 HAL_PCDEx_ActivateBCD
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:165    .text.HAL_PCDEx_DeActivateBCD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:171    .text.HAL_PCDEx_DeActivateBCD:00000000 HAL_PCDEx_DeActivateBCD
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:208    .text.HAL_PCDEx_ActivateLPM:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:214    .text.HAL_PCDEx_ActivateLPM:00000000 HAL_PCDEx_ActivateLPM
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:261    .text.HAL_PCDEx_DeActivateLPM:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:267    .text.HAL_PCDEx_DeActivateLPM:00000000 HAL_PCDEx_DeActivateLPM
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:312    .text.HAL_PCDEx_LPM_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:318    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:334    .text.HAL_PCDEx_BCD_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:340    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:356    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cciK1cd7.s:362    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 HAL_PCDEx_BCD_VBUSDetect
 
 UNDEFINED SYMBOLS
 HAL_GetTick

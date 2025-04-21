@@ -1,0 +1,111 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"EPD_Conf.c"
+  16              		.text
+  17              		.section	.text.DEV_SPI_WriteByte,"ax",%progbits
+  18              		.align	1
+  19              		.global	DEV_SPI_WriteByte
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	DEV_SPI_WriteByte:
+  25              		@ args = 0, pretend = 0, frame = 8
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 00B5     		push	{lr}
+  28 0002 83B0     		sub	sp, sp, #12
+  29 0004 8DF80700 		strb	r0, [sp, #7]
+  30 0008 4FF47A73 		mov	r3, #1000
+  31 000c 0122     		movs	r2, #1
+  32 000e 0DF10701 		add	r1, sp, #7
+  33 0012 0348     		ldr	r0, .L3
+  34 0014 FFF7FEFF 		bl	HAL_SPI_Transmit
+  35 0018 03B0     		add	sp, sp, #12
+  36              		@ sp needed
+  37 001a 5DF804FB 		ldr	pc, [sp], #4
+  38              	.L4:
+  39 001e 00BF     		.align	2
+  40              	.L3:
+  41 0020 00000000 		.word	hspi1
+  43              		.section	.text.DEV_Module_Init,"ax",%progbits
+  44              		.align	1
+  45              		.global	DEV_Module_Init
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  50              	DEV_Module_Init:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53 0000 08B5     		push	{r3, lr}
+  54 0002 0022     		movs	r2, #0
+  55 0004 4021     		movs	r1, #64
+  56 0006 4FF09040 		mov	r0, #1207959552
+  57 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  58 000e 0022     		movs	r2, #0
+  59 0010 1021     		movs	r1, #16
+  60 0012 4FF09040 		mov	r0, #1207959552
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 2
+
+
+  61 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  62 001a 0122     		movs	r2, #1
+  63 001c 0821     		movs	r1, #8
+  64 001e 4FF09040 		mov	r0, #1207959552
+  65 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  66 0026 0020     		movs	r0, #0
+  67 0028 08BD     		pop	{r3, pc}
+  69              		.section	.text.DEV_Module_Exit,"ax",%progbits
+  70              		.align	1
+  71              		.global	DEV_Module_Exit
+  72              		.syntax unified
+  73              		.thumb
+  74              		.thumb_func
+  76              	DEV_Module_Exit:
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 08B5     		push	{r3, lr}
+  80 0002 0022     		movs	r2, #0
+  81 0004 4021     		movs	r1, #64
+  82 0006 4FF09040 		mov	r0, #1207959552
+  83 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  84 000e 0022     		movs	r2, #0
+  85 0010 1021     		movs	r1, #16
+  86 0012 4FF09040 		mov	r0, #1207959552
+  87 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  88 001a 0022     		movs	r2, #0
+  89 001c 0821     		movs	r1, #8
+  90 001e 4FF09040 		mov	r0, #1207959552
+  91 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  92 0026 08BD     		pop	{r3, pc}
+  94              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 EPD_Conf.c
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:18     .text.DEV_SPI_WriteByte:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:24     .text.DEV_SPI_WriteByte:00000000 DEV_SPI_WriteByte
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:41     .text.DEV_SPI_WriteByte:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:44     .text.DEV_Module_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:50     .text.DEV_Module_Init:00000000 DEV_Module_Init
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:70     .text.DEV_Module_Exit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:76     .text.DEV_Module_Exit:00000000 DEV_Module_Exit
+
+UNDEFINED SYMBOLS
+HAL_SPI_Transmit
+hspi1
+HAL_GPIO_WritePin

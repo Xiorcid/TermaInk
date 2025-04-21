@@ -1,0 +1,377 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"queue.c"
+  16              		.text
+  17              		.section	.text.q_init,"ax",%progbits
+  18              		.align	1
+  19              		.global	q_init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	q_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 054B     		ldr	r3, .L2
+  29 0002 0022     		movs	r2, #0
+  30 0004 83F86020 		strb	r2, [r3, #96]
+  31 0008 83F86320 		strb	r2, [r3, #99]
+  32 000c 0121     		movs	r1, #1
+  33 000e 83F86210 		strb	r1, [r3, #98]
+  34 0012 83F86120 		strb	r2, [r3, #97]
+  35 0016 7047     		bx	lr
+  36              	.L3:
+  37              		.align	2
+  38              	.L2:
+  39 0018 00000000 		.word	data_queue
+  41              		.section	.text.q_push,"ax",%progbits
+  42              		.align	1
+  43              		.global	q_push
+  44              		.syntax unified
+  45              		.thumb
+  46              		.thumb_func
+  48              	q_push:
+  49              		@ args = 0, pretend = 0, frame = 64
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51 0000 30B5     		push	{r4, r5, lr}
+  52 0002 91B0     		sub	sp, sp, #68
+  53 0004 344A     		ldr	r2, .L10
+  54 0006 92F86030 		ldrb	r3, [r2, #96]	@ zero_extendqisi2
+  55 000a 22F81300 		strh	r0, [r2, r3, lsl #1]	@ movhi
+  56 000e 0133     		adds	r3, r3, #1
+  57 0010 DBB2     		uxtb	r3, r3
+  58 0012 82F86030 		strb	r3, [r2, #96]
+  59 0016 92F86310 		ldrb	r1, [r2, #99]	@ zero_extendqisi2
+  60 001a 0131     		adds	r1, r1, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 2
+
+
+  61 001c 82F86310 		strb	r1, [r2, #99]
+  62 0020 2F2B     		cmp	r3, #47
+  63 0022 05D9     		bls	.L5
+  64 0024 1346     		mov	r3, r2
+  65 0026 0022     		movs	r2, #0
+  66 0028 83F86220 		strb	r2, [r3, #98]
+  67 002c 83F86020 		strb	r2, [r3, #96]
+  68              	.L5:
+  69 0030 294B     		ldr	r3, .L10
+  70 0032 93F86230 		ldrb	r3, [r3, #98]	@ zero_extendqisi2
+  71 0036 3BB9     		cbnz	r3, .L6
+  72 0038 274B     		ldr	r3, .L10
+  73 003a 93F86020 		ldrb	r2, [r3, #96]	@ zero_extendqisi2
+  74 003e 83F86120 		strb	r2, [r3, #97]
+  75 0042 2F22     		movs	r2, #47
+  76 0044 83F86320 		strb	r2, [r3, #99]
+  77              	.L6:
+  78 0048 0BA9     		add	r1, sp, #44
+  79 004a 0024     		movs	r4, #0
+  80 004c 0B94     		str	r4, [sp, #44]
+  81 004e 4C60     		str	r4, [r1, #4]
+  82 0050 8C60     		str	r4, [r1, #8]
+  83 0052 CC60     		str	r4, [r1, #12]
+  84 0054 0C61     		str	r4, [r1, #16]
+  85 0056 0A94     		str	r4, [sp, #40]
+  86 0058 204D     		ldr	r5, .L10+4
+  87 005a 2246     		mov	r2, r4
+  88 005c 2846     		mov	r0, r5
+  89 005e FFF7FEFF 		bl	HAL_RTC_GetTime
+  90 0062 2246     		mov	r2, r4
+  91 0064 0AA9     		add	r1, sp, #40
+  92 0066 2846     		mov	r0, r5
+  93 0068 FFF7FEFF 		bl	HAL_RTC_GetDate
+  94 006c 9DF82B30 		ldrb	r3, [sp, #43]	@ zero_extendqisi2
+  95 0070 6433     		adds	r3, r3, #100
+  96 0072 0693     		str	r3, [sp, #24]
+  97 0074 9DF82930 		ldrb	r3, [sp, #41]	@ zero_extendqisi2
+  98 0078 013B     		subs	r3, r3, #1
+  99 007a 0593     		str	r3, [sp, #20]
+ 100 007c 9DF82A30 		ldrb	r3, [sp, #42]	@ zero_extendqisi2
+ 101 0080 0493     		str	r3, [sp, #16]
+ 102 0082 9DF82C30 		ldrb	r3, [sp, #44]	@ zero_extendqisi2
+ 103 0086 0393     		str	r3, [sp, #12]
+ 104 0088 9DF82D30 		ldrb	r3, [sp, #45]	@ zero_extendqisi2
+ 105 008c 0293     		str	r3, [sp, #8]
+ 106 008e 9DF82E30 		ldrb	r3, [sp, #46]	@ zero_extendqisi2
+ 107 0092 0193     		str	r3, [sp, #4]
+ 108 0094 0123     		movs	r3, #1
+ 109 0096 0993     		str	r3, [sp, #36]
+ 110 0098 01A8     		add	r0, sp, #4
+ 111 009a FFF7FEFF 		bl	mktime
+ 112 009e 0446     		mov	r4, r0
+ 113 00a0 FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
+ 114 00a4 0E4B     		ldr	r3, .L10+8
+ 115 00a6 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 116 00a8 63B1     		cbz	r3, .L9
+ 117              	.L7:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 3
+
+
+ 118 00aa 0C4C     		ldr	r4, .L10+4
+ 119 00ac 0521     		movs	r1, #5
+ 120 00ae 2046     		mov	r0, r4
+ 121 00b0 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 122 00b4 00F5E162 		add	r2, r0, #1800
+ 123 00b8 0521     		movs	r1, #5
+ 124 00ba 2046     		mov	r0, r4
+ 125 00bc FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 126 00c0 11B0     		add	sp, sp, #68
+ 127              		@ sp needed
+ 128 00c2 30BD     		pop	{r4, r5, pc}
+ 129              	.L9:
+ 130 00c4 2246     		mov	r2, r4
+ 131 00c6 0521     		movs	r1, #5
+ 132 00c8 2846     		mov	r0, r5
+ 133 00ca FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 134 00ce 044B     		ldr	r3, .L10+8
+ 135 00d0 0122     		movs	r2, #1
+ 136 00d2 1A70     		strb	r2, [r3]
+ 137 00d4 E9E7     		b	.L7
+ 138              	.L11:
+ 139 00d6 00BF     		.align	2
+ 140              	.L10:
+ 141 00d8 00000000 		.word	data_queue
+ 142 00dc 00000000 		.word	hrtc
+ 143 00e0 00000000 		.word	flag
+ 145              		.section	.text.q_get,"ax",%progbits
+ 146              		.align	1
+ 147              		.global	q_get
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 152              	q_get:
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155              		@ link register save eliminated.
+ 156 0000 064B     		ldr	r3, .L14
+ 157 0002 93F86130 		ldrb	r3, [r3, #97]	@ zero_extendqisi2
+ 158 0006 1844     		add	r0, r0, r3
+ 159 0008 C0B2     		uxtb	r0, r0
+ 160 000a 2F28     		cmp	r0, #47
+ 161 000c 01D9     		bls	.L13
+ 162 000e 3038     		subs	r0, r0, #48
+ 163 0010 C0B2     		uxtb	r0, r0
+ 164              	.L13:
+ 165 0012 024B     		ldr	r3, .L14
+ 166 0014 33F81000 		ldrh	r0, [r3, r0, lsl #1]
+ 167 0018 7047     		bx	lr
+ 168              	.L15:
+ 169 001a 00BF     		.align	2
+ 170              	.L14:
+ 171 001c 00000000 		.word	data_queue
+ 173              		.section	.text.q_save,"ax",%progbits
+ 174              		.align	1
+ 175              		.global	q_save
+ 176              		.syntax unified
+ 177              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 4
+
+
+ 178              		.thumb_func
+ 180              	q_save:
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183 0000 10B5     		push	{r4, lr}
+ 184 0002 FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
+ 185 0006 184A     		ldr	r2, .L22
+ 186 0008 0621     		movs	r1, #6
+ 187 000a 1848     		ldr	r0, .L22+4
+ 188 000c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 189 0010 0024     		movs	r4, #0
+ 190 0012 0EE0     		b	.L17
+ 191              	.L18:
+ 192 0014 6300     		lsls	r3, r4, #1
+ 193 0016 1649     		ldr	r1, .L22+8
+ 194 0018 31F82420 		ldrh	r2, [r1, r4, lsl #2]
+ 195 001c 0133     		adds	r3, r3, #1
+ 196 001e 31F81330 		ldrh	r3, [r1, r3, lsl #1]
+ 197 0022 43EA0242 		orr	r2, r3, r2, lsl #16
+ 198 0026 04F10801 		add	r1, r4, #8
+ 199 002a 1048     		ldr	r0, .L22+4
+ 200 002c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 201 0030 0134     		adds	r4, r4, #1
+ 202              	.L17:
+ 203 0032 172C     		cmp	r4, #23
+ 204 0034 EEDD     		ble	.L18
+ 205 0036 0E4A     		ldr	r2, .L22+8
+ 206 0038 92F86310 		ldrb	r1, [r2, #99]	@ zero_extendqisi2
+ 207 003c 92F86130 		ldrb	r3, [r2, #97]	@ zero_extendqisi2
+ 208 0040 1B04     		lsls	r3, r3, #16
+ 209 0042 43EA0163 		orr	r3, r3, r1, lsl #24
+ 210 0046 92F86010 		ldrb	r1, [r2, #96]	@ zero_extendqisi2
+ 211 004a 43EA0123 		orr	r3, r3, r1, lsl #8
+ 212 004e 92F86220 		ldrb	r2, [r2, #98]	@ zero_extendqisi2
+ 213 0052 32B1     		cbz	r2, .L20
+ 214 0054 0122     		movs	r2, #1
+ 215              	.L19:
+ 216 0056 1A43     		orrs	r2, r2, r3
+ 217 0058 0721     		movs	r1, #7
+ 218 005a 0448     		ldr	r0, .L22+4
+ 219 005c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 220 0060 10BD     		pop	{r4, pc}
+ 221              	.L20:
+ 222 0062 0022     		movs	r2, #0
+ 223 0064 F7E7     		b	.L19
+ 224              	.L23:
+ 225 0066 00BF     		.align	2
+ 226              	.L22:
+ 227 0068 FF55FFAA 		.word	-1426106881
+ 228 006c 00000000 		.word	hrtc
+ 229 0070 00000000 		.word	data_queue
+ 231              		.section	.text.q_load,"ax",%progbits
+ 232              		.align	1
+ 233              		.global	q_load
+ 234              		.syntax unified
+ 235              		.thumb
+ 236              		.thumb_func
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 5
+
+
+ 238              	q_load:
+ 239              		@ args = 0, pretend = 0, frame = 0
+ 240              		@ frame_needed = 0, uses_anonymous_args = 0
+ 241 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 242 0004 0621     		movs	r1, #6
+ 243 0006 2248     		ldr	r0, .L30
+ 244 0008 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 245 000c 214B     		ldr	r3, .L30+4
+ 246 000e 9842     		cmp	r0, r3
+ 247 0010 3BD1     		bne	.L28
+ 248 0012 0024     		movs	r4, #0
+ 249 0014 13E0     		b	.L26
+ 250              	.L27:
+ 251 0016 04F10808 		add	r8, r4, #8
+ 252 001a 1D4F     		ldr	r7, .L30
+ 253 001c 4146     		mov	r1, r8
+ 254 001e 3846     		mov	r0, r7
+ 255 0020 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 256 0024 6500     		lsls	r5, r4, #1
+ 257 0026 000C     		lsrs	r0, r0, #16
+ 258 0028 1B4E     		ldr	r6, .L30+8
+ 259 002a 26F81500 		strh	r0, [r6, r5, lsl #1]	@ movhi
+ 260 002e 4146     		mov	r1, r8
+ 261 0030 3846     		mov	r0, r7
+ 262 0032 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 263 0036 0135     		adds	r5, r5, #1
+ 264 0038 26F81500 		strh	r0, [r6, r5, lsl #1]	@ movhi
+ 265 003c 0134     		adds	r4, r4, #1
+ 266              	.L26:
+ 267 003e 172C     		cmp	r4, #23
+ 268 0040 E9DD     		ble	.L27
+ 269 0042 134D     		ldr	r5, .L30
+ 270 0044 0721     		movs	r1, #7
+ 271 0046 2846     		mov	r0, r5
+ 272 0048 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 273 004c 000E     		lsrs	r0, r0, #24
+ 274 004e 124C     		ldr	r4, .L30+8
+ 275 0050 84F86300 		strb	r0, [r4, #99]
+ 276 0054 0721     		movs	r1, #7
+ 277 0056 2846     		mov	r0, r5
+ 278 0058 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 279 005c C0F30740 		ubfx	r0, r0, #16, #8
+ 280 0060 84F86100 		strb	r0, [r4, #97]
+ 281 0064 0721     		movs	r1, #7
+ 282 0066 2846     		mov	r0, r5
+ 283 0068 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 284 006c C0F30720 		ubfx	r0, r0, #8, #8
+ 285 0070 84F86000 		strb	r0, [r4, #96]
+ 286 0074 0721     		movs	r1, #7
+ 287 0076 2846     		mov	r0, r5
+ 288 0078 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 289 007c 00F00100 		and	r0, r0, #1
+ 290 0080 84F86200 		strb	r0, [r4, #98]
+ 291 0084 0120     		movs	r0, #1
+ 292              	.L25:
+ 293 0086 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 294              	.L28:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 6
+
+
+ 295 008a 0020     		movs	r0, #0
+ 296 008c FBE7     		b	.L25
+ 297              	.L31:
+ 298 008e 00BF     		.align	2
+ 299              	.L30:
+ 300 0090 00000000 		.word	hrtc
+ 301 0094 FF55FFAA 		.word	-1426106881
+ 302 0098 00000000 		.word	data_queue
+ 304              		.section	.text.q_len,"ax",%progbits
+ 305              		.align	1
+ 306              		.global	q_len
+ 307              		.syntax unified
+ 308              		.thumb
+ 309              		.thumb_func
+ 311              	q_len:
+ 312              		@ args = 0, pretend = 0, frame = 0
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+ 314              		@ link register save eliminated.
+ 315 0000 014B     		ldr	r3, .L33
+ 316 0002 93F86300 		ldrb	r0, [r3, #99]	@ zero_extendqisi2
+ 317 0006 7047     		bx	lr
+ 318              	.L34:
+ 319              		.align	2
+ 320              	.L33:
+ 321 0008 00000000 		.word	data_queue
+ 323              		.section	.bss.flag,"aw",%nobits
+ 326              	flag:
+ 327 0000 00       		.space	1
+ 328              		.global	data_queue
+ 329              		.section	.bss.data_queue,"aw",%nobits
+ 330              		.align	2
+ 333              	data_queue:
+ 334 0000 00000000 		.space	100
+ 334      00000000 
+ 334      00000000 
+ 334      00000000 
+ 334      00000000 
+ 335              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 queue.c
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:18     .text.q_init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:24     .text.q_init:00000000 q_init
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:39     .text.q_init:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:333    .bss.data_queue:00000000 data_queue
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:42     .text.q_push:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:48     .text.q_push:00000000 q_push
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:141    .text.q_push:000000d8 $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:326    .bss.flag:00000000 flag
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:146    .text.q_get:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:152    .text.q_get:00000000 q_get
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:171    .text.q_get:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:174    .text.q_save:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:180    .text.q_save:00000000 q_save
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:227    .text.q_save:00000068 $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:232    .text.q_load:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:238    .text.q_load:00000000 q_load
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:300    .text.q_load:00000090 $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:305    .text.q_len:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:311    .text.q_len:00000000 q_len
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:321    .text.q_len:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:327    .bss.flag:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccZy63w1.s:330    .bss.data_queue:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_RTC_GetTime
+HAL_RTC_GetDate
+mktime
+HAL_PWR_EnableBkUpAccess
+HAL_RTCEx_BKUPRead
+HAL_RTCEx_BKUPWrite
+hrtc

@@ -1,0 +1,170 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"buttons.c"
+  16              		.text
+  17              		.section	.text.init,"ax",%progbits
+  18              		.align	1
+  19              		.global	init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 0123     		movs	r3, #1
+  29 0002 0374     		strb	r3, [r0, #16]
+  30 0004 7047     		bx	lr
+  32              		.section	.text.tick,"ax",%progbits
+  33              		.align	1
+  34              		.global	tick
+  35              		.syntax unified
+  36              		.thumb
+  37              		.thumb_func
+  39              	tick:
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  43 0002 0446     		mov	r4, r0
+  44 0004 8188     		ldrh	r1, [r0, #4]
+  45 0006 0068     		ldr	r0, [r0]
+  46 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  47 000c B0FA80F5 		clz	r5, r0
+  48 0010 6D09     		lsrs	r5, r5, #5
+  49 0012 A779     		ldrb	r7, [r4, #6]	@ zero_extendqisi2
+  50 0014 AF42     		cmp	r7, r5
+  51 0016 0CBF     		ite	eq
+  52 0018 0126     		moveq	r6, #1
+  53 001a 0026     		movne	r6, #0
+  54 001c 01D0     		beq	.L3
+  55 001e 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+  56 0020 3BB1     		cbz	r3, .L8
+  57              	.L3:
+  58 0022 AF42     		cmp	r7, r5
+  59 0024 17D0     		beq	.L9
+  60              	.L5:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s 			page 2
+
+
+  61 0026 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+  62 0028 0BB9     		cbnz	r3, .L6
+  63 002a AF42     		cmp	r7, r5
+  64 002c 25D0     		beq	.L10
+  65              	.L6:
+  66 002e 3046     		mov	r0, r6
+  67 0030 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+  68              	.L8:
+  69 0032 FFF7FEFF 		bl	HAL_GetTick
+  70 0036 A368     		ldr	r3, [r4, #8]
+  71 0038 C01A     		subs	r0, r0, r3
+  72 003a 6428     		cmp	r0, #100
+  73 003c F1D9     		bls	.L3
+  74 003e 0123     		movs	r3, #1
+  75 0040 2374     		strb	r3, [r4, #16]
+  76 0042 637C     		ldrb	r3, [r4, #17]	@ zero_extendqisi2
+  77 0044 0BB9     		cbnz	r3, .L4
+  78 0046 0123     		movs	r3, #1
+  79 0048 E374     		strb	r3, [r4, #19]
+  80              	.L4:
+  81 004a 0023     		movs	r3, #0
+  82 004c 6374     		strb	r3, [r4, #17]
+  83 004e FFF7FEFF 		bl	HAL_GetTick
+  84 0052 A060     		str	r0, [r4, #8]
+  85 0054 E5E7     		b	.L3
+  86              	.L9:
+  87 0056 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+  88 0058 002B     		cmp	r3, #0
+  89 005a E4D0     		beq	.L5
+  90 005c FFF7FEFF 		bl	HAL_GetTick
+  91 0060 A368     		ldr	r3, [r4, #8]
+  92 0062 C01A     		subs	r0, r0, r3
+  93 0064 6428     		cmp	r0, #100
+  94 0066 DED9     		bls	.L5
+  95 0068 0023     		movs	r3, #0
+  96 006a 2374     		strb	r3, [r4, #16]
+  97 006c FFF7FEFF 		bl	HAL_GetTick
+  98 0070 A060     		str	r0, [r4, #8]
+  99 0072 FFF7FEFF 		bl	HAL_GetTick
+ 100 0076 E060     		str	r0, [r4, #12]
+ 101 0078 D5E7     		b	.L5
+ 102              	.L10:
+ 103 007a FFF7FEFF 		bl	HAL_GetTick
+ 104 007e E368     		ldr	r3, [r4, #12]
+ 105 0080 C01A     		subs	r0, r0, r3
+ 106 0082 C728     		cmp	r0, #199
+ 107 0084 D3D9     		bls	.L6
+ 108 0086 637C     		ldrb	r3, [r4, #17]	@ zero_extendqisi2
+ 109 0088 002B     		cmp	r3, #0
+ 110 008a D0D1     		bne	.L6
+ 111 008c 0123     		movs	r3, #1
+ 112 008e 6374     		strb	r3, [r4, #17]
+ 113 0090 FFF7FEFF 		bl	HAL_GetTick
+ 114 0094 E060     		str	r0, [r4, #12]
+ 115 0096 CAE7     		b	.L6
+ 117              		.section	.text.isClicked,"ax",%progbits
+ 118              		.align	1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s 			page 3
+
+
+ 119              		.global	isClicked
+ 120              		.syntax unified
+ 121              		.thumb
+ 122              		.thumb_func
+ 124              	isClicked:
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 127              		@ link register save eliminated.
+ 128 0000 0346     		mov	r3, r0
+ 129 0002 C07C     		ldrb	r0, [r0, #19]	@ zero_extendqisi2
+ 130 0004 00B9     		cbnz	r0, .L13
+ 131              	.L12:
+ 132 0006 7047     		bx	lr
+ 133              	.L13:
+ 134 0008 0022     		movs	r2, #0
+ 135 000a DA74     		strb	r2, [r3, #19]
+ 136 000c FBE7     		b	.L12
+ 138              		.section	.text.isHold,"ax",%progbits
+ 139              		.align	1
+ 140              		.global	isHold
+ 141              		.syntax unified
+ 142              		.thumb
+ 143              		.thumb_func
+ 145              	isHold:
+ 146              		@ args = 0, pretend = 0, frame = 0
+ 147              		@ frame_needed = 0, uses_anonymous_args = 0
+ 148              		@ link register save eliminated.
+ 149 0000 407C     		ldrb	r0, [r0, #17]	@ zero_extendqisi2
+ 150 0002 7047     		bx	lr
+ 152              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 buttons.c
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:18     .text.init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:24     .text.init:00000000 init
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:33     .text.tick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:39     .text.tick:00000000 tick
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:118    .text.isClicked:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:124    .text.isClicked:00000000 isClicked
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:139    .text.isHold:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc7eDu3i.s:145    .text.isHold:00000000 isHold
+
+UNDEFINED SYMBOLS
+HAL_GPIO_ReadPin
+HAL_GetTick

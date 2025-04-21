@@ -1,0 +1,406 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"usbd_desc.c"
+  16              		.text
+  17              		.section	.text.USBD_FS_DeviceDescriptor,"ax",%progbits
+  18              		.align	1
+  19              		.global	USBD_FS_DeviceDescriptor
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	USBD_FS_DeviceDescriptor:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 1223     		movs	r3, #18
+  29 0002 0B80     		strh	r3, [r1]	@ movhi
+  30 0004 0048     		ldr	r0, .L2
+  31 0006 7047     		bx	lr
+  32              	.L3:
+  33              		.align	2
+  34              	.L2:
+  35 0008 00000000 		.word	USBD_FS_DeviceDesc
+  37              		.section	.text.USBD_FS_LangIDStrDescriptor,"ax",%progbits
+  38              		.align	1
+  39              		.global	USBD_FS_LangIDStrDescriptor
+  40              		.syntax unified
+  41              		.thumb
+  42              		.thumb_func
+  44              	USBD_FS_LangIDStrDescriptor:
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 0, uses_anonymous_args = 0
+  47              		@ link register save eliminated.
+  48 0000 0423     		movs	r3, #4
+  49 0002 0B80     		strh	r3, [r1]	@ movhi
+  50 0004 0048     		ldr	r0, .L5
+  51 0006 7047     		bx	lr
+  52              	.L6:
+  53              		.align	2
+  54              	.L5:
+  55 0008 00000000 		.word	USBD_LangIDDesc
+  57              		.section	.text.USBD_FS_USR_BOSDescriptor,"ax",%progbits
+  58              		.align	1
+  59              		.global	USBD_FS_USR_BOSDescriptor
+  60              		.syntax unified
+  61              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 2
+
+
+  62              		.thumb_func
+  64              	USBD_FS_USR_BOSDescriptor:
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
+  68 0000 0C23     		movs	r3, #12
+  69 0002 0B80     		strh	r3, [r1]	@ movhi
+  70 0004 0048     		ldr	r0, .L8
+  71 0006 7047     		bx	lr
+  72              	.L9:
+  73              		.align	2
+  74              	.L8:
+  75 0008 00000000 		.word	USBD_FS_BOSDesc
+  77              		.section	.text.IntToUnicode,"ax",%progbits
+  78              		.align	1
+  79              		.syntax unified
+  80              		.thumb
+  81              		.thumb_func
+  83              	IntToUnicode:
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86 0000 0023     		movs	r3, #0
+  87 0002 9342     		cmp	r3, r2
+  88 0004 1ED2     		bcs	.L18
+  89 0006 00B5     		push	{lr}
+  90 0008 10E0     		b	.L14
+  91              	.L12:
+  92 000a 0CF1370C 		add	ip, ip, #55
+  93 000e 01F813C0 		strb	ip, [r1, r3, lsl #1]
+  94              	.L13:
+  95 0012 0001     		lsls	r0, r0, #4
+  96 0014 4FEA430C 		lsl	ip, r3, #1
+  97 0018 0CF1010C 		add	ip, ip, #1
+  98 001c 4FF0000E 		mov	lr, #0
+  99 0020 01F80CE0 		strb	lr, [r1, ip]
+ 100 0024 0133     		adds	r3, r3, #1
+ 101 0026 DBB2     		uxtb	r3, r3
+ 102 0028 9342     		cmp	r3, r2
+ 103 002a 09D2     		bcs	.L19
+ 104              	.L14:
+ 105 002c 4FEA107C 		lsr	ip, r0, #28
+ 106 0030 B0F1204F 		cmp	r0, #-1610612736
+ 107 0034 E9D2     		bcs	.L12
+ 108 0036 0CF1300C 		add	ip, ip, #48
+ 109 003a 01F813C0 		strb	ip, [r1, r3, lsl #1]
+ 110 003e E8E7     		b	.L13
+ 111              	.L19:
+ 112 0040 5DF804FB 		ldr	pc, [sp], #4
+ 113              	.L18:
+ 114 0044 7047     		bx	lr
+ 116              		.section	.text.Get_SerialNum,"ax",%progbits
+ 117              		.align	1
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 122              	Get_SerialNum:
+ 123              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 3
+
+
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125 0000 38B5     		push	{r3, r4, r5, lr}
+ 126 0002 0B4B     		ldr	r3, .L24
+ 127 0004 D3F89005 		ldr	r0, [r3, #1424]
+ 128 0008 D3F89445 		ldr	r4, [r3, #1428]
+ 129 000c D3F89835 		ldr	r3, [r3, #1432]
+ 130 0010 C018     		adds	r0, r0, r3
+ 131 0012 00D1     		bne	.L23
+ 132              	.L20:
+ 133 0014 38BD     		pop	{r3, r4, r5, pc}
+ 134              	.L23:
+ 135 0016 074D     		ldr	r5, .L24+4
+ 136 0018 0822     		movs	r2, #8
+ 137 001a 2946     		mov	r1, r5
+ 138 001c FFF7FEFF 		bl	IntToUnicode
+ 139 0020 0422     		movs	r2, #4
+ 140 0022 05F11001 		add	r1, r5, #16
+ 141 0026 2046     		mov	r0, r4
+ 142 0028 FFF7FEFF 		bl	IntToUnicode
+ 143 002c F2E7     		b	.L20
+ 144              	.L25:
+ 145 002e 00BF     		.align	2
+ 146              	.L24:
+ 147 0030 0070FF1F 		.word	536834048
+ 148 0034 02000000 		.word	USBD_StringSerial+2
+ 150              		.section	.text.USBD_FS_SerialStrDescriptor,"ax",%progbits
+ 151              		.align	1
+ 152              		.global	USBD_FS_SerialStrDescriptor
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 157              	USBD_FS_SerialStrDescriptor:
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160 0000 08B5     		push	{r3, lr}
+ 161 0002 1A23     		movs	r3, #26
+ 162 0004 0B80     		strh	r3, [r1]	@ movhi
+ 163 0006 FFF7FEFF 		bl	Get_SerialNum
+ 164 000a 0148     		ldr	r0, .L28
+ 165 000c 08BD     		pop	{r3, pc}
+ 166              	.L29:
+ 167 000e 00BF     		.align	2
+ 168              	.L28:
+ 169 0010 00000000 		.word	USBD_StringSerial
+ 171              		.section	.rodata.USBD_FS_ProductStrDescriptor.str1.4,"aMS",%progbits,1
+ 172              		.align	2
+ 173              	.LC0:
+ 174 0000 5465726D 		.ascii	"Termaink\000"
+ 174      61696E6B 
+ 174      00
+ 175              		.section	.text.USBD_FS_ProductStrDescriptor,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	USBD_FS_ProductStrDescriptor
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 182              	USBD_FS_ProductStrDescriptor:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 4
+
+
+ 183              		@ args = 0, pretend = 0, frame = 0
+ 184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 185 0000 08B5     		push	{r3, lr}
+ 186 0002 0A46     		mov	r2, r1
+ 187 0004 28B9     		cbnz	r0, .L31
+ 188 0006 0549     		ldr	r1, .L34
+ 189 0008 0548     		ldr	r0, .L34+4
+ 190 000a FFF7FEFF 		bl	USBD_GetString
+ 191              	.L32:
+ 192 000e 0348     		ldr	r0, .L34
+ 193 0010 08BD     		pop	{r3, pc}
+ 194              	.L31:
+ 195 0012 0249     		ldr	r1, .L34
+ 196 0014 0248     		ldr	r0, .L34+4
+ 197 0016 FFF7FEFF 		bl	USBD_GetString
+ 198 001a F8E7     		b	.L32
+ 199              	.L35:
+ 200              		.align	2
+ 201              	.L34:
+ 202 001c 00000000 		.word	USBD_StrDesc
+ 203 0020 00000000 		.word	.LC0
+ 205              		.section	.text.USBD_FS_ManufacturerStrDescriptor,"ax",%progbits
+ 206              		.align	1
+ 207              		.global	USBD_FS_ManufacturerStrDescriptor
+ 208              		.syntax unified
+ 209              		.thumb
+ 210              		.thumb_func
+ 212              	USBD_FS_ManufacturerStrDescriptor:
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215 0000 10B5     		push	{r4, lr}
+ 216 0002 0A46     		mov	r2, r1
+ 217 0004 034C     		ldr	r4, .L38
+ 218 0006 2146     		mov	r1, r4
+ 219 0008 0348     		ldr	r0, .L38+4
+ 220 000a FFF7FEFF 		bl	USBD_GetString
+ 221 000e 2046     		mov	r0, r4
+ 222 0010 10BD     		pop	{r4, pc}
+ 223              	.L39:
+ 224 0012 00BF     		.align	2
+ 225              	.L38:
+ 226 0014 00000000 		.word	USBD_StrDesc
+ 227 0018 00000000 		.word	.LC0
+ 229              		.section	.rodata.USBD_FS_ConfigStrDescriptor.str1.4,"aMS",%progbits,1
+ 230              		.align	2
+ 231              	.LC1:
+ 232 0000 43444320 		.ascii	"CDC Config\000"
+ 232      436F6E66 
+ 232      696700
+ 233              		.section	.text.USBD_FS_ConfigStrDescriptor,"ax",%progbits
+ 234              		.align	1
+ 235              		.global	USBD_FS_ConfigStrDescriptor
+ 236              		.syntax unified
+ 237              		.thumb
+ 238              		.thumb_func
+ 240              	USBD_FS_ConfigStrDescriptor:
+ 241              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 5
+
+
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243 0000 08B5     		push	{r3, lr}
+ 244 0002 0A46     		mov	r2, r1
+ 245 0004 28B9     		cbnz	r0, .L41
+ 246 0006 0549     		ldr	r1, .L44
+ 247 0008 0548     		ldr	r0, .L44+4
+ 248 000a FFF7FEFF 		bl	USBD_GetString
+ 249              	.L42:
+ 250 000e 0348     		ldr	r0, .L44
+ 251 0010 08BD     		pop	{r3, pc}
+ 252              	.L41:
+ 253 0012 0249     		ldr	r1, .L44
+ 254 0014 0248     		ldr	r0, .L44+4
+ 255 0016 FFF7FEFF 		bl	USBD_GetString
+ 256 001a F8E7     		b	.L42
+ 257              	.L45:
+ 258              		.align	2
+ 259              	.L44:
+ 260 001c 00000000 		.word	USBD_StrDesc
+ 261 0020 00000000 		.word	.LC1
+ 263              		.section	.rodata.USBD_FS_InterfaceStrDescriptor.str1.4,"aMS",%progbits,1
+ 264              		.align	2
+ 265              	.LC2:
+ 266 0000 43444320 		.ascii	"CDC Interface\000"
+ 266      496E7465 
+ 266      72666163 
+ 266      6500
+ 267              		.section	.text.USBD_FS_InterfaceStrDescriptor,"ax",%progbits
+ 268              		.align	1
+ 269              		.global	USBD_FS_InterfaceStrDescriptor
+ 270              		.syntax unified
+ 271              		.thumb
+ 272              		.thumb_func
+ 274              	USBD_FS_InterfaceStrDescriptor:
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277 0000 08B5     		push	{r3, lr}
+ 278 0002 0A46     		mov	r2, r1
+ 279 0004 28B9     		cbnz	r0, .L47
+ 280 0006 0549     		ldr	r1, .L50
+ 281 0008 0548     		ldr	r0, .L50+4
+ 282 000a FFF7FEFF 		bl	USBD_GetString
+ 283              	.L48:
+ 284 000e 0348     		ldr	r0, .L50
+ 285 0010 08BD     		pop	{r3, pc}
+ 286              	.L47:
+ 287 0012 0249     		ldr	r1, .L50
+ 288 0014 0248     		ldr	r0, .L50+4
+ 289 0016 FFF7FEFF 		bl	USBD_GetString
+ 290 001a F8E7     		b	.L48
+ 291              	.L51:
+ 292              		.align	2
+ 293              	.L50:
+ 294 001c 00000000 		.word	USBD_StrDesc
+ 295 0020 00000000 		.word	.LC2
+ 297              		.global	USBD_StringSerial
+ 298              		.section	.data.USBD_StringSerial,"aw"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 6
+
+
+ 299              		.align	2
+ 302              	USBD_StringSerial:
+ 303 0000 1A0300   		.ascii	"\032\003\000"
+ 304 0003 00000000 		.space	23
+ 304      00000000 
+ 304      00000000 
+ 304      00000000 
+ 304      00000000 
+ 305              		.global	USBD_StrDesc
+ 306              		.section	.bss.USBD_StrDesc,"aw",%nobits
+ 307              		.align	2
+ 310              	USBD_StrDesc:
+ 311 0000 00000000 		.space	512
+ 311      00000000 
+ 311      00000000 
+ 311      00000000 
+ 311      00000000 
+ 312              		.global	USBD_LangIDDesc
+ 313              		.section	.data.USBD_LangIDDesc,"aw"
+ 314              		.align	2
+ 317              	USBD_LangIDDesc:
+ 318 0000 04030904 		.ascii	"\004\003\011\004"
+ 319              		.global	USBD_FS_BOSDesc
+ 320              		.section	.data.USBD_FS_BOSDesc,"aw"
+ 321              		.align	2
+ 324              	USBD_FS_BOSDesc:
+ 325 0000 050F0C00 		.ascii	"\005\017\014\000\001\007\020\002\002\000\000\000"
+ 325      01071002 
+ 325      02000000 
+ 326              		.global	USBD_FS_DeviceDesc
+ 327              		.section	.data.USBD_FS_DeviceDesc,"aw"
+ 328              		.align	2
+ 331              	USBD_FS_DeviceDesc:
+ 332 0000 12010102 		.ascii	"\022\001\001\002\002\002\000@\203\004@W\000\002\001"
+ 332      02020040 
+ 332      83044057 
+ 332      000201
+ 333 000f 020301   		.ascii	"\002\003\001"
+ 334              		.global	FS_Desc
+ 335              		.section	.data.FS_Desc,"aw"
+ 336              		.align	2
+ 339              	FS_Desc:
+ 340 0000 00000000 		.word	USBD_FS_DeviceDescriptor
+ 341 0004 00000000 		.word	USBD_FS_LangIDStrDescriptor
+ 342 0008 00000000 		.word	USBD_FS_ManufacturerStrDescriptor
+ 343 000c 00000000 		.word	USBD_FS_ProductStrDescriptor
+ 344 0010 00000000 		.word	USBD_FS_SerialStrDescriptor
+ 345 0014 00000000 		.word	USBD_FS_ConfigStrDescriptor
+ 346 0018 00000000 		.word	USBD_FS_InterfaceStrDescriptor
+ 347 001c 00000000 		.word	USBD_FS_USR_BOSDescriptor
+ 348              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 usbd_desc.c
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:18     .text.USBD_FS_DeviceDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:24     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:35     .text.USBD_FS_DeviceDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:331    .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:38     .text.USBD_FS_LangIDStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:44     .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:55     .text.USBD_FS_LangIDStrDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:317    .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:58     .text.USBD_FS_USR_BOSDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:64     .text.USBD_FS_USR_BOSDescriptor:00000000 USBD_FS_USR_BOSDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:75     .text.USBD_FS_USR_BOSDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:324    .data.USBD_FS_BOSDesc:00000000 USBD_FS_BOSDesc
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:78     .text.IntToUnicode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:83     .text.IntToUnicode:00000000 IntToUnicode
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:117    .text.Get_SerialNum:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:122    .text.Get_SerialNum:00000000 Get_SerialNum
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:147    .text.Get_SerialNum:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:302    .data.USBD_StringSerial:00000000 USBD_StringSerial
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:151    .text.USBD_FS_SerialStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:157    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:169    .text.USBD_FS_SerialStrDescriptor:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:172    .rodata.USBD_FS_ProductStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:176    .text.USBD_FS_ProductStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:182    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:202    .text.USBD_FS_ProductStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:310    .bss.USBD_StrDesc:00000000 USBD_StrDesc
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:206    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:212    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:226    .text.USBD_FS_ManufacturerStrDescriptor:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:230    .rodata.USBD_FS_ConfigStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:234    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:240    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:260    .text.USBD_FS_ConfigStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:264    .rodata.USBD_FS_InterfaceStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:268    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:274    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:294    .text.USBD_FS_InterfaceStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:299    .data.USBD_StringSerial:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:307    .bss.USBD_StrDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:314    .data.USBD_LangIDDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:321    .data.USBD_FS_BOSDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:328    .data.USBD_FS_DeviceDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:339    .data.FS_Desc:00000000 FS_Desc
+C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:336    .data.FS_Desc:00000000 $d
+
+UNDEFINED SYMBOLS
+USBD_GetString

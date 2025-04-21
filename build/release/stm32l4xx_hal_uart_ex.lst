@@ -1,0 +1,757 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_uart_ex.c"
+  16              		.text
+  17              		.section	.text.UARTEx_Wakeup_AddressConfig,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	UARTEx_Wakeup_AddressConfig:
+  24              		@ args = 0, pretend = 0, frame = 8
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26              		@ link register save eliminated.
+  27 0000 82B0     		sub	sp, sp, #8
+  28 0002 02AB     		add	r3, sp, #8
+  29 0004 03E90600 		stmdb	r3, {r1, r2}
+  30 0008 0268     		ldr	r2, [r0]
+  31 000a 5368     		ldr	r3, [r2, #4]
+  32 000c 23F01003 		bic	r3, r3, #16
+  33 0010 BDF80410 		ldrh	r1, [sp, #4]
+  34 0014 0B43     		orrs	r3, r3, r1
+  35 0016 5360     		str	r3, [r2, #4]
+  36 0018 0268     		ldr	r2, [r0]
+  37 001a 5368     		ldr	r3, [r2, #4]
+  38 001c 23F07F43 		bic	r3, r3, #-16777216
+  39 0020 9DF80610 		ldrb	r1, [sp, #6]	@ zero_extendqisi2
+  40 0024 43EA0163 		orr	r3, r3, r1, lsl #24
+  41 0028 5360     		str	r3, [r2, #4]
+  42 002a 02B0     		add	sp, sp, #8
+  43              		@ sp needed
+  44 002c 7047     		bx	lr
+  46              		.section	.text.HAL_RS485Ex_Init,"ax",%progbits
+  47              		.align	1
+  48              		.global	HAL_RS485Ex_Init
+  49              		.syntax unified
+  50              		.thumb
+  51              		.thumb_func
+  53              	HAL_RS485Ex_Init:
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56 0000 0028     		cmp	r0, #0
+  57 0002 3AD0     		beq	.L7
+  58 0004 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  59 0006 0F46     		mov	r7, r1
+  60 0008 1646     		mov	r6, r2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 2
+
+
+  61 000a 1D46     		mov	r5, r3
+  62 000c 0446     		mov	r4, r0
+  63 000e C36F     		ldr	r3, [r0, #124]
+  64 0010 53B3     		cbz	r3, .L12
+  65              	.L5:
+  66 0012 2423     		movs	r3, #36
+  67 0014 E367     		str	r3, [r4, #124]
+  68 0016 2268     		ldr	r2, [r4]
+  69 0018 1368     		ldr	r3, [r2]
+  70 001a 23F00103 		bic	r3, r3, #1
+  71 001e 1360     		str	r3, [r2]
+  72 0020 636A     		ldr	r3, [r4, #36]
+  73 0022 33BB     		cbnz	r3, .L13
+  74              	.L6:
+  75 0024 2046     		mov	r0, r4
+  76 0026 FFF7FEFF 		bl	UART_SetConfig
+  77 002a 0128     		cmp	r0, #1
+  78 002c 1BD0     		beq	.L4
+  79 002e 2268     		ldr	r2, [r4]
+  80 0030 9368     		ldr	r3, [r2, #8]
+  81 0032 43F48043 		orr	r3, r3, #16384
+  82 0036 9360     		str	r3, [r2, #8]
+  83 0038 2268     		ldr	r2, [r4]
+  84 003a 9368     		ldr	r3, [r2, #8]
+  85 003c 23F40043 		bic	r3, r3, #32768
+  86 0040 3B43     		orrs	r3, r3, r7
+  87 0042 9360     		str	r3, [r2, #8]
+  88 0044 2D04     		lsls	r5, r5, #16
+  89 0046 45EA4652 		orr	r2, r5, r6, lsl #21
+  90 004a 2168     		ldr	r1, [r4]
+  91 004c 0B68     		ldr	r3, [r1]
+  92 004e 6FF31943 		bfc	r3, #16, #10
+  93 0052 1343     		orrs	r3, r3, r2
+  94 0054 0B60     		str	r3, [r1]
+  95 0056 2268     		ldr	r2, [r4]
+  96 0058 1368     		ldr	r3, [r2]
+  97 005a 43F00103 		orr	r3, r3, #1
+  98 005e 1360     		str	r3, [r2]
+  99 0060 2046     		mov	r0, r4
+ 100 0062 FFF7FEFF 		bl	UART_CheckIdleState
+ 101              	.L4:
+ 102 0066 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 103              	.L12:
+ 104 0068 80F87830 		strb	r3, [r0, #120]
+ 105 006c FFF7FEFF 		bl	HAL_UART_MspInit
+ 106 0070 CFE7     		b	.L5
+ 107              	.L13:
+ 108 0072 2046     		mov	r0, r4
+ 109 0074 FFF7FEFF 		bl	UART_AdvFeatureConfig
+ 110 0078 D4E7     		b	.L6
+ 111              	.L7:
+ 112 007a 0120     		movs	r0, #1
+ 113 007c 7047     		bx	lr
+ 115              		.section	.text.HAL_UARTEx_WakeupCallback,"ax",%progbits
+ 116              		.align	1
+ 117              		.weak	HAL_UARTEx_WakeupCallback
+ 118              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 3
+
+
+ 119              		.thumb
+ 120              		.thumb_func
+ 122              	HAL_UARTEx_WakeupCallback:
+ 123              		@ args = 0, pretend = 0, frame = 0
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125              		@ link register save eliminated.
+ 126 0000 7047     		bx	lr
+ 128              		.section	.text.HAL_UARTEx_EnableClockStopMode,"ax",%progbits
+ 129              		.align	1
+ 130              		.global	HAL_UARTEx_EnableClockStopMode
+ 131              		.syntax unified
+ 132              		.thumb
+ 133              		.thumb_func
+ 135              	HAL_UARTEx_EnableClockStopMode:
+ 136              		@ args = 0, pretend = 0, frame = 0
+ 137              		@ frame_needed = 0, uses_anonymous_args = 0
+ 138              		@ link register save eliminated.
+ 139 0000 90F87830 		ldrb	r3, [r0, #120]	@ zero_extendqisi2
+ 140 0004 012B     		cmp	r3, #1
+ 141 0006 13D0     		beq	.L18
+ 142 0008 0123     		movs	r3, #1
+ 143 000a 80F87830 		strb	r3, [r0, #120]
+ 144              	.L17:
+ 145 000e 0268     		ldr	r2, [r0]
+ 146 0010 02F10803 		add	r3, r2, #8
+ 147              		.syntax unified
+ 148              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 149 0014 53E8003F 		ldrex r3, [r3]
+ 150              	@ 0 "" 2
+ 151              		.thumb
+ 152              		.syntax unified
+ 153 0018 43F40003 		orr	r3, r3, #8388608
+ 154 001c 0832     		adds	r2, r2, #8
+ 155              		.syntax unified
+ 156              	@ 1206 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 157 001e 42E80031 		strex r1, r3, [r2]
+ 158              	@ 0 "" 2
+ 159              		.thumb
+ 160              		.syntax unified
+ 161 0022 0029     		cmp	r1, #0
+ 162 0024 F3D1     		bne	.L17
+ 163 0026 0023     		movs	r3, #0
+ 164 0028 80F87830 		strb	r3, [r0, #120]
+ 165 002c 1846     		mov	r0, r3
+ 166 002e 7047     		bx	lr
+ 167              	.L18:
+ 168 0030 0220     		movs	r0, #2
+ 169 0032 7047     		bx	lr
+ 171              		.section	.text.HAL_UARTEx_DisableClockStopMode,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	HAL_UARTEx_DisableClockStopMode
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 178              	HAL_UARTEx_DisableClockStopMode:
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 4
+
+
+ 181              		@ link register save eliminated.
+ 182 0000 90F87830 		ldrb	r3, [r0, #120]	@ zero_extendqisi2
+ 183 0004 012B     		cmp	r3, #1
+ 184 0006 13D0     		beq	.L22
+ 185 0008 0123     		movs	r3, #1
+ 186 000a 80F87830 		strb	r3, [r0, #120]
+ 187              	.L21:
+ 188 000e 0268     		ldr	r2, [r0]
+ 189 0010 02F10803 		add	r3, r2, #8
+ 190              		.syntax unified
+ 191              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 192 0014 53E8003F 		ldrex r3, [r3]
+ 193              	@ 0 "" 2
+ 194              		.thumb
+ 195              		.syntax unified
+ 196 0018 23F40003 		bic	r3, r3, #8388608
+ 197 001c 0832     		adds	r2, r2, #8
+ 198              		.syntax unified
+ 199              	@ 1206 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 200 001e 42E80031 		strex r1, r3, [r2]
+ 201              	@ 0 "" 2
+ 202              		.thumb
+ 203              		.syntax unified
+ 204 0022 0029     		cmp	r1, #0
+ 205 0024 F3D1     		bne	.L21
+ 206 0026 0023     		movs	r3, #0
+ 207 0028 80F87830 		strb	r3, [r0, #120]
+ 208 002c 1846     		mov	r0, r3
+ 209 002e 7047     		bx	lr
+ 210              	.L22:
+ 211 0030 0220     		movs	r0, #2
+ 212 0032 7047     		bx	lr
+ 214              		.section	.text.HAL_MultiProcessorEx_AddressLength_Set,"ax",%progbits
+ 215              		.align	1
+ 216              		.global	HAL_MultiProcessorEx_AddressLength_Set
+ 217              		.syntax unified
+ 218              		.thumb
+ 219              		.thumb_func
+ 221              	HAL_MultiProcessorEx_AddressLength_Set:
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224 0000 B8B1     		cbz	r0, .L25
+ 225 0002 08B5     		push	{r3, lr}
+ 226 0004 0346     		mov	r3, r0
+ 227 0006 2422     		movs	r2, #36
+ 228 0008 C267     		str	r2, [r0, #124]
+ 229 000a 0068     		ldr	r0, [r0]
+ 230 000c 0268     		ldr	r2, [r0]
+ 231 000e 22F00102 		bic	r2, r2, #1
+ 232 0012 0260     		str	r2, [r0]
+ 233 0014 1868     		ldr	r0, [r3]
+ 234 0016 4268     		ldr	r2, [r0, #4]
+ 235 0018 22F01002 		bic	r2, r2, #16
+ 236 001c 1143     		orrs	r1, r1, r2
+ 237 001e 4160     		str	r1, [r0, #4]
+ 238 0020 1968     		ldr	r1, [r3]
+ 239 0022 0A68     		ldr	r2, [r1]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 5
+
+
+ 240 0024 42F00102 		orr	r2, r2, #1
+ 241 0028 0A60     		str	r2, [r1]
+ 242 002a 1846     		mov	r0, r3
+ 243 002c FFF7FEFF 		bl	UART_CheckIdleState
+ 244 0030 08BD     		pop	{r3, pc}
+ 245              	.L25:
+ 246 0032 0120     		movs	r0, #1
+ 247 0034 7047     		bx	lr
+ 249              		.section	.text.HAL_UARTEx_StopModeWakeUpSourceConfig,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	HAL_UARTEx_StopModeWakeUpSourceConfig
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 256              	HAL_UARTEx_StopModeWakeUpSourceConfig:
+ 257              		@ args = 0, pretend = 0, frame = 8
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259 0000 10B5     		push	{r4, lr}
+ 260 0002 84B0     		sub	sp, sp, #16
+ 261 0004 04AB     		add	r3, sp, #16
+ 262 0006 03E90600 		stmdb	r3, {r1, r2}
+ 263 000a 90F87830 		ldrb	r3, [r0, #120]	@ zero_extendqisi2
+ 264 000e 012B     		cmp	r3, #1
+ 265 0010 33D0     		beq	.L34
+ 266 0012 0446     		mov	r4, r0
+ 267 0014 0123     		movs	r3, #1
+ 268 0016 80F87830 		strb	r3, [r0, #120]
+ 269 001a 2423     		movs	r3, #36
+ 270 001c C367     		str	r3, [r0, #124]
+ 271 001e 0268     		ldr	r2, [r0]
+ 272 0020 1368     		ldr	r3, [r2]
+ 273 0022 23F00103 		bic	r3, r3, #1
+ 274 0026 1360     		str	r3, [r2]
+ 275 0028 0168     		ldr	r1, [r0]
+ 276 002a 8B68     		ldr	r3, [r1, #8]
+ 277 002c 23F44013 		bic	r3, r3, #3145728
+ 278 0030 029A     		ldr	r2, [sp, #8]
+ 279 0032 1343     		orrs	r3, r3, r2
+ 280 0034 8B60     		str	r3, [r1, #8]
+ 281 0036 C2B1     		cbz	r2, .L37
+ 282              	.L32:
+ 283 0038 2268     		ldr	r2, [r4]
+ 284 003a 1368     		ldr	r3, [r2]
+ 285 003c 43F00103 		orr	r3, r3, #1
+ 286 0040 1360     		str	r3, [r2]
+ 287 0042 FFF7FEFF 		bl	HAL_GetTick
+ 288 0046 0346     		mov	r3, r0
+ 289 0048 6FF07E42 		mvn	r2, #-33554432
+ 290 004c 0092     		str	r2, [sp]
+ 291 004e 0022     		movs	r2, #0
+ 292 0050 4FF48001 		mov	r1, #4194304
+ 293 0054 2046     		mov	r0, r4
+ 294 0056 FFF7FEFF 		bl	UART_WaitOnFlagUntilTimeout
+ 295 005a 60B9     		cbnz	r0, .L35
+ 296 005c 2023     		movs	r3, #32
+ 297 005e E367     		str	r3, [r4, #124]
+ 298              	.L33:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 6
+
+
+ 299 0060 0023     		movs	r3, #0
+ 300 0062 84F87830 		strb	r3, [r4, #120]
+ 301              	.L31:
+ 302 0066 04B0     		add	sp, sp, #16
+ 303              		@ sp needed
+ 304 0068 10BD     		pop	{r4, pc}
+ 305              	.L37:
+ 306 006a 04AB     		add	r3, sp, #16
+ 307 006c 13E90600 		ldmdb	r3, {r1, r2}
+ 308 0070 FFF7FEFF 		bl	UARTEx_Wakeup_AddressConfig
+ 309 0074 E0E7     		b	.L32
+ 310              	.L35:
+ 311 0076 0320     		movs	r0, #3
+ 312 0078 F2E7     		b	.L33
+ 313              	.L34:
+ 314 007a 0220     		movs	r0, #2
+ 315 007c F3E7     		b	.L31
+ 317              		.section	.text.HAL_UARTEx_EnableStopMode,"ax",%progbits
+ 318              		.align	1
+ 319              		.global	HAL_UARTEx_EnableStopMode
+ 320              		.syntax unified
+ 321              		.thumb
+ 322              		.thumb_func
+ 324              	HAL_UARTEx_EnableStopMode:
+ 325              		@ args = 0, pretend = 0, frame = 0
+ 326              		@ frame_needed = 0, uses_anonymous_args = 0
+ 327              		@ link register save eliminated.
+ 328 0000 90F87830 		ldrb	r3, [r0, #120]	@ zero_extendqisi2
+ 329 0004 012B     		cmp	r3, #1
+ 330 0006 10D0     		beq	.L41
+ 331 0008 0123     		movs	r3, #1
+ 332 000a 80F87830 		strb	r3, [r0, #120]
+ 333              	.L40:
+ 334 000e 0268     		ldr	r2, [r0]
+ 335              		.syntax unified
+ 336              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 337 0010 52E8003F 		ldrex r3, [r2]
+ 338              	@ 0 "" 2
+ 339              		.thumb
+ 340              		.syntax unified
+ 341 0014 43F00203 		orr	r3, r3, #2
+ 342              		.syntax unified
+ 343              	@ 1206 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 344 0018 42E80031 		strex r1, r3, [r2]
+ 345              	@ 0 "" 2
+ 346              		.thumb
+ 347              		.syntax unified
+ 348 001c 0029     		cmp	r1, #0
+ 349 001e F6D1     		bne	.L40
+ 350 0020 0023     		movs	r3, #0
+ 351 0022 80F87830 		strb	r3, [r0, #120]
+ 352 0026 1846     		mov	r0, r3
+ 353 0028 7047     		bx	lr
+ 354              	.L41:
+ 355 002a 0220     		movs	r0, #2
+ 356 002c 7047     		bx	lr
+ 358              		.section	.text.HAL_UARTEx_DisableStopMode,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 7
+
+
+ 359              		.align	1
+ 360              		.global	HAL_UARTEx_DisableStopMode
+ 361              		.syntax unified
+ 362              		.thumb
+ 363              		.thumb_func
+ 365              	HAL_UARTEx_DisableStopMode:
+ 366              		@ args = 0, pretend = 0, frame = 0
+ 367              		@ frame_needed = 0, uses_anonymous_args = 0
+ 368              		@ link register save eliminated.
+ 369 0000 90F87830 		ldrb	r3, [r0, #120]	@ zero_extendqisi2
+ 370 0004 012B     		cmp	r3, #1
+ 371 0006 10D0     		beq	.L45
+ 372 0008 0123     		movs	r3, #1
+ 373 000a 80F87830 		strb	r3, [r0, #120]
+ 374              	.L44:
+ 375 000e 0268     		ldr	r2, [r0]
+ 376              		.syntax unified
+ 377              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 378 0010 52E8003F 		ldrex r3, [r2]
+ 379              	@ 0 "" 2
+ 380              		.thumb
+ 381              		.syntax unified
+ 382 0014 23F00203 		bic	r3, r3, #2
+ 383              		.syntax unified
+ 384              	@ 1206 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 385 0018 42E80031 		strex r1, r3, [r2]
+ 386              	@ 0 "" 2
+ 387              		.thumb
+ 388              		.syntax unified
+ 389 001c 0029     		cmp	r1, #0
+ 390 001e F6D1     		bne	.L44
+ 391 0020 0023     		movs	r3, #0
+ 392 0022 80F87830 		strb	r3, [r0, #120]
+ 393 0026 1846     		mov	r0, r3
+ 394 0028 7047     		bx	lr
+ 395              	.L45:
+ 396 002a 0220     		movs	r0, #2
+ 397 002c 7047     		bx	lr
+ 399              		.section	.text.HAL_UARTEx_ReceiveToIdle,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	HAL_UARTEx_ReceiveToIdle
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 406              	HAL_UARTEx_ReceiveToIdle:
+ 407              		@ args = 4, pretend = 0, frame = 0
+ 408              		@ frame_needed = 0, uses_anonymous_args = 0
+ 409 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 410 0004 1D46     		mov	r5, r3
+ 411 0006 089E     		ldr	r6, [sp, #32]
+ 412 0008 D0F88030 		ldr	r3, [r0, #128]
+ 413 000c 202B     		cmp	r3, #32
+ 414 000e 40F0A380 		bne	.L64
+ 415 0012 0446     		mov	r4, r0
+ 416 0014 0F46     		mov	r7, r1
+ 417 0016 9146     		mov	r9, r2
+ 418 0018 0029     		cmp	r1, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 8
+
+
+ 419 001a 00F0A080 		beq	.L65
+ 420 001e 0AB9     		cbnz	r2, .L70
+ 421 0020 0120     		movs	r0, #1
+ 422 0022 9AE0     		b	.L47
+ 423              	.L70:
+ 424 0024 0023     		movs	r3, #0
+ 425 0026 C0F88430 		str	r3, [r0, #132]
+ 426 002a 2222     		movs	r2, #34
+ 427 002c C0F88020 		str	r2, [r0, #128]
+ 428 0030 0122     		movs	r2, #1
+ 429 0032 0266     		str	r2, [r0, #96]
+ 430 0034 4366     		str	r3, [r0, #100]
+ 431 0036 FFF7FEFF 		bl	HAL_GetTick
+ 432 003a 8046     		mov	r8, r0
+ 433 003c A4F85890 		strh	r9, [r4, #88]	@ movhi
+ 434 0040 A4F85A90 		strh	r9, [r4, #90]	@ movhi
+ 435 0044 A368     		ldr	r3, [r4, #8]
+ 436 0046 B3F5805F 		cmp	r3, #4096
+ 437 004a 06D0     		beq	.L71
+ 438 004c A3B9     		cbnz	r3, .L51
+ 439 004e 2269     		ldr	r2, [r4, #16]
+ 440 0050 72B9     		cbnz	r2, .L52
+ 441 0052 FF22     		movs	r2, #255
+ 442 0054 A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 443 0058 14E0     		b	.L50
+ 444              	.L71:
+ 445 005a 2269     		ldr	r2, [r4, #16]
+ 446 005c 22B9     		cbnz	r2, .L49
+ 447 005e 40F2FF12 		movw	r2, #511
+ 448 0062 A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 449 0066 0DE0     		b	.L50
+ 450              	.L49:
+ 451 0068 FF22     		movs	r2, #255
+ 452 006a A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 453 006e 09E0     		b	.L50
+ 454              	.L52:
+ 455 0070 7F22     		movs	r2, #127
+ 456 0072 A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 457 0076 05E0     		b	.L50
+ 458              	.L51:
+ 459 0078 B3F1805F 		cmp	r3, #268435456
+ 460 007c 0CD0     		beq	.L72
+ 461 007e 0022     		movs	r2, #0
+ 462 0080 A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 463              	.L50:
+ 464 0084 B4F85C90 		ldrh	r9, [r4, #92]
+ 465 0088 B3F5805F 		cmp	r3, #4096
+ 466 008c 0ED0     		beq	.L73
+ 467 008e 4FF0000A 		mov	r10, #0
+ 468              	.L55:
+ 469 0092 0023     		movs	r3, #0
+ 470 0094 2B80     		strh	r3, [r5]	@ movhi
+ 471 0096 2AE0     		b	.L56
+ 472              	.L72:
+ 473 0098 2269     		ldr	r2, [r4, #16]
+ 474 009a 1AB9     		cbnz	r2, .L54
+ 475 009c 7F22     		movs	r2, #127
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 9
+
+
+ 476 009e A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 477 00a2 EFE7     		b	.L50
+ 478              	.L54:
+ 479 00a4 3F22     		movs	r2, #63
+ 480 00a6 A4F85C20 		strh	r2, [r4, #92]	@ movhi
+ 481 00aa EBE7     		b	.L50
+ 482              	.L73:
+ 483 00ac 2369     		ldr	r3, [r4, #16]
+ 484 00ae 13B1     		cbz	r3, .L68
+ 485 00b0 4FF0000A 		mov	r10, #0
+ 486 00b4 EDE7     		b	.L55
+ 487              	.L68:
+ 488 00b6 BA46     		mov	r10, r7
+ 489 00b8 0027     		movs	r7, #0
+ 490 00ba EAE7     		b	.L55
+ 491              	.L76:
+ 492 00bc 0223     		movs	r3, #2
+ 493 00be 6366     		str	r3, [r4, #100]
+ 494 00c0 2023     		movs	r3, #32
+ 495 00c2 C4F88030 		str	r3, [r4, #128]
+ 496 00c6 0020     		movs	r0, #0
+ 497 00c8 47E0     		b	.L47
+ 498              	.L77:
+ 499 00ca 9B8C     		ldrh	r3, [r3, #36]
+ 500 00cc 09EA0303 		and	r3, r9, r3
+ 501 00d0 2AF8023B 		strh	r3, [r10], #2	@ movhi
+ 502              	.L60:
+ 503 00d4 2B88     		ldrh	r3, [r5]
+ 504 00d6 0133     		adds	r3, r3, #1
+ 505 00d8 2B80     		strh	r3, [r5]	@ movhi
+ 506 00da B4F85A30 		ldrh	r3, [r4, #90]
+ 507 00de 9BB2     		uxth	r3, r3
+ 508 00e0 013B     		subs	r3, r3, #1
+ 509 00e2 9BB2     		uxth	r3, r3
+ 510 00e4 A4F85A30 		strh	r3, [r4, #90]	@ movhi
+ 511              	.L58:
+ 512 00e8 B6F1FF3F 		cmp	r6, #-1
+ 513 00ec 1BD1     		bne	.L74
+ 514              	.L56:
+ 515 00ee B4F85A20 		ldrh	r2, [r4, #90]
+ 516 00f2 92B2     		uxth	r2, r2
+ 517 00f4 22B3     		cbz	r2, .L75
+ 518 00f6 2368     		ldr	r3, [r4]
+ 519 00f8 DA69     		ldr	r2, [r3, #28]
+ 520 00fa 12F0100F 		tst	r2, #16
+ 521 00fe 04D0     		beq	.L57
+ 522 0100 1022     		movs	r2, #16
+ 523 0102 1A62     		str	r2, [r3, #32]
+ 524 0104 2B88     		ldrh	r3, [r5]
+ 525 0106 002B     		cmp	r3, #0
+ 526 0108 D8D1     		bne	.L76
+ 527              	.L57:
+ 528 010a 2368     		ldr	r3, [r4]
+ 529 010c DA69     		ldr	r2, [r3, #28]
+ 530 010e 12F0200F 		tst	r2, #32
+ 531 0112 E9D0     		beq	.L58
+ 532 0114 002F     		cmp	r7, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 10
+
+
+ 533 0116 D8D0     		beq	.L77
+ 534 0118 9A8C     		ldrh	r2, [r3, #36]
+ 535 011a 5FFA89F3 		uxtb	r3, r9
+ 536 011e 1340     		ands	r3, r3, r2
+ 537 0120 07F8013B 		strb	r3, [r7], #1
+ 538 0124 D6E7     		b	.L60
+ 539              	.L74:
+ 540 0126 FFF7FEFF 		bl	HAL_GetTick
+ 541 012a A0EB0800 		sub	r0, r0, r8
+ 542 012e B042     		cmp	r0, r6
+ 543 0130 01D8     		bhi	.L62
+ 544 0132 002E     		cmp	r6, #0
+ 545 0134 DBD1     		bne	.L56
+ 546              	.L62:
+ 547 0136 2023     		movs	r3, #32
+ 548 0138 C4F88030 		str	r3, [r4, #128]
+ 549 013c 0320     		movs	r0, #3
+ 550 013e 0CE0     		b	.L47
+ 551              	.L75:
+ 552 0140 B4F85830 		ldrh	r3, [r4, #88]
+ 553 0144 B4F85A20 		ldrh	r2, [r4, #90]
+ 554 0148 92B2     		uxth	r2, r2
+ 555 014a 9B1A     		subs	r3, r3, r2
+ 556 014c 2B80     		strh	r3, [r5]	@ movhi
+ 557 014e 2023     		movs	r3, #32
+ 558 0150 C4F88030 		str	r3, [r4, #128]
+ 559 0154 0020     		movs	r0, #0
+ 560 0156 00E0     		b	.L47
+ 561              	.L64:
+ 562 0158 0220     		movs	r0, #2
+ 563              	.L47:
+ 564 015a BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 565              	.L65:
+ 566 015e 0120     		movs	r0, #1
+ 567 0160 FBE7     		b	.L47
+ 569              		.section	.text.HAL_UARTEx_ReceiveToIdle_IT,"ax",%progbits
+ 570              		.align	1
+ 571              		.global	HAL_UARTEx_ReceiveToIdle_IT
+ 572              		.syntax unified
+ 573              		.thumb
+ 574              		.thumb_func
+ 576              	HAL_UARTEx_ReceiveToIdle_IT:
+ 577              		@ args = 0, pretend = 0, frame = 0
+ 578              		@ frame_needed = 0, uses_anonymous_args = 0
+ 579 0000 D0F88030 		ldr	r3, [r0, #128]
+ 580 0004 202B     		cmp	r3, #32
+ 581 0006 1ED1     		bne	.L82
+ 582 0008 10B5     		push	{r4, lr}
+ 583 000a 0446     		mov	r4, r0
+ 584 000c E9B1     		cbz	r1, .L83
+ 585 000e 0AB9     		cbnz	r2, .L90
+ 586 0010 0120     		movs	r0, #1
+ 587              	.L79:
+ 588 0012 10BD     		pop	{r4, pc}
+ 589              	.L90:
+ 590 0014 0123     		movs	r3, #1
+ 591 0016 0366     		str	r3, [r0, #96]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 11
+
+
+ 592 0018 0023     		movs	r3, #0
+ 593 001a 4366     		str	r3, [r0, #100]
+ 594 001c FFF7FEFF 		bl	UART_Start_Receive_IT
+ 595 0020 236E     		ldr	r3, [r4, #96]
+ 596 0022 012B     		cmp	r3, #1
+ 597 0024 01D0     		beq	.L91
+ 598 0026 0120     		movs	r0, #1
+ 599 0028 F3E7     		b	.L79
+ 600              	.L91:
+ 601 002a 2368     		ldr	r3, [r4]
+ 602 002c 1022     		movs	r2, #16
+ 603 002e 1A62     		str	r2, [r3, #32]
+ 604              	.L81:
+ 605 0030 2268     		ldr	r2, [r4]
+ 606              		.syntax unified
+ 607              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 608 0032 52E8003F 		ldrex r3, [r2]
+ 609              	@ 0 "" 2
+ 610              		.thumb
+ 611              		.syntax unified
+ 612 0036 43F01003 		orr	r3, r3, #16
+ 613              		.syntax unified
+ 614              	@ 1206 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 615 003a 42E80031 		strex r1, r3, [r2]
+ 616              	@ 0 "" 2
+ 617              		.thumb
+ 618              		.syntax unified
+ 619 003e 0029     		cmp	r1, #0
+ 620 0040 F6D1     		bne	.L81
+ 621 0042 0020     		movs	r0, #0
+ 622 0044 E5E7     		b	.L79
+ 623              	.L82:
+ 624 0046 0220     		movs	r0, #2
+ 625 0048 7047     		bx	lr
+ 626              	.L83:
+ 627 004a 0120     		movs	r0, #1
+ 628 004c E1E7     		b	.L79
+ 630              		.section	.text.HAL_UARTEx_ReceiveToIdle_DMA,"ax",%progbits
+ 631              		.align	1
+ 632              		.global	HAL_UARTEx_ReceiveToIdle_DMA
+ 633              		.syntax unified
+ 634              		.thumb
+ 635              		.thumb_func
+ 637              	HAL_UARTEx_ReceiveToIdle_DMA:
+ 638              		@ args = 0, pretend = 0, frame = 0
+ 639              		@ frame_needed = 0, uses_anonymous_args = 0
+ 640 0000 D0F88030 		ldr	r3, [r0, #128]
+ 641 0004 202B     		cmp	r3, #32
+ 642 0006 1FD1     		bne	.L96
+ 643 0008 10B5     		push	{r4, lr}
+ 644 000a 0446     		mov	r4, r0
+ 645 000c F1B1     		cbz	r1, .L97
+ 646 000e 0AB9     		cbnz	r2, .L104
+ 647 0010 0120     		movs	r0, #1
+ 648              	.L93:
+ 649 0012 10BD     		pop	{r4, pc}
+ 650              	.L104:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 12
+
+
+ 651 0014 0123     		movs	r3, #1
+ 652 0016 0366     		str	r3, [r0, #96]
+ 653 0018 0023     		movs	r3, #0
+ 654 001a 4366     		str	r3, [r0, #100]
+ 655 001c FFF7FEFF 		bl	UART_Start_Receive_DMA
+ 656 0020 0028     		cmp	r0, #0
+ 657 0022 F6D1     		bne	.L93
+ 658 0024 236E     		ldr	r3, [r4, #96]
+ 659 0026 012B     		cmp	r3, #1
+ 660 0028 01D0     		beq	.L105
+ 661 002a 0120     		movs	r0, #1
+ 662 002c F1E7     		b	.L93
+ 663              	.L105:
+ 664 002e 2368     		ldr	r3, [r4]
+ 665 0030 1022     		movs	r2, #16
+ 666 0032 1A62     		str	r2, [r3, #32]
+ 667              	.L95:
+ 668 0034 2268     		ldr	r2, [r4]
+ 669              		.syntax unified
+ 670              	@ 1155 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 671 0036 52E8003F 		ldrex r3, [r2]
+ 672              	@ 0 "" 2
+ 673              		.thumb
+ 674              		.syntax unified
+ 675 003a 43F01003 		orr	r3, r3, #16
+ 676              		.syntax unified
+ 677              	@ 1206 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 678 003e 42E80031 		strex r1, r3, [r2]
+ 679              	@ 0 "" 2
+ 680              		.thumb
+ 681              		.syntax unified
+ 682 0042 0029     		cmp	r1, #0
+ 683 0044 F6D1     		bne	.L95
+ 684 0046 E4E7     		b	.L93
+ 685              	.L96:
+ 686 0048 0220     		movs	r0, #2
+ 687 004a 7047     		bx	lr
+ 688              	.L97:
+ 689 004c 0120     		movs	r0, #1
+ 690 004e E0E7     		b	.L93
+ 692              		.section	.text.HAL_UARTEx_GetRxEventType,"ax",%progbits
+ 693              		.align	1
+ 694              		.global	HAL_UARTEx_GetRxEventType
+ 695              		.syntax unified
+ 696              		.thumb
+ 697              		.thumb_func
+ 699              	HAL_UARTEx_GetRxEventType:
+ 700              		@ args = 0, pretend = 0, frame = 0
+ 701              		@ frame_needed = 0, uses_anonymous_args = 0
+ 702              		@ link register save eliminated.
+ 703 0000 406E     		ldr	r0, [r0, #100]
+ 704 0002 7047     		bx	lr
+ 706              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_uart_ex.c
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:18     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:23     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:47     .text.HAL_RS485Ex_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:53     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:116    .text.HAL_UARTEx_WakeupCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:122    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:129    .text.HAL_UARTEx_EnableClockStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:135    .text.HAL_UARTEx_EnableClockStopMode:00000000 HAL_UARTEx_EnableClockStopMode
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:172    .text.HAL_UARTEx_DisableClockStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:178    .text.HAL_UARTEx_DisableClockStopMode:00000000 HAL_UARTEx_DisableClockStopMode
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:215    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:221    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:250    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:256    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:318    .text.HAL_UARTEx_EnableStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:324    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:359    .text.HAL_UARTEx_DisableStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:365    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:400    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:406    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:570    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:576    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:631    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:637    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:693    .text.HAL_UARTEx_GetRxEventType:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:699    .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
+
+UNDEFINED SYMBOLS
+UART_SetConfig
+UART_CheckIdleState
+HAL_UART_MspInit
+UART_AdvFeatureConfig
+HAL_GetTick
+UART_WaitOnFlagUntilTimeout
+UART_Start_Receive_IT
+UART_Start_Receive_DMA

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
   27:USB_DEVICE/App/usbd_desc.c **** 
   28:USB_DEVICE/App/usbd_desc.c **** /* USER CODE END INCLUDE */
   29:USB_DEVICE/App/usbd_desc.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 2
 
 
   30:USB_DEVICE/App/usbd_desc.c **** /* Private typedef -----------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
   84:USB_DEVICE/App/usbd_desc.c **** 
   85:USB_DEVICE/App/usbd_desc.c **** /* USER CODE END 0 */
   86:USB_DEVICE/App/usbd_desc.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 3
 
 
   87:USB_DEVICE/App/usbd_desc.c **** /** @defgroup USBD_DESC_Private_Macros USBD_DESC_Private_Macros
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  141:USB_DEVICE/App/usbd_desc.c **** , USBD_FS_ManufacturerStrDescriptor
  142:USB_DEVICE/App/usbd_desc.c **** , USBD_FS_ProductStrDescriptor
  143:USB_DEVICE/App/usbd_desc.c **** , USBD_FS_SerialStrDescriptor
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 4
 
 
  144:USB_DEVICE/App/usbd_desc.c **** , USBD_FS_ConfigStrDescriptor
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  198:USB_DEVICE/App/usbd_desc.c ****   USB_DEVICE_CAPABITY_TYPE,
  199:USB_DEVICE/App/usbd_desc.c ****   0x2,
  200:USB_DEVICE/App/usbd_desc.c ****   0x2,  /* LPM capability bit set*/
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 5
 
 
  201:USB_DEVICE/App/usbd_desc.c ****   0x0,
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  255:USB_DEVICE/App/usbd_desc.c ****   * @param  length : Pointer to data length variable
  256:USB_DEVICE/App/usbd_desc.c ****   * @retval Pointer to descriptor buffer
  257:USB_DEVICE/App/usbd_desc.c ****   */
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 6
 
 
  258:USB_DEVICE/App/usbd_desc.c **** uint8_t * USBD_FS_DeviceDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
   69              		.loc 1 274 3 view .LVU9
   70              		.loc 1 274 11 is_stmt 0 view .LVU10
   71 0000 0423     		movs	r3, #4
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 7
 
 
   72 0002 0B80     		strh	r3, [r1]	@ movhi
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  307:USB_DEVICE/App/usbd_desc.c ****   return USBD_StrDesc;
  308:USB_DEVICE/App/usbd_desc.c **** }
  309:USB_DEVICE/App/usbd_desc.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 8
 
 
  310:USB_DEVICE/App/usbd_desc.c **** /**
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  364:USB_DEVICE/App/usbd_desc.c ****   }
  365:USB_DEVICE/App/usbd_desc.c ****   return USBD_StrDesc;
  366:USB_DEVICE/App/usbd_desc.c **** }
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 9
 
 
  367:USB_DEVICE/App/usbd_desc.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  391:USB_DEVICE/App/usbd_desc.c ****   uint32_t deviceserial1;
  392:USB_DEVICE/App/usbd_desc.c ****   uint32_t deviceserial2;
  393:USB_DEVICE/App/usbd_desc.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 10
 
 
  394:USB_DEVICE/App/usbd_desc.c ****   deviceserial0 = *(uint32_t *) DEVICE_ID1;
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  148 000a 0CF1370C 		add	ip, ip, #55
  149              		.loc 1 426 21 view .LVU29
  150 000e 01F813C0 		strb	ip, [r1, r3, lsl #1]
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 11
 
 
  151              	.L13:
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  189              	.L18:
  190              		.cfi_def_cfa_offset 0
  191              		.cfi_restore 14
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 12
 
 
  192              		.loc 1 433 1 view .LVU46
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  235              	.LVL14:
  400:USB_DEVICE/App/usbd_desc.c ****   {
  236              		.loc 1 400 6 view .LVU60
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 13
 
 
  237 0012 00D1     		bne	.L23
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  319:USB_DEVICE/App/usbd_desc.c **** 
  286              		.loc 1 319 3 view .LVU68
  319:USB_DEVICE/App/usbd_desc.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 14
 
 
  287              		.loc 1 319 11 is_stmt 0 view .LVU69
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  333              	.LVL22:
  288:USB_DEVICE/App/usbd_desc.c ****   }
  334              		.loc 1 288 5 is_stmt 0 view .LVU78
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 15
 
 
  335 0008 0548     		ldr	r0, .L34+4
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  382              		.cfi_def_cfa_offset 8
  383              		.cfi_offset 4, -8
  384              		.cfi_offset 14, -4
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 16
 
 
  385 0002 0A46     		mov	r2, r1
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  431              		.cfi_offset 14, -4
  432 0002 0A46     		mov	r2, r1
  338:USB_DEVICE/App/usbd_desc.c ****   {
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 17
 
 
  433              		.loc 1 338 3 is_stmt 1 view .LVU96
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  475              		.section	.text.USBD_FS_InterfaceStrDescriptor,"ax",%progbits
  476              		.align	1
  477              		.global	USBD_FS_InterfaceStrDescriptor
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 18
 
 
  478              		.syntax unified
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  521 0016 FFF7FEFF 		bl	USBD_GetString
  522              	.LVL48:
  363:USB_DEVICE/App/usbd_desc.c ****   }
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 19
 
 
  523              		.loc 1 363 5 view .LVU119
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  577 0004 00000000 		.word	USBD_FS_LangIDStrDescriptor
  578 0008 00000000 		.word	USBD_FS_ManufacturerStrDescriptor
  579 000c 00000000 		.word	USBD_FS_ProductStrDescriptor
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 20
 
 
  580 0010 00000000 		.word	USBD_FS_SerialStrDescriptor
@@ -1147,60 +1147,60 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 1
  583 001c 00000000 		.word	USBD_FS_USR_BOSDescriptor
  584              		.text
  585              	.Letext0:
- 586              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 587              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 586              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 587              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  588              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  589              		.file 5 "USB_DEVICE/App/usbd_desc.h"
  590              		.file 6 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_desc.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:21     .text.USBD_FS_DeviceDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:27     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:49     .text.USBD_FS_DeviceDescriptor:00000008 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:567    .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:54     .text.USBD_FS_LangIDStrDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:60     .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:82     .text.USBD_FS_LangIDStrDescriptor:00000008 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:553    .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:87     .text.USBD_FS_USR_BOSDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:93     .text.USBD_FS_USR_BOSDescriptor:00000000 USBD_FS_USR_BOSDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:115    .text.USBD_FS_USR_BOSDescriptor:00000008 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:560    .data.USBD_FS_BOSDesc:00000000 USBD_FS_BOSDesc
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:120    .text.IntToUnicode:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:125    .text.IntToUnicode:00000000 IntToUnicode
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:198    .text.Get_SerialNum:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:203    .text.Get_SerialNum:00000000 Get_SerialNum
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:261    .text.Get_SerialNum:00000030 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:538    .data.USBD_StringSerial:00000000 USBD_StringSerial
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:267    .text.USBD_FS_SerialStrDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:273    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:300    .text.USBD_FS_SerialStrDescriptor:00000010 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:305    .rodata.USBD_FS_ProductStrDescriptor.str1.4:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:309    .text.USBD_FS_ProductStrDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:315    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:361    .text.USBD_FS_ProductStrDescriptor:0000001c $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:546    .bss.USBD_StrDesc:00000000 USBD_StrDesc
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:367    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:373    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:404    .text.USBD_FS_ManufacturerStrDescriptor:00000014 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:410    .rodata.USBD_FS_ConfigStrDescriptor.str1.4:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:414    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:420    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:466    .text.USBD_FS_ConfigStrDescriptor:0000001c $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:472    .rodata.USBD_FS_InterfaceStrDescriptor.str1.4:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:476    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:482    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:528    .text.USBD_FS_InterfaceStrDescriptor:0000001c $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:535    .data.USBD_StringSerial:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:543    .bss.USBD_StrDesc:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:550    .data.USBD_LangIDDesc:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:557    .data.USBD_FS_BOSDesc:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:564    .data.USBD_FS_DeviceDesc:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:575    .data.FS_Desc:00000000 FS_Desc
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccFEEUGM.s:572    .data.FS_Desc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:21     .text.USBD_FS_DeviceDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:27     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:49     .text.USBD_FS_DeviceDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:567    .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:54     .text.USBD_FS_LangIDStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:60     .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:82     .text.USBD_FS_LangIDStrDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:553    .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:87     .text.USBD_FS_USR_BOSDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:93     .text.USBD_FS_USR_BOSDescriptor:00000000 USBD_FS_USR_BOSDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:115    .text.USBD_FS_USR_BOSDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:560    .data.USBD_FS_BOSDesc:00000000 USBD_FS_BOSDesc
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:120    .text.IntToUnicode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:125    .text.IntToUnicode:00000000 IntToUnicode
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:198    .text.Get_SerialNum:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:203    .text.Get_SerialNum:00000000 Get_SerialNum
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:261    .text.Get_SerialNum:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:538    .data.USBD_StringSerial:00000000 USBD_StringSerial
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:267    .text.USBD_FS_SerialStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:273    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:300    .text.USBD_FS_SerialStrDescriptor:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:305    .rodata.USBD_FS_ProductStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:309    .text.USBD_FS_ProductStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:315    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:361    .text.USBD_FS_ProductStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:546    .bss.USBD_StrDesc:00000000 USBD_StrDesc
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:367    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:373    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:404    .text.USBD_FS_ManufacturerStrDescriptor:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:410    .rodata.USBD_FS_ConfigStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:414    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:420    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:466    .text.USBD_FS_ConfigStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:472    .rodata.USBD_FS_InterfaceStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:476    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:482    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:528    .text.USBD_FS_InterfaceStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:535    .data.USBD_StringSerial:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:543    .bss.USBD_StrDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:550    .data.USBD_LangIDDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:557    .data.USBD_FS_BOSDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:564    .data.USBD_FS_DeviceDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:575    .data.FS_Desc:00000000 FS_Desc
+C:\Users\kroko\AppData\Local\Temp\ccbY7c39.s:572    .data.FS_Desc:00000000 $d
 
 UNDEFINED SYMBOLS
 USBD_GetString

@@ -1,0 +1,865 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"usbd_cdc.c"
+  16              		.text
+  17              		.section	.text.USBD_CDC_EP0_RxReady,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	USBD_CDC_EP0_RxReady:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26 0000 10B5     		push	{r4, lr}
+  27 0002 D0F8D432 		ldr	r3, [r0, #724]
+  28 0006 03F1B002 		add	r2, r3, #176
+  29 000a 50F82240 		ldr	r4, [r0, r2, lsl #2]
+  30 000e 8CB1     		cbz	r4, .L3
+  31 0010 00EB8200 		add	r0, r0, r2, lsl #2
+  32 0014 4368     		ldr	r3, [r0, #4]
+  33 0016 7BB1     		cbz	r3, .L4
+  34 0018 94F80002 		ldrb	r0, [r4, #512]	@ zero_extendqisi2
+  35 001c FF28     		cmp	r0, #255
+  36 001e 0DD0     		beq	.L5
+  37 0020 9B68     		ldr	r3, [r3, #8]
+  38 0022 94F80122 		ldrb	r2, [r4, #513]	@ zero_extendqisi2
+  39 0026 2146     		mov	r1, r4
+  40 0028 9847     		blx	r3
+  41 002a FF23     		movs	r3, #255
+  42 002c 84F80032 		strb	r3, [r4, #512]
+  43 0030 0020     		movs	r0, #0
+  44              	.L2:
+  45 0032 10BD     		pop	{r4, pc}
+  46              	.L3:
+  47 0034 0320     		movs	r0, #3
+  48 0036 FCE7     		b	.L2
+  49              	.L4:
+  50 0038 0020     		movs	r0, #0
+  51 003a FAE7     		b	.L2
+  52              	.L5:
+  53 003c 0020     		movs	r0, #0
+  54 003e F8E7     		b	.L2
+  56              		.section	.text.USBD_CDC_GetDeviceQualifierDescriptor,"ax",%progbits
+  57              		.align	1
+  58              		.global	USBD_CDC_GetDeviceQualifierDescriptor
+  59              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 2
+
+
+  60              		.thumb
+  61              		.thumb_func
+  63              	USBD_CDC_GetDeviceQualifierDescriptor:
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		@ link register save eliminated.
+  67 0000 0A23     		movs	r3, #10
+  68 0002 0380     		strh	r3, [r0]	@ movhi
+  69 0004 0048     		ldr	r0, .L8
+  70 0006 7047     		bx	lr
+  71              	.L9:
+  72              		.align	2
+  73              	.L8:
+  74 0008 00000000 		.word	USBD_CDC_DeviceQualifierDesc
+  76              		.section	.text.USBD_CDC_GetOtherSpeedCfgDesc,"ax",%progbits
+  77              		.align	1
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  82              	USBD_CDC_GetOtherSpeedCfgDesc:
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  86 0002 0646     		mov	r6, r0
+  87 0004 0F4F     		ldr	r7, .L15
+  88 0006 8221     		movs	r1, #130
+  89 0008 3846     		mov	r0, r7
+  90 000a FFF7FEFF 		bl	USBD_GetEpDesc
+  91 000e 0546     		mov	r5, r0
+  92 0010 0121     		movs	r1, #1
+  93 0012 3846     		mov	r0, r7
+  94 0014 FFF7FEFF 		bl	USBD_GetEpDesc
+  95 0018 0446     		mov	r4, r0
+  96 001a 8121     		movs	r1, #129
+  97 001c 3846     		mov	r0, r7
+  98 001e FFF7FEFF 		bl	USBD_GetEpDesc
+  99 0022 0DB1     		cbz	r5, .L11
+ 100 0024 1022     		movs	r2, #16
+ 101 0026 AA71     		strb	r2, [r5, #6]
+ 102              	.L11:
+ 103 0028 1CB1     		cbz	r4, .L12
+ 104 002a 4022     		movs	r2, #64
+ 105 002c 2271     		strb	r2, [r4, #4]
+ 106 002e 0022     		movs	r2, #0
+ 107 0030 6271     		strb	r2, [r4, #5]
+ 108              	.L12:
+ 109 0032 18B1     		cbz	r0, .L13
+ 110 0034 4022     		movs	r2, #64
+ 111 0036 0271     		strb	r2, [r0, #4]
+ 112 0038 0022     		movs	r2, #0
+ 113 003a 4271     		strb	r2, [r0, #5]
+ 114              	.L13:
+ 115 003c 4323     		movs	r3, #67
+ 116 003e 3380     		strh	r3, [r6]	@ movhi
+ 117 0040 0048     		ldr	r0, .L15
+ 118 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 119              	.L16:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 3
+
+
+ 120              		.align	2
+ 121              	.L15:
+ 122 0044 00000000 		.word	USBD_CDC_CfgDesc
+ 124              		.section	.text.USBD_CDC_GetFSCfgDesc,"ax",%progbits
+ 125              		.align	1
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 130              	USBD_CDC_GetFSCfgDesc:
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 134 0002 0646     		mov	r6, r0
+ 135 0004 0F4F     		ldr	r7, .L22
+ 136 0006 8221     		movs	r1, #130
+ 137 0008 3846     		mov	r0, r7
+ 138 000a FFF7FEFF 		bl	USBD_GetEpDesc
+ 139 000e 0546     		mov	r5, r0
+ 140 0010 0121     		movs	r1, #1
+ 141 0012 3846     		mov	r0, r7
+ 142 0014 FFF7FEFF 		bl	USBD_GetEpDesc
+ 143 0018 0446     		mov	r4, r0
+ 144 001a 8121     		movs	r1, #129
+ 145 001c 3846     		mov	r0, r7
+ 146 001e FFF7FEFF 		bl	USBD_GetEpDesc
+ 147 0022 0DB1     		cbz	r5, .L18
+ 148 0024 1022     		movs	r2, #16
+ 149 0026 AA71     		strb	r2, [r5, #6]
+ 150              	.L18:
+ 151 0028 1CB1     		cbz	r4, .L19
+ 152 002a 4022     		movs	r2, #64
+ 153 002c 2271     		strb	r2, [r4, #4]
+ 154 002e 0022     		movs	r2, #0
+ 155 0030 6271     		strb	r2, [r4, #5]
+ 156              	.L19:
+ 157 0032 18B1     		cbz	r0, .L20
+ 158 0034 4022     		movs	r2, #64
+ 159 0036 0271     		strb	r2, [r0, #4]
+ 160 0038 0022     		movs	r2, #0
+ 161 003a 4271     		strb	r2, [r0, #5]
+ 162              	.L20:
+ 163 003c 4323     		movs	r3, #67
+ 164 003e 3380     		strh	r3, [r6]	@ movhi
+ 165 0040 0048     		ldr	r0, .L22
+ 166 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 167              	.L23:
+ 168              		.align	2
+ 169              	.L22:
+ 170 0044 00000000 		.word	USBD_CDC_CfgDesc
+ 172              		.section	.text.USBD_CDC_GetHSCfgDesc,"ax",%progbits
+ 173              		.align	1
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 178              	USBD_CDC_GetHSCfgDesc:
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 4
+
+
+ 181 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 182 0002 0646     		mov	r6, r0
+ 183 0004 0F4F     		ldr	r7, .L29
+ 184 0006 8221     		movs	r1, #130
+ 185 0008 3846     		mov	r0, r7
+ 186 000a FFF7FEFF 		bl	USBD_GetEpDesc
+ 187 000e 0546     		mov	r5, r0
+ 188 0010 0121     		movs	r1, #1
+ 189 0012 3846     		mov	r0, r7
+ 190 0014 FFF7FEFF 		bl	USBD_GetEpDesc
+ 191 0018 0446     		mov	r4, r0
+ 192 001a 8121     		movs	r1, #129
+ 193 001c 3846     		mov	r0, r7
+ 194 001e FFF7FEFF 		bl	USBD_GetEpDesc
+ 195 0022 0DB1     		cbz	r5, .L25
+ 196 0024 1022     		movs	r2, #16
+ 197 0026 AA71     		strb	r2, [r5, #6]
+ 198              	.L25:
+ 199 0028 1CB1     		cbz	r4, .L26
+ 200 002a 0022     		movs	r2, #0
+ 201 002c 2271     		strb	r2, [r4, #4]
+ 202 002e 0222     		movs	r2, #2
+ 203 0030 6271     		strb	r2, [r4, #5]
+ 204              	.L26:
+ 205 0032 18B1     		cbz	r0, .L27
+ 206 0034 0022     		movs	r2, #0
+ 207 0036 0271     		strb	r2, [r0, #4]
+ 208 0038 0222     		movs	r2, #2
+ 209 003a 4271     		strb	r2, [r0, #5]
+ 210              	.L27:
+ 211 003c 4323     		movs	r3, #67
+ 212 003e 3380     		strh	r3, [r6]	@ movhi
+ 213 0040 0048     		ldr	r0, .L29
+ 214 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 215              	.L30:
+ 216              		.align	2
+ 217              	.L29:
+ 218 0044 00000000 		.word	USBD_CDC_CfgDesc
+ 220              		.section	.text.USBD_CDC_DataOut,"ax",%progbits
+ 221              		.align	1
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 226              	USBD_CDC_DataOut:
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229 0000 38B5     		push	{r3, r4, r5, lr}
+ 230 0002 D0F8D432 		ldr	r3, [r0, #724]
+ 231 0006 B033     		adds	r3, r3, #176
+ 232 0008 50F82350 		ldr	r5, [r0, r3, lsl #2]
+ 233 000c 95B1     		cbz	r5, .L33
+ 234 000e 0446     		mov	r4, r0
+ 235 0010 FFF7FEFF 		bl	USBD_LL_GetRxDataSize
+ 236 0014 C5F80C02 		str	r0, [r5, #524]
+ 237 0018 D4F8D432 		ldr	r3, [r4, #724]
+ 238 001c B033     		adds	r3, r3, #176
+ 239 001e 04EB8304 		add	r4, r4, r3, lsl #2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 5
+
+
+ 240 0022 6368     		ldr	r3, [r4, #4]
+ 241 0024 DB68     		ldr	r3, [r3, #12]
+ 242 0026 05F50371 		add	r1, r5, #524
+ 243 002a D5F80402 		ldr	r0, [r5, #516]
+ 244 002e 9847     		blx	r3
+ 245 0030 0020     		movs	r0, #0
+ 246              	.L32:
+ 247 0032 38BD     		pop	{r3, r4, r5, pc}
+ 248              	.L33:
+ 249 0034 0320     		movs	r0, #3
+ 250 0036 FCE7     		b	.L32
+ 252              		.section	.text.USBD_CDC_DataIn,"ax",%progbits
+ 253              		.align	1
+ 254              		.syntax unified
+ 255              		.thumb
+ 256              		.thumb_func
+ 258              	USBD_CDC_DataIn:
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261 0000 38B5     		push	{r3, r4, r5, lr}
+ 262 0002 D0F8C852 		ldr	r5, [r0, #712]
+ 263 0006 D0F8D432 		ldr	r3, [r0, #724]
+ 264 000a B033     		adds	r3, r3, #176
+ 265 000c 50F82340 		ldr	r4, [r0, r3, lsl #2]
+ 266 0010 84B3     		cbz	r4, .L38
+ 267 0012 01F00F03 		and	r3, r1, #15
+ 268 0016 03EB8302 		add	r2, r3, r3, lsl #2
+ 269 001a 00EB8202 		add	r2, r0, r2, lsl #2
+ 270 001e 9269     		ldr	r2, [r2, #24]
+ 271 0020 4AB1     		cbz	r2, .L37
+ 272 0022 03EB830C 		add	ip, r3, r3, lsl #2
+ 273 0026 05EBCC05 		add	r5, r5, ip, lsl #3
+ 274 002a 2D6A     		ldr	r5, [r5, #32]
+ 275 002c B2FBF5FC 		udiv	ip, r2, r5
+ 276 0030 05FB1C22 		mls	r2, r5, ip, r2
+ 277 0034 92B1     		cbz	r2, .L41
+ 278              	.L37:
+ 279 0036 0023     		movs	r3, #0
+ 280 0038 C4F81432 		str	r3, [r4, #532]
+ 281 003c D0F8D432 		ldr	r3, [r0, #724]
+ 282 0040 B033     		adds	r3, r3, #176
+ 283 0042 00EB8300 		add	r0, r0, r3, lsl #2
+ 284 0046 4368     		ldr	r3, [r0, #4]
+ 285 0048 1B69     		ldr	r3, [r3, #16]
+ 286 004a ABB1     		cbz	r3, .L39
+ 287 004c 0A46     		mov	r2, r1
+ 288 004e 04F50471 		add	r1, r4, #528
+ 289 0052 D4F80802 		ldr	r0, [r4, #520]
+ 290 0056 9847     		blx	r3
+ 291 0058 0020     		movs	r0, #0
+ 292              	.L36:
+ 293 005a 38BD     		pop	{r3, r4, r5, pc}
+ 294              	.L41:
+ 295 005c 03EB8303 		add	r3, r3, r3, lsl #2
+ 296 0060 00EB8303 		add	r3, r0, r3, lsl #2
+ 297 0064 0024     		movs	r4, #0
+ 298 0066 9C61     		str	r4, [r3, #24]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 6
+
+
+ 299 0068 2346     		mov	r3, r4
+ 300 006a 2246     		mov	r2, r4
+ 301 006c FFF7FEFF 		bl	USBD_LL_Transmit
+ 302 0070 2046     		mov	r0, r4
+ 303 0072 F2E7     		b	.L36
+ 304              	.L38:
+ 305 0074 0320     		movs	r0, #3
+ 306 0076 F0E7     		b	.L36
+ 307              	.L39:
+ 308 0078 0020     		movs	r0, #0
+ 309 007a EEE7     		b	.L36
+ 311              		.section	.text.USBD_CDC_Setup,"ax",%progbits
+ 312              		.align	1
+ 313              		.syntax unified
+ 314              		.thumb
+ 315              		.thumb_func
+ 317              	USBD_CDC_Setup:
+ 318              		@ args = 0, pretend = 0, frame = 8
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 321 0002 83B0     		sub	sp, sp, #12
+ 322 0004 D0F8D432 		ldr	r3, [r0, #724]
+ 323 0008 03F1B002 		add	r2, r3, #176
+ 324 000c 50F82270 		ldr	r7, [r0, r2, lsl #2]
+ 325 0010 0022     		movs	r2, #0
+ 326 0012 8DF80720 		strb	r2, [sp, #7]
+ 327 0016 ADF80420 		strh	r2, [sp, #4]	@ movhi
+ 328 001a 002F     		cmp	r7, #0
+ 329 001c 78D0     		beq	.L56
+ 330 001e 0446     		mov	r4, r0
+ 331 0020 0D46     		mov	r5, r1
+ 332 0022 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 333 0024 11F06006 		ands	r6, r1, #96
+ 334 0028 34D0     		beq	.L44
+ 335 002a 202E     		cmp	r6, #32
+ 336 002c 69D1     		bne	.L45
+ 337 002e EA88     		ldrh	r2, [r5, #6]
+ 338 0030 2AB3     		cbz	r2, .L46
+ 339 0032 11F0800F 		tst	r1, #128
+ 340 0036 0ED1     		bne	.L60
+ 341 0038 6B78     		ldrb	r3, [r5, #1]	@ zero_extendqisi2
+ 342 003a 87F80032 		strb	r3, [r7, #512]
+ 343 003e EA88     		ldrh	r2, [r5, #6]
+ 344 0040 3F2A     		cmp	r2, #63
+ 345 0042 1AD8     		bhi	.L57
+ 346 0044 D2B2     		uxtb	r2, r2
+ 347              	.L48:
+ 348 0046 87F80122 		strb	r2, [r7, #513]
+ 349 004a 3946     		mov	r1, r7
+ 350 004c 2046     		mov	r0, r4
+ 351 004e FFF7FEFF 		bl	USBD_CtlPrepareRx
+ 352 0052 0026     		movs	r6, #0
+ 353 0054 59E0     		b	.L43
+ 354              	.L60:
+ 355 0056 B033     		adds	r3, r3, #176
+ 356 0058 00EB8303 		add	r3, r0, r3, lsl #2
+ 357 005c 5B68     		ldr	r3, [r3, #4]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 7
+
+
+ 358 005e 9B68     		ldr	r3, [r3, #8]
+ 359 0060 3946     		mov	r1, r7
+ 360 0062 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 361 0064 9847     		blx	r3
+ 362 0066 EA88     		ldrh	r2, [r5, #6]
+ 363 0068 072A     		cmp	r2, #7
+ 364 006a 28BF     		it	cs
+ 365 006c 0722     		movcs	r2, #7
+ 366 006e 3946     		mov	r1, r7
+ 367 0070 2046     		mov	r0, r4
+ 368 0072 FFF7FEFF 		bl	USBD_CtlSendData
+ 369 0076 0026     		movs	r6, #0
+ 370 0078 47E0     		b	.L43
+ 371              	.L57:
+ 372 007a 4022     		movs	r2, #64
+ 373 007c E3E7     		b	.L48
+ 374              	.L46:
+ 375 007e B033     		adds	r3, r3, #176
+ 376 0080 00EB8303 		add	r3, r0, r3, lsl #2
+ 377 0084 5B68     		ldr	r3, [r3, #4]
+ 378 0086 9B68     		ldr	r3, [r3, #8]
+ 379 0088 0022     		movs	r2, #0
+ 380 008a 2946     		mov	r1, r5
+ 381 008c 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 382 008e 9847     		blx	r3
+ 383 0090 0026     		movs	r6, #0
+ 384 0092 3AE0     		b	.L43
+ 385              	.L44:
+ 386 0094 6F78     		ldrb	r7, [r5, #1]	@ zero_extendqisi2
+ 387 0096 0B2F     		cmp	r7, #11
+ 388 0098 2ED8     		bhi	.L49
+ 389 009a DFE807F0 		tbb	[pc, r7]
+ 390              	.L51:
+ 391 009e 06       		.byte	(.L53-.L51)/2
+ 392 009f 36       		.byte	(.L43-.L51)/2
+ 393 00a0 2D       		.byte	(.L49-.L51)/2
+ 394 00a1 2D       		.byte	(.L49-.L51)/2
+ 395 00a2 2D       		.byte	(.L49-.L51)/2
+ 396 00a3 2D       		.byte	(.L49-.L51)/2
+ 397 00a4 2D       		.byte	(.L49-.L51)/2
+ 398 00a5 2D       		.byte	(.L49-.L51)/2
+ 399 00a6 2D       		.byte	(.L49-.L51)/2
+ 400 00a7 2D       		.byte	(.L49-.L51)/2
+ 401 00a8 15       		.byte	(.L52-.L51)/2
+ 402 00a9 24       		.byte	(.L50-.L51)/2
+ 403              		.p2align 1
+ 404              	.L53:
+ 405 00aa 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 406 00ae 032B     		cmp	r3, #3
+ 407 00b0 04D0     		beq	.L61
+ 408 00b2 2946     		mov	r1, r5
+ 409 00b4 FFF7FEFF 		bl	USBD_CtlError
+ 410 00b8 0326     		movs	r6, #3
+ 411 00ba 26E0     		b	.L43
+ 412              	.L61:
+ 413 00bc 0222     		movs	r2, #2
+ 414 00be 01A9     		add	r1, sp, #4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 8
+
+
+ 415 00c0 FFF7FEFF 		bl	USBD_CtlSendData
+ 416 00c4 3E46     		mov	r6, r7
+ 417 00c6 20E0     		b	.L43
+ 418              	.L52:
+ 419 00c8 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 420 00cc 032B     		cmp	r3, #3
+ 421 00ce 04D0     		beq	.L62
+ 422 00d0 2946     		mov	r1, r5
+ 423 00d2 FFF7FEFF 		bl	USBD_CtlError
+ 424 00d6 0326     		movs	r6, #3
+ 425 00d8 17E0     		b	.L43
+ 426              	.L62:
+ 427 00da 0122     		movs	r2, #1
+ 428 00dc 0DF10701 		add	r1, sp, #7
+ 429 00e0 FFF7FEFF 		bl	USBD_CtlSendData
+ 430 00e4 11E0     		b	.L43
+ 431              	.L50:
+ 432 00e6 90F89C32 		ldrb	r3, [r0, #668]	@ zero_extendqisi2
+ 433 00ea 032B     		cmp	r3, #3
+ 434 00ec 0DD0     		beq	.L43
+ 435 00ee 2946     		mov	r1, r5
+ 436 00f0 FFF7FEFF 		bl	USBD_CtlError
+ 437 00f4 0326     		movs	r6, #3
+ 438 00f6 08E0     		b	.L43
+ 439              	.L49:
+ 440 00f8 2946     		mov	r1, r5
+ 441 00fa FFF7FEFF 		bl	USBD_CtlError
+ 442 00fe 0326     		movs	r6, #3
+ 443 0100 03E0     		b	.L43
+ 444              	.L45:
+ 445 0102 2946     		mov	r1, r5
+ 446 0104 FFF7FEFF 		bl	USBD_CtlError
+ 447 0108 0326     		movs	r6, #3
+ 448              	.L43:
+ 449 010a 3046     		mov	r0, r6
+ 450 010c 03B0     		add	sp, sp, #12
+ 451              		@ sp needed
+ 452 010e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 453              	.L56:
+ 454 0110 0326     		movs	r6, #3
+ 455 0112 FAE7     		b	.L43
+ 457              		.section	.text.USBD_CDC_DeInit,"ax",%progbits
+ 458              		.align	1
+ 459              		.syntax unified
+ 460              		.thumb
+ 461              		.thumb_func
+ 463              	USBD_CDC_DeInit:
+ 464              		@ args = 0, pretend = 0, frame = 0
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466 0000 38B5     		push	{r3, r4, r5, lr}
+ 467 0002 0446     		mov	r4, r0
+ 468 0004 8121     		movs	r1, #129
+ 469 0006 FFF7FEFF 		bl	USBD_LL_CloseEP
+ 470 000a 0025     		movs	r5, #0
+ 471 000c 2587     		strh	r5, [r4, #56]	@ movhi
+ 472 000e 0121     		movs	r1, #1
+ 473 0010 2046     		mov	r0, r4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 9
+
+
+ 474 0012 FFF7FEFF 		bl	USBD_LL_CloseEP
+ 475 0016 A4F87851 		strh	r5, [r4, #376]	@ movhi
+ 476 001a 8221     		movs	r1, #130
+ 477 001c 2046     		mov	r0, r4
+ 478 001e FFF7FEFF 		bl	USBD_LL_CloseEP
+ 479 0022 A4F84C50 		strh	r5, [r4, #76]	@ movhi
+ 480 0026 A4F84E50 		strh	r5, [r4, #78]	@ movhi
+ 481 002a D4F8D432 		ldr	r3, [r4, #724]
+ 482 002e 03F1B002 		add	r2, r3, #176
+ 483 0032 54F82220 		ldr	r2, [r4, r2, lsl #2]
+ 484 0036 9AB1     		cbz	r2, .L64
+ 485 0038 B033     		adds	r3, r3, #176
+ 486 003a 04EB8303 		add	r3, r4, r3, lsl #2
+ 487 003e 5B68     		ldr	r3, [r3, #4]
+ 488 0040 5B68     		ldr	r3, [r3, #4]
+ 489 0042 9847     		blx	r3
+ 490 0044 D4F8D432 		ldr	r3, [r4, #724]
+ 491 0048 B033     		adds	r3, r3, #176
+ 492 004a 54F82300 		ldr	r0, [r4, r3, lsl #2]
+ 493 004e FFF7FEFF 		bl	USBD_static_free
+ 494 0052 D4F8D432 		ldr	r3, [r4, #724]
+ 495 0056 B033     		adds	r3, r3, #176
+ 496 0058 44F82350 		str	r5, [r4, r3, lsl #2]
+ 497 005c C4F8BC52 		str	r5, [r4, #700]
+ 498              	.L64:
+ 499 0060 0020     		movs	r0, #0
+ 500 0062 38BD     		pop	{r3, r4, r5, pc}
+ 502              		.section	.text.USBD_CDC_Init,"ax",%progbits
+ 503              		.align	1
+ 504              		.syntax unified
+ 505              		.thumb
+ 506              		.thumb_func
+ 508              	USBD_CDC_Init:
+ 509              		@ args = 0, pretend = 0, frame = 0
+ 510              		@ frame_needed = 0, uses_anonymous_args = 0
+ 511 0000 70B5     		push	{r4, r5, r6, lr}
+ 512 0002 0446     		mov	r4, r0
+ 513 0004 4FF40770 		mov	r0, #540
+ 514 0008 FFF7FEFF 		bl	USBD_static_malloc
+ 515 000c 0028     		cmp	r0, #0
+ 516 000e 49D0     		beq	.L74
+ 517 0010 0546     		mov	r5, r0
+ 518 0012 4FF40772 		mov	r2, #540
+ 519 0016 0021     		movs	r1, #0
+ 520 0018 FFF7FEFF 		bl	memset
+ 521 001c D4F8D432 		ldr	r3, [r4, #724]
+ 522 0020 B033     		adds	r3, r3, #176
+ 523 0022 44F82350 		str	r5, [r4, r3, lsl #2]
+ 524 0026 C4F8BC52 		str	r5, [r4, #700]
+ 525 002a 237C     		ldrb	r3, [r4, #16]	@ zero_extendqisi2
+ 526 002c 002B     		cmp	r3, #0
+ 527 002e 41D1     		bne	.L69
+ 528 0030 4FF40073 		mov	r3, #512
+ 529 0034 0222     		movs	r2, #2
+ 530 0036 8121     		movs	r1, #129
+ 531 0038 2046     		mov	r0, r4
+ 532 003a FFF7FEFF 		bl	USBD_LL_OpenEP
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 10
+
+
+ 533 003e 0126     		movs	r6, #1
+ 534 0040 2687     		strh	r6, [r4, #56]	@ movhi
+ 535 0042 4FF40073 		mov	r3, #512
+ 536 0046 0222     		movs	r2, #2
+ 537 0048 3146     		mov	r1, r6
+ 538 004a 2046     		mov	r0, r4
+ 539 004c FFF7FEFF 		bl	USBD_LL_OpenEP
+ 540 0050 A4F87861 		strh	r6, [r4, #376]	@ movhi
+ 541 0054 1023     		movs	r3, #16
+ 542 0056 A4F84E30 		strh	r3, [r4, #78]	@ movhi
+ 543              	.L70:
+ 544 005a 0823     		movs	r3, #8
+ 545 005c 0322     		movs	r2, #3
+ 546 005e 8221     		movs	r1, #130
+ 547 0060 2046     		mov	r0, r4
+ 548 0062 FFF7FEFF 		bl	USBD_LL_OpenEP
+ 549 0066 0123     		movs	r3, #1
+ 550 0068 A4F84C30 		strh	r3, [r4, #76]	@ movhi
+ 551 006c 0026     		movs	r6, #0
+ 552 006e C5F80462 		str	r6, [r5, #516]
+ 553 0072 D4F8D432 		ldr	r3, [r4, #724]
+ 554 0076 B033     		adds	r3, r3, #176
+ 555 0078 04EB8303 		add	r3, r4, r3, lsl #2
+ 556 007c 5B68     		ldr	r3, [r3, #4]
+ 557 007e 1B68     		ldr	r3, [r3]
+ 558 0080 9847     		blx	r3
+ 559 0082 C5F81462 		str	r6, [r5, #532]
+ 560 0086 C5F81862 		str	r6, [r5, #536]
+ 561 008a D5F80422 		ldr	r2, [r5, #516]
+ 562 008e 62B3     		cbz	r2, .L72
+ 563 0090 257C     		ldrb	r5, [r4, #16]	@ zero_extendqisi2
+ 564 0092 1DBB     		cbnz	r5, .L71
+ 565 0094 4FF40073 		mov	r3, #512
+ 566 0098 0121     		movs	r1, #1
+ 567 009a 2046     		mov	r0, r4
+ 568 009c FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 569              	.L68:
+ 570 00a0 2846     		mov	r0, r5
+ 571 00a2 70BD     		pop	{r4, r5, r6, pc}
+ 572              	.L74:
+ 573 00a4 D4F8D432 		ldr	r3, [r4, #724]
+ 574 00a8 B033     		adds	r3, r3, #176
+ 575 00aa 0022     		movs	r2, #0
+ 576 00ac 44F82320 		str	r2, [r4, r3, lsl #2]
+ 577 00b0 0225     		movs	r5, #2
+ 578 00b2 F5E7     		b	.L68
+ 579              	.L69:
+ 580 00b4 4023     		movs	r3, #64
+ 581 00b6 0222     		movs	r2, #2
+ 582 00b8 8121     		movs	r1, #129
+ 583 00ba 2046     		mov	r0, r4
+ 584 00bc FFF7FEFF 		bl	USBD_LL_OpenEP
+ 585 00c0 0126     		movs	r6, #1
+ 586 00c2 2687     		strh	r6, [r4, #56]	@ movhi
+ 587 00c4 4023     		movs	r3, #64
+ 588 00c6 0222     		movs	r2, #2
+ 589 00c8 3146     		mov	r1, r6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 11
+
+
+ 590 00ca 2046     		mov	r0, r4
+ 591 00cc FFF7FEFF 		bl	USBD_LL_OpenEP
+ 592 00d0 A4F87861 		strh	r6, [r4, #376]	@ movhi
+ 593 00d4 1023     		movs	r3, #16
+ 594 00d6 A4F84E30 		strh	r3, [r4, #78]	@ movhi
+ 595 00da BEE7     		b	.L70
+ 596              	.L71:
+ 597 00dc 4023     		movs	r3, #64
+ 598 00de 0121     		movs	r1, #1
+ 599 00e0 2046     		mov	r0, r4
+ 600 00e2 FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 601 00e6 0025     		movs	r5, #0
+ 602 00e8 DAE7     		b	.L68
+ 603              	.L72:
+ 604 00ea 0225     		movs	r5, #2
+ 605 00ec D8E7     		b	.L68
+ 607              		.section	.text.USBD_CDC_RegisterInterface,"ax",%progbits
+ 608              		.align	1
+ 609              		.global	USBD_CDC_RegisterInterface
+ 610              		.syntax unified
+ 611              		.thumb
+ 612              		.thumb_func
+ 614              	USBD_CDC_RegisterInterface:
+ 615              		@ args = 0, pretend = 0, frame = 0
+ 616              		@ frame_needed = 0, uses_anonymous_args = 0
+ 617              		@ link register save eliminated.
+ 618 0000 39B1     		cbz	r1, .L77
+ 619 0002 D0F8D432 		ldr	r3, [r0, #724]
+ 620 0006 B033     		adds	r3, r3, #176
+ 621 0008 00EB8300 		add	r0, r0, r3, lsl #2
+ 622 000c 4160     		str	r1, [r0, #4]
+ 623 000e 0020     		movs	r0, #0
+ 624 0010 7047     		bx	lr
+ 625              	.L77:
+ 626 0012 0320     		movs	r0, #3
+ 627 0014 7047     		bx	lr
+ 629              		.section	.text.USBD_CDC_SetTxBuffer,"ax",%progbits
+ 630              		.align	1
+ 631              		.global	USBD_CDC_SetTxBuffer
+ 632              		.syntax unified
+ 633              		.thumb
+ 634              		.thumb_func
+ 636              	USBD_CDC_SetTxBuffer:
+ 637              		@ args = 0, pretend = 0, frame = 0
+ 638              		@ frame_needed = 0, uses_anonymous_args = 0
+ 639              		@ link register save eliminated.
+ 640 0000 D0F8D432 		ldr	r3, [r0, #724]
+ 641 0004 B033     		adds	r3, r3, #176
+ 642 0006 50F82330 		ldr	r3, [r0, r3, lsl #2]
+ 643 000a 2BB1     		cbz	r3, .L80
+ 644 000c C3F80812 		str	r1, [r3, #520]
+ 645 0010 C3F81022 		str	r2, [r3, #528]
+ 646 0014 0020     		movs	r0, #0
+ 647 0016 7047     		bx	lr
+ 648              	.L80:
+ 649 0018 0320     		movs	r0, #3
+ 650 001a 7047     		bx	lr
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 12
+
+
+ 652              		.section	.text.USBD_CDC_SetRxBuffer,"ax",%progbits
+ 653              		.align	1
+ 654              		.global	USBD_CDC_SetRxBuffer
+ 655              		.syntax unified
+ 656              		.thumb
+ 657              		.thumb_func
+ 659              	USBD_CDC_SetRxBuffer:
+ 660              		@ args = 0, pretend = 0, frame = 0
+ 661              		@ frame_needed = 0, uses_anonymous_args = 0
+ 662              		@ link register save eliminated.
+ 663 0000 D0F8D432 		ldr	r3, [r0, #724]
+ 664 0004 B033     		adds	r3, r3, #176
+ 665 0006 50F82330 		ldr	r3, [r0, r3, lsl #2]
+ 666 000a 1BB1     		cbz	r3, .L83
+ 667 000c C3F80412 		str	r1, [r3, #516]
+ 668 0010 0020     		movs	r0, #0
+ 669 0012 7047     		bx	lr
+ 670              	.L83:
+ 671 0014 0320     		movs	r0, #3
+ 672 0016 7047     		bx	lr
+ 674              		.section	.text.USBD_CDC_TransmitPacket,"ax",%progbits
+ 675              		.align	1
+ 676              		.global	USBD_CDC_TransmitPacket
+ 677              		.syntax unified
+ 678              		.thumb
+ 679              		.thumb_func
+ 681              	USBD_CDC_TransmitPacket:
+ 682              		@ args = 0, pretend = 0, frame = 0
+ 683              		@ frame_needed = 0, uses_anonymous_args = 0
+ 684 0000 08B5     		push	{r3, lr}
+ 685 0002 D0F8D432 		ldr	r3, [r0, #724]
+ 686 0006 B033     		adds	r3, r3, #176
+ 687 0008 50F82320 		ldr	r2, [r0, r3, lsl #2]
+ 688 000c 8AB1     		cbz	r2, .L86
+ 689 000e D2F81432 		ldr	r3, [r2, #532]
+ 690 0012 0BB1     		cbz	r3, .L89
+ 691 0014 0120     		movs	r0, #1
+ 692              	.L85:
+ 693 0016 08BD     		pop	{r3, pc}
+ 694              	.L89:
+ 695 0018 0123     		movs	r3, #1
+ 696 001a C2F81432 		str	r3, [r2, #532]
+ 697 001e D2F81032 		ldr	r3, [r2, #528]
+ 698 0022 C362     		str	r3, [r0, #44]
+ 699 0024 D2F80822 		ldr	r2, [r2, #520]
+ 700 0028 8121     		movs	r1, #129
+ 701 002a FFF7FEFF 		bl	USBD_LL_Transmit
+ 702 002e 0020     		movs	r0, #0
+ 703 0030 F1E7     		b	.L85
+ 704              	.L86:
+ 705 0032 0320     		movs	r0, #3
+ 706 0034 EFE7     		b	.L85
+ 708              		.section	.text.USBD_CDC_ReceivePacket,"ax",%progbits
+ 709              		.align	1
+ 710              		.global	USBD_CDC_ReceivePacket
+ 711              		.syntax unified
+ 712              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 13
+
+
+ 713              		.thumb_func
+ 715              	USBD_CDC_ReceivePacket:
+ 716              		@ args = 0, pretend = 0, frame = 0
+ 717              		@ frame_needed = 0, uses_anonymous_args = 0
+ 718 0000 10B5     		push	{r4, lr}
+ 719 0002 D0F8D432 		ldr	r3, [r0, #724]
+ 720 0006 B033     		adds	r3, r3, #176
+ 721 0008 50F82320 		ldr	r2, [r0, r3, lsl #2]
+ 722 000c 92B1     		cbz	r2, .L93
+ 723 000e 047C     		ldrb	r4, [r0, #16]	@ zero_extendqisi2
+ 724 0010 44B9     		cbnz	r4, .L92
+ 725 0012 4FF40073 		mov	r3, #512
+ 726 0016 D2F80422 		ldr	r2, [r2, #516]
+ 727 001a 0121     		movs	r1, #1
+ 728 001c FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 729              	.L91:
+ 730 0020 2046     		mov	r0, r4
+ 731 0022 10BD     		pop	{r4, pc}
+ 732              	.L92:
+ 733 0024 4023     		movs	r3, #64
+ 734 0026 D2F80422 		ldr	r2, [r2, #516]
+ 735 002a 0121     		movs	r1, #1
+ 736 002c FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 737 0030 0024     		movs	r4, #0
+ 738 0032 F5E7     		b	.L91
+ 739              	.L93:
+ 740 0034 0324     		movs	r4, #3
+ 741 0036 F3E7     		b	.L91
+ 743              		.section	.data.USBD_CDC_CfgDesc,"aw"
+ 744              		.align	2
+ 747              	USBD_CDC_CfgDesc:
+ 748 0000 09024300 		.ascii	"\011\002C\000\002\001\000\3002\011\004\000\000\001\002"
+ 748      020100C0 
+ 748      32090400 
+ 748      000102
+ 749 000f 02010005 		.ascii	"\002\001\000\005$\000\020\001\005$\001\000\001\004$"
+ 749      24001001 
+ 749      05240100 
+ 749      010424
+ 750 001e 02020524 		.ascii	"\002\002\005$\006\000\001\007\005\202\003\010\000\020"
+ 750      06000107 
+ 750      05820308 
+ 750      0010
+ 751 002c 09040100 		.ascii	"\011\004\001\000\002\012\000\000\000\007\005\001\002"
+ 751      020A0000 
+ 751      00070501 
+ 751      02
+ 752 0039 40000007 		.ascii	"@\000\000\007\005\201\002@\000\000"
+ 752      05810240 
+ 752      0000
+ 753              		.global	USBD_CDC
+ 754              		.section	.data.USBD_CDC,"aw"
+ 755              		.align	2
+ 758              	USBD_CDC:
+ 759 0000 00000000 		.word	USBD_CDC_Init
+ 760 0004 00000000 		.word	USBD_CDC_DeInit
+ 761 0008 00000000 		.word	USBD_CDC_Setup
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 14
+
+
+ 762 000c 00000000 		.word	0
+ 763 0010 00000000 		.word	USBD_CDC_EP0_RxReady
+ 764 0014 00000000 		.word	USBD_CDC_DataIn
+ 765 0018 00000000 		.word	USBD_CDC_DataOut
+ 766 001c 00000000 		.word	0
+ 767 0020 00000000 		.word	0
+ 768 0024 00000000 		.word	0
+ 769 0028 00000000 		.word	USBD_CDC_GetHSCfgDesc
+ 770 002c 00000000 		.word	USBD_CDC_GetFSCfgDesc
+ 771 0030 00000000 		.word	USBD_CDC_GetOtherSpeedCfgDesc
+ 772 0034 00000000 		.word	USBD_CDC_GetDeviceQualifierDescriptor
+ 773              		.section	.data.USBD_CDC_DeviceQualifierDesc,"aw"
+ 774              		.align	2
+ 777              	USBD_CDC_DeviceQualifierDesc:
+ 778 0000 0A060002 		.ascii	"\012\006\000\002\000\000\000@\001\000"
+ 778      00000040 
+ 778      0100
+ 779              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 usbd_cdc.c
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:18     .text.USBD_CDC_EP0_RxReady:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:23     .text.USBD_CDC_EP0_RxReady:00000000 USBD_CDC_EP0_RxReady
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:57     .text.USBD_CDC_GetDeviceQualifierDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:63     .text.USBD_CDC_GetDeviceQualifierDescriptor:00000000 USBD_CDC_GetDeviceQualifierDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:74     .text.USBD_CDC_GetDeviceQualifierDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:777    .data.USBD_CDC_DeviceQualifierDesc:00000000 USBD_CDC_DeviceQualifierDesc
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:77     .text.USBD_CDC_GetOtherSpeedCfgDesc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:82     .text.USBD_CDC_GetOtherSpeedCfgDesc:00000000 USBD_CDC_GetOtherSpeedCfgDesc
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:122    .text.USBD_CDC_GetOtherSpeedCfgDesc:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:747    .data.USBD_CDC_CfgDesc:00000000 USBD_CDC_CfgDesc
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:125    .text.USBD_CDC_GetFSCfgDesc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:130    .text.USBD_CDC_GetFSCfgDesc:00000000 USBD_CDC_GetFSCfgDesc
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:170    .text.USBD_CDC_GetFSCfgDesc:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:173    .text.USBD_CDC_GetHSCfgDesc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:178    .text.USBD_CDC_GetHSCfgDesc:00000000 USBD_CDC_GetHSCfgDesc
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:218    .text.USBD_CDC_GetHSCfgDesc:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:221    .text.USBD_CDC_DataOut:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:226    .text.USBD_CDC_DataOut:00000000 USBD_CDC_DataOut
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:253    .text.USBD_CDC_DataIn:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:258    .text.USBD_CDC_DataIn:00000000 USBD_CDC_DataIn
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:312    .text.USBD_CDC_Setup:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:317    .text.USBD_CDC_Setup:00000000 USBD_CDC_Setup
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:391    .text.USBD_CDC_Setup:0000009e $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:403    .text.USBD_CDC_Setup:000000aa $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:458    .text.USBD_CDC_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:463    .text.USBD_CDC_DeInit:00000000 USBD_CDC_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:503    .text.USBD_CDC_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:508    .text.USBD_CDC_Init:00000000 USBD_CDC_Init
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:608    .text.USBD_CDC_RegisterInterface:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:614    .text.USBD_CDC_RegisterInterface:00000000 USBD_CDC_RegisterInterface
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:630    .text.USBD_CDC_SetTxBuffer:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:636    .text.USBD_CDC_SetTxBuffer:00000000 USBD_CDC_SetTxBuffer
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:653    .text.USBD_CDC_SetRxBuffer:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:659    .text.USBD_CDC_SetRxBuffer:00000000 USBD_CDC_SetRxBuffer
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:675    .text.USBD_CDC_TransmitPacket:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:681    .text.USBD_CDC_TransmitPacket:00000000 USBD_CDC_TransmitPacket
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:709    .text.USBD_CDC_ReceivePacket:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:715    .text.USBD_CDC_ReceivePacket:00000000 USBD_CDC_ReceivePacket
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:744    .data.USBD_CDC_CfgDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:758    .data.USBD_CDC:00000000 USBD_CDC
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:755    .data.USBD_CDC:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s:774    .data.USBD_CDC_DeviceQualifierDesc:00000000 $d
+
+UNDEFINED SYMBOLS
+USBD_GetEpDesc
+USBD_LL_GetRxDataSize
+USBD_LL_Transmit
+USBD_CtlPrepareRx
+USBD_CtlSendData
+USBD_CtlError
+USBD_LL_CloseEP
+USBD_static_free
+USBD_static_malloc
+memset
+USBD_LL_OpenEP
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAwRYR1.s 			page 16
+
+
+USBD_LL_PrepareReceive

@@ -1,0 +1,1383 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_rtc.c"
+  16              		.text
+  17              		.section	.text.HAL_RTC_MspInit,"ax",%progbits
+  18              		.align	1
+  19              		.weak	HAL_RTC_MspInit
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_RTC_MspInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 7047     		bx	lr
+  30              		.section	.text.HAL_RTC_MspDeInit,"ax",%progbits
+  31              		.align	1
+  32              		.weak	HAL_RTC_MspDeInit
+  33              		.syntax unified
+  34              		.thumb
+  35              		.thumb_func
+  37              	HAL_RTC_MspDeInit:
+  38              		@ args = 0, pretend = 0, frame = 0
+  39              		@ frame_needed = 0, uses_anonymous_args = 0
+  40              		@ link register save eliminated.
+  41 0000 7047     		bx	lr
+  43              		.section	.text.HAL_RTC_DeactivateAlarm,"ax",%progbits
+  44              		.align	1
+  45              		.global	HAL_RTC_DeactivateAlarm
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  50              	HAL_RTC_DeactivateAlarm:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53              		@ link register save eliminated.
+  54 0000 0346     		mov	r3, r0
+  55 0002 90F82820 		ldrb	r2, [r0, #40]	@ zero_extendqisi2
+  56 0006 012A     		cmp	r2, #1
+  57 0008 2DD0     		beq	.L7
+  58 000a 0122     		movs	r2, #1
+  59 000c 80F82820 		strb	r2, [r0, #40]
+  60 0010 0222     		movs	r2, #2
+  61 0012 80F82920 		strb	r2, [r0, #41]
+  62 0016 0268     		ldr	r2, [r0]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 2
+
+
+  63 0018 CA20     		movs	r0, #202
+  64 001a 5062     		str	r0, [r2, #36]
+  65 001c 1A68     		ldr	r2, [r3]
+  66 001e 5320     		movs	r0, #83
+  67 0020 5062     		str	r0, [r2, #36]
+  68 0022 B1F5807F 		cmp	r1, #256
+  69 0026 13D0     		beq	.L8
+  70 0028 1968     		ldr	r1, [r3]
+  71 002a 8A69     		ldr	r2, [r1, #24]
+  72 002c 22F40072 		bic	r2, r2, #512
+  73 0030 8A61     		str	r2, [r1, #24]
+  74 0032 1968     		ldr	r1, [r3]
+  75 0034 8A69     		ldr	r2, [r1, #24]
+  76 0036 22F40052 		bic	r2, r2, #8192
+  77 003a 8A61     		str	r2, [r1, #24]
+  78              	.L6:
+  79 003c 1A68     		ldr	r2, [r3]
+  80 003e FF21     		movs	r1, #255
+  81 0040 5162     		str	r1, [r2, #36]
+  82 0042 0122     		movs	r2, #1
+  83 0044 83F82920 		strb	r2, [r3, #41]
+  84 0048 0020     		movs	r0, #0
+  85 004a 83F82800 		strb	r0, [r3, #40]
+  86 004e 7047     		bx	lr
+  87              	.L8:
+  88 0050 1968     		ldr	r1, [r3]
+  89 0052 8A69     		ldr	r2, [r1, #24]
+  90 0054 22F48072 		bic	r2, r2, #256
+  91 0058 8A61     		str	r2, [r1, #24]
+  92 005a 1968     		ldr	r1, [r3]
+  93 005c 8A69     		ldr	r2, [r1, #24]
+  94 005e 22F48052 		bic	r2, r2, #4096
+  95 0062 8A61     		str	r2, [r1, #24]
+  96 0064 EAE7     		b	.L6
+  97              	.L7:
+  98 0066 0220     		movs	r0, #2
+  99 0068 7047     		bx	lr
+ 101              		.section	.text.HAL_RTC_DST_Add1Hour,"ax",%progbits
+ 102              		.align	1
+ 103              		.global	HAL_RTC_DST_Add1Hour
+ 104              		.syntax unified
+ 105              		.thumb
+ 106              		.thumb_func
+ 108              	HAL_RTC_DST_Add1Hour:
+ 109              		@ args = 0, pretend = 0, frame = 0
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ 111              		@ link register save eliminated.
+ 112 0000 0368     		ldr	r3, [r0]
+ 113 0002 CA22     		movs	r2, #202
+ 114 0004 5A62     		str	r2, [r3, #36]
+ 115 0006 0368     		ldr	r3, [r0]
+ 116 0008 5322     		movs	r2, #83
+ 117 000a 5A62     		str	r2, [r3, #36]
+ 118 000c 0268     		ldr	r2, [r0]
+ 119 000e 9369     		ldr	r3, [r2, #24]
+ 120 0010 43F48033 		orr	r3, r3, #65536
+ 121 0014 9361     		str	r3, [r2, #24]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 3
+
+
+ 122 0016 0368     		ldr	r3, [r0]
+ 123 0018 FF22     		movs	r2, #255
+ 124 001a 5A62     		str	r2, [r3, #36]
+ 125 001c 7047     		bx	lr
+ 127              		.section	.text.HAL_RTC_DST_Sub1Hour,"ax",%progbits
+ 128              		.align	1
+ 129              		.global	HAL_RTC_DST_Sub1Hour
+ 130              		.syntax unified
+ 131              		.thumb
+ 132              		.thumb_func
+ 134              	HAL_RTC_DST_Sub1Hour:
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137              		@ link register save eliminated.
+ 138 0000 0368     		ldr	r3, [r0]
+ 139 0002 CA22     		movs	r2, #202
+ 140 0004 5A62     		str	r2, [r3, #36]
+ 141 0006 0368     		ldr	r3, [r0]
+ 142 0008 5322     		movs	r2, #83
+ 143 000a 5A62     		str	r2, [r3, #36]
+ 144 000c 0268     		ldr	r2, [r0]
+ 145 000e 9369     		ldr	r3, [r2, #24]
+ 146 0010 43F40033 		orr	r3, r3, #131072
+ 147 0014 9361     		str	r3, [r2, #24]
+ 148 0016 0368     		ldr	r3, [r0]
+ 149 0018 FF22     		movs	r2, #255
+ 150 001a 5A62     		str	r2, [r3, #36]
+ 151 001c 7047     		bx	lr
+ 153              		.section	.text.HAL_RTC_DST_SetStoreOperation,"ax",%progbits
+ 154              		.align	1
+ 155              		.global	HAL_RTC_DST_SetStoreOperation
+ 156              		.syntax unified
+ 157              		.thumb
+ 158              		.thumb_func
+ 160              	HAL_RTC_DST_SetStoreOperation:
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163              		@ link register save eliminated.
+ 164 0000 0368     		ldr	r3, [r0]
+ 165 0002 CA22     		movs	r2, #202
+ 166 0004 5A62     		str	r2, [r3, #36]
+ 167 0006 0368     		ldr	r3, [r0]
+ 168 0008 5322     		movs	r2, #83
+ 169 000a 5A62     		str	r2, [r3, #36]
+ 170 000c 0268     		ldr	r2, [r0]
+ 171 000e 9369     		ldr	r3, [r2, #24]
+ 172 0010 43F48023 		orr	r3, r3, #262144
+ 173 0014 9361     		str	r3, [r2, #24]
+ 174 0016 0368     		ldr	r3, [r0]
+ 175 0018 FF22     		movs	r2, #255
+ 176 001a 5A62     		str	r2, [r3, #36]
+ 177 001c 7047     		bx	lr
+ 179              		.section	.text.HAL_RTC_DST_ClearStoreOperation,"ax",%progbits
+ 180              		.align	1
+ 181              		.global	HAL_RTC_DST_ClearStoreOperation
+ 182              		.syntax unified
+ 183              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 4
+
+
+ 184              		.thumb_func
+ 186              	HAL_RTC_DST_ClearStoreOperation:
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+ 189              		@ link register save eliminated.
+ 190 0000 0368     		ldr	r3, [r0]
+ 191 0002 CA22     		movs	r2, #202
+ 192 0004 5A62     		str	r2, [r3, #36]
+ 193 0006 0368     		ldr	r3, [r0]
+ 194 0008 5322     		movs	r2, #83
+ 195 000a 5A62     		str	r2, [r3, #36]
+ 196 000c 0268     		ldr	r2, [r0]
+ 197 000e 9369     		ldr	r3, [r2, #24]
+ 198 0010 23F48023 		bic	r3, r3, #262144
+ 199 0014 9361     		str	r3, [r2, #24]
+ 200 0016 0368     		ldr	r3, [r0]
+ 201 0018 FF22     		movs	r2, #255
+ 202 001a 5A62     		str	r2, [r3, #36]
+ 203 001c 7047     		bx	lr
+ 205              		.section	.text.HAL_RTC_DST_ReadStoreOperation,"ax",%progbits
+ 206              		.align	1
+ 207              		.global	HAL_RTC_DST_ReadStoreOperation
+ 208              		.syntax unified
+ 209              		.thumb
+ 210              		.thumb_func
+ 212              	HAL_RTC_DST_ReadStoreOperation:
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215              		@ link register save eliminated.
+ 216 0000 0368     		ldr	r3, [r0]
+ 217 0002 9869     		ldr	r0, [r3, #24]
+ 218 0004 00F48020 		and	r0, r0, #262144
+ 219 0008 7047     		bx	lr
+ 221              		.section	.text.HAL_RTC_AlarmAEventCallback,"ax",%progbits
+ 222              		.align	1
+ 223              		.weak	HAL_RTC_AlarmAEventCallback
+ 224              		.syntax unified
+ 225              		.thumb
+ 226              		.thumb_func
+ 228              	HAL_RTC_AlarmAEventCallback:
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 0, uses_anonymous_args = 0
+ 231              		@ link register save eliminated.
+ 232 0000 7047     		bx	lr
+ 234              		.section	.text.HAL_RTC_AlarmIRQHandler,"ax",%progbits
+ 235              		.align	1
+ 236              		.global	HAL_RTC_AlarmIRQHandler
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 241              	HAL_RTC_AlarmIRQHandler:
+ 242              		@ args = 0, pretend = 0, frame = 0
+ 243              		@ frame_needed = 0, uses_anonymous_args = 0
+ 244 0000 38B5     		push	{r3, r4, r5, lr}
+ 245 0002 0446     		mov	r4, r0
+ 246 0004 0D4B     		ldr	r3, .L21
+ 247 0006 4FF48022 		mov	r2, #262144
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 5
+
+
+ 248 000a 5A61     		str	r2, [r3, #20]
+ 249 000c 0368     		ldr	r3, [r0]
+ 250 000e 5D6D     		ldr	r5, [r3, #84]
+ 251 0010 15F0010F 		tst	r5, #1
+ 252 0014 06D1     		bne	.L19
+ 253              	.L16:
+ 254 0016 15F0020F 		tst	r5, #2
+ 255 001a 08D1     		bne	.L20
+ 256              	.L17:
+ 257 001c 0123     		movs	r3, #1
+ 258 001e 84F82930 		strb	r3, [r4, #41]
+ 259 0022 38BD     		pop	{r3, r4, r5, pc}
+ 260              	.L19:
+ 261 0024 0122     		movs	r2, #1
+ 262 0026 DA65     		str	r2, [r3, #92]
+ 263 0028 FFF7FEFF 		bl	HAL_RTC_AlarmAEventCallback
+ 264 002c F3E7     		b	.L16
+ 265              	.L20:
+ 266 002e 2368     		ldr	r3, [r4]
+ 267 0030 0222     		movs	r2, #2
+ 268 0032 DA65     		str	r2, [r3, #92]
+ 269 0034 2046     		mov	r0, r4
+ 270 0036 FFF7FEFF 		bl	HAL_RTCEx_AlarmBEventCallback
+ 271 003a EFE7     		b	.L17
+ 272              	.L22:
+ 273              		.align	2
+ 274              	.L21:
+ 275 003c 00040140 		.word	1073808384
+ 277              		.section	.text.HAL_RTC_PollForAlarmAEvent,"ax",%progbits
+ 278              		.align	1
+ 279              		.global	HAL_RTC_PollForAlarmAEvent
+ 280              		.syntax unified
+ 281              		.thumb
+ 282              		.thumb_func
+ 284              	HAL_RTC_PollForAlarmAEvent:
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287 0000 70B5     		push	{r4, r5, r6, lr}
+ 288 0002 0446     		mov	r4, r0
+ 289 0004 0D46     		mov	r5, r1
+ 290 0006 FFF7FEFF 		bl	HAL_GetTick
+ 291 000a 0646     		mov	r6, r0
+ 292              	.L25:
+ 293 000c 2368     		ldr	r3, [r4]
+ 294 000e 1A6D     		ldr	r2, [r3, #80]
+ 295 0010 12F0010F 		tst	r2, #1
+ 296 0014 0DD1     		bne	.L30
+ 297 0016 B5F1FF3F 		cmp	r5, #-1
+ 298 001a F7D0     		beq	.L25
+ 299 001c FFF7FEFF 		bl	HAL_GetTick
+ 300 0020 801B     		subs	r0, r0, r6
+ 301 0022 A842     		cmp	r0, r5
+ 302 0024 01D8     		bhi	.L26
+ 303 0026 002D     		cmp	r5, #0
+ 304 0028 F0D1     		bne	.L25
+ 305              	.L26:
+ 306 002a 0320     		movs	r0, #3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 6
+
+
+ 307 002c 84F82900 		strb	r0, [r4, #41]
+ 308 0030 04E0     		b	.L27
+ 309              	.L30:
+ 310 0032 0122     		movs	r2, #1
+ 311 0034 DA65     		str	r2, [r3, #92]
+ 312 0036 84F82920 		strb	r2, [r4, #41]
+ 313 003a 0020     		movs	r0, #0
+ 314              	.L27:
+ 315 003c 70BD     		pop	{r4, r5, r6, pc}
+ 317              		.section	.text.HAL_RTC_WaitForSynchro,"ax",%progbits
+ 318              		.align	1
+ 319              		.global	HAL_RTC_WaitForSynchro
+ 320              		.syntax unified
+ 321              		.thumb
+ 322              		.thumb_func
+ 324              	HAL_RTC_WaitForSynchro:
+ 325              		@ args = 0, pretend = 0, frame = 0
+ 326              		@ frame_needed = 0, uses_anonymous_args = 0
+ 327 0000 38B5     		push	{r3, r4, r5, lr}
+ 328 0002 0446     		mov	r4, r0
+ 329 0004 0368     		ldr	r3, [r0]
+ 330 0006 0A4A     		ldr	r2, .L38
+ 331 0008 DA60     		str	r2, [r3, #12]
+ 332 000a FFF7FEFF 		bl	HAL_GetTick
+ 333 000e 0546     		mov	r5, r0
+ 334              	.L32:
+ 335 0010 2368     		ldr	r3, [r4]
+ 336 0012 DB68     		ldr	r3, [r3, #12]
+ 337 0014 13F0200F 		tst	r3, #32
+ 338 0018 07D1     		bne	.L37
+ 339 001a FFF7FEFF 		bl	HAL_GetTick
+ 340 001e 401B     		subs	r0, r0, r5
+ 341 0020 B0F57A7F 		cmp	r0, #1000
+ 342 0024 F4D9     		bls	.L32
+ 343 0026 0320     		movs	r0, #3
+ 344 0028 00E0     		b	.L33
+ 345              	.L37:
+ 346 002a 0020     		movs	r0, #0
+ 347              	.L33:
+ 348 002c 38BD     		pop	{r3, r4, r5, pc}
+ 349              	.L39:
+ 350 002e 00BF     		.align	2
+ 351              	.L38:
+ 352 0030 5C000100 		.word	65628
+ 354              		.section	.text.HAL_RTC_GetState,"ax",%progbits
+ 355              		.align	1
+ 356              		.global	HAL_RTC_GetState
+ 357              		.syntax unified
+ 358              		.thumb
+ 359              		.thumb_func
+ 361              	HAL_RTC_GetState:
+ 362              		@ args = 0, pretend = 0, frame = 0
+ 363              		@ frame_needed = 0, uses_anonymous_args = 0
+ 364              		@ link register save eliminated.
+ 365 0000 90F82900 		ldrb	r0, [r0, #41]	@ zero_extendqisi2
+ 366 0004 7047     		bx	lr
+ 368              		.section	.text.RTC_EnterInitMode,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 7
+
+
+ 369              		.align	1
+ 370              		.global	RTC_EnterInitMode
+ 371              		.syntax unified
+ 372              		.thumb
+ 373              		.thumb_func
+ 375              	RTC_EnterInitMode:
+ 376              		@ args = 0, pretend = 0, frame = 0
+ 377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 378 0000 70B5     		push	{r4, r5, r6, lr}
+ 379 0002 0368     		ldr	r3, [r0]
+ 380 0004 DA68     		ldr	r2, [r3, #12]
+ 381 0006 12F0400F 		tst	r2, #64
+ 382 000a 02D0     		beq	.L48
+ 383 000c 0025     		movs	r5, #0
+ 384              	.L42:
+ 385 000e 2846     		mov	r0, r5
+ 386 0010 70BD     		pop	{r4, r5, r6, pc}
+ 387              	.L48:
+ 388 0012 0446     		mov	r4, r0
+ 389 0014 DA68     		ldr	r2, [r3, #12]
+ 390 0016 42F08002 		orr	r2, r2, #128
+ 391 001a DA60     		str	r2, [r3, #12]
+ 392 001c FFF7FEFF 		bl	HAL_GetTick
+ 393 0020 0646     		mov	r6, r0
+ 394 0022 0025     		movs	r5, #0
+ 395              	.L44:
+ 396 0024 2368     		ldr	r3, [r4]
+ 397 0026 DB68     		ldr	r3, [r3, #12]
+ 398 0028 13F0400F 		tst	r3, #64
+ 399 002c EFD1     		bne	.L42
+ 400 002e 032D     		cmp	r5, #3
+ 401 0030 EDD0     		beq	.L42
+ 402 0032 FFF7FEFF 		bl	HAL_GetTick
+ 403 0036 831B     		subs	r3, r0, r6
+ 404 0038 B3F57A7F 		cmp	r3, #1000
+ 405 003c F2D9     		bls	.L44
+ 406 003e 0325     		movs	r5, #3
+ 407 0040 84F82950 		strb	r5, [r4, #41]
+ 408 0044 EEE7     		b	.L44
+ 410              		.section	.text.RTC_ExitInitMode,"ax",%progbits
+ 411              		.align	1
+ 412              		.global	RTC_ExitInitMode
+ 413              		.syntax unified
+ 414              		.thumb
+ 415              		.thumb_func
+ 417              	RTC_ExitInitMode:
+ 418              		@ args = 0, pretend = 0, frame = 0
+ 419              		@ frame_needed = 0, uses_anonymous_args = 0
+ 420 0000 10B5     		push	{r4, lr}
+ 421 0002 0446     		mov	r4, r0
+ 422 0004 104B     		ldr	r3, .L54
+ 423 0006 DA68     		ldr	r2, [r3, #12]
+ 424 0008 22F08002 		bic	r2, r2, #128
+ 425 000c DA60     		str	r2, [r3, #12]
+ 426 000e 9B69     		ldr	r3, [r3, #24]
+ 427 0010 13F0200F 		tst	r3, #32
+ 428 0014 06D1     		bne	.L50
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 8
+
+
+ 429 0016 FFF7FEFF 		bl	HAL_RTC_WaitForSynchro
+ 430 001a 98B1     		cbz	r0, .L51
+ 431 001c 0320     		movs	r0, #3
+ 432 001e 84F82900 		strb	r0, [r4, #41]
+ 433 0022 0FE0     		b	.L51
+ 434              	.L50:
+ 435 0024 084A     		ldr	r2, .L54
+ 436 0026 9369     		ldr	r3, [r2, #24]
+ 437 0028 23F02003 		bic	r3, r3, #32
+ 438 002c 9361     		str	r3, [r2, #24]
+ 439 002e FFF7FEFF 		bl	HAL_RTC_WaitForSynchro
+ 440 0032 10B1     		cbz	r0, .L52
+ 441 0034 0320     		movs	r0, #3
+ 442 0036 84F82900 		strb	r0, [r4, #41]
+ 443              	.L52:
+ 444 003a 034A     		ldr	r2, .L54
+ 445 003c 9369     		ldr	r3, [r2, #24]
+ 446 003e 43F02003 		orr	r3, r3, #32
+ 447 0042 9361     		str	r3, [r2, #24]
+ 448              	.L51:
+ 449 0044 10BD     		pop	{r4, pc}
+ 450              	.L55:
+ 451 0046 00BF     		.align	2
+ 452              	.L54:
+ 453 0048 00280040 		.word	1073752064
+ 455              		.section	.text.HAL_RTC_Init,"ax",%progbits
+ 456              		.align	1
+ 457              		.global	HAL_RTC_Init
+ 458              		.syntax unified
+ 459              		.thumb
+ 460              		.thumb_func
+ 462              	HAL_RTC_Init:
+ 463              		@ args = 0, pretend = 0, frame = 0
+ 464              		@ frame_needed = 0, uses_anonymous_args = 0
+ 465 0000 0028     		cmp	r0, #0
+ 466 0002 54D0     		beq	.L62
+ 467 0004 38B5     		push	{r3, r4, r5, lr}
+ 468 0006 0446     		mov	r4, r0
+ 469 0008 90F82930 		ldrb	r3, [r0, #41]	@ zero_extendqisi2
+ 470 000c 7BB1     		cbz	r3, .L68
+ 471              	.L58:
+ 472 000e 4FF44063 		mov	r3, #3072
+ 473 0012 6360     		str	r3, [r4, #4]
+ 474 0014 0223     		movs	r3, #2
+ 475 0016 84F82930 		strb	r3, [r4, #41]
+ 476 001a 264B     		ldr	r3, .L70
+ 477 001c DB68     		ldr	r3, [r3, #12]
+ 478 001e 13F0100F 		tst	r3, #16
+ 479 0022 09D0     		beq	.L69
+ 480 0024 0020     		movs	r0, #0
+ 481              	.L59:
+ 482 0026 0123     		movs	r3, #1
+ 483 0028 84F82930 		strb	r3, [r4, #41]
+ 484              	.L57:
+ 485 002c 38BD     		pop	{r3, r4, r5, pc}
+ 486              	.L68:
+ 487 002e 80F82830 		strb	r3, [r0, #40]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 9
+
+
+ 488 0032 FFF7FEFF 		bl	HAL_RTC_MspInit
+ 489 0036 EAE7     		b	.L58
+ 490              	.L69:
+ 491 0038 2368     		ldr	r3, [r4]
+ 492 003a CA22     		movs	r2, #202
+ 493 003c 5A62     		str	r2, [r3, #36]
+ 494 003e 2368     		ldr	r3, [r4]
+ 495 0040 5322     		movs	r2, #83
+ 496 0042 5A62     		str	r2, [r3, #36]
+ 497 0044 2046     		mov	r0, r4
+ 498 0046 FFF7FEFF 		bl	RTC_EnterInitMode
+ 499 004a C0B9     		cbnz	r0, .L60
+ 500 004c 2268     		ldr	r2, [r4]
+ 501 004e 9369     		ldr	r3, [r2, #24]
+ 502 0050 23F08E63 		bic	r3, r3, #74448896
+ 503 0054 23F04003 		bic	r3, r3, #64
+ 504 0058 9361     		str	r3, [r2, #24]
+ 505 005a 2168     		ldr	r1, [r4]
+ 506 005c 8A69     		ldr	r2, [r1, #24]
+ 507 005e A368     		ldr	r3, [r4, #8]
+ 508 0060 6069     		ldr	r0, [r4, #20]
+ 509 0062 0343     		orrs	r3, r3, r0
+ 510 0064 E069     		ldr	r0, [r4, #28]
+ 511 0066 0343     		orrs	r3, r3, r0
+ 512 0068 1343     		orrs	r3, r3, r2
+ 513 006a 8B61     		str	r3, [r1, #24]
+ 514 006c 2368     		ldr	r3, [r4]
+ 515 006e 2269     		ldr	r2, [r4, #16]
+ 516 0070 1A61     		str	r2, [r3, #16]
+ 517 0072 2268     		ldr	r2, [r4]
+ 518 0074 1369     		ldr	r3, [r2, #16]
+ 519 0076 E168     		ldr	r1, [r4, #12]
+ 520 0078 43EA0143 		orr	r3, r3, r1, lsl #16
+ 521 007c 1361     		str	r3, [r2, #16]
+ 522              	.L60:
+ 523 007e 2046     		mov	r0, r4
+ 524 0080 FFF7FEFF 		bl	RTC_ExitInitMode
+ 525 0084 68B9     		cbnz	r0, .L61
+ 526 0086 2268     		ldr	r2, [r4]
+ 527 0088 9369     		ldr	r3, [r2, #24]
+ 528 008a 23F06043 		bic	r3, r3, #-536870912
+ 529 008e 9361     		str	r3, [r2, #24]
+ 530 0090 2168     		ldr	r1, [r4]
+ 531 0092 8A69     		ldr	r2, [r1, #24]
+ 532 0094 636A     		ldr	r3, [r4, #36]
+ 533 0096 256A     		ldr	r5, [r4, #32]
+ 534 0098 2B43     		orrs	r3, r3, r5
+ 535 009a A569     		ldr	r5, [r4, #24]
+ 536 009c 2B43     		orrs	r3, r3, r5
+ 537 009e 1343     		orrs	r3, r3, r2
+ 538 00a0 8B61     		str	r3, [r1, #24]
+ 539              	.L61:
+ 540 00a2 2368     		ldr	r3, [r4]
+ 541 00a4 FF22     		movs	r2, #255
+ 542 00a6 5A62     		str	r2, [r3, #36]
+ 543 00a8 0028     		cmp	r0, #0
+ 544 00aa BFD1     		bne	.L57
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 10
+
+
+ 545 00ac BBE7     		b	.L59
+ 546              	.L62:
+ 547 00ae 0120     		movs	r0, #1
+ 548 00b0 7047     		bx	lr
+ 549              	.L71:
+ 550 00b2 00BF     		.align	2
+ 551              	.L70:
+ 552 00b4 00280040 		.word	1073752064
+ 554              		.section	.text.HAL_RTC_DeInit,"ax",%progbits
+ 555              		.align	1
+ 556              		.global	HAL_RTC_DeInit
+ 557              		.syntax unified
+ 558              		.thumb
+ 559              		.thumb_func
+ 561              	HAL_RTC_DeInit:
+ 562              		@ args = 0, pretend = 0, frame = 0
+ 563              		@ frame_needed = 0, uses_anonymous_args = 0
+ 564 0000 70B5     		push	{r4, r5, r6, lr}
+ 565 0002 0028     		cmp	r0, #0
+ 566 0004 44D0     		beq	.L74
+ 567 0006 0446     		mov	r4, r0
+ 568 0008 0223     		movs	r3, #2
+ 569 000a 80F82930 		strb	r3, [r0, #41]
+ 570 000e 0368     		ldr	r3, [r0]
+ 571 0010 CA22     		movs	r2, #202
+ 572 0012 5A62     		str	r2, [r3, #36]
+ 573 0014 0368     		ldr	r3, [r0]
+ 574 0016 5322     		movs	r2, #83
+ 575 0018 5A62     		str	r2, [r3, #36]
+ 576 001a FFF7FEFF 		bl	RTC_EnterInitMode
+ 577 001e 0546     		mov	r5, r0
+ 578 0020 0028     		cmp	r0, #0
+ 579 0022 36D1     		bne	.L73
+ 580 0024 2268     		ldr	r2, [r4]
+ 581 0026 0023     		movs	r3, #0
+ 582 0028 1360     		str	r3, [r2]
+ 583 002a 2268     		ldr	r2, [r4]
+ 584 002c 42F20111 		movw	r1, #8449
+ 585 0030 5160     		str	r1, [r2, #4]
+ 586 0032 2268     		ldr	r2, [r4]
+ 587 0034 9169     		ldr	r1, [r2, #24]
+ 588 0036 9361     		str	r3, [r2, #24]
+ 589 0038 2268     		ldr	r2, [r4]
+ 590 003a 4FF6FF71 		movw	r1, #65535
+ 591 003e 5161     		str	r1, [r2, #20]
+ 592 0040 2268     		ldr	r2, [r4]
+ 593 0042 1549     		ldr	r1, .L76
+ 594 0044 1161     		str	r1, [r2, #16]
+ 595 0046 2268     		ldr	r2, [r4]
+ 596 0048 1364     		str	r3, [r2, #64]
+ 597 004a 2268     		ldr	r2, [r4]
+ 598 004c 9364     		str	r3, [r2, #72]
+ 599 004e 2268     		ldr	r2, [r4]
+ 600 0050 D362     		str	r3, [r2, #44]
+ 601 0052 2268     		ldr	r2, [r4]
+ 602 0054 9362     		str	r3, [r2, #40]
+ 603 0056 2268     		ldr	r2, [r4]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 11
+
+
+ 604 0058 5364     		str	r3, [r2, #68]
+ 605 005a 2268     		ldr	r2, [r4]
+ 606 005c D364     		str	r3, [r2, #76]
+ 607 005e 2046     		mov	r0, r4
+ 608 0060 FFF7FEFF 		bl	RTC_ExitInitMode
+ 609 0064 0546     		mov	r5, r0
+ 610 0066 A0B9     		cbnz	r0, .L73
+ 611 0068 2268     		ldr	r2, [r4]
+ 612 006a 6368     		ldr	r3, [r4, #4]
+ 613 006c 0B49     		ldr	r1, .L76+4
+ 614 006e D150     		str	r1, [r2, r3]
+ 615 0070 2368     		ldr	r3, [r4]
+ 616 0072 6268     		ldr	r2, [r4, #4]
+ 617 0074 1344     		add	r3, r3, r2
+ 618 0076 0026     		movs	r6, #0
+ 619 0078 5E60     		str	r6, [r3, #4]
+ 620 007a 2368     		ldr	r3, [r4]
+ 621 007c FF22     		movs	r2, #255
+ 622 007e 5A62     		str	r2, [r3, #36]
+ 623 0080 2046     		mov	r0, r4
+ 624 0082 FFF7FEFF 		bl	HAL_RTC_MspDeInit
+ 625 0086 84F82960 		strb	r6, [r4, #41]
+ 626 008a 84F82860 		strb	r6, [r4, #40]
+ 627 008e 00E0     		b	.L73
+ 628              	.L74:
+ 629 0090 0125     		movs	r5, #1
+ 630              	.L73:
+ 631 0092 2846     		mov	r0, r5
+ 632 0094 70BD     		pop	{r4, r5, r6, pc}
+ 633              	.L77:
+ 634 0096 00BF     		.align	2
+ 635              	.L76:
+ 636 0098 FF007F00 		.word	8323327
+ 637 009c 0000FFFF 		.word	-65536
+ 639              		.section	.text.RTC_ByteToBcd2,"ax",%progbits
+ 640              		.align	1
+ 641              		.global	RTC_ByteToBcd2
+ 642              		.syntax unified
+ 643              		.thumb
+ 644              		.thumb_func
+ 646              	RTC_ByteToBcd2:
+ 647              		@ args = 0, pretend = 0, frame = 0
+ 648              		@ frame_needed = 0, uses_anonymous_args = 0
+ 649              		@ link register save eliminated.
+ 650 0000 0023     		movs	r3, #0
+ 651 0002 02E0     		b	.L79
+ 652              	.L80:
+ 653 0004 0133     		adds	r3, r3, #1
+ 654 0006 0A38     		subs	r0, r0, #10
+ 655 0008 C0B2     		uxtb	r0, r0
+ 656              	.L79:
+ 657 000a 0928     		cmp	r0, #9
+ 658 000c FAD8     		bhi	.L80
+ 659 000e 1B01     		lsls	r3, r3, #4
+ 660 0010 DBB2     		uxtb	r3, r3
+ 661 0012 1843     		orrs	r0, r0, r3
+ 662 0014 7047     		bx	lr
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 12
+
+
+ 664              		.section	.text.HAL_RTC_SetTime,"ax",%progbits
+ 665              		.align	1
+ 666              		.global	HAL_RTC_SetTime
+ 667              		.syntax unified
+ 668              		.thumb
+ 669              		.thumb_func
+ 671              	HAL_RTC_SetTime:
+ 672              		@ args = 0, pretend = 0, frame = 0
+ 673              		@ frame_needed = 0, uses_anonymous_args = 0
+ 674 0000 90F82830 		ldrb	r3, [r0, #40]	@ zero_extendqisi2
+ 675 0004 012B     		cmp	r3, #1
+ 676 0006 5FD0     		beq	.L89
+ 677 0008 70B5     		push	{r4, r5, r6, lr}
+ 678 000a 0446     		mov	r4, r0
+ 679 000c 0D46     		mov	r5, r1
+ 680 000e 1646     		mov	r6, r2
+ 681 0010 0123     		movs	r3, #1
+ 682 0012 80F82830 		strb	r3, [r0, #40]
+ 683 0016 0223     		movs	r3, #2
+ 684 0018 80F82930 		strb	r3, [r0, #41]
+ 685 001c 0368     		ldr	r3, [r0]
+ 686 001e CA22     		movs	r2, #202
+ 687 0020 5A62     		str	r2, [r3, #36]
+ 688 0022 0368     		ldr	r3, [r0]
+ 689 0024 5322     		movs	r2, #83
+ 690 0026 5A62     		str	r2, [r3, #36]
+ 691 0028 FFF7FEFF 		bl	RTC_EnterInitMode
+ 692 002c 0028     		cmp	r0, #0
+ 693 002e 2ED1     		bne	.L83
+ 694 0030 002E     		cmp	r6, #0
+ 695 0032 37D1     		bne	.L84
+ 696 0034 2368     		ldr	r3, [r4]
+ 697 0036 9B69     		ldr	r3, [r3, #24]
+ 698 0038 13F0400F 		tst	r3, #64
+ 699 003c 01D1     		bne	.L85
+ 700 003e 0023     		movs	r3, #0
+ 701 0040 EB70     		strb	r3, [r5, #3]
+ 702              	.L85:
+ 703 0042 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 704 0044 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 705 0048 0604     		lsls	r6, r0, #16
+ 706 004a 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 707 004c FFF7FEFF 		bl	RTC_ByteToBcd2
+ 708 0050 46EA0026 		orr	r6, r6, r0, lsl #8
+ 709 0054 A878     		ldrb	r0, [r5, #2]	@ zero_extendqisi2
+ 710 0056 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 711 005a 46EA0003 		orr	r3, r6, r0
+ 712 005e EA78     		ldrb	r2, [r5, #3]	@ zero_extendqisi2
+ 713 0060 43EA8253 		orr	r3, r3, r2, lsl #22
+ 714              	.L86:
+ 715 0064 2268     		ldr	r2, [r4]
+ 716 0066 03F07F33 		and	r3, r3, #2139062143
+ 717 006a 23F0FE43 		bic	r3, r3, #2130706432
+ 718 006e 1360     		str	r3, [r2]
+ 719 0070 2268     		ldr	r2, [r4]
+ 720 0072 9369     		ldr	r3, [r2, #24]
+ 721 0074 23F48023 		bic	r3, r3, #262144
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 13
+
+
+ 722 0078 9361     		str	r3, [r2, #24]
+ 723 007a 2168     		ldr	r1, [r4]
+ 724 007c 8B69     		ldr	r3, [r1, #24]
+ 725 007e EA68     		ldr	r2, [r5, #12]
+ 726 0080 2869     		ldr	r0, [r5, #16]
+ 727 0082 0243     		orrs	r2, r2, r0
+ 728 0084 1343     		orrs	r3, r3, r2
+ 729 0086 8B61     		str	r3, [r1, #24]
+ 730 0088 2046     		mov	r0, r4
+ 731 008a FFF7FEFF 		bl	RTC_ExitInitMode
+ 732              	.L83:
+ 733 008e 2368     		ldr	r3, [r4]
+ 734 0090 FF22     		movs	r2, #255
+ 735 0092 5A62     		str	r2, [r3, #36]
+ 736 0094 10B9     		cbnz	r0, .L88
+ 737 0096 0123     		movs	r3, #1
+ 738 0098 84F82930 		strb	r3, [r4, #41]
+ 739              	.L88:
+ 740 009c 0023     		movs	r3, #0
+ 741 009e 84F82830 		strb	r3, [r4, #40]
+ 742 00a2 70BD     		pop	{r4, r5, r6, pc}
+ 743              	.L84:
+ 744 00a4 2368     		ldr	r3, [r4]
+ 745 00a6 9B69     		ldr	r3, [r3, #24]
+ 746 00a8 13F0400F 		tst	r3, #64
+ 747 00ac 01D1     		bne	.L87
+ 748 00ae 0023     		movs	r3, #0
+ 749 00b0 EB70     		strb	r3, [r5, #3]
+ 750              	.L87:
+ 751 00b2 2A78     		ldrb	r2, [r5]	@ zero_extendqisi2
+ 752 00b4 6B78     		ldrb	r3, [r5, #1]	@ zero_extendqisi2
+ 753 00b6 1B02     		lsls	r3, r3, #8
+ 754 00b8 43EA0243 		orr	r3, r3, r2, lsl #16
+ 755 00bc AA78     		ldrb	r2, [r5, #2]	@ zero_extendqisi2
+ 756 00be 1343     		orrs	r3, r3, r2
+ 757 00c0 EA78     		ldrb	r2, [r5, #3]	@ zero_extendqisi2
+ 758 00c2 43EA8253 		orr	r3, r3, r2, lsl #22
+ 759 00c6 CDE7     		b	.L86
+ 760              	.L89:
+ 761 00c8 0220     		movs	r0, #2
+ 762 00ca 7047     		bx	lr
+ 764              		.section	.text.HAL_RTC_SetDate,"ax",%progbits
+ 765              		.align	1
+ 766              		.global	HAL_RTC_SetDate
+ 767              		.syntax unified
+ 768              		.thumb
+ 769              		.thumb_func
+ 771              	HAL_RTC_SetDate:
+ 772              		@ args = 0, pretend = 0, frame = 0
+ 773              		@ frame_needed = 0, uses_anonymous_args = 0
+ 774 0000 90F82830 		ldrb	r3, [r0, #40]	@ zero_extendqisi2
+ 775 0004 012B     		cmp	r3, #1
+ 776 0006 4BD0     		beq	.L101
+ 777 0008 70B5     		push	{r4, r5, r6, lr}
+ 778 000a 0446     		mov	r4, r0
+ 779 000c 0E46     		mov	r6, r1
+ 780 000e 0123     		movs	r3, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 14
+
+
+ 781 0010 80F82830 		strb	r3, [r0, #40]
+ 782 0014 0223     		movs	r3, #2
+ 783 0016 80F82930 		strb	r3, [r0, #41]
+ 784 001a F2B1     		cbz	r2, .L96
+ 785 001c CB78     		ldrb	r3, [r1, #3]	@ zero_extendqisi2
+ 786 001e 4D78     		ldrb	r5, [r1, #1]	@ zero_extendqisi2
+ 787 0020 2D02     		lsls	r5, r5, #8
+ 788 0022 45EA0345 		orr	r5, r5, r3, lsl #16
+ 789 0026 8B78     		ldrb	r3, [r1, #2]	@ zero_extendqisi2
+ 790 0028 1D43     		orrs	r5, r5, r3
+ 791 002a 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 792 002c 45EA4335 		orr	r5, r5, r3, lsl #13
+ 793              	.L97:
+ 794 0030 2368     		ldr	r3, [r4]
+ 795 0032 CA22     		movs	r2, #202
+ 796 0034 5A62     		str	r2, [r3, #36]
+ 797 0036 2368     		ldr	r3, [r4]
+ 798 0038 5322     		movs	r2, #83
+ 799 003a 5A62     		str	r2, [r3, #36]
+ 800 003c 2046     		mov	r0, r4
+ 801 003e FFF7FEFF 		bl	RTC_EnterInitMode
+ 802 0042 18B3     		cbz	r0, .L106
+ 803              	.L99:
+ 804 0044 2368     		ldr	r3, [r4]
+ 805 0046 FF22     		movs	r2, #255
+ 806 0048 5A62     		str	r2, [r3, #36]
+ 807 004a 10B9     		cbnz	r0, .L100
+ 808 004c 0123     		movs	r3, #1
+ 809 004e 84F82930 		strb	r3, [r4, #41]
+ 810              	.L100:
+ 811 0052 0023     		movs	r3, #0
+ 812 0054 84F82830 		strb	r3, [r4, #40]
+ 813 0058 70BD     		pop	{r4, r5, r6, pc}
+ 814              	.L96:
+ 815 005a 4B78     		ldrb	r3, [r1, #1]	@ zero_extendqisi2
+ 816 005c 13F0100F 		tst	r3, #16
+ 817 0060 03D0     		beq	.L98
+ 818 0062 03F0EF03 		and	r3, r3, #239
+ 819 0066 0A33     		adds	r3, r3, #10
+ 820 0068 4B70     		strb	r3, [r1, #1]
+ 821              	.L98:
+ 822 006a F078     		ldrb	r0, [r6, #3]	@ zero_extendqisi2
+ 823 006c FFF7FEFF 		bl	RTC_ByteToBcd2
+ 824 0070 0504     		lsls	r5, r0, #16
+ 825 0072 7078     		ldrb	r0, [r6, #1]	@ zero_extendqisi2
+ 826 0074 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 827 0078 45EA0025 		orr	r5, r5, r0, lsl #8
+ 828 007c B078     		ldrb	r0, [r6, #2]	@ zero_extendqisi2
+ 829 007e FFF7FEFF 		bl	RTC_ByteToBcd2
+ 830 0082 0543     		orrs	r5, r5, r0
+ 831 0084 3378     		ldrb	r3, [r6]	@ zero_extendqisi2
+ 832 0086 45EA4335 		orr	r5, r5, r3, lsl #13
+ 833 008a D1E7     		b	.L97
+ 834              	.L106:
+ 835 008c 2368     		ldr	r3, [r4]
+ 836 008e 25F07F45 		bic	r5, r5, #-16777216
+ 837 0092 25F0C005 		bic	r5, r5, #192
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 15
+
+
+ 838 0096 5D60     		str	r5, [r3, #4]
+ 839 0098 2046     		mov	r0, r4
+ 840 009a FFF7FEFF 		bl	RTC_ExitInitMode
+ 841 009e D1E7     		b	.L99
+ 842              	.L101:
+ 843 00a0 0220     		movs	r0, #2
+ 844 00a2 7047     		bx	lr
+ 846              		.section	.text.HAL_RTC_SetAlarm,"ax",%progbits
+ 847              		.align	1
+ 848              		.global	HAL_RTC_SetAlarm
+ 849              		.syntax unified
+ 850              		.thumb
+ 851              		.thumb_func
+ 853              	HAL_RTC_SetAlarm:
+ 854              		@ args = 0, pretend = 0, frame = 0
+ 855              		@ frame_needed = 0, uses_anonymous_args = 0
+ 856 0000 90F82830 		ldrb	r3, [r0, #40]	@ zero_extendqisi2
+ 857 0004 012B     		cmp	r3, #1
+ 858 0006 00F08B80 		beq	.L115
+ 859 000a 70B5     		push	{r4, r5, r6, lr}
+ 860 000c 0446     		mov	r4, r0
+ 861 000e 0D46     		mov	r5, r1
+ 862 0010 0123     		movs	r3, #1
+ 863 0012 80F82830 		strb	r3, [r0, #40]
+ 864 0016 0223     		movs	r3, #2
+ 865 0018 80F82930 		strb	r3, [r0, #41]
+ 866 001c 002A     		cmp	r2, #0
+ 867 001e 4ED1     		bne	.L109
+ 868 0020 0368     		ldr	r3, [r0]
+ 869 0022 9B69     		ldr	r3, [r3, #24]
+ 870 0024 13F0400F 		tst	r3, #64
+ 871 0028 01D1     		bne	.L110
+ 872 002a 0023     		movs	r3, #0
+ 873 002c CB70     		strb	r3, [r1, #3]
+ 874              	.L110:
+ 875 002e 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 876 0030 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 877 0034 0604     		lsls	r6, r0, #16
+ 878 0036 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 879 0038 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 880 003c 46EA0026 		orr	r6, r6, r0, lsl #8
+ 881 0040 A878     		ldrb	r0, [r5, #2]	@ zero_extendqisi2
+ 882 0042 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 883 0046 0643     		orrs	r6, r6, r0
+ 884 0048 EB78     		ldrb	r3, [r5, #3]	@ zero_extendqisi2
+ 885 004a 46EA8356 		orr	r6, r6, r3, lsl #22
+ 886 004e 95F82400 		ldrb	r0, [r5, #36]	@ zero_extendqisi2
+ 887 0052 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 888 0056 46EA0060 		orr	r0, r6, r0, lsl #24
+ 889 005a 2B6A     		ldr	r3, [r5, #32]
+ 890 005c 1843     		orrs	r0, r0, r3
+ 891 005e 6B69     		ldr	r3, [r5, #20]
+ 892 0060 1843     		orrs	r0, r0, r3
+ 893              	.L111:
+ 894 0062 6A68     		ldr	r2, [r5, #4]
+ 895 0064 EB69     		ldr	r3, [r5, #28]
+ 896 0066 42EA0301 		orr	r1, r2, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 16
+
+
+ 897 006a 2368     		ldr	r3, [r4]
+ 898 006c CA22     		movs	r2, #202
+ 899 006e 5A62     		str	r2, [r3, #36]
+ 900 0070 2368     		ldr	r3, [r4]
+ 901 0072 5322     		movs	r2, #83
+ 902 0074 5A62     		str	r2, [r3, #36]
+ 903 0076 AB6A     		ldr	r3, [r5, #40]
+ 904 0078 B3F5807F 		cmp	r3, #256
+ 905 007c 39D0     		beq	.L120
+ 906 007e 2268     		ldr	r2, [r4]
+ 907 0080 9369     		ldr	r3, [r2, #24]
+ 908 0082 23F40073 		bic	r3, r3, #512
+ 909 0086 9361     		str	r3, [r2, #24]
+ 910 0088 2368     		ldr	r3, [r4]
+ 911 008a 0222     		movs	r2, #2
+ 912 008c DA65     		str	r2, [r3, #92]
+ 913 008e 2268     		ldr	r2, [r4]
+ 914 0090 9369     		ldr	r3, [r2, #24]
+ 915 0092 23F40053 		bic	r3, r3, #8192
+ 916 0096 9361     		str	r3, [r2, #24]
+ 917 0098 2368     		ldr	r3, [r4]
+ 918 009a 9864     		str	r0, [r3, #72]
+ 919 009c 2368     		ldr	r3, [r4]
+ 920 009e D964     		str	r1, [r3, #76]
+ 921 00a0 2268     		ldr	r2, [r4]
+ 922 00a2 9369     		ldr	r3, [r2, #24]
+ 923 00a4 43F40073 		orr	r3, r3, #512
+ 924 00a8 9361     		str	r3, [r2, #24]
+ 925              	.L114:
+ 926 00aa 2368     		ldr	r3, [r4]
+ 927 00ac FF22     		movs	r2, #255
+ 928 00ae 5A62     		str	r2, [r3, #36]
+ 929 00b0 0123     		movs	r3, #1
+ 930 00b2 84F82930 		strb	r3, [r4, #41]
+ 931 00b6 0020     		movs	r0, #0
+ 932 00b8 84F82800 		strb	r0, [r4, #40]
+ 933 00bc 70BD     		pop	{r4, r5, r6, pc}
+ 934              	.L109:
+ 935 00be 0368     		ldr	r3, [r0]
+ 936 00c0 9B69     		ldr	r3, [r3, #24]
+ 937 00c2 13F0400F 		tst	r3, #64
+ 938 00c6 01D1     		bne	.L112
+ 939 00c8 0023     		movs	r3, #0
+ 940 00ca CB70     		strb	r3, [r1, #3]
+ 941              	.L112:
+ 942 00cc 2B78     		ldrb	r3, [r5]	@ zero_extendqisi2
+ 943 00ce 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 944 00d0 0002     		lsls	r0, r0, #8
+ 945 00d2 40EA0340 		orr	r0, r0, r3, lsl #16
+ 946 00d6 AB78     		ldrb	r3, [r5, #2]	@ zero_extendqisi2
+ 947 00d8 1843     		orrs	r0, r0, r3
+ 948 00da EB78     		ldrb	r3, [r5, #3]	@ zero_extendqisi2
+ 949 00dc 40EA8350 		orr	r0, r0, r3, lsl #22
+ 950 00e0 95F82430 		ldrb	r3, [r5, #36]	@ zero_extendqisi2
+ 951 00e4 40EA0360 		orr	r0, r0, r3, lsl #24
+ 952 00e8 2B6A     		ldr	r3, [r5, #32]
+ 953 00ea 1843     		orrs	r0, r0, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 17
+
+
+ 954 00ec 6B69     		ldr	r3, [r5, #20]
+ 955 00ee 1843     		orrs	r0, r0, r3
+ 956 00f0 B7E7     		b	.L111
+ 957              	.L120:
+ 958 00f2 2268     		ldr	r2, [r4]
+ 959 00f4 9369     		ldr	r3, [r2, #24]
+ 960 00f6 23F48073 		bic	r3, r3, #256
+ 961 00fa 9361     		str	r3, [r2, #24]
+ 962 00fc 2368     		ldr	r3, [r4]
+ 963 00fe 0122     		movs	r2, #1
+ 964 0100 DA65     		str	r2, [r3, #92]
+ 965 0102 2268     		ldr	r2, [r4]
+ 966 0104 9369     		ldr	r3, [r2, #24]
+ 967 0106 23F48053 		bic	r3, r3, #4096
+ 968 010a 9361     		str	r3, [r2, #24]
+ 969 010c 2368     		ldr	r3, [r4]
+ 970 010e 1864     		str	r0, [r3, #64]
+ 971 0110 2368     		ldr	r3, [r4]
+ 972 0112 5964     		str	r1, [r3, #68]
+ 973 0114 2268     		ldr	r2, [r4]
+ 974 0116 9369     		ldr	r3, [r2, #24]
+ 975 0118 43F48073 		orr	r3, r3, #256
+ 976 011c 9361     		str	r3, [r2, #24]
+ 977 011e C4E7     		b	.L114
+ 978              	.L115:
+ 979 0120 0220     		movs	r0, #2
+ 980 0122 7047     		bx	lr
+ 982              		.section	.text.HAL_RTC_SetAlarm_IT,"ax",%progbits
+ 983              		.align	1
+ 984              		.global	HAL_RTC_SetAlarm_IT
+ 985              		.syntax unified
+ 986              		.thumb
+ 987              		.thumb_func
+ 989              	HAL_RTC_SetAlarm_IT:
+ 990              		@ args = 0, pretend = 0, frame = 0
+ 991              		@ frame_needed = 0, uses_anonymous_args = 0
+ 992 0000 90F82830 		ldrb	r3, [r0, #40]	@ zero_extendqisi2
+ 993 0004 012B     		cmp	r3, #1
+ 994 0006 00F09480 		beq	.L129
+ 995 000a 70B5     		push	{r4, r5, r6, lr}
+ 996 000c 0446     		mov	r4, r0
+ 997 000e 0D46     		mov	r5, r1
+ 998 0010 0123     		movs	r3, #1
+ 999 0012 80F82830 		strb	r3, [r0, #40]
+ 1000 0016 0223     		movs	r3, #2
+ 1001 0018 80F82930 		strb	r3, [r0, #41]
+ 1002 001c 002A     		cmp	r2, #0
+ 1003 001e 57D1     		bne	.L123
+ 1004 0020 0368     		ldr	r3, [r0]
+ 1005 0022 9B69     		ldr	r3, [r3, #24]
+ 1006 0024 13F0400F 		tst	r3, #64
+ 1007 0028 01D1     		bne	.L124
+ 1008 002a 0023     		movs	r3, #0
+ 1009 002c CB70     		strb	r3, [r1, #3]
+ 1010              	.L124:
+ 1011 002e 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 1012 0030 FFF7FEFF 		bl	RTC_ByteToBcd2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 18
+
+
+ 1013 0034 0604     		lsls	r6, r0, #16
+ 1014 0036 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 1015 0038 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 1016 003c 46EA0026 		orr	r6, r6, r0, lsl #8
+ 1017 0040 A878     		ldrb	r0, [r5, #2]	@ zero_extendqisi2
+ 1018 0042 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 1019 0046 0643     		orrs	r6, r6, r0
+ 1020 0048 EB78     		ldrb	r3, [r5, #3]	@ zero_extendqisi2
+ 1021 004a 46EA8356 		orr	r6, r6, r3, lsl #22
+ 1022 004e 95F82400 		ldrb	r0, [r5, #36]	@ zero_extendqisi2
+ 1023 0052 FFF7FEFF 		bl	RTC_ByteToBcd2
+ 1024 0056 46EA0060 		orr	r0, r6, r0, lsl #24
+ 1025 005a 2B6A     		ldr	r3, [r5, #32]
+ 1026 005c 1843     		orrs	r0, r0, r3
+ 1027 005e 6B69     		ldr	r3, [r5, #20]
+ 1028 0060 1843     		orrs	r0, r0, r3
+ 1029              	.L125:
+ 1030 0062 6A68     		ldr	r2, [r5, #4]
+ 1031 0064 EB69     		ldr	r3, [r5, #28]
+ 1032 0066 42EA0301 		orr	r1, r2, r3
+ 1033 006a 2368     		ldr	r3, [r4]
+ 1034 006c CA22     		movs	r2, #202
+ 1035 006e 5A62     		str	r2, [r3, #36]
+ 1036 0070 2368     		ldr	r3, [r4]
+ 1037 0072 5322     		movs	r2, #83
+ 1038 0074 5A62     		str	r2, [r3, #36]
+ 1039 0076 AB6A     		ldr	r3, [r5, #40]
+ 1040 0078 B3F5807F 		cmp	r3, #256
+ 1041 007c 42D0     		beq	.L134
+ 1042 007e 2268     		ldr	r2, [r4]
+ 1043 0080 9369     		ldr	r3, [r2, #24]
+ 1044 0082 23F40073 		bic	r3, r3, #512
+ 1045 0086 9361     		str	r3, [r2, #24]
+ 1046 0088 2368     		ldr	r3, [r4]
+ 1047 008a 0222     		movs	r2, #2
+ 1048 008c DA65     		str	r2, [r3, #92]
+ 1049 008e 2368     		ldr	r3, [r4]
+ 1050 0090 9864     		str	r0, [r3, #72]
+ 1051 0092 2368     		ldr	r3, [r4]
+ 1052 0094 D964     		str	r1, [r3, #76]
+ 1053 0096 2268     		ldr	r2, [r4]
+ 1054 0098 9369     		ldr	r3, [r2, #24]
+ 1055 009a 43F40073 		orr	r3, r3, #512
+ 1056 009e 9361     		str	r3, [r2, #24]
+ 1057 00a0 2268     		ldr	r2, [r4]
+ 1058 00a2 9369     		ldr	r3, [r2, #24]
+ 1059 00a4 43F40053 		orr	r3, r3, #8192
+ 1060 00a8 9361     		str	r3, [r2, #24]
+ 1061              	.L128:
+ 1062 00aa 234B     		ldr	r3, .L135
+ 1063 00ac 1A68     		ldr	r2, [r3]
+ 1064 00ae 42F48022 		orr	r2, r2, #262144
+ 1065 00b2 1A60     		str	r2, [r3]
+ 1066 00b4 9A68     		ldr	r2, [r3, #8]
+ 1067 00b6 42F48022 		orr	r2, r2, #262144
+ 1068 00ba 9A60     		str	r2, [r3, #8]
+ 1069 00bc 2368     		ldr	r3, [r4]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 19
+
+
+ 1070 00be FF22     		movs	r2, #255
+ 1071 00c0 5A62     		str	r2, [r3, #36]
+ 1072 00c2 0123     		movs	r3, #1
+ 1073 00c4 84F82930 		strb	r3, [r4, #41]
+ 1074 00c8 0020     		movs	r0, #0
+ 1075 00ca 84F82800 		strb	r0, [r4, #40]
+ 1076 00ce 70BD     		pop	{r4, r5, r6, pc}
+ 1077              	.L123:
+ 1078 00d0 0368     		ldr	r3, [r0]
+ 1079 00d2 9B69     		ldr	r3, [r3, #24]
+ 1080 00d4 13F0400F 		tst	r3, #64
+ 1081 00d8 01D1     		bne	.L126
+ 1082 00da 0023     		movs	r3, #0
+ 1083 00dc CB70     		strb	r3, [r1, #3]
+ 1084              	.L126:
+ 1085 00de 2B78     		ldrb	r3, [r5]	@ zero_extendqisi2
+ 1086 00e0 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
+ 1087 00e2 0002     		lsls	r0, r0, #8
+ 1088 00e4 40EA0340 		orr	r0, r0, r3, lsl #16
+ 1089 00e8 AB78     		ldrb	r3, [r5, #2]	@ zero_extendqisi2
+ 1090 00ea 1843     		orrs	r0, r0, r3
+ 1091 00ec EB78     		ldrb	r3, [r5, #3]	@ zero_extendqisi2
+ 1092 00ee 40EA8350 		orr	r0, r0, r3, lsl #22
+ 1093 00f2 95F82430 		ldrb	r3, [r5, #36]	@ zero_extendqisi2
+ 1094 00f6 40EA0360 		orr	r0, r0, r3, lsl #24
+ 1095 00fa 2B6A     		ldr	r3, [r5, #32]
+ 1096 00fc 1843     		orrs	r0, r0, r3
+ 1097 00fe 6B69     		ldr	r3, [r5, #20]
+ 1098 0100 1843     		orrs	r0, r0, r3
+ 1099 0102 AEE7     		b	.L125
+ 1100              	.L134:
+ 1101 0104 2268     		ldr	r2, [r4]
+ 1102 0106 9369     		ldr	r3, [r2, #24]
+ 1103 0108 23F48073 		bic	r3, r3, #256
+ 1104 010c 9361     		str	r3, [r2, #24]
+ 1105 010e 2368     		ldr	r3, [r4]
+ 1106 0110 0122     		movs	r2, #1
+ 1107 0112 DA65     		str	r2, [r3, #92]
+ 1108 0114 2368     		ldr	r3, [r4]
+ 1109 0116 1864     		str	r0, [r3, #64]
+ 1110 0118 2368     		ldr	r3, [r4]
+ 1111 011a 5964     		str	r1, [r3, #68]
+ 1112 011c 2268     		ldr	r2, [r4]
+ 1113 011e 9369     		ldr	r3, [r2, #24]
+ 1114 0120 43F48073 		orr	r3, r3, #256
+ 1115 0124 9361     		str	r3, [r2, #24]
+ 1116 0126 2268     		ldr	r2, [r4]
+ 1117 0128 9369     		ldr	r3, [r2, #24]
+ 1118 012a 43F48053 		orr	r3, r3, #4096
+ 1119 012e 9361     		str	r3, [r2, #24]
+ 1120 0130 BBE7     		b	.L128
+ 1121              	.L129:
+ 1122 0132 0220     		movs	r0, #2
+ 1123 0134 7047     		bx	lr
+ 1124              	.L136:
+ 1125 0136 00BF     		.align	2
+ 1126              	.L135:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 20
+
+
+ 1127 0138 00040140 		.word	1073808384
+ 1129              		.section	.text.RTC_Bcd2ToByte,"ax",%progbits
+ 1130              		.align	1
+ 1131              		.global	RTC_Bcd2ToByte
+ 1132              		.syntax unified
+ 1133              		.thumb
+ 1134              		.thumb_func
+ 1136              	RTC_Bcd2ToByte:
+ 1137              		@ args = 0, pretend = 0, frame = 0
+ 1138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1139              		@ link register save eliminated.
+ 1140 0000 0309     		lsrs	r3, r0, #4
+ 1141 0002 03EB8303 		add	r3, r3, r3, lsl #2
+ 1142 0006 00F00F00 		and	r0, r0, #15
+ 1143 000a 00EB4300 		add	r0, r0, r3, lsl #1
+ 1144 000e C0B2     		uxtb	r0, r0
+ 1145 0010 7047     		bx	lr
+ 1147              		.section	.text.HAL_RTC_GetTime,"ax",%progbits
+ 1148              		.align	1
+ 1149              		.global	HAL_RTC_GetTime
+ 1150              		.syntax unified
+ 1151              		.thumb
+ 1152              		.thumb_func
+ 1154              	HAL_RTC_GetTime:
+ 1155              		@ args = 0, pretend = 0, frame = 0
+ 1156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1157 0000 70B5     		push	{r4, r5, r6, lr}
+ 1158 0002 0368     		ldr	r3, [r0]
+ 1159 0004 9B68     		ldr	r3, [r3, #8]
+ 1160 0006 4B60     		str	r3, [r1, #4]
+ 1161 0008 0368     		ldr	r3, [r0]
+ 1162 000a 1B69     		ldr	r3, [r3, #16]
+ 1163 000c C3F30E03 		ubfx	r3, r3, #0, #15
+ 1164 0010 8B60     		str	r3, [r1, #8]
+ 1165 0012 0368     		ldr	r3, [r0]
+ 1166 0014 1B68     		ldr	r3, [r3]
+ 1167 0016 C3F30540 		ubfx	r0, r3, #16, #6
+ 1168 001a 0870     		strb	r0, [r1]
+ 1169 001c C3F30626 		ubfx	r6, r3, #8, #7
+ 1170 0020 4E70     		strb	r6, [r1, #1]
+ 1171 0022 03F07F05 		and	r5, r3, #127
+ 1172 0026 8D70     		strb	r5, [r1, #2]
+ 1173 0028 C3F38053 		ubfx	r3, r3, #22, #1
+ 1174 002c CB70     		strb	r3, [r1, #3]
+ 1175 002e 5AB9     		cbnz	r2, .L139
+ 1176 0030 0C46     		mov	r4, r1
+ 1177 0032 FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1178 0036 2070     		strb	r0, [r4]
+ 1179 0038 3046     		mov	r0, r6
+ 1180 003a FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1181 003e 6070     		strb	r0, [r4, #1]
+ 1182 0040 2846     		mov	r0, r5
+ 1183 0042 FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1184 0046 A070     		strb	r0, [r4, #2]
+ 1185              	.L139:
+ 1186 0048 0020     		movs	r0, #0
+ 1187 004a 70BD     		pop	{r4, r5, r6, pc}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 21
+
+
+ 1189              		.section	.text.HAL_RTC_GetDate,"ax",%progbits
+ 1190              		.align	1
+ 1191              		.global	HAL_RTC_GetDate
+ 1192              		.syntax unified
+ 1193              		.thumb
+ 1194              		.thumb_func
+ 1196              	HAL_RTC_GetDate:
+ 1197              		@ args = 0, pretend = 0, frame = 0
+ 1198              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1199 0000 70B5     		push	{r4, r5, r6, lr}
+ 1200 0002 0368     		ldr	r3, [r0]
+ 1201 0004 5B68     		ldr	r3, [r3, #4]
+ 1202 0006 C3F30740 		ubfx	r0, r3, #16, #8
+ 1203 000a C870     		strb	r0, [r1, #3]
+ 1204 000c C3F30426 		ubfx	r6, r3, #8, #5
+ 1205 0010 4E70     		strb	r6, [r1, #1]
+ 1206 0012 03F03F05 		and	r5, r3, #63
+ 1207 0016 8D70     		strb	r5, [r1, #2]
+ 1208 0018 C3F34233 		ubfx	r3, r3, #13, #3
+ 1209 001c 0B70     		strb	r3, [r1]
+ 1210 001e 5AB9     		cbnz	r2, .L142
+ 1211 0020 0C46     		mov	r4, r1
+ 1212 0022 FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1213 0026 E070     		strb	r0, [r4, #3]
+ 1214 0028 3046     		mov	r0, r6
+ 1215 002a FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1216 002e 6070     		strb	r0, [r4, #1]
+ 1217 0030 2846     		mov	r0, r5
+ 1218 0032 FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1219 0036 A070     		strb	r0, [r4, #2]
+ 1220              	.L142:
+ 1221 0038 0020     		movs	r0, #0
+ 1222 003a 70BD     		pop	{r4, r5, r6, pc}
+ 1224              		.section	.text.HAL_RTC_GetAlarm,"ax",%progbits
+ 1225              		.align	1
+ 1226              		.global	HAL_RTC_GetAlarm
+ 1227              		.syntax unified
+ 1228              		.thumb
+ 1229              		.thumb_func
+ 1231              	HAL_RTC_GetAlarm:
+ 1232              		@ args = 0, pretend = 0, frame = 0
+ 1233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1234 0000 10B5     		push	{r4, lr}
+ 1235 0002 0C46     		mov	r4, r1
+ 1236 0004 B2F5807F 		cmp	r2, #256
+ 1237 0008 33D0     		beq	.L149
+ 1238 000a 4FF40072 		mov	r2, #512
+ 1239 000e 8A62     		str	r2, [r1, #40]
+ 1240 0010 0168     		ldr	r1, [r0]
+ 1241 0012 8A6C     		ldr	r2, [r1, #72]
+ 1242 0014 C96C     		ldr	r1, [r1, #76]
+ 1243 0016 C1F30E01 		ubfx	r1, r1, #0, #15
+ 1244 001a C2F30540 		ubfx	r0, r2, #16, #6
+ 1245 001e 2070     		strb	r0, [r4]
+ 1246 0020 C2F30620 		ubfx	r0, r2, #8, #7
+ 1247 0024 6070     		strb	r0, [r4, #1]
+ 1248 0026 02F07F00 		and	r0, r2, #127
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 22
+
+
+ 1249 002a A070     		strb	r0, [r4, #2]
+ 1250 002c C2F38050 		ubfx	r0, r2, #22, #1
+ 1251 0030 E070     		strb	r0, [r4, #3]
+ 1252 0032 6160     		str	r1, [r4, #4]
+ 1253 0034 C2F30561 		ubfx	r1, r2, #24, #6
+ 1254 0038 84F82410 		strb	r1, [r4, #36]
+ 1255 003c 02F08041 		and	r1, r2, #1073741824
+ 1256 0040 2162     		str	r1, [r4, #32]
+ 1257 0042 02F08032 		and	r2, r2, #-2139062144
+ 1258 0046 6261     		str	r2, [r4, #20]
+ 1259              	.L146:
+ 1260 0048 8BB9     		cbnz	r3, .L147
+ 1261 004a 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+ 1262 004c FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1263 0050 2070     		strb	r0, [r4]
+ 1264 0052 6078     		ldrb	r0, [r4, #1]	@ zero_extendqisi2
+ 1265 0054 FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1266 0058 6070     		strb	r0, [r4, #1]
+ 1267 005a A078     		ldrb	r0, [r4, #2]	@ zero_extendqisi2
+ 1268 005c FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1269 0060 A070     		strb	r0, [r4, #2]
+ 1270 0062 94F82400 		ldrb	r0, [r4, #36]	@ zero_extendqisi2
+ 1271 0066 FFF7FEFF 		bl	RTC_Bcd2ToByte
+ 1272 006a 84F82400 		strb	r0, [r4, #36]
+ 1273              	.L147:
+ 1274 006e 0020     		movs	r0, #0
+ 1275 0070 10BD     		pop	{r4, pc}
+ 1276              	.L149:
+ 1277 0072 8A62     		str	r2, [r1, #40]
+ 1278 0074 0168     		ldr	r1, [r0]
+ 1279 0076 0A6C     		ldr	r2, [r1, #64]
+ 1280 0078 496C     		ldr	r1, [r1, #68]
+ 1281 007a C1F30E01 		ubfx	r1, r1, #0, #15
+ 1282 007e C2F30540 		ubfx	r0, r2, #16, #6
+ 1283 0082 2070     		strb	r0, [r4]
+ 1284 0084 C2F30620 		ubfx	r0, r2, #8, #7
+ 1285 0088 6070     		strb	r0, [r4, #1]
+ 1286 008a 02F07F00 		and	r0, r2, #127
+ 1287 008e A070     		strb	r0, [r4, #2]
+ 1288 0090 C2F38050 		ubfx	r0, r2, #22, #1
+ 1289 0094 E070     		strb	r0, [r4, #3]
+ 1290 0096 6160     		str	r1, [r4, #4]
+ 1291 0098 C2F30561 		ubfx	r1, r2, #24, #6
+ 1292 009c 84F82410 		strb	r1, [r4, #36]
+ 1293 00a0 02F08041 		and	r1, r2, #1073741824
+ 1294 00a4 2162     		str	r1, [r4, #32]
+ 1295 00a6 02F08032 		and	r2, r2, #-2139062144
+ 1296 00aa 6261     		str	r2, [r4, #20]
+ 1297 00ac CCE7     		b	.L146
+ 1299              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 23
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_rtc.c
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:18     .text.HAL_RTC_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:24     .text.HAL_RTC_MspInit:00000000 HAL_RTC_MspInit
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:31     .text.HAL_RTC_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:37     .text.HAL_RTC_MspDeInit:00000000 HAL_RTC_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:44     .text.HAL_RTC_DeactivateAlarm:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:50     .text.HAL_RTC_DeactivateAlarm:00000000 HAL_RTC_DeactivateAlarm
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:102    .text.HAL_RTC_DST_Add1Hour:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:108    .text.HAL_RTC_DST_Add1Hour:00000000 HAL_RTC_DST_Add1Hour
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:128    .text.HAL_RTC_DST_Sub1Hour:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:134    .text.HAL_RTC_DST_Sub1Hour:00000000 HAL_RTC_DST_Sub1Hour
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:154    .text.HAL_RTC_DST_SetStoreOperation:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:160    .text.HAL_RTC_DST_SetStoreOperation:00000000 HAL_RTC_DST_SetStoreOperation
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:180    .text.HAL_RTC_DST_ClearStoreOperation:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:186    .text.HAL_RTC_DST_ClearStoreOperation:00000000 HAL_RTC_DST_ClearStoreOperation
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:206    .text.HAL_RTC_DST_ReadStoreOperation:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:212    .text.HAL_RTC_DST_ReadStoreOperation:00000000 HAL_RTC_DST_ReadStoreOperation
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:222    .text.HAL_RTC_AlarmAEventCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:228    .text.HAL_RTC_AlarmAEventCallback:00000000 HAL_RTC_AlarmAEventCallback
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:235    .text.HAL_RTC_AlarmIRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:241    .text.HAL_RTC_AlarmIRQHandler:00000000 HAL_RTC_AlarmIRQHandler
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:275    .text.HAL_RTC_AlarmIRQHandler:0000003c $d
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:278    .text.HAL_RTC_PollForAlarmAEvent:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:284    .text.HAL_RTC_PollForAlarmAEvent:00000000 HAL_RTC_PollForAlarmAEvent
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:318    .text.HAL_RTC_WaitForSynchro:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:324    .text.HAL_RTC_WaitForSynchro:00000000 HAL_RTC_WaitForSynchro
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:352    .text.HAL_RTC_WaitForSynchro:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:355    .text.HAL_RTC_GetState:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:361    .text.HAL_RTC_GetState:00000000 HAL_RTC_GetState
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:369    .text.RTC_EnterInitMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:375    .text.RTC_EnterInitMode:00000000 RTC_EnterInitMode
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:411    .text.RTC_ExitInitMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:417    .text.RTC_ExitInitMode:00000000 RTC_ExitInitMode
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:453    .text.RTC_ExitInitMode:00000048 $d
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:456    .text.HAL_RTC_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:462    .text.HAL_RTC_Init:00000000 HAL_RTC_Init
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:552    .text.HAL_RTC_Init:000000b4 $d
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:555    .text.HAL_RTC_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:561    .text.HAL_RTC_DeInit:00000000 HAL_RTC_DeInit
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:636    .text.HAL_RTC_DeInit:00000098 $d
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:640    .text.RTC_ByteToBcd2:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:646    .text.RTC_ByteToBcd2:00000000 RTC_ByteToBcd2
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:665    .text.HAL_RTC_SetTime:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:671    .text.HAL_RTC_SetTime:00000000 HAL_RTC_SetTime
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:765    .text.HAL_RTC_SetDate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:771    .text.HAL_RTC_SetDate:00000000 HAL_RTC_SetDate
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:847    .text.HAL_RTC_SetAlarm:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:853    .text.HAL_RTC_SetAlarm:00000000 HAL_RTC_SetAlarm
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:983    .text.HAL_RTC_SetAlarm_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:989    .text.HAL_RTC_SetAlarm_IT:00000000 HAL_RTC_SetAlarm_IT
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1127   .text.HAL_RTC_SetAlarm_IT:00000138 $d
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1130   .text.RTC_Bcd2ToByte:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1136   .text.RTC_Bcd2ToByte:00000000 RTC_Bcd2ToByte
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1148   .text.HAL_RTC_GetTime:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1154   .text.HAL_RTC_GetTime:00000000 HAL_RTC_GetTime
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1190   .text.HAL_RTC_GetDate:00000000 $t
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s 			page 24
+
+
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1196   .text.HAL_RTC_GetDate:00000000 HAL_RTC_GetDate
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1225   .text.HAL_RTC_GetAlarm:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cczwXMdP.s:1231   .text.HAL_RTC_GetAlarm:00000000 HAL_RTC_GetAlarm
+
+UNDEFINED SYMBOLS
+HAL_RTCEx_AlarmBEventCallback
+HAL_GetTick

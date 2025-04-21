@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
   28:Core/Src/ds18b20.c **** 
   29:Core/Src/ds18b20.c **** 
   30:Core/Src/ds18b20.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 2
 
 
   31:Core/Src/ds18b20.c **** /* Functions -----------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
   70              	.LBB4:
   43:Core/Src/ds18b20.c ****     {
   44:Core/Src/ds18b20.c ****       uint8_t temp = (checksum ^ currentByte) & 0x01;
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 3
 
 
   45:Core/Src/ds18b20.c ****       checksum >>= 1;
@@ -172,78 +172,75 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  100              		.loc 1 49 18 is_stmt 0 view .LVU28
  101 0030 80F08C00 		eor	r0, r0, #140
  102 0034 C0B2     		uxtb	r0, r0
- 103              	.LVL12:
+ 103 0036 EEE7     		b	.L4
+ 104              	.LVL12:
+ 105              	.L8:
   49:Core/Src/ds18b20.c ****       }
- 104              		.loc 1 49 18 view .LVU29
- 105 0036 EEE7     		b	.L4
- 106              	.LVL13:
- 107              	.L8:
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 4
+ 106              		.loc 1 49 18 view .LVU29
+ 107              	.LBE5:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 4
 
 
-  49:Core/Src/ds18b20.c ****       }
- 108              		.loc 1 49 18 view .LVU30
- 109              	.LBE5:
- 110              	.LBE3:
- 111              	.LBE2:
+ 108              	.LBE3:
+ 109              	.LBE2:
   53:Core/Src/ds18b20.c ****     }
   54:Core/Src/ds18b20.c ****   }
   55:Core/Src/ds18b20.c **** 
   56:Core/Src/ds18b20.c ****   return checksum;
- 112              		.loc 1 56 3 is_stmt 1 view .LVU31
+ 110              		.loc 1 56 3 is_stmt 1 view .LVU30
   57:Core/Src/ds18b20.c **** }
- 113              		.loc 1 57 1 is_stmt 0 view .LVU32
- 114 0038 5DF804FB 		ldr	pc, [sp], #4
- 115              		.cfi_endproc
- 116              	.LFE319:
- 118              		.section	.text.ExecuteCommand,"ax",%progbits
- 119              		.align	1
- 120              		.syntax unified
- 121              		.thumb
- 122              		.thumb_func
- 124              	ExecuteCommand:
- 125              	.LVL14:
- 126              	.LFB320:
+ 111              		.loc 1 57 1 is_stmt 0 view .LVU31
+ 112 0038 5DF804FB 		ldr	pc, [sp], #4
+ 113              		.cfi_endproc
+ 114              	.LFE319:
+ 116              		.section	.text.ExecuteCommand,"ax",%progbits
+ 117              		.align	1
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 122              	ExecuteCommand:
+ 123              	.LVL13:
+ 124              	.LFB320:
   58:Core/Src/ds18b20.c **** 
   59:Core/Src/ds18b20.c **** 
   60:Core/Src/ds18b20.c **** 
   61:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
   62:Core/Src/ds18b20.c **** static DS18B20_Status ExecuteCommand(DS18B20 *sensor, DS18B20_Command command, uint8_t *data)
   63:Core/Src/ds18b20.c **** {
- 127              		.loc 1 63 1 is_stmt 1 view -0
- 128              		.cfi_startproc
- 129              		@ args = 0, pretend = 0, frame = 8
- 130              		@ frame_needed = 0, uses_anonymous_args = 0
- 131              		.loc 1 63 1 is_stmt 0 view .LVU34
- 132 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 133              		.cfi_def_cfa_offset 20
- 134              		.cfi_offset 4, -20
- 135              		.cfi_offset 5, -16
- 136              		.cfi_offset 6, -12
- 137              		.cfi_offset 7, -8
- 138              		.cfi_offset 14, -4
- 139 0002 83B0     		sub	sp, sp, #12
- 140              		.cfi_def_cfa_offset 32
- 141 0004 0191     		str	r1, [sp, #4]
+ 125              		.loc 1 63 1 is_stmt 1 view -0
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 8
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		.loc 1 63 1 is_stmt 0 view .LVU33
+ 130 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 131              		.cfi_def_cfa_offset 20
+ 132              		.cfi_offset 4, -20
+ 133              		.cfi_offset 5, -16
+ 134              		.cfi_offset 6, -12
+ 135              		.cfi_offset 7, -8
+ 136              		.cfi_offset 14, -4
+ 137 0002 83B0     		sub	sp, sp, #12
+ 138              		.cfi_def_cfa_offset 32
+ 139 0004 0191     		str	r1, [sp, #4]
   64:Core/Src/ds18b20.c ****   if (sensor->isConnected == 0)
- 142              		.loc 1 64 3 is_stmt 1 view .LVU35
- 143              		.loc 1 64 13 is_stmt 0 view .LVU36
- 144 0006 4378     		ldrb	r3, [r0, #1]	@ zero_extendqisi2
- 145              		.loc 1 64 6 view .LVU37
- 146 0008 1BB9     		cbnz	r3, .L19
+ 140              		.loc 1 64 3 is_stmt 1 view .LVU34
+ 141              		.loc 1 64 13 is_stmt 0 view .LVU35
+ 142 0006 4378     		ldrb	r3, [r0, #1]	@ zero_extendqisi2
+ 143              		.loc 1 64 6 view .LVU36
+ 144 0008 1BB9     		cbnz	r3, .L19
   65:Core/Src/ds18b20.c ****   {
   66:Core/Src/ds18b20.c ****     return DS18B20_ERROR;
- 147              		.loc 1 66 12 view .LVU38
- 148 000a 0127     		movs	r7, #1
- 149              	.LVL15:
- 150              	.L10:
+ 145              		.loc 1 66 12 view .LVU37
+ 146 000a 0127     		movs	r7, #1
+ 147              	.LVL14:
+ 148              	.L10:
   67:Core/Src/ds18b20.c ****   }
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 5
-
-
   68:Core/Src/ds18b20.c **** 
   69:Core/Src/ds18b20.c ****   OneWire_ProcessByte(sensor->uart, command.code);
   70:Core/Src/ds18b20.c **** 
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 5
+
+
   71:Core/Src/ds18b20.c ****   if (command.rxBytesNum != 0)
   72:Core/Src/ds18b20.c ****   {
   73:Core/Src/ds18b20.c ****     for (uint8_t i = 0; i < command.rxBytesNum; i++)
@@ -267,292 +264,292 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
   91:Core/Src/ds18b20.c **** 
   92:Core/Src/ds18b20.c ****   return DS18B20_OK;
   93:Core/Src/ds18b20.c **** }
- 151              		.loc 1 93 1 view .LVU39
- 152 000c 3846     		mov	r0, r7
- 153 000e 03B0     		add	sp, sp, #12
- 154              		.cfi_remember_state
- 155              		.cfi_def_cfa_offset 20
- 156              		@ sp needed
- 157 0010 F0BD     		pop	{r4, r5, r6, r7, pc}
- 158              	.LVL16:
- 159              	.L19:
- 160              		.cfi_restore_state
- 161              		.loc 1 93 1 view .LVU40
- 162 0012 0546     		mov	r5, r0
- 163 0014 1646     		mov	r6, r2
+ 149              		.loc 1 93 1 view .LVU38
+ 150 000c 3846     		mov	r0, r7
+ 151 000e 03B0     		add	sp, sp, #12
+ 152              		.cfi_remember_state
+ 153              		.cfi_def_cfa_offset 20
+ 154              		@ sp needed
+ 155 0010 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 156              	.LVL15:
+ 157              	.L19:
+ 158              		.cfi_restore_state
+ 159              		.loc 1 93 1 view .LVU39
+ 160 0012 0546     		mov	r5, r0
+ 161 0014 1646     		mov	r6, r2
   69:Core/Src/ds18b20.c **** 
- 164              		.loc 1 69 3 is_stmt 1 view .LVU41
- 165 0016 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
- 166 001a 4068     		ldr	r0, [r0, #4]
- 167              	.LVL17:
+ 162              		.loc 1 69 3 is_stmt 1 view .LVU40
+ 163 0016 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
+ 164 001a 4068     		ldr	r0, [r0, #4]
+ 165              	.LVL16:
   69:Core/Src/ds18b20.c **** 
- 168              		.loc 1 69 3 is_stmt 0 view .LVU42
- 169 001c FFF7FEFF 		bl	OneWire_ProcessByte
- 170              	.LVL18:
+ 166              		.loc 1 69 3 is_stmt 0 view .LVU41
+ 167 001c FFF7FEFF 		bl	OneWire_ProcessByte
+ 168              	.LVL17:
   71:Core/Src/ds18b20.c ****   {
- 171              		.loc 1 71 3 is_stmt 1 view .LVU43
+ 169              		.loc 1 71 3 is_stmt 1 view .LVU42
   71:Core/Src/ds18b20.c ****   {
- 172              		.loc 1 71 14 is_stmt 0 view .LVU44
- 173 0020 9DF80570 		ldrb	r7, [sp, #5]	@ zero_extendqisi2
+ 170              		.loc 1 71 14 is_stmt 0 view .LVU43
+ 171 0020 9DF80570 		ldrb	r7, [sp, #5]	@ zero_extendqisi2
   71:Core/Src/ds18b20.c ****   {
- 174              		.loc 1 71 6 view .LVU45
- 175 0024 B7B9     		cbnz	r7, .L16
- 176              	.LBB6:
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 6
-
-
+ 172              		.loc 1 71 6 view .LVU44
+ 173 0024 B7B9     		cbnz	r7, .L16
+ 174              	.LBB6:
   86:Core/Src/ds18b20.c ****     {
- 177              		.loc 1 86 18 view .LVU46
- 178 0026 3C46     		mov	r4, r7
- 179 0028 1CE0     		b	.L12
- 180              	.LVL19:
- 181              	.L13:
+ 175              		.loc 1 86 18 view .LVU45
+ 176 0026 3C46     		mov	r4, r7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 6
+
+
+ 177 0028 1CE0     		b	.L12
+ 178              	.LVL18:
+ 179              	.L13:
   86:Core/Src/ds18b20.c ****     {
- 182              		.loc 1 86 18 view .LVU47
- 183              	.LBE6:
- 184              	.LBB7:
- 185              	.LBB8:
+ 180              		.loc 1 86 18 view .LVU46
+ 181              	.LBE6:
+ 182              	.LBB7:
+ 183              	.LBB8:
   75:Core/Src/ds18b20.c ****     }
- 186              		.loc 1 75 7 is_stmt 1 view .LVU48
+ 184              		.loc 1 75 7 is_stmt 1 view .LVU47
   75:Core/Src/ds18b20.c ****     }
- 187              		.loc 1 75 17 is_stmt 0 view .LVU49
- 188 002a FF21     		movs	r1, #255
- 189 002c 6868     		ldr	r0, [r5, #4]
- 190 002e FFF7FEFF 		bl	OneWire_ProcessByte
- 191              	.LVL20:
+ 185              		.loc 1 75 17 is_stmt 0 view .LVU48
+ 186 002a FF21     		movs	r1, #255
+ 187 002c 6868     		ldr	r0, [r5, #4]
+ 188 002e FFF7FEFF 		bl	OneWire_ProcessByte
+ 189              	.LVL19:
   75:Core/Src/ds18b20.c ****     }
- 192              		.loc 1 75 15 discriminator 1 view .LVU50
- 193 0032 3055     		strb	r0, [r6, r4]
+ 190              		.loc 1 75 15 discriminator 1 view .LVU49
+ 191 0032 3055     		strb	r0, [r6, r4]
   73:Core/Src/ds18b20.c ****     {
- 194              		.loc 1 73 50 is_stmt 1 discriminator 3 view .LVU51
- 195 0034 0134     		adds	r4, r4, #1
- 196              	.LVL21:
+ 192              		.loc 1 73 50 is_stmt 1 discriminator 3 view .LVU50
+ 193 0034 0134     		adds	r4, r4, #1
+ 194              	.LVL20:
   73:Core/Src/ds18b20.c ****     {
- 197              		.loc 1 73 50 is_stmt 0 discriminator 3 view .LVU52
- 198 0036 E4B2     		uxtb	r4, r4
- 199              	.LVL22:
- 200              	.L11:
+ 195              		.loc 1 73 50 is_stmt 0 discriminator 3 view .LVU51
+ 196 0036 E4B2     		uxtb	r4, r4
+ 197              	.LVL21:
+ 198              	.L11:
   73:Core/Src/ds18b20.c ****     {
- 201              		.loc 1 73 27 is_stmt 1 discriminator 1 view .LVU53
- 202 0038 A742     		cmp	r7, r4
- 203 003a F6D8     		bhi	.L13
- 204              	.LBE8:
+ 199              		.loc 1 73 27 is_stmt 1 discriminator 1 view .LVU52
+ 200 0038 A742     		cmp	r7, r4
+ 201 003a F6D8     		bhi	.L13
+ 202              	.LBE8:
   78:Core/Src/ds18b20.c ****     if (checkSum != data[command.rxBytesNum - 1])
- 205              		.loc 1 78 5 view .LVU54
+ 203              		.loc 1 78 5 view .LVU53
   78:Core/Src/ds18b20.c ****     if (checkSum != data[command.rxBytesNum - 1])
- 206              		.loc 1 78 24 is_stmt 0 view .LVU55
- 207 003c 791E     		subs	r1, r7, #1
- 208 003e C9B2     		uxtb	r1, r1
- 209 0040 3046     		mov	r0, r6
- 210 0042 FFF7FEFF 		bl	CalculateChecksum
- 211              	.LVL23:
+ 204              		.loc 1 78 24 is_stmt 0 view .LVU54
+ 205 003c 791E     		subs	r1, r7, #1
+ 206 003e C9B2     		uxtb	r1, r1
+ 207 0040 3046     		mov	r0, r6
+ 208 0042 FFF7FEFF 		bl	CalculateChecksum
+ 209              	.LVL22:
   79:Core/Src/ds18b20.c ****     {
- 212              		.loc 1 79 5 is_stmt 1 view .LVU56
+ 210              		.loc 1 79 5 is_stmt 1 view .LVU55
   79:Core/Src/ds18b20.c ****     {
- 213              		.loc 1 79 25 is_stmt 0 view .LVU57
- 214 0046 3E44     		add	r6, r6, r7
- 215              	.LVL24:
+ 211              		.loc 1 79 25 is_stmt 0 view .LVU56
+ 212 0046 3E44     		add	r6, r6, r7
+ 213              	.LVL23:
   79:Core/Src/ds18b20.c ****     {
- 216              		.loc 1 79 25 view .LVU58
- 217 0048 16F8013C 		ldrb	r3, [r6, #-1]	@ zero_extendqisi2
+ 214              		.loc 1 79 25 view .LVU57
+ 215 0048 16F8013C 		ldrb	r3, [r6, #-1]	@ zero_extendqisi2
   79:Core/Src/ds18b20.c ****     {
- 218              		.loc 1 79 8 view .LVU59
- 219 004c 8342     		cmp	r3, r0
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 7
-
-
- 220 004e 0ED1     		bne	.L17
- 221              	.LBE7:
+ 216              		.loc 1 79 8 view .LVU58
+ 217 004c 8342     		cmp	r3, r0
+ 218 004e 0ED1     		bne	.L17
+ 219              	.LBE7:
   92:Core/Src/ds18b20.c **** }
- 222              		.loc 1 92 10 view .LVU60
- 223 0050 0027     		movs	r7, #0
- 224 0052 DBE7     		b	.L10
- 225              	.LVL25:
- 226              	.L16:
- 227              	.LBB10:
- 228              	.LBB9:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 7
+
+
+ 220              		.loc 1 92 10 view .LVU59
+ 221 0050 0027     		movs	r7, #0
+ 222 0052 DBE7     		b	.L10
+ 223              	.LVL24:
+ 224              	.L16:
+ 225              	.LBB10:
+ 226              	.LBB9:
   73:Core/Src/ds18b20.c ****     {
- 229              		.loc 1 73 18 view .LVU61
- 230 0054 0024     		movs	r4, #0
- 231 0056 EFE7     		b	.L11
- 232              	.LVL26:
- 233              	.L14:
+ 227              		.loc 1 73 18 view .LVU60
+ 228 0054 0024     		movs	r4, #0
+ 229 0056 EFE7     		b	.L11
+ 230              	.LVL25:
+ 231              	.L14:
   73:Core/Src/ds18b20.c ****     {
- 234              		.loc 1 73 18 view .LVU62
- 235              	.LBE9:
- 236              	.LBE10:
- 237              	.LBB11:
+ 232              		.loc 1 73 18 view .LVU61
+ 233              	.LBE9:
+ 234              	.LBE10:
+ 235              	.LBB11:
   88:Core/Src/ds18b20.c ****     }
- 238              		.loc 1 88 7 is_stmt 1 view .LVU63
- 239 0058 315D     		ldrb	r1, [r6, r4]	@ zero_extendqisi2
- 240 005a 6868     		ldr	r0, [r5, #4]
- 241 005c FFF7FEFF 		bl	OneWire_ProcessByte
- 242              	.LVL27:
+ 236              		.loc 1 88 7 is_stmt 1 view .LVU62
+ 237 0058 315D     		ldrb	r1, [r6, r4]	@ zero_extendqisi2
+ 238 005a 6868     		ldr	r0, [r5, #4]
+ 239 005c FFF7FEFF 		bl	OneWire_ProcessByte
+ 240              	.LVL26:
   86:Core/Src/ds18b20.c ****     {
- 243              		.loc 1 86 50 discriminator 3 view .LVU64
- 244 0060 0134     		adds	r4, r4, #1
- 245              	.LVL28:
+ 241              		.loc 1 86 50 discriminator 3 view .LVU63
+ 242 0060 0134     		adds	r4, r4, #1
+ 243              	.LVL27:
   86:Core/Src/ds18b20.c ****     {
- 246              		.loc 1 86 50 is_stmt 0 discriminator 3 view .LVU65
- 247 0062 E4B2     		uxtb	r4, r4
- 248              	.LVL29:
- 249              	.L12:
+ 244              		.loc 1 86 50 is_stmt 0 discriminator 3 view .LVU64
+ 245 0062 E4B2     		uxtb	r4, r4
+ 246              	.LVL28:
+ 247              	.L12:
   86:Core/Src/ds18b20.c ****     {
- 250              		.loc 1 86 27 is_stmt 1 discriminator 1 view .LVU66
+ 248              		.loc 1 86 27 is_stmt 1 discriminator 1 view .LVU65
   86:Core/Src/ds18b20.c ****     {
- 251              		.loc 1 86 36 is_stmt 0 discriminator 1 view .LVU67
- 252 0064 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 249              		.loc 1 86 36 is_stmt 0 discriminator 1 view .LVU66
+ 250 0064 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
   86:Core/Src/ds18b20.c ****     {
- 253              		.loc 1 86 27 discriminator 1 view .LVU68
- 254 0068 A342     		cmp	r3, r4
- 255 006a F5D8     		bhi	.L14
- 256 006c CEE7     		b	.L10
- 257              	.LVL30:
- 258              	.L17:
+ 251              		.loc 1 86 27 discriminator 1 view .LVU67
+ 252 0068 A342     		cmp	r3, r4
+ 253 006a F5D8     		bhi	.L14
+ 254 006c CEE7     		b	.L10
+ 255              	.LVL29:
+ 256              	.L17:
   86:Core/Src/ds18b20.c ****     {
- 259              		.loc 1 86 27 discriminator 1 view .LVU69
- 260              	.LBE11:
- 261              	.LBB12:
+ 257              		.loc 1 86 27 discriminator 1 view .LVU68
+ 258              	.LBE11:
+ 259              	.LBB12:
   81:Core/Src/ds18b20.c ****     }
- 262              		.loc 1 81 14 view .LVU70
- 263 006e 0127     		movs	r7, #1
- 264 0070 CCE7     		b	.L10
- 265              	.LBE12:
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 8
+ 260              		.loc 1 81 14 view .LVU69
+ 261 006e 0127     		movs	r7, #1
+ 262 0070 CCE7     		b	.L10
+ 263              	.LBE12:
+ 264              		.cfi_endproc
+ 265              	.LFE320:
+ 267              		.section	.text.WaitForConversionFinished,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 8
 
 
- 266              		.cfi_endproc
- 267              	.LFE320:
- 269              		.section	.text.WaitForConversionFinished,"ax",%progbits
- 270              		.align	1
- 271              		.syntax unified
- 272              		.thumb
- 273              		.thumb_func
- 275              	WaitForConversionFinished:
- 276              	.LVL31:
- 277              	.LFB321:
+ 268              		.align	1
+ 269              		.syntax unified
+ 270              		.thumb
+ 271              		.thumb_func
+ 273              	WaitForConversionFinished:
+ 274              	.LVL30:
+ 275              	.LFB321:
   94:Core/Src/ds18b20.c **** 
   95:Core/Src/ds18b20.c **** 
   96:Core/Src/ds18b20.c **** 
   97:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
   98:Core/Src/ds18b20.c **** static void WaitForConversionFinished(DS18B20 *sensor)
   99:Core/Src/ds18b20.c **** {
- 278              		.loc 1 99 1 is_stmt 1 view -0
- 279              		.cfi_startproc
- 280              		@ args = 0, pretend = 0, frame = 0
- 281              		@ frame_needed = 0, uses_anonymous_args = 0
- 282              		.loc 1 99 1 is_stmt 0 view .LVU72
- 283 0000 10B5     		push	{r4, lr}
- 284              		.cfi_def_cfa_offset 8
- 285              		.cfi_offset 4, -8
- 286              		.cfi_offset 14, -4
- 287 0002 0446     		mov	r4, r0
+ 276              		.loc 1 99 1 is_stmt 1 view -0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280              		.loc 1 99 1 is_stmt 0 view .LVU71
+ 281 0000 10B5     		push	{r4, lr}
+ 282              		.cfi_def_cfa_offset 8
+ 283              		.cfi_offset 4, -8
+ 284              		.cfi_offset 14, -4
+ 285 0002 0446     		mov	r4, r0
  100:Core/Src/ds18b20.c ****   uint8_t data = OneWire_ProcessBit(sensor->uart, 1);
- 288              		.loc 1 100 3 is_stmt 1 view .LVU73
- 289              		.loc 1 100 18 is_stmt 0 view .LVU74
- 290 0004 0121     		movs	r1, #1
- 291 0006 4068     		ldr	r0, [r0, #4]
- 292              	.LVL32:
- 293              		.loc 1 100 18 view .LVU75
- 294 0008 FFF7FEFF 		bl	OneWire_ProcessBit
- 295              	.LVL33:
+ 286              		.loc 1 100 3 is_stmt 1 view .LVU72
+ 287              		.loc 1 100 18 is_stmt 0 view .LVU73
+ 288 0004 0121     		movs	r1, #1
+ 289 0006 4068     		ldr	r0, [r0, #4]
+ 290              	.LVL31:
+ 291              		.loc 1 100 18 view .LVU74
+ 292 0008 FFF7FEFF 		bl	OneWire_ProcessBit
+ 293              	.LVL32:
  101:Core/Src/ds18b20.c ****   while(data != 0xFF)
- 296              		.loc 1 101 3 is_stmt 1 view .LVU76
- 297              		.loc 1 101 8 is_stmt 0 view .LVU77
- 298 000c 03E0     		b	.L21
- 299              	.L22:
+ 294              		.loc 1 101 3 is_stmt 1 view .LVU75
+ 295              		.loc 1 101 8 is_stmt 0 view .LVU76
+ 296 000c 03E0     		b	.L21
+ 297              	.L22:
  102:Core/Src/ds18b20.c ****   {
  103:Core/Src/ds18b20.c ****     data = OneWire_ProcessBit(sensor->uart, 1);
- 300              		.loc 1 103 5 is_stmt 1 view .LVU78
- 301              		.loc 1 103 12 is_stmt 0 view .LVU79
- 302 000e 0121     		movs	r1, #1
- 303 0010 6068     		ldr	r0, [r4, #4]
- 304              	.LVL34:
- 305              		.loc 1 103 12 view .LVU80
- 306 0012 FFF7FEFF 		bl	OneWire_ProcessBit
- 307              	.LVL35:
- 308              	.L21:
+ 298              		.loc 1 103 5 is_stmt 1 view .LVU77
+ 299              		.loc 1 103 12 is_stmt 0 view .LVU78
+ 300 000e 0121     		movs	r1, #1
+ 301 0010 6068     		ldr	r0, [r4, #4]
+ 302              	.LVL33:
+ 303              		.loc 1 103 12 view .LVU79
+ 304 0012 FFF7FEFF 		bl	OneWire_ProcessBit
+ 305              	.LVL34:
+ 306              	.L21:
  101:Core/Src/ds18b20.c ****   while(data != 0xFF)
- 309              		.loc 1 101 14 is_stmt 1 view .LVU81
- 310 0016 FF28     		cmp	r0, #255
- 311 0018 F9D1     		bne	.L22
+ 307              		.loc 1 101 14 is_stmt 1 view .LVU80
+ 308 0016 FF28     		cmp	r0, #255
+ 309 0018 F9D1     		bne	.L22
  104:Core/Src/ds18b20.c ****   }
  105:Core/Src/ds18b20.c **** }
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 9
+ 310              		.loc 1 105 1 is_stmt 0 view .LVU81
+ 311 001a 10BD     		pop	{r4, pc}
+ 312              		.loc 1 105 1 view .LVU82
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 9
 
 
- 312              		.loc 1 105 1 is_stmt 0 view .LVU82
- 313 001a 10BD     		pop	{r4, pc}
- 314              		.loc 1 105 1 view .LVU83
- 315              		.cfi_endproc
- 316              	.LFE321:
- 318              		.section	.text.DS18B20_ConvertT,"ax",%progbits
- 319              		.align	1
- 320              		.global	DS18B20_ConvertT
- 321              		.syntax unified
- 322              		.thumb
- 323              		.thumb_func
- 325              	DS18B20_ConvertT:
- 326              	.LVL36:
- 327              	.LFB322:
+ 313              		.cfi_endproc
+ 314              	.LFE321:
+ 316              		.section	.text.DS18B20_ConvertT,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	DS18B20_ConvertT
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 323              	DS18B20_ConvertT:
+ 324              	.LVL35:
+ 325              	.LFB322:
  106:Core/Src/ds18b20.c **** 
  107:Core/Src/ds18b20.c **** 
  108:Core/Src/ds18b20.c **** 
  109:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  110:Core/Src/ds18b20.c **** DS18B20_Status DS18B20_ConvertT(DS18B20 *sensor, DS18B20_WaitCondition waitCondition)
  111:Core/Src/ds18b20.c **** {
- 328              		.loc 1 111 1 is_stmt 1 view -0
- 329              		.cfi_startproc
- 330              		@ args = 0, pretend = 0, frame = 8
- 331              		@ frame_needed = 0, uses_anonymous_args = 0
- 332              		.loc 1 111 1 is_stmt 0 view .LVU85
- 333 0000 70B5     		push	{r4, r5, r6, lr}
- 334              		.cfi_def_cfa_offset 16
- 335              		.cfi_offset 4, -16
- 336              		.cfi_offset 5, -12
- 337              		.cfi_offset 6, -8
- 338              		.cfi_offset 14, -4
- 339 0002 82B0     		sub	sp, sp, #8
- 340              		.cfi_def_cfa_offset 24
- 341 0004 0646     		mov	r6, r0
- 342 0006 0C46     		mov	r4, r1
+ 326              		.loc 1 111 1 is_stmt 1 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 8
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		.loc 1 111 1 is_stmt 0 view .LVU84
+ 331 0000 70B5     		push	{r4, r5, r6, lr}
+ 332              		.cfi_def_cfa_offset 16
+ 333              		.cfi_offset 4, -16
+ 334              		.cfi_offset 5, -12
+ 335              		.cfi_offset 6, -8
+ 336              		.cfi_offset 14, -4
+ 337 0002 82B0     		sub	sp, sp, #8
+ 338              		.cfi_def_cfa_offset 24
+ 339 0004 0646     		mov	r6, r0
+ 340 0006 0C46     		mov	r4, r1
  112:Core/Src/ds18b20.c ****   DS18B20_Status result;
- 343              		.loc 1 112 3 is_stmt 1 view .LVU86
+ 341              		.loc 1 112 3 is_stmt 1 view .LVU85
  113:Core/Src/ds18b20.c ****   uint8_t rxDummyData;
- 344              		.loc 1 113 3 view .LVU87
+ 342              		.loc 1 113 3 view .LVU86
  114:Core/Src/ds18b20.c **** 
  115:Core/Src/ds18b20.c ****   result = ExecuteCommand(sensor, convertT, &rxDummyData);
- 345              		.loc 1 115 3 view .LVU88
- 346              		.loc 1 115 12 is_stmt 0 view .LVU89
- 347 0008 0DF10702 		add	r2, sp, #7
- 348 000c 4421     		movs	r1, #68
- 349              	.LVL37:
- 350              		.loc 1 115 12 view .LVU90
- 351 000e FFF7FEFF 		bl	ExecuteCommand
- 352              	.LVL38:
- 353              		.loc 1 115 12 view .LVU91
- 354 0012 0546     		mov	r5, r0
- 355              	.LVL39:
+ 343              		.loc 1 115 3 view .LVU87
+ 344              		.loc 1 115 12 is_stmt 0 view .LVU88
+ 345 0008 0DF10702 		add	r2, sp, #7
+ 346 000c 4421     		movs	r1, #68
+ 347              	.LVL36:
+ 348              		.loc 1 115 12 view .LVU89
+ 349 000e FFF7FEFF 		bl	ExecuteCommand
+ 350              	.LVL37:
+ 351              		.loc 1 115 12 view .LVU90
+ 352 0012 0546     		mov	r5, r0
+ 353              	.LVL38:
  116:Core/Src/ds18b20.c **** 
  117:Core/Src/ds18b20.c ****   if (waitCondition == DS18B20_DATA)
- 356              		.loc 1 117 3 is_stmt 1 view .LVU92
- 357              		.loc 1 117 6 is_stmt 0 view .LVU93
- 358 0014 012C     		cmp	r4, #1
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 10
-
-
- 359 0016 04D0     		beq	.L34
- 360              	.L25:
+ 354              		.loc 1 117 3 is_stmt 1 view .LVU91
+ 355              		.loc 1 117 6 is_stmt 0 view .LVU92
+ 356 0014 012C     		cmp	r4, #1
+ 357 0016 04D0     		beq	.L34
+ 358              	.L25:
  118:Core/Src/ds18b20.c ****   {
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 10
+
+
  119:Core/Src/ds18b20.c ****     WaitForConversionFinished(sensor);
  120:Core/Src/ds18b20.c ****   }
  121:Core/Src/ds18b20.c **** 
  122:Core/Src/ds18b20.c ****   if (waitCondition == DS18B20_DELAY)
- 361              		.loc 1 122 3 is_stmt 1 view .LVU94
- 362              		.loc 1 122 6 is_stmt 0 view .LVU95
- 363 0018 022C     		cmp	r4, #2
- 364 001a 06D0     		beq	.L35
- 365              	.L26:
+ 359              		.loc 1 122 3 is_stmt 1 view .LVU93
+ 360              		.loc 1 122 6 is_stmt 0 view .LVU94
+ 361 0018 022C     		cmp	r4, #2
+ 362 001a 06D0     		beq	.L35
+ 363              	.L26:
  123:Core/Src/ds18b20.c ****   {
  124:Core/Src/ds18b20.c ****     uint32_t delayValueMs = 0;
  125:Core/Src/ds18b20.c **** 
@@ -582,210 +579,210 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  149:Core/Src/ds18b20.c ****   }
  150:Core/Src/ds18b20.c **** 
  151:Core/Src/ds18b20.c ****   return result;
- 366              		.loc 1 151 3 is_stmt 1 view .LVU96
+ 364              		.loc 1 151 3 is_stmt 1 view .LVU95
  152:Core/Src/ds18b20.c **** }
- 367              		.loc 1 152 1 is_stmt 0 view .LVU97
- 368 001c 2846     		mov	r0, r5
- 369 001e 02B0     		add	sp, sp, #8
- 370              		.cfi_remember_state
- 371              		.cfi_def_cfa_offset 16
- 372              		@ sp needed
- 373 0020 70BD     		pop	{r4, r5, r6, pc}
- 374              	.LVL40:
- 375              	.L34:
- 376              		.cfi_restore_state
+ 365              		.loc 1 152 1 is_stmt 0 view .LVU96
+ 366 001c 2846     		mov	r0, r5
+ 367 001e 02B0     		add	sp, sp, #8
+ 368              		.cfi_remember_state
+ 369              		.cfi_def_cfa_offset 16
+ 370              		@ sp needed
+ 371 0020 70BD     		pop	{r4, r5, r6, pc}
+ 372              	.LVL39:
+ 373              	.L34:
+ 374              		.cfi_restore_state
  119:Core/Src/ds18b20.c ****   }
- 377              		.loc 1 119 5 is_stmt 1 view .LVU98
- 378 0022 3046     		mov	r0, r6
- 379 0024 FFF7FEFF 		bl	WaitForConversionFinished
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 11
+ 375              		.loc 1 119 5 is_stmt 1 view .LVU97
+ 376 0022 3046     		mov	r0, r6
+ 377 0024 FFF7FEFF 		bl	WaitForConversionFinished
+ 378              	.LVL40:
+ 379 0028 F6E7     		b	.L25
+ 380              	.L35:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 11
 
 
- 380              	.LVL41:
- 381 0028 F6E7     		b	.L25
- 382              	.L35:
- 383              	.LBB13:
+ 381              	.LBB13:
  124:Core/Src/ds18b20.c **** 
- 384              		.loc 1 124 5 view .LVU99
- 385              	.LVL42:
+ 382              		.loc 1 124 5 view .LVU98
+ 383              	.LVL41:
  126:Core/Src/ds18b20.c ****     {
- 386              		.loc 1 126 5 view .LVU100
+ 384              		.loc 1 126 5 view .LVU99
  126:Core/Src/ds18b20.c ****     {
- 387              		.loc 1 126 19 is_stmt 0 view .LVU101
- 388 002a 337C     		ldrb	r3, [r6, #16]	@ zero_extendqisi2
+ 385              		.loc 1 126 19 is_stmt 0 view .LVU100
+ 386 002a 337C     		ldrb	r3, [r6, #16]	@ zero_extendqisi2
  126:Core/Src/ds18b20.c ****     {
- 389              		.loc 1 126 5 view .LVU102
- 390 002c 5F2B     		cmp	r3, #95
- 391 002e 0BD0     		beq	.L29
- 392 0030 05D8     		bhi	.L28
- 393 0032 1F2B     		cmp	r3, #31
- 394 0034 0DD0     		beq	.L30
- 395 0036 3F2B     		cmp	r3, #63
- 396 0038 0DD1     		bne	.L31
+ 387              		.loc 1 126 5 view .LVU101
+ 388 002c 5F2B     		cmp	r3, #95
+ 389 002e 0BD0     		beq	.L29
+ 390 0030 05D8     		bhi	.L28
+ 391 0032 1F2B     		cmp	r3, #31
+ 392 0034 0DD0     		beq	.L30
+ 393 0036 3F2B     		cmp	r3, #63
+ 394 0038 0DD1     		bne	.L31
  133:Core/Src/ds18b20.c ****         break;
- 397              		.loc 1 133 22 view .LVU103
- 398 003a BC20     		movs	r0, #188
- 399 003c 06E0     		b	.L27
- 400              	.L28:
+ 395              		.loc 1 133 22 view .LVU102
+ 396 003a BC20     		movs	r0, #188
+ 397 003c 06E0     		b	.L27
+ 398              	.L28:
  126:Core/Src/ds18b20.c ****     {
- 401              		.loc 1 126 5 view .LVU104
- 402 003e 7F2B     		cmp	r3, #127
- 403 0040 0BD1     		bne	.L32
+ 399              		.loc 1 126 5 view .LVU103
+ 400 003e 7F2B     		cmp	r3, #127
+ 401 0040 0BD1     		bne	.L32
  141:Core/Src/ds18b20.c ****         break;
- 404              		.loc 1 141 22 view .LVU105
- 405 0042 40F2EE20 		movw	r0, #750
- 406 0046 01E0     		b	.L27
- 407              	.L29:
+ 402              		.loc 1 141 22 view .LVU104
+ 403 0042 40F2EE20 		movw	r0, #750
+ 404 0046 01E0     		b	.L27
+ 405              	.L29:
  137:Core/Src/ds18b20.c ****         break;
- 408              		.loc 1 137 22 view .LVU106
- 409 0048 40F27710 		movw	r0, #375
- 410              	.L27:
- 411              	.LVL43:
+ 406              		.loc 1 137 22 view .LVU105
+ 407 0048 40F27710 		movw	r0, #375
+ 408              	.L27:
+ 409              	.LVL42:
  148:Core/Src/ds18b20.c ****   }
- 412              		.loc 1 148 5 is_stmt 1 view .LVU107
- 413 004c FFF7FEFF 		bl	HAL_Delay
- 414              	.LVL44:
+ 410              		.loc 1 148 5 is_stmt 1 view .LVU106
+ 411 004c FFF7FEFF 		bl	HAL_Delay
+ 412              	.LVL43:
  148:Core/Src/ds18b20.c ****   }
- 415              		.loc 1 148 5 is_stmt 0 view .LVU108
- 416 0050 E4E7     		b	.L26
- 417              	.LVL45:
- 418              	.L30:
+ 413              		.loc 1 148 5 is_stmt 0 view .LVU107
+ 414 0050 E4E7     		b	.L26
+ 415              	.LVL44:
+ 416              	.L30:
  129:Core/Src/ds18b20.c ****         break;
- 419              		.loc 1 129 22 view .LVU109
- 420 0052 5E20     		movs	r0, #94
- 421 0054 FAE7     		b	.L27
- 422              	.L31:
+ 417              		.loc 1 129 22 view .LVU108
+ 418 0052 5E20     		movs	r0, #94
+ 419 0054 FAE7     		b	.L27
+ 420              	.L31:
  126:Core/Src/ds18b20.c ****     {
- 423              		.loc 1 126 5 view .LVU110
- 424 0056 0020     		movs	r0, #0
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 12
+ 421              		.loc 1 126 5 view .LVU109
+ 422 0056 0020     		movs	r0, #0
+ 423 0058 F8E7     		b	.L27
+ 424              	.L32:
+ 425 005a 0020     		movs	r0, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 12
 
 
- 425 0058 F8E7     		b	.L27
- 426              	.L32:
- 427 005a 0020     		movs	r0, #0
- 428 005c F6E7     		b	.L27
- 429              	.LBE13:
- 430              		.cfi_endproc
- 431              	.LFE322:
- 433              		.section	.text.DS18B20_ReadScratchpad,"ax",%progbits
- 434              		.align	1
- 435              		.global	DS18B20_ReadScratchpad
- 436              		.syntax unified
- 437              		.thumb
- 438              		.thumb_func
- 440              	DS18B20_ReadScratchpad:
- 441              	.LVL46:
- 442              	.LFB323:
+ 426 005c F6E7     		b	.L27
+ 427              	.LBE13:
+ 428              		.cfi_endproc
+ 429              	.LFE322:
+ 431              		.section	.text.DS18B20_ReadScratchpad,"ax",%progbits
+ 432              		.align	1
+ 433              		.global	DS18B20_ReadScratchpad
+ 434              		.syntax unified
+ 435              		.thumb
+ 436              		.thumb_func
+ 438              	DS18B20_ReadScratchpad:
+ 439              	.LVL45:
+ 440              	.LFB323:
  153:Core/Src/ds18b20.c **** 
  154:Core/Src/ds18b20.c **** 
  155:Core/Src/ds18b20.c **** 
  156:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  157:Core/Src/ds18b20.c **** DS18B20_Status DS18B20_ReadScratchpad(DS18B20 *sensor)
  158:Core/Src/ds18b20.c **** {
- 443              		.loc 1 158 1 is_stmt 1 view -0
- 444              		.cfi_startproc
- 445              		@ args = 0, pretend = 0, frame = 16
- 446              		@ frame_needed = 0, uses_anonymous_args = 0
- 447              		.loc 1 158 1 is_stmt 0 view .LVU112
- 448 0000 10B5     		push	{r4, lr}
- 449              		.cfi_def_cfa_offset 8
- 450              		.cfi_offset 4, -8
- 451              		.cfi_offset 14, -4
- 452 0002 84B0     		sub	sp, sp, #16
- 453              		.cfi_def_cfa_offset 24
- 454 0004 0446     		mov	r4, r0
+ 441              		.loc 1 158 1 is_stmt 1 view -0
+ 442              		.cfi_startproc
+ 443              		@ args = 0, pretend = 0, frame = 16
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445              		.loc 1 158 1 is_stmt 0 view .LVU111
+ 446 0000 10B5     		push	{r4, lr}
+ 447              		.cfi_def_cfa_offset 8
+ 448              		.cfi_offset 4, -8
+ 449              		.cfi_offset 14, -4
+ 450 0002 84B0     		sub	sp, sp, #16
+ 451              		.cfi_def_cfa_offset 24
+ 452 0004 0446     		mov	r4, r0
  159:Core/Src/ds18b20.c ****   DS18B20_Status result;
- 455              		.loc 1 159 3 is_stmt 1 view .LVU113
+ 453              		.loc 1 159 3 is_stmt 1 view .LVU112
  160:Core/Src/ds18b20.c ****   uint8_t rxData[DS18B20_READ_SCRATCHPAD_RX_BYTES_NUM];
- 456              		.loc 1 160 3 view .LVU114
+ 454              		.loc 1 160 3 view .LVU113
  161:Core/Src/ds18b20.c ****   result = ExecuteCommand(sensor, readScratchpad, rxData);
- 457              		.loc 1 161 3 view .LVU115
- 458              		.loc 1 161 12 is_stmt 0 view .LVU116
- 459 0006 01AA     		add	r2, sp, #4
- 460 0008 0021     		movs	r1, #0
- 461 000a 6FF04103 		mvn	r3, #65
- 462 000e 63F30701 		bfi	r1, r3, #0, #8
- 463 0012 0923     		movs	r3, #9
- 464 0014 63F30F21 		bfi	r1, r3, #8, #8
- 465 0018 FFF7FEFF 		bl	ExecuteCommand
- 466              	.LVL47:
+ 455              		.loc 1 161 3 view .LVU114
+ 456              		.loc 1 161 12 is_stmt 0 view .LVU115
+ 457 0006 01AA     		add	r2, sp, #4
+ 458 0008 0021     		movs	r1, #0
+ 459 000a 6FF04103 		mvn	r3, #65
+ 460 000e 63F30701 		bfi	r1, r3, #0, #8
+ 461 0012 0923     		movs	r3, #9
+ 462 0014 63F30F21 		bfi	r1, r3, #8, #8
+ 463 0018 FFF7FEFF 		bl	ExecuteCommand
+ 464              	.LVL46:
  162:Core/Src/ds18b20.c **** 
  163:Core/Src/ds18b20.c ****   if (result != DS18B20_OK)
- 467              		.loc 1 163 3 is_stmt 1 view .LVU117
- 468              		.loc 1 163 6 is_stmt 0 view .LVU118
- 469 001c D0BB     		cbnz	r0, .L37
+ 465              		.loc 1 163 3 is_stmt 1 view .LVU116
+ 466              		.loc 1 163 6 is_stmt 0 view .LVU117
+ 467 001c D0BB     		cbnz	r0, .L37
  164:Core/Src/ds18b20.c ****   {
  165:Core/Src/ds18b20.c ****     return result;
  166:Core/Src/ds18b20.c ****   }
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 13
-
-
  167:Core/Src/ds18b20.c **** 
  168:Core/Src/ds18b20.c ****   sensor->temperatureLimitHigh = rxData[DS18B20_SCRATCHPAD_T_LIMIT_H_BYTE_IDX];
- 470              		.loc 1 168 3 is_stmt 1 view .LVU119
- 471              		.loc 1 168 40 is_stmt 0 view .LVU120
- 472 001e 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
- 473              		.loc 1 168 32 view .LVU121
- 474 0022 E373     		strb	r3, [r4, #15]
+ 468              		.loc 1 168 3 is_stmt 1 view .LVU118
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 13
+
+
+ 469              		.loc 1 168 40 is_stmt 0 view .LVU119
+ 470 001e 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 471              		.loc 1 168 32 view .LVU120
+ 472 0022 E373     		strb	r3, [r4, #15]
  169:Core/Src/ds18b20.c ****   sensor->temperatureLimitLow = rxData[DS18B20_SCRATCHPAD_T_LIMIT_L_BYTE_IDX];
- 475              		.loc 1 169 3 is_stmt 1 view .LVU122
- 476              		.loc 1 169 39 is_stmt 0 view .LVU123
- 477 0024 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
- 478              		.loc 1 169 31 view .LVU124
- 479 0028 A373     		strb	r3, [r4, #14]
+ 473              		.loc 1 169 3 is_stmt 1 view .LVU121
+ 474              		.loc 1 169 39 is_stmt 0 view .LVU122
+ 475 0024 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 476              		.loc 1 169 31 view .LVU123
+ 477 0028 A373     		strb	r3, [r4, #14]
  170:Core/Src/ds18b20.c ****   sensor->configRegister = rxData[DS18B20_SCRATCHPAD_CONFIG_BYTE_IDX];
- 480              		.loc 1 170 3 is_stmt 1 view .LVU125
- 481              		.loc 1 170 34 is_stmt 0 view .LVU126
- 482 002a 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
- 483              		.loc 1 170 26 view .LVU127
- 484 002e 2174     		strb	r1, [r4, #16]
+ 478              		.loc 1 170 3 is_stmt 1 view .LVU124
+ 479              		.loc 1 170 34 is_stmt 0 view .LVU125
+ 480 002a 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 481              		.loc 1 170 26 view .LVU126
+ 482 002e 2174     		strb	r1, [r4, #16]
  171:Core/Src/ds18b20.c **** 
  172:Core/Src/ds18b20.c ****   uint16_t tRegValue = (rxData[DS18B20_SCRATCHPAD_T_MSB_BYTE_IDX] << 8) | rxData[DS18B20_SCRATCHPAD
- 485              		.loc 1 172 3 is_stmt 1 view .LVU128
- 486              		.loc 1 172 31 is_stmt 0 view .LVU129
- 487 0030 9DF80530 		ldrb	r3, [sp, #5]	@ zero_extendqisi2
- 488              		.loc 1 172 81 view .LVU130
- 489 0034 9DF80420 		ldrb	r2, [sp, #4]	@ zero_extendqisi2
- 490              		.loc 1 172 73 view .LVU131
- 491 0038 42EA0322 		orr	r2, r2, r3, lsl #8
- 492              		.loc 1 172 12 view .LVU132
- 493 003c 1346     		mov	r3, r2
- 494              	.LVL48:
+ 483              		.loc 1 172 3 is_stmt 1 view .LVU127
+ 484              		.loc 1 172 31 is_stmt 0 view .LVU128
+ 485 0030 9DF80530 		ldrb	r3, [sp, #5]	@ zero_extendqisi2
+ 486              		.loc 1 172 81 view .LVU129
+ 487 0034 9DF80420 		ldrb	r2, [sp, #4]	@ zero_extendqisi2
+ 488              		.loc 1 172 73 view .LVU130
+ 489 0038 42EA0322 		orr	r2, r2, r3, lsl #8
+ 490              		.loc 1 172 12 view .LVU131
+ 491 003c 1346     		mov	r3, r2
+ 492              	.LVL47:
  173:Core/Src/ds18b20.c ****   uint16_t sign = tRegValue & DS18B20_SIGN_MASK;
- 495              		.loc 1 173 3 is_stmt 1 view .LVU133
+ 493              		.loc 1 173 3 is_stmt 1 view .LVU132
  174:Core/Src/ds18b20.c **** 
  175:Core/Src/ds18b20.c ****   if (sign != 0)
- 496              		.loc 1 175 3 view .LVU134
- 497              		.loc 1 175 6 is_stmt 0 view .LVU135
- 498 003e 12F47842 		ands	r2, r2, #63488
- 499              	.LVL49:
- 500              		.loc 1 175 6 view .LVU136
- 501 0042 01D0     		beq	.L38
+ 494              		.loc 1 175 3 view .LVU133
+ 495              		.loc 1 175 6 is_stmt 0 view .LVU134
+ 496 003e 12F47842 		ands	r2, r2, #63488
+ 497              	.LVL48:
+ 498              		.loc 1 175 6 view .LVU135
+ 499 0042 01D0     		beq	.L38
  176:Core/Src/ds18b20.c ****   {
  177:Core/Src/ds18b20.c ****     tRegValue = (0xFFFF - tRegValue + 1);
- 502              		.loc 1 177 5 is_stmt 1 view .LVU137
- 503              		.loc 1 177 15 is_stmt 0 view .LVU138
- 504 0044 5B42     		rsbs	r3, r3, #0
- 505              	.LVL50:
- 506              		.loc 1 177 15 view .LVU139
- 507 0046 9BB2     		uxth	r3, r3
- 508              	.LVL51:
- 509              	.L38:
+ 500              		.loc 1 177 5 is_stmt 1 view .LVU136
+ 501              		.loc 1 177 15 is_stmt 0 view .LVU137
+ 502 0044 5B42     		rsbs	r3, r3, #0
+ 503              	.LVL49:
+ 504              		.loc 1 177 15 view .LVU138
+ 505 0046 9BB2     		uxth	r3, r3
+ 506              	.LVL50:
+ 507              	.L38:
  178:Core/Src/ds18b20.c ****   }
  179:Core/Src/ds18b20.c **** 
  180:Core/Src/ds18b20.c ****   switch (sensor->configRegister)
- 510              		.loc 1 180 3 is_stmt 1 view .LVU140
- 511 0048 5F29     		cmp	r1, #95
- 512 004a 25D0     		beq	.L39
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 14
+ 508              		.loc 1 180 3 is_stmt 1 view .LVU139
+ 509 0048 5F29     		cmp	r1, #95
+ 510 004a 25D0     		beq	.L39
+ 511 004c 0AD8     		bhi	.L40
+ 512 004e 1F29     		cmp	r1, #31
+ 513 0050 0FD0     		beq	.L41
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 14
 
 
- 513 004c 0AD8     		bhi	.L40
- 514 004e 1F29     		cmp	r1, #31
- 515 0050 0FD0     		beq	.L41
- 516 0052 3F29     		cmp	r1, #63
- 517 0054 27D1     		bne	.L43
+ 514 0052 3F29     		cmp	r1, #63
+ 515 0054 27D1     		bne	.L43
  181:Core/Src/ds18b20.c ****   {
  182:Core/Src/ds18b20.c ****     case DS18B20_9_BITS_CONFIG:
  183:Core/Src/ds18b20.c ****       tRegValue &= DS18B20_9_BITS_DATA_MASK;
@@ -793,24 +790,24 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  185:Core/Src/ds18b20.c **** 
  186:Core/Src/ds18b20.c ****     case DS18B20_10_BITS_CONFIG:
  187:Core/Src/ds18b20.c ****       tRegValue &= DS18B20_10_BITS_DATA_MASK;
- 518              		.loc 1 187 7 view .LVU141
- 519              		.loc 1 187 17 is_stmt 0 view .LVU142
- 520 0056 23F00303 		bic	r3, r3, #3
- 521              	.LVL52:
- 522              		.loc 1 187 17 view .LVU143
- 523 005a 5B05     		lsls	r3, r3, #21
- 524 005c 5B0D     		lsrs	r3, r3, #21
- 525 005e 07EE903A 		vmov	s15, r3	@ int
- 526              	.LVL53:
+ 516              		.loc 1 187 7 view .LVU140
+ 517              		.loc 1 187 17 is_stmt 0 view .LVU141
+ 518 0056 23F00303 		bic	r3, r3, #3
+ 519              	.LVL51:
+ 520              		.loc 1 187 17 view .LVU142
+ 521 005a 5B05     		lsls	r3, r3, #21
+ 522 005c 5B0D     		lsrs	r3, r3, #21
+ 523 005e 07EE903A 		vmov	s15, r3	@ int
+ 524              	.LVL52:
  188:Core/Src/ds18b20.c ****       break;
- 527              		.loc 1 188 7 is_stmt 1 view .LVU144
- 528 0062 0AE0     		b	.L45
- 529              	.LVL54:
- 530              	.L40:
+ 525              		.loc 1 188 7 is_stmt 1 view .LVU143
+ 526 0062 0AE0     		b	.L45
+ 527              	.LVL53:
+ 528              	.L40:
  180:Core/Src/ds18b20.c ****   {
- 531              		.loc 1 180 3 is_stmt 0 view .LVU145
- 532 0064 7F29     		cmp	r1, #127
- 533 0066 1ED1     		bne	.L43
+ 529              		.loc 1 180 3 is_stmt 0 view .LVU144
+ 530 0064 7F29     		cmp	r1, #127
+ 531 0066 1ED1     		bne	.L43
  189:Core/Src/ds18b20.c **** 
  190:Core/Src/ds18b20.c ****     case DS18B20_11_BITS_CONFIG:
  191:Core/Src/ds18b20.c ****       tRegValue &= DS18B20_11_BITS_DATA_MASK;
@@ -818,34 +815,34 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  193:Core/Src/ds18b20.c **** 
  194:Core/Src/ds18b20.c ****     case DS18B20_12_BITS_CONFIG:
  195:Core/Src/ds18b20.c ****       tRegValue &= DS18B20_12_BITS_DATA_MASK;
- 534              		.loc 1 195 7 is_stmt 1 view .LVU146
- 535              		.loc 1 195 17 is_stmt 0 view .LVU147
- 536 0068 C3F30A03 		ubfx	r3, r3, #0, #11
- 537              	.LVL55:
- 538              		.loc 1 195 17 view .LVU148
- 539 006c 07EE903A 		vmov	s15, r3	@ int
- 540              	.LVL56:
+ 532              		.loc 1 195 7 is_stmt 1 view .LVU145
+ 533              		.loc 1 195 17 is_stmt 0 view .LVU146
+ 534 0068 C3F30A03 		ubfx	r3, r3, #0, #11
+ 535              	.LVL54:
+ 536              		.loc 1 195 17 view .LVU147
+ 537 006c 07EE903A 		vmov	s15, r3	@ int
+ 538              	.LVL55:
  196:Core/Src/ds18b20.c ****       break;
- 541              		.loc 1 196 7 is_stmt 1 view .LVU149
- 542 0070 03E0     		b	.L45
- 543              	.LVL57:
- 544              	.L41:
+ 539              		.loc 1 196 7 is_stmt 1 view .LVU148
+ 540 0070 03E0     		b	.L45
+ 541              	.LVL56:
+ 542              	.L41:
  183:Core/Src/ds18b20.c ****       break;
- 545              		.loc 1 183 7 view .LVU150
+ 543              		.loc 1 183 7 view .LVU149
  183:Core/Src/ds18b20.c ****       break;
- 546              		.loc 1 183 17 is_stmt 0 view .LVU151
- 547 0072 03F4FF63 		and	r3, r3, #2040
- 548              	.LVL58:
+ 544              		.loc 1 183 17 is_stmt 0 view .LVU150
+ 545 0072 03F4FF63 		and	r3, r3, #2040
+ 546              	.LVL57:
  183:Core/Src/ds18b20.c ****       break;
- 549              		.loc 1 183 17 view .LVU152
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 15
-
-
- 550 0076 07EE903A 		vmov	s15, r3	@ int
- 551              	.LVL59:
+ 547              		.loc 1 183 17 view .LVU151
+ 548 0076 07EE903A 		vmov	s15, r3	@ int
+ 549              	.LVL58:
  184:Core/Src/ds18b20.c **** 
- 552              		.loc 1 184 7 is_stmt 1 view .LVU153
- 553              	.L45:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 15
+
+
+ 550              		.loc 1 184 7 is_stmt 1 view .LVU152
+ 551              	.L45:
  197:Core/Src/ds18b20.c **** 
  198:Core/Src/ds18b20.c ****     default:
  199:Core/Src/ds18b20.c ****       tRegValue &= DS18B20_12_BITS_DATA_MASK;
@@ -853,195 +850,195 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  201:Core/Src/ds18b20.c ****   }
  202:Core/Src/ds18b20.c **** 
  203:Core/Src/ds18b20.c ****   sensor->temperature = (float)tRegValue * DS18B20_T_STEP;
- 554              		.loc 1 203 3 view .LVU154
- 555              		.loc 1 203 25 is_stmt 0 view .LVU155
- 556 007a F8EE677A 		vcvt.f32.u32	s15, s15
- 557              	.LVL60:
- 558              		.loc 1 203 42 view .LVU156
- 559 007e 9FED0C7A 		vldr.32	s14, .L47
- 560 0082 67EE877A 		vmul.f32	s15, s15, s14
- 561              		.loc 1 203 23 view .LVU157
- 562 0086 C4ED057A 		vstr.32	s15, [r4, #20]
+ 552              		.loc 1 203 3 view .LVU153
+ 553              		.loc 1 203 25 is_stmt 0 view .LVU154
+ 554 007a F8EE677A 		vcvt.f32.u32	s15, s15
+ 555              	.LVL59:
+ 556              		.loc 1 203 42 view .LVU155
+ 557 007e 9FED0C7A 		vldr.32	s14, .L47
+ 558 0082 67EE877A 		vmul.f32	s15, s15, s14
+ 559              		.loc 1 203 23 view .LVU156
+ 560 0086 C4ED057A 		vstr.32	s15, [r4, #20]
  204:Core/Src/ds18b20.c **** 
  205:Core/Src/ds18b20.c ****   if (sign != 0)
- 563              		.loc 1 205 3 is_stmt 1 view .LVU158
- 564              		.loc 1 205 6 is_stmt 0 view .LVU159
- 565 008a 1AB1     		cbz	r2, .L37
+ 561              		.loc 1 205 3 is_stmt 1 view .LVU157
+ 562              		.loc 1 205 6 is_stmt 0 view .LVU158
+ 563 008a 1AB1     		cbz	r2, .L37
  206:Core/Src/ds18b20.c ****   {
  207:Core/Src/ds18b20.c ****     sensor->temperature *= (-1);
- 566              		.loc 1 207 5 is_stmt 1 view .LVU160
- 567              		.loc 1 207 25 is_stmt 0 view .LVU161
- 568 008c F1EE677A 		vneg.f32	s15, s15
- 569 0090 C4ED057A 		vstr.32	s15, [r4, #20]
- 570              	.LVL61:
- 571              	.L37:
+ 564              		.loc 1 207 5 is_stmt 1 view .LVU159
+ 565              		.loc 1 207 25 is_stmt 0 view .LVU160
+ 566 008c F1EE677A 		vneg.f32	s15, s15
+ 567 0090 C4ED057A 		vstr.32	s15, [r4, #20]
+ 568              	.LVL60:
+ 569              	.L37:
  208:Core/Src/ds18b20.c ****   }
  209:Core/Src/ds18b20.c **** 
  210:Core/Src/ds18b20.c ****   return DS18B20_OK;
  211:Core/Src/ds18b20.c **** }
- 572              		.loc 1 211 1 view .LVU162
- 573 0094 04B0     		add	sp, sp, #16
- 574              		.cfi_remember_state
- 575              		.cfi_def_cfa_offset 8
- 576              		@ sp needed
- 577 0096 10BD     		pop	{r4, pc}
- 578              	.LVL62:
- 579              	.L39:
- 580              		.cfi_restore_state
+ 570              		.loc 1 211 1 view .LVU161
+ 571 0094 04B0     		add	sp, sp, #16
+ 572              		.cfi_remember_state
+ 573              		.cfi_def_cfa_offset 8
+ 574              		@ sp needed
+ 575 0096 10BD     		pop	{r4, pc}
+ 576              	.LVL61:
+ 577              	.L39:
+ 578              		.cfi_restore_state
  191:Core/Src/ds18b20.c ****       break;
- 581              		.loc 1 191 7 is_stmt 1 view .LVU163
+ 579              		.loc 1 191 7 is_stmt 1 view .LVU162
  191:Core/Src/ds18b20.c ****       break;
- 582              		.loc 1 191 17 is_stmt 0 view .LVU164
- 583 0098 23F00103 		bic	r3, r3, #1
- 584              	.LVL63:
+ 580              		.loc 1 191 17 is_stmt 0 view .LVU163
+ 581 0098 23F00103 		bic	r3, r3, #1
+ 582              	.LVL62:
  191:Core/Src/ds18b20.c ****       break;
- 585              		.loc 1 191 17 view .LVU165
- 586 009c 5B05     		lsls	r3, r3, #21
- 587 009e 5B0D     		lsrs	r3, r3, #21
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 16
-
-
- 588 00a0 07EE903A 		vmov	s15, r3	@ int
- 589              	.LVL64:
+ 583              		.loc 1 191 17 view .LVU164
+ 584 009c 5B05     		lsls	r3, r3, #21
+ 585 009e 5B0D     		lsrs	r3, r3, #21
+ 586 00a0 07EE903A 		vmov	s15, r3	@ int
+ 587              	.LVL63:
  192:Core/Src/ds18b20.c **** 
- 590              		.loc 1 192 7 is_stmt 1 view .LVU166
- 591 00a4 E9E7     		b	.L45
- 592              	.LVL65:
- 593              	.L43:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 16
+
+
+ 588              		.loc 1 192 7 is_stmt 1 view .LVU165
+ 589 00a4 E9E7     		b	.L45
+ 590              	.LVL64:
+ 591              	.L43:
  199:Core/Src/ds18b20.c ****       break;
- 594              		.loc 1 199 7 view .LVU167
+ 592              		.loc 1 199 7 view .LVU166
  199:Core/Src/ds18b20.c ****       break;
- 595              		.loc 1 199 17 is_stmt 0 view .LVU168
- 596 00a6 C3F30A03 		ubfx	r3, r3, #0, #11
- 597              	.LVL66:
+ 593              		.loc 1 199 17 is_stmt 0 view .LVU167
+ 594 00a6 C3F30A03 		ubfx	r3, r3, #0, #11
+ 595              	.LVL65:
  199:Core/Src/ds18b20.c ****       break;
- 598              		.loc 1 199 17 view .LVU169
- 599 00aa 07EE903A 		vmov	s15, r3	@ int
- 600              	.LVL67:
+ 596              		.loc 1 199 17 view .LVU168
+ 597 00aa 07EE903A 		vmov	s15, r3	@ int
+ 598              	.LVL66:
  200:Core/Src/ds18b20.c ****   }
- 601              		.loc 1 200 7 is_stmt 1 view .LVU170
- 602 00ae E4E7     		b	.L45
- 603              	.L48:
- 604              		.align	2
- 605              	.L47:
- 606 00b0 0000803D 		.word	1031798784
- 607              		.cfi_endproc
- 608              	.LFE323:
- 610              		.section	.text.DS18B20_WriteScratchpad,"ax",%progbits
- 611              		.align	1
- 612              		.global	DS18B20_WriteScratchpad
- 613              		.syntax unified
- 614              		.thumb
- 615              		.thumb_func
- 617              	DS18B20_WriteScratchpad:
- 618              	.LVL68:
- 619              	.LFB324:
+ 599              		.loc 1 200 7 is_stmt 1 view .LVU169
+ 600 00ae E4E7     		b	.L45
+ 601              	.L48:
+ 602              		.align	2
+ 603              	.L47:
+ 604 00b0 0000803D 		.word	1031798784
+ 605              		.cfi_endproc
+ 606              	.LFE323:
+ 608              		.section	.text.DS18B20_WriteScratchpad,"ax",%progbits
+ 609              		.align	1
+ 610              		.global	DS18B20_WriteScratchpad
+ 611              		.syntax unified
+ 612              		.thumb
+ 613              		.thumb_func
+ 615              	DS18B20_WriteScratchpad:
+ 616              	.LVL67:
+ 617              	.LFB324:
  212:Core/Src/ds18b20.c **** 
  213:Core/Src/ds18b20.c **** 
  214:Core/Src/ds18b20.c **** 
  215:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  216:Core/Src/ds18b20.c **** DS18B20_Status DS18B20_WriteScratchpad(DS18B20 *sensor, uint8_t *data)
  217:Core/Src/ds18b20.c **** {
- 620              		.loc 1 217 1 view -0
- 621              		.cfi_startproc
- 622              		@ args = 0, pretend = 0, frame = 0
- 623              		@ frame_needed = 0, uses_anonymous_args = 0
- 624              		.loc 1 217 1 is_stmt 0 view .LVU172
- 625 0000 38B5     		push	{r3, r4, r5, lr}
- 626              		.cfi_def_cfa_offset 16
- 627              		.cfi_offset 3, -16
- 628              		.cfi_offset 4, -12
- 629              		.cfi_offset 5, -8
- 630              		.cfi_offset 14, -4
- 631 0002 0546     		mov	r5, r0
- 632 0004 0C46     		mov	r4, r1
+ 618              		.loc 1 217 1 view -0
+ 619              		.cfi_startproc
+ 620              		@ args = 0, pretend = 0, frame = 0
+ 621              		@ frame_needed = 0, uses_anonymous_args = 0
+ 622              		.loc 1 217 1 is_stmt 0 view .LVU171
+ 623 0000 38B5     		push	{r3, r4, r5, lr}
+ 624              		.cfi_def_cfa_offset 16
+ 625              		.cfi_offset 3, -16
+ 626              		.cfi_offset 4, -12
+ 627              		.cfi_offset 5, -8
+ 628              		.cfi_offset 14, -4
+ 629 0002 0546     		mov	r5, r0
+ 630 0004 0C46     		mov	r4, r1
  218:Core/Src/ds18b20.c ****   DS18B20_Status result;
- 633              		.loc 1 218 3 is_stmt 1 view .LVU173
+ 631              		.loc 1 218 3 is_stmt 1 view .LVU172
  219:Core/Src/ds18b20.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 17
-
-
  220:Core/Src/ds18b20.c ****   result = ExecuteCommand(sensor, writeScratchpad, data);
- 634              		.loc 1 220 3 view .LVU174
- 635              		.loc 1 220 12 is_stmt 0 view .LVU175
- 636 0006 0A46     		mov	r2, r1
- 637 0008 0021     		movs	r1, #0
- 638              	.LVL69:
- 639              		.loc 1 220 12 view .LVU176
- 640 000a 4E23     		movs	r3, #78
- 641 000c 63F30701 		bfi	r1, r3, #0, #8
- 642 0010 0323     		movs	r3, #3
- 643 0012 63F31741 		bfi	r1, r3, #16, #8
- 644 0016 FFF7FEFF 		bl	ExecuteCommand
- 645              	.LVL70:
+ 632              		.loc 1 220 3 view .LVU173
+ 633              		.loc 1 220 12 is_stmt 0 view .LVU174
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 17
+
+
+ 634 0006 0A46     		mov	r2, r1
+ 635 0008 0021     		movs	r1, #0
+ 636              	.LVL68:
+ 637              		.loc 1 220 12 view .LVU175
+ 638 000a 4E23     		movs	r3, #78
+ 639 000c 63F30701 		bfi	r1, r3, #0, #8
+ 640 0010 0323     		movs	r3, #3
+ 641 0012 63F31741 		bfi	r1, r3, #16, #8
+ 642 0016 FFF7FEFF 		bl	ExecuteCommand
+ 643              	.LVL69:
  221:Core/Src/ds18b20.c **** 
  222:Core/Src/ds18b20.c ****   if (result != DS18B20_OK)
- 646              		.loc 1 222 3 is_stmt 1 view .LVU177
- 647              		.loc 1 222 6 is_stmt 0 view .LVU178
- 648 001a 28B9     		cbnz	r0, .L50
+ 644              		.loc 1 222 3 is_stmt 1 view .LVU176
+ 645              		.loc 1 222 6 is_stmt 0 view .LVU177
+ 646 001a 28B9     		cbnz	r0, .L50
  223:Core/Src/ds18b20.c ****   {
  224:Core/Src/ds18b20.c ****     return result;
  225:Core/Src/ds18b20.c ****   }
  226:Core/Src/ds18b20.c **** 
  227:Core/Src/ds18b20.c ****   sensor->temperatureLimitHigh = data[0];
- 649              		.loc 1 227 3 is_stmt 1 view .LVU179
- 650              		.loc 1 227 38 is_stmt 0 view .LVU180
- 651 001c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
- 652              		.loc 1 227 32 view .LVU181
- 653 001e EB73     		strb	r3, [r5, #15]
+ 647              		.loc 1 227 3 is_stmt 1 view .LVU178
+ 648              		.loc 1 227 38 is_stmt 0 view .LVU179
+ 649 001c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 650              		.loc 1 227 32 view .LVU180
+ 651 001e EB73     		strb	r3, [r5, #15]
  228:Core/Src/ds18b20.c ****   sensor->temperatureLimitLow = data[1];
- 654              		.loc 1 228 3 is_stmt 1 view .LVU182
- 655              		.loc 1 228 31 is_stmt 0 view .LVU183
- 656 0020 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 657 0022 AB73     		strb	r3, [r5, #14]
+ 652              		.loc 1 228 3 is_stmt 1 view .LVU181
+ 653              		.loc 1 228 31 is_stmt 0 view .LVU182
+ 654 0020 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 655 0022 AB73     		strb	r3, [r5, #14]
  229:Core/Src/ds18b20.c ****   sensor->configRegister = data[2];
- 658              		.loc 1 229 3 is_stmt 1 view .LVU184
- 659              		.loc 1 229 26 is_stmt 0 view .LVU185
- 660 0024 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
- 661 0026 2B74     		strb	r3, [r5, #16]
+ 656              		.loc 1 229 3 is_stmt 1 view .LVU183
+ 657              		.loc 1 229 26 is_stmt 0 view .LVU184
+ 658 0024 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
+ 659 0026 2B74     		strb	r3, [r5, #16]
  230:Core/Src/ds18b20.c **** 
  231:Core/Src/ds18b20.c ****   return result;
- 662              		.loc 1 231 3 is_stmt 1 view .LVU186
- 663              	.L50:
+ 660              		.loc 1 231 3 is_stmt 1 view .LVU185
+ 661              	.L50:
  232:Core/Src/ds18b20.c **** }
- 664              		.loc 1 232 1 is_stmt 0 view .LVU187
- 665 0028 38BD     		pop	{r3, r4, r5, pc}
- 666              		.loc 1 232 1 view .LVU188
- 667              		.cfi_endproc
- 668              	.LFE324:
- 670              		.section	.text.DS18B20_InitializationCommand,"ax",%progbits
- 671              		.align	1
- 672              		.global	DS18B20_InitializationCommand
- 673              		.syntax unified
- 674              		.thumb
- 675              		.thumb_func
- 677              	DS18B20_InitializationCommand:
- 678              	.LVL71:
- 679              	.LFB325:
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 18
-
-
+ 662              		.loc 1 232 1 is_stmt 0 view .LVU186
+ 663 0028 38BD     		pop	{r3, r4, r5, pc}
+ 664              		.loc 1 232 1 view .LVU187
+ 665              		.cfi_endproc
+ 666              	.LFE324:
+ 668              		.section	.text.DS18B20_InitializationCommand,"ax",%progbits
+ 669              		.align	1
+ 670              		.global	DS18B20_InitializationCommand
+ 671              		.syntax unified
+ 672              		.thumb
+ 673              		.thumb_func
+ 675              	DS18B20_InitializationCommand:
+ 676              	.LVL70:
+ 677              	.LFB325:
  233:Core/Src/ds18b20.c **** 
  234:Core/Src/ds18b20.c **** 
  235:Core/Src/ds18b20.c **** 
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 18
+
+
  236:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  237:Core/Src/ds18b20.c **** DS18B20_Status DS18B20_InitializationCommand(DS18B20 *sensor)
  238:Core/Src/ds18b20.c **** {
- 680              		.loc 1 238 1 is_stmt 1 view -0
- 681              		.cfi_startproc
- 682              		@ args = 0, pretend = 0, frame = 0
- 683              		@ frame_needed = 0, uses_anonymous_args = 0
+ 678              		.loc 1 238 1 is_stmt 1 view -0
+ 679              		.cfi_startproc
+ 680              		@ args = 0, pretend = 0, frame = 0
+ 681              		@ frame_needed = 0, uses_anonymous_args = 0
  239:Core/Src/ds18b20.c ****   if (sensor->isInitialized == 0)
- 684              		.loc 1 239 3 view .LVU190
- 685              		.loc 1 239 13 is_stmt 0 view .LVU191
- 686 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
- 687              		.loc 1 239 6 view .LVU192
- 688 0002 0BB9     		cbnz	r3, .L60
+ 682              		.loc 1 239 3 view .LVU189
+ 683              		.loc 1 239 13 is_stmt 0 view .LVU190
+ 684 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 685              		.loc 1 239 6 view .LVU191
+ 686 0002 0BB9     		cbnz	r3, .L60
  240:Core/Src/ds18b20.c ****   {
  241:Core/Src/ds18b20.c ****     return DS18B20_ERROR;
- 689              		.loc 1 241 12 view .LVU193
- 690 0004 0120     		movs	r0, #1
- 691              	.LVL72:
+ 687              		.loc 1 241 12 view .LVU192
+ 688 0004 0120     		movs	r0, #1
+ 689              	.LVL71:
  242:Core/Src/ds18b20.c ****   }
  243:Core/Src/ds18b20.c **** 
  244:Core/Src/ds18b20.c ****   ONEWIRE_Status status = OneWire_Reset(sensor->uart);
@@ -1057,121 +1054,121 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  254:Core/Src/ds18b20.c ****     return DS18B20_ERROR;
  255:Core/Src/ds18b20.c ****   }
  256:Core/Src/ds18b20.c **** }
- 692              		.loc 1 256 1 view .LVU194
- 693 0006 7047     		bx	lr
- 694              	.LVL73:
- 695              	.L60:
+ 690              		.loc 1 256 1 view .LVU193
+ 691 0006 7047     		bx	lr
+ 692              	.LVL72:
+ 693              	.L60:
  238:Core/Src/ds18b20.c ****   if (sensor->isInitialized == 0)
- 696              		.loc 1 238 1 view .LVU195
- 697 0008 10B5     		push	{r4, lr}
- 698              		.cfi_def_cfa_offset 8
- 699              		.cfi_offset 4, -8
- 700              		.cfi_offset 14, -4
- 701 000a 0446     		mov	r4, r0
+ 694              		.loc 1 238 1 view .LVU194
+ 695 0008 10B5     		push	{r4, lr}
+ 696              		.cfi_def_cfa_offset 8
+ 697              		.cfi_offset 4, -8
+ 698              		.cfi_offset 14, -4
+ 699 000a 0446     		mov	r4, r0
  244:Core/Src/ds18b20.c **** 
- 702              		.loc 1 244 3 is_stmt 1 view .LVU196
+ 700              		.loc 1 244 3 is_stmt 1 view .LVU195
  244:Core/Src/ds18b20.c **** 
- 703              		.loc 1 244 27 is_stmt 0 view .LVU197
- 704 000c 4068     		ldr	r0, [r0, #4]
- 705              	.LVL74:
+ 701              		.loc 1 244 27 is_stmt 0 view .LVU196
+ 702 000c 4068     		ldr	r0, [r0, #4]
+ 703              	.LVL73:
  244:Core/Src/ds18b20.c **** 
- 706              		.loc 1 244 27 view .LVU198
- 707 000e FFF7FEFF 		bl	OneWire_Reset
- 708              	.LVL75:
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 19
+ 704              		.loc 1 244 27 view .LVU197
+ 705 000e FFF7FEFF 		bl	OneWire_Reset
+ 706              	.LVL74:
+ 246:Core/Src/ds18b20.c ****   {
+ 707              		.loc 1 246 3 is_stmt 1 view .LVU198
+ 246:Core/Src/ds18b20.c ****   {
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 19
 
 
- 246:Core/Src/ds18b20.c ****   {
- 709              		.loc 1 246 3 is_stmt 1 view .LVU199
- 246:Core/Src/ds18b20.c ****   {
- 710              		.loc 1 246 6 is_stmt 0 view .LVU200
- 711 0012 10B9     		cbnz	r0, .L54
+ 708              		.loc 1 246 6 is_stmt 0 view .LVU199
+ 709 0012 10B9     		cbnz	r0, .L54
  248:Core/Src/ds18b20.c ****     return DS18B20_OK;
- 712              		.loc 1 248 5 is_stmt 1 view .LVU201
+ 710              		.loc 1 248 5 is_stmt 1 view .LVU200
  248:Core/Src/ds18b20.c ****     return DS18B20_OK;
- 713              		.loc 1 248 25 is_stmt 0 view .LVU202
- 714 0014 0123     		movs	r3, #1
- 715 0016 6370     		strb	r3, [r4, #1]
+ 711              		.loc 1 248 25 is_stmt 0 view .LVU201
+ 712 0014 0123     		movs	r3, #1
+ 713 0016 6370     		strb	r3, [r4, #1]
  249:Core/Src/ds18b20.c ****   }
- 716              		.loc 1 249 5 is_stmt 1 view .LVU203
- 717              	.LVL76:
- 718              	.L53:
- 719              		.loc 1 256 1 is_stmt 0 view .LVU204
- 720 0018 10BD     		pop	{r4, pc}
- 721              	.LVL77:
- 722              	.L54:
+ 714              		.loc 1 249 5 is_stmt 1 view .LVU202
+ 715              	.LVL75:
+ 716              	.L53:
+ 717              		.loc 1 256 1 is_stmt 0 view .LVU203
+ 718 0018 10BD     		pop	{r4, pc}
+ 719              	.LVL76:
+ 720              	.L54:
  253:Core/Src/ds18b20.c ****     return DS18B20_ERROR;
- 723              		.loc 1 253 5 is_stmt 1 view .LVU205
+ 721              		.loc 1 253 5 is_stmt 1 view .LVU204
  253:Core/Src/ds18b20.c ****     return DS18B20_ERROR;
- 724              		.loc 1 253 25 is_stmt 0 view .LVU206
- 725 001a 0023     		movs	r3, #0
- 726 001c 6370     		strb	r3, [r4, #1]
+ 722              		.loc 1 253 25 is_stmt 0 view .LVU205
+ 723 001a 0023     		movs	r3, #0
+ 724 001c 6370     		strb	r3, [r4, #1]
  254:Core/Src/ds18b20.c ****   }
- 727              		.loc 1 254 5 is_stmt 1 view .LVU207
+ 725              		.loc 1 254 5 is_stmt 1 view .LVU206
  254:Core/Src/ds18b20.c ****   }
- 728              		.loc 1 254 12 is_stmt 0 view .LVU208
- 729 001e 0120     		movs	r0, #1
- 730              	.LVL78:
+ 726              		.loc 1 254 12 is_stmt 0 view .LVU207
+ 727 001e 0120     		movs	r0, #1
+ 728              	.LVL77:
  254:Core/Src/ds18b20.c ****   }
- 731              		.loc 1 254 12 view .LVU209
- 732 0020 FAE7     		b	.L53
- 733              		.cfi_endproc
- 734              	.LFE325:
- 736              		.section	.text.DS18B20_ReadRom,"ax",%progbits
- 737              		.align	1
- 738              		.global	DS18B20_ReadRom
- 739              		.syntax unified
- 740              		.thumb
- 741              		.thumb_func
- 743              	DS18B20_ReadRom:
- 744              	.LVL79:
- 745              	.LFB326:
+ 729              		.loc 1 254 12 view .LVU208
+ 730 0020 FAE7     		b	.L53
+ 731              		.cfi_endproc
+ 732              	.LFE325:
+ 734              		.section	.text.DS18B20_ReadRom,"ax",%progbits
+ 735              		.align	1
+ 736              		.global	DS18B20_ReadRom
+ 737              		.syntax unified
+ 738              		.thumb
+ 739              		.thumb_func
+ 741              	DS18B20_ReadRom:
+ 742              	.LVL78:
+ 743              	.LFB326:
  257:Core/Src/ds18b20.c **** 
  258:Core/Src/ds18b20.c **** 
  259:Core/Src/ds18b20.c **** 
  260:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  261:Core/Src/ds18b20.c **** DS18B20_Status DS18B20_ReadRom(DS18B20 *sensor)
  262:Core/Src/ds18b20.c **** {
- 746              		.loc 1 262 1 is_stmt 1 view -0
- 747              		.cfi_startproc
- 748              		@ args = 0, pretend = 0, frame = 8
- 749              		@ frame_needed = 0, uses_anonymous_args = 0
- 750              		.loc 1 262 1 is_stmt 0 view .LVU211
- 751 0000 10B5     		push	{r4, lr}
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 20
+ 744              		.loc 1 262 1 is_stmt 1 view -0
+ 745              		.cfi_startproc
+ 746              		@ args = 0, pretend = 0, frame = 8
+ 747              		@ frame_needed = 0, uses_anonymous_args = 0
+ 748              		.loc 1 262 1 is_stmt 0 view .LVU210
+ 749 0000 10B5     		push	{r4, lr}
+ 750              		.cfi_def_cfa_offset 8
+ 751              		.cfi_offset 4, -8
+ 752              		.cfi_offset 14, -4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 20
 
 
- 752              		.cfi_def_cfa_offset 8
- 753              		.cfi_offset 4, -8
- 754              		.cfi_offset 14, -4
- 755 0002 82B0     		sub	sp, sp, #8
- 756              		.cfi_def_cfa_offset 16
- 757 0004 0446     		mov	r4, r0
+ 753 0002 82B0     		sub	sp, sp, #8
+ 754              		.cfi_def_cfa_offset 16
+ 755 0004 0446     		mov	r4, r0
  263:Core/Src/ds18b20.c ****   DS18B20_Status result;
- 758              		.loc 1 263 3 is_stmt 1 view .LVU212
+ 756              		.loc 1 263 3 is_stmt 1 view .LVU211
  264:Core/Src/ds18b20.c ****   uint8_t rxData[DS18B20_READ_ROM_RX_BYTES_NUM];
- 759              		.loc 1 264 3 view .LVU213
+ 757              		.loc 1 264 3 view .LVU212
  265:Core/Src/ds18b20.c ****   result = ExecuteCommand(sensor, readRom, rxData);
- 760              		.loc 1 265 3 view .LVU214
- 761              		.loc 1 265 12 is_stmt 0 view .LVU215
- 762 0006 6A46     		mov	r2, sp
- 763 0008 0021     		movs	r1, #0
- 764 000a 3323     		movs	r3, #51
- 765 000c 63F30701 		bfi	r1, r3, #0, #8
- 766 0010 0823     		movs	r3, #8
- 767 0012 63F30F21 		bfi	r1, r3, #8, #8
- 768 0016 FFF7FEFF 		bl	ExecuteCommand
- 769              	.LVL80:
+ 758              		.loc 1 265 3 view .LVU213
+ 759              		.loc 1 265 12 is_stmt 0 view .LVU214
+ 760 0006 6A46     		mov	r2, sp
+ 761 0008 0021     		movs	r1, #0
+ 762 000a 3323     		movs	r3, #51
+ 763 000c 63F30701 		bfi	r1, r3, #0, #8
+ 764 0010 0823     		movs	r3, #8
+ 765 0012 63F30F21 		bfi	r1, r3, #8, #8
+ 766 0016 FFF7FEFF 		bl	ExecuteCommand
+ 767              	.LVL79:
  266:Core/Src/ds18b20.c **** 
  267:Core/Src/ds18b20.c ****   if (result != DS18B20_OK)
- 770              		.loc 1 267 3 is_stmt 1 view .LVU216
- 771              		.loc 1 267 6 is_stmt 0 view .LVU217
- 772 001a 60B9     		cbnz	r0, .L62
- 773 001c 0346     		mov	r3, r0
- 774 001e 08E0     		b	.L63
- 775              	.LVL81:
- 776              	.L64:
- 777              	.LBB14:
+ 768              		.loc 1 267 3 is_stmt 1 view .LVU215
+ 769              		.loc 1 267 6 is_stmt 0 view .LVU216
+ 770 001a 60B9     		cbnz	r0, .L62
+ 771 001c 0346     		mov	r3, r0
+ 772 001e 08E0     		b	.L63
+ 773              	.LVL80:
+ 774              	.L64:
+ 775              	.LBB14:
  268:Core/Src/ds18b20.c ****   {
  269:Core/Src/ds18b20.c ****     return result;
  270:Core/Src/ds18b20.c ****   }
@@ -1179,221 +1176,221 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 1
  272:Core/Src/ds18b20.c ****   for (uint8_t i = 0; i < DS18B20_SERIAL_NUMBER_LEN_BYTES; i++)
  273:Core/Src/ds18b20.c ****   {
  274:Core/Src/ds18b20.c ****     sensor->serialNumber[i] = rxData[DS18B20_SERIAL_NUMBER_OFFSET_BYTES + i];
- 778              		.loc 1 274 5 is_stmt 1 view .LVU218
- 779              		.loc 1 274 73 is_stmt 0 view .LVU219
- 780 0020 5A1C     		adds	r2, r3, #1
- 781              		.loc 1 274 37 view .LVU220
- 782 0022 03F10901 		add	r1, r3, #9
- 783 0026 6944     		add	r1, sp, r1
- 784 0028 11F8081C 		ldrb	r1, [r1, #-8]	@ zero_extendqisi2
- 785              		.loc 1 274 29 view .LVU221
- 786 002c 2344     		add	r3, r3, r4
- 787              	.LVL82:
- 788              		.loc 1 274 29 view .LVU222
- 789 002e 1972     		strb	r1, [r3, #8]
+ 776              		.loc 1 274 5 is_stmt 1 view .LVU217
+ 777              		.loc 1 274 73 is_stmt 0 view .LVU218
+ 778 0020 5A1C     		adds	r2, r3, #1
+ 779              		.loc 1 274 37 view .LVU219
+ 780 0022 03F10901 		add	r1, r3, #9
+ 781 0026 6944     		add	r1, sp, r1
+ 782 0028 11F8081C 		ldrb	r1, [r1, #-8]	@ zero_extendqisi2
+ 783              		.loc 1 274 29 view .LVU220
+ 784 002c 2344     		add	r3, r3, r4
+ 785              	.LVL81:
+ 786              		.loc 1 274 29 view .LVU221
+ 787 002e 1972     		strb	r1, [r3, #8]
  272:Core/Src/ds18b20.c ****   {
- 790              		.loc 1 272 61 is_stmt 1 discriminator 3 view .LVU223
- 791 0030 D3B2     		uxtb	r3, r2
- 792              	.LVL83:
- 793              	.L63:
+ 788              		.loc 1 272 61 is_stmt 1 discriminator 3 view .LVU222
+ 789 0030 D3B2     		uxtb	r3, r2
+ 790              	.LVL82:
+ 791              	.L63:
  272:Core/Src/ds18b20.c ****   {
- 794              		.loc 1 272 25 discriminator 1 view .LVU224
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 21
+ 792              		.loc 1 272 25 discriminator 1 view .LVU223
+ 793 0032 052B     		cmp	r3, #5
+ 794 0034 F4D9     		bls	.L64
+ 795              	.LVL83:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 21
 
 
- 795 0032 052B     		cmp	r3, #5
- 796 0034 F4D9     		bls	.L64
- 797              	.LVL84:
- 798              	.L62:
+ 796              	.L62:
  272:Core/Src/ds18b20.c ****   {
- 799              		.loc 1 272 25 is_stmt 0 discriminator 1 view .LVU225
- 800              	.LBE14:
+ 797              		.loc 1 272 25 is_stmt 0 discriminator 1 view .LVU224
+ 798              	.LBE14:
  275:Core/Src/ds18b20.c ****   }
  276:Core/Src/ds18b20.c **** 
  277:Core/Src/ds18b20.c ****   return DS18B20_OK;
  278:Core/Src/ds18b20.c **** }
- 801              		.loc 1 278 1 view .LVU226
- 802 0036 02B0     		add	sp, sp, #8
- 803              		.cfi_def_cfa_offset 8
- 804              		@ sp needed
- 805 0038 10BD     		pop	{r4, pc}
- 806              		.loc 1 278 1 view .LVU227
- 807              		.cfi_endproc
- 808              	.LFE326:
- 810              		.section	.text.DS18B20_SkipRom,"ax",%progbits
- 811              		.align	1
- 812              		.global	DS18B20_SkipRom
- 813              		.syntax unified
- 814              		.thumb
- 815              		.thumb_func
- 817              	DS18B20_SkipRom:
- 818              	.LVL85:
- 819              	.LFB327:
+ 799              		.loc 1 278 1 view .LVU225
+ 800 0036 02B0     		add	sp, sp, #8
+ 801              		.cfi_def_cfa_offset 8
+ 802              		@ sp needed
+ 803 0038 10BD     		pop	{r4, pc}
+ 804              		.loc 1 278 1 view .LVU226
+ 805              		.cfi_endproc
+ 806              	.LFE326:
+ 808              		.section	.text.DS18B20_SkipRom,"ax",%progbits
+ 809              		.align	1
+ 810              		.global	DS18B20_SkipRom
+ 811              		.syntax unified
+ 812              		.thumb
+ 813              		.thumb_func
+ 815              	DS18B20_SkipRom:
+ 816              	.LVL84:
+ 817              	.LFB327:
  279:Core/Src/ds18b20.c **** 
  280:Core/Src/ds18b20.c **** 
  281:Core/Src/ds18b20.c **** 
  282:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  283:Core/Src/ds18b20.c **** DS18B20_Status DS18B20_SkipRom(DS18B20 *sensor)
  284:Core/Src/ds18b20.c **** {
- 820              		.loc 1 284 1 is_stmt 1 view -0
- 821              		.cfi_startproc
- 822              		@ args = 0, pretend = 0, frame = 8
- 823              		@ frame_needed = 0, uses_anonymous_args = 0
- 824              		.loc 1 284 1 is_stmt 0 view .LVU229
- 825 0000 00B5     		push	{lr}
- 826              		.cfi_def_cfa_offset 4
- 827              		.cfi_offset 14, -4
- 828 0002 83B0     		sub	sp, sp, #12
- 829              		.cfi_def_cfa_offset 16
+ 818              		.loc 1 284 1 is_stmt 1 view -0
+ 819              		.cfi_startproc
+ 820              		@ args = 0, pretend = 0, frame = 8
+ 821              		@ frame_needed = 0, uses_anonymous_args = 0
+ 822              		.loc 1 284 1 is_stmt 0 view .LVU228
+ 823 0000 00B5     		push	{lr}
+ 824              		.cfi_def_cfa_offset 4
+ 825              		.cfi_offset 14, -4
+ 826 0002 83B0     		sub	sp, sp, #12
+ 827              		.cfi_def_cfa_offset 16
  285:Core/Src/ds18b20.c ****   DS18B20_Status result;
- 830              		.loc 1 285 3 is_stmt 1 view .LVU230
+ 828              		.loc 1 285 3 is_stmt 1 view .LVU229
  286:Core/Src/ds18b20.c ****   uint8_t rxDummyData;
- 831              		.loc 1 286 3 view .LVU231
+ 829              		.loc 1 286 3 view .LVU230
  287:Core/Src/ds18b20.c ****   result = ExecuteCommand(sensor, skipRom, &rxDummyData);
- 832              		.loc 1 287 3 view .LVU232
- 833              		.loc 1 287 12 is_stmt 0 view .LVU233
- 834 0004 0DF10702 		add	r2, sp, #7
- 835 0008 CC21     		movs	r1, #204
- 836 000a FFF7FEFF 		bl	ExecuteCommand
- 837              	.LVL86:
+ 830              		.loc 1 287 3 view .LVU231
+ 831              		.loc 1 287 12 is_stmt 0 view .LVU232
+ 832 0004 0DF10702 		add	r2, sp, #7
+ 833 0008 CC21     		movs	r1, #204
+ 834 000a FFF7FEFF 		bl	ExecuteCommand
+ 835              	.LVL85:
  288:Core/Src/ds18b20.c **** 
  289:Core/Src/ds18b20.c ****   if (result != DS18B20_OK)
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 22
-
-
- 838              		.loc 1 289 3 is_stmt 1 view .LVU234
+ 836              		.loc 1 289 3 is_stmt 1 view .LVU233
  290:Core/Src/ds18b20.c ****   {
  291:Core/Src/ds18b20.c ****     return result;
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 22
+
+
  292:Core/Src/ds18b20.c ****   }
  293:Core/Src/ds18b20.c **** 
  294:Core/Src/ds18b20.c ****   return DS18B20_OK;
  295:Core/Src/ds18b20.c **** }
- 839              		.loc 1 295 1 is_stmt 0 view .LVU235
- 840 000e 03B0     		add	sp, sp, #12
- 841              		.cfi_def_cfa_offset 4
- 842              		@ sp needed
- 843 0010 5DF804FB 		ldr	pc, [sp], #4
- 844              		.cfi_endproc
- 845              	.LFE327:
- 847              		.section	.text.DS18B20_Init,"ax",%progbits
- 848              		.align	1
- 849              		.global	DS18B20_Init
- 850              		.syntax unified
- 851              		.thumb
- 852              		.thumb_func
- 854              	DS18B20_Init:
- 855              	.LVL87:
- 856              	.LFB328:
+ 837              		.loc 1 295 1 is_stmt 0 view .LVU234
+ 838 000e 03B0     		add	sp, sp, #12
+ 839              		.cfi_def_cfa_offset 4
+ 840              		@ sp needed
+ 841 0010 5DF804FB 		ldr	pc, [sp], #4
+ 842              		.cfi_endproc
+ 843              	.LFE327:
+ 845              		.section	.text.DS18B20_Init,"ax",%progbits
+ 846              		.align	1
+ 847              		.global	DS18B20_Init
+ 848              		.syntax unified
+ 849              		.thumb
+ 850              		.thumb_func
+ 852              	DS18B20_Init:
+ 853              	.LVL86:
+ 854              	.LFB328:
  296:Core/Src/ds18b20.c **** 
  297:Core/Src/ds18b20.c **** 
  298:Core/Src/ds18b20.c **** 
  299:Core/Src/ds18b20.c **** /*----------------------------------------------------------------------------*/
  300:Core/Src/ds18b20.c **** void DS18B20_Init(DS18B20 *sensor, UART_HandleTypeDef *huart)
  301:Core/Src/ds18b20.c **** {
- 857              		.loc 1 301 1 is_stmt 1 view -0
- 858              		.cfi_startproc
- 859              		@ args = 0, pretend = 0, frame = 0
- 860              		@ frame_needed = 0, uses_anonymous_args = 0
- 861              		@ link register save eliminated.
+ 855              		.loc 1 301 1 is_stmt 1 view -0
+ 856              		.cfi_startproc
+ 857              		@ args = 0, pretend = 0, frame = 0
+ 858              		@ frame_needed = 0, uses_anonymous_args = 0
+ 859              		@ link register save eliminated.
  302:Core/Src/ds18b20.c ****   sensor->isConnected = 0;
- 862              		.loc 1 302 3 view .LVU237
- 863              		.loc 1 302 23 is_stmt 0 view .LVU238
- 864 0000 0023     		movs	r3, #0
- 865 0002 4370     		strb	r3, [r0, #1]
+ 860              		.loc 1 302 3 view .LVU236
+ 861              		.loc 1 302 23 is_stmt 0 view .LVU237
+ 862 0000 0023     		movs	r3, #0
+ 863 0002 4370     		strb	r3, [r0, #1]
  303:Core/Src/ds18b20.c ****   sensor->uart = huart;
- 866              		.loc 1 303 3 is_stmt 1 view .LVU239
- 867              		.loc 1 303 16 is_stmt 0 view .LVU240
- 868 0004 4160     		str	r1, [r0, #4]
+ 864              		.loc 1 303 3 is_stmt 1 view .LVU238
+ 865              		.loc 1 303 16 is_stmt 0 view .LVU239
+ 866 0004 4160     		str	r1, [r0, #4]
  304:Core/Src/ds18b20.c ****   sensor->isInitialized = 1;
- 869              		.loc 1 304 3 is_stmt 1 view .LVU241
- 870              		.loc 1 304 25 is_stmt 0 view .LVU242
- 871 0006 0123     		movs	r3, #1
- 872 0008 0370     		strb	r3, [r0]
+ 867              		.loc 1 304 3 is_stmt 1 view .LVU240
+ 868              		.loc 1 304 25 is_stmt 0 view .LVU241
+ 869 0006 0123     		movs	r3, #1
+ 870 0008 0370     		strb	r3, [r0]
  305:Core/Src/ds18b20.c **** }
- 873              		.loc 1 305 1 view .LVU243
- 874 000a 7047     		bx	lr
- 875              		.cfi_endproc
- 876              	.LFE328:
- 878              		.section	.rodata.convertT,"a"
- 879              		.align	2
- 882              	convertT:
- 883 0000 44       		.byte	68
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 23
+ 871              		.loc 1 305 1 view .LVU242
+ 872 000a 7047     		bx	lr
+ 873              		.cfi_endproc
+ 874              	.LFE328:
+ 876              		.section	.rodata.convertT,"a"
+ 877              		.align	2
+ 880              	convertT:
+ 881 0000 44       		.byte	68
+ 882 0001 00       		.byte	0
+ 883 0002 00       		.byte	0
+ 884              		.section	.rodata.writeScratchpad,"a"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 23
 
 
- 884 0001 00       		.byte	0
- 885 0002 00       		.byte	0
- 886              		.section	.rodata.writeScratchpad,"a"
- 887              		.align	2
- 890              	writeScratchpad:
- 891 0000 4E       		.byte	78
- 892 0001 00       		.byte	0
- 893 0002 03       		.byte	3
- 894              		.section	.rodata.readScratchpad,"a"
- 895              		.align	2
- 898              	readScratchpad:
- 899 0000 BE       		.byte	-66
- 900 0001 09       		.byte	9
- 901 0002 00       		.byte	0
- 902              		.section	.rodata.skipRom,"a"
- 903              		.align	2
- 906              	skipRom:
- 907 0000 CC       		.byte	-52
- 908 0001 00       		.byte	0
- 909 0002 00       		.byte	0
- 910              		.section	.rodata.readRom,"a"
- 911              		.align	2
- 914              	readRom:
- 915 0000 33       		.byte	51
- 916 0001 08       		.byte	8
- 917 0002 00       		.byte	0
- 918              		.text
- 919              	.Letext0:
- 920              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 921              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 922              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
- 923              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 924              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 925              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
- 926              		.file 8 "Core/Inc/ds18b20.h"
- 927              		.file 9 "Core/Inc/onewire.h"
- 928              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s 			page 24
+ 885              		.align	2
+ 888              	writeScratchpad:
+ 889 0000 4E       		.byte	78
+ 890 0001 00       		.byte	0
+ 891 0002 03       		.byte	3
+ 892              		.section	.rodata.readScratchpad,"a"
+ 893              		.align	2
+ 896              	readScratchpad:
+ 897 0000 BE       		.byte	-66
+ 898 0001 09       		.byte	9
+ 899 0002 00       		.byte	0
+ 900              		.section	.rodata.skipRom,"a"
+ 901              		.align	2
+ 904              	skipRom:
+ 905 0000 CC       		.byte	-52
+ 906 0001 00       		.byte	0
+ 907 0002 00       		.byte	0
+ 908              		.section	.rodata.readRom,"a"
+ 909              		.align	2
+ 912              	readRom:
+ 913 0000 33       		.byte	51
+ 914 0001 08       		.byte	8
+ 915 0002 00       		.byte	0
+ 916              		.text
+ 917              	.Letext0:
+ 918              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 919              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ 920              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 921              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 922              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 923              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 924              		.file 8 "Core/Inc/ds18b20.h"
+ 925              		.file 9 "Core/Inc/onewire.h"
+ 926              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ds18b20.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:21     .text.CalculateChecksum:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:26     .text.CalculateChecksum:00000000 CalculateChecksum
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:119    .text.ExecuteCommand:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:124    .text.ExecuteCommand:00000000 ExecuteCommand
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:270    .text.WaitForConversionFinished:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:275    .text.WaitForConversionFinished:00000000 WaitForConversionFinished
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:319    .text.DS18B20_ConvertT:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:325    .text.DS18B20_ConvertT:00000000 DS18B20_ConvertT
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:434    .text.DS18B20_ReadScratchpad:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:440    .text.DS18B20_ReadScratchpad:00000000 DS18B20_ReadScratchpad
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:606    .text.DS18B20_ReadScratchpad:000000b0 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:611    .text.DS18B20_WriteScratchpad:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:617    .text.DS18B20_WriteScratchpad:00000000 DS18B20_WriteScratchpad
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:671    .text.DS18B20_InitializationCommand:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:677    .text.DS18B20_InitializationCommand:00000000 DS18B20_InitializationCommand
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:737    .text.DS18B20_ReadRom:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:743    .text.DS18B20_ReadRom:00000000 DS18B20_ReadRom
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:811    .text.DS18B20_SkipRom:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:817    .text.DS18B20_SkipRom:00000000 DS18B20_SkipRom
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:848    .text.DS18B20_Init:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:854    .text.DS18B20_Init:00000000 DS18B20_Init
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:879    .rodata.convertT:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:882    .rodata.convertT:00000000 convertT
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:887    .rodata.writeScratchpad:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:890    .rodata.writeScratchpad:00000000 writeScratchpad
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:895    .rodata.readScratchpad:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:898    .rodata.readScratchpad:00000000 readScratchpad
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:903    .rodata.skipRom:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:906    .rodata.skipRom:00000000 skipRom
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:911    .rodata.readRom:00000000 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccH0KxAo.s:914    .rodata.readRom:00000000 readRom
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:21     .text.CalculateChecksum:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:26     .text.CalculateChecksum:00000000 CalculateChecksum
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:117    .text.ExecuteCommand:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:122    .text.ExecuteCommand:00000000 ExecuteCommand
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:268    .text.WaitForConversionFinished:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:273    .text.WaitForConversionFinished:00000000 WaitForConversionFinished
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:317    .text.DS18B20_ConvertT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:323    .text.DS18B20_ConvertT:00000000 DS18B20_ConvertT
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:432    .text.DS18B20_ReadScratchpad:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:438    .text.DS18B20_ReadScratchpad:00000000 DS18B20_ReadScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:604    .text.DS18B20_ReadScratchpad:000000b0 $d
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:609    .text.DS18B20_WriteScratchpad:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:615    .text.DS18B20_WriteScratchpad:00000000 DS18B20_WriteScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:669    .text.DS18B20_InitializationCommand:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:675    .text.DS18B20_InitializationCommand:00000000 DS18B20_InitializationCommand
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:735    .text.DS18B20_ReadRom:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:741    .text.DS18B20_ReadRom:00000000 DS18B20_ReadRom
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:809    .text.DS18B20_SkipRom:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:815    .text.DS18B20_SkipRom:00000000 DS18B20_SkipRom
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:846    .text.DS18B20_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:852    .text.DS18B20_Init:00000000 DS18B20_Init
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:877    .rodata.convertT:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:880    .rodata.convertT:00000000 convertT
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:885    .rodata.writeScratchpad:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:888    .rodata.writeScratchpad:00000000 writeScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:893    .rodata.readScratchpad:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:896    .rodata.readScratchpad:00000000 readScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:901    .rodata.skipRom:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:904    .rodata.skipRom:00000000 skipRom
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:909    .rodata.readRom:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccmAOyjT.s:912    .rodata.readRom:00000000 readRom
 
 UNDEFINED SYMBOLS
 OneWire_ProcessByte

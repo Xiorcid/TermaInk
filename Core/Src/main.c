@@ -32,6 +32,8 @@
 #include "queue.h"
 #include "buttons.h"
 #include "time.h"
+#include "usbd_cdc_if.h"
+#include "USB_storage.h"
 // #include "USB_storage.h"
 /* USER CODE END Includes */
 
@@ -77,9 +79,7 @@ float temp;
 
 //uint8_t *BlackImage;
 // uint16_t Imagesize = ((EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1)) * EPD_HEIGHT;
-uint8_t BlackImage[IMG_SIZE] __attribute__((section(".ram2_bss")));
-
-extern uint8_t *USBDisk_buffer;
+uint8_t BlackImage[IMG_SIZE];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,11 +98,15 @@ void power_on();
 float DS18_GET();
 void DS18_INIT();
 void set_time();
+void get_data(bool goto_sleep);
+void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+bool send_usb;
+bool measure;
+bool initialise_usb_connection;
 /* USER CODE END 0 */
 
 /**
@@ -113,7 +117,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -149,6 +153,8 @@ int main(void)
 
  bool is_RTC_retained = q_load();
 
+ bool old_usb_state = false;
+
   if (is_RTC_retained) {
     shutdown(true);
     power_on();
@@ -162,23 +168,43 @@ int main(void)
   q_push(DS18_GET()*100);
   q_save();
   plot();
+  if(!MX_USB_DEVICE_IsConnected()){
+    shutdown(false);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   { 
-    if(!MX_USB_DEVICE_IsConnected()){
-      shutdown(false);
-      power_on();
-      q_load();
-      q_push(DS18_GET()*100);
-      q_push(DS18_GET()*100);
-      q_push(DS18_GET()*100);
-      q_push(DS18_GET()*100);
-      plot();
-      q_save();
+    if(measure){
+      measure = false;
+      get_data(!send_usb);
+      send_usb = false;
     }
+    
+    if(initialise_usb_connection){
+      initialise_usb_connection = false;
+      power_on();
+
+      uint32_t usbinit_tmr = HAL_GetTick();
+      while(HAL_GetTick()-usbinit_tmr < 5000){
+        if(measure){
+          measure = false;
+          get_data(!send_usb);
+          send_usb = false;
+        }
+        if(MX_USB_DEVICE_IsConnected()){break;}
+      }
+
+      uint32_t sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
+      // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+    }
+
+    if(!MX_USB_DEVICE_IsConnected() && old_usb_state){
+      shutdown(true);
+    }
+    old_usb_state = MX_USB_DEVICE_IsConnected();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -373,7 +399,7 @@ static void MX_RTC_Init(void)
 
   /** Enable the WakeUp
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 30, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
+  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, MEASURMENTS_DELTA_SEC, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -660,7 +686,12 @@ void plot(){
     // EPD_DrawString_EN(10+(i*5), 114, t_buf, &Font8, WHITE, BLACK);
 
     char timest_buf[15];
-    sprintf(timest_buf, "%d", this_time-1740000000);
+    // sprintf(timest_buf, "%d", this_time-1740000000);
+    // EPD_DrawString_EN(10+(i*5), 114, timest_buf, &Font8, WHITE, BLACK);
+
+    uint8_t hours, minutes;
+    timestamp_to_time(this_time, &hours, &minutes);
+    sprintf(timest_buf, "%d:%d", hours, minutes);
     EPD_DrawString_EN(10+(i*5), 114, timest_buf, &Font8, WHITE, BLACK);
   }
 
@@ -736,15 +767,17 @@ void shutdown(bool skipRTC){
 
   HAL_SuspendTick();
   HAL_NVIC_DisableIRQ(SysTick_IRQn); 
-  if(!skipRTC){
-    HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, MEASURMENTS_DELTA_SEC, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+  uint32_t sleep_time = MEASURMENTS_DELTA_SEC;
+  if(skipRTC && ((RTC->CR & RTC_CR_WUTE) != 0)){
+    sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
   }
+  // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
   HAL_PWREx_EnableLowPowerRunMode();
   HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
 }
 
 void power_on(void){
-  HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
+  // HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
   HAL_ResumeTick();
   SystemClock_Config();
   MX_GPIO_Init();
@@ -777,7 +810,7 @@ float DS18_GET(){
 }
 
 void set_time(){
-  bool flag = false; // true ONLY FOR DEBUG!!!
+  bool flag = true; // true ONLY FOR DEBUG!!!
   Button bt_ok = {GPIOA, GPIO_PIN_0, TYPE_LOW_PULL};
   Button bt_down = {GPIOA, GPIO_PIN_8, TYPE_LOW_PULL};
   Button bt_up = {GPIOA, GPIO_PIN_9, TYPE_LOW_PULL};
@@ -869,6 +902,63 @@ void set_time(){
   HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
 }
 
+void get_data(bool goto_sleep){
+  if(goto_sleep){
+    power_on();
+  }else{
+    CDC_Transmit_FS("Hello\n\r", 8);
+  }
+
+  q_load();
+  q_push(DS18_GET()*100);
+  q_push(DS18_GET()*100);
+  q_push(DS18_GET()*100);
+  q_push(DS18_GET()*100);
+  plot();
+  q_save();
+
+  if(goto_sleep){
+    shutdown(false);
+  }else{
+    // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, MEASURMENTS_DELTA_SEC, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+  }
+}
+
+void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes) {
+  uint32_t seconds_in_day = 86400;
+  uint32_t seconds_in_hour = 3600;
+  uint32_t seconds_in_minute = 60;
+
+  // Get seconds since midnight (UTC)
+  uint32_t time_of_day = timestamp % seconds_in_day;
+
+  *hours = time_of_day / seconds_in_hour;
+  *minutes = (time_of_day % seconds_in_hour) / seconds_in_minute;
+}
+
+
+void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
+{
+  CDC_Transmit_FS(Buf, Len);
+}
+
+void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
+  measure = true;
+  send_usb = MX_USB_DEVICE_IsConnected();
+}
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == GPIO_PIN_0) {
+    if(MX_USB_DEVICE_IsConnected()){return;}
+    // uint32_t sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
+    // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+    initialise_usb_connection = true;
+  } else {
+      __NOP();
+  }
+}
 /* USER CODE END 4 */
 
 /**

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
   28:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN TD */
   29:Core/Src/stm32l4xx_it.c **** 
   30:Core/Src/stm32l4xx_it.c **** /* USER CODE END TD */
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 2
 
 
   31:Core/Src/stm32l4xx_it.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
   78:Core/Src/stm32l4xx_it.c ****    while (1)
   36              		.loc 1 78 4 view .LVU1
   79:Core/Src/stm32l4xx_it.c ****   {
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 3
 
 
   80:Core/Src/stm32l4xx_it.c ****   }
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
   98:Core/Src/stm32l4xx_it.c **** 
   99:Core/Src/stm32l4xx_it.c **** /**
  100:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Memory management fault.
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 4
 
 
  101:Core/Src/stm32l4xx_it.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  125:Core/Src/stm32l4xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
  126:Core/Src/stm32l4xx_it.c ****   }
  106              		.loc 1 126 3 view .LVU14
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 5
 
 
  122:Core/Src/stm32l4xx_it.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  146:Core/Src/stm32l4xx_it.c ****   */
  147:Core/Src/stm32l4xx_it.c **** void SVC_Handler(void)
  148:Core/Src/stm32l4xx_it.c **** {
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 6
 
 
  144              		.loc 1 148 1 view -0
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  169:Core/Src/stm32l4xx_it.c **** 
  170:Core/Src/stm32l4xx_it.c **** /**
  171:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Pendable request for system service.
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 7
 
 
  172:Core/Src/stm32l4xx_it.c ****   */
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  214              		.cfi_endproc
  215              	.LFE327:
  217              		.section	.text.RTC_WKUP_IRQHandler,"ax",%progbits
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 8
 
 
  218              		.align	1
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  254              	EXTI0_IRQHandler:
  255              	.LFB329:
  217:Core/Src/stm32l4xx_it.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 9
 
 
  218:Core/Src/stm32l4xx_it.c **** /**
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  240:Core/Src/stm32l4xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
  290              		.loc 1 240 3 view .LVU36
  291 0002 0248     		ldr	r0, .L24
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 10
 
 
  292 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  330              		.cfi_endproc
  331              	.LFE331:
  333              		.section	.text.USB_IRQHandler,"ax",%progbits
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 11
 
 
  334              		.align	1
@@ -644,8 +644,8 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  361              	.LFE332:
  363              		.text
  364              	.Letext0:
- 365              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 366              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 365              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 366              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  367              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
  368              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
  369              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
@@ -657,43 +657,43 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 1
  375              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
  376              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h"
  377              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_it.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:21     .text.NMI_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:27     .text.NMI_Handler:00000000 NMI_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:44     .text.HardFault_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:67     .text.MemManage_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:90     .text.BusFault_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:113    .text.UsageFault_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:136    .text.SVC_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:142    .text.SVC_Handler:00000000 SVC_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:155    .text.DebugMon_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:174    .text.PendSV_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:193    .text.SysTick_Handler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:218    .text.RTC_WKUP_IRQHandler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:224    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:243    .text.RTC_WKUP_IRQHandler:0000000c $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:248    .text.EXTI0_IRQHandler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:254    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:274    .text.DMA1_Channel1_IRQHandler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:280    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:299    .text.DMA1_Channel1_IRQHandler:0000000c $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:304    .text.ADC1_2_IRQHandler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:310    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:329    .text.ADC1_2_IRQHandler:0000000c $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:334    .text.USB_IRQHandler:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:340    .text.USB_IRQHandler:00000000 USB_IRQHandler
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccCFNlwm.s:359    .text.USB_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:21     .text.NMI_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:27     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:44     .text.HardFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:67     .text.MemManage_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:90     .text.BusFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:113    .text.UsageFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:136    .text.SVC_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:142    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:155    .text.DebugMon_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:174    .text.PendSV_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:193    .text.SysTick_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:218    .text.RTC_WKUP_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:224    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:243    .text.RTC_WKUP_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:248    .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:254    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:274    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:280    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:299    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:304    .text.ADC1_2_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:310    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:329    .text.ADC1_2_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:334    .text.USB_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:340    .text.USB_IRQHandler:00000000 USB_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:359    .text.USB_IRQHandler:0000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick

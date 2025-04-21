@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
   52              	.LVL1:
   53              	.LFB320:
    7:Core/Src/buttons.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 2
 
 
    8:Core/Src/buttons.c **** bool tick(Button *btt){
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
   97              		.loc 1 18 8 is_stmt 0 view .LVU17
   98 0022 AF42     		cmp	r7, r5
   99 0024 17D0     		beq	.L9
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 3
 
 
  100              	.L5:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
  133              		.loc 1 14 11 view .LVU32
  134 0044 0BB9     		cbnz	r3, .L4
   14:Core/Src/buttons.c ****         btt->btn_hold = false;
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 4
 
 
  135              		.loc 1 14 28 is_stmt 1 discriminator 1 view .LVU33
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
  173 006c FFF7FEFF 		bl	HAL_GetTick
  174              	.LVL10:
   20:Core/Src/buttons.c ****         btt->btn_hold_timer = HAL_GetTick();
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 5
 
 
  175              		.loc 1 20 24 discriminator 1 view .LVU50
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
  216              		.global	isClicked
  217              		.syntax unified
  218              		.thumb
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 6
 
 
  219              		.thumb_func
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
  263              		@ args = 0, pretend = 0, frame = 0
  264              		@ frame_needed = 0, uses_anonymous_args = 0
  265              		@ link register save eliminated.
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 7
 
 
   40:Core/Src/buttons.c ****     if(btt->btn_hold){
@@ -375,25 +375,25 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 1
  273              	.LFE322:
  275              		.text
  276              	.Letext0:
- 277              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 278              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 277              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 278              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  279              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
  280              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
  281              		.file 6 "Core/Inc/buttons.h"
  282              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 buttons.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:21     .text.init:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:27     .text.init:00000000 init
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:45     .text.tick:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:51     .text.tick:00000000 tick
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:215    .text.isClicked:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:221    .text.isClicked:00000000 isClicked
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:252    .text.isHold:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccga3aus.s:258    .text.isHold:00000000 isHold
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:21     .text.init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:27     .text.init:00000000 init
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:45     .text.tick:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:51     .text.tick:00000000 tick
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:215    .text.isClicked:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:221    .text.isClicked:00000000 isClicked
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:252    .text.isHold:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGCcRGM.s:258    .text.isHold:00000000 isHold
 
 UNDEFINED SYMBOLS
 HAL_GPIO_ReadPin

@@ -1,0 +1,491 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_gpio.c"
+  16              		.text
+  17              		.section	.text.HAL_GPIO_Init,"ax",%progbits
+  18              		.align	1
+  19              		.global	HAL_GPIO_Init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	HAL_GPIO_Init:
+  25              		@ args = 0, pretend = 0, frame = 8
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  28 0002 83B0     		sub	sp, sp, #12
+  29 0004 0023     		movs	r3, #0
+  30 0006 62E0     		b	.L2
+  31              	.L19:
+  32 0008 8568     		ldr	r5, [r0, #8]
+  33 000a 5E00     		lsls	r6, r3, #1
+  34 000c 0324     		movs	r4, #3
+  35 000e B440     		lsls	r4, r4, r6
+  36 0010 25EA0405 		bic	r5, r5, r4
+  37 0014 CC68     		ldr	r4, [r1, #12]
+  38 0016 B440     		lsls	r4, r4, r6
+  39 0018 2C43     		orrs	r4, r4, r5
+  40 001a 8460     		str	r4, [r0, #8]
+  41 001c 4568     		ldr	r5, [r0, #4]
+  42 001e 25EA0C05 		bic	r5, r5, ip
+  43 0022 4C68     		ldr	r4, [r1, #4]
+  44 0024 C4F30014 		ubfx	r4, r4, #4, #1
+  45 0028 9C40     		lsls	r4, r4, r3
+  46 002a 2C43     		orrs	r4, r4, r5
+  47 002c 4460     		str	r4, [r0, #4]
+  48 002e 5FE0     		b	.L4
+  49              	.L20:
+  50 0030 DD08     		lsrs	r5, r3, #3
+  51 0032 0835     		adds	r5, r5, #8
+  52 0034 50F82540 		ldr	r4, [r0, r5, lsl #2]
+  53 0038 03F0070C 		and	ip, r3, #7
+  54 003c 4FEA8C0C 		lsl	ip, ip, #2
+  55 0040 4FF00F0E 		mov	lr, #15
+  56 0044 0EFA0CFE 		lsl	lr, lr, ip
+  57 0048 24EA0E0E 		bic	lr, r4, lr
+  58 004c 0C69     		ldr	r4, [r1, #16]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 2
+
+
+  59 004e 04FA0CF4 		lsl	r4, r4, ip
+  60 0052 44EA0E04 		orr	r4, r4, lr
+  61 0056 40F82540 		str	r4, [r0, r5, lsl #2]
+  62 005a 60E0     		b	.L6
+  63              	.L21:
+  64 005c 0324     		movs	r4, #3
+  65 005e 00E0     		b	.L7
+  66              	.L13:
+  67 0060 0024     		movs	r4, #0
+  68              	.L7:
+  69 0062 04FA0EF4 		lsl	r4, r4, lr
+  70 0066 2C43     		orrs	r4, r4, r5
+  71 0068 0CF1020C 		add	ip, ip, #2
+  72 006c 4F4D     		ldr	r5, .L22
+  73 006e 45F82C40 		str	r4, [r5, ip, lsl #2]
+  74 0072 4F4C     		ldr	r4, .L22+4
+  75 0074 A568     		ldr	r5, [r4, #8]
+  76 0076 D443     		mvns	r4, r2
+  77 0078 25EA0206 		bic	r6, r5, r2
+  78 007c 4F68     		ldr	r7, [r1, #4]
+  79 007e 17F4801F 		tst	r7, #1048576
+  80 0082 01D0     		beq	.L8
+  81 0084 42EA0506 		orr	r6, r2, r5
+  82              	.L8:
+  83 0088 494D     		ldr	r5, .L22+4
+  84 008a AE60     		str	r6, [r5, #8]
+  85 008c ED68     		ldr	r5, [r5, #12]
+  86 008e 04EA0506 		and	r6, r4, r5
+  87 0092 4F68     		ldr	r7, [r1, #4]
+  88 0094 17F4001F 		tst	r7, #2097152
+  89 0098 01D0     		beq	.L9
+  90 009a 42EA0506 		orr	r6, r2, r5
+  91              	.L9:
+  92 009e 444D     		ldr	r5, .L22+4
+  93 00a0 EE60     		str	r6, [r5, #12]
+  94 00a2 6D68     		ldr	r5, [r5, #4]
+  95 00a4 04EA0506 		and	r6, r4, r5
+  96 00a8 4F68     		ldr	r7, [r1, #4]
+  97 00aa 17F4003F 		tst	r7, #131072
+  98 00ae 01D0     		beq	.L10
+  99 00b0 42EA0506 		orr	r6, r2, r5
+ 100              	.L10:
+ 101 00b4 3E4D     		ldr	r5, .L22+4
+ 102 00b6 6E60     		str	r6, [r5, #4]
+ 103 00b8 2D68     		ldr	r5, [r5]
+ 104 00ba 2C40     		ands	r4, r4, r5
+ 105 00bc 4E68     		ldr	r6, [r1, #4]
+ 106 00be 16F4803F 		tst	r6, #65536
+ 107 00c2 01D0     		beq	.L11
+ 108 00c4 42EA0504 		orr	r4, r2, r5
+ 109              	.L11:
+ 110 00c8 394A     		ldr	r2, .L22+4
+ 111 00ca 1460     		str	r4, [r2]
+ 112              	.L3:
+ 113 00cc 0133     		adds	r3, r3, #1
+ 114              	.L2:
+ 115 00ce 0A68     		ldr	r2, [r1]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 3
+
+
+ 116 00d0 32FA03F4 		lsrs	r4, r2, r3
+ 117 00d4 68D0     		beq	.L18
+ 118 00d6 4FF0010C 		mov	ip, #1
+ 119 00da 0CFA03FC 		lsl	ip, ip, r3
+ 120 00de 1CEA0202 		ands	r2, ip, r2
+ 121 00e2 F3D0     		beq	.L3
+ 122 00e4 4C68     		ldr	r4, [r1, #4]
+ 123 00e6 04F00304 		and	r4, r4, #3
+ 124 00ea 013C     		subs	r4, r4, #1
+ 125 00ec 012C     		cmp	r4, #1
+ 126 00ee 8BD9     		bls	.L19
+ 127              	.L4:
+ 128 00f0 4C68     		ldr	r4, [r1, #4]
+ 129 00f2 04F00304 		and	r4, r4, #3
+ 130 00f6 032C     		cmp	r4, #3
+ 131 00f8 0CD0     		beq	.L5
+ 132 00fa C468     		ldr	r4, [r0, #12]
+ 133 00fc 5D00     		lsls	r5, r3, #1
+ 134 00fe 4FF0030C 		mov	ip, #3
+ 135 0102 0CFA05FC 		lsl	ip, ip, r5
+ 136 0106 24EA0C0C 		bic	ip, r4, ip
+ 137 010a 8C68     		ldr	r4, [r1, #8]
+ 138 010c AC40     		lsls	r4, r4, r5
+ 139 010e 44EA0C04 		orr	r4, r4, ip
+ 140 0112 C460     		str	r4, [r0, #12]
+ 141              	.L5:
+ 142 0114 4C68     		ldr	r4, [r1, #4]
+ 143 0116 04F00304 		and	r4, r4, #3
+ 144 011a 022C     		cmp	r4, #2
+ 145 011c 88D0     		beq	.L20
+ 146              	.L6:
+ 147 011e 0468     		ldr	r4, [r0]
+ 148 0120 4FEA430E 		lsl	lr, r3, #1
+ 149 0124 4FF0030C 		mov	ip, #3
+ 150 0128 0CFA0EFC 		lsl	ip, ip, lr
+ 151 012c 24EA0C0C 		bic	ip, r4, ip
+ 152 0130 4C68     		ldr	r4, [r1, #4]
+ 153 0132 04F00304 		and	r4, r4, #3
+ 154 0136 04FA0EF4 		lsl	r4, r4, lr
+ 155 013a 44EA0C04 		orr	r4, r4, ip
+ 156 013e 0460     		str	r4, [r0]
+ 157 0140 4C68     		ldr	r4, [r1, #4]
+ 158 0142 14F4403F 		tst	r4, #196608
+ 159 0146 C1D0     		beq	.L3
+ 160 0148 1A4C     		ldr	r4, .L22+8
+ 161 014a 256E     		ldr	r5, [r4, #96]
+ 162 014c 45F00105 		orr	r5, r5, #1
+ 163 0150 2566     		str	r5, [r4, #96]
+ 164 0152 246E     		ldr	r4, [r4, #96]
+ 165 0154 04F00104 		and	r4, r4, #1
+ 166 0158 0194     		str	r4, [sp, #4]
+ 167 015a 019C     		ldr	r4, [sp, #4]
+ 168 015c 4FEA930C 		lsr	ip, r3, #2
+ 169 0160 0CF10205 		add	r5, ip, #2
+ 170 0164 114C     		ldr	r4, .L22
+ 171 0166 54F82550 		ldr	r5, [r4, r5, lsl #2]
+ 172 016a 03F0030E 		and	lr, r3, #3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 4
+
+
+ 173 016e 4FEA8E0E 		lsl	lr, lr, #2
+ 174 0172 0F24     		movs	r4, #15
+ 175 0174 04FA0EF4 		lsl	r4, r4, lr
+ 176 0178 25EA0405 		bic	r5, r5, r4
+ 177 017c B0F1904F 		cmp	r0, #1207959552
+ 178 0180 3FF46EAF 		beq	.L13
+ 179 0184 0C4C     		ldr	r4, .L22+12
+ 180 0186 A042     		cmp	r0, r4
+ 181 0188 0AD0     		beq	.L14
+ 182 018a 04F58064 		add	r4, r4, #1024
+ 183 018e A042     		cmp	r0, r4
+ 184 0190 08D0     		beq	.L15
+ 185 0192 04F58064 		add	r4, r4, #1024
+ 186 0196 A042     		cmp	r0, r4
+ 187 0198 3FF460AF 		beq	.L21
+ 188 019c 0724     		movs	r4, #7
+ 189 019e 60E7     		b	.L7
+ 190              	.L14:
+ 191 01a0 0124     		movs	r4, #1
+ 192 01a2 5EE7     		b	.L7
+ 193              	.L15:
+ 194 01a4 0224     		movs	r4, #2
+ 195 01a6 5CE7     		b	.L7
+ 196              	.L18:
+ 197 01a8 03B0     		add	sp, sp, #12
+ 198              		@ sp needed
+ 199 01aa F0BD     		pop	{r4, r5, r6, r7, pc}
+ 200              	.L23:
+ 201              		.align	2
+ 202              	.L22:
+ 203 01ac 00000140 		.word	1073807360
+ 204 01b0 00040140 		.word	1073808384
+ 205 01b4 00100240 		.word	1073876992
+ 206 01b8 00040048 		.word	1207960576
+ 208              		.section	.text.HAL_GPIO_DeInit,"ax",%progbits
+ 209              		.align	1
+ 210              		.global	HAL_GPIO_DeInit
+ 211              		.syntax unified
+ 212              		.thumb
+ 213              		.thumb_func
+ 215              	HAL_GPIO_DeInit:
+ 216              		@ args = 0, pretend = 0, frame = 0
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218 0000 0023     		movs	r3, #0
+ 219 0002 31FA03F2 		lsrs	r2, r1, r3
+ 220 0006 74D0     		beq	.L37
+ 221 0008 F0B5     		push	{r4, r5, r6, r7, lr}
+ 222 000a 2EE0     		b	.L29
+ 223              	.L40:
+ 224 000c 0325     		movs	r5, #3
+ 225 000e 00E0     		b	.L27
+ 226              	.L30:
+ 227 0010 0025     		movs	r5, #0
+ 228              	.L27:
+ 229 0012 05FA0CF5 		lsl	r5, r5, ip
+ 230 0016 A542     		cmp	r5, r4
+ 231 0018 4FD0     		beq	.L38
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 5
+
+
+ 232              	.L28:
+ 233 001a 0468     		ldr	r4, [r0]
+ 234 001c 5D00     		lsls	r5, r3, #1
+ 235 001e 4FF0030C 		mov	ip, #3
+ 236 0022 0CFA05FC 		lsl	ip, ip, r5
+ 237 0026 44EA0C04 		orr	r4, r4, ip
+ 238 002a 0460     		str	r4, [r0]
+ 239 002c 4FEAD30E 		lsr	lr, r3, #3
+ 240 0030 0EF1080E 		add	lr, lr, #8
+ 241 0034 50F82E40 		ldr	r4, [r0, lr, lsl #2]
+ 242 0038 03F00706 		and	r6, r3, #7
+ 243 003c B600     		lsls	r6, r6, #2
+ 244 003e 0F25     		movs	r5, #15
+ 245 0040 B540     		lsls	r5, r5, r6
+ 246 0042 24EA0504 		bic	r4, r4, r5
+ 247 0046 40F82E40 		str	r4, [r0, lr, lsl #2]
+ 248 004a 8468     		ldr	r4, [r0, #8]
+ 249 004c 24EA0C04 		bic	r4, r4, ip
+ 250 0050 8460     		str	r4, [r0, #8]
+ 251 0052 4468     		ldr	r4, [r0, #4]
+ 252 0054 24EA0202 		bic	r2, r4, r2
+ 253 0058 4260     		str	r2, [r0, #4]
+ 254 005a C268     		ldr	r2, [r0, #12]
+ 255 005c 22EA0C02 		bic	r2, r2, ip
+ 256 0060 C260     		str	r2, [r0, #12]
+ 257              	.L26:
+ 258 0062 0133     		adds	r3, r3, #1
+ 259 0064 31FA03F2 		lsrs	r2, r1, r3
+ 260 0068 42D0     		beq	.L39
+ 261              	.L29:
+ 262 006a 0122     		movs	r2, #1
+ 263 006c 9A40     		lsls	r2, r2, r3
+ 264 006e 12EA0107 		ands	r7, r2, r1
+ 265 0072 F6D0     		beq	.L26
+ 266 0074 4FEA930E 		lsr	lr, r3, #2
+ 267 0078 0EF10205 		add	r5, lr, #2
+ 268 007c 1D4C     		ldr	r4, .L41
+ 269 007e 54F82540 		ldr	r4, [r4, r5, lsl #2]
+ 270 0082 03F0030C 		and	ip, r3, #3
+ 271 0086 4FEA8C0C 		lsl	ip, ip, #2
+ 272 008a 0F25     		movs	r5, #15
+ 273 008c 05FA0CF6 		lsl	r6, r5, ip
+ 274 0090 3440     		ands	r4, r4, r6
+ 275 0092 B0F1904F 		cmp	r0, #1207959552
+ 276 0096 BBD0     		beq	.L30
+ 277 0098 174D     		ldr	r5, .L41+4
+ 278 009a A842     		cmp	r0, r5
+ 279 009c 09D0     		beq	.L31
+ 280 009e 05F58065 		add	r5, r5, #1024
+ 281 00a2 A842     		cmp	r0, r5
+ 282 00a4 07D0     		beq	.L32
+ 283 00a6 05F58065 		add	r5, r5, #1024
+ 284 00aa A842     		cmp	r0, r5
+ 285 00ac AED0     		beq	.L40
+ 286 00ae 0725     		movs	r5, #7
+ 287 00b0 AFE7     		b	.L27
+ 288              	.L31:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 6
+
+
+ 289 00b2 0125     		movs	r5, #1
+ 290 00b4 ADE7     		b	.L27
+ 291              	.L32:
+ 292 00b6 0225     		movs	r5, #2
+ 293 00b8 ABE7     		b	.L27
+ 294              	.L38:
+ 295 00ba 104C     		ldr	r4, .L41+8
+ 296 00bc 2568     		ldr	r5, [r4]
+ 297 00be 25EA0705 		bic	r5, r5, r7
+ 298 00c2 2560     		str	r5, [r4]
+ 299 00c4 6568     		ldr	r5, [r4, #4]
+ 300 00c6 25EA0705 		bic	r5, r5, r7
+ 301 00ca 6560     		str	r5, [r4, #4]
+ 302 00cc E568     		ldr	r5, [r4, #12]
+ 303 00ce 25EA0705 		bic	r5, r5, r7
+ 304 00d2 E560     		str	r5, [r4, #12]
+ 305 00d4 A568     		ldr	r5, [r4, #8]
+ 306 00d6 25EA0705 		bic	r5, r5, r7
+ 307 00da A560     		str	r5, [r4, #8]
+ 308 00dc 054F     		ldr	r7, .L41
+ 309 00de 0EF10204 		add	r4, lr, #2
+ 310 00e2 57F82450 		ldr	r5, [r7, r4, lsl #2]
+ 311 00e6 25EA0605 		bic	r5, r5, r6
+ 312 00ea 47F82450 		str	r5, [r7, r4, lsl #2]
+ 313 00ee 94E7     		b	.L28
+ 314              	.L39:
+ 315 00f0 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 316              	.L37:
+ 317 00f2 7047     		bx	lr
+ 318              	.L42:
+ 319              		.align	2
+ 320              	.L41:
+ 321 00f4 00000140 		.word	1073807360
+ 322 00f8 00040048 		.word	1207960576
+ 323 00fc 00040140 		.word	1073808384
+ 325              		.section	.text.HAL_GPIO_ReadPin,"ax",%progbits
+ 326              		.align	1
+ 327              		.global	HAL_GPIO_ReadPin
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 332              	HAL_GPIO_ReadPin:
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335              		@ link register save eliminated.
+ 336 0000 0369     		ldr	r3, [r0, #16]
+ 337 0002 1942     		tst	r1, r3
+ 338 0004 01D0     		beq	.L45
+ 339 0006 0120     		movs	r0, #1
+ 340 0008 7047     		bx	lr
+ 341              	.L45:
+ 342 000a 0020     		movs	r0, #0
+ 343 000c 7047     		bx	lr
+ 345              		.section	.text.HAL_GPIO_WritePin,"ax",%progbits
+ 346              		.align	1
+ 347              		.global	HAL_GPIO_WritePin
+ 348              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 7
+
+
+ 349              		.thumb
+ 350              		.thumb_func
+ 352              	HAL_GPIO_WritePin:
+ 353              		@ args = 0, pretend = 0, frame = 0
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355              		@ link register save eliminated.
+ 356 0000 0AB1     		cbz	r2, .L47
+ 357 0002 8161     		str	r1, [r0, #24]
+ 358 0004 7047     		bx	lr
+ 359              	.L47:
+ 360 0006 8162     		str	r1, [r0, #40]
+ 361 0008 7047     		bx	lr
+ 363              		.section	.text.HAL_GPIO_TogglePin,"ax",%progbits
+ 364              		.align	1
+ 365              		.global	HAL_GPIO_TogglePin
+ 366              		.syntax unified
+ 367              		.thumb
+ 368              		.thumb_func
+ 370              	HAL_GPIO_TogglePin:
+ 371              		@ args = 0, pretend = 0, frame = 0
+ 372              		@ frame_needed = 0, uses_anonymous_args = 0
+ 373              		@ link register save eliminated.
+ 374 0000 4369     		ldr	r3, [r0, #20]
+ 375 0002 01EA0302 		and	r2, r1, r3
+ 376 0006 21EA0301 		bic	r1, r1, r3
+ 377 000a 41EA0241 		orr	r1, r1, r2, lsl #16
+ 378 000e 8161     		str	r1, [r0, #24]
+ 379 0010 7047     		bx	lr
+ 381              		.section	.text.HAL_GPIO_LockPin,"ax",%progbits
+ 382              		.align	1
+ 383              		.global	HAL_GPIO_LockPin
+ 384              		.syntax unified
+ 385              		.thumb
+ 386              		.thumb_func
+ 388              	HAL_GPIO_LockPin:
+ 389              		@ args = 0, pretend = 0, frame = 8
+ 390              		@ frame_needed = 0, uses_anonymous_args = 0
+ 391              		@ link register save eliminated.
+ 392 0000 82B0     		sub	sp, sp, #8
+ 393 0002 4FF48033 		mov	r3, #65536
+ 394 0006 0193     		str	r3, [sp, #4]
+ 395 0008 019B     		ldr	r3, [sp, #4]
+ 396 000a 0B43     		orrs	r3, r3, r1
+ 397 000c 0193     		str	r3, [sp, #4]
+ 398 000e 019B     		ldr	r3, [sp, #4]
+ 399 0010 C361     		str	r3, [r0, #28]
+ 400 0012 C161     		str	r1, [r0, #28]
+ 401 0014 019B     		ldr	r3, [sp, #4]
+ 402 0016 C361     		str	r3, [r0, #28]
+ 403 0018 C369     		ldr	r3, [r0, #28]
+ 404 001a 0193     		str	r3, [sp, #4]
+ 405 001c C369     		ldr	r3, [r0, #28]
+ 406 001e 13F4803F 		tst	r3, #65536
+ 407 0022 02D0     		beq	.L52
+ 408 0024 0020     		movs	r0, #0
+ 409              	.L51:
+ 410 0026 02B0     		add	sp, sp, #8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 8
+
+
+ 411              		@ sp needed
+ 412 0028 7047     		bx	lr
+ 413              	.L52:
+ 414 002a 0120     		movs	r0, #1
+ 415 002c FBE7     		b	.L51
+ 417              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 418              		.align	1
+ 419              		.weak	HAL_GPIO_EXTI_Callback
+ 420              		.syntax unified
+ 421              		.thumb
+ 422              		.thumb_func
+ 424              	HAL_GPIO_EXTI_Callback:
+ 425              		@ args = 0, pretend = 0, frame = 0
+ 426              		@ frame_needed = 0, uses_anonymous_args = 0
+ 427              		@ link register save eliminated.
+ 428 0000 7047     		bx	lr
+ 430              		.section	.text.HAL_GPIO_EXTI_IRQHandler,"ax",%progbits
+ 431              		.align	1
+ 432              		.global	HAL_GPIO_EXTI_IRQHandler
+ 433              		.syntax unified
+ 434              		.thumb
+ 435              		.thumb_func
+ 437              	HAL_GPIO_EXTI_IRQHandler:
+ 438              		@ args = 0, pretend = 0, frame = 0
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ 440 0000 08B5     		push	{r3, lr}
+ 441 0002 054B     		ldr	r3, .L59
+ 442 0004 5B69     		ldr	r3, [r3, #20]
+ 443 0006 0342     		tst	r3, r0
+ 444 0008 00D1     		bne	.L58
+ 445              	.L55:
+ 446 000a 08BD     		pop	{r3, pc}
+ 447              	.L58:
+ 448 000c 024B     		ldr	r3, .L59
+ 449 000e 5861     		str	r0, [r3, #20]
+ 450 0010 FFF7FEFF 		bl	HAL_GPIO_EXTI_Callback
+ 451 0014 F9E7     		b	.L55
+ 452              	.L60:
+ 453 0016 00BF     		.align	2
+ 454              	.L59:
+ 455 0018 00040140 		.word	1073808384
+ 457              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_gpio.c
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:18     .text.HAL_GPIO_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:24     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:203    .text.HAL_GPIO_Init:000001ac $d
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:209    .text.HAL_GPIO_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:215    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:321    .text.HAL_GPIO_DeInit:000000f4 $d
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:326    .text.HAL_GPIO_ReadPin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:332    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:346    .text.HAL_GPIO_WritePin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:352    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:364    .text.HAL_GPIO_TogglePin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:370    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:382    .text.HAL_GPIO_LockPin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:388    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:418    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:424    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:431    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:437    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:455    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
+
+NO UNDEFINED SYMBOLS

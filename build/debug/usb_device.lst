@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 1
   28:USB_DEVICE/App/usb_device.c **** 
   29:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN Includes */
   30:USB_DEVICE/App/usb_device.c **** #include "stdbool.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 2
 
 
   31:USB_DEVICE/App/usb_device.c **** /* USER CODE END Includes */
@@ -99,33 +99,32 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 1
   61:USB_DEVICE/App/usb_device.c ****     return (hUsbDeviceFS.dev_state == USBD_STATE_CONFIGURED);
   34              		.loc 1 61 5 view .LVU1
   35              		.loc 1 61 25 is_stmt 0 view .LVU2
-  36 0000 044B     		ldr	r3, .L2
+  36 0000 034B     		ldr	r3, .L2
   37 0002 93F89C02 		ldrb	r0, [r3, #668]	@ zero_extendqisi2
-  38 0006 C0B2     		uxtb	r0, r0
   62:USB_DEVICE/App/usb_device.c **** }
-  39              		.loc 1 62 1 view .LVU3
-  40 0008 0328     		cmp	r0, #3
-  41 000a 14BF     		ite	ne
-  42 000c 0020     		movne	r0, #0
-  43 000e 0120     		moveq	r0, #1
-  44 0010 7047     		bx	lr
-  45              	.L3:
-  46 0012 00BF     		.align	2
-  47              	.L2:
-  48 0014 00000000 		.word	hUsbDeviceFS
-  49              		.cfi_endproc
-  50              	.LFE323:
-  52              		.section	.text.MX_USB_DEVICE_Init,"ax",%progbits
-  53              		.align	1
-  54              		.global	MX_USB_DEVICE_Init
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 3
+  38              		.loc 1 62 1 view .LVU3
+  39 0006 0328     		cmp	r0, #3
+  40 0008 14BF     		ite	ne
+  41 000a 0020     		movne	r0, #0
+  42 000c 0120     		moveq	r0, #1
+  43 000e 7047     		bx	lr
+  44              	.L3:
+  45              		.align	2
+  46              	.L2:
+  47 0010 00000000 		.word	hUsbDeviceFS
+  48              		.cfi_endproc
+  49              	.LFE323:
+  51              		.section	.text.MX_USB_DEVICE_Init,"ax",%progbits
+  52              		.align	1
+  53              		.global	MX_USB_DEVICE_Init
+  54              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 3
 
 
-  55              		.syntax unified
-  56              		.thumb
-  57              		.thumb_func
-  59              	MX_USB_DEVICE_Init:
-  60              	.LFB324:
+  55              		.thumb
+  56              		.thumb_func
+  58              	MX_USB_DEVICE_Init:
+  59              	.LFB324:
   63:USB_DEVICE/App/usb_device.c **** /* USER CODE END 1 */
   64:USB_DEVICE/App/usb_device.c **** 
   65:USB_DEVICE/App/usb_device.c **** /**
@@ -134,71 +133,71 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 1
   68:USB_DEVICE/App/usb_device.c ****   */
   69:USB_DEVICE/App/usb_device.c **** void MX_USB_DEVICE_Init(void)
   70:USB_DEVICE/App/usb_device.c **** {
-  61              		.loc 1 70 1 is_stmt 1 view -0
-  62              		.cfi_startproc
-  63              		@ args = 0, pretend = 0, frame = 0
-  64              		@ frame_needed = 0, uses_anonymous_args = 0
-  65 0000 08B5     		push	{r3, lr}
-  66              		.cfi_def_cfa_offset 8
-  67              		.cfi_offset 3, -8
-  68              		.cfi_offset 14, -4
+  60              		.loc 1 70 1 is_stmt 1 view -0
+  61              		.cfi_startproc
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64 0000 08B5     		push	{r3, lr}
+  65              		.cfi_def_cfa_offset 8
+  66              		.cfi_offset 3, -8
+  67              		.cfi_offset 14, -4
   71:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
   72:USB_DEVICE/App/usb_device.c **** 
   73:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PreTreatment */
   74:USB_DEVICE/App/usb_device.c **** 
   75:USB_DEVICE/App/usb_device.c ****   /* Init Device Library, add supported class and start the library. */
   76:USB_DEVICE/App/usb_device.c ****   if (USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
-  69              		.loc 1 76 3 view .LVU5
-  70              		.loc 1 76 7 is_stmt 0 view .LVU6
-  71 0002 0022     		movs	r2, #0
-  72 0004 0F49     		ldr	r1, .L14
-  73 0006 1048     		ldr	r0, .L14+4
-  74 0008 FFF7FEFF 		bl	USBD_Init
-  75              	.LVL0:
-  76              		.loc 1 76 6 discriminator 1 view .LVU7
-  77 000c 70B9     		cbnz	r0, .L10
-  78              	.L5:
+  68              		.loc 1 76 3 view .LVU5
+  69              		.loc 1 76 7 is_stmt 0 view .LVU6
+  70 0002 0022     		movs	r2, #0
+  71 0004 0F49     		ldr	r1, .L14
+  72 0006 1048     		ldr	r0, .L14+4
+  73 0008 FFF7FEFF 		bl	USBD_Init
+  74              	.LVL0:
+  75              		.loc 1 76 6 discriminator 1 view .LVU7
+  76 000c 70B9     		cbnz	r0, .L10
+  77              	.L5:
   77:USB_DEVICE/App/usb_device.c ****   {
   78:USB_DEVICE/App/usb_device.c ****     Error_Handler();
   79:USB_DEVICE/App/usb_device.c ****   }
   80:USB_DEVICE/App/usb_device.c ****   if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_CDC) != USBD_OK)
-  79              		.loc 1 80 3 is_stmt 1 view .LVU8
-  80              		.loc 1 80 7 is_stmt 0 view .LVU9
-  81 000e 0F49     		ldr	r1, .L14+8
-  82 0010 0D48     		ldr	r0, .L14+4
-  83 0012 FFF7FEFF 		bl	USBD_RegisterClass
-  84              	.LVL1:
-  85              		.loc 1 80 6 discriminator 1 view .LVU10
-  86 0016 60B9     		cbnz	r0, .L11
-  87              	.L6:
+  78              		.loc 1 80 3 is_stmt 1 view .LVU8
+  79              		.loc 1 80 7 is_stmt 0 view .LVU9
+  80 000e 0F49     		ldr	r1, .L14+8
+  81 0010 0D48     		ldr	r0, .L14+4
+  82 0012 FFF7FEFF 		bl	USBD_RegisterClass
+  83              	.LVL1:
+  84              		.loc 1 80 6 discriminator 1 view .LVU10
+  85 0016 60B9     		cbnz	r0, .L11
+  86              	.L6:
   81:USB_DEVICE/App/usb_device.c ****   {
   82:USB_DEVICE/App/usb_device.c ****     Error_Handler();
   83:USB_DEVICE/App/usb_device.c ****   }
   84:USB_DEVICE/App/usb_device.c ****   if (USBD_CDC_RegisterInterface(&hUsbDeviceFS, &USBD_Interface_fops_FS) != USBD_OK)
-  88              		.loc 1 84 3 is_stmt 1 view .LVU11
-  89              		.loc 1 84 7 is_stmt 0 view .LVU12
-  90 0018 0D49     		ldr	r1, .L14+12
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 4
+  87              		.loc 1 84 3 is_stmt 1 view .LVU11
+  88              		.loc 1 84 7 is_stmt 0 view .LVU12
+  89 0018 0D49     		ldr	r1, .L14+12
+  90 001a 0B48     		ldr	r0, .L14+4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 4
 
 
-  91 001a 0B48     		ldr	r0, .L14+4
-  92 001c FFF7FEFF 		bl	USBD_CDC_RegisterInterface
-  93              	.LVL2:
-  94              		.loc 1 84 6 discriminator 1 view .LVU13
-  95 0020 50B9     		cbnz	r0, .L12
-  96              	.L7:
+  91 001c FFF7FEFF 		bl	USBD_CDC_RegisterInterface
+  92              	.LVL2:
+  93              		.loc 1 84 6 discriminator 1 view .LVU13
+  94 0020 50B9     		cbnz	r0, .L12
+  95              	.L7:
   85:USB_DEVICE/App/usb_device.c ****   {
   86:USB_DEVICE/App/usb_device.c ****     Error_Handler();
   87:USB_DEVICE/App/usb_device.c ****   }
   88:USB_DEVICE/App/usb_device.c ****   if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
-  97              		.loc 1 88 3 is_stmt 1 view .LVU14
-  98              		.loc 1 88 7 is_stmt 0 view .LVU15
-  99 0022 0948     		ldr	r0, .L14+4
- 100 0024 FFF7FEFF 		bl	USBD_Start
- 101              	.LVL3:
- 102              		.loc 1 88 6 discriminator 1 view .LVU16
- 103 0028 48B9     		cbnz	r0, .L13
- 104              	.L4:
+  96              		.loc 1 88 3 is_stmt 1 view .LVU14
+  97              		.loc 1 88 7 is_stmt 0 view .LVU15
+  98 0022 0948     		ldr	r0, .L14+4
+  99 0024 FFF7FEFF 		bl	USBD_Start
+ 100              	.LVL3:
+ 101              		.loc 1 88 6 discriminator 1 view .LVU16
+ 102 0028 48B9     		cbnz	r0, .L13
+ 103              	.L4:
   89:USB_DEVICE/App/usb_device.c ****   {
   90:USB_DEVICE/App/usb_device.c ****     Error_Handler();
   91:USB_DEVICE/App/usb_device.c ****   }
@@ -206,77 +205,77 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 1
   93:USB_DEVICE/App/usb_device.c **** 
   94:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PostTreatment */
   95:USB_DEVICE/App/usb_device.c **** }
- 105              		.loc 1 95 1 view .LVU17
- 106 002a 08BD     		pop	{r3, pc}
- 107              	.L10:
+ 104              		.loc 1 95 1 view .LVU17
+ 105 002a 08BD     		pop	{r3, pc}
+ 106              	.L10:
   78:USB_DEVICE/App/usb_device.c ****   }
- 108              		.loc 1 78 5 is_stmt 1 view .LVU18
- 109 002c FFF7FEFF 		bl	Error_Handler
- 110              	.LVL4:
- 111 0030 EDE7     		b	.L5
- 112              	.L11:
+ 107              		.loc 1 78 5 is_stmt 1 view .LVU18
+ 108 002c FFF7FEFF 		bl	Error_Handler
+ 109              	.LVL4:
+ 110 0030 EDE7     		b	.L5
+ 111              	.L11:
   82:USB_DEVICE/App/usb_device.c ****   }
- 113              		.loc 1 82 5 view .LVU19
- 114 0032 FFF7FEFF 		bl	Error_Handler
- 115              	.LVL5:
- 116 0036 EFE7     		b	.L6
- 117              	.L12:
+ 112              		.loc 1 82 5 view .LVU19
+ 113 0032 FFF7FEFF 		bl	Error_Handler
+ 114              	.LVL5:
+ 115 0036 EFE7     		b	.L6
+ 116              	.L12:
   86:USB_DEVICE/App/usb_device.c ****   }
- 118              		.loc 1 86 5 view .LVU20
- 119 0038 FFF7FEFF 		bl	Error_Handler
- 120              	.LVL6:
- 121 003c F1E7     		b	.L7
- 122              	.L13:
+ 117              		.loc 1 86 5 view .LVU20
+ 118 0038 FFF7FEFF 		bl	Error_Handler
+ 119              	.LVL6:
+ 120 003c F1E7     		b	.L7
+ 121              	.L13:
   90:USB_DEVICE/App/usb_device.c ****   }
- 123              		.loc 1 90 5 view .LVU21
- 124 003e FFF7FEFF 		bl	Error_Handler
- 125              	.LVL7:
- 126              		.loc 1 95 1 is_stmt 0 view .LVU22
- 127 0042 F2E7     		b	.L4
- 128              	.L15:
- 129              		.align	2
- 130              	.L14:
- 131 0044 00000000 		.word	FS_Desc
- 132 0048 00000000 		.word	hUsbDeviceFS
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 5
+ 122              		.loc 1 90 5 view .LVU21
+ 123 003e FFF7FEFF 		bl	Error_Handler
+ 124              	.LVL7:
+ 125              		.loc 1 95 1 is_stmt 0 view .LVU22
+ 126 0042 F2E7     		b	.L4
+ 127              	.L15:
+ 128              		.align	2
+ 129              	.L14:
+ 130 0044 00000000 		.word	FS_Desc
+ 131 0048 00000000 		.word	hUsbDeviceFS
+ 132 004c 00000000 		.word	USBD_CDC
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 5
 
 
- 133 004c 00000000 		.word	USBD_CDC
- 134 0050 00000000 		.word	USBD_Interface_fops_FS
- 135              		.cfi_endproc
- 136              	.LFE324:
- 138              		.global	hUsbDeviceFS
- 139              		.section	.bss.hUsbDeviceFS,"aw",%nobits
- 140              		.align	2
- 143              	hUsbDeviceFS:
- 144 0000 00000000 		.space	732
- 144      00000000 
- 144      00000000 
- 144      00000000 
- 144      00000000 
- 145              		.text
- 146              	.Letext0:
- 147              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 148              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 149              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 150              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
- 151              		.file 6 "USB_DEVICE/App/usbd_desc.h"
- 152              		.file 7 "USB_DEVICE/App/usbd_cdc_if.h"
- 153              		.file 8 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
- 154              		.file 9 "Core/Inc/main.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s 			page 6
+ 133 0050 00000000 		.word	USBD_Interface_fops_FS
+ 134              		.cfi_endproc
+ 135              	.LFE324:
+ 137              		.global	hUsbDeviceFS
+ 138              		.section	.bss.hUsbDeviceFS,"aw",%nobits
+ 139              		.align	2
+ 142              	hUsbDeviceFS:
+ 143 0000 00000000 		.space	732
+ 143      00000000 
+ 143      00000000 
+ 143      00000000 
+ 143      00000000 
+ 144              		.text
+ 145              	.Letext0:
+ 146              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 147              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ 148              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 149              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 150              		.file 6 "USB_DEVICE/App/usbd_desc.h"
+ 151              		.file 7 "USB_DEVICE/App/usbd_cdc_if.h"
+ 152              		.file 8 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
+ 153              		.file 9 "Core/Inc/main.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_device.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:21     .text.MX_USB_DEVICE_IsConnected:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:27     .text.MX_USB_DEVICE_IsConnected:00000000 MX_USB_DEVICE_IsConnected
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:48     .text.MX_USB_DEVICE_IsConnected:00000014 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:143    .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:53     .text.MX_USB_DEVICE_Init:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:59     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:131    .text.MX_USB_DEVICE_Init:00000044 $d
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//cc0Ik4u4.s:140    .bss.hUsbDeviceFS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:21     .text.MX_USB_DEVICE_IsConnected:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:27     .text.MX_USB_DEVICE_IsConnected:00000000 MX_USB_DEVICE_IsConnected
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:47     .text.MX_USB_DEVICE_IsConnected:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:142    .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:52     .text.MX_USB_DEVICE_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:58     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:130    .text.MX_USB_DEVICE_Init:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:139    .bss.hUsbDeviceFS:00000000 $d
 
 UNDEFINED SYMBOLS
 USBD_Init

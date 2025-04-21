@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 1
   27:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c ****   * @{
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c ****   */
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c **** 
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s 			page 2
 
 
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c **** /** @defgroup SPIEx SPIEx
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
   81:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c ****   __IO uint32_t tmpreg;
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s 			page 3
 
 
   35              		.loc 1 81 3 view .LVU1
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 1
   80 0026 F3D1     		bne	.L12
   89:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c ****     {
   90:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c ****       return HAL_TIMEOUT;
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s 			page 4
 
 
   81              		.loc 1 90 14 view .LVU23
@@ -218,18 +218,18 @@ ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 1
  108              	.LFE319:
  110              		.text
  111              	.Letext0:
- 112              		.file 2 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
- 113              		.file 3 "/Users/kroko/Library/Application Support/Code/User/globalStorage/bmd.stm32-for-vscode/@xp
+ 112              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 113              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  114              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
  115              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  116              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  117              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
-ARM GAS  /var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_spi_ex.c
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s:21     .text.HAL_SPIEx_FlushRxFifo:00000000 $t
-/var/folders/t4/6192qx0n3zgdnvcwt906k_mw0000gn/T//ccHCiAXu.s:27     .text.HAL_SPIEx_FlushRxFifo:00000000 HAL_SPIEx_FlushRxFifo
+C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s:21     .text.HAL_SPIEx_FlushRxFifo:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrzlKIl.s:27     .text.HAL_SPIEx_FlushRxFifo:00000000 HAL_SPIEx_FlushRxFifo
 
 NO UNDEFINED SYMBOLS

@@ -1,0 +1,126 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"usb_device.c"
+  16              		.text
+  17              		.section	.text.MX_USB_DEVICE_IsConnected,"ax",%progbits
+  18              		.align	1
+  19              		.global	MX_USB_DEVICE_IsConnected
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	MX_USB_DEVICE_IsConnected:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 034B     		ldr	r3, .L2
+  29 0002 93F89C02 		ldrb	r0, [r3, #668]	@ zero_extendqisi2
+  30 0006 0328     		cmp	r0, #3
+  31 0008 14BF     		ite	ne
+  32 000a 0020     		movne	r0, #0
+  33 000c 0120     		moveq	r0, #1
+  34 000e 7047     		bx	lr
+  35              	.L3:
+  36              		.align	2
+  37              	.L2:
+  38 0010 00000000 		.word	hUsbDeviceFS
+  40              		.section	.text.MX_USB_DEVICE_Init,"ax",%progbits
+  41              		.align	1
+  42              		.global	MX_USB_DEVICE_Init
+  43              		.syntax unified
+  44              		.thumb
+  45              		.thumb_func
+  47              	MX_USB_DEVICE_Init:
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50 0000 08B5     		push	{r3, lr}
+  51 0002 0022     		movs	r2, #0
+  52 0004 0F49     		ldr	r1, .L14
+  53 0006 1048     		ldr	r0, .L14+4
+  54 0008 FFF7FEFF 		bl	USBD_Init
+  55 000c 70B9     		cbnz	r0, .L10
+  56              	.L5:
+  57 000e 0F49     		ldr	r1, .L14+8
+  58 0010 0D48     		ldr	r0, .L14+4
+  59 0012 FFF7FEFF 		bl	USBD_RegisterClass
+  60 0016 60B9     		cbnz	r0, .L11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s 			page 2
+
+
+  61              	.L6:
+  62 0018 0D49     		ldr	r1, .L14+12
+  63 001a 0B48     		ldr	r0, .L14+4
+  64 001c FFF7FEFF 		bl	USBD_CDC_RegisterInterface
+  65 0020 50B9     		cbnz	r0, .L12
+  66              	.L7:
+  67 0022 0948     		ldr	r0, .L14+4
+  68 0024 FFF7FEFF 		bl	USBD_Start
+  69 0028 48B9     		cbnz	r0, .L13
+  70              	.L4:
+  71 002a 08BD     		pop	{r3, pc}
+  72              	.L10:
+  73 002c FFF7FEFF 		bl	Error_Handler
+  74 0030 EDE7     		b	.L5
+  75              	.L11:
+  76 0032 FFF7FEFF 		bl	Error_Handler
+  77 0036 EFE7     		b	.L6
+  78              	.L12:
+  79 0038 FFF7FEFF 		bl	Error_Handler
+  80 003c F1E7     		b	.L7
+  81              	.L13:
+  82 003e FFF7FEFF 		bl	Error_Handler
+  83 0042 F2E7     		b	.L4
+  84              	.L15:
+  85              		.align	2
+  86              	.L14:
+  87 0044 00000000 		.word	FS_Desc
+  88 0048 00000000 		.word	hUsbDeviceFS
+  89 004c 00000000 		.word	USBD_CDC
+  90 0050 00000000 		.word	USBD_Interface_fops_FS
+  92              		.global	hUsbDeviceFS
+  93              		.section	.bss.hUsbDeviceFS,"aw",%nobits
+  94              		.align	2
+  97              	hUsbDeviceFS:
+  98 0000 00000000 		.space	732
+  98      00000000 
+  98      00000000 
+  98      00000000 
+  98      00000000 
+  99              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 usb_device.c
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:18     .text.MX_USB_DEVICE_IsConnected:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:24     .text.MX_USB_DEVICE_IsConnected:00000000 MX_USB_DEVICE_IsConnected
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:38     .text.MX_USB_DEVICE_IsConnected:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:97     .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:41     .text.MX_USB_DEVICE_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:47     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:87     .text.MX_USB_DEVICE_Init:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccIA31lT.s:94     .bss.hUsbDeviceFS:00000000 $d
+
+UNDEFINED SYMBOLS
+USBD_Init
+USBD_RegisterClass
+USBD_CDC_RegisterInterface
+USBD_Start
+Error_Handler
+FS_Desc
+USBD_CDC
+USBD_Interface_fops_FS

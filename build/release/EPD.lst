@@ -1,0 +1,777 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"EPD.c"
+  16              		.text
+  17              		.section	.text.EPD_Reset,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	EPD_Reset:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26 0000 08B5     		push	{r3, lr}
+  27 0002 0122     		movs	r2, #1
+  28 0004 0821     		movs	r1, #8
+  29 0006 4FF09040 		mov	r0, #1207959552
+  30 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  31 000e 1420     		movs	r0, #20
+  32 0010 FFF7FEFF 		bl	HAL_Delay
+  33 0014 0022     		movs	r2, #0
+  34 0016 0821     		movs	r1, #8
+  35 0018 4FF09040 		mov	r0, #1207959552
+  36 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  37 0020 0220     		movs	r0, #2
+  38 0022 FFF7FEFF 		bl	HAL_Delay
+  39 0026 0122     		movs	r2, #1
+  40 0028 0821     		movs	r1, #8
+  41 002a 4FF09040 		mov	r0, #1207959552
+  42 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  43 0032 1420     		movs	r0, #20
+  44 0034 FFF7FEFF 		bl	HAL_Delay
+  45 0038 08BD     		pop	{r3, pc}
+  47              		.section	.text.EPD_SendCommand,"ax",%progbits
+  48              		.align	1
+  49              		.syntax unified
+  50              		.thumb
+  51              		.thumb_func
+  53              	EPD_SendCommand:
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56 0000 10B5     		push	{r4, lr}
+  57 0002 0446     		mov	r4, r0
+  58 0004 0022     		movs	r2, #0
+  59 0006 4021     		movs	r1, #64
+  60 0008 4FF09040 		mov	r0, #1207959552
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 2
+
+
+  61 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  62 0010 0022     		movs	r2, #0
+  63 0012 1021     		movs	r1, #16
+  64 0014 4FF09040 		mov	r0, #1207959552
+  65 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  66 001c 2046     		mov	r0, r4
+  67 001e FFF7FEFF 		bl	DEV_SPI_WriteByte
+  68 0022 0122     		movs	r2, #1
+  69 0024 1021     		movs	r1, #16
+  70 0026 4FF09040 		mov	r0, #1207959552
+  71 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  72 002e 10BD     		pop	{r4, pc}
+  74              		.section	.text.EPD_SendData,"ax",%progbits
+  75              		.align	1
+  76              		.syntax unified
+  77              		.thumb
+  78              		.thumb_func
+  80              	EPD_SendData:
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  83 0000 10B5     		push	{r4, lr}
+  84 0002 0446     		mov	r4, r0
+  85 0004 0122     		movs	r2, #1
+  86 0006 4021     		movs	r1, #64
+  87 0008 4FF09040 		mov	r0, #1207959552
+  88 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  89 0010 0022     		movs	r2, #0
+  90 0012 1021     		movs	r1, #16
+  91 0014 4FF09040 		mov	r0, #1207959552
+  92 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  93 001c 2046     		mov	r0, r4
+  94 001e FFF7FEFF 		bl	DEV_SPI_WriteByte
+  95 0022 0122     		movs	r2, #1
+  96 0024 1021     		movs	r1, #16
+  97 0026 4FF09040 		mov	r0, #1207959552
+  98 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  99 002e 10BD     		pop	{r4, pc}
+ 101              		.section	.text.EPD_SetWindows,"ax",%progbits
+ 102              		.align	1
+ 103              		.syntax unified
+ 104              		.thumb
+ 105              		.thumb_func
+ 107              	EPD_SetWindows:
+ 108              		@ args = 0, pretend = 0, frame = 0
+ 109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 110 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 111 0002 0746     		mov	r7, r0
+ 112 0004 0D46     		mov	r5, r1
+ 113 0006 1646     		mov	r6, r2
+ 114 0008 1C46     		mov	r4, r3
+ 115 000a 4420     		movs	r0, #68
+ 116 000c FFF7FEFF 		bl	EPD_SendCommand
+ 117 0010 C7F3C700 		ubfx	r0, r7, #3, #8
+ 118 0014 FFF7FEFF 		bl	EPD_SendData
+ 119 0018 C6F3C700 		ubfx	r0, r6, #3, #8
+ 120 001c FFF7FEFF 		bl	EPD_SendData
+ 121 0020 4520     		movs	r0, #69
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 3
+
+
+ 122 0022 FFF7FEFF 		bl	EPD_SendCommand
+ 123 0026 E8B2     		uxtb	r0, r5
+ 124 0028 FFF7FEFF 		bl	EPD_SendData
+ 125 002c 280A     		lsrs	r0, r5, #8
+ 126 002e FFF7FEFF 		bl	EPD_SendData
+ 127 0032 E0B2     		uxtb	r0, r4
+ 128 0034 FFF7FEFF 		bl	EPD_SendData
+ 129 0038 200A     		lsrs	r0, r4, #8
+ 130 003a FFF7FEFF 		bl	EPD_SendData
+ 131 003e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 133              		.section	.text.EPD_SetCursor,"ax",%progbits
+ 134              		.align	1
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 139              	EPD_SetCursor:
+ 140              		@ args = 0, pretend = 0, frame = 0
+ 141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 142 0000 38B5     		push	{r3, r4, r5, lr}
+ 143 0002 0546     		mov	r5, r0
+ 144 0004 0C46     		mov	r4, r1
+ 145 0006 4E20     		movs	r0, #78
+ 146 0008 FFF7FEFF 		bl	EPD_SendCommand
+ 147 000c E8B2     		uxtb	r0, r5
+ 148 000e FFF7FEFF 		bl	EPD_SendData
+ 149 0012 4F20     		movs	r0, #79
+ 150 0014 FFF7FEFF 		bl	EPD_SendCommand
+ 151 0018 E0B2     		uxtb	r0, r4
+ 152 001a FFF7FEFF 		bl	EPD_SendData
+ 153 001e 200A     		lsrs	r0, r4, #8
+ 154 0020 FFF7FEFF 		bl	EPD_SendData
+ 155 0024 38BD     		pop	{r3, r4, r5, pc}
+ 157              		.section	.text.EPD_ReadBusy,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	EPD_ReadBusy
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 164              	EPD_ReadBusy:
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 0, uses_anonymous_args = 0
+ 167 0000 08B5     		push	{r3, lr}
+ 168              	.L13:
+ 169 0002 2021     		movs	r1, #32
+ 170 0004 4FF09040 		mov	r0, #1207959552
+ 171 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 172 000c 18B1     		cbz	r0, .L12
+ 173 000e 0A20     		movs	r0, #10
+ 174 0010 FFF7FEFF 		bl	HAL_Delay
+ 175 0014 F5E7     		b	.L13
+ 176              	.L12:
+ 177 0016 0A20     		movs	r0, #10
+ 178 0018 FFF7FEFF 		bl	HAL_Delay
+ 179 001c 08BD     		pop	{r3, pc}
+ 181              		.section	.text.EPD_LUT,"ax",%progbits
+ 182              		.align	1
+ 183              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 4
+
+
+ 184              		.thumb
+ 185              		.thumb_func
+ 187              	EPD_LUT:
+ 188              		@ args = 0, pretend = 0, frame = 0
+ 189              		@ frame_needed = 0, uses_anonymous_args = 0
+ 190 0000 38B5     		push	{r3, r4, r5, lr}
+ 191 0002 0546     		mov	r5, r0
+ 192 0004 3220     		movs	r0, #50
+ 193 0006 FFF7FEFF 		bl	EPD_SendCommand
+ 194 000a 0024     		movs	r4, #0
+ 195 000c 04E0     		b	.L16
+ 196              	.L17:
+ 197 000e 285D     		ldrb	r0, [r5, r4]	@ zero_extendqisi2
+ 198 0010 FFF7FEFF 		bl	EPD_SendData
+ 199 0014 0134     		adds	r4, r4, #1
+ 200 0016 E4B2     		uxtb	r4, r4
+ 201              	.L16:
+ 202 0018 982C     		cmp	r4, #152
+ 203 001a F8D9     		bls	.L17
+ 204 001c FFF7FEFF 		bl	EPD_ReadBusy
+ 205 0020 38BD     		pop	{r3, r4, r5, pc}
+ 207              		.section	.text.EPD_2IN13_V2_LUT_by_host,"ax",%progbits
+ 208              		.align	1
+ 209              		.syntax unified
+ 210              		.thumb
+ 211              		.thumb_func
+ 213              	EPD_2IN13_V2_LUT_by_host:
+ 214              		@ args = 0, pretend = 0, frame = 0
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ 216 0000 10B5     		push	{r4, lr}
+ 217 0002 0446     		mov	r4, r0
+ 218 0004 FFF7FEFF 		bl	EPD_LUT
+ 219 0008 3F20     		movs	r0, #63
+ 220 000a FFF7FEFF 		bl	EPD_SendCommand
+ 221 000e 94F89900 		ldrb	r0, [r4, #153]	@ zero_extendqisi2
+ 222 0012 FFF7FEFF 		bl	EPD_SendData
+ 223 0016 0320     		movs	r0, #3
+ 224 0018 FFF7FEFF 		bl	EPD_SendCommand
+ 225 001c 94F89A00 		ldrb	r0, [r4, #154]	@ zero_extendqisi2
+ 226 0020 FFF7FEFF 		bl	EPD_SendData
+ 227 0024 0420     		movs	r0, #4
+ 228 0026 FFF7FEFF 		bl	EPD_SendCommand
+ 229 002a 94F89B00 		ldrb	r0, [r4, #155]	@ zero_extendqisi2
+ 230 002e FFF7FEFF 		bl	EPD_SendData
+ 231 0032 94F89C00 		ldrb	r0, [r4, #156]	@ zero_extendqisi2
+ 232 0036 FFF7FEFF 		bl	EPD_SendData
+ 233 003a 94F89D00 		ldrb	r0, [r4, #157]	@ zero_extendqisi2
+ 234 003e FFF7FEFF 		bl	EPD_SendData
+ 235 0042 2C20     		movs	r0, #44
+ 236 0044 FFF7FEFF 		bl	EPD_SendCommand
+ 237 0048 94F89E00 		ldrb	r0, [r4, #158]	@ zero_extendqisi2
+ 238 004c FFF7FEFF 		bl	EPD_SendData
+ 239 0050 10BD     		pop	{r4, pc}
+ 241              		.section	.text.EPD_TurnOnDisplay,"ax",%progbits
+ 242              		.align	1
+ 243              		.syntax unified
+ 244              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 5
+
+
+ 245              		.thumb_func
+ 247              	EPD_TurnOnDisplay:
+ 248              		@ args = 0, pretend = 0, frame = 0
+ 249              		@ frame_needed = 0, uses_anonymous_args = 0
+ 250 0000 08B5     		push	{r3, lr}
+ 251 0002 2220     		movs	r0, #34
+ 252 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 253 0008 C720     		movs	r0, #199
+ 254 000a FFF7FEFF 		bl	EPD_SendData
+ 255 000e 2020     		movs	r0, #32
+ 256 0010 FFF7FEFF 		bl	EPD_SendCommand
+ 257 0014 FFF7FEFF 		bl	EPD_ReadBusy
+ 258 0018 08BD     		pop	{r3, pc}
+ 260              		.section	.text.EPD_TurnOnDisplay_Partial,"ax",%progbits
+ 261              		.align	1
+ 262              		.syntax unified
+ 263              		.thumb
+ 264              		.thumb_func
+ 266              	EPD_TurnOnDisplay_Partial:
+ 267              		@ args = 0, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269 0000 08B5     		push	{r3, lr}
+ 270 0002 2220     		movs	r0, #34
+ 271 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 272 0008 0F20     		movs	r0, #15
+ 273 000a FFF7FEFF 		bl	EPD_SendData
+ 274 000e 2020     		movs	r0, #32
+ 275 0010 FFF7FEFF 		bl	EPD_SendCommand
+ 276 0014 FFF7FEFF 		bl	EPD_ReadBusy
+ 277 0018 08BD     		pop	{r3, pc}
+ 279              		.section	.text.EPD_Init,"ax",%progbits
+ 280              		.align	1
+ 281              		.global	EPD_Init
+ 282              		.syntax unified
+ 283              		.thumb
+ 284              		.thumb_func
+ 286              	EPD_Init:
+ 287              		@ args = 0, pretend = 0, frame = 0
+ 288              		@ frame_needed = 0, uses_anonymous_args = 0
+ 289 0000 08B5     		push	{r3, lr}
+ 290 0002 0022     		movs	r2, #0
+ 291 0004 0221     		movs	r1, #2
+ 292 0006 2448     		ldr	r0, .L27
+ 293 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 294 000c 6420     		movs	r0, #100
+ 295 000e FFF7FEFF 		bl	HAL_Delay
+ 296 0012 FFF7FEFF 		bl	EPD_Reset
+ 297 0016 6420     		movs	r0, #100
+ 298 0018 FFF7FEFF 		bl	HAL_Delay
+ 299 001c FFF7FEFF 		bl	EPD_ReadBusy
+ 300 0020 1220     		movs	r0, #18
+ 301 0022 FFF7FEFF 		bl	EPD_SendCommand
+ 302 0026 FFF7FEFF 		bl	EPD_ReadBusy
+ 303 002a 0120     		movs	r0, #1
+ 304 002c FFF7FEFF 		bl	EPD_SendCommand
+ 305 0030 F920     		movs	r0, #249
+ 306 0032 FFF7FEFF 		bl	EPD_SendData
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 6
+
+
+ 307 0036 0020     		movs	r0, #0
+ 308 0038 FFF7FEFF 		bl	EPD_SendData
+ 309 003c 0020     		movs	r0, #0
+ 310 003e FFF7FEFF 		bl	EPD_SendData
+ 311 0042 1120     		movs	r0, #17
+ 312 0044 FFF7FEFF 		bl	EPD_SendCommand
+ 313 0048 0320     		movs	r0, #3
+ 314 004a FFF7FEFF 		bl	EPD_SendData
+ 315 004e F923     		movs	r3, #249
+ 316 0050 7922     		movs	r2, #121
+ 317 0052 0021     		movs	r1, #0
+ 318 0054 0846     		mov	r0, r1
+ 319 0056 FFF7FEFF 		bl	EPD_SetWindows
+ 320 005a 0021     		movs	r1, #0
+ 321 005c 0846     		mov	r0, r1
+ 322 005e FFF7FEFF 		bl	EPD_SetCursor
+ 323 0062 3C20     		movs	r0, #60
+ 324 0064 FFF7FEFF 		bl	EPD_SendCommand
+ 325 0068 0520     		movs	r0, #5
+ 326 006a FFF7FEFF 		bl	EPD_SendData
+ 327 006e 2120     		movs	r0, #33
+ 328 0070 FFF7FEFF 		bl	EPD_SendCommand
+ 329 0074 0020     		movs	r0, #0
+ 330 0076 FFF7FEFF 		bl	EPD_SendData
+ 331 007a 8020     		movs	r0, #128
+ 332 007c FFF7FEFF 		bl	EPD_SendData
+ 333 0080 1820     		movs	r0, #24
+ 334 0082 FFF7FEFF 		bl	EPD_SendCommand
+ 335 0086 8020     		movs	r0, #128
+ 336 0088 FFF7FEFF 		bl	EPD_SendData
+ 337 008c FFF7FEFF 		bl	EPD_ReadBusy
+ 338 0090 0248     		ldr	r0, .L27+4
+ 339 0092 FFF7FEFF 		bl	EPD_2IN13_V2_LUT_by_host
+ 340 0096 08BD     		pop	{r3, pc}
+ 341              	.L28:
+ 342              		.align	2
+ 343              	.L27:
+ 344 0098 00040048 		.word	1207960576
+ 345 009c 00000000 		.word	WS_20_30
+ 347              		.section	.text.EPD_SYS_Clear,"ax",%progbits
+ 348              		.align	1
+ 349              		.global	EPD_SYS_Clear
+ 350              		.syntax unified
+ 351              		.thumb
+ 352              		.thumb_func
+ 354              	EPD_SYS_Clear:
+ 355              		@ args = 0, pretend = 0, frame = 0
+ 356              		@ frame_needed = 0, uses_anonymous_args = 0
+ 357 0000 38B5     		push	{r3, r4, r5, lr}
+ 358 0002 2420     		movs	r0, #36
+ 359 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 360 0008 0025     		movs	r5, #0
+ 361 000a 08E0     		b	.L30
+ 362              	.L31:
+ 363 000c FF20     		movs	r0, #255
+ 364 000e FFF7FEFF 		bl	EPD_SendData
+ 365 0012 0134     		adds	r4, r4, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 7
+
+
+ 366 0014 A4B2     		uxth	r4, r4
+ 367              	.L32:
+ 368 0016 0F2C     		cmp	r4, #15
+ 369 0018 F8D9     		bls	.L31
+ 370 001a 0135     		adds	r5, r5, #1
+ 371 001c ADB2     		uxth	r5, r5
+ 372              	.L30:
+ 373 001e F92D     		cmp	r5, #249
+ 374 0020 01D8     		bhi	.L35
+ 375 0022 0024     		movs	r4, #0
+ 376 0024 F7E7     		b	.L32
+ 377              	.L35:
+ 378 0026 FFF7FEFF 		bl	EPD_TurnOnDisplay
+ 379 002a 38BD     		pop	{r3, r4, r5, pc}
+ 381              		.section	.text.EPD_Display,"ax",%progbits
+ 382              		.align	1
+ 383              		.global	EPD_Display
+ 384              		.syntax unified
+ 385              		.thumb
+ 386              		.thumb_func
+ 388              	EPD_Display:
+ 389              		@ args = 0, pretend = 0, frame = 0
+ 390              		@ frame_needed = 0, uses_anonymous_args = 0
+ 391 0000 70B5     		push	{r4, r5, r6, lr}
+ 392 0002 0646     		mov	r6, r0
+ 393 0004 2420     		movs	r0, #36
+ 394 0006 FFF7FEFF 		bl	EPD_SendCommand
+ 395 000a 0025     		movs	r5, #0
+ 396 000c 0AE0     		b	.L37
+ 397              	.L38:
+ 398 000e 04EB0513 		add	r3, r4, r5, lsl #4
+ 399 0012 F05C     		ldrb	r0, [r6, r3]	@ zero_extendqisi2
+ 400 0014 FFF7FEFF 		bl	EPD_SendData
+ 401 0018 0134     		adds	r4, r4, #1
+ 402 001a A4B2     		uxth	r4, r4
+ 403              	.L39:
+ 404 001c 0F2C     		cmp	r4, #15
+ 405 001e F6D9     		bls	.L38
+ 406 0020 0135     		adds	r5, r5, #1
+ 407 0022 ADB2     		uxth	r5, r5
+ 408              	.L37:
+ 409 0024 F92D     		cmp	r5, #249
+ 410 0026 01D8     		bhi	.L42
+ 411 0028 0024     		movs	r4, #0
+ 412 002a F7E7     		b	.L39
+ 413              	.L42:
+ 414 002c FFF7FEFF 		bl	EPD_TurnOnDisplay
+ 415 0030 70BD     		pop	{r4, r5, r6, pc}
+ 417              		.section	.text.EPD_Display_Base,"ax",%progbits
+ 418              		.align	1
+ 419              		.global	EPD_Display_Base
+ 420              		.syntax unified
+ 421              		.thumb
+ 422              		.thumb_func
+ 424              	EPD_Display_Base:
+ 425              		@ args = 0, pretend = 0, frame = 0
+ 426              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 8
+
+
+ 427 0000 70B5     		push	{r4, r5, r6, lr}
+ 428 0002 0546     		mov	r5, r0
+ 429 0004 2420     		movs	r0, #36
+ 430 0006 FFF7FEFF 		bl	EPD_SendCommand
+ 431 000a 0026     		movs	r6, #0
+ 432 000c 01E0     		b	.L44
+ 433              	.L54:
+ 434 000e 0136     		adds	r6, r6, #1
+ 435 0010 B6B2     		uxth	r6, r6
+ 436              	.L44:
+ 437 0012 F92E     		cmp	r6, #249
+ 438 0014 0AD8     		bhi	.L53
+ 439 0016 0024     		movs	r4, #0
+ 440              	.L46:
+ 441 0018 0F2C     		cmp	r4, #15
+ 442 001a F8D8     		bhi	.L54
+ 443 001c 04EB0613 		add	r3, r4, r6, lsl #4
+ 444 0020 E85C     		ldrb	r0, [r5, r3]	@ zero_extendqisi2
+ 445 0022 FFF7FEFF 		bl	EPD_SendData
+ 446 0026 0134     		adds	r4, r4, #1
+ 447 0028 A4B2     		uxth	r4, r4
+ 448 002a F5E7     		b	.L46
+ 449              	.L53:
+ 450 002c 2620     		movs	r0, #38
+ 451 002e FFF7FEFF 		bl	EPD_SendCommand
+ 452 0032 0026     		movs	r6, #0
+ 453 0034 0AE0     		b	.L47
+ 454              	.L48:
+ 455 0036 04EB0613 		add	r3, r4, r6, lsl #4
+ 456 003a E85C     		ldrb	r0, [r5, r3]	@ zero_extendqisi2
+ 457 003c FFF7FEFF 		bl	EPD_SendData
+ 458 0040 0134     		adds	r4, r4, #1
+ 459 0042 A4B2     		uxth	r4, r4
+ 460              	.L49:
+ 461 0044 0F2C     		cmp	r4, #15
+ 462 0046 F6D9     		bls	.L48
+ 463 0048 0136     		adds	r6, r6, #1
+ 464 004a B6B2     		uxth	r6, r6
+ 465              	.L47:
+ 466 004c F92E     		cmp	r6, #249
+ 467 004e 01D8     		bhi	.L55
+ 468 0050 0024     		movs	r4, #0
+ 469 0052 F7E7     		b	.L49
+ 470              	.L55:
+ 471 0054 FFF7FEFF 		bl	EPD_TurnOnDisplay
+ 472 0058 70BD     		pop	{r4, r5, r6, pc}
+ 474              		.section	.text.EPD_Display_Partial,"ax",%progbits
+ 475              		.align	1
+ 476              		.global	EPD_Display_Partial
+ 477              		.syntax unified
+ 478              		.thumb
+ 479              		.thumb_func
+ 481              	EPD_Display_Partial:
+ 482              		@ args = 0, pretend = 0, frame = 0
+ 483              		@ frame_needed = 0, uses_anonymous_args = 0
+ 484 0000 70B5     		push	{r4, r5, r6, lr}
+ 485 0002 0646     		mov	r6, r0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 9
+
+
+ 486 0004 0022     		movs	r2, #0
+ 487 0006 0821     		movs	r1, #8
+ 488 0008 4FF09040 		mov	r0, #1207959552
+ 489 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 490 0010 0120     		movs	r0, #1
+ 491 0012 FFF7FEFF 		bl	HAL_Delay
+ 492 0016 0122     		movs	r2, #1
+ 493 0018 0821     		movs	r1, #8
+ 494 001a 4FF09040 		mov	r0, #1207959552
+ 495 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 496 0022 2B48     		ldr	r0, .L63
+ 497 0024 FFF7FEFF 		bl	EPD_2IN13_V2_LUT_by_host
+ 498 0028 3720     		movs	r0, #55
+ 499 002a FFF7FEFF 		bl	EPD_SendCommand
+ 500 002e 0020     		movs	r0, #0
+ 501 0030 FFF7FEFF 		bl	EPD_SendData
+ 502 0034 0020     		movs	r0, #0
+ 503 0036 FFF7FEFF 		bl	EPD_SendData
+ 504 003a 0020     		movs	r0, #0
+ 505 003c FFF7FEFF 		bl	EPD_SendData
+ 506 0040 0020     		movs	r0, #0
+ 507 0042 FFF7FEFF 		bl	EPD_SendData
+ 508 0046 0020     		movs	r0, #0
+ 509 0048 FFF7FEFF 		bl	EPD_SendData
+ 510 004c 4020     		movs	r0, #64
+ 511 004e FFF7FEFF 		bl	EPD_SendData
+ 512 0052 0020     		movs	r0, #0
+ 513 0054 FFF7FEFF 		bl	EPD_SendData
+ 514 0058 0020     		movs	r0, #0
+ 515 005a FFF7FEFF 		bl	EPD_SendData
+ 516 005e 0020     		movs	r0, #0
+ 517 0060 FFF7FEFF 		bl	EPD_SendData
+ 518 0064 0020     		movs	r0, #0
+ 519 0066 FFF7FEFF 		bl	EPD_SendData
+ 520 006a 3C20     		movs	r0, #60
+ 521 006c FFF7FEFF 		bl	EPD_SendCommand
+ 522 0070 8020     		movs	r0, #128
+ 523 0072 FFF7FEFF 		bl	EPD_SendData
+ 524 0076 2220     		movs	r0, #34
+ 525 0078 FFF7FEFF 		bl	EPD_SendCommand
+ 526 007c C020     		movs	r0, #192
+ 527 007e FFF7FEFF 		bl	EPD_SendData
+ 528 0082 2020     		movs	r0, #32
+ 529 0084 FFF7FEFF 		bl	EPD_SendCommand
+ 530 0088 FFF7FEFF 		bl	EPD_ReadBusy
+ 531 008c F923     		movs	r3, #249
+ 532 008e 7922     		movs	r2, #121
+ 533 0090 0021     		movs	r1, #0
+ 534 0092 0846     		mov	r0, r1
+ 535 0094 FFF7FEFF 		bl	EPD_SetWindows
+ 536 0098 0021     		movs	r1, #0
+ 537 009a 0846     		mov	r0, r1
+ 538 009c FFF7FEFF 		bl	EPD_SetCursor
+ 539 00a0 2420     		movs	r0, #36
+ 540 00a2 FFF7FEFF 		bl	EPD_SendCommand
+ 541 00a6 0025     		movs	r5, #0
+ 542 00a8 0AE0     		b	.L57
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 10
+
+
+ 543              	.L58:
+ 544 00aa 04EB0513 		add	r3, r4, r5, lsl #4
+ 545 00ae F05C     		ldrb	r0, [r6, r3]	@ zero_extendqisi2
+ 546 00b0 FFF7FEFF 		bl	EPD_SendData
+ 547 00b4 0134     		adds	r4, r4, #1
+ 548 00b6 A4B2     		uxth	r4, r4
+ 549              	.L59:
+ 550 00b8 0F2C     		cmp	r4, #15
+ 551 00ba F6D9     		bls	.L58
+ 552 00bc 0135     		adds	r5, r5, #1
+ 553 00be ADB2     		uxth	r5, r5
+ 554              	.L57:
+ 555 00c0 F92D     		cmp	r5, #249
+ 556 00c2 01D8     		bhi	.L62
+ 557 00c4 0024     		movs	r4, #0
+ 558 00c6 F7E7     		b	.L59
+ 559              	.L62:
+ 560 00c8 FFF7FEFF 		bl	EPD_TurnOnDisplay_Partial
+ 561 00cc 70BD     		pop	{r4, r5, r6, pc}
+ 562              	.L64:
+ 563 00ce 00BF     		.align	2
+ 564              	.L63:
+ 565 00d0 00000000 		.word	WF_PARTIAL
+ 567              		.section	.text.EPD_Sleep,"ax",%progbits
+ 568              		.align	1
+ 569              		.global	EPD_Sleep
+ 570              		.syntax unified
+ 571              		.thumb
+ 572              		.thumb_func
+ 574              	EPD_Sleep:
+ 575              		@ args = 0, pretend = 0, frame = 0
+ 576              		@ frame_needed = 0, uses_anonymous_args = 0
+ 577 0000 08B5     		push	{r3, lr}
+ 578 0002 1020     		movs	r0, #16
+ 579 0004 FFF7FEFF 		bl	EPD_SendCommand
+ 580 0008 0120     		movs	r0, #1
+ 581 000a FFF7FEFF 		bl	EPD_SendData
+ 582 000e 6420     		movs	r0, #100
+ 583 0010 FFF7FEFF 		bl	HAL_Delay
+ 584 0014 08BD     		pop	{r3, pc}
+ 586              		.section	.text.EPD_Exit,"ax",%progbits
+ 587              		.align	1
+ 588              		.global	EPD_Exit
+ 589              		.syntax unified
+ 590              		.thumb
+ 591              		.thumb_func
+ 593              	EPD_Exit:
+ 594              		@ args = 0, pretend = 0, frame = 0
+ 595              		@ frame_needed = 0, uses_anonymous_args = 0
+ 596 0000 08B5     		push	{r3, lr}
+ 597 0002 0022     		movs	r2, #0
+ 598 0004 4021     		movs	r1, #64
+ 599 0006 4FF09040 		mov	r0, #1207959552
+ 600 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 601 000e 0022     		movs	r2, #0
+ 602 0010 1021     		movs	r1, #16
+ 603 0012 4FF09040 		mov	r0, #1207959552
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 11
+
+
+ 604 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 605 001a 0122     		movs	r2, #1
+ 606 001c 0221     		movs	r1, #2
+ 607 001e 0548     		ldr	r0, .L69
+ 608 0020 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 609 0024 0022     		movs	r2, #0
+ 610 0026 0821     		movs	r1, #8
+ 611 0028 4FF09040 		mov	r0, #1207959552
+ 612 002c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 613 0030 08BD     		pop	{r3, pc}
+ 614              	.L70:
+ 615 0032 00BF     		.align	2
+ 616              	.L69:
+ 617 0034 00040048 		.word	1207960576
+ 619              		.global	WS_20_30
+ 620              		.section	.data.WS_20_30,"aw"
+ 621              		.align	2
+ 624              	WS_20_30:
+ 625 0000 804A4000 		.ascii	"\200J@\000\000\000\000\000\000\000\000\000@J\200\000"
+ 625      00000000 
+ 625      00000000 
+ 625      404A8000 
+ 626 0010 00000000 		.ascii	"\000\000\000\000\000\000\000\000\200J@\000\000\000\000"
+ 626      00000000 
+ 626      804A4000 
+ 626      000000
+ 627 001f 00000000 		.ascii	"\000\000\000\000\000@J\200\000\000\000\000\000\000\000"
+ 627      00404A80 
+ 627      00000000 
+ 627      000000
+ 628 002e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 628      00000000 
+ 628      00000000 
+ 628      00
+ 629 003b 000F0000 		.ascii	"\000\017\000\000\000\000\000\000\017\000\000\017\000"
+ 629      00000000 
+ 629      0F00000F 
+ 629      00
+ 630 0048 00020F00 		.ascii	"\000\002\017\000\000\000\000\000\000\001\000\000\000"
+ 630      00000000 
+ 630      00010000 
+ 630      00
+ 631 0055 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 631      00000000 
+ 631      00000000 
+ 631      00
+ 632 0062 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 632      00000000 
+ 632      00000000 
+ 632      00
+ 633 006f 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 633      00000000 
+ 633      00000000 
+ 633      00
+ 634 007c 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 634      00000000 
+ 634      00000000 
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 12
+
+
+ 634      00
+ 635 0089 00000000 		.ascii	"\000\000\000\000\000\000\000\"\"\"\"\"\"\000\000\000"
+ 635      00000022 
+ 635      22222222 
+ 635      22000000 
+ 636 0099 22174100 		.ascii	"\"\027A\00026"
+ 636      3236
+ 637              		.global	WF_PARTIAL
+ 638              		.section	.data.WF_PARTIAL,"aw"
+ 639              		.align	2
+ 642              	WF_PARTIAL:
+ 643 0000 00400000 		.ascii	"\000@\000\000\000\000\000\000\000\000\000\000\200\200"
+ 643      00000000 
+ 643      00000000 
+ 643      8080
+ 644 000e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000@@\000\000\000"
+ 644      00000000 
+ 644      00004040 
+ 644      000000
+ 645 001d 00000000 		.ascii	"\000\000\000\000\000\000\000\000\200\000\000\000\000"
+ 645      00000000 
+ 645      80000000 
+ 645      00
+ 646 002a 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 646      00000000 
+ 646      00000000 
+ 646      00
+ 647 0037 00000000 		.ascii	"\000\000\000\000\000\024\000\000\000\000\000\000\001"
+ 647      00140000 
+ 647      00000000 
+ 647      01
+ 648 0044 00000000 		.ascii	"\000\000\000\000\000\000\001\000\000\000\000\000\000"
+ 648      00000100 
+ 648      00000000 
+ 648      00
+ 649 0051 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 649      00000000 
+ 649      00000000 
+ 649      00
+ 650 005e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 650      00000000 
+ 650      00000000 
+ 650      00
+ 651 006b 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 651      00000000 
+ 651      00000000 
+ 651      00
+ 652 0078 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 652      00000000 
+ 652      00000000 
+ 652      00
+ 653 0085 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\"\"\"\""
+ 653      00000000 
+ 653      00000022 
+ 653      222222
+ 654 0094 22220000 		.ascii	"\"\"\000\000\000\"\027A\00026"
+ 654      00221741 
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 13
+
+
+ 654      003236
+ 655              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 EPD.c
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:18     .text.EPD_Reset:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:23     .text.EPD_Reset:00000000 EPD_Reset
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:48     .text.EPD_SendCommand:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:53     .text.EPD_SendCommand:00000000 EPD_SendCommand
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:75     .text.EPD_SendData:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:80     .text.EPD_SendData:00000000 EPD_SendData
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:102    .text.EPD_SetWindows:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:107    .text.EPD_SetWindows:00000000 EPD_SetWindows
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:134    .text.EPD_SetCursor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:139    .text.EPD_SetCursor:00000000 EPD_SetCursor
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:158    .text.EPD_ReadBusy:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:164    .text.EPD_ReadBusy:00000000 EPD_ReadBusy
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:182    .text.EPD_LUT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:187    .text.EPD_LUT:00000000 EPD_LUT
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:208    .text.EPD_2IN13_V2_LUT_by_host:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:213    .text.EPD_2IN13_V2_LUT_by_host:00000000 EPD_2IN13_V2_LUT_by_host
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:242    .text.EPD_TurnOnDisplay:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:247    .text.EPD_TurnOnDisplay:00000000 EPD_TurnOnDisplay
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:261    .text.EPD_TurnOnDisplay_Partial:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:266    .text.EPD_TurnOnDisplay_Partial:00000000 EPD_TurnOnDisplay_Partial
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:280    .text.EPD_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:286    .text.EPD_Init:00000000 EPD_Init
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:344    .text.EPD_Init:00000098 $d
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:624    .data.WS_20_30:00000000 WS_20_30
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:348    .text.EPD_SYS_Clear:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:354    .text.EPD_SYS_Clear:00000000 EPD_SYS_Clear
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:382    .text.EPD_Display:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:388    .text.EPD_Display:00000000 EPD_Display
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:418    .text.EPD_Display_Base:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:424    .text.EPD_Display_Base:00000000 EPD_Display_Base
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:475    .text.EPD_Display_Partial:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:481    .text.EPD_Display_Partial:00000000 EPD_Display_Partial
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:565    .text.EPD_Display_Partial:000000d0 $d
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:642    .data.WF_PARTIAL:00000000 WF_PARTIAL
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:568    .text.EPD_Sleep:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:574    .text.EPD_Sleep:00000000 EPD_Sleep
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:587    .text.EPD_Exit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:593    .text.EPD_Exit:00000000 EPD_Exit
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:617    .text.EPD_Exit:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:621    .data.WS_20_30:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:639    .data.WF_PARTIAL:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_Delay
+DEV_SPI_WriteByte
+HAL_GPIO_ReadPin

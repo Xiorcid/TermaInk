@@ -31,11 +31,33 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="open">
-       <property name="text">
-        <string>Open</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QPushButton" name="save">
+           <property name="text">
+            <string>Read</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="sync">
+         <property name="text">
+          <string>Sync RTC</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="open">
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -138,7 +160,7 @@
      <x>0</x>
      <y>0</y>
      <width>820</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -146,8 +168,8 @@
      <rect>
       <x>318</x>
       <y>171</y>
-      <width>175</width>
-      <height>92</height>
+      <width>183</width>
+      <height>103</height>
      </rect>
     </property>
     <property name="contextMenuPolicy">
@@ -166,7 +188,14 @@
     </property>
     <addaction name="actionHelp"/>
    </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionUse_Farenheit"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
    <addaction name="menuHelp"/>
   </widget>
   <action name="actionOpen_file">
@@ -216,6 +245,14 @@
    </property>
    <property name="text">
     <string>Autoconnect</string>
+   </property>
+  </action>
+  <action name="actionUse_Farenheit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Use Farenheit</string>
    </property>
   </action>
  </widget>

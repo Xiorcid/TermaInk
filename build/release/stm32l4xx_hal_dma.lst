@@ -1,0 +1,874 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_dma.c"
+  16              		.text
+  17              		.section	.text.DMA_SetConfig,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	DMA_SetConfig:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26              		@ link register save eliminated.
+  27 0000 30B4     		push	{r4, r5}
+  28 0002 446C     		ldr	r4, [r0, #68]
+  29 0004 04F01C0C 		and	ip, r4, #28
+  30 0008 0124     		movs	r4, #1
+  31 000a 04FA0CF4 		lsl	r4, r4, ip
+  32 000e 056C     		ldr	r5, [r0, #64]
+  33 0010 6C60     		str	r4, [r5, #4]
+  34 0012 0468     		ldr	r4, [r0]
+  35 0014 6360     		str	r3, [r4, #4]
+  36 0016 8368     		ldr	r3, [r0, #8]
+  37 0018 102B     		cmp	r3, #16
+  38 001a 05D0     		beq	.L5
+  39 001c 0368     		ldr	r3, [r0]
+  40 001e 9960     		str	r1, [r3, #8]
+  41 0020 0368     		ldr	r3, [r0]
+  42 0022 DA60     		str	r2, [r3, #12]
+  43              	.L1:
+  44 0024 30BC     		pop	{r4, r5}
+  45 0026 7047     		bx	lr
+  46              	.L5:
+  47 0028 0368     		ldr	r3, [r0]
+  48 002a 9A60     		str	r2, [r3, #8]
+  49 002c 0368     		ldr	r3, [r0]
+  50 002e D960     		str	r1, [r3, #12]
+  51 0030 F8E7     		b	.L1
+  53              		.section	.text.HAL_DMA_Init,"ax",%progbits
+  54              		.align	1
+  55              		.global	HAL_DMA_Init
+  56              		.syntax unified
+  57              		.thumb
+  58              		.thumb_func
+  60              	HAL_DMA_Init:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 2
+
+
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 0028     		cmp	r0, #0
+  65 0002 71D0     		beq	.L12
+  66 0004 10B4     		push	{r4}
+  67 0006 0346     		mov	r3, r0
+  68 0008 0168     		ldr	r1, [r0]
+  69 000a 384A     		ldr	r2, .L18
+  70 000c 9142     		cmp	r1, r2
+  71 000e 48D8     		bhi	.L8
+  72 0010 374A     		ldr	r2, .L18+4
+  73 0012 0A44     		add	r2, r2, r1
+  74 0014 3748     		ldr	r0, .L18+8
+  75 0016 A0FB0202 		umull	r0, r2, r0, r2
+  76 001a 1209     		lsrs	r2, r2, #4
+  77 001c 9200     		lsls	r2, r2, #2
+  78 001e 5A64     		str	r2, [r3, #68]
+  79 0020 354A     		ldr	r2, .L18+12
+  80 0022 1A64     		str	r2, [r3, #64]
+  81              	.L9:
+  82 0024 0222     		movs	r2, #2
+  83 0026 83F82520 		strb	r2, [r3, #37]
+  84 002a 0868     		ldr	r0, [r1]
+  85 002c 6FF30E10 		bfc	r0, #4, #11
+  86 0030 9A68     		ldr	r2, [r3, #8]
+  87 0032 DC68     		ldr	r4, [r3, #12]
+  88 0034 2243     		orrs	r2, r2, r4
+  89 0036 1C69     		ldr	r4, [r3, #16]
+  90 0038 2243     		orrs	r2, r2, r4
+  91 003a 5C69     		ldr	r4, [r3, #20]
+  92 003c 2243     		orrs	r2, r2, r4
+  93 003e 9C69     		ldr	r4, [r3, #24]
+  94 0040 2243     		orrs	r2, r2, r4
+  95 0042 DC69     		ldr	r4, [r3, #28]
+  96 0044 2243     		orrs	r2, r2, r4
+  97 0046 1C6A     		ldr	r4, [r3, #32]
+  98 0048 2243     		orrs	r2, r2, r4
+  99 004a 0243     		orrs	r2, r2, r0
+ 100 004c 0A60     		str	r2, [r1]
+ 101 004e 9A68     		ldr	r2, [r3, #8]
+ 102 0050 B2F5804F 		cmp	r2, #16384
+ 103 0054 1BD0     		beq	.L10
+ 104 0056 196C     		ldr	r1, [r3, #64]
+ 105 0058 274A     		ldr	r2, .L18+12
+ 106 005a 9142     		cmp	r1, r2
+ 107 005c 2CD0     		beq	.L17
+ 108 005e 264A     		ldr	r2, .L18+12
+ 109 0060 D2F8A814 		ldr	r1, [r2, #1192]
+ 110 0064 586C     		ldr	r0, [r3, #68]
+ 111 0066 00F01C0C 		and	ip, r0, #28
+ 112 006a 0F20     		movs	r0, #15
+ 113 006c 00FA0CF0 		lsl	r0, r0, ip
+ 114 0070 21EA0001 		bic	r1, r1, r0
+ 115 0074 C2F8A814 		str	r1, [r2, #1192]
+ 116 0078 D2F8A814 		ldr	r1, [r2, #1192]
+ 117 007c 5868     		ldr	r0, [r3, #4]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 3
+
+
+ 118 007e 5C6C     		ldr	r4, [r3, #68]
+ 119 0080 04F01C0C 		and	ip, r4, #28
+ 120 0084 00FA0CF0 		lsl	r0, r0, ip
+ 121 0088 0143     		orrs	r1, r1, r0
+ 122 008a C2F8A814 		str	r1, [r2, #1192]
+ 123              	.L10:
+ 124 008e 0020     		movs	r0, #0
+ 125 0090 D863     		str	r0, [r3, #60]
+ 126 0092 0122     		movs	r2, #1
+ 127 0094 83F82520 		strb	r2, [r3, #37]
+ 128 0098 83F82400 		strb	r0, [r3, #36]
+ 129 009c 5DF8044B 		ldr	r4, [sp], #4
+ 130 00a0 7047     		bx	lr
+ 131              	.L8:
+ 132 00a2 164A     		ldr	r2, .L18+16
+ 133 00a4 0A44     		add	r2, r2, r1
+ 134 00a6 1348     		ldr	r0, .L18+8
+ 135 00a8 A0FB0202 		umull	r0, r2, r0, r2
+ 136 00ac 1209     		lsrs	r2, r2, #4
+ 137 00ae 9200     		lsls	r2, r2, #2
+ 138 00b0 5A64     		str	r2, [r3, #68]
+ 139 00b2 134A     		ldr	r2, .L18+20
+ 140 00b4 1A64     		str	r2, [r3, #64]
+ 141 00b6 B5E7     		b	.L9
+ 142              	.L17:
+ 143 00b8 D2F8A810 		ldr	r1, [r2, #168]
+ 144 00bc 586C     		ldr	r0, [r3, #68]
+ 145 00be 00F01C0C 		and	ip, r0, #28
+ 146 00c2 0F20     		movs	r0, #15
+ 147 00c4 00FA0CF0 		lsl	r0, r0, ip
+ 148 00c8 21EA0001 		bic	r1, r1, r0
+ 149 00cc C2F8A810 		str	r1, [r2, #168]
+ 150 00d0 D2F8A810 		ldr	r1, [r2, #168]
+ 151 00d4 5868     		ldr	r0, [r3, #4]
+ 152 00d6 5C6C     		ldr	r4, [r3, #68]
+ 153 00d8 04F01C0C 		and	ip, r4, #28
+ 154 00dc 00FA0CF0 		lsl	r0, r0, ip
+ 155 00e0 0143     		orrs	r1, r1, r0
+ 156 00e2 C2F8A810 		str	r1, [r2, #168]
+ 157 00e6 D2E7     		b	.L10
+ 158              	.L12:
+ 159 00e8 0120     		movs	r0, #1
+ 160 00ea 7047     		bx	lr
+ 161              	.L19:
+ 162              		.align	2
+ 163              	.L18:
+ 164 00ec 07040240 		.word	1073873927
+ 165 00f0 F8FFFDBF 		.word	-1073872904
+ 166 00f4 CDCCCCCC 		.word	-858993459
+ 167 00f8 00000240 		.word	1073872896
+ 168 00fc F8FBFDBF 		.word	-1073873928
+ 169 0100 00040240 		.word	1073873920
+ 171              		.section	.text.HAL_DMA_DeInit,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	HAL_DMA_DeInit
+ 174              		.syntax unified
+ 175              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 4
+
+
+ 176              		.thumb_func
+ 178              	HAL_DMA_DeInit:
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 181              		@ link register save eliminated.
+ 182 0000 0028     		cmp	r0, #0
+ 183 0002 52D0     		beq	.L26
+ 184 0004 10B4     		push	{r4}
+ 185 0006 0346     		mov	r3, r0
+ 186 0008 0168     		ldr	r1, [r0]
+ 187 000a 0A68     		ldr	r2, [r1]
+ 188 000c 22F00102 		bic	r2, r2, #1
+ 189 0010 0A60     		str	r2, [r1]
+ 190 0012 0168     		ldr	r1, [r0]
+ 191 0014 264A     		ldr	r2, .L32
+ 192 0016 9142     		cmp	r1, r2
+ 193 0018 2FD8     		bhi	.L22
+ 194 001a 264A     		ldr	r2, .L32+4
+ 195 001c 0A44     		add	r2, r2, r1
+ 196 001e 2648     		ldr	r0, .L32+8
+ 197 0020 A0FB0202 		umull	r0, r2, r0, r2
+ 198 0024 1209     		lsrs	r2, r2, #4
+ 199 0026 9200     		lsls	r2, r2, #2
+ 200 0028 5A64     		str	r2, [r3, #68]
+ 201 002a 244A     		ldr	r2, .L32+12
+ 202 002c 1A64     		str	r2, [r3, #64]
+ 203              	.L23:
+ 204 002e 0022     		movs	r2, #0
+ 205 0030 0A60     		str	r2, [r1]
+ 206 0032 5A6C     		ldr	r2, [r3, #68]
+ 207 0034 02F01C01 		and	r1, r2, #28
+ 208 0038 186C     		ldr	r0, [r3, #64]
+ 209 003a 0122     		movs	r2, #1
+ 210 003c 8A40     		lsls	r2, r2, r1
+ 211 003e 4260     		str	r2, [r0, #4]
+ 212 0040 196C     		ldr	r1, [r3, #64]
+ 213 0042 1E4A     		ldr	r2, .L32+12
+ 214 0044 9142     		cmp	r1, r2
+ 215 0046 23D0     		beq	.L31
+ 216 0048 1C4C     		ldr	r4, .L32+12
+ 217 004a D4F8A824 		ldr	r2, [r4, #1192]
+ 218 004e 596C     		ldr	r1, [r3, #68]
+ 219 0050 01F01C00 		and	r0, r1, #28
+ 220 0054 0F21     		movs	r1, #15
+ 221 0056 8140     		lsls	r1, r1, r0
+ 222 0058 22EA0102 		bic	r2, r2, r1
+ 223 005c C4F8A824 		str	r2, [r4, #1192]
+ 224              	.L25:
+ 225 0060 0020     		movs	r0, #0
+ 226 0062 D862     		str	r0, [r3, #44]
+ 227 0064 1863     		str	r0, [r3, #48]
+ 228 0066 5863     		str	r0, [r3, #52]
+ 229 0068 9863     		str	r0, [r3, #56]
+ 230 006a D863     		str	r0, [r3, #60]
+ 231 006c 83F82500 		strb	r0, [r3, #37]
+ 232 0070 83F82400 		strb	r0, [r3, #36]
+ 233 0074 5DF8044B 		ldr	r4, [sp], #4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 5
+
+
+ 234 0078 7047     		bx	lr
+ 235              	.L22:
+ 236 007a 114A     		ldr	r2, .L32+16
+ 237 007c 0A44     		add	r2, r2, r1
+ 238 007e 0E48     		ldr	r0, .L32+8
+ 239 0080 A0FB0202 		umull	r0, r2, r0, r2
+ 240 0084 1209     		lsrs	r2, r2, #4
+ 241 0086 9200     		lsls	r2, r2, #2
+ 242 0088 5A64     		str	r2, [r3, #68]
+ 243 008a 0E4A     		ldr	r2, .L32+20
+ 244 008c 1A64     		str	r2, [r3, #64]
+ 245 008e CEE7     		b	.L23
+ 246              	.L31:
+ 247 0090 1446     		mov	r4, r2
+ 248 0092 D2F8A820 		ldr	r2, [r2, #168]
+ 249 0096 596C     		ldr	r1, [r3, #68]
+ 250 0098 01F01C00 		and	r0, r1, #28
+ 251 009c 0F21     		movs	r1, #15
+ 252 009e 8140     		lsls	r1, r1, r0
+ 253 00a0 22EA0102 		bic	r2, r2, r1
+ 254 00a4 C4F8A820 		str	r2, [r4, #168]
+ 255 00a8 DAE7     		b	.L25
+ 256              	.L26:
+ 257 00aa 0120     		movs	r0, #1
+ 258 00ac 7047     		bx	lr
+ 259              	.L33:
+ 260 00ae 00BF     		.align	2
+ 261              	.L32:
+ 262 00b0 07040240 		.word	1073873927
+ 263 00b4 F8FFFDBF 		.word	-1073872904
+ 264 00b8 CDCCCCCC 		.word	-858993459
+ 265 00bc 00000240 		.word	1073872896
+ 266 00c0 F8FBFDBF 		.word	-1073873928
+ 267 00c4 00040240 		.word	1073873920
+ 269              		.section	.text.HAL_DMA_Start,"ax",%progbits
+ 270              		.align	1
+ 271              		.global	HAL_DMA_Start
+ 272              		.syntax unified
+ 273              		.thumb
+ 274              		.thumb_func
+ 276              	HAL_DMA_Start:
+ 277              		@ args = 0, pretend = 0, frame = 0
+ 278              		@ frame_needed = 0, uses_anonymous_args = 0
+ 279 0000 70B5     		push	{r4, r5, r6, lr}
+ 280 0002 0446     		mov	r4, r0
+ 281 0004 90F82400 		ldrb	r0, [r0, #36]	@ zero_extendqisi2
+ 282 0008 0128     		cmp	r0, #1
+ 283 000a 1FD0     		beq	.L37
+ 284 000c 0120     		movs	r0, #1
+ 285 000e 84F82400 		strb	r0, [r4, #36]
+ 286 0012 94F82500 		ldrb	r0, [r4, #37]	@ zero_extendqisi2
+ 287 0016 0128     		cmp	r0, #1
+ 288 0018 04D0     		beq	.L39
+ 289 001a 0023     		movs	r3, #0
+ 290 001c 84F82430 		strb	r3, [r4, #36]
+ 291 0020 0220     		movs	r0, #2
+ 292              	.L35:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 6
+
+
+ 293 0022 70BD     		pop	{r4, r5, r6, pc}
+ 294              	.L39:
+ 295 0024 0220     		movs	r0, #2
+ 296 0026 84F82500 		strb	r0, [r4, #37]
+ 297 002a 0025     		movs	r5, #0
+ 298 002c E563     		str	r5, [r4, #60]
+ 299 002e 2668     		ldr	r6, [r4]
+ 300 0030 3068     		ldr	r0, [r6]
+ 301 0032 20F00100 		bic	r0, r0, #1
+ 302 0036 3060     		str	r0, [r6]
+ 303 0038 2046     		mov	r0, r4
+ 304 003a FFF7FEFF 		bl	DMA_SetConfig
+ 305 003e 2268     		ldr	r2, [r4]
+ 306 0040 1368     		ldr	r3, [r2]
+ 307 0042 43F00103 		orr	r3, r3, #1
+ 308 0046 1360     		str	r3, [r2]
+ 309 0048 2846     		mov	r0, r5
+ 310 004a EAE7     		b	.L35
+ 311              	.L37:
+ 312 004c 0220     		movs	r0, #2
+ 313 004e E8E7     		b	.L35
+ 315              		.section	.text.HAL_DMA_Start_IT,"ax",%progbits
+ 316              		.align	1
+ 317              		.global	HAL_DMA_Start_IT
+ 318              		.syntax unified
+ 319              		.thumb
+ 320              		.thumb_func
+ 322              	HAL_DMA_Start_IT:
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 0, uses_anonymous_args = 0
+ 325 0000 38B5     		push	{r3, r4, r5, lr}
+ 326 0002 0446     		mov	r4, r0
+ 327 0004 90F82400 		ldrb	r0, [r0, #36]	@ zero_extendqisi2
+ 328 0008 0128     		cmp	r0, #1
+ 329 000a 31D0     		beq	.L45
+ 330 000c 0120     		movs	r0, #1
+ 331 000e 84F82400 		strb	r0, [r4, #36]
+ 332 0012 94F82500 		ldrb	r0, [r4, #37]	@ zero_extendqisi2
+ 333 0016 0128     		cmp	r0, #1
+ 334 0018 04D0     		beq	.L47
+ 335 001a 0023     		movs	r3, #0
+ 336 001c 84F82430 		strb	r3, [r4, #36]
+ 337 0020 0220     		movs	r0, #2
+ 338              	.L41:
+ 339 0022 38BD     		pop	{r3, r4, r5, pc}
+ 340              	.L47:
+ 341 0024 0220     		movs	r0, #2
+ 342 0026 84F82500 		strb	r0, [r4, #37]
+ 343 002a 0020     		movs	r0, #0
+ 344 002c E063     		str	r0, [r4, #60]
+ 345 002e 2568     		ldr	r5, [r4]
+ 346 0030 2868     		ldr	r0, [r5]
+ 347 0032 20F00100 		bic	r0, r0, #1
+ 348 0036 2860     		str	r0, [r5]
+ 349 0038 2046     		mov	r0, r4
+ 350 003a FFF7FEFF 		bl	DMA_SetConfig
+ 351 003e 236B     		ldr	r3, [r4, #48]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 7
+
+
+ 352 0040 5BB1     		cbz	r3, .L43
+ 353 0042 2268     		ldr	r2, [r4]
+ 354 0044 1368     		ldr	r3, [r2]
+ 355 0046 43F00E03 		orr	r3, r3, #14
+ 356 004a 1360     		str	r3, [r2]
+ 357              	.L44:
+ 358 004c 2268     		ldr	r2, [r4]
+ 359 004e 1368     		ldr	r3, [r2]
+ 360 0050 43F00103 		orr	r3, r3, #1
+ 361 0054 1360     		str	r3, [r2]
+ 362 0056 0020     		movs	r0, #0
+ 363 0058 E3E7     		b	.L41
+ 364              	.L43:
+ 365 005a 2268     		ldr	r2, [r4]
+ 366 005c 1368     		ldr	r3, [r2]
+ 367 005e 23F00403 		bic	r3, r3, #4
+ 368 0062 1360     		str	r3, [r2]
+ 369 0064 2268     		ldr	r2, [r4]
+ 370 0066 1368     		ldr	r3, [r2]
+ 371 0068 43F00A03 		orr	r3, r3, #10
+ 372 006c 1360     		str	r3, [r2]
+ 373 006e EDE7     		b	.L44
+ 374              	.L45:
+ 375 0070 0220     		movs	r0, #2
+ 376 0072 D6E7     		b	.L41
+ 378              		.section	.text.HAL_DMA_Abort,"ax",%progbits
+ 379              		.align	1
+ 380              		.global	HAL_DMA_Abort
+ 381              		.syntax unified
+ 382              		.thumb
+ 383              		.thumb_func
+ 385              	HAL_DMA_Abort:
+ 386              		@ args = 0, pretend = 0, frame = 0
+ 387              		@ frame_needed = 0, uses_anonymous_args = 0
+ 388              		@ link register save eliminated.
+ 389 0000 90F82530 		ldrb	r3, [r0, #37]	@ zero_extendqisi2
+ 390 0004 022B     		cmp	r3, #2
+ 391 0006 06D0     		beq	.L49
+ 392 0008 0423     		movs	r3, #4
+ 393 000a C363     		str	r3, [r0, #60]
+ 394 000c 0023     		movs	r3, #0
+ 395 000e 80F82430 		strb	r3, [r0, #36]
+ 396 0012 0120     		movs	r0, #1
+ 397 0014 7047     		bx	lr
+ 398              	.L49:
+ 399 0016 0268     		ldr	r2, [r0]
+ 400 0018 1368     		ldr	r3, [r2]
+ 401 001a 23F00E03 		bic	r3, r3, #14
+ 402 001e 1360     		str	r3, [r2]
+ 403 0020 0268     		ldr	r2, [r0]
+ 404 0022 1368     		ldr	r3, [r2]
+ 405 0024 23F00103 		bic	r3, r3, #1
+ 406 0028 1360     		str	r3, [r2]
+ 407 002a 436C     		ldr	r3, [r0, #68]
+ 408 002c 03F01C03 		and	r3, r3, #28
+ 409 0030 016C     		ldr	r1, [r0, #64]
+ 410 0032 0122     		movs	r2, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 8
+
+
+ 411 0034 02FA03F3 		lsl	r3, r2, r3
+ 412 0038 4B60     		str	r3, [r1, #4]
+ 413 003a 80F82520 		strb	r2, [r0, #37]
+ 414 003e 0023     		movs	r3, #0
+ 415 0040 80F82430 		strb	r3, [r0, #36]
+ 416 0044 1846     		mov	r0, r3
+ 417 0046 7047     		bx	lr
+ 419              		.section	.text.HAL_DMA_Abort_IT,"ax",%progbits
+ 420              		.align	1
+ 421              		.global	HAL_DMA_Abort_IT
+ 422              		.syntax unified
+ 423              		.thumb
+ 424              		.thumb_func
+ 426              	HAL_DMA_Abort_IT:
+ 427              		@ args = 0, pretend = 0, frame = 0
+ 428              		@ frame_needed = 0, uses_anonymous_args = 0
+ 429 0000 08B5     		push	{r3, lr}
+ 430 0002 90F82530 		ldrb	r3, [r0, #37]	@ zero_extendqisi2
+ 431 0006 022B     		cmp	r3, #2
+ 432 0008 03D0     		beq	.L52
+ 433 000a 0423     		movs	r3, #4
+ 434 000c C363     		str	r3, [r0, #60]
+ 435 000e 0120     		movs	r0, #1
+ 436              	.L53:
+ 437 0010 08BD     		pop	{r3, pc}
+ 438              	.L52:
+ 439 0012 0268     		ldr	r2, [r0]
+ 440 0014 1368     		ldr	r3, [r2]
+ 441 0016 23F00E03 		bic	r3, r3, #14
+ 442 001a 1360     		str	r3, [r2]
+ 443 001c 0268     		ldr	r2, [r0]
+ 444 001e 1368     		ldr	r3, [r2]
+ 445 0020 23F00103 		bic	r3, r3, #1
+ 446 0024 1360     		str	r3, [r2]
+ 447 0026 436C     		ldr	r3, [r0, #68]
+ 448 0028 03F01C03 		and	r3, r3, #28
+ 449 002c 016C     		ldr	r1, [r0, #64]
+ 450 002e 0122     		movs	r2, #1
+ 451 0030 02FA03F3 		lsl	r3, r2, r3
+ 452 0034 4B60     		str	r3, [r1, #4]
+ 453 0036 80F82520 		strb	r2, [r0, #37]
+ 454 003a 0023     		movs	r3, #0
+ 455 003c 80F82430 		strb	r3, [r0, #36]
+ 456 0040 836B     		ldr	r3, [r0, #56]
+ 457 0042 13B1     		cbz	r3, .L54
+ 458 0044 9847     		blx	r3
+ 459 0046 0020     		movs	r0, #0
+ 460 0048 E2E7     		b	.L53
+ 461              	.L54:
+ 462 004a 0020     		movs	r0, #0
+ 463 004c E0E7     		b	.L53
+ 465              		.section	.text.HAL_DMA_PollForTransfer,"ax",%progbits
+ 466              		.align	1
+ 467              		.global	HAL_DMA_PollForTransfer
+ 468              		.syntax unified
+ 469              		.thumb
+ 470              		.thumb_func
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 9
+
+
+ 472              	HAL_DMA_PollForTransfer:
+ 473              		@ args = 0, pretend = 0, frame = 0
+ 474              		@ frame_needed = 0, uses_anonymous_args = 0
+ 475 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 476 0004 0446     		mov	r4, r0
+ 477 0006 90F82530 		ldrb	r3, [r0, #37]	@ zero_extendqisi2
+ 478 000a 022B     		cmp	r3, #2
+ 479 000c 07D0     		beq	.L57
+ 480 000e 0423     		movs	r3, #4
+ 481 0010 C363     		str	r3, [r0, #60]
+ 482 0012 0023     		movs	r3, #0
+ 483 0014 80F82430 		strb	r3, [r0, #36]
+ 484 0018 0120     		movs	r0, #1
+ 485              	.L58:
+ 486 001a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 487              	.L57:
+ 488 001e 0E46     		mov	r6, r1
+ 489 0020 1546     		mov	r5, r2
+ 490 0022 0368     		ldr	r3, [r0]
+ 491 0024 1B68     		ldr	r3, [r3]
+ 492 0026 13F0200F 		tst	r3, #32
+ 493 002a 2BD1     		bne	.L69
+ 494 002c 79BB     		cbnz	r1, .L60
+ 495 002e 436C     		ldr	r3, [r0, #68]
+ 496 0030 03F01C03 		and	r3, r3, #28
+ 497 0034 0227     		movs	r7, #2
+ 498 0036 9F40     		lsls	r7, r7, r3
+ 499              	.L61:
+ 500 0038 FFF7FEFF 		bl	HAL_GetTick
+ 501 003c 8046     		mov	r8, r0
+ 502              	.L64:
+ 503 003e 226C     		ldr	r2, [r4, #64]
+ 504 0040 1368     		ldr	r3, [r2]
+ 505 0042 3B42     		tst	r3, r7
+ 506 0044 34D1     		bne	.L70
+ 507 0046 1168     		ldr	r1, [r2]
+ 508 0048 636C     		ldr	r3, [r4, #68]
+ 509 004a 03F01C03 		and	r3, r3, #28
+ 510 004e 4FF0080C 		mov	ip, #8
+ 511 0052 0CFA03FC 		lsl	ip, ip, r3
+ 512 0056 11EA0C0F 		tst	r1, ip
+ 513 005a 1ED1     		bne	.L71
+ 514 005c B5F1FF3F 		cmp	r5, #-1
+ 515 0060 EDD0     		beq	.L64
+ 516 0062 FFF7FEFF 		bl	HAL_GetTick
+ 517 0066 A0EB0800 		sub	r0, r0, r8
+ 518 006a A842     		cmp	r0, r5
+ 519 006c 01D8     		bhi	.L65
+ 520 006e 002D     		cmp	r5, #0
+ 521 0070 E5D1     		bne	.L64
+ 522              	.L65:
+ 523 0072 2023     		movs	r3, #32
+ 524 0074 E363     		str	r3, [r4, #60]
+ 525 0076 0120     		movs	r0, #1
+ 526 0078 84F82500 		strb	r0, [r4, #37]
+ 527 007c 0023     		movs	r3, #0
+ 528 007e 84F82430 		strb	r3, [r4, #36]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 10
+
+
+ 529 0082 CAE7     		b	.L58
+ 530              	.L69:
+ 531 0084 4FF48073 		mov	r3, #256
+ 532 0088 C363     		str	r3, [r0, #60]
+ 533 008a 0120     		movs	r0, #1
+ 534 008c C5E7     		b	.L58
+ 535              	.L60:
+ 536 008e 436C     		ldr	r3, [r0, #68]
+ 537 0090 03F01C03 		and	r3, r3, #28
+ 538 0094 0427     		movs	r7, #4
+ 539 0096 9F40     		lsls	r7, r7, r3
+ 540 0098 CEE7     		b	.L61
+ 541              	.L71:
+ 542 009a 0120     		movs	r0, #1
+ 543 009c 00FA03F3 		lsl	r3, r0, r3
+ 544 00a0 5360     		str	r3, [r2, #4]
+ 545 00a2 E063     		str	r0, [r4, #60]
+ 546 00a4 84F82500 		strb	r0, [r4, #37]
+ 547 00a8 0023     		movs	r3, #0
+ 548 00aa 84F82430 		strb	r3, [r4, #36]
+ 549 00ae B4E7     		b	.L58
+ 550              	.L70:
+ 551 00b0 6EB9     		cbnz	r6, .L67
+ 552 00b2 636C     		ldr	r3, [r4, #68]
+ 553 00b4 03F01C01 		and	r1, r3, #28
+ 554 00b8 0223     		movs	r3, #2
+ 555 00ba 8B40     		lsls	r3, r3, r1
+ 556 00bc 5360     		str	r3, [r2, #4]
+ 557 00be 0023     		movs	r3, #0
+ 558 00c0 84F82430 		strb	r3, [r4, #36]
+ 559 00c4 0123     		movs	r3, #1
+ 560 00c6 84F82530 		strb	r3, [r4, #37]
+ 561 00ca 3046     		mov	r0, r6
+ 562 00cc A5E7     		b	.L58
+ 563              	.L67:
+ 564 00ce 616C     		ldr	r1, [r4, #68]
+ 565 00d0 01F01C01 		and	r1, r1, #28
+ 566 00d4 0423     		movs	r3, #4
+ 567 00d6 8B40     		lsls	r3, r3, r1
+ 568 00d8 5360     		str	r3, [r2, #4]
+ 569 00da 0020     		movs	r0, #0
+ 570 00dc 9DE7     		b	.L58
+ 572              		.section	.text.HAL_DMA_IRQHandler,"ax",%progbits
+ 573              		.align	1
+ 574              		.global	HAL_DMA_IRQHandler
+ 575              		.syntax unified
+ 576              		.thumb
+ 577              		.thumb_func
+ 579              	HAL_DMA_IRQHandler:
+ 580              		@ args = 0, pretend = 0, frame = 0
+ 581              		@ frame_needed = 0, uses_anonymous_args = 0
+ 582 0000 38B5     		push	{r3, r4, r5, lr}
+ 583 0002 036C     		ldr	r3, [r0, #64]
+ 584 0004 1968     		ldr	r1, [r3]
+ 585 0006 0468     		ldr	r4, [r0]
+ 586 0008 2568     		ldr	r5, [r4]
+ 587 000a 436C     		ldr	r3, [r0, #68]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 11
+
+
+ 588 000c 03F01C03 		and	r3, r3, #28
+ 589 0010 0422     		movs	r2, #4
+ 590 0012 9A40     		lsls	r2, r2, r3
+ 591 0014 0A42     		tst	r2, r1
+ 592 0016 15D0     		beq	.L73
+ 593 0018 15F0040F 		tst	r5, #4
+ 594 001c 12D0     		beq	.L73
+ 595 001e 2368     		ldr	r3, [r4]
+ 596 0020 13F0200F 		tst	r3, #32
+ 597 0024 03D1     		bne	.L74
+ 598 0026 2368     		ldr	r3, [r4]
+ 599 0028 23F00403 		bic	r3, r3, #4
+ 600 002c 2360     		str	r3, [r4]
+ 601              	.L74:
+ 602 002e 436C     		ldr	r3, [r0, #68]
+ 603 0030 03F01C02 		and	r2, r3, #28
+ 604 0034 016C     		ldr	r1, [r0, #64]
+ 605 0036 0423     		movs	r3, #4
+ 606 0038 9340     		lsls	r3, r3, r2
+ 607 003a 4B60     		str	r3, [r1, #4]
+ 608 003c 036B     		ldr	r3, [r0, #48]
+ 609 003e 03B1     		cbz	r3, .L72
+ 610 0040 9847     		blx	r3
+ 611              	.L72:
+ 612 0042 38BD     		pop	{r3, r4, r5, pc}
+ 613              	.L73:
+ 614 0044 0222     		movs	r2, #2
+ 615 0046 9A40     		lsls	r2, r2, r3
+ 616 0048 0A42     		tst	r2, r1
+ 617 004a 1CD0     		beq	.L76
+ 618 004c 15F0020F 		tst	r5, #2
+ 619 0050 19D0     		beq	.L76
+ 620 0052 2368     		ldr	r3, [r4]
+ 621 0054 13F0200F 		tst	r3, #32
+ 622 0058 06D1     		bne	.L77
+ 623 005a 2368     		ldr	r3, [r4]
+ 624 005c 23F00A03 		bic	r3, r3, #10
+ 625 0060 2360     		str	r3, [r4]
+ 626 0062 0123     		movs	r3, #1
+ 627 0064 80F82530 		strb	r3, [r0, #37]
+ 628              	.L77:
+ 629 0068 436C     		ldr	r3, [r0, #68]
+ 630 006a 03F01C02 		and	r2, r3, #28
+ 631 006e 016C     		ldr	r1, [r0, #64]
+ 632 0070 0223     		movs	r3, #2
+ 633 0072 9340     		lsls	r3, r3, r2
+ 634 0074 4B60     		str	r3, [r1, #4]
+ 635 0076 0023     		movs	r3, #0
+ 636 0078 80F82430 		strb	r3, [r0, #36]
+ 637 007c C36A     		ldr	r3, [r0, #44]
+ 638 007e 002B     		cmp	r3, #0
+ 639 0080 DFD0     		beq	.L72
+ 640 0082 9847     		blx	r3
+ 641 0084 DDE7     		b	.L72
+ 642              	.L76:
+ 643 0086 0822     		movs	r2, #8
+ 644 0088 02FA03F3 		lsl	r3, r2, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 12
+
+
+ 645 008c 0B42     		tst	r3, r1
+ 646 008e D8D0     		beq	.L72
+ 647 0090 15F0080F 		tst	r5, #8
+ 648 0094 D5D0     		beq	.L72
+ 649 0096 2368     		ldr	r3, [r4]
+ 650 0098 23F00E03 		bic	r3, r3, #14
+ 651 009c 2360     		str	r3, [r4]
+ 652 009e 436C     		ldr	r3, [r0, #68]
+ 653 00a0 03F01C03 		and	r3, r3, #28
+ 654 00a4 016C     		ldr	r1, [r0, #64]
+ 655 00a6 0122     		movs	r2, #1
+ 656 00a8 02FA03F3 		lsl	r3, r2, r3
+ 657 00ac 4B60     		str	r3, [r1, #4]
+ 658 00ae C263     		str	r2, [r0, #60]
+ 659 00b0 80F82520 		strb	r2, [r0, #37]
+ 660 00b4 0023     		movs	r3, #0
+ 661 00b6 80F82430 		strb	r3, [r0, #36]
+ 662 00ba 436B     		ldr	r3, [r0, #52]
+ 663 00bc 002B     		cmp	r3, #0
+ 664 00be C0D0     		beq	.L72
+ 665 00c0 9847     		blx	r3
+ 666 00c2 BEE7     		b	.L72
+ 668              		.section	.text.HAL_DMA_RegisterCallback,"ax",%progbits
+ 669              		.align	1
+ 670              		.global	HAL_DMA_RegisterCallback
+ 671              		.syntax unified
+ 672              		.thumb
+ 673              		.thumb_func
+ 675              	HAL_DMA_RegisterCallback:
+ 676              		@ args = 0, pretend = 0, frame = 0
+ 677              		@ frame_needed = 0, uses_anonymous_args = 0
+ 678              		@ link register save eliminated.
+ 679 0000 0346     		mov	r3, r0
+ 680 0002 90F82400 		ldrb	r0, [r0, #36]	@ zero_extendqisi2
+ 681 0006 0128     		cmp	r0, #1
+ 682 0008 20D0     		beq	.L87
+ 683 000a 0120     		movs	r0, #1
+ 684 000c 83F82400 		strb	r0, [r3, #36]
+ 685 0010 93F825C0 		ldrb	ip, [r3, #37]	@ zero_extendqisi2
+ 686 0014 5FFA8CF0 		uxtb	r0, ip
+ 687 0018 BCF1010F 		cmp	ip, #1
+ 688 001c 04D0     		beq	.L90
+ 689 001e 0120     		movs	r0, #1
+ 690              	.L81:
+ 691 0020 0022     		movs	r2, #0
+ 692 0022 83F82420 		strb	r2, [r3, #36]
+ 693 0026 7047     		bx	lr
+ 694              	.L90:
+ 695 0028 0329     		cmp	r1, #3
+ 696 002a F9D8     		bhi	.L81
+ 697 002c DFE801F0 		tbb	[pc, r1]
+ 698              	.L83:
+ 699 0030 02       		.byte	(.L86-.L83)/2
+ 700 0031 05       		.byte	(.L85-.L83)/2
+ 701 0032 08       		.byte	(.L84-.L83)/2
+ 702 0033 0B       		.byte	(.L82-.L83)/2
+ 703              		.p2align 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 13
+
+
+ 704              	.L86:
+ 705 0034 DA62     		str	r2, [r3, #44]
+ 706 0036 0846     		mov	r0, r1
+ 707 0038 F2E7     		b	.L81
+ 708              	.L85:
+ 709 003a 1A63     		str	r2, [r3, #48]
+ 710 003c 0020     		movs	r0, #0
+ 711 003e EFE7     		b	.L81
+ 712              	.L84:
+ 713 0040 5A63     		str	r2, [r3, #52]
+ 714 0042 0020     		movs	r0, #0
+ 715 0044 ECE7     		b	.L81
+ 716              	.L82:
+ 717 0046 9A63     		str	r2, [r3, #56]
+ 718 0048 0020     		movs	r0, #0
+ 719 004a E9E7     		b	.L81
+ 720              	.L87:
+ 721 004c 0220     		movs	r0, #2
+ 722 004e 7047     		bx	lr
+ 724              		.section	.text.HAL_DMA_UnRegisterCallback,"ax",%progbits
+ 725              		.align	1
+ 726              		.global	HAL_DMA_UnRegisterCallback
+ 727              		.syntax unified
+ 728              		.thumb
+ 729              		.thumb_func
+ 731              	HAL_DMA_UnRegisterCallback:
+ 732              		@ args = 0, pretend = 0, frame = 0
+ 733              		@ frame_needed = 0, uses_anonymous_args = 0
+ 734              		@ link register save eliminated.
+ 735 0000 0346     		mov	r3, r0
+ 736 0002 90F82420 		ldrb	r2, [r0, #36]	@ zero_extendqisi2
+ 737 0006 012A     		cmp	r2, #1
+ 738 0008 26D0     		beq	.L100
+ 739 000a 0122     		movs	r2, #1
+ 740 000c 80F82420 		strb	r2, [r0, #36]
+ 741 0010 90F82520 		ldrb	r2, [r0, #37]	@ zero_extendqisi2
+ 742 0014 D0B2     		uxtb	r0, r2
+ 743 0016 012A     		cmp	r2, #1
+ 744 0018 04D0     		beq	.L103
+ 745 001a 0120     		movs	r0, #1
+ 746              	.L93:
+ 747 001c 0022     		movs	r2, #0
+ 748 001e 83F82420 		strb	r2, [r3, #36]
+ 749 0022 7047     		bx	lr
+ 750              	.L103:
+ 751 0024 0429     		cmp	r1, #4
+ 752 0026 F9D8     		bhi	.L93
+ 753 0028 DFE801F0 		tbb	[pc, r1]
+ 754              	.L95:
+ 755 002c 03       		.byte	(.L99-.L95)/2
+ 756 002d 07       		.byte	(.L98-.L95)/2
+ 757 002e 0A       		.byte	(.L97-.L95)/2
+ 758 002f 0D       		.byte	(.L96-.L95)/2
+ 759 0030 10       		.byte	(.L94-.L95)/2
+ 760 0031 00       		.p2align 1
+ 761              	.L99:
+ 762 0032 0022     		movs	r2, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 14
+
+
+ 763 0034 DA62     		str	r2, [r3, #44]
+ 764 0036 0846     		mov	r0, r1
+ 765 0038 F0E7     		b	.L93
+ 766              	.L98:
+ 767 003a 0020     		movs	r0, #0
+ 768 003c 1863     		str	r0, [r3, #48]
+ 769 003e EDE7     		b	.L93
+ 770              	.L97:
+ 771 0040 0020     		movs	r0, #0
+ 772 0042 5863     		str	r0, [r3, #52]
+ 773 0044 EAE7     		b	.L93
+ 774              	.L96:
+ 775 0046 0020     		movs	r0, #0
+ 776 0048 9863     		str	r0, [r3, #56]
+ 777 004a E7E7     		b	.L93
+ 778              	.L94:
+ 779 004c 0020     		movs	r0, #0
+ 780 004e D862     		str	r0, [r3, #44]
+ 781 0050 1863     		str	r0, [r3, #48]
+ 782 0052 5863     		str	r0, [r3, #52]
+ 783 0054 9863     		str	r0, [r3, #56]
+ 784 0056 E1E7     		b	.L93
+ 785              	.L100:
+ 786 0058 0220     		movs	r0, #2
+ 787 005a 7047     		bx	lr
+ 789              		.section	.text.HAL_DMA_GetState,"ax",%progbits
+ 790              		.align	1
+ 791              		.global	HAL_DMA_GetState
+ 792              		.syntax unified
+ 793              		.thumb
+ 794              		.thumb_func
+ 796              	HAL_DMA_GetState:
+ 797              		@ args = 0, pretend = 0, frame = 0
+ 798              		@ frame_needed = 0, uses_anonymous_args = 0
+ 799              		@ link register save eliminated.
+ 800 0000 90F82500 		ldrb	r0, [r0, #37]	@ zero_extendqisi2
+ 801 0004 7047     		bx	lr
+ 803              		.section	.text.HAL_DMA_GetError,"ax",%progbits
+ 804              		.align	1
+ 805              		.global	HAL_DMA_GetError
+ 806              		.syntax unified
+ 807              		.thumb
+ 808              		.thumb_func
+ 810              	HAL_DMA_GetError:
+ 811              		@ args = 0, pretend = 0, frame = 0
+ 812              		@ frame_needed = 0, uses_anonymous_args = 0
+ 813              		@ link register save eliminated.
+ 814 0000 C06B     		ldr	r0, [r0, #60]
+ 815 0002 7047     		bx	lr
+ 817              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_dma.c
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:18     .text.DMA_SetConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:23     .text.DMA_SetConfig:00000000 DMA_SetConfig
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:54     .text.HAL_DMA_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:60     .text.HAL_DMA_Init:00000000 HAL_DMA_Init
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:164    .text.HAL_DMA_Init:000000ec $d
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:172    .text.HAL_DMA_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:178    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:262    .text.HAL_DMA_DeInit:000000b0 $d
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:270    .text.HAL_DMA_Start:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:276    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:316    .text.HAL_DMA_Start_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:322    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:379    .text.HAL_DMA_Abort:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:385    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:420    .text.HAL_DMA_Abort_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:426    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:466    .text.HAL_DMA_PollForTransfer:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:472    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:573    .text.HAL_DMA_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:579    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:669    .text.HAL_DMA_RegisterCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:675    .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:699    .text.HAL_DMA_RegisterCallback:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:703    .text.HAL_DMA_RegisterCallback:00000034 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:725    .text.HAL_DMA_UnRegisterCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:731    .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:755    .text.HAL_DMA_UnRegisterCallback:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:790    .text.HAL_DMA_GetState:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:796    .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:804    .text.HAL_DMA_GetError:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:810    .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:760    .text.HAL_DMA_UnRegisterCallback:00000031 $d
+C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:760    .text.HAL_DMA_UnRegisterCallback:00000032 $t
+
+UNDEFINED SYMBOLS
+HAL_GetTick

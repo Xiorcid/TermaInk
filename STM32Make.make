@@ -83,6 +83,7 @@ Core/Src/Fonts/font16.c \
 Core/Src/Fonts/font20.c \
 Core/Src/Fonts/font24.c \
 Core/Src/Fonts/font8.c \
+Core/Src/USB_storage.c \
 Core/Src/buttons.c \
 Core/Src/ds18b20.c \
 Core/Src/main.c \

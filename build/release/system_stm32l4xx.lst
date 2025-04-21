@@ -1,0 +1,224 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"system_stm32l4xx.c"
+  16              		.text
+  17              		.section	.text.SystemInit,"ax",%progbits
+  18              		.align	1
+  19              		.global	SystemInit
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	SystemInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 034A     		ldr	r2, .L2
+  29 0002 D2F88830 		ldr	r3, [r2, #136]
+  30 0006 43F47003 		orr	r3, r3, #15728640
+  31 000a C2F88830 		str	r3, [r2, #136]
+  32 000e 7047     		bx	lr
+  33              	.L3:
+  34              		.align	2
+  35              	.L2:
+  36 0010 00ED00E0 		.word	-536810240
+  38              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
+  39              		.align	1
+  40              		.global	SystemCoreClockUpdate
+  41              		.syntax unified
+  42              		.thumb
+  43              		.thumb_func
+  45              	SystemCoreClockUpdate:
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49 0000 2F4B     		ldr	r3, .L19
+  50 0002 1B68     		ldr	r3, [r3]
+  51 0004 13F0080F 		tst	r3, #8
+  52 0008 16D1     		bne	.L5
+  53 000a 2D4B     		ldr	r3, .L19
+  54 000c D3F89430 		ldr	r3, [r3, #148]
+  55 0010 C3F30323 		ubfx	r3, r3, #8, #4
+  56              	.L6:
+  57 0014 2B4A     		ldr	r2, .L19+4
+  58 0016 52F82320 		ldr	r2, [r2, r3, lsl #2]
+  59 001a 294B     		ldr	r3, .L19
+  60 001c 9B68     		ldr	r3, [r3, #8]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s 			page 2
+
+
+  61 001e 03F00C03 		and	r3, r3, #12
+  62 0022 0C2B     		cmp	r3, #12
+  63 0024 3ED8     		bhi	.L7
+  64 0026 DFE803F0 		tbb	[pc, r3]
+  65              	.L9:
+  66 002a 0C       		.byte	(.L12-.L9)/2
+  67 002b 3D       		.byte	(.L7-.L9)/2
+  68 002c 3D       		.byte	(.L7-.L9)/2
+  69 002d 3D       		.byte	(.L7-.L9)/2
+  70 002e 0F       		.byte	(.L11-.L9)/2
+  71 002f 3D       		.byte	(.L7-.L9)/2
+  72 0030 3D       		.byte	(.L7-.L9)/2
+  73 0031 3D       		.byte	(.L7-.L9)/2
+  74 0032 13       		.byte	(.L10-.L9)/2
+  75 0033 3D       		.byte	(.L7-.L9)/2
+  76 0034 3D       		.byte	(.L7-.L9)/2
+  77 0035 3D       		.byte	(.L7-.L9)/2
+  78 0036 17       		.byte	(.L8-.L9)/2
+  79 0037 00       		.p2align 1
+  80              	.L5:
+  81 0038 214B     		ldr	r3, .L19
+  82 003a 1B68     		ldr	r3, [r3]
+  83 003c C3F30313 		ubfx	r3, r3, #4, #4
+  84 0040 E8E7     		b	.L6
+  85              	.L12:
+  86 0042 214B     		ldr	r3, .L19+8
+  87 0044 1A60     		str	r2, [r3]
+  88 0046 2FE0     		b	.L13
+  89              	.L11:
+  90 0048 1F4B     		ldr	r3, .L19+8
+  91 004a 204A     		ldr	r2, .L19+12
+  92 004c 1A60     		str	r2, [r3]
+  93 004e 2BE0     		b	.L13
+  94              	.L10:
+  95 0050 1D4B     		ldr	r3, .L19+8
+  96 0052 1F4A     		ldr	r2, .L19+16
+  97 0054 1A60     		str	r2, [r3]
+  98 0056 27E0     		b	.L13
+  99              	.L8:
+ 100 0058 194B     		ldr	r3, .L19
+ 101 005a D968     		ldr	r1, [r3, #12]
+ 102 005c 01F00301 		and	r1, r1, #3
+ 103 0060 DB68     		ldr	r3, [r3, #12]
+ 104 0062 C3F30213 		ubfx	r3, r3, #4, #3
+ 105 0066 0133     		adds	r3, r3, #1
+ 106 0068 0229     		cmp	r1, #2
+ 107 006a 04D0     		beq	.L14
+ 108 006c 0329     		cmp	r1, #3
+ 109 006e 15D0     		beq	.L15
+ 110 0070 B2FBF3F2 		udiv	r2, r2, r3
+ 111 0074 02E0     		b	.L17
+ 112              	.L14:
+ 113 0076 154A     		ldr	r2, .L19+12
+ 114 0078 B2FBF3F2 		udiv	r2, r2, r3
+ 115              	.L17:
+ 116 007c 1049     		ldr	r1, .L19
+ 117 007e CB68     		ldr	r3, [r1, #12]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s 			page 3
+
+
+ 118 0080 C3F30623 		ubfx	r3, r3, #8, #7
+ 119 0084 02FB03F3 		mul	r3, r2, r3
+ 120 0088 CA68     		ldr	r2, [r1, #12]
+ 121 008a C2F34162 		ubfx	r2, r2, #25, #2
+ 122 008e 0132     		adds	r2, r2, #1
+ 123 0090 5200     		lsls	r2, r2, #1
+ 124 0092 B3FBF2F3 		udiv	r3, r3, r2
+ 125 0096 0C4A     		ldr	r2, .L19+8
+ 126 0098 1360     		str	r3, [r2]
+ 127 009a 05E0     		b	.L13
+ 128              	.L15:
+ 129 009c 0C4A     		ldr	r2, .L19+16
+ 130 009e B2FBF3F2 		udiv	r2, r2, r3
+ 131 00a2 EBE7     		b	.L17
+ 132              	.L7:
+ 133 00a4 084B     		ldr	r3, .L19+8
+ 134 00a6 1A60     		str	r2, [r3]
+ 135              	.L13:
+ 136 00a8 054B     		ldr	r3, .L19
+ 137 00aa 9B68     		ldr	r3, [r3, #8]
+ 138 00ac C3F30313 		ubfx	r3, r3, #4, #4
+ 139 00b0 084A     		ldr	r2, .L19+20
+ 140 00b2 D15C     		ldrb	r1, [r2, r3]	@ zero_extendqisi2
+ 141 00b4 044A     		ldr	r2, .L19+8
+ 142 00b6 1368     		ldr	r3, [r2]
+ 143 00b8 CB40     		lsrs	r3, r3, r1
+ 144 00ba 1360     		str	r3, [r2]
+ 145 00bc 7047     		bx	lr
+ 146              	.L20:
+ 147 00be 00BF     		.align	2
+ 148              	.L19:
+ 149 00c0 00100240 		.word	1073876992
+ 150 00c4 00000000 		.word	MSIRangeTable
+ 151 00c8 00000000 		.word	SystemCoreClock
+ 152 00cc 0024F400 		.word	16000000
+ 153 00d0 00127A00 		.word	8000000
+ 154 00d4 00000000 		.word	AHBPrescTable
+ 156              		.global	MSIRangeTable
+ 157              		.section	.rodata.MSIRangeTable,"a"
+ 158              		.align	2
+ 161              	MSIRangeTable:
+ 162 0000 A0860100 		.word	100000
+ 163 0004 400D0300 		.word	200000
+ 164 0008 801A0600 		.word	400000
+ 165 000c 00350C00 		.word	800000
+ 166 0010 40420F00 		.word	1000000
+ 167 0014 80841E00 		.word	2000000
+ 168 0018 00093D00 		.word	4000000
+ 169 001c 00127A00 		.word	8000000
+ 170 0020 0024F400 		.word	16000000
+ 171 0024 00366E01 		.word	24000000
+ 172 0028 0048E801 		.word	32000000
+ 173 002c 006CDC02 		.word	48000000
+ 174              		.global	APBPrescTable
+ 175              		.section	.rodata.APBPrescTable,"a"
+ 176              		.align	2
+ 179              	APBPrescTable:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s 			page 4
+
+
+ 180 0000 00000000 		.ascii	"\000\000\000\000\001\002\003\004"
+ 180      01020304 
+ 181              		.global	AHBPrescTable
+ 182              		.section	.rodata.AHBPrescTable,"a"
+ 183              		.align	2
+ 186              	AHBPrescTable:
+ 187 0000 00000000 		.ascii	"\000\000\000\000\000\000\000\000\001\002\003\004\006"
+ 187      00000000 
+ 187      01020304 
+ 187      06
+ 188 000d 070809   		.ascii	"\007\010\011"
+ 189              		.global	SystemCoreClock
+ 190              		.section	.data.SystemCoreClock,"aw"
+ 191              		.align	2
+ 194              	SystemCoreClock:
+ 195 0000 00093D00 		.word	4000000
+ 196              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 system_stm32l4xx.c
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:18     .text.SystemInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:24     .text.SystemInit:00000000 SystemInit
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:36     .text.SystemInit:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:39     .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:45     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:66     .text.SystemCoreClockUpdate:0000002a $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:149    .text.SystemCoreClockUpdate:000000c0 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:161    .rodata.MSIRangeTable:00000000 MSIRangeTable
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:194    .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:186    .rodata.AHBPrescTable:00000000 AHBPrescTable
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:158    .rodata.MSIRangeTable:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:179    .rodata.APBPrescTable:00000000 APBPrescTable
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:176    .rodata.APBPrescTable:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:183    .rodata.AHBPrescTable:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:191    .data.SystemCoreClock:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:79     .text.SystemCoreClockUpdate:00000037 $d
+C:\Users\kroko\AppData\Local\Temp\ccWRxEvP.s:79     .text.SystemCoreClockUpdate:00000038 $t
+
+NO UNDEFINED SYMBOLS

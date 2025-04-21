@@ -1,0 +1,935 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_flash_ex.c"
+  16              		.text
+  17              		.section	.text.FLASH_MassErase,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  23              	FLASH_MassErase:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26              		@ link register save eliminated.
+  27 0000 10F0010F 		tst	r0, #1
+  28 0004 04D0     		beq	.L2
+  29 0006 054A     		ldr	r2, .L3
+  30 0008 5369     		ldr	r3, [r2, #20]
+  31 000a 43F00403 		orr	r3, r3, #4
+  32 000e 5361     		str	r3, [r2, #20]
+  33              	.L2:
+  34 0010 024A     		ldr	r2, .L3
+  35 0012 5369     		ldr	r3, [r2, #20]
+  36 0014 43F48033 		orr	r3, r3, #65536
+  37 0018 5361     		str	r3, [r2, #20]
+  38 001a 7047     		bx	lr
+  39              	.L4:
+  40              		.align	2
+  41              	.L3:
+  42 001c 00200240 		.word	1073881088
+  44              		.section	.text.FLASH_OB_GetWRP,"ax",%progbits
+  45              		.align	1
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  50              	FLASH_OB_GetWRP:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53              		@ link register save eliminated.
+  54 0000 48B9     		cbnz	r0, .L6
+  55 0002 0B48     		ldr	r0, .L9
+  56 0004 C36A     		ldr	r3, [r0, #44]
+  57 0006 03F03F03 		and	r3, r3, #63
+  58 000a 0B60     		str	r3, [r1]
+  59 000c C36A     		ldr	r3, [r0, #44]
+  60 000e C3F30543 		ubfx	r3, r3, #16, #6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 2
+
+
+  61 0012 1360     		str	r3, [r2]
+  62 0014 7047     		bx	lr
+  63              	.L6:
+  64 0016 0128     		cmp	r0, #1
+  65 0018 00D0     		beq	.L8
+  66              	.L5:
+  67 001a 7047     		bx	lr
+  68              	.L8:
+  69 001c 0448     		ldr	r0, .L9
+  70 001e 036B     		ldr	r3, [r0, #48]
+  71 0020 03F03F03 		and	r3, r3, #63
+  72 0024 0B60     		str	r3, [r1]
+  73 0026 036B     		ldr	r3, [r0, #48]
+  74 0028 C3F30543 		ubfx	r3, r3, #16, #6
+  75 002c 1360     		str	r3, [r2]
+  76 002e F4E7     		b	.L5
+  77              	.L10:
+  78              		.align	2
+  79              	.L9:
+  80 0030 00200240 		.word	1073881088
+  82              		.section	.text.FLASH_OB_GetRDP,"ax",%progbits
+  83              		.align	1
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  88              	FLASH_OB_GetRDP:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  92 0000 064B     		ldr	r3, .L15
+  93 0002 1B6A     		ldr	r3, [r3, #32]
+  94 0004 DBB2     		uxtb	r3, r3
+  95 0006 AA2B     		cmp	r3, #170
+  96 0008 03D0     		beq	.L12
+  97 000a CC2B     		cmp	r3, #204
+  98 000c 01D0     		beq	.L12
+  99 000e BB20     		movs	r0, #187
+ 100 0010 7047     		bx	lr
+ 101              	.L12:
+ 102 0012 024B     		ldr	r3, .L15
+ 103 0014 186A     		ldr	r0, [r3, #32]
+ 104 0016 C0B2     		uxtb	r0, r0
+ 105 0018 7047     		bx	lr
+ 106              	.L16:
+ 107 001a 00BF     		.align	2
+ 108              	.L15:
+ 109 001c 00200240 		.word	1073881088
+ 111              		.section	.text.FLASH_OB_GetUser,"ax",%progbits
+ 112              		.align	1
+ 113              		.syntax unified
+ 114              		.thumb
+ 115              		.thumb_func
+ 117              	FLASH_OB_GetUser:
+ 118              		@ args = 0, pretend = 0, frame = 0
+ 119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120              		@ link register save eliminated.
+ 121 0000 024B     		ldr	r3, .L18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 3
+
+
+ 122 0002 186A     		ldr	r0, [r3, #32]
+ 123 0004 20F0FF00 		bic	r0, r0, #255
+ 124 0008 7047     		bx	lr
+ 125              	.L19:
+ 126 000a 00BF     		.align	2
+ 127              	.L18:
+ 128 000c 00200240 		.word	1073881088
+ 130              		.section	.text.FLASH_OB_GetPCROP,"ax",%progbits
+ 131              		.align	1
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 136              	FLASH_OB_GetPCROP:
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 140 0000 30B4     		push	{r4, r5}
+ 141 0002 0368     		ldr	r3, [r0]
+ 142 0004 13F0010F 		tst	r3, #1
+ 143 0008 0ED0     		beq	.L21
+ 144 000a 0C4D     		ldr	r5, .L23
+ 145 000c 6C6A     		ldr	r4, [r5, #36]
+ 146 000e 0C4B     		ldr	r3, .L23+4
+ 147 0010 03EAC404 		and	r4, r3, r4, lsl #3
+ 148 0014 04F10064 		add	r4, r4, #134217728
+ 149 0018 0C60     		str	r4, [r1]
+ 150 001a A96A     		ldr	r1, [r5, #40]
+ 151 001c 03EAC103 		and	r3, r3, r1, lsl #3
+ 152 0020 03F10063 		add	r3, r3, #134217728
+ 153 0024 0733     		adds	r3, r3, #7
+ 154 0026 1360     		str	r3, [r2]
+ 155              	.L21:
+ 156 0028 044B     		ldr	r3, .L23
+ 157 002a 9A6A     		ldr	r2, [r3, #40]
+ 158 002c 02F00042 		and	r2, r2, #-2147483648
+ 159 0030 0368     		ldr	r3, [r0]
+ 160 0032 1343     		orrs	r3, r3, r2
+ 161 0034 0360     		str	r3, [r0]
+ 162 0036 30BC     		pop	{r4, r5}
+ 163 0038 7047     		bx	lr
+ 164              	.L24:
+ 165 003a 00BF     		.align	2
+ 166              	.L23:
+ 167 003c 00200240 		.word	1073881088
+ 168 0040 F8FF0100 		.word	131064
+ 170              		.section	.text.FLASH_OB_WRPConfig,"ax",%progbits
+ 171              		.align	1
+ 172              		.syntax unified
+ 173              		.thumb
+ 174              		.thumb_func
+ 176              	FLASH_OB_WRPConfig:
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ 179 0000 70B5     		push	{r4, r5, r6, lr}
+ 180 0002 0446     		mov	r4, r0
+ 181 0004 0E46     		mov	r6, r1
+ 182 0006 1546     		mov	r5, r2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 4
+
+
+ 183 0008 4CF25030 		movw	r0, #50000
+ 184 000c FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 185 0010 A8B9     		cbnz	r0, .L26
+ 186 0012 ACB9     		cbnz	r4, .L27
+ 187 0014 1049     		ldr	r1, .L30
+ 188 0016 CB6A     		ldr	r3, [r1, #44]
+ 189 0018 23F03F13 		bic	r3, r3, #4128831
+ 190 001c 46EA0542 		orr	r2, r6, r5, lsl #16
+ 191 0020 1A43     		orrs	r2, r2, r3
+ 192 0022 CA62     		str	r2, [r1, #44]
+ 193              	.L28:
+ 194 0024 0C4C     		ldr	r4, .L30
+ 195 0026 6369     		ldr	r3, [r4, #20]
+ 196 0028 43F40033 		orr	r3, r3, #131072
+ 197 002c 6361     		str	r3, [r4, #20]
+ 198 002e 4CF25030 		movw	r0, #50000
+ 199 0032 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 200 0036 6369     		ldr	r3, [r4, #20]
+ 201 0038 23F40033 		bic	r3, r3, #131072
+ 202 003c 6361     		str	r3, [r4, #20]
+ 203              	.L26:
+ 204 003e 70BD     		pop	{r4, r5, r6, pc}
+ 205              	.L27:
+ 206 0040 012C     		cmp	r4, #1
+ 207 0042 EFD1     		bne	.L28
+ 208 0044 044A     		ldr	r2, .L30
+ 209 0046 136B     		ldr	r3, [r2, #48]
+ 210 0048 23F03F13 		bic	r3, r3, #4128831
+ 211 004c 46EA0541 		orr	r1, r6, r5, lsl #16
+ 212 0050 0B43     		orrs	r3, r3, r1
+ 213 0052 1363     		str	r3, [r2, #48]
+ 214 0054 E6E7     		b	.L28
+ 215              	.L31:
+ 216 0056 00BF     		.align	2
+ 217              	.L30:
+ 218 0058 00200240 		.word	1073881088
+ 220              		.section	.text.FLASH_OB_RDPConfig,"ax",%progbits
+ 221              		.align	1
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 226              	FLASH_OB_RDPConfig:
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229 0000 38B5     		push	{r3, r4, r5, lr}
+ 230 0002 0446     		mov	r4, r0
+ 231 0004 4CF25030 		movw	r0, #50000
+ 232 0008 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 233 000c 00B1     		cbz	r0, .L35
+ 234              	.L33:
+ 235 000e 38BD     		pop	{r3, r4, r5, pc}
+ 236              	.L35:
+ 237 0010 094D     		ldr	r5, .L36
+ 238 0012 2B6A     		ldr	r3, [r5, #32]
+ 239 0014 23F0FF03 		bic	r3, r3, #255
+ 240 0018 2343     		orrs	r3, r3, r4
+ 241 001a 2B62     		str	r3, [r5, #32]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 5
+
+
+ 242 001c 6B69     		ldr	r3, [r5, #20]
+ 243 001e 43F40033 		orr	r3, r3, #131072
+ 244 0022 6B61     		str	r3, [r5, #20]
+ 245 0024 4CF25030 		movw	r0, #50000
+ 246 0028 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 247 002c 6B69     		ldr	r3, [r5, #20]
+ 248 002e 23F40033 		bic	r3, r3, #131072
+ 249 0032 6B61     		str	r3, [r5, #20]
+ 250 0034 EBE7     		b	.L33
+ 251              	.L37:
+ 252 0036 00BF     		.align	2
+ 253              	.L36:
+ 254 0038 00200240 		.word	1073881088
+ 256              		.section	.text.FLASH_OB_UserConfig,"ax",%progbits
+ 257              		.align	1
+ 258              		.syntax unified
+ 259              		.thumb
+ 260              		.thumb_func
+ 262              	FLASH_OB_UserConfig:
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265 0000 38B5     		push	{r3, r4, r5, lr}
+ 266 0002 0446     		mov	r4, r0
+ 267 0004 0D46     		mov	r5, r1
+ 268 0006 4CF25030 		movw	r0, #50000
+ 269 000a FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 270 000e 0028     		cmp	r0, #0
+ 271 0010 78D1     		bne	.L39
+ 272 0012 14F00103 		ands	r3, r4, #1
+ 273 0016 76D0     		beq	.L53
+ 274 0018 05F4E063 		and	r3, r5, #1792
+ 275 001c 4FF4E062 		mov	r2, #1792
+ 276              	.L40:
+ 277 0020 14F0020F 		tst	r4, #2
+ 278 0024 04D0     		beq	.L41
+ 279 0026 05F48051 		and	r1, r5, #4096
+ 280 002a 0B43     		orrs	r3, r3, r1
+ 281 002c 42F48052 		orr	r2, r2, #4096
+ 282              	.L41:
+ 283 0030 14F0040F 		tst	r4, #4
+ 284 0034 04D0     		beq	.L42
+ 285 0036 05F40051 		and	r1, r5, #8192
+ 286 003a 0B43     		orrs	r3, r3, r1
+ 287 003c 42F40052 		orr	r2, r2, #8192
+ 288              	.L42:
+ 289 0040 14F4805F 		tst	r4, #4096
+ 290 0044 04D0     		beq	.L43
+ 291 0046 05F48041 		and	r1, r5, #16384
+ 292 004a 0B43     		orrs	r3, r3, r1
+ 293 004c 42F48042 		orr	r2, r2, #16384
+ 294              	.L43:
+ 295 0050 14F0080F 		tst	r4, #8
+ 296 0054 04D0     		beq	.L44
+ 297 0056 05F48031 		and	r1, r5, #65536
+ 298 005a 0B43     		orrs	r3, r3, r1
+ 299 005c 42F48032 		orr	r2, r2, #65536
+ 300              	.L44:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 6
+
+
+ 301 0060 14F0100F 		tst	r4, #16
+ 302 0064 04D0     		beq	.L45
+ 303 0066 05F40031 		and	r1, r5, #131072
+ 304 006a 0B43     		orrs	r3, r3, r1
+ 305 006c 42F40032 		orr	r2, r2, #131072
+ 306              	.L45:
+ 307 0070 14F0200F 		tst	r4, #32
+ 308 0074 04D0     		beq	.L46
+ 309 0076 05F48021 		and	r1, r5, #262144
+ 310 007a 0B43     		orrs	r3, r3, r1
+ 311 007c 42F48022 		orr	r2, r2, #262144
+ 312              	.L46:
+ 313 0080 14F0400F 		tst	r4, #64
+ 314 0084 04D0     		beq	.L47
+ 315 0086 05F40021 		and	r1, r5, #524288
+ 316 008a 0B43     		orrs	r3, r3, r1
+ 317 008c 42F40022 		orr	r2, r2, #524288
+ 318              	.L47:
+ 319 0090 14F4007F 		tst	r4, #512
+ 320 0094 04D0     		beq	.L48
+ 321 0096 05F40001 		and	r1, r5, #8388608
+ 322 009a 0B43     		orrs	r3, r3, r1
+ 323 009c 42F40002 		orr	r2, r2, #8388608
+ 324              	.L48:
+ 325 00a0 14F4806F 		tst	r4, #1024
+ 326 00a4 04D0     		beq	.L49
+ 327 00a6 05F08071 		and	r1, r5, #16777216
+ 328 00aa 0B43     		orrs	r3, r3, r1
+ 329 00ac 42F08072 		orr	r2, r2, #16777216
+ 330              	.L49:
+ 331 00b0 14F4006F 		tst	r4, #2048
+ 332 00b4 04D0     		beq	.L50
+ 333 00b6 05F00071 		and	r1, r5, #33554432
+ 334 00ba 0B43     		orrs	r3, r3, r1
+ 335 00bc 42F00072 		orr	r2, r2, #33554432
+ 336              	.L50:
+ 337 00c0 14F4005F 		tst	r4, #8192
+ 338 00c4 04D0     		beq	.L51
+ 339 00c6 05F08061 		and	r1, r5, #67108864
+ 340 00ca 0B43     		orrs	r3, r3, r1
+ 341 00cc 42F08062 		orr	r2, r2, #67108864
+ 342              	.L51:
+ 343 00d0 14F4804F 		tst	r4, #16384
+ 344 00d4 04D0     		beq	.L52
+ 345 00d6 05F00065 		and	r5, r5, #134217728
+ 346 00da 2B43     		orrs	r3, r3, r5
+ 347 00dc 42F00062 		orr	r2, r2, #134217728
+ 348              	.L52:
+ 349 00e0 0A4C     		ldr	r4, .L55
+ 350 00e2 216A     		ldr	r1, [r4, #32]
+ 351 00e4 21EA0202 		bic	r2, r1, r2
+ 352 00e8 1343     		orrs	r3, r3, r2
+ 353 00ea 2362     		str	r3, [r4, #32]
+ 354 00ec 6369     		ldr	r3, [r4, #20]
+ 355 00ee 43F40033 		orr	r3, r3, #131072
+ 356 00f2 6361     		str	r3, [r4, #20]
+ 357 00f4 4CF25030 		movw	r0, #50000
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 7
+
+
+ 358 00f8 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 359 00fc 6369     		ldr	r3, [r4, #20]
+ 360 00fe 23F40033 		bic	r3, r3, #131072
+ 361 0102 6361     		str	r3, [r4, #20]
+ 362              	.L39:
+ 363 0104 38BD     		pop	{r3, r4, r5, pc}
+ 364              	.L53:
+ 365 0106 1A46     		mov	r2, r3
+ 366 0108 8AE7     		b	.L40
+ 367              	.L56:
+ 368 010a 00BF     		.align	2
+ 369              	.L55:
+ 370 010c 00200240 		.word	1073881088
+ 372              		.section	.text.FLASH_OB_PCROPConfig,"ax",%progbits
+ 373              		.align	1
+ 374              		.syntax unified
+ 375              		.thumb
+ 376              		.thumb_func
+ 378              	FLASH_OB_PCROPConfig:
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381 0000 70B5     		push	{r4, r5, r6, lr}
+ 382 0002 0446     		mov	r4, r0
+ 383 0004 0D46     		mov	r5, r1
+ 384 0006 1646     		mov	r6, r2
+ 385 0008 4CF25030 		movw	r0, #50000
+ 386 000c FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 387 0010 38BB     		cbnz	r0, .L58
+ 388 0012 14F0010F 		tst	r4, #1
+ 389 0016 10D0     		beq	.L59
+ 390 0018 05F17841 		add	r1, r5, #-134217728
+ 391 001c 1148     		ldr	r0, .L61
+ 392 001e 436A     		ldr	r3, [r0, #36]
+ 393 0020 6FF30D03 		bfc	r3, #0, #14
+ 394 0024 43EAD103 		orr	r3, r3, r1, lsr #3
+ 395 0028 4362     		str	r3, [r0, #36]
+ 396 002a 06F17842 		add	r2, r6, #-134217728
+ 397 002e 836A     		ldr	r3, [r0, #40]
+ 398 0030 6FF30D03 		bfc	r3, #0, #14
+ 399 0034 43EAD203 		orr	r3, r3, r2, lsr #3
+ 400 0038 8362     		str	r3, [r0, #40]
+ 401              	.L59:
+ 402 003a 0A4D     		ldr	r5, .L61
+ 403 003c AB6A     		ldr	r3, [r5, #40]
+ 404 003e 23F00043 		bic	r3, r3, #-2147483648
+ 405 0042 04F00044 		and	r4, r4, #-2147483648
+ 406 0046 1C43     		orrs	r4, r4, r3
+ 407 0048 AC62     		str	r4, [r5, #40]
+ 408 004a 6B69     		ldr	r3, [r5, #20]
+ 409 004c 43F40033 		orr	r3, r3, #131072
+ 410 0050 6B61     		str	r3, [r5, #20]
+ 411 0052 4CF25030 		movw	r0, #50000
+ 412 0056 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 413 005a 6B69     		ldr	r3, [r5, #20]
+ 414 005c 23F40033 		bic	r3, r3, #131072
+ 415 0060 6B61     		str	r3, [r5, #20]
+ 416              	.L58:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 8
+
+
+ 417 0062 70BD     		pop	{r4, r5, r6, pc}
+ 418              	.L62:
+ 419              		.align	2
+ 420              	.L61:
+ 421 0064 00200240 		.word	1073881088
+ 423              		.section	.text.HAL_FLASHEx_OBProgram,"ax",%progbits
+ 424              		.align	1
+ 425              		.global	HAL_FLASHEx_OBProgram
+ 426              		.syntax unified
+ 427              		.thumb
+ 428              		.thumb_func
+ 430              	HAL_FLASHEx_OBProgram:
+ 431              		@ args = 0, pretend = 0, frame = 0
+ 432              		@ frame_needed = 0, uses_anonymous_args = 0
+ 433 0000 38B5     		push	{r3, r4, r5, lr}
+ 434 0002 234B     		ldr	r3, .L80
+ 435 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 436 0006 012B     		cmp	r3, #1
+ 437 0008 3FD0     		beq	.L69
+ 438 000a 0446     		mov	r4, r0
+ 439 000c 204B     		ldr	r3, .L80
+ 440 000e 0122     		movs	r2, #1
+ 441 0010 1A70     		strb	r2, [r3]
+ 442 0012 0022     		movs	r2, #0
+ 443 0014 5A60     		str	r2, [r3, #4]
+ 444 0016 0368     		ldr	r3, [r0]
+ 445 0018 13F0010F 		tst	r3, #1
+ 446 001c 15D1     		bne	.L76
+ 447 001e 0025     		movs	r5, #0
+ 448              	.L65:
+ 449 0020 2368     		ldr	r3, [r4]
+ 450 0022 13F0020F 		tst	r3, #2
+ 451 0026 1AD1     		bne	.L77
+ 452              	.L66:
+ 453 0028 2368     		ldr	r3, [r4]
+ 454 002a 13F0040F 		tst	r3, #4
+ 455 002e 1DD1     		bne	.L78
+ 456              	.L67:
+ 457 0030 2368     		ldr	r3, [r4]
+ 458 0032 13F0080F 		tst	r3, #8
+ 459 0036 03D0     		beq	.L68
+ 460 0038 216A     		ldr	r1, [r4, #32]
+ 461 003a 626A     		ldr	r2, [r4, #36]
+ 462 003c 9142     		cmp	r1, r2
+ 463 003e 1DD1     		bne	.L79
+ 464              	.L68:
+ 465 0040 134B     		ldr	r3, .L80
+ 466 0042 0022     		movs	r2, #0
+ 467 0044 1A70     		strb	r2, [r3]
+ 468              	.L64:
+ 469 0046 2846     		mov	r0, r5
+ 470 0048 38BD     		pop	{r3, r4, r5, pc}
+ 471              	.L76:
+ 472 004a C268     		ldr	r2, [r0, #12]
+ 473 004c 8168     		ldr	r1, [r0, #8]
+ 474 004e 4068     		ldr	r0, [r0, #4]
+ 475 0050 FFF7FEFF 		bl	FLASH_OB_WRPConfig
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 9
+
+
+ 476 0054 0546     		mov	r5, r0
+ 477 0056 0028     		cmp	r0, #0
+ 478 0058 E2D0     		beq	.L65
+ 479 005a 0125     		movs	r5, #1
+ 480 005c E0E7     		b	.L65
+ 481              	.L77:
+ 482 005e 2069     		ldr	r0, [r4, #16]
+ 483 0060 FFF7FEFF 		bl	FLASH_OB_RDPConfig
+ 484 0064 0028     		cmp	r0, #0
+ 485 0066 DFD0     		beq	.L66
+ 486 0068 0125     		movs	r5, #1
+ 487 006a DDE7     		b	.L66
+ 488              	.L78:
+ 489 006c A169     		ldr	r1, [r4, #24]
+ 490 006e 6069     		ldr	r0, [r4, #20]
+ 491 0070 FFF7FEFF 		bl	FLASH_OB_UserConfig
+ 492 0074 0028     		cmp	r0, #0
+ 493 0076 DBD0     		beq	.L67
+ 494 0078 0125     		movs	r5, #1
+ 495 007a D9E7     		b	.L67
+ 496              	.L79:
+ 497 007c E069     		ldr	r0, [r4, #28]
+ 498 007e FFF7FEFF 		bl	FLASH_OB_PCROPConfig
+ 499 0082 0028     		cmp	r0, #0
+ 500 0084 DCD0     		beq	.L68
+ 501 0086 0125     		movs	r5, #1
+ 502 0088 DAE7     		b	.L68
+ 503              	.L69:
+ 504 008a 0225     		movs	r5, #2
+ 505 008c DBE7     		b	.L64
+ 506              	.L81:
+ 507 008e 00BF     		.align	2
+ 508              	.L80:
+ 509 0090 00000000 		.word	pFlash
+ 511              		.section	.text.HAL_FLASHEx_OBGetConfig,"ax",%progbits
+ 512              		.align	1
+ 513              		.global	HAL_FLASHEx_OBGetConfig
+ 514              		.syntax unified
+ 515              		.thumb
+ 516              		.thumb_func
+ 518              	HAL_FLASHEx_OBGetConfig:
+ 519              		@ args = 0, pretend = 0, frame = 0
+ 520              		@ frame_needed = 0, uses_anonymous_args = 0
+ 521 0000 10B5     		push	{r4, lr}
+ 522 0002 0446     		mov	r4, r0
+ 523 0004 0623     		movs	r3, #6
+ 524 0006 0360     		str	r3, [r0]
+ 525 0008 4068     		ldr	r0, [r0, #4]
+ 526 000a 0128     		cmp	r0, #1
+ 527 000c 09D9     		bls	.L86
+ 528              	.L83:
+ 529 000e FFF7FEFF 		bl	FLASH_OB_GetRDP
+ 530 0012 2061     		str	r0, [r4, #16]
+ 531 0014 FFF7FEFF 		bl	FLASH_OB_GetUser
+ 532 0018 A061     		str	r0, [r4, #24]
+ 533 001a E369     		ldr	r3, [r4, #28]
+ 534 001c 012B     		cmp	r3, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 10
+
+
+ 535 001e 09D0     		beq	.L87
+ 536              	.L82:
+ 537 0020 10BD     		pop	{r4, pc}
+ 538              	.L86:
+ 539 0022 2246     		mov	r2, r4
+ 540 0024 0723     		movs	r3, #7
+ 541 0026 42F80C3B 		str	r3, [r2], #12
+ 542 002a 04F10801 		add	r1, r4, #8
+ 543 002e FFF7FEFF 		bl	FLASH_OB_GetWRP
+ 544 0032 ECE7     		b	.L83
+ 545              	.L87:
+ 546 0034 2368     		ldr	r3, [r4]
+ 547 0036 43F00803 		orr	r3, r3, #8
+ 548 003a 2246     		mov	r2, r4
+ 549 003c 42F8243B 		str	r3, [r2], #36
+ 550 0040 04F12001 		add	r1, r4, #32
+ 551 0044 04F11C00 		add	r0, r4, #28
+ 552 0048 FFF7FEFF 		bl	FLASH_OB_GetPCROP
+ 553 004c E8E7     		b	.L82
+ 555              		.section	.text.FLASH_PageErase,"ax",%progbits
+ 556              		.align	1
+ 557              		.global	FLASH_PageErase
+ 558              		.syntax unified
+ 559              		.thumb
+ 560              		.thumb_func
+ 562              	FLASH_PageErase:
+ 563              		@ args = 0, pretend = 0, frame = 0
+ 564              		@ frame_needed = 0, uses_anonymous_args = 0
+ 565              		@ link register save eliminated.
+ 566 0000 084B     		ldr	r3, .L89
+ 567 0002 5A69     		ldr	r2, [r3, #20]
+ 568 0004 22F4FC72 		bic	r2, r2, #504
+ 569 0008 C000     		lsls	r0, r0, #3
+ 570 000a 00F4FF60 		and	r0, r0, #2040
+ 571 000e 0243     		orrs	r2, r2, r0
+ 572 0010 5A61     		str	r2, [r3, #20]
+ 573 0012 5A69     		ldr	r2, [r3, #20]
+ 574 0014 42F00202 		orr	r2, r2, #2
+ 575 0018 5A61     		str	r2, [r3, #20]
+ 576 001a 5A69     		ldr	r2, [r3, #20]
+ 577 001c 42F48032 		orr	r2, r2, #65536
+ 578 0020 5A61     		str	r2, [r3, #20]
+ 579 0022 7047     		bx	lr
+ 580              	.L90:
+ 581              		.align	2
+ 582              	.L89:
+ 583 0024 00200240 		.word	1073881088
+ 585              		.section	.text.HAL_FLASHEx_Erase_IT,"ax",%progbits
+ 586              		.align	1
+ 587              		.global	HAL_FLASHEx_Erase_IT
+ 588              		.syntax unified
+ 589              		.thumb
+ 590              		.thumb_func
+ 592              	HAL_FLASHEx_Erase_IT:
+ 593              		@ args = 0, pretend = 0, frame = 0
+ 594              		@ frame_needed = 0, uses_anonymous_args = 0
+ 595 0000 294A     		ldr	r2, .L104
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 11
+
+
+ 596 0002 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 597 0004 012A     		cmp	r2, #1
+ 598 0006 4DD0     		beq	.L98
+ 599 0008 08B5     		push	{r3, lr}
+ 600 000a 0346     		mov	r3, r0
+ 601 000c 264A     		ldr	r2, .L104
+ 602 000e 0121     		movs	r1, #1
+ 603 0010 1170     		strb	r1, [r2]
+ 604 0012 0021     		movs	r1, #0
+ 605 0014 5160     		str	r1, [r2, #4]
+ 606 0016 254A     		ldr	r2, .L104+4
+ 607 0018 1268     		ldr	r2, [r2]
+ 608 001a 12F4007F 		tst	r2, #512
+ 609 001e 27D0     		beq	.L93
+ 610 0020 224A     		ldr	r2, .L104+4
+ 611 0022 1268     		ldr	r2, [r2]
+ 612 0024 12F4806F 		tst	r2, #1024
+ 613 0028 1ED0     		beq	.L94
+ 614 002a 2049     		ldr	r1, .L104+4
+ 615 002c 0A68     		ldr	r2, [r1]
+ 616 002e 22F48062 		bic	r2, r2, #1024
+ 617 0032 0A60     		str	r2, [r1]
+ 618 0034 1C4A     		ldr	r2, .L104
+ 619 0036 0321     		movs	r1, #3
+ 620 0038 1177     		strb	r1, [r2, #28]
+ 621              	.L95:
+ 622 003a 1C49     		ldr	r1, .L104+4
+ 623 003c 4A69     		ldr	r2, [r1, #20]
+ 624 003e 42F04072 		orr	r2, r2, #50331648
+ 625 0042 4A61     		str	r2, [r1, #20]
+ 626 0044 5968     		ldr	r1, [r3, #4]
+ 627 0046 184A     		ldr	r2, .L104
+ 628 0048 1161     		str	r1, [r2, #16]
+ 629 004a 1A68     		ldr	r2, [r3]
+ 630 004c 012A     		cmp	r2, #1
+ 631 004e 21D0     		beq	.L103
+ 632 0050 154A     		ldr	r2, .L104
+ 633 0052 0121     		movs	r1, #1
+ 634 0054 1172     		strb	r1, [r2, #8]
+ 635 0056 D968     		ldr	r1, [r3, #12]
+ 636 0058 9161     		str	r1, [r2, #24]
+ 637 005a 9868     		ldr	r0, [r3, #8]
+ 638 005c 5061     		str	r0, [r2, #20]
+ 639 005e 5968     		ldr	r1, [r3, #4]
+ 640 0060 FFF7FEFF 		bl	FLASH_PageErase
+ 641 0064 0020     		movs	r0, #0
+ 642              	.L92:
+ 643 0066 08BD     		pop	{r3, pc}
+ 644              	.L94:
+ 645 0068 0F4A     		ldr	r2, .L104
+ 646 006a 0121     		movs	r1, #1
+ 647 006c 1177     		strb	r1, [r2, #28]
+ 648 006e E4E7     		b	.L95
+ 649              	.L93:
+ 650 0070 0E4A     		ldr	r2, .L104+4
+ 651 0072 1268     		ldr	r2, [r2]
+ 652 0074 12F4806F 		tst	r2, #1024
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 12
+
+
+ 653 0078 08D0     		beq	.L96
+ 654 007a 0C49     		ldr	r1, .L104+4
+ 655 007c 0A68     		ldr	r2, [r1]
+ 656 007e 22F48062 		bic	r2, r2, #1024
+ 657 0082 0A60     		str	r2, [r1]
+ 658 0084 084A     		ldr	r2, .L104
+ 659 0086 0221     		movs	r1, #2
+ 660 0088 1177     		strb	r1, [r2, #28]
+ 661 008a D6E7     		b	.L95
+ 662              	.L96:
+ 663 008c 064A     		ldr	r2, .L104
+ 664 008e 0021     		movs	r1, #0
+ 665 0090 1177     		strb	r1, [r2, #28]
+ 666 0092 D2E7     		b	.L95
+ 667              	.L103:
+ 668 0094 044A     		ldr	r2, .L104
+ 669 0096 0221     		movs	r1, #2
+ 670 0098 1172     		strb	r1, [r2, #8]
+ 671 009a 5868     		ldr	r0, [r3, #4]
+ 672 009c FFF7FEFF 		bl	FLASH_MassErase
+ 673 00a0 0020     		movs	r0, #0
+ 674 00a2 E0E7     		b	.L92
+ 675              	.L98:
+ 676 00a4 0220     		movs	r0, #2
+ 677 00a6 7047     		bx	lr
+ 678              	.L105:
+ 679              		.align	2
+ 680              	.L104:
+ 681 00a8 00000000 		.word	pFlash
+ 682 00ac 00200240 		.word	1073881088
+ 684              		.section	.text.FLASH_FlushCaches,"ax",%progbits
+ 685              		.align	1
+ 686              		.global	FLASH_FlushCaches
+ 687              		.syntax unified
+ 688              		.thumb
+ 689              		.thumb_func
+ 691              	FLASH_FlushCaches:
+ 692              		@ args = 0, pretend = 0, frame = 0
+ 693              		@ frame_needed = 0, uses_anonymous_args = 0
+ 694              		@ link register save eliminated.
+ 695 0000 164B     		ldr	r3, .L111
+ 696 0002 1A7F     		ldrb	r2, [r3, #28]	@ zero_extendqisi2
+ 697 0004 D3B2     		uxtb	r3, r2
+ 698 0006 012A     		cmp	r2, #1
+ 699 0008 01D0     		beq	.L107
+ 700 000a 032B     		cmp	r3, #3
+ 701 000c 10D1     		bne	.L108
+ 702              	.L107:
+ 703 000e 144A     		ldr	r2, .L111+4
+ 704 0010 1168     		ldr	r1, [r2]
+ 705 0012 21F40071 		bic	r1, r1, #512
+ 706 0016 1160     		str	r1, [r2]
+ 707 0018 1168     		ldr	r1, [r2]
+ 708 001a 41F40061 		orr	r1, r1, #2048
+ 709 001e 1160     		str	r1, [r2]
+ 710 0020 1168     		ldr	r1, [r2]
+ 711 0022 21F40061 		bic	r1, r1, #2048
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 13
+
+
+ 712 0026 1160     		str	r1, [r2]
+ 713 0028 1168     		ldr	r1, [r2]
+ 714 002a 41F40071 		orr	r1, r1, #512
+ 715 002e 1160     		str	r1, [r2]
+ 716              	.L108:
+ 717 0030 023B     		subs	r3, r3, #2
+ 718 0032 DBB2     		uxtb	r3, r3
+ 719 0034 012B     		cmp	r3, #1
+ 720 0036 03D9     		bls	.L110
+ 721              	.L109:
+ 722 0038 084B     		ldr	r3, .L111
+ 723 003a 0022     		movs	r2, #0
+ 724 003c 1A77     		strb	r2, [r3, #28]
+ 725 003e 7047     		bx	lr
+ 726              	.L110:
+ 727 0040 074B     		ldr	r3, .L111+4
+ 728 0042 1A68     		ldr	r2, [r3]
+ 729 0044 42F48052 		orr	r2, r2, #4096
+ 730 0048 1A60     		str	r2, [r3]
+ 731 004a 1A68     		ldr	r2, [r3]
+ 732 004c 22F48052 		bic	r2, r2, #4096
+ 733 0050 1A60     		str	r2, [r3]
+ 734 0052 1A68     		ldr	r2, [r3]
+ 735 0054 42F48062 		orr	r2, r2, #1024
+ 736 0058 1A60     		str	r2, [r3]
+ 737 005a EDE7     		b	.L109
+ 738              	.L112:
+ 739              		.align	2
+ 740              	.L111:
+ 741 005c 00000000 		.word	pFlash
+ 742 0060 00200240 		.word	1073881088
+ 744              		.section	.text.HAL_FLASHEx_Erase,"ax",%progbits
+ 745              		.align	1
+ 746              		.global	HAL_FLASHEx_Erase
+ 747              		.syntax unified
+ 748              		.thumb
+ 749              		.thumb_func
+ 751              	HAL_FLASHEx_Erase:
+ 752              		@ args = 0, pretend = 0, frame = 0
+ 753              		@ frame_needed = 0, uses_anonymous_args = 0
+ 754 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 755 0002 384B     		ldr	r3, .L129
+ 756 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 757 0006 012B     		cmp	r3, #1
+ 758 0008 69D0     		beq	.L125
+ 759 000a 0446     		mov	r4, r0
+ 760 000c 0E46     		mov	r6, r1
+ 761 000e 354B     		ldr	r3, .L129
+ 762 0010 0122     		movs	r2, #1
+ 763 0012 1A70     		strb	r2, [r3]
+ 764 0014 4CF25030 		movw	r0, #50000
+ 765 0018 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 766 001c 0746     		mov	r7, r0
+ 767 001e 0028     		cmp	r0, #0
+ 768 0020 58D1     		bne	.L115
+ 769 0022 304B     		ldr	r3, .L129
+ 770 0024 0022     		movs	r2, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 14
+
+
+ 771 0026 5A60     		str	r2, [r3, #4]
+ 772 0028 2F4B     		ldr	r3, .L129+4
+ 773 002a 1B68     		ldr	r3, [r3]
+ 774 002c 13F4007F 		tst	r3, #512
+ 775 0030 2DD0     		beq	.L116
+ 776 0032 2D4B     		ldr	r3, .L129+4
+ 777 0034 1B68     		ldr	r3, [r3]
+ 778 0036 13F4806F 		tst	r3, #1024
+ 779 003a 24D0     		beq	.L117
+ 780 003c 2A4A     		ldr	r2, .L129+4
+ 781 003e 1368     		ldr	r3, [r2]
+ 782 0040 23F48063 		bic	r3, r3, #1024
+ 783 0044 1360     		str	r3, [r2]
+ 784 0046 274B     		ldr	r3, .L129
+ 785 0048 0322     		movs	r2, #3
+ 786 004a 1A77     		strb	r2, [r3, #28]
+ 787              	.L118:
+ 788 004c 2368     		ldr	r3, [r4]
+ 789 004e 012B     		cmp	r3, #1
+ 790 0050 2FD0     		beq	.L127
+ 791 0052 4FF0FF33 		mov	r3, #-1
+ 792 0056 3360     		str	r3, [r6]
+ 793 0058 A568     		ldr	r5, [r4, #8]
+ 794              	.L122:
+ 795 005a A368     		ldr	r3, [r4, #8]
+ 796 005c E268     		ldr	r2, [r4, #12]
+ 797 005e 1344     		add	r3, r3, r2
+ 798 0060 AB42     		cmp	r3, r5
+ 799 0062 35D9     		bls	.L121
+ 800 0064 6168     		ldr	r1, [r4, #4]
+ 801 0066 2846     		mov	r0, r5
+ 802 0068 FFF7FEFF 		bl	FLASH_PageErase
+ 803 006c 4CF25030 		movw	r0, #50000
+ 804 0070 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 805 0074 1C4A     		ldr	r2, .L129+4
+ 806 0076 5369     		ldr	r3, [r2, #20]
+ 807 0078 23F4FD73 		bic	r3, r3, #506
+ 808 007c 5361     		str	r3, [r2, #20]
+ 809 007e 0746     		mov	r7, r0
+ 810 0080 28BB     		cbnz	r0, .L128
+ 811 0082 0135     		adds	r5, r5, #1
+ 812 0084 E9E7     		b	.L122
+ 813              	.L117:
+ 814 0086 174B     		ldr	r3, .L129
+ 815 0088 0122     		movs	r2, #1
+ 816 008a 1A77     		strb	r2, [r3, #28]
+ 817 008c DEE7     		b	.L118
+ 818              	.L116:
+ 819 008e 164B     		ldr	r3, .L129+4
+ 820 0090 1B68     		ldr	r3, [r3]
+ 821 0092 13F4806F 		tst	r3, #1024
+ 822 0096 08D0     		beq	.L119
+ 823 0098 134A     		ldr	r2, .L129+4
+ 824 009a 1368     		ldr	r3, [r2]
+ 825 009c 23F48063 		bic	r3, r3, #1024
+ 826 00a0 1360     		str	r3, [r2]
+ 827 00a2 104B     		ldr	r3, .L129
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 15
+
+
+ 828 00a4 0222     		movs	r2, #2
+ 829 00a6 1A77     		strb	r2, [r3, #28]
+ 830 00a8 D0E7     		b	.L118
+ 831              	.L119:
+ 832 00aa 0E4B     		ldr	r3, .L129
+ 833 00ac 0022     		movs	r2, #0
+ 834 00ae 1A77     		strb	r2, [r3, #28]
+ 835 00b0 CCE7     		b	.L118
+ 836              	.L127:
+ 837 00b2 6068     		ldr	r0, [r4, #4]
+ 838 00b4 FFF7FEFF 		bl	FLASH_MassErase
+ 839 00b8 4CF25030 		movw	r0, #50000
+ 840 00bc FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 841 00c0 0746     		mov	r7, r0
+ 842 00c2 094A     		ldr	r2, .L129+4
+ 843 00c4 5369     		ldr	r3, [r2, #20]
+ 844 00c6 23F00403 		bic	r3, r3, #4
+ 845 00ca 5361     		str	r3, [r2, #20]
+ 846 00cc 00E0     		b	.L121
+ 847              	.L128:
+ 848 00ce 3560     		str	r5, [r6]
+ 849              	.L121:
+ 850 00d0 FFF7FEFF 		bl	FLASH_FlushCaches
+ 851              	.L115:
+ 852 00d4 034B     		ldr	r3, .L129
+ 853 00d6 0022     		movs	r2, #0
+ 854 00d8 1A70     		strb	r2, [r3]
+ 855              	.L114:
+ 856 00da 3846     		mov	r0, r7
+ 857 00dc F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 858              	.L125:
+ 859 00de 0227     		movs	r7, #2
+ 860 00e0 FBE7     		b	.L114
+ 861              	.L130:
+ 862 00e2 00BF     		.align	2
+ 863              	.L129:
+ 864 00e4 00000000 		.word	pFlash
+ 865 00e8 00200240 		.word	1073881088
+ 867              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l4xx_hal_flash_ex.c
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:18     .text.FLASH_MassErase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:23     .text.FLASH_MassErase:00000000 FLASH_MassErase
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:42     .text.FLASH_MassErase:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:45     .text.FLASH_OB_GetWRP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:50     .text.FLASH_OB_GetWRP:00000000 FLASH_OB_GetWRP
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:80     .text.FLASH_OB_GetWRP:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:83     .text.FLASH_OB_GetRDP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:88     .text.FLASH_OB_GetRDP:00000000 FLASH_OB_GetRDP
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:109    .text.FLASH_OB_GetRDP:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:112    .text.FLASH_OB_GetUser:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:117    .text.FLASH_OB_GetUser:00000000 FLASH_OB_GetUser
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:128    .text.FLASH_OB_GetUser:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:131    .text.FLASH_OB_GetPCROP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:136    .text.FLASH_OB_GetPCROP:00000000 FLASH_OB_GetPCROP
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:167    .text.FLASH_OB_GetPCROP:0000003c $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:171    .text.FLASH_OB_WRPConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:176    .text.FLASH_OB_WRPConfig:00000000 FLASH_OB_WRPConfig
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:218    .text.FLASH_OB_WRPConfig:00000058 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:221    .text.FLASH_OB_RDPConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:226    .text.FLASH_OB_RDPConfig:00000000 FLASH_OB_RDPConfig
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:254    .text.FLASH_OB_RDPConfig:00000038 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:257    .text.FLASH_OB_UserConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:262    .text.FLASH_OB_UserConfig:00000000 FLASH_OB_UserConfig
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:370    .text.FLASH_OB_UserConfig:0000010c $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:373    .text.FLASH_OB_PCROPConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:378    .text.FLASH_OB_PCROPConfig:00000000 FLASH_OB_PCROPConfig
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:421    .text.FLASH_OB_PCROPConfig:00000064 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:424    .text.HAL_FLASHEx_OBProgram:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:430    .text.HAL_FLASHEx_OBProgram:00000000 HAL_FLASHEx_OBProgram
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:509    .text.HAL_FLASHEx_OBProgram:00000090 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:512    .text.HAL_FLASHEx_OBGetConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:518    .text.HAL_FLASHEx_OBGetConfig:00000000 HAL_FLASHEx_OBGetConfig
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:556    .text.FLASH_PageErase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:562    .text.FLASH_PageErase:00000000 FLASH_PageErase
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:583    .text.FLASH_PageErase:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:586    .text.HAL_FLASHEx_Erase_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:592    .text.HAL_FLASHEx_Erase_IT:00000000 HAL_FLASHEx_Erase_IT
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:681    .text.HAL_FLASHEx_Erase_IT:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:685    .text.FLASH_FlushCaches:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:691    .text.FLASH_FlushCaches:00000000 FLASH_FlushCaches
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:741    .text.FLASH_FlushCaches:0000005c $d
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:745    .text.HAL_FLASHEx_Erase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:751    .text.HAL_FLASHEx_Erase:00000000 HAL_FLASHEx_Erase
+C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:864    .text.HAL_FLASHEx_Erase:000000e4 $d
+
+UNDEFINED SYMBOLS
+FLASH_WaitForLastOperation
+pFlash

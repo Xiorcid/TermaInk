@@ -1,0 +1,2354 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"EPD_GUI.c"
+  16              		.text
+  17              		.section	.text.EPD_NewImage,"ax",%progbits
+  18              		.align	1
+  19              		.global	EPD_NewImage
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	EPD_NewImage:
+  25              		@ args = 4, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 30B4     		push	{r4, r5}
+  29 0002 124C     		ldr	r4, .L8
+  30 0004 0025     		movs	r5, #0
+  31 0006 2560     		str	r5, [r4]
+  32 0008 2060     		str	r0, [r4]
+  33 000a 2181     		strh	r1, [r4, #8]	@ movhi
+  34 000c 6281     		strh	r2, [r4, #10]	@ movhi
+  35 000e BDF80800 		ldrh	r0, [sp, #8]
+  36 0012 A081     		strh	r0, [r4, #12]	@ movhi
+  37 0014 0220     		movs	r0, #2
+  38 0016 E082     		strh	r0, [r4, #22]	@ movhi
+  39 0018 11F0070F 		tst	r1, #7
+  40 001c 0DD1     		bne	.L2
+  41 001e CC08     		lsrs	r4, r1, #3
+  42              	.L3:
+  43 0020 0A48     		ldr	r0, .L8
+  44 0022 4482     		strh	r4, [r0, #18]	@ movhi
+  45 0024 8282     		strh	r2, [r0, #20]	@ movhi
+  46 0026 C381     		strh	r3, [r0, #14]	@ movhi
+  47 0028 0024     		movs	r4, #0
+  48 002a 0482     		strh	r4, [r0, #16]	@ movhi
+  49 002c 43B1     		cbz	r3, .L4
+  50 002e B42B     		cmp	r3, #180
+  51 0030 06D0     		beq	.L4
+  52 0032 064B     		ldr	r3, .L8
+  53 0034 9A80     		strh	r2, [r3, #4]	@ movhi
+  54 0036 D980     		strh	r1, [r3, #6]	@ movhi
+  55 0038 05E0     		b	.L1
+  56              	.L2:
+  57 003a CC08     		lsrs	r4, r1, #3
+  58 003c 0134     		adds	r4, r4, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 2
+
+
+  59 003e EFE7     		b	.L3
+  60              	.L4:
+  61 0040 024B     		ldr	r3, .L8
+  62 0042 9980     		strh	r1, [r3, #4]	@ movhi
+  63 0044 DA80     		strh	r2, [r3, #6]	@ movhi
+  64              	.L1:
+  65 0046 30BC     		pop	{r4, r5}
+  66 0048 7047     		bx	lr
+  67              	.L9:
+  68 004a 00BF     		.align	2
+  69              	.L8:
+  70 004c 00000000 		.word	Paint
+  72              		.section	.text.EPD_SelectImage,"ax",%progbits
+  73              		.align	1
+  74              		.global	EPD_SelectImage
+  75              		.syntax unified
+  76              		.thumb
+  77              		.thumb_func
+  79              	EPD_SelectImage:
+  80              		@ args = 0, pretend = 0, frame = 0
+  81              		@ frame_needed = 0, uses_anonymous_args = 0
+  82              		@ link register save eliminated.
+  83 0000 014B     		ldr	r3, .L11
+  84 0002 1860     		str	r0, [r3]
+  85 0004 7047     		bx	lr
+  86              	.L12:
+  87 0006 00BF     		.align	2
+  88              	.L11:
+  89 0008 00000000 		.word	Paint
+  91              		.section	.text.EPD_SetRotate,"ax",%progbits
+  92              		.align	1
+  93              		.global	EPD_SetRotate
+  94              		.syntax unified
+  95              		.thumb
+  96              		.thumb_func
+  98              	EPD_SetRotate:
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101              		@ link register save eliminated.
+ 102 0000 0346     		mov	r3, r0
+ 103 0002 30B1     		cbz	r0, .L14
+ 104 0004 5A28     		cmp	r0, #90
+ 105 0006 04D0     		beq	.L14
+ 106 0008 B428     		cmp	r0, #180
+ 107 000a 02D0     		beq	.L14
+ 108 000c B0F5877F 		cmp	r0, #270
+ 109 0010 01D1     		bne	.L13
+ 110              	.L14:
+ 111 0012 014A     		ldr	r2, .L16
+ 112 0014 D381     		strh	r3, [r2, #14]	@ movhi
+ 113              	.L13:
+ 114 0016 7047     		bx	lr
+ 115              	.L17:
+ 116              		.align	2
+ 117              	.L16:
+ 118 0018 00000000 		.word	Paint
+ 120              		.section	.text.EPD_SetScale,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 3
+
+
+ 121              		.align	1
+ 122              		.global	EPD_SetScale
+ 123              		.syntax unified
+ 124              		.thumb
+ 125              		.thumb_func
+ 127              	EPD_SetScale:
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		@ link register save eliminated.
+ 131 0000 0228     		cmp	r0, #2
+ 132 0002 04D0     		beq	.L26
+ 133 0004 0428     		cmp	r0, #4
+ 134 0006 0FD0     		beq	.L27
+ 135 0008 0728     		cmp	r0, #7
+ 136 000a 1AD0     		beq	.L28
+ 137              	.L18:
+ 138 000c 7047     		bx	lr
+ 139              	.L26:
+ 140 000e 114B     		ldr	r3, .L29
+ 141 0010 D882     		strh	r0, [r3, #22]	@ movhi
+ 142 0012 1B89     		ldrh	r3, [r3, #8]
+ 143 0014 13F0070F 		tst	r3, #7
+ 144 0018 03D1     		bne	.L20
+ 145 001a DB08     		lsrs	r3, r3, #3
+ 146              	.L21:
+ 147 001c 0D4A     		ldr	r2, .L29
+ 148 001e 5382     		strh	r3, [r2, #18]	@ movhi
+ 149 0020 7047     		bx	lr
+ 150              	.L20:
+ 151 0022 DB08     		lsrs	r3, r3, #3
+ 152 0024 0133     		adds	r3, r3, #1
+ 153 0026 F9E7     		b	.L21
+ 154              	.L27:
+ 155 0028 0A4B     		ldr	r3, .L29
+ 156 002a D882     		strh	r0, [r3, #22]	@ movhi
+ 157 002c 1B89     		ldrh	r3, [r3, #8]
+ 158 002e 13F0030F 		tst	r3, #3
+ 159 0032 03D1     		bne	.L24
+ 160 0034 9B08     		lsrs	r3, r3, #2
+ 161              	.L25:
+ 162 0036 074A     		ldr	r2, .L29
+ 163 0038 5382     		strh	r3, [r2, #18]	@ movhi
+ 164 003a 7047     		bx	lr
+ 165              	.L24:
+ 166 003c 9B08     		lsrs	r3, r3, #2
+ 167 003e 0133     		adds	r3, r3, #1
+ 168 0040 F9E7     		b	.L25
+ 169              	.L28:
+ 170 0042 044B     		ldr	r3, .L29
+ 171 0044 D882     		strh	r0, [r3, #22]	@ movhi
+ 172 0046 1989     		ldrh	r1, [r3, #8]
+ 173 0048 01F00102 		and	r2, r1, #1
+ 174 004c 02EB5102 		add	r2, r2, r1, lsr #1
+ 175 0050 5A82     		strh	r2, [r3, #18]	@ movhi
+ 176 0052 DBE7     		b	.L18
+ 177              	.L30:
+ 178              		.align	2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 4
+
+
+ 179              	.L29:
+ 180 0054 00000000 		.word	Paint
+ 182              		.section	.text.EPD_SetMirroring,"ax",%progbits
+ 183              		.align	1
+ 184              		.global	EPD_SetMirroring
+ 185              		.syntax unified
+ 186              		.thumb
+ 187              		.thumb_func
+ 189              	EPD_SetMirroring:
+ 190              		@ args = 0, pretend = 0, frame = 0
+ 191              		@ frame_needed = 0, uses_anonymous_args = 0
+ 192              		@ link register save eliminated.
+ 193 0000 0328     		cmp	r0, #3
+ 194 0002 01D8     		bhi	.L31
+ 195 0004 014B     		ldr	r3, .L33
+ 196 0006 1882     		strh	r0, [r3, #16]	@ movhi
+ 197              	.L31:
+ 198 0008 7047     		bx	lr
+ 199              	.L34:
+ 200 000a 00BF     		.align	2
+ 201              	.L33:
+ 202 000c 00000000 		.word	Paint
+ 204              		.section	.text.EPD_SetPixel,"ax",%progbits
+ 205              		.align	1
+ 206              		.global	EPD_SetPixel
+ 207              		.syntax unified
+ 208              		.thumb
+ 209              		.thumb_func
+ 211              	EPD_SetPixel:
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		@ link register save eliminated.
+ 215 0000 584B     		ldr	r3, .L59
+ 216 0002 9B88     		ldrh	r3, [r3, #4]
+ 217 0004 8342     		cmp	r3, r0
+ 218 0006 C0F0AB80 		bcc	.L53
+ 219 000a 564B     		ldr	r3, .L59
+ 220 000c DB88     		ldrh	r3, [r3, #6]
+ 221 000e 8B42     		cmp	r3, r1
+ 222 0010 C0F0A680 		bcc	.L53
+ 223 0014 10B4     		push	{r4}
+ 224 0016 534B     		ldr	r3, .L59
+ 225 0018 DB89     		ldrh	r3, [r3, #14]
+ 226 001a B42B     		cmp	r3, #180
+ 227 001c 16D0     		beq	.L37
+ 228 001e 0AD8     		bhi	.L38
+ 229 0020 FBB1     		cbz	r3, .L39
+ 230 0022 5A2B     		cmp	r3, #90
+ 231 0024 3BD1     		bne	.L35
+ 232 0026 4F4B     		ldr	r3, .L59
+ 233 0028 1B89     		ldrh	r3, [r3, #8]
+ 234 002a 5B1A     		subs	r3, r3, r1
+ 235 002c 9BB2     		uxth	r3, r3
+ 236 002e 013B     		subs	r3, r3, #1
+ 237 0030 0146     		mov	r1, r0
+ 238 0032 98B2     		uxth	r0, r3
+ 239 0034 15E0     		b	.L39
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 5
+
+
+ 240              	.L38:
+ 241 0036 B3F5877F 		cmp	r3, #270
+ 242 003a 30D1     		bne	.L35
+ 243 003c 494B     		ldr	r3, .L59
+ 244 003e 5B89     		ldrh	r3, [r3, #10]
+ 245 0040 1B1A     		subs	r3, r3, r0
+ 246 0042 9BB2     		uxth	r3, r3
+ 247 0044 013B     		subs	r3, r3, #1
+ 248 0046 0846     		mov	r0, r1
+ 249 0048 99B2     		uxth	r1, r3
+ 250 004a 0AE0     		b	.L39
+ 251              	.L37:
+ 252 004c 454C     		ldr	r4, .L59
+ 253 004e 2389     		ldrh	r3, [r4, #8]
+ 254 0050 1B1A     		subs	r3, r3, r0
+ 255 0052 9BB2     		uxth	r3, r3
+ 256 0054 013B     		subs	r3, r3, #1
+ 257 0056 98B2     		uxth	r0, r3
+ 258 0058 6389     		ldrh	r3, [r4, #10]
+ 259 005a 5B1A     		subs	r3, r3, r1
+ 260 005c 9BB2     		uxth	r3, r3
+ 261 005e 013B     		subs	r3, r3, #1
+ 262 0060 99B2     		uxth	r1, r3
+ 263              	.L39:
+ 264 0062 404B     		ldr	r3, .L59
+ 265 0064 1B8A     		ldrh	r3, [r3, #16]
+ 266 0066 032B     		cmp	r3, #3
+ 267 0068 19D8     		bhi	.L35
+ 268 006a DFE803F0 		tbb	[pc, r3]
+ 269              	.L43:
+ 270 006e 08       		.byte	(.L46-.L43)/2
+ 271 006f 02       		.byte	(.L45-.L43)/2
+ 272 0070 1B       		.byte	(.L44-.L43)/2
+ 273 0071 22       		.byte	(.L42-.L43)/2
+ 274              		.p2align 1
+ 275              	.L45:
+ 276 0072 3C4B     		ldr	r3, .L59
+ 277 0074 1B89     		ldrh	r3, [r3, #8]
+ 278 0076 1B1A     		subs	r3, r3, r0
+ 279 0078 9BB2     		uxth	r3, r3
+ 280 007a 013B     		subs	r3, r3, #1
+ 281 007c 98B2     		uxth	r0, r3
+ 282              	.L46:
+ 283 007e 394B     		ldr	r3, .L59
+ 284 0080 1B89     		ldrh	r3, [r3, #8]
+ 285 0082 8342     		cmp	r3, r0
+ 286 0084 0BD3     		bcc	.L35
+ 287 0086 374B     		ldr	r3, .L59
+ 288 0088 5B89     		ldrh	r3, [r3, #10]
+ 289 008a 8B42     		cmp	r3, r1
+ 290 008c 07D3     		bcc	.L35
+ 291 008e 354B     		ldr	r3, .L59
+ 292 0090 DB8A     		ldrh	r3, [r3, #22]
+ 293 0092 022B     		cmp	r3, #2
+ 294 0094 19D0     		beq	.L56
+ 295 0096 042B     		cmp	r3, #4
+ 296 0098 30D0     		beq	.L57
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 6
+
+
+ 297 009a 072B     		cmp	r3, #7
+ 298 009c 48D0     		beq	.L58
+ 299              	.L35:
+ 300 009e 5DF8044B 		ldr	r4, [sp], #4
+ 301 00a2 7047     		bx	lr
+ 302              	.L44:
+ 303 00a4 2F4B     		ldr	r3, .L59
+ 304 00a6 5B89     		ldrh	r3, [r3, #10]
+ 305 00a8 5B1A     		subs	r3, r3, r1
+ 306 00aa 9BB2     		uxth	r3, r3
+ 307 00ac 013B     		subs	r3, r3, #1
+ 308 00ae 99B2     		uxth	r1, r3
+ 309 00b0 E5E7     		b	.L46
+ 310              	.L42:
+ 311 00b2 2C4C     		ldr	r4, .L59
+ 312 00b4 2389     		ldrh	r3, [r4, #8]
+ 313 00b6 1B1A     		subs	r3, r3, r0
+ 314 00b8 9BB2     		uxth	r3, r3
+ 315 00ba 013B     		subs	r3, r3, #1
+ 316 00bc 98B2     		uxth	r0, r3
+ 317 00be 6389     		ldrh	r3, [r4, #10]
+ 318 00c0 5B1A     		subs	r3, r3, r1
+ 319 00c2 9BB2     		uxth	r3, r3
+ 320 00c4 013B     		subs	r3, r3, #1
+ 321 00c6 99B2     		uxth	r1, r3
+ 322 00c8 D9E7     		b	.L46
+ 323              	.L56:
+ 324 00ca C0F3CF03 		ubfx	r3, r0, #3, #16
+ 325 00ce 254C     		ldr	r4, .L59
+ 326 00d0 B4F812C0 		ldrh	ip, [r4, #18]
+ 327 00d4 0CFB0133 		mla	r3, ip, r1, r3
+ 328 00d8 2468     		ldr	r4, [r4]
+ 329 00da E15C     		ldrb	r1, [r4, r3]	@ zero_extendqisi2
+ 330 00dc 3AB9     		cbnz	r2, .L48
+ 331 00de 00F00700 		and	r0, r0, #7
+ 332 00e2 6FF08002 		mvn	r2, #128
+ 333 00e6 0241     		asrs	r2, r2, r0
+ 334 00e8 1140     		ands	r1, r1, r2
+ 335 00ea E154     		strb	r1, [r4, r3]
+ 336 00ec D7E7     		b	.L35
+ 337              	.L48:
+ 338 00ee 00F00700 		and	r0, r0, #7
+ 339 00f2 8022     		movs	r2, #128
+ 340 00f4 0241     		asrs	r2, r2, r0
+ 341 00f6 1143     		orrs	r1, r1, r2
+ 342 00f8 E154     		strb	r1, [r4, r3]
+ 343 00fa D0E7     		b	.L35
+ 344              	.L57:
+ 345 00fc C0F38F04 		ubfx	r4, r0, #2, #16
+ 346 0100 184B     		ldr	r3, .L59
+ 347 0102 B3F812C0 		ldrh	ip, [r3, #18]
+ 348 0106 0CFB0141 		mla	r1, ip, r1, r4
+ 349 010a 02F00302 		and	r2, r2, #3
+ 350 010e 1C68     		ldr	r4, [r3]
+ 351 0110 14F801C0 		ldrb	ip, [r4, r1]	@ zero_extendqisi2
+ 352 0114 00F00300 		and	r0, r0, #3
+ 353 0118 4000     		lsls	r0, r0, #1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 7
+
+
+ 354 011a 6FF0C003 		mvn	r3, #192
+ 355 011e 0341     		asrs	r3, r3, r0
+ 356 0120 03EA0C03 		and	r3, r3, ip
+ 357 0124 5BB2     		sxtb	r3, r3
+ 358 0126 9201     		lsls	r2, r2, #6
+ 359 0128 0241     		asrs	r2, r2, r0
+ 360 012a 1343     		orrs	r3, r3, r2
+ 361 012c 6354     		strb	r3, [r4, r1]
+ 362 012e B6E7     		b	.L35
+ 363              	.L58:
+ 364 0130 C0F34F04 		ubfx	r4, r0, #1, #16
+ 365 0134 0B4B     		ldr	r3, .L59
+ 366 0136 B3F812C0 		ldrh	ip, [r3, #18]
+ 367 013a 0CFB0141 		mla	r1, ip, r1, r4
+ 368 013e 1C68     		ldr	r4, [r3]
+ 369 0140 14F801C0 		ldrb	ip, [r4, r1]	@ zero_extendqisi2
+ 370 0144 00F00100 		and	r0, r0, #1
+ 371 0148 8000     		lsls	r0, r0, #2
+ 372 014a 6FF0F003 		mvn	r3, #240
+ 373 014e 0341     		asrs	r3, r3, r0
+ 374 0150 03EA0C03 		and	r3, r3, ip
+ 375 0154 5BB2     		sxtb	r3, r3
+ 376 0156 1201     		lsls	r2, r2, #4
+ 377 0158 0241     		asrs	r2, r2, r0
+ 378 015a 1343     		orrs	r3, r3, r2
+ 379 015c 6354     		strb	r3, [r4, r1]
+ 380 015e 9EE7     		b	.L35
+ 381              	.L53:
+ 382 0160 7047     		bx	lr
+ 383              	.L60:
+ 384 0162 00BF     		.align	2
+ 385              	.L59:
+ 386 0164 00000000 		.word	Paint
+ 388              		.section	.text.EPD_Clear,"ax",%progbits
+ 389              		.align	1
+ 390              		.global	EPD_Clear
+ 391              		.syntax unified
+ 392              		.thumb
+ 393              		.thumb_func
+ 395              	EPD_Clear:
+ 396              		@ args = 0, pretend = 0, frame = 0
+ 397              		@ frame_needed = 0, uses_anonymous_args = 0
+ 398 0000 2F4B     		ldr	r3, .L90
+ 399 0002 DB8A     		ldrh	r3, [r3, #22]
+ 400 0004 022B     		cmp	r3, #2
+ 401 0006 1AD0     		beq	.L85
+ 402 0008 10B5     		push	{r4, lr}
+ 403 000a 042B     		cmp	r3, #4
+ 404 000c 3AD0     		beq	.L86
+ 405 000e 072B     		cmp	r3, #7
+ 406 0010 53D0     		beq	.L87
+ 407              	.L61:
+ 408 0012 10BD     		pop	{r4, pc}
+ 409              	.L64:
+ 410 0014 02FB0C32 		mla	r2, r2, ip, r3
+ 411 0018 2949     		ldr	r1, .L90
+ 412 001a 0968     		ldr	r1, [r1]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 8
+
+
+ 413 001c 8854     		strb	r0, [r1, r2]
+ 414 001e 0133     		adds	r3, r3, #1
+ 415 0020 9BB2     		uxth	r3, r3
+ 416              	.L65:
+ 417 0022 274A     		ldr	r2, .L90
+ 418 0024 528A     		ldrh	r2, [r2, #18]
+ 419 0026 9A42     		cmp	r2, r3
+ 420 0028 F4D8     		bhi	.L64
+ 421 002a 0CF1010C 		add	ip, ip, #1
+ 422 002e 1FFA8CFC 		uxth	ip, ip
+ 423              	.L62:
+ 424 0032 234B     		ldr	r3, .L90
+ 425 0034 9B8A     		ldrh	r3, [r3, #20]
+ 426 0036 6345     		cmp	r3, ip
+ 427 0038 04D9     		bls	.L88
+ 428 003a 0023     		movs	r3, #0
+ 429 003c F1E7     		b	.L65
+ 430              	.L85:
+ 431 003e 4FF0000C 		mov	ip, #0
+ 432 0042 F6E7     		b	.L62
+ 433              	.L88:
+ 434 0044 7047     		bx	lr
+ 435              	.L69:
+ 436 0046 03FB0E1C 		mla	ip, r3, lr, r1
+ 437 004a 42B2     		sxtb	r2, r0
+ 438 004c 1301     		lsls	r3, r2, #4
+ 439 004e 43EA8213 		orr	r3, r3, r2, lsl #6
+ 440 0052 5BB2     		sxtb	r3, r3
+ 441 0054 43EA8203 		orr	r3, r3, r2, lsl #2
+ 442 0058 5BB2     		sxtb	r3, r3
+ 443 005a 194C     		ldr	r4, .L90
+ 444 005c 2468     		ldr	r4, [r4]
+ 445 005e 1A43     		orrs	r2, r2, r3
+ 446 0060 04F80C20 		strb	r2, [r4, ip]
+ 447 0064 0131     		adds	r1, r1, #1
+ 448 0066 89B2     		uxth	r1, r1
+ 449              	.L70:
+ 450 0068 154B     		ldr	r3, .L90
+ 451 006a 5B8A     		ldrh	r3, [r3, #18]
+ 452 006c 8B42     		cmp	r3, r1
+ 453 006e EAD8     		bhi	.L69
+ 454 0070 0EF1010E 		add	lr, lr, #1
+ 455 0074 1FFA8EFE 		uxth	lr, lr
+ 456              	.L67:
+ 457 0078 114B     		ldr	r3, .L90
+ 458 007a 9B8A     		ldrh	r3, [r3, #20]
+ 459 007c 7345     		cmp	r3, lr
+ 460 007e C8D9     		bls	.L61
+ 461 0080 0021     		movs	r1, #0
+ 462 0082 F1E7     		b	.L70
+ 463              	.L86:
+ 464 0084 4FF0000E 		mov	lr, #0
+ 465 0088 F6E7     		b	.L67
+ 466              	.L89:
+ 467 008a 0CF1010C 		add	ip, ip, #1
+ 468 008e 1FFA8CFC 		uxth	ip, ip
+ 469              	.L71:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 9
+
+
+ 470 0092 0B4B     		ldr	r3, .L90
+ 471 0094 9B8A     		ldrh	r3, [r3, #20]
+ 472 0096 6345     		cmp	r3, ip
+ 473 0098 BBD9     		bls	.L61
+ 474 009a 0022     		movs	r2, #0
+ 475              	.L73:
+ 476 009c 084B     		ldr	r3, .L90
+ 477 009e 5B8A     		ldrh	r3, [r3, #18]
+ 478 00a0 9342     		cmp	r3, r2
+ 479 00a2 F2D9     		bls	.L89
+ 480 00a4 03FB0C21 		mla	r1, r3, ip, r2
+ 481 00a8 43B2     		sxtb	r3, r0
+ 482 00aa 054C     		ldr	r4, .L90
+ 483 00ac 2468     		ldr	r4, [r4]
+ 484 00ae 43EA0313 		orr	r3, r3, r3, lsl #4
+ 485 00b2 6354     		strb	r3, [r4, r1]
+ 486 00b4 0132     		adds	r2, r2, #1
+ 487 00b6 92B2     		uxth	r2, r2
+ 488 00b8 F0E7     		b	.L73
+ 489              	.L87:
+ 490 00ba 4FF0000C 		mov	ip, #0
+ 491 00be E8E7     		b	.L71
+ 492              	.L91:
+ 493              		.align	2
+ 494              	.L90:
+ 495 00c0 00000000 		.word	Paint
+ 497              		.section	.text.EPD_ClearWindows,"ax",%progbits
+ 498              		.align	1
+ 499              		.global	EPD_ClearWindows
+ 500              		.syntax unified
+ 501              		.thumb
+ 502              		.thumb_func
+ 504              	EPD_ClearWindows:
+ 505              		@ args = 4, pretend = 0, frame = 0
+ 506              		@ frame_needed = 0, uses_anonymous_args = 0
+ 507 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 508 0004 8146     		mov	r9, r0
+ 509 0006 0D46     		mov	r5, r1
+ 510 0008 1746     		mov	r7, r2
+ 511 000a 9846     		mov	r8, r3
+ 512 000c BDF82060 		ldrh	r6, [sp, #32]
+ 513 0010 0AE0     		b	.L93
+ 514              	.L94:
+ 515 0012 3246     		mov	r2, r6
+ 516 0014 2946     		mov	r1, r5
+ 517 0016 2046     		mov	r0, r4
+ 518 0018 FFF7FEFF 		bl	EPD_SetPixel
+ 519 001c 0134     		adds	r4, r4, #1
+ 520 001e A4B2     		uxth	r4, r4
+ 521              	.L95:
+ 522 0020 BC42     		cmp	r4, r7
+ 523 0022 F6D3     		bcc	.L94
+ 524 0024 0135     		adds	r5, r5, #1
+ 525 0026 ADB2     		uxth	r5, r5
+ 526              	.L93:
+ 527 0028 4545     		cmp	r5, r8
+ 528 002a 01D2     		bcs	.L98
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 10
+
+
+ 529 002c 4C46     		mov	r4, r9
+ 530 002e F7E7     		b	.L95
+ 531              	.L98:
+ 532 0030 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 534              		.section	.text.EPD_DrawPoint,"ax",%progbits
+ 535              		.align	1
+ 536              		.global	EPD_DrawPoint
+ 537              		.syntax unified
+ 538              		.thumb
+ 539              		.thumb_func
+ 541              	EPD_DrawPoint:
+ 542              		@ args = 4, pretend = 0, frame = 0
+ 543              		@ frame_needed = 0, uses_anonymous_args = 0
+ 544 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 545 0004 1D46     		mov	r5, r3
+ 546 0006 2D4B     		ldr	r3, .L112
+ 547 0008 9B88     		ldrh	r3, [r3, #4]
+ 548 000a 8342     		cmp	r3, r0
+ 549 000c 53D3     		bcc	.L99
+ 550 000e 0646     		mov	r6, r0
+ 551 0010 0F46     		mov	r7, r1
+ 552 0012 9046     		mov	r8, r2
+ 553 0014 294B     		ldr	r3, .L112
+ 554 0016 DB88     		ldrh	r3, [r3, #6]
+ 555 0018 8B42     		cmp	r3, r1
+ 556 001a 4CD3     		bcc	.L99
+ 557 001c 9DF82830 		ldrb	r3, [sp, #40]	@ zero_extendqisi2
+ 558 0020 012B     		cmp	r3, #1
+ 559 0022 29D0     		beq	.L108
+ 560 0024 4FF00009 		mov	r9, #0
+ 561 0028 40E0     		b	.L102
+ 562              	.L103:
+ 563 002a 0134     		adds	r4, r4, #1
+ 564 002c 24B2     		sxth	r4, r4
+ 565              	.L101:
+ 566 002e A246     		mov	r10, r4
+ 567 0030 4FEA4509 		lsl	r9, r5, #1
+ 568 0034 09F1FF39 		add	r9, r9, #-1
+ 569 0038 4C45     		cmp	r4, r9
+ 570 003a 3CDA     		bge	.L99
+ 571 003c 0023     		movs	r3, #0
+ 572              	.L105:
+ 573 003e 4B45     		cmp	r3, r9
+ 574 0040 F3DA     		bge	.L103
+ 575 0042 06EB0A02 		add	r2, r6, r10
+ 576 0046 521B     		subs	r2, r2, r5
+ 577 0048 002A     		cmp	r2, #0
+ 578 004a EEDB     		blt	.L103
+ 579 004c FA18     		adds	r2, r7, r3
+ 580 004e 521B     		subs	r2, r2, r5
+ 581 0050 002A     		cmp	r2, #0
+ 582 0052 EADB     		blt	.L103
+ 583 0054 3019     		adds	r0, r6, r4
+ 584 0056 80B2     		uxth	r0, r0
+ 585 0058 1FFA83FB 		uxth	fp, r3
+ 586 005c 0BEB0701 		add	r1, fp, r7
+ 587 0060 89B2     		uxth	r1, r1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 11
+
+
+ 588 0062 491B     		subs	r1, r1, r5
+ 589 0064 401B     		subs	r0, r0, r5
+ 590 0066 4246     		mov	r2, r8
+ 591 0068 89B2     		uxth	r1, r1
+ 592 006a 80B2     		uxth	r0, r0
+ 593 006c FFF7FEFF 		bl	EPD_SetPixel
+ 594 0070 0BF10103 		add	r3, fp, #1
+ 595 0074 1BB2     		sxth	r3, r3
+ 596 0076 E2E7     		b	.L105
+ 597              	.L108:
+ 598 0078 0024     		movs	r4, #0
+ 599 007a D8E7     		b	.L101
+ 600              	.L106:
+ 601 007c 06EB0900 		add	r0, r6, r9
+ 602 0080 80B2     		uxth	r0, r0
+ 603 0082 1FFA8CF4 		uxth	r4, ip
+ 604 0086 E119     		adds	r1, r4, r7
+ 605 0088 89B2     		uxth	r1, r1
+ 606 008a 0139     		subs	r1, r1, #1
+ 607 008c 0138     		subs	r0, r0, #1
+ 608 008e 4246     		mov	r2, r8
+ 609 0090 89B2     		uxth	r1, r1
+ 610 0092 80B2     		uxth	r0, r0
+ 611 0094 FFF7FEFF 		bl	EPD_SetPixel
+ 612 0098 04F1010C 		add	ip, r4, #1
+ 613 009c 0FFA8CFC 		sxth	ip, ip
+ 614              	.L107:
+ 615 00a0 AC45     		cmp	ip, r5
+ 616 00a2 EBDB     		blt	.L106
+ 617 00a4 09F10109 		add	r9, r9, #1
+ 618 00a8 0FFA89F9 		sxth	r9, r9
+ 619              	.L102:
+ 620 00ac A945     		cmp	r9, r5
+ 621 00ae 02DA     		bge	.L99
+ 622 00b0 4FF0000C 		mov	ip, #0
+ 623 00b4 F4E7     		b	.L107
+ 624              	.L99:
+ 625 00b6 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 626              	.L113:
+ 627 00ba 00BF     		.align	2
+ 628              	.L112:
+ 629 00bc 00000000 		.word	Paint
+ 631              		.section	.text.EPD_DrawLine,"ax",%progbits
+ 632              		.align	1
+ 633              		.global	EPD_DrawLine
+ 634              		.syntax unified
+ 635              		.thumb
+ 636              		.thumb_func
+ 638              	EPD_DrawLine:
+ 639              		@ args = 12, pretend = 0, frame = 32
+ 640              		@ frame_needed = 0, uses_anonymous_args = 0
+ 641 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 642 0004 8BB0     		sub	sp, sp, #44
+ 643 0006 0546     		mov	r5, r0
+ 644 0008 0E46     		mov	r6, r1
+ 645 000a 0692     		str	r2, [sp, #24]
+ 646 000c 1C46     		mov	r4, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 12
+
+
+ 647 000e 0593     		str	r3, [sp, #20]
+ 648 0010 BDF85010 		ldrh	r1, [sp, #80]
+ 649 0014 0391     		str	r1, [sp, #12]
+ 650 0016 9DF854B0 		ldrb	fp, [sp, #84]	@ zero_extendqisi2
+ 651 001a 9DF858A0 		ldrb	r10, [sp, #88]	@ zero_extendqisi2
+ 652 001e 374B     		ldr	r3, .L126
+ 653 0020 9B88     		ldrh	r3, [r3, #4]
+ 654 0022 8342     		cmp	r3, r0
+ 655 0024 66D3     		bcc	.L114
+ 656 0026 1046     		mov	r0, r2
+ 657 0028 344A     		ldr	r2, .L126
+ 658 002a D288     		ldrh	r2, [r2, #6]
+ 659 002c B242     		cmp	r2, r6
+ 660 002e 61D3     		bcc	.L114
+ 661 0030 8342     		cmp	r3, r0
+ 662 0032 5FD3     		bcc	.L114
+ 663 0034 A242     		cmp	r2, r4
+ 664 0036 5DD3     		bcc	.L114
+ 665 0038 A0EB0509 		sub	r9, r0, r5
+ 666 003c B9F1000F 		cmp	r9, #0
+ 667 0040 B8BF     		it	lt
+ 668 0042 C9F10009 		rsblt	r9, r9, #0
+ 669 0046 A31B     		subs	r3, r4, r6
+ 670 0048 83EAE371 		eor	r1, r3, r3, asr #31
+ 671 004c A1EBE371 		sub	r1, r1, r3, asr #31
+ 672 0050 0791     		str	r1, [sp, #28]
+ 673 0052 4B42     		rsbs	r3, r1, #0
+ 674 0054 0493     		str	r3, [sp, #16]
+ 675 0056 8542     		cmp	r5, r0
+ 676 0058 0BD2     		bcs	.L123
+ 677 005a 0123     		movs	r3, #1
+ 678 005c 0893     		str	r3, [sp, #32]
+ 679              	.L116:
+ 680 005e 059B     		ldr	r3, [sp, #20]
+ 681 0060 9E42     		cmp	r6, r3
+ 682 0062 0AD2     		bcs	.L124
+ 683 0064 0123     		movs	r3, #1
+ 684 0066 0993     		str	r3, [sp, #36]
+ 685              	.L117:
+ 686 0068 079B     		ldr	r3, [sp, #28]
+ 687 006a A9EB0308 		sub	r8, r9, r3
+ 688 006e 0024     		movs	r4, #0
+ 689 0070 26E0     		b	.L118
+ 690              	.L123:
+ 691 0072 4FF0FF33 		mov	r3, #-1
+ 692 0076 0893     		str	r3, [sp, #32]
+ 693 0078 F1E7     		b	.L116
+ 694              	.L124:
+ 695 007a 4FF0FF33 		mov	r3, #-1
+ 696 007e 0993     		str	r3, [sp, #36]
+ 697 0080 F2E7     		b	.L117
+ 698              	.L119:
+ 699 0082 0123     		movs	r3, #1
+ 700 0084 0093     		str	r3, [sp]
+ 701 0086 5B46     		mov	r3, fp
+ 702 0088 039A     		ldr	r2, [sp, #12]
+ 703 008a 3146     		mov	r1, r6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 13
+
+
+ 704 008c 2846     		mov	r0, r5
+ 705 008e FFF7FEFF 		bl	EPD_DrawPoint
+ 706              	.L120:
+ 707 0092 049B     		ldr	r3, [sp, #16]
+ 708 0094 B3EB480F 		cmp	r3, r8, lsl #1
+ 709 0098 08DC     		bgt	.L121
+ 710 009a 069B     		ldr	r3, [sp, #24]
+ 711 009c 9D42     		cmp	r5, r3
+ 712 009e 29D0     		beq	.L114
+ 713 00a0 079B     		ldr	r3, [sp, #28]
+ 714 00a2 A8EB0308 		sub	r8, r8, r3
+ 715 00a6 089B     		ldr	r3, [sp, #32]
+ 716 00a8 1D44     		add	r5, r5, r3
+ 717 00aa ADB2     		uxth	r5, r5
+ 718              	.L121:
+ 719 00ac B9EB480F 		cmp	r9, r8, lsl #1
+ 720 00b0 06DB     		blt	.L118
+ 721 00b2 059B     		ldr	r3, [sp, #20]
+ 722 00b4 9E42     		cmp	r6, r3
+ 723 00b6 1DD0     		beq	.L114
+ 724 00b8 C844     		add	r8, r8, r9
+ 725 00ba 099B     		ldr	r3, [sp, #36]
+ 726 00bc 1E44     		add	r6, r6, r3
+ 727 00be B6B2     		uxth	r6, r6
+ 728              	.L118:
+ 729 00c0 0134     		adds	r4, r4, #1
+ 730 00c2 E4B2     		uxtb	r4, r4
+ 731 00c4 BAF1010F 		cmp	r10, #1
+ 732 00c8 DBD1     		bne	.L119
+ 733 00ca 0D4B     		ldr	r3, .L126+4
+ 734 00cc A3FB0423 		umull	r2, r3, r3, r4
+ 735 00d0 23F00107 		bic	r7, r3, #1
+ 736 00d4 07EB5307 		add	r7, r7, r3, lsr #1
+ 737 00d8 E71B     		subs	r7, r4, r7
+ 738 00da 17F0FF07 		ands	r7, r7, #255
+ 739 00de D0D1     		bne	.L119
+ 740 00e0 0123     		movs	r3, #1
+ 741 00e2 0093     		str	r3, [sp]
+ 742 00e4 5B46     		mov	r3, fp
+ 743 00e6 FF22     		movs	r2, #255
+ 744 00e8 3146     		mov	r1, r6
+ 745 00ea 2846     		mov	r0, r5
+ 746 00ec FFF7FEFF 		bl	EPD_DrawPoint
+ 747 00f0 3C46     		mov	r4, r7
+ 748 00f2 CEE7     		b	.L120
+ 749              	.L114:
+ 750 00f4 0BB0     		add	sp, sp, #44
+ 751              		@ sp needed
+ 752 00f6 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 753              	.L127:
+ 754 00fa 00BF     		.align	2
+ 755              	.L126:
+ 756 00fc 00000000 		.word	Paint
+ 757 0100 ABAAAAAA 		.word	-1431655765
+ 759              		.section	.text.EPD_DrawRectangle,"ax",%progbits
+ 760              		.align	1
+ 761              		.global	EPD_DrawRectangle
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 14
+
+
+ 762              		.syntax unified
+ 763              		.thumb
+ 764              		.thumb_func
+ 766              	EPD_DrawRectangle:
+ 767              		@ args = 12, pretend = 0, frame = 0
+ 768              		@ frame_needed = 0, uses_anonymous_args = 0
+ 769 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 770 0004 84B0     		sub	sp, sp, #16
+ 771 0006 1646     		mov	r6, r2
+ 772 0008 1F46     		mov	r7, r3
+ 773 000a BDF83080 		ldrh	r8, [sp, #48]
+ 774 000e 9DF83490 		ldrb	r9, [sp, #52]	@ zero_extendqisi2
+ 775 0012 9DF83820 		ldrb	r2, [sp, #56]	@ zero_extendqisi2
+ 776 0016 2A4B     		ldr	r3, .L135
+ 777 0018 B3F804C0 		ldrh	ip, [r3, #4]
+ 778 001c 8445     		cmp	ip, r0
+ 779 001e 4BD3     		bcc	.L128
+ 780 0020 0546     		mov	r5, r0
+ 781 0022 0C46     		mov	r4, r1
+ 782 0024 DB88     		ldrh	r3, [r3, #6]
+ 783 0026 8B42     		cmp	r3, r1
+ 784 0028 46D3     		bcc	.L128
+ 785 002a B445     		cmp	ip, r6
+ 786 002c 44D3     		bcc	.L128
+ 787 002e BB42     		cmp	r3, r7
+ 788 0030 42D3     		bcc	.L128
+ 789 0032 002A     		cmp	r2, #0
+ 790 0034 3ED1     		bne	.L130
+ 791 0036 4FF0000A 		mov	r10, #0
+ 792 003a CDF808A0 		str	r10, [sp, #8]
+ 793 003e CDF80490 		str	r9, [sp, #4]
+ 794 0042 CDF80080 		str	r8, [sp]
+ 795 0046 0B46     		mov	r3, r1
+ 796 0048 3246     		mov	r2, r6
+ 797 004a FFF7FEFF 		bl	EPD_DrawLine
+ 798 004e CDF808A0 		str	r10, [sp, #8]
+ 799 0052 CDF80490 		str	r9, [sp, #4]
+ 800 0056 CDF80080 		str	r8, [sp]
+ 801 005a 3B46     		mov	r3, r7
+ 802 005c 2A46     		mov	r2, r5
+ 803 005e 2146     		mov	r1, r4
+ 804 0060 2846     		mov	r0, r5
+ 805 0062 FFF7FEFF 		bl	EPD_DrawLine
+ 806 0066 CDF808A0 		str	r10, [sp, #8]
+ 807 006a CDF80490 		str	r9, [sp, #4]
+ 808 006e CDF80080 		str	r8, [sp]
+ 809 0072 2346     		mov	r3, r4
+ 810 0074 3246     		mov	r2, r6
+ 811 0076 3946     		mov	r1, r7
+ 812 0078 3046     		mov	r0, r6
+ 813 007a FFF7FEFF 		bl	EPD_DrawLine
+ 814 007e CDF808A0 		str	r10, [sp, #8]
+ 815 0082 CDF80490 		str	r9, [sp, #4]
+ 816 0086 CDF80080 		str	r8, [sp]
+ 817 008a 3B46     		mov	r3, r7
+ 818 008c 2A46     		mov	r2, r5
+ 819 008e 3946     		mov	r1, r7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 15
+
+
+ 820 0090 3046     		mov	r0, r6
+ 821 0092 FFF7FEFF 		bl	EPD_DrawLine
+ 822 0096 0FE0     		b	.L128
+ 823              	.L132:
+ 824 0098 0023     		movs	r3, #0
+ 825 009a 0293     		str	r3, [sp, #8]
+ 826 009c CDF80490 		str	r9, [sp, #4]
+ 827 00a0 CDF80080 		str	r8, [sp]
+ 828 00a4 2346     		mov	r3, r4
+ 829 00a6 3246     		mov	r2, r6
+ 830 00a8 2146     		mov	r1, r4
+ 831 00aa 2846     		mov	r0, r5
+ 832 00ac FFF7FEFF 		bl	EPD_DrawLine
+ 833 00b0 0134     		adds	r4, r4, #1
+ 834 00b2 A4B2     		uxth	r4, r4
+ 835              	.L130:
+ 836 00b4 BC42     		cmp	r4, r7
+ 837 00b6 EFD3     		bcc	.L132
+ 838              	.L128:
+ 839 00b8 04B0     		add	sp, sp, #16
+ 840              		@ sp needed
+ 841 00ba BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 842              	.L136:
+ 843 00be 00BF     		.align	2
+ 844              	.L135:
+ 845 00c0 00000000 		.word	Paint
+ 847              		.section	.text.EPD_DrawCircle,"ax",%progbits
+ 848              		.align	1
+ 849              		.global	EPD_DrawCircle
+ 850              		.syntax unified
+ 851              		.thumb
+ 852              		.thumb_func
+ 854              	EPD_DrawCircle:
+ 855              		@ args = 8, pretend = 0, frame = 32
+ 856              		@ frame_needed = 0, uses_anonymous_args = 0
+ 857 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 858 0004 8BB0     		sub	sp, sp, #44
+ 859 0006 9DF85060 		ldrb	r6, [sp, #80]	@ zero_extendqisi2
+ 860 000a 8C4C     		ldr	r4, .L153
+ 861 000c A488     		ldrh	r4, [r4, #4]
+ 862 000e 8442     		cmp	r4, r0
+ 863 0010 C0F01181 		bcc	.L137
+ 864 0014 9B46     		mov	fp, r3
+ 865 0016 894C     		ldr	r4, .L153
+ 866 0018 E488     		ldrh	r4, [r4, #6]
+ 867 001a 8C42     		cmp	r4, r1
+ 868 001c 40F20B81 		bls	.L137
+ 869 0020 13B2     		sxth	r3, r2
+ 870 0022 0593     		str	r3, [sp, #20]
+ 871 0024 5200     		lsls	r2, r2, #1
+ 872 0026 92B2     		uxth	r2, r2
+ 873 0028 C2F10302 		rsb	r2, r2, #3
+ 874 002c 13B2     		sxth	r3, r2
+ 875 002e 0993     		str	r3, [sp, #36]
+ 876 0030 9DF85420 		ldrb	r2, [sp, #84]	@ zero_extendqisi2
+ 877 0034 012A     		cmp	r2, #1
+ 878 0036 7DD0     		beq	.L148
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 16
+
+
+ 879 0038 0023     		movs	r3, #0
+ 880 003a 0493     		str	r3, [sp, #16]
+ 881 003c 8246     		mov	r10, r0
+ 882 003e 0391     		str	r1, [sp, #12]
+ 883 0040 87E0     		b	.L140
+ 884              	.L141:
+ 885 0042 BDF81860 		ldrh	r6, [sp, #24]
+ 886 0046 06EB0903 		add	r3, r6, r9
+ 887 004a 98B2     		uxth	r0, r3
+ 888 004c ADB2     		uxth	r5, r5
+ 889 004e 039B     		ldr	r3, [sp, #12]
+ 890 0050 EF18     		adds	r7, r5, r3
+ 891 0052 BFB2     		uxth	r7, r7
+ 892 0054 0124     		movs	r4, #1
+ 893 0056 0094     		str	r4, [sp]
+ 894 0058 2346     		mov	r3, r4
+ 895 005a 5A46     		mov	r2, fp
+ 896 005c 3946     		mov	r1, r7
+ 897 005e 0490     		str	r0, [sp, #16]
+ 898 0060 FFF7FEFF 		bl	EPD_DrawPoint
+ 899 0064 A9EB0608 		sub	r8, r9, r6
+ 900 0068 1FFA88F8 		uxth	r8, r8
+ 901 006c 0094     		str	r4, [sp]
+ 902 006e 2346     		mov	r3, r4
+ 903 0070 5A46     		mov	r2, fp
+ 904 0072 3946     		mov	r1, r7
+ 905 0074 4046     		mov	r0, r8
+ 906 0076 FFF7FEFF 		bl	EPD_DrawPoint
+ 907 007a A9EB050A 		sub	r10, r9, r5
+ 908 007e 1FFA8AFA 		uxth	r10, r10
+ 909 0082 039B     		ldr	r3, [sp, #12]
+ 910 0084 F718     		adds	r7, r6, r3
+ 911 0086 BFB2     		uxth	r7, r7
+ 912 0088 0094     		str	r4, [sp]
+ 913 008a 2346     		mov	r3, r4
+ 914 008c 5A46     		mov	r2, fp
+ 915 008e 3946     		mov	r1, r7
+ 916 0090 5046     		mov	r0, r10
+ 917 0092 FFF7FEFF 		bl	EPD_DrawPoint
+ 918 0096 039B     		ldr	r3, [sp, #12]
+ 919 0098 9E1B     		subs	r6, r3, r6
+ 920 009a B6B2     		uxth	r6, r6
+ 921 009c 0094     		str	r4, [sp]
+ 922 009e 2346     		mov	r3, r4
+ 923 00a0 5A46     		mov	r2, fp
+ 924 00a2 3146     		mov	r1, r6
+ 925 00a4 5046     		mov	r0, r10
+ 926 00a6 FFF7FEFF 		bl	EPD_DrawPoint
+ 927 00aa 039B     		ldr	r3, [sp, #12]
+ 928 00ac A3EB050A 		sub	r10, r3, r5
+ 929 00b0 1FFA8AFA 		uxth	r10, r10
+ 930 00b4 0094     		str	r4, [sp]
+ 931 00b6 2346     		mov	r3, r4
+ 932 00b8 5A46     		mov	r2, fp
+ 933 00ba 5146     		mov	r1, r10
+ 934 00bc 4046     		mov	r0, r8
+ 935 00be FFF7FEFF 		bl	EPD_DrawPoint
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 17
+
+
+ 936 00c2 0094     		str	r4, [sp]
+ 937 00c4 2346     		mov	r3, r4
+ 938 00c6 5A46     		mov	r2, fp
+ 939 00c8 5146     		mov	r1, r10
+ 940 00ca 0498     		ldr	r0, [sp, #16]
+ 941 00cc FFF7FEFF 		bl	EPD_DrawPoint
+ 942 00d0 05EB0908 		add	r8, r5, r9
+ 943 00d4 1FFA88F8 		uxth	r8, r8
+ 944 00d8 0094     		str	r4, [sp]
+ 945 00da 2346     		mov	r3, r4
+ 946 00dc 5A46     		mov	r2, fp
+ 947 00de 3146     		mov	r1, r6
+ 948 00e0 4046     		mov	r0, r8
+ 949 00e2 FFF7FEFF 		bl	EPD_DrawPoint
+ 950 00e6 0094     		str	r4, [sp]
+ 951 00e8 2346     		mov	r3, r4
+ 952 00ea 5A46     		mov	r2, fp
+ 953 00ec 3946     		mov	r1, r7
+ 954 00ee 4046     		mov	r0, r8
+ 955 00f0 FFF7FEFF 		bl	EPD_DrawPoint
+ 956 00f4 2544     		add	r5, r5, r4
+ 957 00f6 2DB2     		sxth	r5, r5
+ 958              	.L144:
+ 959 00f8 059B     		ldr	r3, [sp, #20]
+ 960 00fa AB42     		cmp	r3, r5
+ 961 00fc A1DA     		bge	.L141
+ 962 00fe 069A     		ldr	r2, [sp, #24]
+ 963 0100 079C     		ldr	r4, [sp, #28]
+ 964 0102 002C     		cmp	r4, #0
+ 965 0104 10DB     		blt	.L151
+ 966 0106 D11A     		subs	r1, r2, r3
+ 967 0108 04EB8101 		add	r1, r4, r1, lsl #2
+ 968 010c 0A31     		adds	r1, r1, #10
+ 969 010e 0CB2     		sxth	r4, r1
+ 970 0110 013B     		subs	r3, r3, #1
+ 971 0112 1BB2     		sxth	r3, r3
+ 972              	.L143:
+ 973 0114 0132     		adds	r2, r2, #1
+ 974 0116 12B2     		sxth	r2, r2
+ 975              	.L139:
+ 976 0118 9A42     		cmp	r2, r3
+ 977 011a 00F38C80 		bgt	.L137
+ 978 011e 1546     		mov	r5, r2
+ 979 0120 0692     		str	r2, [sp, #24]
+ 980 0122 0593     		str	r3, [sp, #20]
+ 981 0124 0794     		str	r4, [sp, #28]
+ 982 0126 E7E7     		b	.L144
+ 983              	.L151:
+ 984 0128 9100     		lsls	r1, r2, #2
+ 985 012a 89B2     		uxth	r1, r1
+ 986 012c 2144     		add	r1, r1, r4
+ 987 012e 0631     		adds	r1, r1, #6
+ 988 0130 0CB2     		sxth	r4, r1
+ 989 0132 EFE7     		b	.L143
+ 990              	.L148:
+ 991 0134 0022     		movs	r2, #0
+ 992 0136 059B     		ldr	r3, [sp, #20]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 18
+
+
+ 993 0138 099C     		ldr	r4, [sp, #36]
+ 994 013a 8146     		mov	r9, r0
+ 995 013c 0391     		str	r1, [sp, #12]
+ 996 013e EBE7     		b	.L139
+ 997              	.L152:
+ 998 0140 AB00     		lsls	r3, r5, #2
+ 999 0142 9BB2     		uxth	r3, r3
+ 1000 0144 1344     		add	r3, r3, r2
+ 1001 0146 0633     		adds	r3, r3, #6
+ 1002 0148 1BB2     		sxth	r3, r3
+ 1003 014a 0993     		str	r3, [sp, #36]
+ 1004              	.L146:
+ 1005 014c 0135     		adds	r5, r5, #1
+ 1006 014e 2BB2     		sxth	r3, r5
+ 1007 0150 0493     		str	r3, [sp, #16]
+ 1008              	.L140:
+ 1009 0152 049B     		ldr	r3, [sp, #16]
+ 1010 0154 059A     		ldr	r2, [sp, #20]
+ 1011 0156 9342     		cmp	r3, r2
+ 1012 0158 6DDC     		bgt	.L137
+ 1013 015a BDF81050 		ldrh	r5, [sp, #16]
+ 1014 015e 05EB0A03 		add	r3, r5, r10
+ 1015 0162 98B2     		uxth	r0, r3
+ 1016 0164 BDF81470 		ldrh	r7, [sp, #20]
+ 1017 0168 039B     		ldr	r3, [sp, #12]
+ 1018 016a 07EB0308 		add	r8, r7, r3
+ 1019 016e 1FFA88F8 		uxth	r8, r8
+ 1020 0172 0124     		movs	r4, #1
+ 1021 0174 0094     		str	r4, [sp]
+ 1022 0176 3346     		mov	r3, r6
+ 1023 0178 5A46     		mov	r2, fp
+ 1024 017a 4146     		mov	r1, r8
+ 1025 017c 0690     		str	r0, [sp, #24]
+ 1026 017e FFF7FEFF 		bl	EPD_DrawPoint
+ 1027 0182 AAEB0503 		sub	r3, r10, r5
+ 1028 0186 9AB2     		uxth	r2, r3
+ 1029 0188 1046     		mov	r0, r2
+ 1030 018a 0094     		str	r4, [sp]
+ 1031 018c 3346     		mov	r3, r6
+ 1032 018e 5A46     		mov	r2, fp
+ 1033 0190 4146     		mov	r1, r8
+ 1034 0192 0790     		str	r0, [sp, #28]
+ 1035 0194 FFF7FEFF 		bl	EPD_DrawPoint
+ 1036 0198 AAEB0709 		sub	r9, r10, r7
+ 1037 019c 1FFA89F9 		uxth	r9, r9
+ 1038 01a0 039B     		ldr	r3, [sp, #12]
+ 1039 01a2 EB18     		adds	r3, r5, r3
+ 1040 01a4 99B2     		uxth	r1, r3
+ 1041 01a6 0094     		str	r4, [sp]
+ 1042 01a8 3346     		mov	r3, r6
+ 1043 01aa 5A46     		mov	r2, fp
+ 1044 01ac 0891     		str	r1, [sp, #32]
+ 1045 01ae 4846     		mov	r0, r9
+ 1046 01b0 FFF7FEFF 		bl	EPD_DrawPoint
+ 1047 01b4 039B     		ldr	r3, [sp, #12]
+ 1048 01b6 A3EB0508 		sub	r8, r3, r5
+ 1049 01ba 1FFA88F8 		uxth	r8, r8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 19
+
+
+ 1050 01be 0094     		str	r4, [sp]
+ 1051 01c0 3346     		mov	r3, r6
+ 1052 01c2 5A46     		mov	r2, fp
+ 1053 01c4 4146     		mov	r1, r8
+ 1054 01c6 4846     		mov	r0, r9
+ 1055 01c8 FFF7FEFF 		bl	EPD_DrawPoint
+ 1056 01cc 039B     		ldr	r3, [sp, #12]
+ 1057 01ce A3EB0709 		sub	r9, r3, r7
+ 1058 01d2 1FFA89F9 		uxth	r9, r9
+ 1059 01d6 0094     		str	r4, [sp]
+ 1060 01d8 3346     		mov	r3, r6
+ 1061 01da 5A46     		mov	r2, fp
+ 1062 01dc 4946     		mov	r1, r9
+ 1063 01de 0798     		ldr	r0, [sp, #28]
+ 1064 01e0 FFF7FEFF 		bl	EPD_DrawPoint
+ 1065 01e4 0094     		str	r4, [sp]
+ 1066 01e6 3346     		mov	r3, r6
+ 1067 01e8 5A46     		mov	r2, fp
+ 1068 01ea 4946     		mov	r1, r9
+ 1069 01ec 0698     		ldr	r0, [sp, #24]
+ 1070 01ee FFF7FEFF 		bl	EPD_DrawPoint
+ 1071 01f2 07EB0A09 		add	r9, r7, r10
+ 1072 01f6 1FFA89F9 		uxth	r9, r9
+ 1073 01fa 0094     		str	r4, [sp]
+ 1074 01fc 3346     		mov	r3, r6
+ 1075 01fe 5A46     		mov	r2, fp
+ 1076 0200 4146     		mov	r1, r8
+ 1077 0202 4846     		mov	r0, r9
+ 1078 0204 FFF7FEFF 		bl	EPD_DrawPoint
+ 1079 0208 0094     		str	r4, [sp]
+ 1080 020a 3346     		mov	r3, r6
+ 1081 020c 5A46     		mov	r2, fp
+ 1082 020e 0899     		ldr	r1, [sp, #32]
+ 1083 0210 4846     		mov	r0, r9
+ 1084 0212 FFF7FEFF 		bl	EPD_DrawPoint
+ 1085 0216 099A     		ldr	r2, [sp, #36]
+ 1086 0218 002A     		cmp	r2, #0
+ 1087 021a 91DB     		blt	.L152
+ 1088 021c 049B     		ldr	r3, [sp, #16]
+ 1089 021e 059A     		ldr	r2, [sp, #20]
+ 1090 0220 9B1A     		subs	r3, r3, r2
+ 1091 0222 099A     		ldr	r2, [sp, #36]
+ 1092 0224 02EB8303 		add	r3, r2, r3, lsl #2
+ 1093 0228 0A33     		adds	r3, r3, #10
+ 1094 022a 1BB2     		sxth	r3, r3
+ 1095 022c 0993     		str	r3, [sp, #36]
+ 1096 022e 013F     		subs	r7, r7, #1
+ 1097 0230 3BB2     		sxth	r3, r7
+ 1098 0232 0593     		str	r3, [sp, #20]
+ 1099 0234 8AE7     		b	.L146
+ 1100              	.L137:
+ 1101 0236 0BB0     		add	sp, sp, #44
+ 1102              		@ sp needed
+ 1103 0238 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1104              	.L154:
+ 1105              		.align	2
+ 1106              	.L153:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 20
+
+
+ 1107 023c 00000000 		.word	Paint
+ 1109              		.section	.text.EPD_DrawChar,"ax",%progbits
+ 1110              		.align	1
+ 1111              		.global	EPD_DrawChar
+ 1112              		.syntax unified
+ 1113              		.thumb
+ 1114              		.thumb_func
+ 1116              	EPD_DrawChar:
+ 1117              		@ args = 8, pretend = 0, frame = 0
+ 1118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1119 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1120 0004 1F46     		mov	r7, r3
+ 1121 0006 BDF828B0 		ldrh	fp, [sp, #40]
+ 1122 000a BDF82C80 		ldrh	r8, [sp, #44]
+ 1123 000e 304B     		ldr	r3, .L170
+ 1124 0010 9B88     		ldrh	r3, [r3, #4]
+ 1125 0012 8342     		cmp	r3, r0
+ 1126 0014 59D3     		bcc	.L155
+ 1127 0016 8146     		mov	r9, r0
+ 1128 0018 8A46     		mov	r10, r1
+ 1129 001a 2D4B     		ldr	r3, .L170
+ 1130 001c DB88     		ldrh	r3, [r3, #6]
+ 1131 001e 8B42     		cmp	r3, r1
+ 1132 0020 53D3     		bcc	.L155
+ 1133 0022 203A     		subs	r2, r2, #32
+ 1134 0024 FB88     		ldrh	r3, [r7, #6]
+ 1135 0026 02FB03F3 		mul	r3, r2, r3
+ 1136 002a B988     		ldrh	r1, [r7, #4]
+ 1137 002c 11F00702 		ands	r2, r1, #7
+ 1138 0030 18BF     		it	ne
+ 1139 0032 0122     		movne	r2, #1
+ 1140 0034 02EBD102 		add	r2, r2, r1, lsr #3
+ 1141 0038 3D68     		ldr	r5, [r7]
+ 1142 003a 02FB0355 		mla	r5, r2, r3, r5
+ 1143 003e 0026     		movs	r6, #0
+ 1144 0040 3EE0     		b	.L157
+ 1145              	.L169:
+ 1146 0042 2A78     		ldrb	r2, [r5]	@ zero_extendqisi2
+ 1147 0044 04F00701 		and	r1, r4, #7
+ 1148 0048 8023     		movs	r3, #128
+ 1149 004a 0B41     		asrs	r3, r3, r1
+ 1150 004c 1A42     		tst	r2, r3
+ 1151 004e 12D0     		beq	.L159
+ 1152 0050 06EB0A01 		add	r1, r6, r10
+ 1153 0054 04EB0900 		add	r0, r4, r9
+ 1154 0058 5A46     		mov	r2, fp
+ 1155 005a 89B2     		uxth	r1, r1
+ 1156 005c 80B2     		uxth	r0, r0
+ 1157 005e FFF7FEFF 		bl	EPD_SetPixel
+ 1158 0062 08E0     		b	.L159
+ 1159              	.L160:
+ 1160 0064 06EB0A01 		add	r1, r6, r10
+ 1161 0068 04EB0900 		add	r0, r4, r9
+ 1162 006c 4246     		mov	r2, r8
+ 1163 006e 89B2     		uxth	r1, r1
+ 1164 0070 80B2     		uxth	r0, r0
+ 1165 0072 FFF7FEFF 		bl	EPD_SetPixel
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 21
+
+
+ 1166              	.L159:
+ 1167 0076 04F00703 		and	r3, r4, #7
+ 1168 007a 072B     		cmp	r3, #7
+ 1169 007c 18D0     		beq	.L167
+ 1170              	.L161:
+ 1171 007e 0134     		adds	r4, r4, #1
+ 1172 0080 A4B2     		uxth	r4, r4
+ 1173              	.L164:
+ 1174 0082 BB88     		ldrh	r3, [r7, #4]
+ 1175 0084 A342     		cmp	r3, r4
+ 1176 0086 15D9     		bls	.L168
+ 1177 0088 B8F1FF0F 		cmp	r8, #255
+ 1178 008c D9D0     		beq	.L169
+ 1179 008e 2A78     		ldrb	r2, [r5]	@ zero_extendqisi2
+ 1180 0090 04F00701 		and	r1, r4, #7
+ 1181 0094 8023     		movs	r3, #128
+ 1182 0096 0B41     		asrs	r3, r3, r1
+ 1183 0098 1A42     		tst	r2, r3
+ 1184 009a E3D0     		beq	.L160
+ 1185 009c 06EB0A01 		add	r1, r6, r10
+ 1186 00a0 04EB0900 		add	r0, r4, r9
+ 1187 00a4 5A46     		mov	r2, fp
+ 1188 00a6 89B2     		uxth	r1, r1
+ 1189 00a8 80B2     		uxth	r0, r0
+ 1190 00aa FFF7FEFF 		bl	EPD_SetPixel
+ 1191 00ae E2E7     		b	.L159
+ 1192              	.L167:
+ 1193 00b0 0135     		adds	r5, r5, #1
+ 1194 00b2 E4E7     		b	.L161
+ 1195              	.L168:
+ 1196 00b4 13F0070F 		tst	r3, #7
+ 1197 00b8 00D0     		beq	.L163
+ 1198 00ba 0135     		adds	r5, r5, #1
+ 1199              	.L163:
+ 1200 00bc 0136     		adds	r6, r6, #1
+ 1201 00be B6B2     		uxth	r6, r6
+ 1202              	.L157:
+ 1203 00c0 FB88     		ldrh	r3, [r7, #6]
+ 1204 00c2 B342     		cmp	r3, r6
+ 1205 00c4 01D9     		bls	.L155
+ 1206 00c6 0024     		movs	r4, #0
+ 1207 00c8 DBE7     		b	.L164
+ 1208              	.L155:
+ 1209 00ca BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1210              	.L171:
+ 1211 00ce 00BF     		.align	2
+ 1212              	.L170:
+ 1213 00d0 00000000 		.word	Paint
+ 1215              		.section	.text.EPD_DrawString_EN,"ax",%progbits
+ 1216              		.align	1
+ 1217              		.global	EPD_DrawString_EN
+ 1218              		.syntax unified
+ 1219              		.thumb
+ 1220              		.thumb_func
+ 1222              	EPD_DrawString_EN:
+ 1223              		@ args = 8, pretend = 0, frame = 0
+ 1224              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 22
+
+
+ 1225 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1226 0004 83B0     		sub	sp, sp, #12
+ 1227 0006 1C46     		mov	r4, r3
+ 1228 0008 BDF830A0 		ldrh	r10, [sp, #48]
+ 1229 000c BDF834B0 		ldrh	fp, [sp, #52]
+ 1230 0010 194B     		ldr	r3, .L180
+ 1231 0012 9B88     		ldrh	r3, [r3, #4]
+ 1232 0014 8342     		cmp	r3, r0
+ 1233 0016 2BD3     		bcc	.L172
+ 1234 0018 8046     		mov	r8, r0
+ 1235 001a 8946     		mov	r9, r1
+ 1236 001c 1646     		mov	r6, r2
+ 1237 001e 164B     		ldr	r3, .L180
+ 1238 0020 DB88     		ldrh	r3, [r3, #6]
+ 1239 0022 8B42     		cmp	r3, r1
+ 1240 0024 24D3     		bcc	.L172
+ 1241 0026 0F46     		mov	r7, r1
+ 1242 0028 0546     		mov	r5, r0
+ 1243 002a 0CE0     		b	.L174
+ 1244              	.L176:
+ 1245 002c CDF804A0 		str	r10, [sp, #4]
+ 1246 0030 CDF800B0 		str	fp, [sp]
+ 1247 0034 2346     		mov	r3, r4
+ 1248 0036 3946     		mov	r1, r7
+ 1249 0038 2846     		mov	r0, r5
+ 1250 003a FFF7FEFF 		bl	EPD_DrawChar
+ 1251 003e 0136     		adds	r6, r6, #1
+ 1252 0040 A388     		ldrh	r3, [r4, #4]
+ 1253 0042 2B44     		add	r3, r3, r5
+ 1254 0044 9DB2     		uxth	r5, r3
+ 1255              	.L174:
+ 1256 0046 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1257 0048 92B1     		cbz	r2, .L172
+ 1258 004a A388     		ldrh	r3, [r4, #4]
+ 1259 004c 2B44     		add	r3, r3, r5
+ 1260 004e 0A49     		ldr	r1, .L180
+ 1261 0050 8988     		ldrh	r1, [r1, #4]
+ 1262 0052 8B42     		cmp	r3, r1
+ 1263 0054 03DD     		ble	.L175
+ 1264 0056 E388     		ldrh	r3, [r4, #6]
+ 1265 0058 3B44     		add	r3, r3, r7
+ 1266 005a 9FB2     		uxth	r7, r3
+ 1267 005c 4546     		mov	r5, r8
+ 1268              	.L175:
+ 1269 005e E388     		ldrh	r3, [r4, #6]
+ 1270 0060 3B44     		add	r3, r3, r7
+ 1271 0062 0549     		ldr	r1, .L180
+ 1272 0064 C988     		ldrh	r1, [r1, #6]
+ 1273 0066 8B42     		cmp	r3, r1
+ 1274 0068 E0DD     		ble	.L176
+ 1275 006a 4F46     		mov	r7, r9
+ 1276 006c 4546     		mov	r5, r8
+ 1277 006e DDE7     		b	.L176
+ 1278              	.L172:
+ 1279 0070 03B0     		add	sp, sp, #12
+ 1280              		@ sp needed
+ 1281 0072 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 23
+
+
+ 1282              	.L181:
+ 1283 0076 00BF     		.align	2
+ 1284              	.L180:
+ 1285 0078 00000000 		.word	Paint
+ 1287              		.section	.text.EPD_DrawString_CN,"ax",%progbits
+ 1288              		.align	1
+ 1289              		.global	EPD_DrawString_CN
+ 1290              		.syntax unified
+ 1291              		.thumb
+ 1292              		.thumb_func
+ 1294              	EPD_DrawString_CN:
+ 1295              		@ args = 8, pretend = 0, frame = 8
+ 1296              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1297 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1298 0004 83B0     		sub	sp, sp, #12
+ 1299 0006 8946     		mov	r9, r1
+ 1300 0008 0192     		str	r2, [sp, #4]
+ 1301 000a 1D46     		mov	r5, r3
+ 1302 000c BDF830A0 		ldrh	r10, [sp, #48]
+ 1303 0010 BDF83470 		ldrh	r7, [sp, #52]
+ 1304 0014 8046     		mov	r8, r0
+ 1305 0016 51E0     		b	.L183
+ 1306              	.L218:
+ 1307 0018 0022     		movs	r2, #0
+ 1308 001a ACE0     		b	.L185
+ 1309              	.L219:
+ 1310 001c 0236     		adds	r6, r6, #2
+ 1311 001e 4FF0000B 		mov	fp, #0
+ 1312 0022 41E0     		b	.L187
+ 1313              	.L216:
+ 1314 0024 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1315 0026 04F00701 		and	r1, r4, #7
+ 1316 002a 8023     		movs	r3, #128
+ 1317 002c 0B41     		asrs	r3, r3, r1
+ 1318 002e 1A42     		tst	r2, r3
+ 1319 0030 12D0     		beq	.L189
+ 1320 0032 09EB0B01 		add	r1, r9, fp
+ 1321 0036 08EB0400 		add	r0, r8, r4
+ 1322 003a 5246     		mov	r2, r10
+ 1323 003c 89B2     		uxth	r1, r1
+ 1324 003e 80B2     		uxth	r0, r0
+ 1325 0040 FFF7FEFF 		bl	EPD_SetPixel
+ 1326 0044 08E0     		b	.L189
+ 1327              	.L190:
+ 1328 0046 09EB0B01 		add	r1, r9, fp
+ 1329 004a 08EB0400 		add	r0, r8, r4
+ 1330 004e 3A46     		mov	r2, r7
+ 1331 0050 89B2     		uxth	r1, r1
+ 1332 0052 80B2     		uxth	r0, r0
+ 1333 0054 FFF7FEFF 		bl	EPD_SetPixel
+ 1334              	.L189:
+ 1335 0058 6242     		rsbs	r2, r4, #0
+ 1336 005a 04F00703 		and	r3, r4, #7
+ 1337 005e 02F00702 		and	r2, r2, #7
+ 1338 0062 58BF     		it	pl
+ 1339 0064 5342     		rsbpl	r3, r2, #0
+ 1340 0066 072B     		cmp	r3, #7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 24
+
+
+ 1341 0068 16D0     		beq	.L214
+ 1342              	.L191:
+ 1343 006a 0134     		adds	r4, r4, #1
+ 1344              	.L194:
+ 1345 006c 2B89     		ldrh	r3, [r5, #8]
+ 1346 006e A342     		cmp	r3, r4
+ 1347 0070 14DD     		ble	.L215
+ 1348 0072 FF2F     		cmp	r7, #255
+ 1349 0074 D6D0     		beq	.L216
+ 1350 0076 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1351 0078 04F00701 		and	r1, r4, #7
+ 1352 007c 8023     		movs	r3, #128
+ 1353 007e 0B41     		asrs	r3, r3, r1
+ 1354 0080 1A42     		tst	r2, r3
+ 1355 0082 E0D0     		beq	.L190
+ 1356 0084 09EB0B01 		add	r1, r9, fp
+ 1357 0088 08EB0400 		add	r0, r8, r4
+ 1358 008c 5246     		mov	r2, r10
+ 1359 008e 89B2     		uxth	r1, r1
+ 1360 0090 80B2     		uxth	r0, r0
+ 1361 0092 FFF7FEFF 		bl	EPD_SetPixel
+ 1362 0096 DFE7     		b	.L189
+ 1363              	.L214:
+ 1364 0098 0136     		adds	r6, r6, #1
+ 1365 009a E6E7     		b	.L191
+ 1366              	.L215:
+ 1367 009c 13F0070F 		tst	r3, #7
+ 1368 00a0 00D0     		beq	.L193
+ 1369 00a2 0136     		adds	r6, r6, #1
+ 1370              	.L193:
+ 1371 00a4 0BF1010B 		add	fp, fp, #1
+ 1372              	.L187:
+ 1373 00a8 6B89     		ldrh	r3, [r5, #10]
+ 1374 00aa 5B45     		cmp	r3, fp
+ 1375 00ac 01DD     		ble	.L195
+ 1376 00ae 0024     		movs	r4, #0
+ 1377 00b0 DCE7     		b	.L194
+ 1378              	.L195:
+ 1379 00b2 019B     		ldr	r3, [sp, #4]
+ 1380 00b4 0133     		adds	r3, r3, #1
+ 1381 00b6 0193     		str	r3, [sp, #4]
+ 1382 00b8 EB88     		ldrh	r3, [r5, #6]
+ 1383 00ba 9844     		add	r8, r8, r3
+ 1384              	.L183:
+ 1385 00bc 019B     		ldr	r3, [sp, #4]
+ 1386 00be 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 1387 00c0 0028     		cmp	r0, #0
+ 1388 00c2 72D0     		beq	.L217
+ 1389 00c4 10F0800F 		tst	r0, #128
+ 1390 00c8 A6D1     		bne	.L218
+ 1391 00ca 0022     		movs	r2, #0
+ 1392              	.L184:
+ 1393 00cc AB88     		ldrh	r3, [r5, #4]
+ 1394 00ce 9342     		cmp	r3, r2
+ 1395 00d0 EFDD     		ble	.L195
+ 1396 00d2 2968     		ldr	r1, [r5]
+ 1397 00d4 A623     		movs	r3, #166
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 25
+
+
+ 1398 00d6 02FB03F3 		mul	r3, r2, r3
+ 1399 00da CE18     		adds	r6, r1, r3
+ 1400 00dc CB5C     		ldrb	r3, [r1, r3]	@ zero_extendqisi2
+ 1401 00de 8342     		cmp	r3, r0
+ 1402 00e0 9CD0     		beq	.L219
+ 1403 00e2 0132     		adds	r2, r2, #1
+ 1404 00e4 F2E7     		b	.L184
+ 1405              	.L222:
+ 1406 00e6 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1407 00e8 04F00701 		and	r1, r4, #7
+ 1408 00ec 8023     		movs	r3, #128
+ 1409 00ee 0B41     		asrs	r3, r3, r1
+ 1410 00f0 1A42     		tst	r2, r3
+ 1411 00f2 12D0     		beq	.L201
+ 1412 00f4 09EB0B01 		add	r1, r9, fp
+ 1413 00f8 08EB0400 		add	r0, r8, r4
+ 1414 00fc 5246     		mov	r2, r10
+ 1415 00fe 89B2     		uxth	r1, r1
+ 1416 0100 80B2     		uxth	r0, r0
+ 1417 0102 FFF7FEFF 		bl	EPD_SetPixel
+ 1418 0106 08E0     		b	.L201
+ 1419              	.L202:
+ 1420 0108 09EB0B01 		add	r1, r9, fp
+ 1421 010c 08EB0400 		add	r0, r8, r4
+ 1422 0110 3A46     		mov	r2, r7
+ 1423 0112 89B2     		uxth	r1, r1
+ 1424 0114 80B2     		uxth	r0, r0
+ 1425 0116 FFF7FEFF 		bl	EPD_SetPixel
+ 1426              	.L201:
+ 1427 011a 6242     		rsbs	r2, r4, #0
+ 1428 011c 04F00703 		and	r3, r4, #7
+ 1429 0120 02F00702 		and	r2, r2, #7
+ 1430 0124 58BF     		it	pl
+ 1431 0126 5342     		rsbpl	r3, r2, #0
+ 1432 0128 072B     		cmp	r3, #7
+ 1433 012a 16D0     		beq	.L220
+ 1434              	.L203:
+ 1435 012c 0134     		adds	r4, r4, #1
+ 1436              	.L206:
+ 1437 012e 2B89     		ldrh	r3, [r5, #8]
+ 1438 0130 A342     		cmp	r3, r4
+ 1439 0132 14DD     		ble	.L221
+ 1440 0134 FF2F     		cmp	r7, #255
+ 1441 0136 D6D0     		beq	.L222
+ 1442 0138 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1443 013a 04F00701 		and	r1, r4, #7
+ 1444 013e 8023     		movs	r3, #128
+ 1445 0140 0B41     		asrs	r3, r3, r1
+ 1446 0142 1A42     		tst	r2, r3
+ 1447 0144 E0D0     		beq	.L202
+ 1448 0146 09EB0B01 		add	r1, r9, fp
+ 1449 014a 08EB0400 		add	r0, r8, r4
+ 1450 014e 5246     		mov	r2, r10
+ 1451 0150 89B2     		uxth	r1, r1
+ 1452 0152 80B2     		uxth	r0, r0
+ 1453 0154 FFF7FEFF 		bl	EPD_SetPixel
+ 1454 0158 DFE7     		b	.L201
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 26
+
+
+ 1455              	.L220:
+ 1456 015a 0136     		adds	r6, r6, #1
+ 1457 015c E6E7     		b	.L203
+ 1458              	.L221:
+ 1459 015e 13F0070F 		tst	r3, #7
+ 1460 0162 00D0     		beq	.L205
+ 1461 0164 0136     		adds	r6, r6, #1
+ 1462              	.L205:
+ 1463 0166 0BF1010B 		add	fp, fp, #1
+ 1464              	.L199:
+ 1465 016a 6B89     		ldrh	r3, [r5, #10]
+ 1466 016c 5B45     		cmp	r3, fp
+ 1467 016e 16DD     		ble	.L207
+ 1468 0170 0024     		movs	r4, #0
+ 1469 0172 DCE7     		b	.L206
+ 1470              	.L198:
+ 1471 0174 0132     		adds	r2, r2, #1
+ 1472              	.L185:
+ 1473 0176 AB88     		ldrh	r3, [r5, #4]
+ 1474 0178 9342     		cmp	r3, r2
+ 1475 017a 10DD     		ble	.L207
+ 1476 017c 2968     		ldr	r1, [r5]
+ 1477 017e A623     		movs	r3, #166
+ 1478 0180 02FB03F3 		mul	r3, r2, r3
+ 1479 0184 CE18     		adds	r6, r1, r3
+ 1480 0186 CB5C     		ldrb	r3, [r1, r3]	@ zero_extendqisi2
+ 1481 0188 8342     		cmp	r3, r0
+ 1482 018a F3D1     		bne	.L198
+ 1483 018c 019B     		ldr	r3, [sp, #4]
+ 1484 018e 5978     		ldrb	r1, [r3, #1]	@ zero_extendqisi2
+ 1485 0190 7378     		ldrb	r3, [r6, #1]	@ zero_extendqisi2
+ 1486 0192 9942     		cmp	r1, r3
+ 1487 0194 EED1     		bne	.L198
+ 1488 0196 0236     		adds	r6, r6, #2
+ 1489 0198 4FF0000B 		mov	fp, #0
+ 1490 019c E5E7     		b	.L199
+ 1491              	.L207:
+ 1492 019e 019B     		ldr	r3, [sp, #4]
+ 1493 01a0 0233     		adds	r3, r3, #2
+ 1494 01a2 0193     		str	r3, [sp, #4]
+ 1495 01a4 2B89     		ldrh	r3, [r5, #8]
+ 1496 01a6 9844     		add	r8, r8, r3
+ 1497 01a8 88E7     		b	.L183
+ 1498              	.L217:
+ 1499 01aa 03B0     		add	sp, sp, #12
+ 1500              		@ sp needed
+ 1501 01ac BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1503              		.section	.text.EPD_DrawNum,"ax",%progbits
+ 1504              		.align	1
+ 1505              		.global	EPD_DrawNum
+ 1506              		.syntax unified
+ 1507              		.thumb
+ 1508              		.thumb_func
+ 1510              	EPD_DrawNum:
+ 1511              		@ args = 8, pretend = 0, frame = 512
+ 1512              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1513 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 27
+
+
+ 1514 0004 ADF5027D 		sub	sp, sp, #520
+ 1515 0008 0446     		mov	r4, r0
+ 1516 000a 0D46     		mov	r5, r1
+ 1517 000c 1746     		mov	r7, r2
+ 1518 000e 1E46     		mov	r6, r3
+ 1519 0010 4FF0FF08 		mov	r8, #255
+ 1520 0014 4246     		mov	r2, r8
+ 1521 0016 0021     		movs	r1, #0
+ 1522 0018 42A8     		add	r0, sp, #264
+ 1523 001a FFF7FEFF 		bl	memset
+ 1524 001e 4246     		mov	r2, r8
+ 1525 0020 0021     		movs	r1, #0
+ 1526 0022 02A8     		add	r0, sp, #8
+ 1527 0024 FFF7FEFF 		bl	memset
+ 1528 0028 204B     		ldr	r3, .L231
+ 1529 002a 9B88     		ldrh	r3, [r3, #4]
+ 1530 002c A342     		cmp	r3, r4
+ 1531 002e 39D3     		bcc	.L223
+ 1532 0030 1E4B     		ldr	r3, .L231
+ 1533 0032 DB88     		ldrh	r3, [r3, #6]
+ 1534 0034 AB42     		cmp	r3, r5
+ 1535 0036 35D3     		bcc	.L223
+ 1536 0038 4FF0000E 		mov	lr, #0
+ 1537              	.L225:
+ 1538 003c 1C4B     		ldr	r3, .L231+4
+ 1539 003e 83FB0723 		smull	r2, r3, r3, r7
+ 1540 0042 4FEAE77C 		asr	ip, r7, #31
+ 1541 0046 CCEBA30C 		rsb	ip, ip, r3, asr #2
+ 1542 004a 6346     		mov	r3, ip
+ 1543 004c 0CEB8C0C 		add	ip, ip, ip, lsl #2
+ 1544 0050 A7EB4C0C 		sub	ip, r7, ip, lsl #1
+ 1545 0054 0CF1300C 		add	ip, ip, #48
+ 1546 0058 02AA     		add	r2, sp, #8
+ 1547 005a 02F80EC0 		strb	ip, [r2, lr]
+ 1548 005e 0EF1010E 		add	lr, lr, #1
+ 1549 0062 0FFA8EFE 		sxth	lr, lr
+ 1550 0066 1F46     		mov	r7, r3
+ 1551 0068 002B     		cmp	r3, #0
+ 1552 006a E7D1     		bne	.L225
+ 1553 006c 0BE0     		b	.L227
+ 1554              	.L228:
+ 1555 006e 0EF1FF32 		add	r2, lr, #-1
+ 1556 0072 02A9     		add	r1, sp, #8
+ 1557 0074 895C     		ldrb	r1, [r1, r2]	@ zero_extendqisi2
+ 1558 0076 42AA     		add	r2, sp, #264
+ 1559 0078 D154     		strb	r1, [r2, r3]
+ 1560 007a 0133     		adds	r3, r3, #1
+ 1561 007c 1BB2     		sxth	r3, r3
+ 1562 007e 0EF1FF3E 		add	lr, lr, #-1
+ 1563 0082 0FFA8EFE 		sxth	lr, lr
+ 1564              	.L227:
+ 1565 0086 BEF1000F 		cmp	lr, #0
+ 1566 008a F0DC     		bgt	.L228
+ 1567 008c BDF82032 		ldrh	r3, [sp, #544]
+ 1568 0090 0193     		str	r3, [sp, #4]
+ 1569 0092 BDF82432 		ldrh	r3, [sp, #548]
+ 1570 0096 0093     		str	r3, [sp]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 28
+
+
+ 1571 0098 3346     		mov	r3, r6
+ 1572 009a 42AA     		add	r2, sp, #264
+ 1573 009c 2946     		mov	r1, r5
+ 1574 009e 2046     		mov	r0, r4
+ 1575 00a0 FFF7FEFF 		bl	EPD_DrawString_EN
+ 1576              	.L223:
+ 1577 00a4 0DF5027D 		add	sp, sp, #520
+ 1578              		@ sp needed
+ 1579 00a8 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 1580              	.L232:
+ 1581              		.align	2
+ 1582              	.L231:
+ 1583 00ac 00000000 		.word	Paint
+ 1584 00b0 67666666 		.word	1717986919
+ 1586              		.section	.text.EPD_DrawNumDecimals,"ax",%progbits
+ 1587              		.align	1
+ 1588              		.global	EPD_DrawNumDecimals
+ 1589              		.syntax unified
+ 1590              		.thumb
+ 1591              		.thumb_func
+ 1593              	EPD_DrawNumDecimals:
+ 1594              		@ args = 8, pretend = 0, frame = 512
+ 1595              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1596 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 1597 0004 ADF5027D 		sub	sp, sp, #520
+ 1598 0008 0446     		mov	r4, r0
+ 1599 000a 0D46     		mov	r5, r1
+ 1600 000c 57EC106B 		vmov	r6, r7, d0
+ 1601 0010 9046     		mov	r8, r2
+ 1602 0012 9A46     		mov	r10, r3
+ 1603 0014 4FF0FF09 		mov	r9, #255
+ 1604 0018 4A46     		mov	r2, r9
+ 1605 001a 0021     		movs	r1, #0
+ 1606 001c 42A8     		add	r0, sp, #264
+ 1607 001e FFF7FEFF 		bl	memset
+ 1608 0022 4A46     		mov	r2, r9
+ 1609 0024 0021     		movs	r1, #0
+ 1610 0026 02A8     		add	r0, sp, #8
+ 1611 0028 FFF7FEFF 		bl	memset
+ 1612 002c 3046     		mov	r0, r6
+ 1613 002e 3946     		mov	r1, r7
+ 1614 0030 FFF7FEFF 		bl	__aeabi_d2iz
+ 1615 0034 424B     		ldr	r3, .L247
+ 1616 0036 9B88     		ldrh	r3, [r3, #4]
+ 1617 0038 A342     		cmp	r3, r4
+ 1618 003a 7DD3     		bcc	.L233
+ 1619 003c 8146     		mov	r9, r0
+ 1620 003e 404B     		ldr	r3, .L247
+ 1621 0040 DB88     		ldrh	r3, [r3, #6]
+ 1622 0042 AB42     		cmp	r3, r5
+ 1623 0044 78D3     		bcc	.L233
+ 1624 0046 BAF1000F 		cmp	r10, #0
+ 1625 004a 57D0     		beq	.L245
+ 1626 004c FFF7FEFF 		bl	__aeabi_i2d
+ 1627 0050 0246     		mov	r2, r0
+ 1628 0052 0B46     		mov	r3, r1
+ 1629 0054 3046     		mov	r0, r6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 29
+
+
+ 1630 0056 3946     		mov	r1, r7
+ 1631 0058 FFF7FEFF 		bl	__aeabi_dsub
+ 1632 005c FFF7FEFF 		bl	__aeabi_d2f
+ 1633 0060 07EE900A 		vmov	s15, r0
+ 1634 0064 5FFA8AF3 		uxtb	r3, r10
+ 1635 0068 1A46     		mov	r2, r3
+ 1636 006a 05E0     		b	.L238
+ 1637              	.L239:
+ 1638 006c B2EE047A 		vmov.f32	s14, #1.0e+1
+ 1639 0070 67EE877A 		vmul.f32	s15, s15, s14
+ 1640 0074 013A     		subs	r2, r2, #1
+ 1641 0076 D2B2     		uxtb	r2, r2
+ 1642              	.L238:
+ 1643 0078 002A     		cmp	r2, #0
+ 1644 007a F7D1     		bne	.L239
+ 1645 007c FDEEE77A 		vcvt.s32.f32	s15, s15
+ 1646 0080 17EE901A 		vmov	r1, s15	@ int
+ 1647 0084 4FF0000C 		mov	ip, #0
+ 1648 0088 15E0     		b	.L240
+ 1649              	.L241:
+ 1650 008a 2E48     		ldr	r0, .L247+4
+ 1651 008c 80FB0120 		smull	r2, r0, r0, r1
+ 1652 0090 CA17     		asrs	r2, r1, #31
+ 1653 0092 C2EBA002 		rsb	r2, r2, r0, asr #2
+ 1654 0096 1046     		mov	r0, r2
+ 1655 0098 02EB8202 		add	r2, r2, r2, lsl #2
+ 1656 009c A1EB4202 		sub	r2, r1, r2, lsl #1
+ 1657 00a0 3032     		adds	r2, r2, #48
+ 1658 00a2 02A9     		add	r1, sp, #8
+ 1659 00a4 01F80C20 		strb	r2, [r1, ip]
+ 1660 00a8 0CF1010C 		add	ip, ip, #1
+ 1661 00ac 0FFA8CFC 		sxth	ip, ip
+ 1662 00b0 0146     		mov	r1, r0
+ 1663 00b2 013B     		subs	r3, r3, #1
+ 1664 00b4 DBB2     		uxtb	r3, r3
+ 1665              	.L240:
+ 1666 00b6 002B     		cmp	r3, #0
+ 1667 00b8 E7D1     		bne	.L241
+ 1668 00ba 02AB     		add	r3, sp, #8
+ 1669 00bc 2E22     		movs	r2, #46
+ 1670 00be 03F80C20 		strb	r2, [r3, ip]
+ 1671 00c2 0CF1010C 		add	ip, ip, #1
+ 1672 00c6 0FFA8CFC 		sxth	ip, ip
+ 1673              	.L242:
+ 1674 00ca 1E4B     		ldr	r3, .L247+4
+ 1675 00cc 83FB0923 		smull	r2, r3, r3, r9
+ 1676 00d0 4FEAE97E 		asr	lr, r9, #31
+ 1677 00d4 CEEBA30E 		rsb	lr, lr, r3, asr #2
+ 1678 00d8 7346     		mov	r3, lr
+ 1679 00da 0EEB8E0E 		add	lr, lr, lr, lsl #2
+ 1680 00de A9EB4E0E 		sub	lr, r9, lr, lsl #1
+ 1681 00e2 0EF1300E 		add	lr, lr, #48
+ 1682 00e6 02AA     		add	r2, sp, #8
+ 1683 00e8 02F80CE0 		strb	lr, [r2, ip]
+ 1684 00ec 0CF1010C 		add	ip, ip, #1
+ 1685 00f0 0FFA8CFC 		sxth	ip, ip
+ 1686 00f4 9946     		mov	r9, r3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 30
+
+
+ 1687 00f6 002B     		cmp	r3, #0
+ 1688 00f8 E7D1     		bne	.L242
+ 1689 00fa 0EE0     		b	.L243
+ 1690              	.L245:
+ 1691 00fc 4FF0000C 		mov	ip, #0
+ 1692 0100 E3E7     		b	.L242
+ 1693              	.L244:
+ 1694 0102 0CF1FF32 		add	r2, ip, #-1
+ 1695 0106 02A9     		add	r1, sp, #8
+ 1696 0108 895C     		ldrb	r1, [r1, r2]	@ zero_extendqisi2
+ 1697 010a 42AA     		add	r2, sp, #264
+ 1698 010c D154     		strb	r1, [r2, r3]
+ 1699 010e 0133     		adds	r3, r3, #1
+ 1700 0110 1BB2     		sxth	r3, r3
+ 1701 0112 0CF1FF3C 		add	ip, ip, #-1
+ 1702 0116 0FFA8CFC 		sxth	ip, ip
+ 1703              	.L243:
+ 1704 011a BCF1000F 		cmp	ip, #0
+ 1705 011e F0DC     		bgt	.L244
+ 1706 0120 BDF82832 		ldrh	r3, [sp, #552]
+ 1707 0124 0193     		str	r3, [sp, #4]
+ 1708 0126 BDF82C32 		ldrh	r3, [sp, #556]
+ 1709 012a 0093     		str	r3, [sp]
+ 1710 012c 4346     		mov	r3, r8
+ 1711 012e 42AA     		add	r2, sp, #264
+ 1712 0130 2946     		mov	r1, r5
+ 1713 0132 2046     		mov	r0, r4
+ 1714 0134 FFF7FEFF 		bl	EPD_DrawString_EN
+ 1715              	.L233:
+ 1716 0138 0DF5027D 		add	sp, sp, #520
+ 1717              		@ sp needed
+ 1718 013c BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 1719              	.L248:
+ 1720              		.align	2
+ 1721              	.L247:
+ 1722 0140 00000000 		.word	Paint
+ 1723 0144 67666666 		.word	1717986919
+ 1725              		.section	.rodata.EPD_DrawDate.str1.4,"aMS",%progbits,1
+ 1726              		.align	2
+ 1727              	.LC0:
+ 1728 0000 30313233 		.ascii	"0123456789\000"
+ 1728      34353637 
+ 1728      383900
+ 1729              		.section	.text.EPD_DrawDate,"ax",%progbits
+ 1730              		.align	1
+ 1731              		.global	EPD_DrawDate
+ 1732              		.syntax unified
+ 1733              		.thumb
+ 1734              		.thumb_func
+ 1736              	EPD_DrawDate:
+ 1737              		@ args = 8, pretend = 0, frame = 32
+ 1738              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1739 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1740 0004 8BB0     		sub	sp, sp, #44
+ 1741 0006 0646     		mov	r6, r0
+ 1742 0008 0F46     		mov	r7, r1
+ 1743 000a 1546     		mov	r5, r2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 31
+
+
+ 1744 000c 9846     		mov	r8, r3
+ 1745 000e BDF850A0 		ldrh	r10, [sp, #80]
+ 1746 0012 BDF85490 		ldrh	r9, [sp, #84]
+ 1747 0016 5E4A     		ldr	r2, .L251
+ 1748 0018 07AC     		add	r4, sp, #28
+ 1749 001a 07CA     		ldm	r2, {r0, r1, r2}
+ 1750 001c 03C4     		stmia	r4!, {r0, r1}
+ 1751 001e 2280     		strh	r2, [r4]	@ movhi
+ 1752 0020 9C88     		ldrh	r4, [r3, #4]
+ 1753 0022 0395     		str	r5, [sp, #12]
+ 1754 0024 EA78     		ldrb	r2, [r5, #3]	@ zero_extendqisi2
+ 1755 0026 5B4D     		ldr	r5, .L251+4
+ 1756 0028 A5FB0212 		umull	r1, r2, r5, r2
+ 1757 002c 0AA9     		add	r1, sp, #40
+ 1758 002e 01EBD202 		add	r2, r1, r2, lsr #3
+ 1759 0032 12F80C2C 		ldrb	r2, [r2, #-12]	@ zero_extendqisi2
+ 1760 0036 CDF804A0 		str	r10, [sp, #4]
+ 1761 003a CDF80090 		str	r9, [sp]
+ 1762 003e 3946     		mov	r1, r7
+ 1763 0040 3046     		mov	r0, r6
+ 1764 0042 FFF7FEFF 		bl	EPD_DrawChar
+ 1765 0046 04EB060B 		add	fp, r4, r6
+ 1766 004a 1FFA8BFB 		uxth	fp, fp
+ 1767 004e 039A     		ldr	r2, [sp, #12]
+ 1768 0050 D378     		ldrb	r3, [r2, #3]	@ zero_extendqisi2
+ 1769 0052 A5FB0312 		umull	r1, r2, r5, r3
+ 1770 0056 D208     		lsrs	r2, r2, #3
+ 1771 0058 02EB8202 		add	r2, r2, r2, lsl #2
+ 1772 005c A3EB4203 		sub	r3, r3, r2, lsl #1
+ 1773 0060 0AA9     		add	r1, sp, #40
+ 1774 0062 51FA83F3 		uxtab	r3, r1, r3
+ 1775 0066 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1776 006a CDF804A0 		str	r10, [sp, #4]
+ 1777 006e CDF80090 		str	r9, [sp]
+ 1778 0072 4346     		mov	r3, r8
+ 1779 0074 3946     		mov	r1, r7
+ 1780 0076 5846     		mov	r0, fp
+ 1781 0078 FFF7FEFF 		bl	EPD_DrawChar
+ 1782 007c A308     		lsrs	r3, r4, #2
+ 1783 007e 0593     		str	r3, [sp, #20]
+ 1784 0080 0BEB9400 		add	r0, fp, r4, lsr #2
+ 1785 0084 4FEA540B 		lsr	fp, r4, #1
+ 1786 0088 1BFA80F0 		uxtah	r0, fp, r0
+ 1787 008c CDF804A0 		str	r10, [sp, #4]
+ 1788 0090 CDF80090 		str	r9, [sp]
+ 1789 0094 4346     		mov	r3, r8
+ 1790 0096 2E22     		movs	r2, #46
+ 1791 0098 3946     		mov	r1, r7
+ 1792 009a 80B2     		uxth	r0, r0
+ 1793 009c FFF7FEFF 		bl	EPD_DrawChar
+ 1794 00a0 06EB4400 		add	r0, r6, r4, lsl #1
+ 1795 00a4 039A     		ldr	r2, [sp, #12]
+ 1796 00a6 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
+ 1797 00a8 A5FB0323 		umull	r2, r3, r5, r3
+ 1798 00ac 0DF1280C 		add	ip, sp, #40
+ 1799 00b0 0CEBD303 		add	r3, ip, r3, lsr #3
+ 1800 00b4 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 32
+
+
+ 1801 00b8 1BFA80F0 		uxtah	r0, fp, r0
+ 1802 00bc CDF804A0 		str	r10, [sp, #4]
+ 1803 00c0 CDF80090 		str	r9, [sp]
+ 1804 00c4 4346     		mov	r3, r8
+ 1805 00c6 3946     		mov	r1, r7
+ 1806 00c8 80B2     		uxth	r0, r0
+ 1807 00ca FFF7FEFF 		bl	EPD_DrawChar
+ 1808 00ce 04EB4403 		add	r3, r4, r4, lsl #1
+ 1809 00d2 0493     		str	r3, [sp, #16]
+ 1810 00d4 F018     		adds	r0, r6, r3
+ 1811 00d6 039A     		ldr	r2, [sp, #12]
+ 1812 00d8 9378     		ldrb	r3, [r2, #2]	@ zero_extendqisi2
+ 1813 00da A5FB0312 		umull	r1, r2, r5, r3
+ 1814 00de D208     		lsrs	r2, r2, #3
+ 1815 00e0 02EB8202 		add	r2, r2, r2, lsl #2
+ 1816 00e4 A3EB4203 		sub	r3, r3, r2, lsl #1
+ 1817 00e8 0DF1280C 		add	ip, sp, #40
+ 1818 00ec 5CFA83F3 		uxtab	r3, ip, r3
+ 1819 00f0 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1820 00f4 1BFA80F0 		uxtah	r0, fp, r0
+ 1821 00f8 CDF804A0 		str	r10, [sp, #4]
+ 1822 00fc CDF80090 		str	r9, [sp]
+ 1823 0100 4346     		mov	r3, r8
+ 1824 0102 3946     		mov	r1, r7
+ 1825 0104 80B2     		uxth	r0, r0
+ 1826 0106 FFF7FEFF 		bl	EPD_DrawChar
+ 1827 010a 06EB8400 		add	r0, r6, r4, lsl #2
+ 1828 010e 1BFA80F0 		uxtah	r0, fp, r0
+ 1829 0112 80B2     		uxth	r0, r0
+ 1830 0114 0599     		ldr	r1, [sp, #20]
+ 1831 0116 401A     		subs	r0, r0, r1
+ 1832 0118 CDF804A0 		str	r10, [sp, #4]
+ 1833 011c CDF80090 		str	r9, [sp]
+ 1834 0120 4346     		mov	r3, r8
+ 1835 0122 2E22     		movs	r2, #46
+ 1836 0124 3946     		mov	r1, r7
+ 1837 0126 80B2     		uxth	r0, r0
+ 1838 0128 FFF7FEFF 		bl	EPD_DrawChar
+ 1839 012c 039A     		ldr	r2, [sp, #12]
+ 1840 012e 1388     		ldrh	r3, [r2]
+ 1841 0130 A5FB0323 		umull	r2, r3, r5, r3
+ 1842 0134 0AA9     		add	r1, sp, #40
+ 1843 0136 01EBD303 		add	r3, r1, r3, lsr #3
+ 1844 013a 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1845 013e 04EB8404 		add	r4, r4, r4, lsl #2
+ 1846 0142 3019     		adds	r0, r6, r4
+ 1847 0144 CDF804A0 		str	r10, [sp, #4]
+ 1848 0148 CDF80090 		str	r9, [sp]
+ 1849 014c 4346     		mov	r3, r8
+ 1850 014e 3946     		mov	r1, r7
+ 1851 0150 80B2     		uxth	r0, r0
+ 1852 0152 FFF7FEFF 		bl	EPD_DrawChar
+ 1853 0156 039A     		ldr	r2, [sp, #12]
+ 1854 0158 1388     		ldrh	r3, [r2]
+ 1855 015a A5FB0325 		umull	r2, r5, r5, r3
+ 1856 015e ED08     		lsrs	r5, r5, #3
+ 1857 0160 05EB8505 		add	r5, r5, r5, lsl #2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 33
+
+
+ 1858 0164 A3EB4503 		sub	r3, r3, r5, lsl #1
+ 1859 0168 0AAA     		add	r2, sp, #40
+ 1860 016a 12FA83F3 		uxtah	r3, r2, r3
+ 1861 016e 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1862 0172 049B     		ldr	r3, [sp, #16]
+ 1863 0174 06EB4300 		add	r0, r6, r3, lsl #1
+ 1864 0178 CDF804A0 		str	r10, [sp, #4]
+ 1865 017c CDF80090 		str	r9, [sp]
+ 1866 0180 4346     		mov	r3, r8
+ 1867 0182 3946     		mov	r1, r7
+ 1868 0184 80B2     		uxth	r0, r0
+ 1869 0186 FFF7FEFF 		bl	EPD_DrawChar
+ 1870 018a 0BB0     		add	sp, sp, #44
+ 1871              		@ sp needed
+ 1872 018c BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1873              	.L252:
+ 1874              		.align	2
+ 1875              	.L251:
+ 1876 0190 00000000 		.word	.LC0
+ 1877 0194 CDCCCCCC 		.word	-858993459
+ 1879              		.section	.text.EPD_DrawTime,"ax",%progbits
+ 1880              		.align	1
+ 1881              		.global	EPD_DrawTime
+ 1882              		.syntax unified
+ 1883              		.thumb
+ 1884              		.thumb_func
+ 1886              	EPD_DrawTime:
+ 1887              		@ args = 8, pretend = 0, frame = 24
+ 1888              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1889 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1890 0004 89B0     		sub	sp, sp, #36
+ 1891 0006 0646     		mov	r6, r0
+ 1892 0008 0F46     		mov	r7, r1
+ 1893 000a 9146     		mov	r9, r2
+ 1894 000c 9846     		mov	r8, r3
+ 1895 000e BDF848B0 		ldrh	fp, [sp, #72]
+ 1896 0012 BDF84CA0 		ldrh	r10, [sp, #76]
+ 1897 0016 3C4A     		ldr	r2, .L255
+ 1898 0018 05AC     		add	r4, sp, #20
+ 1899 001a 07CA     		ldm	r2, {r0, r1, r2}
+ 1900 001c 03C4     		stmia	r4!, {r0, r1}
+ 1901 001e 2280     		strh	r2, [r4]	@ movhi
+ 1902 0020 9C88     		ldrh	r4, [r3, #4]
+ 1903 0022 99F80420 		ldrb	r2, [r9, #4]	@ zero_extendqisi2
+ 1904 0026 394D     		ldr	r5, .L255+4
+ 1905 0028 A5FB0212 		umull	r1, r2, r5, r2
+ 1906 002c 08A9     		add	r1, sp, #32
+ 1907 002e 01EBD202 		add	r2, r1, r2, lsr #3
+ 1908 0032 12F80C2C 		ldrb	r2, [r2, #-12]	@ zero_extendqisi2
+ 1909 0036 CDF804B0 		str	fp, [sp, #4]
+ 1910 003a CDF800A0 		str	r10, [sp]
+ 1911 003e 3946     		mov	r1, r7
+ 1912 0040 3046     		mov	r0, r6
+ 1913 0042 FFF7FEFF 		bl	EPD_DrawChar
+ 1914 0046 0396     		str	r6, [sp, #12]
+ 1915 0048 A619     		adds	r6, r4, r6
+ 1916 004a B6B2     		uxth	r6, r6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 34
+
+
+ 1917 004c 99F80430 		ldrb	r3, [r9, #4]	@ zero_extendqisi2
+ 1918 0050 A5FB0312 		umull	r1, r2, r5, r3
+ 1919 0054 D208     		lsrs	r2, r2, #3
+ 1920 0056 02EB8202 		add	r2, r2, r2, lsl #2
+ 1921 005a A3EB4203 		sub	r3, r3, r2, lsl #1
+ 1922 005e 08AA     		add	r2, sp, #32
+ 1923 0060 52FA83F3 		uxtab	r3, r2, r3
+ 1924 0064 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1925 0068 CDF804B0 		str	fp, [sp, #4]
+ 1926 006c CDF800A0 		str	r10, [sp]
+ 1927 0070 4346     		mov	r3, r8
+ 1928 0072 3946     		mov	r1, r7
+ 1929 0074 3046     		mov	r0, r6
+ 1930 0076 FFF7FEFF 		bl	EPD_DrawChar
+ 1931 007a 06EB9400 		add	r0, r6, r4, lsr #2
+ 1932 007e 6608     		lsrs	r6, r4, #1
+ 1933 0080 16FA80F0 		uxtah	r0, r6, r0
+ 1934 0084 CDF804B0 		str	fp, [sp, #4]
+ 1935 0088 CDF800A0 		str	r10, [sp]
+ 1936 008c 4346     		mov	r3, r8
+ 1937 008e 3A22     		movs	r2, #58
+ 1938 0090 3946     		mov	r1, r7
+ 1939 0092 80B2     		uxth	r0, r0
+ 1940 0094 FFF7FEFF 		bl	EPD_DrawChar
+ 1941 0098 039B     		ldr	r3, [sp, #12]
+ 1942 009a 03EB4400 		add	r0, r3, r4, lsl #1
+ 1943 009e 99F80530 		ldrb	r3, [r9, #5]	@ zero_extendqisi2
+ 1944 00a2 A5FB0323 		umull	r2, r3, r5, r3
+ 1945 00a6 08AA     		add	r2, sp, #32
+ 1946 00a8 02EBD303 		add	r3, r2, r3, lsr #3
+ 1947 00ac 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1948 00b0 16FA80F0 		uxtah	r0, r6, r0
+ 1949 00b4 CDF804B0 		str	fp, [sp, #4]
+ 1950 00b8 CDF800A0 		str	r10, [sp]
+ 1951 00bc 4346     		mov	r3, r8
+ 1952 00be 3946     		mov	r1, r7
+ 1953 00c0 80B2     		uxth	r0, r0
+ 1954 00c2 FFF7FEFF 		bl	EPD_DrawChar
+ 1955 00c6 04EB4404 		add	r4, r4, r4, lsl #1
+ 1956 00ca 039B     		ldr	r3, [sp, #12]
+ 1957 00cc 1C44     		add	r4, r4, r3
+ 1958 00ce 99F80530 		ldrb	r3, [r9, #5]	@ zero_extendqisi2
+ 1959 00d2 A5FB0325 		umull	r2, r5, r5, r3
+ 1960 00d6 ED08     		lsrs	r5, r5, #3
+ 1961 00d8 05EB8505 		add	r5, r5, r5, lsl #2
+ 1962 00dc A3EB4503 		sub	r3, r3, r5, lsl #1
+ 1963 00e0 08AA     		add	r2, sp, #32
+ 1964 00e2 52FA83F3 		uxtab	r3, r2, r3
+ 1965 00e6 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 1966 00ea 16FA84F0 		uxtah	r0, r6, r4
+ 1967 00ee CDF804B0 		str	fp, [sp, #4]
+ 1968 00f2 CDF800A0 		str	r10, [sp]
+ 1969 00f6 4346     		mov	r3, r8
+ 1970 00f8 3946     		mov	r1, r7
+ 1971 00fa 80B2     		uxth	r0, r0
+ 1972 00fc FFF7FEFF 		bl	EPD_DrawChar
+ 1973 0100 09B0     		add	sp, sp, #36
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 35
+
+
+ 1974              		@ sp needed
+ 1975 0102 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1976              	.L256:
+ 1977 0106 00BF     		.align	2
+ 1978              	.L255:
+ 1979 0108 00000000 		.word	.LC0
+ 1980 010c CDCCCCCC 		.word	-858993459
+ 1982              		.section	.text.EPD_DrawBitMap,"ax",%progbits
+ 1983              		.align	1
+ 1984              		.global	EPD_DrawBitMap
+ 1985              		.syntax unified
+ 1986              		.thumb
+ 1987              		.thumb_func
+ 1989              	EPD_DrawBitMap:
+ 1990              		@ args = 0, pretend = 0, frame = 0
+ 1991              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1992 0000 00B5     		push	{lr}
+ 1993 0002 4FF0000E 		mov	lr, #0
+ 1994 0006 11E0     		b	.L258
+ 1995              	.L259:
+ 1996 0008 02FB0E32 		mla	r2, r2, lr, r3
+ 1997 000c 0B49     		ldr	r1, .L264
+ 1998 000e 0968     		ldr	r1, [r1]
+ 1999 0010 10F802C0 		ldrb	ip, [r0, r2]	@ zero_extendqisi2
+ 2000 0014 01F802C0 		strb	ip, [r1, r2]
+ 2001 0018 0133     		adds	r3, r3, #1
+ 2002 001a 9BB2     		uxth	r3, r3
+ 2003              	.L260:
+ 2004 001c 074A     		ldr	r2, .L264
+ 2005 001e 528A     		ldrh	r2, [r2, #18]
+ 2006 0020 9A42     		cmp	r2, r3
+ 2007 0022 F1D8     		bhi	.L259
+ 2008 0024 0EF1010E 		add	lr, lr, #1
+ 2009 0028 1FFA8EFE 		uxth	lr, lr
+ 2010              	.L258:
+ 2011 002c 034B     		ldr	r3, .L264
+ 2012 002e 9B8A     		ldrh	r3, [r3, #20]
+ 2013 0030 7345     		cmp	r3, lr
+ 2014 0032 01D9     		bls	.L263
+ 2015 0034 0023     		movs	r3, #0
+ 2016 0036 F1E7     		b	.L260
+ 2017              	.L263:
+ 2018 0038 5DF804FB 		ldr	pc, [sp], #4
+ 2019              	.L265:
+ 2020              		.align	2
+ 2021              	.L264:
+ 2022 003c 00000000 		.word	Paint
+ 2024              		.section	.text.EPD_DrawBitMap_Paste,"ax",%progbits
+ 2025              		.align	1
+ 2026              		.global	EPD_DrawBitMap_Paste
+ 2027              		.syntax unified
+ 2028              		.thumb
+ 2029              		.thumb_func
+ 2031              	EPD_DrawBitMap_Paste:
+ 2032              		@ args = 8, pretend = 0, frame = 8
+ 2033              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2034 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 36
+
+
+ 2035 0004 83B0     		sub	sp, sp, #12
+ 2036 0006 0746     		mov	r7, r0
+ 2037 0008 8846     		mov	r8, r1
+ 2038 000a 9146     		mov	r9, r2
+ 2039 000c 1E46     		mov	r6, r3
+ 2040 000e BDF83030 		ldrh	r3, [sp, #48]
+ 2041 0012 0193     		str	r3, [sp, #4]
+ 2042 0014 9DF834B0 		ldrb	fp, [sp, #52]	@ zero_extendqisi2
+ 2043 0018 16F0070F 		tst	r6, #7
+ 2044 001c 03D1     		bne	.L267
+ 2045 001e 4FEAD60A 		lsr	r10, r6, #3
+ 2046              	.L268:
+ 2047 0022 0025     		movs	r5, #0
+ 2048 0024 27E0     		b	.L269
+ 2049              	.L267:
+ 2050 0026 4FEAD60A 		lsr	r10, r6, #3
+ 2051 002a 0AF1010A 		add	r10, r10, #1
+ 2052 002e F8E7     		b	.L268
+ 2053              	.L270:
+ 2054 0030 04F00703 		and	r3, r4, #7
+ 2055 0034 9A40     		lsls	r2, r2, r3
+ 2056 0036 C2F3C012 		ubfx	r2, r2, #7, #1
+ 2057              	.L271:
+ 2058 003a 05EB0901 		add	r1, r5, r9
+ 2059 003e 04EB0800 		add	r0, r4, r8
+ 2060 0042 89B2     		uxth	r1, r1
+ 2061 0044 80B2     		uxth	r0, r0
+ 2062 0046 FFF7FEFF 		bl	EPD_SetPixel
+ 2063 004a 0134     		adds	r4, r4, #1
+ 2064 004c A4B2     		uxth	r4, r4
+ 2065              	.L273:
+ 2066 004e B442     		cmp	r4, r6
+ 2067 0050 0FD2     		bcs	.L276
+ 2068 0052 E308     		lsrs	r3, r4, #3
+ 2069 0054 0AFB0533 		mla	r3, r10, r5, r3
+ 2070 0058 FA5C     		ldrb	r2, [r7, r3]	@ zero_extendqisi2
+ 2071 005a BBF1000F 		cmp	fp, #0
+ 2072 005e E7D0     		beq	.L270
+ 2073 0060 04F00703 		and	r3, r4, #7
+ 2074 0064 9A40     		lsls	r2, r2, r3
+ 2075 0066 02F08002 		and	r2, r2, #128
+ 2076 006a B2FA82F2 		clz	r2, r2
+ 2077 006e 5209     		lsrs	r2, r2, #5
+ 2078 0070 E3E7     		b	.L271
+ 2079              	.L276:
+ 2080 0072 0135     		adds	r5, r5, #1
+ 2081 0074 ADB2     		uxth	r5, r5
+ 2082              	.L269:
+ 2083 0076 019B     		ldr	r3, [sp, #4]
+ 2084 0078 9D42     		cmp	r5, r3
+ 2085 007a 01D2     		bcs	.L277
+ 2086 007c 0024     		movs	r4, #0
+ 2087 007e E6E7     		b	.L273
+ 2088              	.L277:
+ 2089 0080 03B0     		add	sp, sp, #12
+ 2090              		@ sp needed
+ 2091 0082 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 37
+
+
+ 2093              		.section	.text.EPD_DrawBitMap_Block,"ax",%progbits
+ 2094              		.align	1
+ 2095              		.global	EPD_DrawBitMap_Block
+ 2096              		.syntax unified
+ 2097              		.thumb
+ 2098              		.thumb_func
+ 2100              	EPD_DrawBitMap_Block:
+ 2101              		@ args = 0, pretend = 0, frame = 0
+ 2102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2103 0000 30B5     		push	{r4, r5, lr}
+ 2104 0002 0446     		mov	r4, r0
+ 2105 0004 0D46     		mov	r5, r1
+ 2106 0006 0020     		movs	r0, #0
+ 2107 0008 16E0     		b	.L279
+ 2108              	.L280:
+ 2109 000a 03FB002C 		mla	ip, r3, r0, r2
+ 2110 000e 0E49     		ldr	r1, .L285
+ 2111 0010 B1F814E0 		ldrh	lr, [r1, #20]
+ 2112 0014 0EFB03F3 		mul	r3, lr, r3
+ 2113 0018 05F1FF3E 		add	lr, r5, #-1
+ 2114 001c 0EFB03C3 		mla	r3, lr, r3, ip
+ 2115 0020 0968     		ldr	r1, [r1]
+ 2116 0022 E35C     		ldrb	r3, [r4, r3]	@ zero_extendqisi2
+ 2117 0024 01F80C30 		strb	r3, [r1, ip]
+ 2118 0028 0132     		adds	r2, r2, #1
+ 2119 002a 92B2     		uxth	r2, r2
+ 2120              	.L281:
+ 2121 002c 064B     		ldr	r3, .L285
+ 2122 002e 5B8A     		ldrh	r3, [r3, #18]
+ 2123 0030 9342     		cmp	r3, r2
+ 2124 0032 EAD8     		bhi	.L280
+ 2125 0034 0130     		adds	r0, r0, #1
+ 2126 0036 80B2     		uxth	r0, r0
+ 2127              	.L279:
+ 2128 0038 034B     		ldr	r3, .L285
+ 2129 003a 9B8A     		ldrh	r3, [r3, #20]
+ 2130 003c 8342     		cmp	r3, r0
+ 2131 003e 01D9     		bls	.L284
+ 2132 0040 0022     		movs	r2, #0
+ 2133 0042 F3E7     		b	.L281
+ 2134              	.L284:
+ 2135 0044 30BD     		pop	{r4, r5, pc}
+ 2136              	.L286:
+ 2137 0046 00BF     		.align	2
+ 2138              	.L285:
+ 2139 0048 00000000 		.word	Paint
+ 2141              		.section	.text.EPD_DrawBMP,"ax",%progbits
+ 2142              		.align	1
+ 2143              		.global	EPD_DrawBMP
+ 2144              		.syntax unified
+ 2145              		.thumb
+ 2146              		.thumb_func
+ 2148              	EPD_DrawBMP:
+ 2149              		@ args = 4, pretend = 0, frame = 0
+ 2150              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2151 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 2152 0004 8246     		mov	r10, r0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 38
+
+
+ 2153 0006 8946     		mov	r9, r1
+ 2154 0008 1746     		mov	r7, r2
+ 2155 000a 1E46     		mov	r6, r3
+ 2156 000c DDF82080 		ldr	r8, [sp, #32]
+ 2157 0010 0025     		movs	r5, #0
+ 2158 0012 12E0     		b	.L288
+ 2159              	.L295:
+ 2160 0014 0022     		movs	r2, #0
+ 2161 0016 05EB0901 		add	r1, r5, r9
+ 2162 001a 04EB0A00 		add	r0, r4, r10
+ 2163 001e FFF7FEFF 		bl	EPD_SetPixel
+ 2164              	.L289:
+ 2165 0022 0134     		adds	r4, r4, #1
+ 2166 0024 E4B2     		uxtb	r4, r4
+ 2167              	.L291:
+ 2168 0026 BC42     		cmp	r4, r7
+ 2169 0028 05D2     		bcs	.L294
+ 2170 002a 06FB0483 		mla	r3, r6, r4, r8
+ 2171 002e 5B5D     		ldrb	r3, [r3, r5]	@ zero_extendqisi2
+ 2172 0030 002B     		cmp	r3, #0
+ 2173 0032 F6D1     		bne	.L289
+ 2174 0034 EEE7     		b	.L295
+ 2175              	.L294:
+ 2176 0036 0135     		adds	r5, r5, #1
+ 2177 0038 EDB2     		uxtb	r5, r5
+ 2178              	.L288:
+ 2179 003a B542     		cmp	r5, r6
+ 2180 003c 01D2     		bcs	.L296
+ 2181 003e 0024     		movs	r4, #0
+ 2182 0040 F1E7     		b	.L291
+ 2183              	.L296:
+ 2184 0042 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 2186              		.global	Paint
+ 2187              		.section	.bss.Paint,"aw",%nobits
+ 2188              		.align	2
+ 2191              	Paint:
+ 2192 0000 00000000 		.space	24
+ 2192      00000000 
+ 2192      00000000 
+ 2192      00000000 
+ 2192      00000000 
+ 2193              		.global	__aeabi_d2f
+ 2194              		.global	__aeabi_dsub
+ 2195              		.global	__aeabi_i2d
+ 2196              		.global	__aeabi_d2iz
+ 2197              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 39
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 EPD_GUI.c
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:18     .text.EPD_NewImage:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:24     .text.EPD_NewImage:00000000 EPD_NewImage
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:70     .text.EPD_NewImage:0000004c $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2191   .bss.Paint:00000000 Paint
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:73     .text.EPD_SelectImage:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:79     .text.EPD_SelectImage:00000000 EPD_SelectImage
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:89     .text.EPD_SelectImage:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:92     .text.EPD_SetRotate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:98     .text.EPD_SetRotate:00000000 EPD_SetRotate
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:118    .text.EPD_SetRotate:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:121    .text.EPD_SetScale:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:127    .text.EPD_SetScale:00000000 EPD_SetScale
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:180    .text.EPD_SetScale:00000054 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:183    .text.EPD_SetMirroring:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:189    .text.EPD_SetMirroring:00000000 EPD_SetMirroring
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:202    .text.EPD_SetMirroring:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:205    .text.EPD_SetPixel:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:211    .text.EPD_SetPixel:00000000 EPD_SetPixel
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:270    .text.EPD_SetPixel:0000006e $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:274    .text.EPD_SetPixel:00000072 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:386    .text.EPD_SetPixel:00000164 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:389    .text.EPD_Clear:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:395    .text.EPD_Clear:00000000 EPD_Clear
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:495    .text.EPD_Clear:000000c0 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:498    .text.EPD_ClearWindows:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:504    .text.EPD_ClearWindows:00000000 EPD_ClearWindows
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:535    .text.EPD_DrawPoint:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:541    .text.EPD_DrawPoint:00000000 EPD_DrawPoint
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:629    .text.EPD_DrawPoint:000000bc $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:632    .text.EPD_DrawLine:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:638    .text.EPD_DrawLine:00000000 EPD_DrawLine
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:756    .text.EPD_DrawLine:000000fc $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:760    .text.EPD_DrawRectangle:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:766    .text.EPD_DrawRectangle:00000000 EPD_DrawRectangle
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:845    .text.EPD_DrawRectangle:000000c0 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:848    .text.EPD_DrawCircle:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:854    .text.EPD_DrawCircle:00000000 EPD_DrawCircle
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1107   .text.EPD_DrawCircle:0000023c $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1110   .text.EPD_DrawChar:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1116   .text.EPD_DrawChar:00000000 EPD_DrawChar
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1213   .text.EPD_DrawChar:000000d0 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1216   .text.EPD_DrawString_EN:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1222   .text.EPD_DrawString_EN:00000000 EPD_DrawString_EN
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1285   .text.EPD_DrawString_EN:00000078 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1288   .text.EPD_DrawString_CN:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1294   .text.EPD_DrawString_CN:00000000 EPD_DrawString_CN
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1504   .text.EPD_DrawNum:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1510   .text.EPD_DrawNum:00000000 EPD_DrawNum
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1583   .text.EPD_DrawNum:000000ac $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1587   .text.EPD_DrawNumDecimals:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1593   .text.EPD_DrawNumDecimals:00000000 EPD_DrawNumDecimals
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1722   .text.EPD_DrawNumDecimals:00000140 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1726   .rodata.EPD_DrawDate.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1730   .text.EPD_DrawDate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1736   .text.EPD_DrawDate:00000000 EPD_DrawDate
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s 			page 40
+
+
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1876   .text.EPD_DrawDate:00000190 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1880   .text.EPD_DrawTime:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1886   .text.EPD_DrawTime:00000000 EPD_DrawTime
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1979   .text.EPD_DrawTime:00000108 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1983   .text.EPD_DrawBitMap:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:1989   .text.EPD_DrawBitMap:00000000 EPD_DrawBitMap
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2022   .text.EPD_DrawBitMap:0000003c $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2025   .text.EPD_DrawBitMap_Paste:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2031   .text.EPD_DrawBitMap_Paste:00000000 EPD_DrawBitMap_Paste
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2094   .text.EPD_DrawBitMap_Block:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2100   .text.EPD_DrawBitMap_Block:00000000 EPD_DrawBitMap_Block
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2139   .text.EPD_DrawBitMap_Block:00000048 $d
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2142   .text.EPD_DrawBMP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2148   .text.EPD_DrawBMP:00000000 EPD_DrawBMP
+C:\Users\kroko\AppData\Local\Temp\ccWhP9rh.s:2188   .bss.Paint:00000000 $d
+
+UNDEFINED SYMBOLS
+memset
+__aeabi_d2iz
+__aeabi_i2d
+__aeabi_dsub
+__aeabi_d2f
