@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
   58 001c 43F48063 		orr	r3, r3, #1024
   59 0020 1360     		str	r3, [r2]
   60 0022 0020     		movs	r0, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 2
 
 
   61 0024 7047     		bx	lr
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  116              		.global	HAL_PWREx_EnableBatteryCharging
  117              		.syntax unified
  118              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 3
 
 
  119              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  178              	.L23:
  179 000c 00700040 		.word	1073770496
  181              		.section	.text.HAL_PWREx_DisableVddUSB,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 4
 
 
  182              		.align	1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  241              	.L32:
  242 000c 00700040 		.word	1073770496
  244              		.section	.text.HAL_PWREx_EnableGPIOPullUp,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 5
 
 
  245              		.align	1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  300 0056 7047     		bx	lr
  301              	.L38:
  302 0058 0B4B     		ldr	r3, .L43
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 6
 
 
  303 005a 9A6B     		ldr	r2, [r3, #56]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  359 001c 1362     		str	r3, [r2, #32]
  360 001e 0020     		movs	r0, #0
  361 0020 7047     		bx	lr
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 7
 
 
  362              	.L51:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  418 000c 3E       		.byte	(.L64-.L59)/2
  419 000d 3E       		.byte	(.L64-.L59)/2
  420 000e 3E       		.byte	(.L64-.L59)/2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 8
 
 
  421 000f 32       		.byte	(.L58-.L59)/2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  475 0080 0020     		movs	r0, #0
  476 0082 7047     		bx	lr
  477              	.L64:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 9
 
 
  478 0084 0120     		movs	r0, #1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  534 0044 D36B     		ldr	r3, [r2, #60]
  535 0046 23EA0103 		bic	r3, r3, r1
  536 004a D363     		str	r3, [r2, #60]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 10
 
 
  537 004c 0020     		movs	r0, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  595 000c 00700040 		.word	1073770496
  597              		.section	.text.HAL_PWREx_SetSRAM2ContentRetention,"ax",%progbits
  598              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 11
 
 
  599              		.global	HAL_PWREx_SetSRAM2ContentRetention
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  658 0004 FFF7FEFF 		bl	HAL_PWREx_SetSRAM2ContentRetention
  659 0008 08BD     		pop	{r3, pc}
  661              		.section	.text.HAL_PWREx_EnableBORPVD_ULP,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 12
 
 
  662              		.align	1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  721              	.L101:
  722 000c 00700040 		.word	1073770496
  724              		.section	.text.HAL_PWREx_DisableExtSMPS_0V95,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 13
 
 
  725              		.align	1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  784              	.L110:
  785 000c 00700040 		.word	1073770496
  787              		.section	.text.HAL_PWREx_EnablePVM3,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 14
 
 
  788              		.align	1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  847              	.L119:
  848 000c 00700040 		.word	1073770496
  850              		.section	.text.HAL_PWREx_DisablePVM4,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 15
 
 
  851              		.align	1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  908 0042 1362     		str	r3, [r2, #32]
  909              	.L128:
  910 0044 4368     		ldr	r3, [r0, #4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 16
 
 
  911 0046 13F4003F 		tst	r3, #131072
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  965 00c4 4368     		ldr	r3, [r0, #4]
  966 00c6 13F0010F 		tst	r3, #1
  967 00ca 04D0     		beq	.L133
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 17
 
 
  968 00cc 274A     		ldr	r2, .L141
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1022 014a 0CD0     		beq	.L140
  1023 014c 074A     		ldr	r2, .L141
  1024 014e D36A     		ldr	r3, [r2, #44]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 18
 
 
  1025 0150 43F04003 		orr	r3, r3, #64
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1083 000c 1B68     		ldr	r3, [r3]
  1084 000e 3222     		movs	r2, #50
  1085 0010 02FB03F3 		mul	r3, r2, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 19
 
 
  1086 0014 0D4A     		ldr	r2, .L152+8
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1142              	@ 1209 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
  1143 001a 20BF     		wfe
  1144              	@ 0 "" 2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 20
 
 
  1145              	@ 1210 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1201              	@ 0 "" 2
  1202              		.thumb
  1203              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 21
 
 
  1204              	.L162:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1260 0024 1369     		ldr	r3, [r2, #16]
  1261 0026 23F00403 		bic	r3, r3, #4
  1262 002a 1361     		str	r3, [r2, #16]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 22
 
 
  1263 002c 7047     		bx	lr
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1321              		@ link register save eliminated.
  1322 0000 7047     		bx	lr
  1324              		.section	.text.HAL_PWREx_PVM3Callback,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 23
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 23
 
 
  1325              		.align	1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1384 0030 0B4B     		ldr	r3, .L188
  1385 0032 4FF48032 		mov	r2, #65536
  1386 0036 5A61     		str	r2, [r3, #20]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 24
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 24
 
 
  1387 0038 E8E7     		b	.L179
@@ -1405,134 +1405,134 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 1
  1408              	.L188:
  1409 0060 00040140 		.word	1073808384
  1411              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 25
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_pwr_ex.c
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:18     .text.HAL_PWREx_GetVoltageRange:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:24     .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:35     .text.HAL_PWREx_GetVoltageRange:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:38     .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:44     .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:110    .text.HAL_PWREx_ControlVoltageScaling:00000084 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:115    .text.HAL_PWREx_EnableBatteryCharging:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:121    .text.HAL_PWREx_EnableBatteryCharging:00000000 HAL_PWREx_EnableBatteryCharging
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:137    .text.HAL_PWREx_EnableBatteryCharging:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:140    .text.HAL_PWREx_DisableBatteryCharging:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:146    .text.HAL_PWREx_DisableBatteryCharging:00000000 HAL_PWREx_DisableBatteryCharging
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:158    .text.HAL_PWREx_DisableBatteryCharging:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:161    .text.HAL_PWREx_EnableVddUSB:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:167    .text.HAL_PWREx_EnableVddUSB:00000000 HAL_PWREx_EnableVddUSB
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:179    .text.HAL_PWREx_EnableVddUSB:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:182    .text.HAL_PWREx_DisableVddUSB:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:188    .text.HAL_PWREx_DisableVddUSB:00000000 HAL_PWREx_DisableVddUSB
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:200    .text.HAL_PWREx_DisableVddUSB:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:203    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:209    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 HAL_PWREx_EnableInternalWakeUpLine
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:221    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:224    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:230    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 HAL_PWREx_DisableInternalWakeUpLine
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:242    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:245    .text.HAL_PWREx_EnableGPIOPullUp:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:251    .text.HAL_PWREx_EnableGPIOPullUp:00000000 HAL_PWREx_EnableGPIOPullUp
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:259    .text.HAL_PWREx_EnableGPIOPullUp:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:267    .text.HAL_PWREx_EnableGPIOPullUp:00000010 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:328    .text.HAL_PWREx_EnableGPIOPullUp:00000088 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:331    .text.HAL_PWREx_DisableGPIOPullUp:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:337    .text.HAL_PWREx_DisableGPIOPullUp:00000000 HAL_PWREx_DisableGPIOPullUp
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:345    .text.HAL_PWREx_DisableGPIOPullUp:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:353    .text.HAL_PWREx_DisableGPIOPullUp:00000010 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:397    .text.HAL_PWREx_DisableGPIOPullUp:00000064 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:400    .text.HAL_PWREx_EnableGPIOPullDown:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:406    .text.HAL_PWREx_EnableGPIOPullDown:00000000 HAL_PWREx_EnableGPIOPullDown
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:414    .text.HAL_PWREx_EnableGPIOPullDown:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:422    .text.HAL_PWREx_EnableGPIOPullDown:00000010 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:483    .text.HAL_PWREx_EnableGPIOPullDown:00000088 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:486    .text.HAL_PWREx_DisableGPIOPullDown:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:492    .text.HAL_PWREx_DisableGPIOPullDown:00000000 HAL_PWREx_DisableGPIOPullDown
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:500    .text.HAL_PWREx_DisableGPIOPullDown:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:508    .text.HAL_PWREx_DisableGPIOPullDown:00000010 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:553    .text.HAL_PWREx_DisableGPIOPullDown:00000068 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:556    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:562    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 HAL_PWREx_EnablePullUpPullDownConfig
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:574    .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:577    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:583    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 HAL_PWREx_DisablePullUpPullDownConfig
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:595    .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:598    .text.HAL_PWREx_SetSRAM2ContentRetention:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:604    .text.HAL_PWREx_SetSRAM2ContentRetention:00000000 HAL_PWREx_SetSRAM2ContentRetention
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:629    .text.HAL_PWREx_SetSRAM2ContentRetention:00000028 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:632    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:638    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 HAL_PWREx_EnableSRAM2ContentRetention
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 26
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:18     .text.HAL_PWREx_GetVoltageRange:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:24     .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:35     .text.HAL_PWREx_GetVoltageRange:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:38     .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:44     .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:110    .text.HAL_PWREx_ControlVoltageScaling:00000084 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:115    .text.HAL_PWREx_EnableBatteryCharging:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:121    .text.HAL_PWREx_EnableBatteryCharging:00000000 HAL_PWREx_EnableBatteryCharging
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:137    .text.HAL_PWREx_EnableBatteryCharging:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:140    .text.HAL_PWREx_DisableBatteryCharging:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:146    .text.HAL_PWREx_DisableBatteryCharging:00000000 HAL_PWREx_DisableBatteryCharging
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:158    .text.HAL_PWREx_DisableBatteryCharging:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:161    .text.HAL_PWREx_EnableVddUSB:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:167    .text.HAL_PWREx_EnableVddUSB:00000000 HAL_PWREx_EnableVddUSB
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:179    .text.HAL_PWREx_EnableVddUSB:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:182    .text.HAL_PWREx_DisableVddUSB:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:188    .text.HAL_PWREx_DisableVddUSB:00000000 HAL_PWREx_DisableVddUSB
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:200    .text.HAL_PWREx_DisableVddUSB:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:203    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:209    .text.HAL_PWREx_EnableInternalWakeUpLine:00000000 HAL_PWREx_EnableInternalWakeUpLine
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:221    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:224    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:230    .text.HAL_PWREx_DisableInternalWakeUpLine:00000000 HAL_PWREx_DisableInternalWakeUpLine
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:242    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:245    .text.HAL_PWREx_EnableGPIOPullUp:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:251    .text.HAL_PWREx_EnableGPIOPullUp:00000000 HAL_PWREx_EnableGPIOPullUp
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:259    .text.HAL_PWREx_EnableGPIOPullUp:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:267    .text.HAL_PWREx_EnableGPIOPullUp:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:328    .text.HAL_PWREx_EnableGPIOPullUp:00000088 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:331    .text.HAL_PWREx_DisableGPIOPullUp:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:337    .text.HAL_PWREx_DisableGPIOPullUp:00000000 HAL_PWREx_DisableGPIOPullUp
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:345    .text.HAL_PWREx_DisableGPIOPullUp:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:353    .text.HAL_PWREx_DisableGPIOPullUp:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:397    .text.HAL_PWREx_DisableGPIOPullUp:00000064 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:400    .text.HAL_PWREx_EnableGPIOPullDown:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:406    .text.HAL_PWREx_EnableGPIOPullDown:00000000 HAL_PWREx_EnableGPIOPullDown
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:414    .text.HAL_PWREx_EnableGPIOPullDown:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:422    .text.HAL_PWREx_EnableGPIOPullDown:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:483    .text.HAL_PWREx_EnableGPIOPullDown:00000088 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:486    .text.HAL_PWREx_DisableGPIOPullDown:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:492    .text.HAL_PWREx_DisableGPIOPullDown:00000000 HAL_PWREx_DisableGPIOPullDown
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:500    .text.HAL_PWREx_DisableGPIOPullDown:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:508    .text.HAL_PWREx_DisableGPIOPullDown:00000010 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:553    .text.HAL_PWREx_DisableGPIOPullDown:00000068 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:556    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:562    .text.HAL_PWREx_EnablePullUpPullDownConfig:00000000 HAL_PWREx_EnablePullUpPullDownConfig
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:574    .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:577    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:583    .text.HAL_PWREx_DisablePullUpPullDownConfig:00000000 HAL_PWREx_DisablePullUpPullDownConfig
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:595    .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:598    .text.HAL_PWREx_SetSRAM2ContentRetention:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:604    .text.HAL_PWREx_SetSRAM2ContentRetention:00000000 HAL_PWREx_SetSRAM2ContentRetention
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:629    .text.HAL_PWREx_SetSRAM2ContentRetention:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:632    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:638    .text.HAL_PWREx_EnableSRAM2ContentRetention:00000000 HAL_PWREx_EnableSRAM2ContentRetention
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 26
 
 
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:647    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:653    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 HAL_PWREx_DisableSRAM2ContentRetention
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:662    .text.HAL_PWREx_EnableBORPVD_ULP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:668    .text.HAL_PWREx_EnableBORPVD_ULP:00000000 HAL_PWREx_EnableBORPVD_ULP
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:680    .text.HAL_PWREx_EnableBORPVD_ULP:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:683    .text.HAL_PWREx_DisableBORPVD_ULP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:689    .text.HAL_PWREx_DisableBORPVD_ULP:00000000 HAL_PWREx_DisableBORPVD_ULP
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:701    .text.HAL_PWREx_DisableBORPVD_ULP:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:704    .text.HAL_PWREx_EnableExtSMPS_0V95:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:710    .text.HAL_PWREx_EnableExtSMPS_0V95:00000000 HAL_PWREx_EnableExtSMPS_0V95
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:722    .text.HAL_PWREx_EnableExtSMPS_0V95:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:725    .text.HAL_PWREx_DisableExtSMPS_0V95:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:731    .text.HAL_PWREx_DisableExtSMPS_0V95:00000000 HAL_PWREx_DisableExtSMPS_0V95
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:743    .text.HAL_PWREx_DisableExtSMPS_0V95:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:746    .text.HAL_PWREx_EnablePVM1:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:752    .text.HAL_PWREx_EnablePVM1:00000000 HAL_PWREx_EnablePVM1
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:764    .text.HAL_PWREx_EnablePVM1:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:767    .text.HAL_PWREx_DisablePVM1:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:773    .text.HAL_PWREx_DisablePVM1:00000000 HAL_PWREx_DisablePVM1
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:785    .text.HAL_PWREx_DisablePVM1:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:788    .text.HAL_PWREx_EnablePVM3:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:794    .text.HAL_PWREx_EnablePVM3:00000000 HAL_PWREx_EnablePVM3
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:806    .text.HAL_PWREx_EnablePVM3:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:809    .text.HAL_PWREx_DisablePVM3:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:815    .text.HAL_PWREx_DisablePVM3:00000000 HAL_PWREx_DisablePVM3
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:827    .text.HAL_PWREx_DisablePVM3:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:830    .text.HAL_PWREx_EnablePVM4:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:836    .text.HAL_PWREx_EnablePVM4:00000000 HAL_PWREx_EnablePVM4
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:848    .text.HAL_PWREx_EnablePVM4:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:851    .text.HAL_PWREx_DisablePVM4:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:857    .text.HAL_PWREx_DisablePVM4:00000000 HAL_PWREx_DisablePVM4
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:869    .text.HAL_PWREx_DisablePVM4:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:872    .text.HAL_PWREx_ConfigPVM:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:878    .text.HAL_PWREx_ConfigPVM:00000000 HAL_PWREx_ConfigPVM
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1044   .text.HAL_PWREx_ConfigPVM:0000016c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1047   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1053   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 HAL_PWREx_EnableLowPowerRunMode
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1065   .text.HAL_PWREx_EnableLowPowerRunMode:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1068   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1074   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 HAL_PWREx_DisableLowPowerRunMode
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1113   .text.HAL_PWREx_DisableLowPowerRunMode:00000044 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1118   .text.HAL_PWREx_EnterSTOP0Mode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1124   .text.HAL_PWREx_EnterSTOP0Mode:00000000 HAL_PWREx_EnterSTOP0Mode
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1167   .text.HAL_PWREx_EnterSTOP0Mode:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1171   .text.HAL_PWREx_EnterSTOP1Mode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1177   .text.HAL_PWREx_EnterSTOP1Mode:00000000 HAL_PWREx_EnterSTOP1Mode
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1221   .text.HAL_PWREx_EnterSTOP1Mode:00000034 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1225   .text.HAL_PWREx_EnterSTOP2Mode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1231   .text.HAL_PWREx_EnterSTOP2Mode:00000000 HAL_PWREx_EnterSTOP2Mode
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1275   .text.HAL_PWREx_EnterSTOP2Mode:00000034 $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1279   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1285   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 HAL_PWREx_EnterSHUTDOWNMode
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1308   .text.HAL_PWREx_EnterSHUTDOWNMode:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1312   .text.HAL_PWREx_PVM1Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1318   .text.HAL_PWREx_PVM1Callback:00000000 HAL_PWREx_PVM1Callback
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1325   .text.HAL_PWREx_PVM3Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1331   .text.HAL_PWREx_PVM3Callback:00000000 HAL_PWREx_PVM3Callback
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s 			page 27
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:647    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:653    .text.HAL_PWREx_DisableSRAM2ContentRetention:00000000 HAL_PWREx_DisableSRAM2ContentRetention
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:662    .text.HAL_PWREx_EnableBORPVD_ULP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:668    .text.HAL_PWREx_EnableBORPVD_ULP:00000000 HAL_PWREx_EnableBORPVD_ULP
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:680    .text.HAL_PWREx_EnableBORPVD_ULP:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:683    .text.HAL_PWREx_DisableBORPVD_ULP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:689    .text.HAL_PWREx_DisableBORPVD_ULP:00000000 HAL_PWREx_DisableBORPVD_ULP
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:701    .text.HAL_PWREx_DisableBORPVD_ULP:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:704    .text.HAL_PWREx_EnableExtSMPS_0V95:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:710    .text.HAL_PWREx_EnableExtSMPS_0V95:00000000 HAL_PWREx_EnableExtSMPS_0V95
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:722    .text.HAL_PWREx_EnableExtSMPS_0V95:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:725    .text.HAL_PWREx_DisableExtSMPS_0V95:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:731    .text.HAL_PWREx_DisableExtSMPS_0V95:00000000 HAL_PWREx_DisableExtSMPS_0V95
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:743    .text.HAL_PWREx_DisableExtSMPS_0V95:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:746    .text.HAL_PWREx_EnablePVM1:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:752    .text.HAL_PWREx_EnablePVM1:00000000 HAL_PWREx_EnablePVM1
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:764    .text.HAL_PWREx_EnablePVM1:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:767    .text.HAL_PWREx_DisablePVM1:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:773    .text.HAL_PWREx_DisablePVM1:00000000 HAL_PWREx_DisablePVM1
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:785    .text.HAL_PWREx_DisablePVM1:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:788    .text.HAL_PWREx_EnablePVM3:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:794    .text.HAL_PWREx_EnablePVM3:00000000 HAL_PWREx_EnablePVM3
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:806    .text.HAL_PWREx_EnablePVM3:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:809    .text.HAL_PWREx_DisablePVM3:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:815    .text.HAL_PWREx_DisablePVM3:00000000 HAL_PWREx_DisablePVM3
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:827    .text.HAL_PWREx_DisablePVM3:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:830    .text.HAL_PWREx_EnablePVM4:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:836    .text.HAL_PWREx_EnablePVM4:00000000 HAL_PWREx_EnablePVM4
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:848    .text.HAL_PWREx_EnablePVM4:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:851    .text.HAL_PWREx_DisablePVM4:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:857    .text.HAL_PWREx_DisablePVM4:00000000 HAL_PWREx_DisablePVM4
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:869    .text.HAL_PWREx_DisablePVM4:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:872    .text.HAL_PWREx_ConfigPVM:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:878    .text.HAL_PWREx_ConfigPVM:00000000 HAL_PWREx_ConfigPVM
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1044   .text.HAL_PWREx_ConfigPVM:0000016c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1047   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1053   .text.HAL_PWREx_EnableLowPowerRunMode:00000000 HAL_PWREx_EnableLowPowerRunMode
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1065   .text.HAL_PWREx_EnableLowPowerRunMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1068   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1074   .text.HAL_PWREx_DisableLowPowerRunMode:00000000 HAL_PWREx_DisableLowPowerRunMode
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1113   .text.HAL_PWREx_DisableLowPowerRunMode:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1118   .text.HAL_PWREx_EnterSTOP0Mode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1124   .text.HAL_PWREx_EnterSTOP0Mode:00000000 HAL_PWREx_EnterSTOP0Mode
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1167   .text.HAL_PWREx_EnterSTOP0Mode:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1171   .text.HAL_PWREx_EnterSTOP1Mode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1177   .text.HAL_PWREx_EnterSTOP1Mode:00000000 HAL_PWREx_EnterSTOP1Mode
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1221   .text.HAL_PWREx_EnterSTOP1Mode:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1225   .text.HAL_PWREx_EnterSTOP2Mode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1231   .text.HAL_PWREx_EnterSTOP2Mode:00000000 HAL_PWREx_EnterSTOP2Mode
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1275   .text.HAL_PWREx_EnterSTOP2Mode:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1279   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1285   .text.HAL_PWREx_EnterSHUTDOWNMode:00000000 HAL_PWREx_EnterSHUTDOWNMode
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1308   .text.HAL_PWREx_EnterSHUTDOWNMode:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1312   .text.HAL_PWREx_PVM1Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1318   .text.HAL_PWREx_PVM1Callback:00000000 HAL_PWREx_PVM1Callback
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1325   .text.HAL_PWREx_PVM3Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1331   .text.HAL_PWREx_PVM3Callback:00000000 HAL_PWREx_PVM3Callback
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s 			page 27
 
 
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1338   .text.HAL_PWREx_PVM4Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1344   .text.HAL_PWREx_PVM4Callback:00000000 HAL_PWREx_PVM4Callback
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1351   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1357   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 HAL_PWREx_PVD_PVM_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccPuujFt.s:1409   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000060 $d
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1338   .text.HAL_PWREx_PVM4Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1344   .text.HAL_PWREx_PVM4Callback:00000000 HAL_PWREx_PVM4Callback
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1351   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1357   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000000 HAL_PWREx_PVD_PVM_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccqDNFRH.s:1409   .text.HAL_PWREx_PVD_PVM_IRQHandler:00000060 $d
 
 UNDEFINED SYMBOLS
 SystemCoreClock

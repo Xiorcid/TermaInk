@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
   58              		.align	2
   59              	.L5:
   60 000c 00700040 		.word	1073770496
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 2
 
 
   62              		.section	.text.HAL_PWR_DisableBkUpAccess,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  119 0040 1360     		str	r3, [r2]
  120              	.L11:
  121 0042 4368     		ldr	r3, [r0, #4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 3
 
 
  122 0044 13F4003F 		tst	r3, #131072
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  179              		.thumb_func
  181              	HAL_PWR_DisablePVD:
  182              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 4
 
 
  183              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  241 0010 00700040 		.word	1073770496
  243              		.section	.text.HAL_PWR_EnterSLEEPMode,"ax",%progbits
  244              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 5
 
 
  245              		.global	HAL_PWR_EnterSLEEPMode
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  300 0042 EFE7     		b	.L29
  301              	.L38:
  302              		.align	2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 6
 
 
  303              	.L37:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  362              		.section	.text.HAL_PWR_EnableSleepOnExit,"ax",%progbits
  363              		.align	1
  364              		.global	HAL_PWR_EnableSleepOnExit
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 7
 
 
  365              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  425              		.section	.text.HAL_PWR_DisableSEVOnPend,"ax",%progbits
  426              		.align	1
  427              		.global	HAL_PWR_DisableSEVOnPend
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 8
 
 
  428              		.syntax unified
@@ -449,57 +449,57 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 1
  456              		@ link register save eliminated.
  457 0000 7047     		bx	lr
  459              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_pwr.c
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:18     .text.HAL_PWR_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:24     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:39     .text.HAL_PWR_DeInit:00000014 $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:42     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:48     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:60     .text.HAL_PWR_EnableBkUpAccess:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:63     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:69     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:81     .text.HAL_PWR_DisableBkUpAccess:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:84     .text.HAL_PWR_ConfigPVD:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:90     .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:150    .text.HAL_PWR_ConfigPVD:0000007c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:154    .text.HAL_PWR_EnablePVD:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:160    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:172    .text.HAL_PWR_EnablePVD:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:175    .text.HAL_PWR_DisablePVD:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:181    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:193    .text.HAL_PWR_DisablePVD:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:196    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:202    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:219    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:222    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:228    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:241    .text.HAL_PWR_DisableWakeUpPin:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:244    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:250    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:304    .text.HAL_PWR_EnterSLEEPMode:00000044 $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:308    .text.HAL_PWR_EnterSTOPMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:314    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:330    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:336    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:359    .text.HAL_PWR_EnterSTANDBYMode:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:363    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:369    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:381    .text.HAL_PWR_EnableSleepOnExit:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:384    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:390    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:402    .text.HAL_PWR_DisableSleepOnExit:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:405    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:411    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:423    .text.HAL_PWR_EnableSEVOnPend:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:426    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:432    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:444    .text.HAL_PWR_DisableSEVOnPend:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:447    .text.HAL_PWR_PVDCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccjCeAuq.s:453    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:18     .text.HAL_PWR_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:24     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:39     .text.HAL_PWR_DeInit:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:42     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:48     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:60     .text.HAL_PWR_EnableBkUpAccess:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:63     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:69     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:81     .text.HAL_PWR_DisableBkUpAccess:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:84     .text.HAL_PWR_ConfigPVD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:90     .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:150    .text.HAL_PWR_ConfigPVD:0000007c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:154    .text.HAL_PWR_EnablePVD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:160    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:172    .text.HAL_PWR_EnablePVD:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:175    .text.HAL_PWR_DisablePVD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:181    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:193    .text.HAL_PWR_DisablePVD:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:196    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:202    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:219    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:222    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:228    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:241    .text.HAL_PWR_DisableWakeUpPin:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:244    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:250    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:304    .text.HAL_PWR_EnterSLEEPMode:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:308    .text.HAL_PWR_EnterSTOPMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:314    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:330    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:336    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:359    .text.HAL_PWR_EnterSTANDBYMode:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:363    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:369    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:381    .text.HAL_PWR_EnableSleepOnExit:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:384    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:390    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:402    .text.HAL_PWR_DisableSleepOnExit:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:405    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:411    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:423    .text.HAL_PWR_EnableSEVOnPend:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:426    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:432    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:444    .text.HAL_PWR_DisableSEVOnPend:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:447    .text.HAL_PWR_PVDCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqF1fBD.s:453    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
 
 UNDEFINED SYMBOLS
 HAL_PWREx_DisableLowPowerRunMode

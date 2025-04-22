@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       The SPI HAL driver can be used as follows:
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       (#) Declare a SPI_HandleTypeDef handle structure, for example:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           SPI_HandleTypeDef  hspi;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) ErrorCallback         : SPI Error callback
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) AbortCpltCallback     : SPI Abort callback
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) MspInitCallback       : SPI Msp Init callback
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) MspDeInitCallback     : SPI Msp DeInit callback
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        DataSize = SPI_DATASIZE_8BIT:
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        +-------------------------------------------------------------------------------------------
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        |         |                | 2Lines Fullduplex   |     2Lines RxOnly    |         1Line     
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        | Process | Transfer mode  |---------------------|----------------------|-------------------
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /* Includes ------------------------------------------------------------------*/
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #include "stm32l4xx_hal.h"
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_2linesRxISR_16BITCRC(struct __SPI_HandleTypeDef *hspi);
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortRx_ISR(SPI_HandleTypeDef *hspi);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortTx_ISR(SPI_HandleTypeDef *hspi);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  313:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval HAL status
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 7
 
 
  316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Init(SPI_HandleTypeDef *hspi)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->State == HAL_SPI_STATE_RESET)
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Allocate lock resource and initialize it */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 8
 
 
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->Lock = HAL_UNLOCKED;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.CLKPhase & SPI_CR1_CPHA) |
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.NSS & SPI_CR1_SSM) |
  429:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.BaudRatePrescaler & SPI_CR1_BR_Msk) |
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 9
 
 
  430:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                   (hspi->Init.FirstBit  & SPI_CR1_LSBFIRST) |
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  De-Initialize the SPI peripheral.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 10
 
 
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             the HAL_SPI_MspInit should be implemented in the user file
  542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****    */
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 11
 
 
  544:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  598:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       case HAL_SPI_TX_RX_COMPLETE_CB_ID :
  599:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxRxCpltCallback = pCallback;
  600:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 12
 
 
  601:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  655:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Return error status */
  656:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         status =  HAL_ERROR;
  657:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 13
 
 
  658:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  712:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  713:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       case HAL_SPI_TX_RX_HALF_COMPLETE_CB_ID :
  714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxRxHalfCpltCallback = HAL_SPI_TxRxHalfCpltCallback; /* Legacy weak TxRxHalfCpltCallb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 14
 
 
  715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  769:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     status =  HAL_ERROR;
  770:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  771:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 15
 
 
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Release Lock */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  826:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint16_t initial_TxXferCount;
  827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  828:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check Direction parameter */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 16
 
 
  829:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   assert_param(IS_SPI_DIRECTION_2LINES_OR_1LINE(hspi->Init.Direction));
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  884:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  885:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Transmit data in 16 Bit mode */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 17
 
 
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.DataSize > SPI_DATASIZE_8BIT)
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         if (hspi->TxXferCount > 1U)
  941:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           /* write on the data register in packing mode */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 18
 
 
  943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->Instance->DR = *((const uint16_t *)hspi->pTxBuffPtr);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  998:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
  999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 19
 
 
 1000:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 1056:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Reset CRC Calculation */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 20
 
 
 1057:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->State = HAL_SPI_STATE_READY;
 1112:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           __HAL_UNLOCK(hspi);
 1113:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           return HAL_TIMEOUT;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 21
 
 
 1114:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Wait the CRC data */
 1170:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (SPI_WaitFlagStateUntilTimeout(hspi, SPI_FLAG_RXNE, SET, Timeout, tickstart) != HAL_OK)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 22
 
 
 1171:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1225:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     __HAL_SPI_CLEAR_CRCERRFLAG(hspi);
 1226:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1227:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 23
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 23
 
 
 1228:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 1283:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   spi_cr1             = READ_REG(hspi->Instance->CR1);
 1284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   spi_cr2             = READ_REG(hspi->Instance->CR2);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 24
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 24
 
 
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1339:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check if the SPI is already enabled */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 25
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 25
 
 
 1342:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hspi->Instance->CR1 & SPI_CR1_SPE) != SPI_CR1_SPE)
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Check RXNE flag */
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if ((__HAL_SPI_GET_FLAG(hspi, SPI_FLAG_RXNE)) && (hspi->RxXferCount > 0U))
 1398:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 26
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 26
 
 
 1399:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         *((uint16_t *)hspi->pRxBuffPtr) = (uint16_t)hspi->Instance->DR;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1453:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->TxXferCount -= 2U;
 1454:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
 1455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         else
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 27
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 27
 
 
 1456:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1510:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 1511:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Read CRC from DR to close CRC calculation process */
 1512:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 28
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 28
 
 
 1513:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1567:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 1568:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1569:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check the end of the transaction */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 29
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 29
 
 
 1570:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (SPI_EndRxTxTransaction(hspi, Timeout, tickstart) != HAL_OK)
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1624:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = Size;
 1625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
 1626:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 30
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 30
 
 
 1627:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init field not used in handle to zero */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1681:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 1682:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Receive_IT(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size)
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 31
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 31
 
 
 1684:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1738:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_1LINE_RX(hspi);
 1739:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 32
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 32
 
 
 1741:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1795:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init temporary variables */
 1796:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tmp_state           = hspi->State;
 1797:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tmp_mode            = hspi->Init.Mode;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 33
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 33
 
 
 1798:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1852:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
 1853:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1854:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->CRCSize = 0U;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 34
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 34
 
 
 1855:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1909:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1910:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return HAL_ERROR;
 1911:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 35
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 35
 
 
 1912:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1966:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->TxXferCount = (hspi->TxXferCount >> 1U);
 1967:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 1968:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     else
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 36
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 36
 
 
 1969:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2023:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 2024:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2025:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hspi->Init.Direction == SPI_DIRECTION_2LINES) && (hspi->Init.Mode == SPI_MODE_MASTER))
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 37
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 37
 
 
 2026:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2080:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
 2081:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 2082:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Set RX Fifo threshold according the reception data length: 8bit */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 38
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 38
 
 
 2083:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SET_BIT(hspi->Instance->CR2, SPI_RXFIFO_THRESHOLD);
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2137:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_ENABLE_IT(hspi, (SPI_IT_ERR));
 2138:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2139:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Enable Rx DMA Request */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 39
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 39
 
 
 2140:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SET_BIT(hspi->Instance->CR2, SPI_CR2_RXDMAEN);
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2194:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->ErrorCode   = HAL_SPI_ERROR_NONE;
 2195:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr  = (const uint8_t *)pTxData;
 2196:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = Size;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 40
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 40
 
 
 2197:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2251:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 2252:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       else
 2253:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 41
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 41
 
 
 2254:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         SET_BIT(hspi->Instance->CR2, SPI_CR2_LDMARX);
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2308:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     __HAL_UNLOCK(hspi);
 2309:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return HAL_ERROR;
 2310:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 42
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 42
 
 
 2311:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2365:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if (count == 0U)
 2366:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
 2367:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 43
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 43
 
 
 2368:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                         HAL_GetTick()) != HAL_OK)
 2423:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
 2424:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 44
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 44
 
 
 2425:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 2480:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2481:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Clear the Error flags in the SR register */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 45
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 45
 
 
 2482:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_CLEAR_OVRFLAG(hspi);
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2536:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Reset Timeout Counter */
 2537:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     count = resetcount;
 2538:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 46
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 46
 
 
 2539:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2593:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 2594:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Abort DMA Tx Handle linked to SPI Peripheral */
 2595:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if (HAL_DMA_Abort_IT(hspi->hdmatx) != HAL_OK)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 47
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 47
 
 
 2596:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2650:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* As no DMA to be aborted, call directly user Abort complete callback */
 2651:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
 2652:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->AbortCpltCallback(hspi);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 48
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 48
 
 
 2653:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2707:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_DMAStop(SPI_HandleTypeDef *hspi)
 2708:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
 2709:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   HAL_StatusTypeDef errorcode = HAL_OK;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 49
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 49
 
 
 2710:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* The Lock is not implemented on this API to allow the user application
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2764:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 2765:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->TxISR(hspi);
 2766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 50
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 50
 
 
 2767:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2821:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
 2822:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           }
 2823:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 51
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 51
 
 
 2824:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Abort the SPI DMA Tx channel */
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2878:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             the HAL_SPI_RxCpltCallback should be implemented in the user file
 2879:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****    */
 2880:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 52
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 52
 
 
 2881:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2935:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 2936:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** __weak void HAL_SPI_TxRxHalfCpltCallback(SPI_HandleTypeDef *hspi)
 2937:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 53
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 53
 
 
 2938:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Prevent unused argument(s) compilation warning */
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2992:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     This subsection provides a set of functions allowing to control the SPI.
 2993:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****      (+) HAL_SPI_GetState() API can be helpful to check in run-time the state of the SPI peripheral
 2994:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****      (+) HAL_SPI_GetError() check in run-time Errors occurring during communication
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 54
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 54
 
 
 2995:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** @endverbatim
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3049:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3050:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* DMA Normal Mode */
 3051:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hdma->Instance->CCR & DMA_CCR_CIRC) != DMA_CCR_CIRC)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 55
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 55
 
 
 3052:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3106:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  tmpreg8 = 0;
 3107:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 3108:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 56
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 56
 
 
 3109:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init tickstart for timeout management*/
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3163:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 3164:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Disable Rx/Tx DMA Request (done by default to handle the case master rx direction 2 lines)
 3165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       CLEAR_BIT(hspi->Instance->CR2, SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 57
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 57
 
 
 3166:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3220:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3221:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint32_t tmpreg = 0U;
 3222:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  *ptmpreg8;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 58
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 58
 
 
 3223:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  tmpreg8 = 0;
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3277:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     CLEAR_BIT(hspi->Instance->CR2, SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);
 3278:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3279:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->TxXferCount = 0U;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 59
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 59
 
 
 3280:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->RxXferCount = 0U;
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3334:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 3335:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_DMAHalfReceiveCplt(DMA_HandleTypeDef *hdma)
 3336:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 60
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 60
 
 
 3337:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SPI_HandleTypeDef *hspi = (SPI_HandleTypeDef *)(((DMA_HandleTypeDef *)hdma)->Parent);
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3391:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hdma DMA handle.
 3392:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
 3393:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 61
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 61
 
 
 3394:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_DMAAbortOnError(DMA_HandleTypeDef *hdma)
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3448:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3449:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* No Abort process still ongoing : All DMA Stream/Channel are aborted, call user Abort Complete 
 3450:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferCount = 0U;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 62
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 62
 
 
 3451:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = 0U;
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3505:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
 3506:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 3507:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 63
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 63
 
 
 3508:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check if an Abort process is still ongoing */
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3562:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 3563:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Receive data in 8 Bit mode */
 3564:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 64
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 64
 
 
 3565:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3619:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3620:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (hspi->TxXferCount == 0U)
 3621:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 65
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 65
 
 
 3622:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       SPI_CloseRxTx_ISR(hspi);
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3676:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Rx 16-bit handler for Transmit and Receive in Interrupt mode.
 3677:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
 3678:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 66
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 66
 
 
 3679:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3733:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
 3734:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
 3735:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 67
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 67
 
 
 3736:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3790:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 3791:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_CloseRx_ISR(hspi);
 3792:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 68
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 68
 
 
 3793:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3847:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3848:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SPI_CloseRx_ISR(hspi);
 3849:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 69
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 69
 
 
 3850:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3904:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 3905:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 3906:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_CloseTx_ISR(hspi);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 70
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 70
 
 
 3907:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
   41              		.cfi_offset 9, -12
   42              		.cfi_offset 10, -8
   43              		.cfi_offset 14, -4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 71
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 71
 
 
   44 0004 82B0     		sub	sp, sp, #8
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
   86              		.loc 1 3960 48 view .LVU19
   87 0032 38EA0404 		bics	r4, r8, r4
   88 0036 0CBF     		ite	eq
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 72
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 72
 
 
   89 0038 0123     		moveq	r3, #1
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  109 0052 019A     		ldr	r2, [sp, #4]
  110              		.loc 1 3994 10 view .LVU29
  111 0054 02B1     		cbz	r2, .L9
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 73
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 73
 
 
  112 0056 4A46     		mov	r2, r9
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  150 0082 0023     		movs	r3, #0
  151 0084 85F85C30 		strb	r3, [r5, #92]
 3989:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 74
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 74
 
 
  152              		.loc 1 3989 9 view .LVU44
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  192              		.cfi_def_cfa_offset 32
  193              		@ sp needed
  194 00c0 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 75
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 75
 
 
  195              	.LVL9:
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  235              		.loc 1 4019 3 view .LVU60
 4020:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint32_t tmp_tickstart;
  236              		.loc 1 4020 3 view .LVU61
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 76
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 76
 
 
 4021:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO const uint8_t  *ptmpreg8;
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  277              		.loc 1 4034 9 is_stmt 0 view .LVU80
  278 003e 02E0     		b	.L21
  279              	.LVL17:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 77
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 77
 
 
  280              	.L20:
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  312              	.L30:
 4045:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 4046:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if (((HAL_GetTick() - tmp_tickstart) >= tmp_timeout) || (tmp_timeout == 0U))
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 78
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 78
 
 
  313              		.loc 1 4046 7 view .LVU95
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  333 0080 013B     		subs	r3, r3, #1
  334 0082 0193     		str	r3, [sp, #4]
  335 0084 9046     		mov	r8, r2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 79
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 79
 
 
  336 0086 DEE7     		b	.L21
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  374 00b2 B368     		ldr	r3, [r6, #8]
 4055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                                      || (hspi->Init.Direction == SPI_DIRECTION_2LIN
  375              		.loc 1 4055 50 discriminator 1 view .LVU120
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 80
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 80
 
 
  376 00b4 B3F5004F 		cmp	r3, #32768
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  421              		.syntax unified
  422              		.thumb
  423              		.thumb_func
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 81
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 81
 
 
  425              	SPI_EndRxTxTransaction:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  432              		.loc 1 4132 1 is_stmt 0 view .LVU130
  433 0000 70B5     		push	{r4, r5, r6, lr}
  434              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 82
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 82
 
 
  435              		.cfi_offset 4, -16
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  473 002e 0022     		movs	r2, #0
  474 0030 4FF4C061 		mov	r1, #1536
  475 0034 2046     		mov	r0, r4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 83
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 83
 
 
  476 0036 FFF7FEFF 		bl	SPI_WaitFifoStateUntilTimeout
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  518              		.align	1
  519              		.syntax unified
  520              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 84
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 84
 
 
  521              		.thumb_func
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  565              		.loc 1 4111 3 is_stmt 1 view .LVU162
 4111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                                || (hspi->Init.Direction == SPI_DIRECTION_2LINES_RXO
  566              		.loc 1 4111 18 is_stmt 0 view .LVU163
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 85
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 85
 
 
  567 0022 6368     		ldr	r3, [r4, #4]
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  610 0054 A368     		ldr	r3, [r4, #8]
 4111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                                || (hspi->Init.Direction == SPI_DIRECTION_2LINES_RXO
  611              		.loc 1 4111 44 discriminator 1 view .LVU175
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 86
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 86
 
 
  612 0056 B3F5004F 		cmp	r3, #32768
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 4167:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Init tickstart for timeout management */
 4168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tickstart = HAL_GetTick();
 4169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 87
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 87
 
 
 4170:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Disable ERR interrupt */
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 4224:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->ErrorCallback(hspi);
 4225:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
 4226:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       HAL_SPI_ErrorCallback(hspi);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 88
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 88
 
 
 4227:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 4281:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->ErrorCallback(hspi);
 4282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
 4283:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       HAL_SPI_ErrorCallback(hspi);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 89
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 89
 
 
 4284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 4338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
 4339:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 4340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 90
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 90
 
 
 4341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Handle abort a Rx transaction.
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 4359:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   do
  686              		.loc 1 4359 3 view .LVU192
 4360:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 91
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 91
 
 
 4361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (count == 0U)
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  727 0062 2366     		str	r3, [r4, #96]
  728              	.L58:
 4373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 92
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 92
 
 
 4374:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  775              	.LFB374:
 4384:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 4385:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 93
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 93
 
 
 4386:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Handle abort a Tx or Rx/Tx transaction.
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  812 0026 43B1     		cbz	r3, .L76
 4404:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 4405:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 94
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 94
 
 
 4406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       break;
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  853 005e 1360     		str	r3, [r2]
 4418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 4419:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Empty the FRLVL fifo */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 95
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 95
 
 
 4420:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (SPI_WaitFifoStateUntilTimeout(hspi, SPI_FLAG_FRLVL, SPI_FRLVL_EMPTY, SPI_DEFAULT_TIMEOUT,
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 4437:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
 4438:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
 4439:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 96
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 96
 
 
 4440:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       count--;
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  932              		.loc 1 4450 9 discriminator 1 view .LVU269
  933 00c6 0090     		str	r0, [sp]
  934 00c8 6423     		movs	r3, #100
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 97
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 97
 
 
  935 00ca 0022     		movs	r2, #0
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  982              		.loc 1 543 1 is_stmt 0 view .LVU279
  983 0000 7047     		bx	lr
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 98
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 98
 
 
  984              		.cfi_endproc
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  336:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1024              		.loc 1 336 6 view .LVU296
  1025 000a 33B9     		cbnz	r3, .L83
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 99
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 99
 
 
  338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     assert_param(IS_SPI_CPHA(hspi->Init.CLKPhase));
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  399:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  1062              		.loc 1 399 15 is_stmt 0 view .LVU315
  1063 002c 0223     		movs	r3, #2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 100
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 100
 
 
  1064 002e 84F85D30 		strb	r3, [r4, #93]
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1107 007c E169     		ldr	r1, [r4, #28]
  1108 007e 01F03801 		and	r1, r1, #56
  1109 0082 0B43     		orrs	r3, r3, r1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 101
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 101
 
 
  1110 0084 216A     		ldr	r1, [r4, #32]
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1153 00ce FFF7FEFF 		bl	HAL_SPI_MspInit
  1154              	.LVL60:
  1155 00d2 ABE7     		b	.L85
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 102
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 102
 
 
  1156              	.L89:
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1207              		@ frame_needed = 0, uses_anonymous_args = 0
  494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1208              		.loc 1 494 3 view .LVU345
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 103
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 103
 
 
  494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1247              		.cfi_restore 4
  1248              		.cfi_restore 14
  496:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 104
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 104
 
 
  1249              		.loc 1 496 12 view .LVU362
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1295              		.loc 1 835 3 view .LVU372
  835:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1296              		.loc 1 835 11 is_stmt 0 view .LVU373
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 105
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 105
 
 
  1297 0012 94F85D30 		ldrb	r3, [r4, #93]	@ zero_extendqisi2
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  853:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  1334              		.loc 1 853 21 is_stmt 0 view .LVU391
  1335 0052 A4F83E80 		strh	r8, [r4, #62]	@ movhi
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 106
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 106
 
 
  856:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferSize  = 0U;
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1371              		.loc 1 886 3 view .LVU410
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1372              		.loc 1 886 17 is_stmt 0 view .LVU411
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 107
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 107
 
 
  1373 007e E368     		ldr	r3, [r4, #12]
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  866:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_1LINE_TX(hspi);
  1411              		.loc 1 866 5 is_stmt 1 view .LVU428
  1412 00aa 2268     		ldr	r2, [r4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 108
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 108
 
 
  1413 00ac 1368     		ldr	r3, [r2]
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  900:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pTxBuffPtr += sizeof(uint16_t);
  1454              		.loc 1 900 9 is_stmt 1 view .LVU442
  900:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pTxBuffPtr += sizeof(uint16_t);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 109
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 109
 
 
  1455              		.loc 1 900 54 is_stmt 0 view .LVU443
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  919:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  1493              		.loc 1 919 20 is_stmt 0 view .LVU460
  1494 0116 6368     		ldr	r3, [r4, #4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 110
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 110
 
 
  919:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  930:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pTxBuffPtr ++;
  1533              		.loc 1 930 9 is_stmt 1 view .LVU477
  930:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->pTxBuffPtr ++;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 111
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 111
 
 
  1534              		.loc 1 930 73 is_stmt 0 view .LVU478
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  945:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
  1572              		.loc 1 945 11 is_stmt 1 view .LVU495
  945:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 112
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 112
 
 
  1573              		.loc 1 945 15 is_stmt 0 view .LVU496
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  950:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->TxXferCount--;
  1611              		.loc 1 950 27 view .LVU513
  1612 0192 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 113
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 113
 
 
  1613 0194 A363     		str	r3, [r4, #56]
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1651              		.loc 1 961 18 is_stmt 0 view .LVU529
  1652 01c2 0327     		movs	r7, #3
  1653 01c4 1BE0     		b	.L104
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 114
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 114
 
 
  1654              	.L116:
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1692 01e8 0123     		movs	r3, #1
  1693 01ea 84F85D30 		strb	r3, [r4, #93]
  988:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 115
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 115
 
 
  1694              		.loc 1 988 3 is_stmt 1 view .LVU546
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1740              		.cfi_startproc
  1741              		@ args = 4, pretend = 0, frame = 0
  1742              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 116
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 116
 
 
 1254:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint16_t             initial_TxXferCount;
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1280:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   initial_RxXferCount = Size;
  1782              		.loc 1 1280 3 is_stmt 1 view .LVU572
 1281:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 117
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 117
 
 
  1783              		.loc 1 1281 3 view .LVU573
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1822              		.loc 1 1303 3 view .LVU588
 1303:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  1823              		.loc 1 1303 11 is_stmt 0 view .LVU589
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 118
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 118
 
 
  1824 005c 94F85D30 		ldrb	r3, [r4, #93]	@ zero_extendqisi2
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1858              		.loc 1 1319 3 is_stmt 1 view .LVU609
 1319:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  1859              		.loc 1 1319 21 is_stmt 0 view .LVU610
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 119
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 119
 
 
  1860 0084 2365     		str	r3, [r4, #80]
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1899              		.loc 1 1351 5 is_stmt 1 view .LVU625
 1351:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  1900              		.loc 1 1351 20 is_stmt 0 view .LVU626
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 120
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 120
 
 
  1901 00b6 6368     		ldr	r3, [r4, #4]
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1939              		.loc 1 1338 5 is_stmt 1 view .LVU642
  1940 00da 2268     		ldr	r2, [r4]
  1941              	.LVL91:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 121
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 121
 
 
 1338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  1980 00fe 2368     		ldr	r3, [r4]
  1981 0100 9A68     		ldr	r2, [r3, #8]
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 122
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 122
 
 
  1982              		.loc 1 1397 10 view .LVU659
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2020              	.LVL98:
 1405:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  2021              		.loc 1 1405 27 discriminator 1 view .LVU676
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 123
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 123
 
 
  2022 0130 831B     		subs	r3, r0, r6
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2062              		.loc 1 1407 9 is_stmt 1 view .LVU690
 1407:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         __HAL_UNLOCK(hspi);
  2063              		.loc 1 1407 21 is_stmt 0 view .LVU691
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 124
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 124
 
 
  2064 0166 0123     		movs	r3, #1
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2101 018c DA60     		str	r2, [r3, #12]
 1421:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxXferCount -= 2U;
  2102              		.loc 1 1421 9 is_stmt 1 view .LVU709
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 125
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 125
 
 
 1421:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxXferCount -= 2U;
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2140              		.loc 1 1428 13 is_stmt 0 view .LVU726
  2141 01b0 E38F     		ldrh	r3, [r4, #62]
  2142 01b2 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 126
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 126
 
 
 1428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2181              		.loc 1 1462 19 view .LVU742
  2182 01dc 3DE0     		b	.L154
  2183              	.LVL105:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 127
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 127
 
 
  2184              	.L155:
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2223              	.LVL109:
  2224              	.L157:
 1494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->pRxBuffPtr++;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 128
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 128
 
 
  2225              		.loc 1 1494 11 is_stmt 1 view .LVU758
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2263              		.loc 1 1501 87 discriminator 3 view .LVU774
  2264 0232 002D     		cmp	r5, #0
  2265 0234 34D0     		beq	.L159
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 129
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 129
 
 
  2266              	.LVL112:
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2305              		.loc 1 1479 61 discriminator 1 view .LVU789
  2306 0264 B4F84620 		ldrh	r2, [r4, #70]
  2307 0268 92B2     		uxth	r2, r2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 130
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 130
 
 
 1479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2345 029a ADD9     		bls	.L175
 1499:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
  2346              		.loc 1 1499 19 view .LVU807
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 131
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 131
 
 
  2347 029c 0127     		movs	r7, #1
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1582:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  2385              		.loc 1 1582 3 view .LVU824
 1582:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 132
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 132
 
 
  2386              		.loc 1 1582 11 is_stmt 0 view .LVU825
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2426              	.LVL122:
 1291:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  2427              		.loc 1 1291 12 view .LVU840
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 133
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 133
 
 
  2428 02ea F9E7     		b	.L137
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2474              		.loc 1 1010 1 is_stmt 0 view .LVU850
  2475 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
  2476              		.cfi_def_cfa_offset 28
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 134
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 134
 
 
  2477              		.cfi_offset 4, -28
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2518              		.loc 1 1033 3 is_stmt 1 view .LVU863
 1033:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  2519              		.loc 1 1033 6 is_stmt 0 view .LVU864
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 135
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 135
 
 
  2520 002e B9F1000F 		cmp	r9, #0
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2555              		.loc 1 1050 21 is_stmt 0 view .LVU883
  2556 0066 A387     		strh	r3, [r4, #60]	@ movhi
 1051:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxISR       = NULL;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 136
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 136
 
 
  2557              		.loc 1 1051 3 is_stmt 1 view .LVU884
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2594 0092 1A68     		ldr	r2, [r3]
  2595 0094 42F04002 		orr	r2, r2, #64
  2596 0098 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 137
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 137
 
 
  2597              	.L183:
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2639 00d0 1368     		ldr	r3, [r2]
  2640 00d2 23F48043 		bic	r3, r3, #16384
  2641 00d6 1360     		str	r3, [r2]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 138
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 138
 
 
  2642 00d8 D6E7     		b	.L182
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2680              		.loc 1 1102 41 view .LVU929
  2681 0104 1370     		strb	r3, [r2]
 1103:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->RxXferCount--;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 139
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 139
 
 
  2682              		.loc 1 1103 9 is_stmt 1 view .LVU930
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2720 0134 02D3     		bcc	.L194
 1133:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
  2721              		.loc 1 1133 56 discriminator 1 view .LVU947
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 140
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 140
 
 
  2722 0136 B5F1FF3F 		cmp	r5, #-1
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2759 0164 0CF1FF3C 		add	ip, ip, #-1
  2760 0168 1FFA8CFC 		uxth	ip, ip
  2761 016c A4F846C0 		strh	ip, [r4, #70]	@ movhi
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 141
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 141
 
 
  2762 0170 E5E7     		b	.L185
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1231:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->ErrorCode != HAL_SPI_ERROR_NONE)
  2800              		.loc 1 1231 3 view .LVU981
 1232:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 142
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 142
 
 
  2801              		.loc 1 1232 3 view .LVU982
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1607:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  2848              		.loc 1 1607 6 is_stmt 0 view .LVU992
  2849 0000 0029     		cmp	r1, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 143
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 143
 
 
  2850 0002 48D0     		beq	.L210
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  2887              		.loc 1 1625 3 is_stmt 1 view .LVU1010
 1625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 144
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 144
 
 
  2888              		.loc 1 1625 21 is_stmt 0 view .LVU1011
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1660:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  2924              		.loc 1 1660 22 view .LVU1030
  2925 0052 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 145
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 145
 
 
 1660:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  2967 0080 0268     		ldr	r2, [r0]
  2968              	.LVL151:
 1647:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_1LINE_TX(hspi);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 146
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 146
 
 
  2969              		.loc 1 1647 5 is_stmt 0 view .LVU1044
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3014              	.L219:
  3015 00a8 00000000 		.word	SPI_TxISR_16BIT
  3016 00ac 00000000 		.word	SPI_TxISR_8BIT
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 147
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 147
 
 
  3017              		.cfi_endproc
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3060              	.LVL164:
 1800:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****          (tmp_state == HAL_SPI_STATE_BUSY_RX))))
  3061              		.loc 1 1800 40 view .LVU1067
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 148
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 148
 
 
  3062 001a 002C     		cmp	r4, #0
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3100 004c 0024     		movs	r4, #0
  3101 004e 0466     		str	r4, [r0, #96]
 1822:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = Size;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 149
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 149
 
 
  3102              		.loc 1 1822 3 is_stmt 1 view .LVU1084
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3137              	.L226:
 1859:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  3138              		.loc 1 1859 3 is_stmt 1 view .LVU1104
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 150
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 150
 
 
 1859:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
  3179              		.loc 1 1883 10 is_stmt 0 view .LVU1119
  3180 00a6 1846     		mov	r0, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 151
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 151
 
 
  3181              	.LVL169:
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3222 00c6 FCE7     		b	.L223
  3223              	.LVL178:
  3224              	.L233:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 152
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 152
 
 
 1803:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3270              		.global	HAL_SPI_Receive_IT
  3271              		.syntax unified
  3272              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 153
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 153
 
 
  3273              		.thumb_func
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3314              		.loc 1 1704 3 is_stmt 1 view .LVU1156
 1704:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  3315              		.loc 1 1704 3 view .LVU1157
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 154
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 154
 
 
  3316 0026 9CF85C30 		ldrb	r3, [ip, #92]	@ zero_extendqisi2
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3350              		.loc 1 1717 21 is_stmt 0 view .LVU1177
  3351 0058 CCF85030 		str	r3, [ip, #80]
 1720:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 155
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 155
 
 
  3352              		.loc 1 1720 3 is_stmt 1 view .LVU1178
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3391              		.loc 1 1770 3 view .LVU1193
 1770:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Enable RXNE and ERR interrupt */
  3392              		.loc 1 1770 3 view .LVU1194
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 156
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 156
 
 
  3393 0096 0020     		movs	r0, #0
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3433 00c8 0B4B     		ldr	r3, .L253+4
  3434 00ca CCF84C30 		str	r3, [ip, #76]
  3435 00ce D3E7     		b	.L245
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 157
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 157
 
 
  3436              	.L252:
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3485              		.cfi_def_cfa_offset 16
  3486              		.cfi_offset 3, -16
  3487              		.cfi_offset 4, -12
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 158
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 158
 
 
  3488              		.cfi_offset 5, -8
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1919:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferSize  = Size;
  3525              		.loc 1 1919 21 is_stmt 0 view .LVU1233
  3526 0036 8163     		str	r1, [r0, #56]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 159
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 159
 
 
 1920:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3561 0056 1A63     		str	r2, [r3, #48]
 1950:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  3562              		.loc 1 1950 3 is_stmt 1 view .LVU1254
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 160
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 160
 
 
 1950:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3600              		.loc 1 1976 91 is_stmt 0 view .LVU1271
  3601 0086 2268     		ldr	r2, [r4]
 1977:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 161
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 161
 
 
  3602              		.loc 1 1977 38 view .LVU1272
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3642              		.loc 1 2000 3 view .LVU1286
  3643 00be 2268     		ldr	r2, [r4]
  3644 00c0 5368     		ldr	r3, [r2, #4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 162
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 162
 
 
  3645 00c2 43F00203 		orr	r3, r3, #2
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 1970:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->TxXferCount = (hspi->TxXferCount >> 1U) + 1U;
  3687              		.loc 1 1970 7 is_stmt 1 view .LVU1299
  3688 00fe 2268     		ldr	r2, [r4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 163
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 163
 
 
  3689 0100 5368     		ldr	r3, [r2, #4]
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3730 012e 00BF     		.align	2
  3731              	.L268:
  3732 0130 00000000 		.word	SPI_DMAHalfTransmitCplt
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 164
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 164
 
 
  3733 0134 00000000 		.word	SPI_DMATransmitCplt
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3776 000c 0DD0     		beq	.L271
  3777 000e 5FFA80FC 		uxtb	ip, r0
 2172:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         ((tmp_mode == SPI_MODE_MASTER) && (hspi->Init.Direction == SPI_DIRECTION_2LINES) &&
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 165
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 165
 
 
  3778              		.loc 1 2172 7 discriminator 1 view .LVU1326
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3817              		.loc 1 2190 5 is_stmt 1 view .LVU1341
 2190:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  3818              		.loc 1 2190 17 is_stmt 0 view .LVU1342
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 166
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 166
 
 
  3819 0054 0520     		movs	r0, #5
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3853              		.loc 1 2215 3 is_stmt 0 view .LVU1362
  3854 0074 5368     		ldr	r3, [r2, #4]
  3855              	.LVL219:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 167
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 167
 
 
 2215:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2275:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  3894              		.loc 1 2275 35 view .LVU1379
  3895 00a4 594A     		ldr	r2, .L295+8
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 168
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 168
 
 
  3896 00a6 5A63     		str	r2, [r3, #52]
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3935 00d6 2268     		ldr	r2, [r4]
  3936 00d8 5368     		ldr	r3, [r2, #4]
  3937 00da 43F48053 		orr	r3, r3, #4096
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 169
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 169
 
 
  3938 00de 5360     		str	r3, [r2, #4]
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  3976 0116 C3F34E03 		ubfx	r3, r3, #1, #15
  3977 011a A4F84630 		strh	r3, [r4, #70]	@ movhi
  3978 011e B6E7     		b	.L275
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 170
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 170
 
 
  3979              	.L293:
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4019              		.loc 1 2255 9 view .LVU1424
 2255:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
  4020              		.loc 1 2255 34 is_stmt 0 view .LVU1425
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 171
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 171
 
 
  4021 015c B4F84630 		ldrh	r3, [r4, #70]
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2298:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->hdmatx->XferAbortCallback    = NULL;
  4060              		.loc 1 2298 3 is_stmt 1 view .LVU1441
 2298:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->hdmatx->XferAbortCallback    = NULL;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 172
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 172
 
 
  4061              		.loc 1 2298 7 is_stmt 0 view .LVU1442
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4099 01ba 0023     		movs	r3, #0
  4100 01bc 84F85C30 		strb	r3, [r4, #92]
 2320:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 173
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 173
 
 
  4101              		.loc 1 2320 3 view .LVU1459
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4142              	.L286:
  4143 01f0 0220     		movs	r0, #2
  4144 01f2 FAE7     		b	.L272
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 174
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 174
 
 
  4145              	.LVL229:
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4194              		.loc 1 2020 11 is_stmt 0 view .LVU1479
  4195 0002 90F85D30 		ldrb	r3, [r0, #93]	@ zero_extendqisi2
 2020:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 175
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 175
 
 
  4196              		.loc 1 2020 6 view .LVU1480
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4234              		.loc 1 2046 21 is_stmt 0 view .LVU1496
  4235 003e 0023     		movs	r3, #0
  4236 0040 2366     		str	r3, [r4, #96]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 176
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 176
 
 
 2047:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferSize  = Size;
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2075:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  4272              		.loc 1 2075 6 view .LVU1516
  4273 0066 B3F5E06F 		cmp	r3, #1792
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 177
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 177
 
 
  4274 006a 49D9     		bls	.L301
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4311              		.loc 1 2116 17 view .LVU1533
  4312 0094 9BB2     		uxth	r3, r3
  4313 0096 226C     		ldr	r2, [r4, #64]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 178
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 178
 
 
  4314 0098 0C31     		adds	r1, r1, #12
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4355              	.L309:
 2027:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  4356              		.loc 1 2027 5 is_stmt 1 view .LVU1547
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 179
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 179
 
 
 2027:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4398              		.loc 1 2085 27 view .LVU1560
  4399 010c 9B69     		ldr	r3, [r3, #24]
 2085:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 180
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 180
 
 
  4400              		.loc 1 2085 8 view .LVU1561
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4441              	.LVL241:
  4442              	.L311:
 2120:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Process Unlocked */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 181
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 181
 
 
  4443              		.loc 1 2120 5 is_stmt 1 view .LVU1575
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4490              		@ args = 0, pretend = 0, frame = 16
  4491              		@ frame_needed = 0, uses_anonymous_args = 0
 2345:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   HAL_StatusTypeDef errorcode;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 182
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 182
 
 
  4492              		.loc 1 2345 1 is_stmt 0 view .LVU1585
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4532 0030 11D0     		beq	.L315
 2361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Wait HAL_SPI_STATE_ABORT state */
  4533              		.loc 1 2361 5 is_stmt 1 view .LVU1600
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 183
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 183
 
 
 2361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Wait HAL_SPI_STATE_ABORT state */
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4571              		.loc 1 2376 6 view .LVU1617
  4572 0058 13F0400F 		tst	r3, #64
  4573 005c 11D0     		beq	.L319
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 184
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 184
 
 
 2378:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Wait HAL_SPI_STATE_ABORT state */
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4611 0082 5368     		ldr	r3, [r2, #4]
 2394:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  4612              		.loc 1 2394 6 view .LVU1635
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 185
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 185
 
 
  4613 0084 13F0020F 		tst	r3, #2
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4652              	.LVL250:
 2412:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  4653              		.loc 1 2412 10 discriminator 2 view .LVU1651
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 186
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 186
 
 
  4654 00b6 08B1     		cbz	r0, .L325
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2433:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  4694              		.loc 1 2433 8 view .LVU1666
  4695 00ec 53B3     		cbz	r3, .L326
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 187
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 187
 
 
 2437:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                         HAL_GetTick()) != HAL_OK)
  4736              		.loc 1 2455 7 is_stmt 1 view .LVU1681
 2455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                         HAL_GetTick()) != HAL_OK)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 188
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 188
 
 
  4737              		.loc 1 2455 11 is_stmt 0 view .LVU1682
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4777 0154 2066     		str	r0, [r4, #96]
  4778              	.L330:
  4779              	.LVL258:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 189
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 189
 
 
 2482:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_CLEAR_FREFLAG(hspi);
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4819              	.L331:
  4820              		.cfi_restore_state
 2473:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 190
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 190
 
 
  4821              		.loc 1 2473 15 view .LVU1712
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2678:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
  4868              		.loc 1 2678 3 view .LVU1722
 2678:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 191
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 191
 
 
  4869              		.loc 1 2678 10 is_stmt 0 view .LVU1723
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  4914              		.loc 1 2696 3 view .LVU1734
  4915 0018 0023     		movs	r3, #0
  4916 001a 80F85C30 		strb	r3, [r0, #92]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 192
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 192
 
 
 2696:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2719:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  4962              		.loc 1 2719 6 view .LVU1746
  4963 0006 48B1     		cbz	r0, .L346
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 193
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 193
 
 
 2721:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2733:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
  5003              		.loc 1 2733 17 is_stmt 0 view .LVU1762
  5004 0030 0125     		movs	r5, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 194
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 194
 
 
  5005              	.LVL277:
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5054              	.LFB339:
 2873:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Prevent unused argument(s) compilation warning */
  5055              		.loc 1 2873 1 is_stmt 1 view -0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 195
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 195
 
 
  5056              		.cfi_startproc
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5106              	.LFE341:
  5108              		.section	.text.SPI_DMAHalfTransmitCplt,"ax",%progbits
  5109              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 196
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 196
 
 
  5110              		.syntax unified
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5158              	.LFE342:
  5160              		.section	.text.SPI_DMAHalfReceiveCplt,"ax",%progbits
  5161              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 197
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 197
 
 
  5162              		.syntax unified
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5210              	.LFE343:
  5212              		.section	.text.SPI_DMAHalfTransmitReceiveCplt,"ax",%progbits
  5213              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 198
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 198
 
 
  5214              		.syntax unified
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5262              	.LFE344:
  5264              		.section	.text.SPI_CloseTx_ISR,"ax",%progbits
  5265              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 199
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 199
 
 
  5266              		.syntax unified
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5309 0020 236E     		ldr	r3, [r4, #96]
  5310 0022 43F02003 		orr	r3, r3, #32
  5311 0026 2366     		str	r3, [r4, #96]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 200
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 200
 
 
  5312              	.L362:
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5350              		.cfi_remember_state
  5351              		.cfi_def_cfa_offset 8
  5352              		@ sp needed
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 201
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 201
 
 
  5353 004c 10BD     		pop	{r4, pc}
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5397 000c 0133     		adds	r3, r3, #1
  5398 000e 8363     		str	r3, [r0, #56]
 3895:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 202
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 202
 
 
  5399              		.loc 1 3895 3 is_stmt 1 view .LVU1848
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3919:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr += sizeof(uint16_t);
  5445              		.loc 1 3919 3 is_stmt 1 view .LVU1859
 3919:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr += sizeof(uint16_t);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 203
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 203
 
 
  5446              		.loc 1 3919 48 is_stmt 0 view .LVU1860
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5485              		.cfi_endproc
  5486              	.LFE365:
  5488              		.section	.text.SPI_CloseRx_ISR,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 204
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 204
 
 
  5489              		.align	1
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5533 0028 84F85D30 		strb	r3, [r4, #93]
 4268:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  5534              		.loc 1 4268 5 is_stmt 1 view .LVU1887
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 205
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 205
 
 
 4268:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3804:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pRxBuffPtr++;
  5580              		.loc 1 3804 24 view .LVU1899
  5581 0006 127B     		ldrb	r2, [r2, #12]	@ zero_extendqisi2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 206
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 206
 
 
 3804:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pRxBuffPtr++;
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5625              	.LVL323:
  5626              	.LFB363:
 3859:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *((uint16_t *)hspi->pRxBuffPtr) = (uint16_t)(hspi->Instance->DR);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 207
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 207
 
 
  5627              		.loc 1 3859 1 is_stmt 1 view -0
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5666              	.L384:
 3883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  5667              		.loc 1 3883 1 view .LVU1929
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 208
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 208
 
 
  5668 0026 08BD     		pop	{r3, pc}
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5713 0014 6421     		movs	r1, #100
  5714 0016 2046     		mov	r0, r4
  5715              	.LVL330:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 209
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 209
 
 
 4174:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5754              		.loc 1 4205 9 is_stmt 1 view .LVU1956
  5755 0046 2046     		mov	r0, r4
  5756 0048 FFF7FEFF 		bl	HAL_SPI_RxCpltCallback
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 210
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 210
 
 
  5757              	.LVL334:
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5801              		.loc 1 3639 9 view .LVU1968
  5802 000c 0368     		ldr	r3, [r0]
 3639:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->pTxBuffPtr += sizeof(uint16_t);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 211
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 211
 
 
  5803              		.loc 1 3639 26 view .LVU1969
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5842 003a 08BD     		pop	{r3, pc}
  5843              	.LVL338:
  5844              	.L396:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 212
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 212
 
 
 3646:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->pTxBuffPtr++;
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5887              		.loc 1 3550 1 is_stmt 1 view -0
  5888              		.cfi_startproc
  5889              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 213
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 213
 
 
  5890              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5927              		.loc 1 3557 13 is_stmt 0 view .LVU2015
  5928 0028 B0F84630 		ldrh	r3, [r0, #70]
  5929 002c 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 214
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 214
 
 
 3557:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  5968              		.loc 1 3572 6 view .LVU2031
  5969 0060 3BB9     		cbnz	r3, .L401
 3584:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 215
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 215
 
 
  5970              		.loc 1 3584 5 is_stmt 1 view .LVU2032
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr += sizeof(uint16_t);
  6016              		.loc 1 3740 7 view .LVU2043
  6017 0004 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 216
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 216
 
 
 3740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr += sizeof(uint16_t);
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6056 0032 08BD     		pop	{r3, pc}
  6057              	.LVL346:
  6058              	.L410:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 217
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 217
 
 
 3763:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6101              		.loc 1 3686 7 is_stmt 0 view .LVU2073
  6102 0010 B0F84630 		ldrh	r3, [r0, #70]
  6103 0014 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 218
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 218
 
 
 3686:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6148              		.loc 1 3372 1 is_stmt 1 view -0
  6149              		.cfi_startproc
  6150              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 219
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 219
 
 
  6151              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6196 0000 30B5     		push	{r4, r5, lr}
  6197              		.cfi_def_cfa_offset 12
  6198              		.cfi_offset 4, -12
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 220
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 220
 
 
  6199              		.cfi_offset 5, -8
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6239              	.LVL359:
 3060:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  6240              		.loc 1 3060 8 discriminator 1 view .LVU2111
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 221
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 221
 
 
  6241 0034 18B1     		cbz	r0, .L419
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3074:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  6279              		.loc 1 3074 8 view .LVU2128
  6280 005c 23B9     		cbnz	r3, .L423
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 222
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 222
 
 
  6281              	.L418:
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6329              	.LVL364:
 3102:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
  6330              		.loc 1 3102 3 is_stmt 1 view .LVU2137
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 223
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 223
 
 
 3110:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6370              	.LVL366:
 3174:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  6371              		.loc 1 3174 9 view .LVU2153
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 224
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 224
 
 
  6372 003a FFF7FEFF 		bl	SPI_EndRxTransaction
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6412              		.loc 1 3197 7 view .LVU2167
  6413 0068 2046     		mov	r0, r4
  6414 006a FFF7FEFF 		bl	HAL_SPI_ErrorCallback
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 225
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 225
 
 
  6415              	.LVL371:
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6459 0014 0246     		mov	r2, r0
 3233:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  6460              		.loc 1 3233 5 is_stmt 1 view .LVU2180
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 226
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 226
 
 
  6461 0016 2168     		ldr	r1, [r4]
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6500 004c 1BB9     		cbnz	r3, .L438
  6501              	.L434:
 3307:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 227
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 227
 
 
  6502              		.loc 1 3307 3 is_stmt 1 view .LVU2196
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6549              		.loc 1 2752 3 is_stmt 1 view .LVU2205
 2752:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  6550              		.loc 1 2752 12 is_stmt 0 view .LVU2206
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 228
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 228
 
 
  6551 000a 9368     		ldr	r3, [r2, #8]
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2776:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
  6591              		.loc 1 2776 7 is_stmt 1 view .LVU2221
 2776:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 229
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 229
 
 
  6592              		.loc 1 2776 15 is_stmt 0 view .LVU2222
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2792:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
  6632              		.loc 1 2792 7 view .LVU2237
  6633 0078 1068     		ldr	r0, [r2]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 230
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 230
 
 
  6634 007a 20F04000 		bic	r0, r0, #64
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6672 00a0 2FD0     		beq	.L439
 2805:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  6673              		.loc 1 2805 7 is_stmt 1 view .LVU2254
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 231
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 231
 
 
  6674 00a2 2268     		ldr	r2, [r4]
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2825:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
  6713              		.loc 1 2825 17 is_stmt 0 view .LVU2270
  6714 00da 636D     		ldr	r3, [r4, #84]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 232
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 232
 
 
 2825:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  6755              		.loc 1 2766 5 is_stmt 1 view .LVU2285
  6756              	.L439:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 233
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 233
 
 
 2848:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6801              		.syntax unified
  6802              		.thumb
  6803              		.thumb_func
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 234
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 234
 
 
  6805              	SPI_DMAAbortOnError:
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6850              		@ link register save eliminated.
 2973:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  6851              		.loc 1 2973 3 view .LVU2308
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 235
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 235
 
 
 2978:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6896 0012 6422     		movs	r2, #100
  6897 0014 02FB03F3 		mul	r3, r2, r3
 2516:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   count = resetcount;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 236
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 236
 
 
  6898              		.loc 1 2516 14 view .LVU2321
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6935              		.loc 1 2535 26 view .LVU2338
  6936 0044 072B     		cmp	r3, #7
  6937 0046 F6D1     		bne	.L463
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 237
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 237
 
 
  6938 0048 03E0     		b	.L462
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  6975 006c 94F85D30 		ldrb	r3, [r4, #93]	@ zero_extendqisi2
 2552:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Reset Timeout Counter */
  6976              		.loc 1 2552 26 view .LVU2356
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 238
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 238
 
 
  6977 0070 072B     		cmp	r3, #7
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7014              		.loc 1 2578 9 is_stmt 0 view .LVU2373
  7015 0096 2268     		ldr	r2, [r4]
  7016 0098 5268     		ldr	r2, [r2, #4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 239
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 239
 
 
 2578:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2515:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   resetcount = SPI_DEFAULT_TIMEOUT * (SystemCoreClock / 24U / 1000U);
  7054              		.loc 1 2515 13 view .LVU2391
  7055 00c2 0126     		movs	r6, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 240
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 240
 
 
  7056 00c4 06E0     		b	.L472
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2615:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
  7095              		.loc 1 2615 13 is_stmt 0 view .LVU2407
  7096 00ea A36D     		ldr	r3, [r4, #88]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 241
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 241
 
 
 2615:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7137              		.loc 1 2629 23 is_stmt 0 view .LVU2421
  7138 010c E387     		strh	r3, [r4, #62]	@ movhi
 2632:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 242
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 242
 
 
  7139              		.loc 1 2632 5 is_stmt 1 view .LVU2422
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 2648:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7178              		.loc 1 2648 5 view .LVU2438
 2648:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 243
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 243
 
 
  7179              		.loc 1 2648 17 is_stmt 0 view .LVU2439
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3488:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7229              		.loc 1 3488 3 is_stmt 1 view .LVU2446
  7230 0006 2268     		ldr	r2, [r4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 244
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 244
 
 
  7231 0008 1368     		ldr	r3, [r2]
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7272 0042 4FF4C061 		mov	r1, #1536
  7273 0046 2046     		mov	r0, r4
  7274 0048 FFF7FEFF 		bl	SPI_WaitFifoStateUntilTimeout
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 245
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 245
 
 
  7275              	.LVL418:
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7311              	.L492:
 3529:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_CLEAR_FREFLAG(hspi);
  7312              		.loc 1 3529 3 is_stmt 1 view .LVU2478
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 246
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 246
 
 
  7313              	.LBB13:
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7353              		.loc 1 3541 1 view .LVU2493
  7354              		.cfi_endproc
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 247
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 247
 
 
  7355              	.LFE357:
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7399 001c 6421     		movs	r1, #100
  7400 001e 2046     		mov	r0, r4
  7401 0020 FFF7FEFF 		bl	SPI_EndRxTxTransaction
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 248
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 248
 
 
  7402              	.LVL423:
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7441 0052 9B6B     		ldr	r3, [r3, #56]
 3443:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  7442              		.loc 1 3443 8 view .LVU2521
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 249
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 249
 
 
  7443 0054 D3B9     		cbnz	r3, .L494
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
 3462:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  7481              		.loc 1 3462 3 view .LVU2538
  7482 0078 0392     		str	r2, [sp, #12]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 250
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 250
 
 
 3462:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7527              		.loc 1 3009 1 view .LVU2550
  7528 0004 7047     		bx	lr
  7529              		.cfi_endproc
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 251
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 251
 
 
  7530              	.LFE346:
@@ -15039,142 +15039,142 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 1
  7564              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
  7565              		.file 9 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  7566              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 252
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 252
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_spi.c
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:21     .text.SPI_WaitFlagStateUntilTimeout:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:26     .text.SPI_WaitFlagStateUntilTimeout:00000000 SPI_WaitFlagStateUntilTimeout
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:200    .text.SPI_WaitFlagStateUntilTimeout:000000c4 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:205    .text.SPI_WaitFifoStateUntilTimeout:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:210    .text.SPI_WaitFifoStateUntilTimeout:00000000 SPI_WaitFifoStateUntilTimeout
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:415    .text.SPI_WaitFifoStateUntilTimeout:000000ec $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:420    .text.SPI_EndRxTxTransaction:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:425    .text.SPI_EndRxTxTransaction:00000000 SPI_EndRxTxTransaction
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:518    .text.SPI_EndRxTransaction:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:523    .text.SPI_EndRxTransaction:00000000 SPI_EndRxTransaction
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:642    .text.SPI_AbortRx_ISR:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:647    .text.SPI_AbortRx_ISR:00000000 SPI_AbortRx_ISR
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:762    .text.SPI_AbortRx_ISR:00000088 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:768    .text.SPI_AbortTx_ISR:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:773    .text.SPI_AbortTx_ISR:00000000 SPI_AbortTx_ISR
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:961    .text.SPI_AbortTx_ISR:000000e8 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:967    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:973    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:988    .text.HAL_SPI_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:994    .text.HAL_SPI_Init:00000000 HAL_SPI_Init
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1174   .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1180   .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1195   .text.HAL_SPI_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1201   .text.HAL_SPI_DeInit:00000000 HAL_SPI_DeInit
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1258   .text.HAL_SPI_Transmit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1264   .text.HAL_SPI_Transmit:00000000 HAL_SPI_Transmit
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1730   .text.HAL_SPI_TransmitReceive:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:1736   .text.HAL_SPI_TransmitReceive:00000000 HAL_SPI_TransmitReceive
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:2461   .text.HAL_SPI_Receive:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:2467   .text.HAL_SPI_Receive:00000000 HAL_SPI_Receive
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:2832   .text.HAL_SPI_Transmit_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:2838   .text.HAL_SPI_Transmit_IT:00000000 HAL_SPI_Transmit_IT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3015   .text.HAL_SPI_Transmit_IT:000000a8 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5433   .text.SPI_TxISR_16BIT:00000000 SPI_TxISR_16BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5372   .text.SPI_TxISR_8BIT:00000000 SPI_TxISR_8BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3021   .text.HAL_SPI_TransmitReceive_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3027   .text.HAL_SPI_TransmitReceive_IT:00000000 HAL_SPI_TransmitReceive_IT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3261   .text.HAL_SPI_TransmitReceive_IT:000000dc $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6073   .text.SPI_2linesRxISR_16BIT:00000000 SPI_2linesRxISR_16BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6001   .text.SPI_2linesTxISR_16BIT:00000000 SPI_2linesTxISR_16BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5884   .text.SPI_2linesRxISR_8BIT:00000000 SPI_2linesRxISR_8BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5779   .text.SPI_2linesTxISR_8BIT:00000000 SPI_2linesTxISR_8BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3269   .text.HAL_SPI_Receive_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3275   .text.HAL_SPI_Receive_IT:00000000 HAL_SPI_Receive_IT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3464   .text.HAL_SPI_Receive_IT:000000f4 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5624   .text.SPI_RxISR_16BIT:00000000 SPI_RxISR_16BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5563   .text.SPI_RxISR_8BIT:00000000 SPI_RxISR_8BIT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3470   .text.HAL_SPI_Transmit_DMA:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3476   .text.HAL_SPI_Transmit_DMA:00000000 HAL_SPI_Transmit_DMA
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3732   .text.HAL_SPI_Transmit_DMA:00000130 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5114   .text.SPI_DMAHalfTransmitCplt:00000000 SPI_DMAHalfTransmitCplt
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6188   .text.SPI_DMATransmitCplt:00000000 SPI_DMATransmitCplt
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6145   .text.SPI_DMAError:00000000 SPI_DMAError
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3739   .text.HAL_SPI_TransmitReceive_DMA:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:3745   .text.HAL_SPI_TransmitReceive_DMA:00000000 HAL_SPI_TransmitReceive_DMA
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 253
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:21     .text.SPI_WaitFlagStateUntilTimeout:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:26     .text.SPI_WaitFlagStateUntilTimeout:00000000 SPI_WaitFlagStateUntilTimeout
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:200    .text.SPI_WaitFlagStateUntilTimeout:000000c4 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:205    .text.SPI_WaitFifoStateUntilTimeout:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:210    .text.SPI_WaitFifoStateUntilTimeout:00000000 SPI_WaitFifoStateUntilTimeout
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:415    .text.SPI_WaitFifoStateUntilTimeout:000000ec $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:420    .text.SPI_EndRxTxTransaction:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:425    .text.SPI_EndRxTxTransaction:00000000 SPI_EndRxTxTransaction
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:518    .text.SPI_EndRxTransaction:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:523    .text.SPI_EndRxTransaction:00000000 SPI_EndRxTransaction
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:642    .text.SPI_AbortRx_ISR:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:647    .text.SPI_AbortRx_ISR:00000000 SPI_AbortRx_ISR
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:762    .text.SPI_AbortRx_ISR:00000088 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:768    .text.SPI_AbortTx_ISR:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:773    .text.SPI_AbortTx_ISR:00000000 SPI_AbortTx_ISR
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:961    .text.SPI_AbortTx_ISR:000000e8 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:967    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:973    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:988    .text.HAL_SPI_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:994    .text.HAL_SPI_Init:00000000 HAL_SPI_Init
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1174   .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1180   .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1195   .text.HAL_SPI_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1201   .text.HAL_SPI_DeInit:00000000 HAL_SPI_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1258   .text.HAL_SPI_Transmit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1264   .text.HAL_SPI_Transmit:00000000 HAL_SPI_Transmit
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1730   .text.HAL_SPI_TransmitReceive:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:1736   .text.HAL_SPI_TransmitReceive:00000000 HAL_SPI_TransmitReceive
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:2461   .text.HAL_SPI_Receive:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:2467   .text.HAL_SPI_Receive:00000000 HAL_SPI_Receive
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:2832   .text.HAL_SPI_Transmit_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:2838   .text.HAL_SPI_Transmit_IT:00000000 HAL_SPI_Transmit_IT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3015   .text.HAL_SPI_Transmit_IT:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5433   .text.SPI_TxISR_16BIT:00000000 SPI_TxISR_16BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5372   .text.SPI_TxISR_8BIT:00000000 SPI_TxISR_8BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3021   .text.HAL_SPI_TransmitReceive_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3027   .text.HAL_SPI_TransmitReceive_IT:00000000 HAL_SPI_TransmitReceive_IT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3261   .text.HAL_SPI_TransmitReceive_IT:000000dc $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6073   .text.SPI_2linesRxISR_16BIT:00000000 SPI_2linesRxISR_16BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6001   .text.SPI_2linesTxISR_16BIT:00000000 SPI_2linesTxISR_16BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5884   .text.SPI_2linesRxISR_8BIT:00000000 SPI_2linesRxISR_8BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5779   .text.SPI_2linesTxISR_8BIT:00000000 SPI_2linesTxISR_8BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3269   .text.HAL_SPI_Receive_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3275   .text.HAL_SPI_Receive_IT:00000000 HAL_SPI_Receive_IT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3464   .text.HAL_SPI_Receive_IT:000000f4 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5624   .text.SPI_RxISR_16BIT:00000000 SPI_RxISR_16BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5563   .text.SPI_RxISR_8BIT:00000000 SPI_RxISR_8BIT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3470   .text.HAL_SPI_Transmit_DMA:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3476   .text.HAL_SPI_Transmit_DMA:00000000 HAL_SPI_Transmit_DMA
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3732   .text.HAL_SPI_Transmit_DMA:00000130 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5114   .text.SPI_DMAHalfTransmitCplt:00000000 SPI_DMAHalfTransmitCplt
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6188   .text.SPI_DMATransmitCplt:00000000 SPI_DMATransmitCplt
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6145   .text.SPI_DMAError:00000000 SPI_DMAError
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3739   .text.HAL_SPI_TransmitReceive_DMA:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:3745   .text.HAL_SPI_TransmitReceive_DMA:00000000 HAL_SPI_TransmitReceive_DMA
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 253
 
 
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4163   .text.HAL_SPI_TransmitReceive_DMA:00000204 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5218   .text.SPI_DMAHalfTransmitReceiveCplt:00000000 SPI_DMAHalfTransmitReceiveCplt
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6427   .text.SPI_DMATransmitReceiveCplt:00000000 SPI_DMATransmitReceiveCplt
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5166   .text.SPI_DMAHalfReceiveCplt:00000000 SPI_DMAHalfReceiveCplt
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6311   .text.SPI_DMAReceiveCplt:00000000 SPI_DMAReceiveCplt
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4172   .text.HAL_SPI_Receive_DMA:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4178   .text.HAL_SPI_Receive_DMA:00000000 HAL_SPI_Receive_DMA
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4472   .text.HAL_SPI_Receive_DMA:00000174 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4479   .text.HAL_SPI_Abort:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4485   .text.HAL_SPI_Abort:00000000 HAL_SPI_Abort
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4827   .text.HAL_SPI_Abort:0000017c $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4835   .text.HAL_SPI_DMAPause:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4841   .text.HAL_SPI_DMAPause:00000000 HAL_SPI_DMAPause
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4885   .text.HAL_SPI_DMAResume:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4891   .text.HAL_SPI_DMAResume:00000000 HAL_SPI_DMAResume
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4935   .text.HAL_SPI_DMAStop:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:4941   .text.HAL_SPI_DMAStop:00000000 HAL_SPI_DMAStop
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5025   .text.HAL_SPI_TxCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5031   .text.HAL_SPI_TxCpltCallback:00000000 HAL_SPI_TxCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5046   .text.HAL_SPI_RxCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5052   .text.HAL_SPI_RxCpltCallback:00000000 HAL_SPI_RxCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5067   .text.HAL_SPI_TxRxCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5073   .text.HAL_SPI_TxRxCpltCallback:00000000 HAL_SPI_TxRxCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5088   .text.HAL_SPI_TxHalfCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5094   .text.HAL_SPI_TxHalfCpltCallback:00000000 HAL_SPI_TxHalfCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5109   .text.SPI_DMAHalfTransmitCplt:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5140   .text.HAL_SPI_RxHalfCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5146   .text.HAL_SPI_RxHalfCpltCallback:00000000 HAL_SPI_RxHalfCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5161   .text.SPI_DMAHalfReceiveCplt:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5192   .text.HAL_SPI_TxRxHalfCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5198   .text.HAL_SPI_TxRxHalfCpltCallback:00000000 HAL_SPI_TxRxHalfCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5213   .text.SPI_DMAHalfTransmitReceiveCplt:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5244   .text.HAL_SPI_ErrorCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5250   .text.HAL_SPI_ErrorCallback:00000000 HAL_SPI_ErrorCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5265   .text.SPI_CloseTx_ISR:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5270   .text.SPI_CloseTx_ISR:00000000 SPI_CloseTx_ISR
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5367   .text.SPI_TxISR_8BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5428   .text.SPI_TxISR_16BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5489   .text.SPI_CloseRx_ISR:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5494   .text.SPI_CloseRx_ISR:00000000 SPI_CloseRx_ISR
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5558   .text.SPI_RxISR_8BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5619   .text.SPI_RxISR_16BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5680   .text.SPI_CloseRxTx_ISR:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5685   .text.SPI_CloseRxTx_ISR:00000000 SPI_CloseRxTx_ISR
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5774   .text.SPI_2linesTxISR_8BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5879   .text.SPI_2linesRxISR_8BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:5996   .text.SPI_2linesTxISR_16BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6068   .text.SPI_2linesRxISR_16BIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6140   .text.SPI_DMAError:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6183   .text.SPI_DMATransmitCplt:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6306   .text.SPI_DMAReceiveCplt:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6422   .text.SPI_DMATransmitReceiveCplt:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6521   .text.HAL_SPI_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6527   .text.HAL_SPI_IRQHandler:00000000 HAL_SPI_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6795   .text.HAL_SPI_IRQHandler:00000120 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6805   .text.SPI_DMAAbortOnError:00000000 SPI_DMAAbortOnError
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6800   .text.SPI_DMAAbortOnError:00000000 $t
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s 			page 254
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4163   .text.HAL_SPI_TransmitReceive_DMA:00000204 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5218   .text.SPI_DMAHalfTransmitReceiveCplt:00000000 SPI_DMAHalfTransmitReceiveCplt
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6427   .text.SPI_DMATransmitReceiveCplt:00000000 SPI_DMATransmitReceiveCplt
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5166   .text.SPI_DMAHalfReceiveCplt:00000000 SPI_DMAHalfReceiveCplt
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6311   .text.SPI_DMAReceiveCplt:00000000 SPI_DMAReceiveCplt
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4172   .text.HAL_SPI_Receive_DMA:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4178   .text.HAL_SPI_Receive_DMA:00000000 HAL_SPI_Receive_DMA
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4472   .text.HAL_SPI_Receive_DMA:00000174 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4479   .text.HAL_SPI_Abort:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4485   .text.HAL_SPI_Abort:00000000 HAL_SPI_Abort
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4827   .text.HAL_SPI_Abort:0000017c $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4835   .text.HAL_SPI_DMAPause:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4841   .text.HAL_SPI_DMAPause:00000000 HAL_SPI_DMAPause
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4885   .text.HAL_SPI_DMAResume:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4891   .text.HAL_SPI_DMAResume:00000000 HAL_SPI_DMAResume
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4935   .text.HAL_SPI_DMAStop:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:4941   .text.HAL_SPI_DMAStop:00000000 HAL_SPI_DMAStop
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5025   .text.HAL_SPI_TxCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5031   .text.HAL_SPI_TxCpltCallback:00000000 HAL_SPI_TxCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5046   .text.HAL_SPI_RxCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5052   .text.HAL_SPI_RxCpltCallback:00000000 HAL_SPI_RxCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5067   .text.HAL_SPI_TxRxCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5073   .text.HAL_SPI_TxRxCpltCallback:00000000 HAL_SPI_TxRxCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5088   .text.HAL_SPI_TxHalfCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5094   .text.HAL_SPI_TxHalfCpltCallback:00000000 HAL_SPI_TxHalfCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5109   .text.SPI_DMAHalfTransmitCplt:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5140   .text.HAL_SPI_RxHalfCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5146   .text.HAL_SPI_RxHalfCpltCallback:00000000 HAL_SPI_RxHalfCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5161   .text.SPI_DMAHalfReceiveCplt:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5192   .text.HAL_SPI_TxRxHalfCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5198   .text.HAL_SPI_TxRxHalfCpltCallback:00000000 HAL_SPI_TxRxHalfCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5213   .text.SPI_DMAHalfTransmitReceiveCplt:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5244   .text.HAL_SPI_ErrorCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5250   .text.HAL_SPI_ErrorCallback:00000000 HAL_SPI_ErrorCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5265   .text.SPI_CloseTx_ISR:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5270   .text.SPI_CloseTx_ISR:00000000 SPI_CloseTx_ISR
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5367   .text.SPI_TxISR_8BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5428   .text.SPI_TxISR_16BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5489   .text.SPI_CloseRx_ISR:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5494   .text.SPI_CloseRx_ISR:00000000 SPI_CloseRx_ISR
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5558   .text.SPI_RxISR_8BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5619   .text.SPI_RxISR_16BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5680   .text.SPI_CloseRxTx_ISR:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5685   .text.SPI_CloseRxTx_ISR:00000000 SPI_CloseRxTx_ISR
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5774   .text.SPI_2linesTxISR_8BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5879   .text.SPI_2linesRxISR_8BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:5996   .text.SPI_2linesTxISR_16BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6068   .text.SPI_2linesRxISR_16BIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6140   .text.SPI_DMAError:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6183   .text.SPI_DMATransmitCplt:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6306   .text.SPI_DMAReceiveCplt:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6422   .text.SPI_DMATransmitReceiveCplt:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6521   .text.HAL_SPI_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6527   .text.HAL_SPI_IRQHandler:00000000 HAL_SPI_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6795   .text.HAL_SPI_IRQHandler:00000120 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6805   .text.SPI_DMAAbortOnError:00000000 SPI_DMAAbortOnError
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6800   .text.SPI_DMAAbortOnError:00000000 $t
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s 			page 254
 
 
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6837   .text.HAL_SPI_AbortCpltCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6843   .text.HAL_SPI_AbortCpltCallback:00000000 HAL_SPI_AbortCpltCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6858   .text.HAL_SPI_Abort_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:6864   .text.HAL_SPI_Abort_IT:00000000 HAL_SPI_Abort_IT
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7195   .text.HAL_SPI_Abort_IT:00000144 $d
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7363   .text.SPI_DMATxAbortCallback:00000000 SPI_DMATxAbortCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7210   .text.SPI_DMARxAbortCallback:00000000 SPI_DMARxAbortCallback
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7205   .text.SPI_DMARxAbortCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7358   .text.SPI_DMATxAbortCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7509   .text.HAL_SPI_GetState:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7515   .text.HAL_SPI_GetState:00000000 HAL_SPI_GetState
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7533   .text.HAL_SPI_GetError:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgO6BMa.s:7539   .text.HAL_SPI_GetError:00000000 HAL_SPI_GetError
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6837   .text.HAL_SPI_AbortCpltCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6843   .text.HAL_SPI_AbortCpltCallback:00000000 HAL_SPI_AbortCpltCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6858   .text.HAL_SPI_Abort_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:6864   .text.HAL_SPI_Abort_IT:00000000 HAL_SPI_Abort_IT
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7195   .text.HAL_SPI_Abort_IT:00000144 $d
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7363   .text.SPI_DMATxAbortCallback:00000000 SPI_DMATxAbortCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7210   .text.SPI_DMARxAbortCallback:00000000 SPI_DMARxAbortCallback
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7205   .text.SPI_DMARxAbortCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7358   .text.SPI_DMATxAbortCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7509   .text.HAL_SPI_GetState:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7515   .text.HAL_SPI_GetState:00000000 HAL_SPI_GetState
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7533   .text.HAL_SPI_GetError:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMDGeya.s:7539   .text.HAL_SPI_GetError:00000000 HAL_SPI_GetError
 
 UNDEFINED SYMBOLS
 HAL_GetTick

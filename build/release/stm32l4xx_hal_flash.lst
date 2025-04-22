@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
   58 0002 5369     		ldr	r3, [r2, #20]
   59 0004 43F48023 		orr	r3, r3, #262144
   60 0008 5361     		str	r3, [r2, #20]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 2
 
 
   61              		.syntax unified
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  117 0026 21F48061 		bic	r1, r1, #1024
  118 002a 2960     		str	r1, [r5]
  119 002c 1349     		ldr	r1, .L22
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 3
 
 
  120 002e 0225     		movs	r5, #2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  175              		.thumb_func
  177              	HAL_FLASH_EndOfOperationCallback:
  178              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 4
 
 
  179              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  237 0040 012B     		cmp	r3, #1
  238 0042 32D9     		bls	.L44
  239 0044 0020     		movs	r0, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 5
 
 
  240 0046 FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  294 00b4 184C     		ldr	r4, .L47+4
  295 00b6 4FF0FF33 		mov	r3, #-1
  296 00ba 6361     		str	r3, [r4, #20]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 6
 
 
  297 00bc 0023     		movs	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  352              		.thumb
  353              		.thumb_func
  355              	HAL_FLASH_Unlock:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 7
 
 
  356              		@ args = 0, pretend = 0, frame = 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  414              	HAL_FLASH_OB_Unlock:
  415              		@ args = 0, pretend = 0, frame = 0
  416              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 8
 
 
  417              		@ link register save eliminated.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  475 0006 00BF     		.align	2
  476              	.L68:
  477 0008 00000000 		.word	pFlash
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 9
 
 
  479              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  534              	.L83:
  535 005a 00BF     		.align	2
  536              	.L82:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 10
 
 
  537 005c 00200240 		.word	1073881088
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  593 005e 5369     		ldr	r3, [r2, #20]
  594 0060 23EA0403 		bic	r3, r3, r4
  595 0064 5361     		str	r3, [r2, #20]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 11
 
 
  596              	.L91:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  652 000c 4CF25030 		movw	r0, #50000
  653 0010 FFF7FEFF 		bl	FLASH_WaitForLastOperation
  654 0014 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 12
 
 
  655              	.L103:
@@ -681,53 +681,53 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 1
  675 001c 00       		.byte	0
  676 001d 000000   		.space	3
  677              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_flash.c
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:18     .text.FLASH_Program_DoubleWord:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:23     .text.FLASH_Program_DoubleWord:00000000 FLASH_Program_DoubleWord
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:45     .text.FLASH_Program_DoubleWord:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:48     .text.FLASH_Program_Fast:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:53     .text.FLASH_Program_Fast:00000000 FLASH_Program_Fast
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:87     .text.FLASH_Program_Fast:00000028 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:90     .text.HAL_FLASH_Program_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:96     .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:167    .text.HAL_FLASH_Program_IT:0000007c $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:665    .data.pFlash:00000000 pFlash
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:171    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:177    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:184    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:190    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:197    .text.HAL_FLASH_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:203    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:344    .text.HAL_FLASH_IRQHandler:00000114 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:349    .text.HAL_FLASH_Unlock:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:355    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:382    .text.HAL_FLASH_Unlock:00000028 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:386    .text.HAL_FLASH_Lock:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:392    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:405    .text.HAL_FLASH_Lock:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:408    .text.HAL_FLASH_OB_Unlock:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:414    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:435    .text.HAL_FLASH_OB_Unlock:00000020 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:439    .text.HAL_FLASH_OB_Lock:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:445    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:458    .text.HAL_FLASH_OB_Lock:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:461    .text.HAL_FLASH_GetError:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:467    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:477    .text.HAL_FLASH_GetError:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:480    .text.FLASH_WaitForLastOperation:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:486    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:537    .text.FLASH_WaitForLastOperation:0000005c $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:542    .text.HAL_FLASH_Program:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:548    .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:634    .text.HAL_FLASH_Program:000000a8 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:638    .text.HAL_FLASH_OB_Launch:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:644    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:658    .text.HAL_FLASH_OB_Launch:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\cccT2ILE.s:662    .data.pFlash:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:18     .text.FLASH_Program_DoubleWord:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:23     .text.FLASH_Program_DoubleWord:00000000 FLASH_Program_DoubleWord
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:45     .text.FLASH_Program_DoubleWord:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:48     .text.FLASH_Program_Fast:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:53     .text.FLASH_Program_Fast:00000000 FLASH_Program_Fast
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:87     .text.FLASH_Program_Fast:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:90     .text.HAL_FLASH_Program_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:96     .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:167    .text.HAL_FLASH_Program_IT:0000007c $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:665    .data.pFlash:00000000 pFlash
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:171    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:177    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:184    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:190    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:197    .text.HAL_FLASH_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:203    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:344    .text.HAL_FLASH_IRQHandler:00000114 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:349    .text.HAL_FLASH_Unlock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:355    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:382    .text.HAL_FLASH_Unlock:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:386    .text.HAL_FLASH_Lock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:392    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:405    .text.HAL_FLASH_Lock:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:408    .text.HAL_FLASH_OB_Unlock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:414    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:435    .text.HAL_FLASH_OB_Unlock:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:439    .text.HAL_FLASH_OB_Lock:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:445    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:458    .text.HAL_FLASH_OB_Lock:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:461    .text.HAL_FLASH_GetError:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:467    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:477    .text.HAL_FLASH_GetError:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:480    .text.FLASH_WaitForLastOperation:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:486    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:537    .text.FLASH_WaitForLastOperation:0000005c $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:542    .text.HAL_FLASH_Program:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:548    .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:634    .text.HAL_FLASH_Program:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:638    .text.HAL_FLASH_OB_Launch:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:644    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:658    .text.HAL_FLASH_OB_Launch:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccdHmoGZ.s:662    .data.pFlash:00000000 $d
 
 UNDEFINED SYMBOLS
 FLASH_FlushCaches

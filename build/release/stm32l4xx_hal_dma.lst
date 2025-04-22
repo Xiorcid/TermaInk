@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
   57              		.thumb
   58              		.thumb_func
   60              	HAL_DMA_Init:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 2
 
 
   61              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  115 0074 C2F8A814 		str	r1, [r2, #1192]
  116 0078 D2F8A814 		ldr	r1, [r2, #1192]
  117 007c 5868     		ldr	r0, [r3, #4]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 3
 
 
  118 007e 5C6C     		ldr	r4, [r3, #68]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  173              		.global	HAL_DMA_DeInit
  174              		.syntax unified
  175              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 4
 
 
  176              		.thumb_func
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  231 006c 83F82500 		strb	r0, [r3, #37]
  232 0070 83F82400 		strb	r0, [r3, #36]
  233 0074 5DF8044B 		ldr	r4, [sp], #4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 5
 
 
  234 0078 7047     		bx	lr
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  290 001c 84F82430 		strb	r3, [r4, #36]
  291 0020 0220     		movs	r0, #2
  292              	.L35:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 6
 
 
  293 0022 70BD     		pop	{r4, r5, r6, pc}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  349 0038 2046     		mov	r0, r4
  350 003a FFF7FEFF 		bl	DMA_SetConfig
  351 003e 236B     		ldr	r3, [r4, #48]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 7
 
 
  352 0040 5BB1     		cbz	r3, .L43
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  408 002c 03F01C03 		and	r3, r3, #28
  409 0030 016C     		ldr	r1, [r0, #64]
  410 0032 0122     		movs	r2, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 8
 
 
  411 0034 02FA03F3 		lsl	r3, r2, r3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  468              		.syntax unified
  469              		.thumb
  470              		.thumb_func
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 9
 
 
  472              	HAL_DMA_PollForTransfer:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  526 0078 84F82500 		strb	r0, [r4, #37]
  527 007c 0023     		movs	r3, #0
  528 007e 84F82430 		strb	r3, [r4, #36]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 10
 
 
  529 0082 CAE7     		b	.L58
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  585 0006 0468     		ldr	r4, [r0]
  586 0008 2568     		ldr	r5, [r4]
  587 000a 436C     		ldr	r3, [r0, #68]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 11
 
 
  588 000c 03F01C03 		and	r3, r3, #28
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  642              	.L76:
  643 0086 0822     		movs	r2, #8
  644 0088 02FA03F3 		lsl	r3, r2, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 12
 
 
  645 008c 0B42     		tst	r3, r1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  701 0032 08       		.byte	(.L84-.L83)/2
  702 0033 0B       		.byte	(.L82-.L83)/2
  703              		.p2align 1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 13
 
 
  704              	.L86:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  760 0031 00       		.p2align 1
  761              	.L99:
  762 0032 0022     		movs	r2, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 14
 
 
  763 0034 DA62     		str	r2, [r3, #44]
@@ -831,44 +831,44 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 1
  814 0000 C06B     		ldr	r0, [r0, #60]
  815 0002 7047     		bx	lr
  817              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccigEtop.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_dma.c
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:18     .text.DMA_SetConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:23     .text.DMA_SetConfig:00000000 DMA_SetConfig
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:54     .text.HAL_DMA_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:60     .text.HAL_DMA_Init:00000000 HAL_DMA_Init
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:164    .text.HAL_DMA_Init:000000ec $d
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:172    .text.HAL_DMA_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:178    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:262    .text.HAL_DMA_DeInit:000000b0 $d
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:270    .text.HAL_DMA_Start:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:276    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:316    .text.HAL_DMA_Start_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:322    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:379    .text.HAL_DMA_Abort:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:385    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:420    .text.HAL_DMA_Abort_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:426    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:466    .text.HAL_DMA_PollForTransfer:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:472    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:573    .text.HAL_DMA_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:579    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:669    .text.HAL_DMA_RegisterCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:675    .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:699    .text.HAL_DMA_RegisterCallback:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:703    .text.HAL_DMA_RegisterCallback:00000034 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:725    .text.HAL_DMA_UnRegisterCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:731    .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:755    .text.HAL_DMA_UnRegisterCallback:0000002c $d
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:790    .text.HAL_DMA_GetState:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:796    .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:804    .text.HAL_DMA_GetError:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:810    .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:760    .text.HAL_DMA_UnRegisterCallback:00000031 $d
-C:\Users\kroko\AppData\Local\Temp\ccigEtop.s:760    .text.HAL_DMA_UnRegisterCallback:00000032 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:18     .text.DMA_SetConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:23     .text.DMA_SetConfig:00000000 DMA_SetConfig
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:54     .text.HAL_DMA_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:60     .text.HAL_DMA_Init:00000000 HAL_DMA_Init
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:164    .text.HAL_DMA_Init:000000ec $d
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:172    .text.HAL_DMA_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:178    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:262    .text.HAL_DMA_DeInit:000000b0 $d
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:270    .text.HAL_DMA_Start:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:276    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:316    .text.HAL_DMA_Start_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:322    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:379    .text.HAL_DMA_Abort:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:385    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:420    .text.HAL_DMA_Abort_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:426    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:466    .text.HAL_DMA_PollForTransfer:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:472    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:573    .text.HAL_DMA_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:579    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:669    .text.HAL_DMA_RegisterCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:675    .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:699    .text.HAL_DMA_RegisterCallback:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:703    .text.HAL_DMA_RegisterCallback:00000034 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:725    .text.HAL_DMA_UnRegisterCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:731    .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:755    .text.HAL_DMA_UnRegisterCallback:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:790    .text.HAL_DMA_GetState:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:796    .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:804    .text.HAL_DMA_GetError:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:810    .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:760    .text.HAL_DMA_UnRegisterCallback:00000031 $d
+C:\Users\kroko\AppData\Local\Temp\cc5SLqgJ.s:760    .text.HAL_DMA_UnRegisterCallback:00000032 $t
 
 UNDEFINED SYMBOLS
 HAL_GetTick

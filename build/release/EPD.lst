@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
   58 0004 0022     		movs	r2, #0
   59 0006 4021     		movs	r1, #64
   60 0008 4FF09040 		mov	r0, #1207959552
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 2
 
 
   61 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  119 0018 C6F3C700 		ubfx	r0, r6, #3, #8
  120 001c FFF7FEFF 		bl	EPD_SendData
  121 0020 4520     		movs	r0, #69
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 3
 
 
  122 0022 FFF7FEFF 		bl	EPD_SendCommand
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  181              		.section	.text.EPD_LUT,"ax",%progbits
  182              		.align	1
  183              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 4
 
 
  184              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  242              		.align	1
  243              		.syntax unified
  244              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 5
 
 
  245              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  304 002c FFF7FEFF 		bl	EPD_SendCommand
  305 0030 F920     		movs	r0, #249
  306 0032 FFF7FEFF 		bl	EPD_SendData
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 6
 
 
  307 0036 0020     		movs	r0, #0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  363 000c FF20     		movs	r0, #255
  364 000e FFF7FEFF 		bl	EPD_SendData
  365 0012 0134     		adds	r4, r4, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 7
 
 
  366 0014 A4B2     		uxth	r4, r4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  424              	EPD_Display_Base:
  425              		@ args = 0, pretend = 0, frame = 0
  426              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 8
 
 
  427 0000 70B5     		push	{r4, r5, r6, lr}
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  483              		@ frame_needed = 0, uses_anonymous_args = 0
  484 0000 70B5     		push	{r4, r5, r6, lr}
  485 0002 0646     		mov	r6, r0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 9
 
 
  486 0004 0022     		movs	r2, #0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  540 00a2 FFF7FEFF 		bl	EPD_SendCommand
  541 00a6 0025     		movs	r5, #0
  542 00a8 0AE0     		b	.L57
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 10
 
 
  543              	.L58:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  601 000e 0022     		movs	r2, #0
  602 0010 1021     		movs	r1, #16
  603 0012 4FF09040 		mov	r0, #1207959552
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 11
 
 
  604 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  634 007c 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
  634      00000000 
  634      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 12
 
 
  634      00
@@ -718,57 +718,57 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 1
  653      222222
  654 0094 22220000 		.ascii	"\"\"\000\000\000\"\027A\00026"
  654      00221741 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 13
 
 
  654      003236
  655              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 EPD.c
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:18     .text.EPD_Reset:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:23     .text.EPD_Reset:00000000 EPD_Reset
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:48     .text.EPD_SendCommand:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:53     .text.EPD_SendCommand:00000000 EPD_SendCommand
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:75     .text.EPD_SendData:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:80     .text.EPD_SendData:00000000 EPD_SendData
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:102    .text.EPD_SetWindows:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:107    .text.EPD_SetWindows:00000000 EPD_SetWindows
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:134    .text.EPD_SetCursor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:139    .text.EPD_SetCursor:00000000 EPD_SetCursor
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:158    .text.EPD_ReadBusy:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:164    .text.EPD_ReadBusy:00000000 EPD_ReadBusy
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:182    .text.EPD_LUT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:187    .text.EPD_LUT:00000000 EPD_LUT
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:208    .text.EPD_2IN13_V2_LUT_by_host:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:213    .text.EPD_2IN13_V2_LUT_by_host:00000000 EPD_2IN13_V2_LUT_by_host
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:242    .text.EPD_TurnOnDisplay:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:247    .text.EPD_TurnOnDisplay:00000000 EPD_TurnOnDisplay
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:261    .text.EPD_TurnOnDisplay_Partial:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:266    .text.EPD_TurnOnDisplay_Partial:00000000 EPD_TurnOnDisplay_Partial
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:280    .text.EPD_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:286    .text.EPD_Init:00000000 EPD_Init
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:344    .text.EPD_Init:00000098 $d
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:624    .data.WS_20_30:00000000 WS_20_30
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:348    .text.EPD_SYS_Clear:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:354    .text.EPD_SYS_Clear:00000000 EPD_SYS_Clear
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:382    .text.EPD_Display:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:388    .text.EPD_Display:00000000 EPD_Display
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:418    .text.EPD_Display_Base:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:424    .text.EPD_Display_Base:00000000 EPD_Display_Base
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:475    .text.EPD_Display_Partial:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:481    .text.EPD_Display_Partial:00000000 EPD_Display_Partial
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:565    .text.EPD_Display_Partial:000000d0 $d
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:642    .data.WF_PARTIAL:00000000 WF_PARTIAL
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:568    .text.EPD_Sleep:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:574    .text.EPD_Sleep:00000000 EPD_Sleep
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:587    .text.EPD_Exit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:593    .text.EPD_Exit:00000000 EPD_Exit
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:617    .text.EPD_Exit:00000034 $d
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:621    .data.WS_20_30:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccAuOej5.s:639    .data.WF_PARTIAL:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:18     .text.EPD_Reset:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:23     .text.EPD_Reset:00000000 EPD_Reset
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:48     .text.EPD_SendCommand:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:53     .text.EPD_SendCommand:00000000 EPD_SendCommand
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:75     .text.EPD_SendData:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:80     .text.EPD_SendData:00000000 EPD_SendData
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:102    .text.EPD_SetWindows:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:107    .text.EPD_SetWindows:00000000 EPD_SetWindows
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:134    .text.EPD_SetCursor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:139    .text.EPD_SetCursor:00000000 EPD_SetCursor
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:158    .text.EPD_ReadBusy:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:164    .text.EPD_ReadBusy:00000000 EPD_ReadBusy
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:182    .text.EPD_LUT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:187    .text.EPD_LUT:00000000 EPD_LUT
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:208    .text.EPD_2IN13_V2_LUT_by_host:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:213    .text.EPD_2IN13_V2_LUT_by_host:00000000 EPD_2IN13_V2_LUT_by_host
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:242    .text.EPD_TurnOnDisplay:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:247    .text.EPD_TurnOnDisplay:00000000 EPD_TurnOnDisplay
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:261    .text.EPD_TurnOnDisplay_Partial:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:266    .text.EPD_TurnOnDisplay_Partial:00000000 EPD_TurnOnDisplay_Partial
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:280    .text.EPD_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:286    .text.EPD_Init:00000000 EPD_Init
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:344    .text.EPD_Init:00000098 $d
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:624    .data.WS_20_30:00000000 WS_20_30
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:348    .text.EPD_SYS_Clear:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:354    .text.EPD_SYS_Clear:00000000 EPD_SYS_Clear
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:382    .text.EPD_Display:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:388    .text.EPD_Display:00000000 EPD_Display
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:418    .text.EPD_Display_Base:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:424    .text.EPD_Display_Base:00000000 EPD_Display_Base
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:475    .text.EPD_Display_Partial:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:481    .text.EPD_Display_Partial:00000000 EPD_Display_Partial
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:565    .text.EPD_Display_Partial:000000d0 $d
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:642    .data.WF_PARTIAL:00000000 WF_PARTIAL
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:568    .text.EPD_Sleep:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:574    .text.EPD_Sleep:00000000 EPD_Sleep
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:587    .text.EPD_Exit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:593    .text.EPD_Exit:00000000 EPD_Exit
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:617    .text.EPD_Exit:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:621    .data.WS_20_30:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccqQuwsc.s:639    .data.WF_PARTIAL:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

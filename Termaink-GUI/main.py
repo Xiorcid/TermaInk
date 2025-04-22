@@ -1,4 +1,3 @@
-import userpaths
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QTableWidget, QTableWidgetItem, QFileDialog, QMessageBox, QErrorMessage
 from PyQt6.QtSerialPort import QSerialPortInfo
@@ -41,6 +40,7 @@ def openport():
         ser.open()
         ser.write(bytes("test", 'utf-8'))
         ret = ser.readline().rstrip().decode("utf-8")
+        print(ret)
         if ret != "Termaink Ready":
             ser.close()
             showCOMerror()

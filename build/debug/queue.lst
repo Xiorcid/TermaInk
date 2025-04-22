@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
   42              		.loc 1 14 5 is_stmt 1 view .LVU5
   43              		.loc 1 14 33 is_stmt 0 view .LVU6
   44 000c 0121     		movs	r1, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 2
 
 
   45 000e 83F86210 		strb	r1, [r3, #98]
@@ -104,7 +104,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
   20:Core/Src/queue.c ****     data_queue.data[data_queue.write_ptr] = temp;
   82              		.loc 1 20 5 is_stmt 1 view .LVU12
   83              		.loc 1 20 31 is_stmt 0 view .LVU13
-  84 0006 364A     		ldr	r2, .L10
+  84 0006 314A     		ldr	r2, .L10
   85 0008 92F86030 		ldrb	r3, [r2, #96]	@ zero_extendqisi2
   86              		.loc 1 20 43 view .LVU14
   87 000c 22F81300 		strh	r0, [r2, r3, lsl #1]	@ movhi
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
   93              		.loc 1 22 5 is_stmt 1 view .LVU17
   94              		.loc 1 22 15 is_stmt 0 view .LVU18
   95 0018 92F86310 		ldrb	r1, [r2, #99]	@ zero_extendqisi2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 3
 
 
   96              		.loc 1 22 22 view .LVU19
@@ -144,14 +144,14 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
   27:Core/Src/queue.c ****     if(!data_queue.is_first_writing){
  112              		.loc 1 27 5 is_stmt 1 view .LVU26
  113              		.loc 1 27 19 is_stmt 0 view .LVU27
- 114 0032 2B4B     		ldr	r3, .L10
+ 114 0032 264B     		ldr	r3, .L10
  115 0034 93F86230 		ldrb	r3, [r3, #98]	@ zero_extendqisi2
  116              		.loc 1 27 7 view .LVU28
  117 0038 3BB9     		cbnz	r3, .L6
   28:Core/Src/queue.c ****         data_queue.start_ptr = data_queue.write_ptr;
  118              		.loc 1 28 9 is_stmt 1 view .LVU29
  119              		.loc 1 28 42 is_stmt 0 view .LVU30
- 120 003a 294B     		ldr	r3, .L10
+ 120 003a 244B     		ldr	r3, .L10
  121 003c 93F86020 		ldrb	r2, [r3, #96]	@ zero_extendqisi2
  122              		.loc 1 28 30 view .LVU31
  123 0040 83F86120 		strb	r2, [r3, #97]
@@ -178,11 +178,11 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
  140 0058 0A94     		str	r4, [sp, #40]
   33:Core/Src/queue.c **** 
   34:Core/Src/queue.c ****     HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 4
 
 
  141              		.loc 1 34 5 is_stmt 1 view .LVU38
- 142 005a 224E     		ldr	r6, .L10+4
+ 142 005a 1D4E     		ldr	r6, .L10+4
  143 005c 2246     		mov	r2, r4
  144 005e 3046     		mov	r0, r6
  145              	.LVL1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
  185 008e 0293     		str	r3, [sp, #8]
   45:Core/Src/queue.c ****     t.tm_sec = sTime.Seconds;
  186              		.loc 1 45 5 is_stmt 1 view .LVU60
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 5
 
 
  187              		.loc 1 45 21 is_stmt 0 view .LVU61
@@ -266,10 +266,10 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
   50:Core/Src/queue.c ****     if(flag ==0){
  205              		.loc 1 50 5 view .LVU68
  206              		.loc 1 50 13 is_stmt 0 view .LVU69
- 207 00a6 104B     		ldr	r3, .L10+8
+ 207 00a6 0B4B     		ldr	r3, .L10+8
  208 00a8 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  209              		.loc 1 50 7 view .LVU70
- 210 00aa 83B1     		cbz	r3, .L9
+ 210 00aa 2BB1     		cbz	r3, .L9
  211              	.L7:
   51:Core/Src/queue.c ****     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) t_of_day);
   52:Core/Src/queue.c ****     flag = 1;}
@@ -281,489 +281,473 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 1
  215 00b0 FFF7FEFF 		bl	UDISK_push
  216              	.LVL7:
   55:Core/Src/queue.c ****     // TEST
-  56:Core/Src/queue.c ****     uint32_t testtime = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5)+1800;
- 217              		.loc 1 56 5 view .LVU72
- 218              		.loc 1 56 25 is_stmt 0 view .LVU73
- 219 00b4 0B4C     		ldr	r4, .L10+4
- 220              		.loc 1 56 25 view .LVU74
- 221 00b6 0521     		movs	r1, #5
- 222 00b8 2046     		mov	r0, r4
- 223 00ba FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 224              	.LVL8:
-  57:Core/Src/queue.c ****     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) testtime);
- 225              		.loc 1 57 5 is_stmt 1 view .LVU75
- 226 00be 00F5E162 		add	r2, r0, #1800
- 227              	.LVL9:
- 228              		.loc 1 57 5 is_stmt 0 view .LVU76
- 229 00c2 0521     		movs	r1, #5
- 230 00c4 2046     		mov	r0, r4
- 231 00c6 FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 6
-
-
- 232              	.LVL10:
+  56:Core/Src/queue.c ****     // uint32_t testtime = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5)+1800;
+  57:Core/Src/queue.c ****     // HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) testtime);
   58:Core/Src/queue.c **** }
- 233              		.loc 1 58 1 view .LVU77
- 234 00ca 10B0     		add	sp, sp, #64
- 235              		.cfi_remember_state
- 236              		.cfi_def_cfa_offset 16
- 237              		@ sp needed
- 238 00cc 70BD     		pop	{r4, r5, r6, pc}
- 239              	.LVL11:
- 240              	.L9:
- 241              		.cfi_restore_state
-  51:Core/Src/queue.c ****     flag = 1;}
- 242              		.loc 1 51 5 is_stmt 1 view .LVU78
- 243 00ce 2246     		mov	r2, r4
- 244 00d0 0521     		movs	r1, #5
- 245 00d2 3046     		mov	r0, r6
- 246 00d4 FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
- 247              	.LVL12:
+ 217              		.loc 1 58 1 is_stmt 0 view .LVU72
+ 218 00b4 10B0     		add	sp, sp, #64
+ 219              		.cfi_remember_state
+ 220              		.cfi_def_cfa_offset 16
+ 221              		@ sp needed
+ 222 00b6 70BD     		pop	{r4, r5, r6, pc}
+ 223              	.LVL8:
+ 224              	.L9:
+ 225              		.cfi_restore_state
+  51:Core/Src/queue.c ****     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) t_of_day);
+ 226              		.loc 1 51 5 is_stmt 1 view .LVU73
+ 227 00b8 2246     		mov	r2, r4
+ 228 00ba 0521     		movs	r1, #5
+ 229 00bc 3046     		mov	r0, r6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 6
+
+
+ 230 00be FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 231              	.LVL9:
   52:Core/Src/queue.c **** 
- 248              		.loc 1 52 5 view .LVU79
+ 232              		.loc 1 52 5 view .LVU74
   52:Core/Src/queue.c **** 
- 249              		.loc 1 52 10 is_stmt 0 view .LVU80
- 250 00d8 034B     		ldr	r3, .L10+8
- 251 00da 0122     		movs	r2, #1
- 252 00dc 1A70     		strb	r2, [r3]
- 253 00de E5E7     		b	.L7
- 254              	.L11:
- 255              		.align	2
- 256              	.L10:
- 257 00e0 00000000 		.word	data_queue
- 258 00e4 00000000 		.word	hrtc
- 259 00e8 00000000 		.word	flag
- 260              		.cfi_endproc
- 261              	.LFE320:
- 263              		.section	.text.q_get,"ax",%progbits
- 264              		.align	1
- 265              		.global	q_get
- 266              		.syntax unified
- 267              		.thumb
- 268              		.thumb_func
- 270              	q_get:
- 271              	.LVL13:
- 272              	.LFB321:
+ 233              		.loc 1 52 10 is_stmt 0 view .LVU75
+ 234 00c2 044B     		ldr	r3, .L10+8
+ 235 00c4 0122     		movs	r2, #1
+ 236 00c6 1A70     		strb	r2, [r3]
+ 237 00c8 F0E7     		b	.L7
+ 238              	.L11:
+ 239 00ca 00BF     		.align	2
+ 240              	.L10:
+ 241 00cc 00000000 		.word	data_queue
+ 242 00d0 00000000 		.word	hrtc
+ 243 00d4 00000000 		.word	flag
+ 244              		.cfi_endproc
+ 245              	.LFE320:
+ 247              		.section	.text.q_get,"ax",%progbits
+ 248              		.align	1
+ 249              		.global	q_get
+ 250              		.syntax unified
+ 251              		.thumb
+ 252              		.thumb_func
+ 254              	q_get:
+ 255              	.LVL10:
+ 256              	.LFB321:
   59:Core/Src/queue.c **** 
   60:Core/Src/queue.c **** uint16_t q_get(uint8_t pos){
- 273              		.loc 1 60 28 is_stmt 1 view -0
- 274              		.cfi_startproc
- 275              		@ args = 0, pretend = 0, frame = 0
- 276              		@ frame_needed = 0, uses_anonymous_args = 0
- 277              		@ link register save eliminated.
+ 257              		.loc 1 60 28 is_stmt 1 view -0
+ 258              		.cfi_startproc
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261              		@ link register save eliminated.
   61:Core/Src/queue.c ****     uint8_t ptr = pos + data_queue.start_ptr;
- 278              		.loc 1 61 5 view .LVU82
- 279              		.loc 1 61 35 is_stmt 0 view .LVU83
- 280 0000 064B     		ldr	r3, .L14
- 281 0002 93F86130 		ldrb	r3, [r3, #97]	@ zero_extendqisi2
- 282              		.loc 1 61 13 view .LVU84
- 283 0006 1844     		add	r0, r0, r3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 7
-
-
- 284              	.LVL14:
- 285              		.loc 1 61 13 view .LVU85
- 286 0008 C0B2     		uxtb	r0, r0
- 287              	.LVL15:
+ 262              		.loc 1 61 5 view .LVU77
+ 263              		.loc 1 61 35 is_stmt 0 view .LVU78
+ 264 0000 064B     		ldr	r3, .L14
+ 265 0002 93F86130 		ldrb	r3, [r3, #97]	@ zero_extendqisi2
+ 266              		.loc 1 61 13 view .LVU79
+ 267 0006 1844     		add	r0, r0, r3
+ 268              	.LVL11:
+ 269              		.loc 1 61 13 view .LVU80
+ 270 0008 C0B2     		uxtb	r0, r0
+ 271              	.LVL12:
   62:Core/Src/queue.c ****     if(ptr>=48){
- 288              		.loc 1 62 5 is_stmt 1 view .LVU86
- 289              		.loc 1 62 7 is_stmt 0 view .LVU87
- 290 000a 2F28     		cmp	r0, #47
- 291 000c 01D9     		bls	.L13
+ 272              		.loc 1 62 5 is_stmt 1 view .LVU81
+ 273              		.loc 1 62 7 is_stmt 0 view .LVU82
+ 274 000a 2F28     		cmp	r0, #47
+ 275 000c 01D9     		bls	.L13
   63:Core/Src/queue.c ****         ptr -= 48;
- 292              		.loc 1 63 9 is_stmt 1 view .LVU88
- 293              		.loc 1 63 13 is_stmt 0 view .LVU89
- 294 000e 3038     		subs	r0, r0, #48
- 295              	.LVL16:
- 296              		.loc 1 63 13 view .LVU90
- 297 0010 C0B2     		uxtb	r0, r0
- 298              	.LVL17:
- 299              	.L13:
+ 276              		.loc 1 63 9 is_stmt 1 view .LVU83
+ 277              		.loc 1 63 13 is_stmt 0 view .LVU84
+ 278 000e 3038     		subs	r0, r0, #48
+ 279              	.LVL13:
+ 280              		.loc 1 63 13 view .LVU85
+ 281 0010 C0B2     		uxtb	r0, r0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 7
+
+
+ 282              	.LVL14:
+ 283              	.L13:
   64:Core/Src/queue.c ****     }
   65:Core/Src/queue.c ****     return data_queue.data[ptr];
- 300              		.loc 1 65 5 is_stmt 1 view .LVU91
+ 284              		.loc 1 65 5 is_stmt 1 view .LVU86
   66:Core/Src/queue.c **** }
- 301              		.loc 1 66 1 is_stmt 0 view .LVU92
- 302 0012 024B     		ldr	r3, .L14
- 303 0014 33F81000 		ldrh	r0, [r3, r0, lsl #1]
- 304              	.LVL18:
- 305              		.loc 1 66 1 view .LVU93
- 306 0018 7047     		bx	lr
- 307              	.L15:
- 308 001a 00BF     		.align	2
- 309              	.L14:
- 310 001c 00000000 		.word	data_queue
- 311              		.cfi_endproc
- 312              	.LFE321:
- 314              		.section	.text.q_save,"ax",%progbits
- 315              		.align	1
- 316              		.global	q_save
- 317              		.syntax unified
- 318              		.thumb
- 319              		.thumb_func
- 321              	q_save:
- 322              	.LFB322:
+ 285              		.loc 1 66 1 is_stmt 0 view .LVU87
+ 286 0012 024B     		ldr	r3, .L14
+ 287 0014 33F81000 		ldrh	r0, [r3, r0, lsl #1]
+ 288              	.LVL15:
+ 289              		.loc 1 66 1 view .LVU88
+ 290 0018 7047     		bx	lr
+ 291              	.L15:
+ 292 001a 00BF     		.align	2
+ 293              	.L14:
+ 294 001c 00000000 		.word	data_queue
+ 295              		.cfi_endproc
+ 296              	.LFE321:
+ 298              		.section	.text.q_save,"ax",%progbits
+ 299              		.align	1
+ 300              		.global	q_save
+ 301              		.syntax unified
+ 302              		.thumb
+ 303              		.thumb_func
+ 305              	q_save:
+ 306              	.LFB322:
   67:Core/Src/queue.c **** 
   68:Core/Src/queue.c **** void q_save(void){
- 323              		.loc 1 68 18 is_stmt 1 view -0
- 324              		.cfi_startproc
- 325              		@ args = 0, pretend = 0, frame = 0
- 326              		@ frame_needed = 0, uses_anonymous_args = 0
- 327 0000 10B5     		push	{r4, lr}
- 328              		.cfi_def_cfa_offset 8
- 329              		.cfi_offset 4, -8
- 330              		.cfi_offset 14, -4
+ 307              		.loc 1 68 18 is_stmt 1 view -0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311 0000 10B5     		push	{r4, lr}
+ 312              		.cfi_def_cfa_offset 8
+ 313              		.cfi_offset 4, -8
+ 314              		.cfi_offset 14, -4
   69:Core/Src/queue.c ****     HAL_PWR_EnableBkUpAccess();
- 331              		.loc 1 69 5 view .LVU95
- 332 0002 FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
- 333              	.LVL19:
+ 315              		.loc 1 69 5 view .LVU90
+ 316 0002 FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
+ 317              	.LVL16:
   70:Core/Src/queue.c ****     
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 8
-
-
   71:Core/Src/queue.c ****     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR6, KEY);
- 334              		.loc 1 71 5 view .LVU96
- 335 0006 184A     		ldr	r2, .L22
- 336 0008 0621     		movs	r1, #6
- 337 000a 1848     		ldr	r0, .L22+4
- 338 000c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
- 339              	.LVL20:
+ 318              		.loc 1 71 5 view .LVU91
+ 319 0006 184A     		ldr	r2, .L22
+ 320 0008 0621     		movs	r1, #6
+ 321 000a 1848     		ldr	r0, .L22+4
+ 322 000c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 323              	.LVL17:
   72:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 340              		.loc 1 72 5 view .LVU97
- 341              	.LBB2:
- 342              		.loc 1 72 10 view .LVU98
- 343              		.loc 1 72 14 is_stmt 0 view .LVU99
- 344 0010 0024     		movs	r4, #0
- 345              		.loc 1 72 5 view .LVU100
- 346 0012 0EE0     		b	.L17
- 347              	.LVL21:
- 348              	.L18:
+ 324              		.loc 1 72 5 view .LVU92
+ 325              	.LBB2:
+ 326              		.loc 1 72 10 view .LVU93
+ 327              		.loc 1 72 14 is_stmt 0 view .LVU94
+ 328 0010 0024     		movs	r4, #0
+ 329              		.loc 1 72 5 view .LVU95
+ 330 0012 0EE0     		b	.L17
+ 331              	.LVL18:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 8
+
+
+ 332              	.L18:
   73:Core/Src/queue.c ****         HAL_RTCEx_BKUPWrite(&hrtc, 8+i, ((uint32_t)data_queue.data[2*i] << 16) | (uint32_t)data_que
- 349              		.loc 1 73 9 is_stmt 1 view .LVU101
- 350              		.loc 1 73 69 is_stmt 0 view .LVU102
- 351 0014 6300     		lsls	r3, r4, #1
- 352              		.loc 1 73 67 view .LVU103
- 353 0016 1649     		ldr	r1, .L22+8
- 354 0018 31F82420 		ldrh	r2, [r1, r4, lsl #2]
- 355              		.loc 1 73 112 view .LVU104
- 356 001c 0133     		adds	r3, r3, #1
- 357              		.loc 1 73 107 view .LVU105
- 358 001e 31F81330 		ldrh	r3, [r1, r3, lsl #1]
- 359              		.loc 1 73 9 view .LVU106
- 360 0022 43EA0242 		orr	r2, r3, r2, lsl #16
- 361 0026 04F10801 		add	r1, r4, #8
- 362 002a 1048     		ldr	r0, .L22+4
- 363 002c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
- 364              	.LVL22:
+ 333              		.loc 1 73 9 is_stmt 1 view .LVU96
+ 334              		.loc 1 73 69 is_stmt 0 view .LVU97
+ 335 0014 6300     		lsls	r3, r4, #1
+ 336              		.loc 1 73 67 view .LVU98
+ 337 0016 1649     		ldr	r1, .L22+8
+ 338 0018 31F82420 		ldrh	r2, [r1, r4, lsl #2]
+ 339              		.loc 1 73 112 view .LVU99
+ 340 001c 0133     		adds	r3, r3, #1
+ 341              		.loc 1 73 107 view .LVU100
+ 342 001e 31F81330 		ldrh	r3, [r1, r3, lsl #1]
+ 343              		.loc 1 73 9 view .LVU101
+ 344 0022 43EA0242 		orr	r2, r3, r2, lsl #16
+ 345 0026 04F10801 		add	r1, r4, #8
+ 346 002a 1048     		ldr	r0, .L22+4
+ 347 002c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 348              	.LVL19:
   72:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 365              		.loc 1 72 30 is_stmt 1 discriminator 3 view .LVU107
- 366 0030 0134     		adds	r4, r4, #1
- 367              	.LVL23:
- 368              	.L17:
+ 349              		.loc 1 72 30 is_stmt 1 discriminator 3 view .LVU102
+ 350 0030 0134     		adds	r4, r4, #1
+ 351              	.LVL20:
+ 352              	.L17:
   72:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 369              		.loc 1 72 23 discriminator 1 view .LVU108
- 370 0032 172C     		cmp	r4, #23
- 371 0034 EEDD     		ble	.L18
- 372              	.LBE2:
+ 353              		.loc 1 72 23 discriminator 1 view .LVU103
+ 354 0032 172C     		cmp	r4, #23
+ 355 0034 EEDD     		ble	.L18
+ 356              	.LBE2:
   74:Core/Src/queue.c ****     }
   75:Core/Src/queue.c ****     
   76:Core/Src/queue.c ****     HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR7, ((uint32_t)data_queue.length << 24) | \
- 373              		.loc 1 76 5 view .LVU109
- 374              		.loc 1 76 66 is_stmt 0 view .LVU110
- 375 0036 0E4A     		ldr	r2, .L22+8
- 376 0038 92F86310 		ldrb	r1, [r2, #99]	@ zero_extendqisi2
+ 357              		.loc 1 76 5 view .LVU104
+ 358              		.loc 1 76 66 is_stmt 0 view .LVU105
+ 359 0036 0E4A     		ldr	r2, .L22+8
+ 360 0038 92F86310 		ldrb	r1, [r2, #99]	@ zero_extendqisi2
   77:Core/Src/queue.c ****     ((uint32_t)data_queue.start_ptr << 16) | ((uint32_t)data_queue.write_ptr << 8) | \
- 377              		.loc 1 77 26 view .LVU111
- 378 003c 92F86130 		ldrb	r3, [r2, #97]	@ zero_extendqisi2
- 379              		.loc 1 77 37 view .LVU112
- 380 0040 1B04     		lsls	r3, r3, #16
+ 361              		.loc 1 77 26 view .LVU106
+ 362 003c 92F86130 		ldrb	r3, [r2, #97]	@ zero_extendqisi2
+ 363              		.loc 1 77 37 view .LVU107
+ 364 0040 1B04     		lsls	r3, r3, #16
   76:Core/Src/queue.c ****     ((uint32_t)data_queue.start_ptr << 16) | ((uint32_t)data_queue.write_ptr << 8) | \
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 9
-
-
- 381              		.loc 1 76 81 view .LVU113
- 382 0042 43EA0163 		orr	r3, r3, r1, lsl #24
- 383              		.loc 1 77 67 view .LVU114
- 384 0046 92F86010 		ldrb	r1, [r2, #96]	@ zero_extendqisi2
- 385              		.loc 1 77 44 view .LVU115
- 386 004a 43EA0123 		orr	r3, r3, r1, lsl #8
+ 365              		.loc 1 76 81 view .LVU108
+ 366 0042 43EA0163 		orr	r3, r3, r1, lsl #24
+ 367              		.loc 1 77 67 view .LVU109
+ 368 0046 92F86010 		ldrb	r1, [r2, #96]	@ zero_extendqisi2
+ 369              		.loc 1 77 44 view .LVU110
+ 370 004a 43EA0123 		orr	r3, r3, r1, lsl #8
   78:Core/Src/queue.c ****     (data_queue.is_first_writing ? 1 : 0));
- 387              		.loc 1 78 16 view .LVU116
- 388 004e 92F86220 		ldrb	r2, [r2, #98]	@ zero_extendqisi2
- 389              		.loc 1 78 38 view .LVU117
- 390 0052 32B1     		cbz	r2, .L20
- 391              		.loc 1 78 38 discriminator 1 view .LVU118
- 392 0054 0122     		movs	r2, #1
- 393              	.L19:
+ 371              		.loc 1 78 16 view .LVU111
+ 372 004e 92F86220 		ldrb	r2, [r2, #98]	@ zero_extendqisi2
+ 373              		.loc 1 78 38 view .LVU112
+ 374 0052 32B1     		cbz	r2, .L20
+ 375              		.loc 1 78 38 discriminator 1 view .LVU113
+ 376 0054 0122     		movs	r2, #1
+ 377              	.L19:
   76:Core/Src/queue.c ****     ((uint32_t)data_queue.start_ptr << 16) | ((uint32_t)data_queue.write_ptr << 8) | \
- 394              		.loc 1 76 5 view .LVU119
- 395 0056 1A43     		orrs	r2, r2, r3
- 396 0058 0721     		movs	r1, #7
- 397 005a 0448     		ldr	r0, .L22+4
- 398 005c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
- 399              	.LVL24:
+ 378              		.loc 1 76 5 view .LVU114
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 9
+
+
+ 379 0056 1A43     		orrs	r2, r2, r3
+ 380 0058 0721     		movs	r1, #7
+ 381 005a 0448     		ldr	r0, .L22+4
+ 382 005c FFF7FEFF 		bl	HAL_RTCEx_BKUPWrite
+ 383              	.LVL21:
   79:Core/Src/queue.c **** }
- 400              		.loc 1 79 1 view .LVU120
- 401 0060 10BD     		pop	{r4, pc}
- 402              	.LVL25:
- 403              	.L20:
+ 384              		.loc 1 79 1 view .LVU115
+ 385 0060 10BD     		pop	{r4, pc}
+ 386              	.LVL22:
+ 387              	.L20:
   78:Core/Src/queue.c ****     (data_queue.is_first_writing ? 1 : 0));
- 404              		.loc 1 78 38 discriminator 2 view .LVU121
- 405 0062 0022     		movs	r2, #0
- 406 0064 F7E7     		b	.L19
- 407              	.L23:
- 408 0066 00BF     		.align	2
- 409              	.L22:
- 410 0068 FF55FFAA 		.word	-1426106881
- 411 006c 00000000 		.word	hrtc
- 412 0070 00000000 		.word	data_queue
- 413              		.cfi_endproc
- 414              	.LFE322:
- 416              		.section	.text.q_load,"ax",%progbits
- 417              		.align	1
- 418              		.global	q_load
- 419              		.syntax unified
- 420              		.thumb
- 421              		.thumb_func
- 423              	q_load:
- 424              	.LFB323:
+ 388              		.loc 1 78 38 discriminator 2 view .LVU116
+ 389 0062 0022     		movs	r2, #0
+ 390 0064 F7E7     		b	.L19
+ 391              	.L23:
+ 392 0066 00BF     		.align	2
+ 393              	.L22:
+ 394 0068 FF55FFAA 		.word	-1426106881
+ 395 006c 00000000 		.word	hrtc
+ 396 0070 00000000 		.word	data_queue
+ 397              		.cfi_endproc
+ 398              	.LFE322:
+ 400              		.section	.text.q_load,"ax",%progbits
+ 401              		.align	1
+ 402              		.global	q_load
+ 403              		.syntax unified
+ 404              		.thumb
+ 405              		.thumb_func
+ 407              	q_load:
+ 408              	.LFB323:
   80:Core/Src/queue.c ****  
   81:Core/Src/queue.c **** bool q_load(void){
- 425              		.loc 1 81 18 is_stmt 1 view -0
- 426              		.cfi_startproc
- 427              		@ args = 0, pretend = 0, frame = 0
- 428              		@ frame_needed = 0, uses_anonymous_args = 0
- 429 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 430              		.cfi_def_cfa_offset 24
- 431              		.cfi_offset 4, -24
- 432              		.cfi_offset 5, -20
- 433              		.cfi_offset 6, -16
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 10
-
-
- 434              		.cfi_offset 7, -12
- 435              		.cfi_offset 8, -8
- 436              		.cfi_offset 14, -4
+ 409              		.loc 1 81 18 is_stmt 1 view -0
+ 410              		.cfi_startproc
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 0, uses_anonymous_args = 0
+ 413 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 414              		.cfi_def_cfa_offset 24
+ 415              		.cfi_offset 4, -24
+ 416              		.cfi_offset 5, -20
+ 417              		.cfi_offset 6, -16
+ 418              		.cfi_offset 7, -12
+ 419              		.cfi_offset 8, -8
+ 420              		.cfi_offset 14, -4
   82:Core/Src/queue.c ****     // REGs 6 - 31
   83:Core/Src/queue.c ****     // KEY - REG6
   84:Core/Src/queue.c ****     // SYS - REG7
   85:Core/Src/queue.c ****     // DATA REG8 - 31
   86:Core/Src/queue.c ****     if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR6) != KEY){return false;}
- 437              		.loc 1 86 5 view .LVU123
- 438              		.loc 1 86 9 is_stmt 0 view .LVU124
- 439 0004 0621     		movs	r1, #6
- 440 0006 2248     		ldr	r0, .L30
- 441 0008 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 442              	.LVL26:
- 443              		.loc 1 86 8 discriminator 1 view .LVU125
- 444 000c 214B     		ldr	r3, .L30+4
- 445 000e 9842     		cmp	r0, r3
- 446 0010 3BD1     		bne	.L28
- 447              	.LBB3:
+ 421              		.loc 1 86 5 view .LVU118
+ 422              		.loc 1 86 9 is_stmt 0 view .LVU119
+ 423 0004 0621     		movs	r1, #6
+ 424 0006 2248     		ldr	r0, .L30
+ 425 0008 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 426              	.LVL23:
+ 427              		.loc 1 86 8 discriminator 1 view .LVU120
+ 428 000c 214B     		ldr	r3, .L30+4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 10
+
+
+ 429 000e 9842     		cmp	r0, r3
+ 430 0010 3BD1     		bne	.L28
+ 431              	.LBB3:
   87:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 448              		.loc 1 87 14 view .LVU126
- 449 0012 0024     		movs	r4, #0
- 450 0014 13E0     		b	.L26
- 451              	.LVL27:
- 452              	.L27:
+ 432              		.loc 1 87 14 view .LVU121
+ 433 0012 0024     		movs	r4, #0
+ 434 0014 13E0     		b	.L26
+ 435              	.LVL24:
+ 436              	.L27:
   88:Core/Src/queue.c ****         data_queue.data[2*i] = (uint16_t)(HAL_RTCEx_BKUPRead(&hrtc, 8+i) >> 16);       
- 453              		.loc 1 88 9 is_stmt 1 view .LVU127
- 454              		.loc 1 88 70 is_stmt 0 view .LVU128
- 455 0016 04F10808 		add	r8, r4, #8
- 456              		.loc 1 88 43 view .LVU129
- 457 001a 1D4F     		ldr	r7, .L30
- 458 001c 4146     		mov	r1, r8
- 459 001e 3846     		mov	r0, r7
- 460 0020 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 461              	.LVL28:
- 462              		.loc 1 88 26 discriminator 1 view .LVU130
- 463 0024 6500     		lsls	r5, r4, #1
- 464              		.loc 1 88 32 discriminator 1 view .LVU131
- 465 0026 000C     		lsrs	r0, r0, #16
- 466              		.loc 1 88 30 discriminator 1 view .LVU132
- 467 0028 1B4E     		ldr	r6, .L30+8
- 468 002a 26F81500 		strh	r0, [r6, r5, lsl #1]	@ movhi
+ 437              		.loc 1 88 9 is_stmt 1 view .LVU122
+ 438              		.loc 1 88 70 is_stmt 0 view .LVU123
+ 439 0016 04F10808 		add	r8, r4, #8
+ 440              		.loc 1 88 43 view .LVU124
+ 441 001a 1D4F     		ldr	r7, .L30
+ 442 001c 4146     		mov	r1, r8
+ 443 001e 3846     		mov	r0, r7
+ 444 0020 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 445              	.LVL25:
+ 446              		.loc 1 88 26 discriminator 1 view .LVU125
+ 447 0024 6500     		lsls	r5, r4, #1
+ 448              		.loc 1 88 32 discriminator 1 view .LVU126
+ 449 0026 000C     		lsrs	r0, r0, #16
+ 450              		.loc 1 88 30 discriminator 1 view .LVU127
+ 451 0028 1B4E     		ldr	r6, .L30+8
+ 452 002a 26F81500 		strh	r0, [r6, r5, lsl #1]	@ movhi
   89:Core/Src/queue.c ****         data_queue.data[2*i + 1] = (uint16_t)(HAL_RTCEx_BKUPRead(&hrtc, 8+i) & 0xFFFF);
- 469              		.loc 1 89 9 is_stmt 1 view .LVU133
- 470              		.loc 1 89 47 is_stmt 0 view .LVU134
- 471 002e 4146     		mov	r1, r8
- 472 0030 3846     		mov	r0, r7
- 473 0032 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 474              	.LVL29:
- 475              		.loc 1 89 29 discriminator 1 view .LVU135
- 476 0036 0135     		adds	r5, r5, #1
- 477              		.loc 1 89 34 discriminator 1 view .LVU136
- 478 0038 26F81500 		strh	r0, [r6, r5, lsl #1]	@ movhi
+ 453              		.loc 1 89 9 is_stmt 1 view .LVU128
+ 454              		.loc 1 89 47 is_stmt 0 view .LVU129
+ 455 002e 4146     		mov	r1, r8
+ 456 0030 3846     		mov	r0, r7
+ 457 0032 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 458              	.LVL26:
+ 459              		.loc 1 89 29 discriminator 1 view .LVU130
+ 460 0036 0135     		adds	r5, r5, #1
+ 461              		.loc 1 89 34 discriminator 1 view .LVU131
+ 462 0038 26F81500 		strh	r0, [r6, r5, lsl #1]	@ movhi
   87:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 479              		.loc 1 87 30 is_stmt 1 discriminator 3 view .LVU137
- 480 003c 0134     		adds	r4, r4, #1
- 481              	.LVL30:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 11
-
-
- 482              	.L26:
+ 463              		.loc 1 87 30 is_stmt 1 discriminator 3 view .LVU132
+ 464 003c 0134     		adds	r4, r4, #1
+ 465              	.LVL27:
+ 466              	.L26:
   87:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 483              		.loc 1 87 23 discriminator 1 view .LVU138
- 484 003e 172C     		cmp	r4, #23
- 485 0040 E9DD     		ble	.L27
- 486              	.LBE3:
+ 467              		.loc 1 87 23 discriminator 1 view .LVU133
+ 468 003e 172C     		cmp	r4, #23
+ 469 0040 E9DD     		ble	.L27
+ 470              	.LBE3:
   90:Core/Src/queue.c ****     }
   91:Core/Src/queue.c ****     data_queue.length = (uint8_t)(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR7) >> 24);
- 487              		.loc 1 91 5 view .LVU139
- 488              		.loc 1 91 35 is_stmt 0 view .LVU140
- 489 0042 134D     		ldr	r5, .L30
- 490 0044 0721     		movs	r1, #7
- 491 0046 2846     		mov	r0, r5
- 492 0048 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 493              	.LVL31:
- 494              		.loc 1 91 25 discriminator 1 view .LVU141
- 495 004c 000E     		lsrs	r0, r0, #24
- 496              		.loc 1 91 23 discriminator 1 view .LVU142
- 497 004e 124C     		ldr	r4, .L30+8
- 498              	.LVL32:
- 499              		.loc 1 91 23 discriminator 1 view .LVU143
- 500 0050 84F86300 		strb	r0, [r4, #99]
+ 471              		.loc 1 91 5 view .LVU134
+ 472              		.loc 1 91 35 is_stmt 0 view .LVU135
+ 473 0042 134D     		ldr	r5, .L30
+ 474 0044 0721     		movs	r1, #7
+ 475 0046 2846     		mov	r0, r5
+ 476 0048 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 477              	.LVL28:
+ 478              		.loc 1 91 25 discriminator 1 view .LVU136
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 11
+
+
+ 479 004c 000E     		lsrs	r0, r0, #24
+ 480              		.loc 1 91 23 discriminator 1 view .LVU137
+ 481 004e 124C     		ldr	r4, .L30+8
+ 482              	.LVL29:
+ 483              		.loc 1 91 23 discriminator 1 view .LVU138
+ 484 0050 84F86300 		strb	r0, [r4, #99]
   92:Core/Src/queue.c ****     data_queue.start_ptr = (uint8_t)(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR7) >> 16);
- 501              		.loc 1 92 5 is_stmt 1 view .LVU144
- 502              		.loc 1 92 38 is_stmt 0 view .LVU145
- 503 0054 0721     		movs	r1, #7
- 504 0056 2846     		mov	r0, r5
- 505 0058 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 506              	.LVL33:
- 507              		.loc 1 92 28 discriminator 1 view .LVU146
- 508 005c C0F30740 		ubfx	r0, r0, #16, #8
- 509              		.loc 1 92 26 discriminator 1 view .LVU147
- 510 0060 84F86100 		strb	r0, [r4, #97]
+ 485              		.loc 1 92 5 is_stmt 1 view .LVU139
+ 486              		.loc 1 92 38 is_stmt 0 view .LVU140
+ 487 0054 0721     		movs	r1, #7
+ 488 0056 2846     		mov	r0, r5
+ 489 0058 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 490              	.LVL30:
+ 491              		.loc 1 92 28 discriminator 1 view .LVU141
+ 492 005c C0F30740 		ubfx	r0, r0, #16, #8
+ 493              		.loc 1 92 26 discriminator 1 view .LVU142
+ 494 0060 84F86100 		strb	r0, [r4, #97]
   93:Core/Src/queue.c ****     data_queue.write_ptr = (uint8_t)(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR7) >> 8);
- 511              		.loc 1 93 5 is_stmt 1 view .LVU148
- 512              		.loc 1 93 38 is_stmt 0 view .LVU149
- 513 0064 0721     		movs	r1, #7
- 514 0066 2846     		mov	r0, r5
- 515 0068 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 516              	.LVL34:
- 517              		.loc 1 93 28 discriminator 1 view .LVU150
- 518 006c C0F30720 		ubfx	r0, r0, #8, #8
- 519              		.loc 1 93 26 discriminator 1 view .LVU151
- 520 0070 84F86000 		strb	r0, [r4, #96]
+ 495              		.loc 1 93 5 is_stmt 1 view .LVU143
+ 496              		.loc 1 93 38 is_stmt 0 view .LVU144
+ 497 0064 0721     		movs	r1, #7
+ 498 0066 2846     		mov	r0, r5
+ 499 0068 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 500              	.LVL31:
+ 501              		.loc 1 93 28 discriminator 1 view .LVU145
+ 502 006c C0F30720 		ubfx	r0, r0, #8, #8
+ 503              		.loc 1 93 26 discriminator 1 view .LVU146
+ 504 0070 84F86000 		strb	r0, [r4, #96]
   94:Core/Src/queue.c ****     data_queue.is_first_writing = (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR7) & 0x01) != 0;
- 521              		.loc 1 94 5 is_stmt 1 view .LVU152
- 522              		.loc 1 94 36 is_stmt 0 view .LVU153
- 523 0074 0721     		movs	r1, #7
- 524 0076 2846     		mov	r0, r5
- 525 0078 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 526              	.LVL35:
- 527              		.loc 1 94 5 discriminator 1 view .LVU154
- 528 007c 00F00100 		and	r0, r0, #1
- 529              		.loc 1 94 33 discriminator 1 view .LVU155
- 530 0080 84F86200 		strb	r0, [r4, #98]
+ 505              		.loc 1 94 5 is_stmt 1 view .LVU147
+ 506              		.loc 1 94 36 is_stmt 0 view .LVU148
+ 507 0074 0721     		movs	r1, #7
+ 508 0076 2846     		mov	r0, r5
+ 509 0078 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 510              	.LVL32:
+ 511              		.loc 1 94 5 discriminator 1 view .LVU149
+ 512 007c 00F00100 		and	r0, r0, #1
+ 513              		.loc 1 94 33 discriminator 1 view .LVU150
+ 514 0080 84F86200 		strb	r0, [r4, #98]
   95:Core/Src/queue.c ****     return true;
- 531              		.loc 1 95 5 is_stmt 1 view .LVU156
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 12
-
-
- 532              		.loc 1 95 12 is_stmt 0 view .LVU157
- 533 0084 0120     		movs	r0, #1
- 534              	.LVL36:
- 535              	.L25:
+ 515              		.loc 1 95 5 is_stmt 1 view .LVU151
+ 516              		.loc 1 95 12 is_stmt 0 view .LVU152
+ 517 0084 0120     		movs	r0, #1
+ 518              	.LVL33:
+ 519              	.L25:
   96:Core/Src/queue.c **** }
- 536              		.loc 1 96 1 view .LVU158
- 537 0086 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 538              	.L28:
+ 520              		.loc 1 96 1 view .LVU153
+ 521 0086 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 522              	.L28:
   86:Core/Src/queue.c ****     for (int i = 0; i < 24; i++) {
- 539              		.loc 1 86 63 discriminator 1 view .LVU159
- 540 008a 0020     		movs	r0, #0
- 541 008c FBE7     		b	.L25
- 542              	.L31:
- 543 008e 00BF     		.align	2
- 544              	.L30:
- 545 0090 00000000 		.word	hrtc
- 546 0094 FF55FFAA 		.word	-1426106881
- 547 0098 00000000 		.word	data_queue
- 548              		.cfi_endproc
- 549              	.LFE323:
- 551              		.section	.text.q_len,"ax",%progbits
- 552              		.align	1
- 553              		.global	q_len
- 554              		.syntax unified
- 555              		.thumb
- 556              		.thumb_func
- 558              	q_len:
- 559              	.LFB324:
+ 523              		.loc 1 86 63 discriminator 1 view .LVU154
+ 524 008a 0020     		movs	r0, #0
+ 525 008c FBE7     		b	.L25
+ 526              	.L31:
+ 527 008e 00BF     		.align	2
+ 528              	.L30:
+ 529 0090 00000000 		.word	hrtc
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 12
+
+
+ 530 0094 FF55FFAA 		.word	-1426106881
+ 531 0098 00000000 		.word	data_queue
+ 532              		.cfi_endproc
+ 533              	.LFE323:
+ 535              		.section	.text.q_len,"ax",%progbits
+ 536              		.align	1
+ 537              		.global	q_len
+ 538              		.syntax unified
+ 539              		.thumb
+ 540              		.thumb_func
+ 542              	q_len:
+ 543              	.LFB324:
   97:Core/Src/queue.c **** 
   98:Core/Src/queue.c **** uint16_t q_len(void){
- 560              		.loc 1 98 21 is_stmt 1 view -0
- 561              		.cfi_startproc
- 562              		@ args = 0, pretend = 0, frame = 0
- 563              		@ frame_needed = 0, uses_anonymous_args = 0
- 564              		@ link register save eliminated.
+ 544              		.loc 1 98 21 is_stmt 1 view -0
+ 545              		.cfi_startproc
+ 546              		@ args = 0, pretend = 0, frame = 0
+ 547              		@ frame_needed = 0, uses_anonymous_args = 0
+ 548              		@ link register save eliminated.
   99:Core/Src/queue.c ****     return data_queue.length;
- 565              		.loc 1 99 5 view .LVU161
+ 549              		.loc 1 99 5 view .LVU156
  100:Core/Src/queue.c **** }...
- 566              		.loc 1 100 1 is_stmt 0 view .LVU162
- 567 0000 014B     		ldr	r3, .L33
- 568 0002 93F86300 		ldrb	r0, [r3, #99]	@ zero_extendqisi2
- 569 0006 7047     		bx	lr
- 570              	.L34:
- 571              		.align	2
- 572              	.L33:
- 573 0008 00000000 		.word	data_queue
- 574              		.cfi_endproc
- 575              	.LFE324:
- 577              		.section	.bss.flag,"aw",%nobits
- 580              	flag:
- 581 0000 00       		.space	1
- 582              		.global	data_queue
- 583              		.section	.bss.data_queue,"aw",%nobits
- 584              		.align	2
- 587              	data_queue:
- 588 0000 00000000 		.space	100
- 588      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 13
+ 550              		.loc 1 100 1 is_stmt 0 view .LVU157
+ 551 0000 014B     		ldr	r3, .L33
+ 552 0002 93F86300 		ldrb	r0, [r3, #99]	@ zero_extendqisi2
+ 553 0006 7047     		bx	lr
+ 554              	.L34:
+ 555              		.align	2
+ 556              	.L33:
+ 557 0008 00000000 		.word	data_queue
+ 558              		.cfi_endproc
+ 559              	.LFE324:
+ 561              		.section	.bss.flag,"aw",%nobits
+ 564              	flag:
+ 565 0000 00       		.space	1
+ 566              		.global	data_queue
+ 567              		.section	.bss.data_queue,"aw",%nobits
+ 568              		.align	2
+ 571              	data_queue:
+ 572 0000 00000000 		.space	100
+ 572      00000000 
+ 572      00000000 
+ 572      00000000 
+ 572      00000000 
+ 573              		.text
+ 574              	.Letext0:
+ 575              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 576              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ 577              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 578              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 579              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
+ 580              		.file 7 "Core/Inc/queue.h"
+ 581              		.file 8 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ 582              		.file 9 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ti
+ 583              		.file 10 "Core/Inc/USB_storage.h"
+ 584              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h"
+ 585              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 13
 
 
- 588      00000000 
- 588      00000000 
- 588      00000000 
- 589              		.text
- 590              	.Letext0:
- 591              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
- 592              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
- 593              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
- 594              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 595              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
- 596              		.file 7 "Core/Inc/queue.h"
- 597              		.file 8 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
- 598              		.file 9 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ti
- 599              		.file 10 "Core/Inc/USB_storage.h"
- 600              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h"
- 601              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 queue.c
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:21     .text.q_init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:27     .text.q_init:00000000 q_init
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:54     .text.q_init:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:587    .bss.data_queue:00000000 data_queue
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:59     .text.q_push:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:65     .text.q_push:00000000 q_push
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:257    .text.q_push:000000e0 $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:580    .bss.flag:00000000 flag
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:264    .text.q_get:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:270    .text.q_get:00000000 q_get
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:310    .text.q_get:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:315    .text.q_save:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:321    .text.q_save:00000000 q_save
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:410    .text.q_save:00000068 $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:417    .text.q_load:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:423    .text.q_load:00000000 q_load
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:545    .text.q_load:00000090 $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:552    .text.q_len:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:558    .text.q_len:00000000 q_len
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:573    .text.q_len:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:581    .bss.flag:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccEuR7Ud.s:584    .bss.data_queue:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:21     .text.q_init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:27     .text.q_init:00000000 q_init
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:54     .text.q_init:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:571    .bss.data_queue:00000000 data_queue
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:59     .text.q_push:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:65     .text.q_push:00000000 q_push
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:241    .text.q_push:000000cc $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:564    .bss.flag:00000000 flag
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:248    .text.q_get:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:254    .text.q_get:00000000 q_get
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:294    .text.q_get:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:299    .text.q_save:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:305    .text.q_save:00000000 q_save
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:394    .text.q_save:00000068 $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:401    .text.q_load:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:407    .text.q_load:00000000 q_load
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:529    .text.q_load:00000090 $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:536    .text.q_len:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:542    .text.q_len:00000000 q_len
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:557    .text.q_len:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:565    .bss.flag:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc9NuUTg.s:568    .bss.data_queue:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_RTC_GetTime
@@ -771,6 +755,6 @@ HAL_RTC_GetDate
 mktime
 HAL_PWR_EnableBkUpAccess
 UDISK_push
-HAL_RTCEx_BKUPRead
 HAL_RTCEx_BKUPWrite
 hrtc
+HAL_RTCEx_BKUPRead

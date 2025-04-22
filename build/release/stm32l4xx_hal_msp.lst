@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
   57              		.thumb_func
   59              	HAL_ADC_MspInit:
   60              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 2
 
 
   61              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  115              		.align	2
  116              	.L14:
  117 0074 00000450 		.word	1342439424
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 3
 
 
  118 0078 00000000 		.word	hdma_adc1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  176 0018 0EB0     		add	sp, sp, #56
  177              		@ sp needed
  178 001a 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 4
 
 
  179              	.L26:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  235              	.L34:
  236 0024 00280040 		.word	1073752064
  237 0028 00100240 		.word	1073876992
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 5
 
 
  239              		.section	.text.HAL_SPI_MspInit,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  294              	.L40:
  295 0060 00300140 		.word	1073819648
  297              		.section	.text.HAL_SPI_MspDeInit,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 6
 
 
  298              		.align	1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  355              	.L48:
  356 0022 14B0     		add	sp, sp, #80
  357              		@ sp needed
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 7
 
 
  358 0024 10BD     		pop	{r4, pc}
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  414 0000 08B5     		push	{r3, lr}
  415 0002 0268     		ldr	r2, [r0]
  416 0004 074B     		ldr	r3, .L60
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 8
 
 
  417 0006 9A42     		cmp	r2, r3
@@ -440,38 +440,38 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 1
  433 0024 00440040 		.word	1073759232
  434 0028 00100240 		.word	1073876992
  436              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_msp.c
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:18     .text.HAL_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:50     .text.HAL_MspInit:0000002c $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:53     .text.HAL_ADC_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:59     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:117    .text.HAL_ADC_MspInit:00000074 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:122    .text.HAL_ADC_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:128    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:151    .text.HAL_ADC_MspDeInit:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:155    .text.HAL_RTC_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:161    .text.HAL_RTC_MspInit:00000000 HAL_RTC_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:205    .text.HAL_RTC_MspInit:00000058 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:209    .text.HAL_RTC_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:215    .text.HAL_RTC_MspDeInit:00000000 HAL_RTC_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:236    .text.HAL_RTC_MspDeInit:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:240    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:246    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:295    .text.HAL_SPI_MspInit:00000060 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:298    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:304    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:326    .text.HAL_SPI_MspDeInit:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:330    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:336    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:401    .text.HAL_UART_MspInit:00000080 $d
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:405    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:411    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\ccqI37Qe.s:433    .text.HAL_UART_MspDeInit:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:18     .text.HAL_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:50     .text.HAL_MspInit:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:53     .text.HAL_ADC_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:59     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:117    .text.HAL_ADC_MspInit:00000074 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:122    .text.HAL_ADC_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:128    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:151    .text.HAL_ADC_MspDeInit:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:155    .text.HAL_RTC_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:161    .text.HAL_RTC_MspInit:00000000 HAL_RTC_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:205    .text.HAL_RTC_MspInit:00000058 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:209    .text.HAL_RTC_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:215    .text.HAL_RTC_MspDeInit:00000000 HAL_RTC_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:236    .text.HAL_RTC_MspDeInit:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:240    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:246    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:295    .text.HAL_SPI_MspInit:00000060 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:298    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:304    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:326    .text.HAL_SPI_MspDeInit:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:330    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:336    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:401    .text.HAL_UART_MspInit:00000080 $d
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:405    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:411    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccYSbRFl.s:433    .text.HAL_UART_MspDeInit:00000024 $d
 
 UNDEFINED SYMBOLS
 HAL_DMA_Init

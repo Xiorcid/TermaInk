@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
   58 0004 F8B5     		push	{r3, r4, r5, r6, r7, lr}
   59 0006 0F46     		mov	r7, r1
   60 0008 1646     		mov	r6, r2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 2
 
 
   61 000a 1D46     		mov	r5, r3
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  116              		.align	1
  117              		.weak	HAL_UARTEx_WakeupCallback
  118              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 3
 
 
  119              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  178              	HAL_UARTEx_DisableClockStopMode:
  179              		@ args = 0, pretend = 0, frame = 0
  180              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 4
 
 
  181              		@ link register save eliminated.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  237 001e 4160     		str	r1, [r0, #4]
  238 0020 1968     		ldr	r1, [r3]
  239 0022 0A68     		ldr	r2, [r1]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 5
 
 
  240 0024 42F00102 		orr	r2, r2, #1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  296 005c 2023     		movs	r3, #32
  297 005e E367     		str	r3, [r4, #124]
  298              	.L33:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 6
 
 
  299 0060 0023     		movs	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  355 002a 0220     		movs	r0, #2
  356 002c 7047     		bx	lr
  358              		.section	.text.HAL_UARTEx_DisableStopMode,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 7
 
 
  359              		.align	1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  416 0014 0F46     		mov	r7, r1
  417 0016 9146     		mov	r9, r2
  418 0018 0029     		cmp	r1, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 8
 
 
  419 001a 00F0A080 		beq	.L65
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  473 0098 2269     		ldr	r2, [r4, #16]
  474 009a 1AB9     		cbnz	r2, .L54
  475 009c 7F22     		movs	r2, #127
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 9
 
 
  476 009e A4F85C20 		strh	r2, [r4, #92]	@ movhi
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  530 010e 12F0200F 		tst	r2, #32
  531 0112 E9D0     		beq	.L58
  532 0114 002F     		cmp	r7, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 10
 
 
  533 0116 D8D0     		beq	.L77
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  589              	.L90:
  590 0014 0123     		movs	r3, #1
  591 0016 0366     		str	r3, [r0, #96]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 11
 
 
  592 0018 0023     		movs	r3, #0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  648              	.L93:
  649 0012 10BD     		pop	{r4, pc}
  650              	.L104:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 12
 
 
  651 0014 0123     		movs	r3, #1
@@ -714,37 +714,37 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 1
  703 0000 406E     		ldr	r0, [r0, #100]
  704 0002 7047     		bx	lr
  706              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_uart_ex.c
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:18     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:23     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:47     .text.HAL_RS485Ex_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:53     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:116    .text.HAL_UARTEx_WakeupCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:122    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:129    .text.HAL_UARTEx_EnableClockStopMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:135    .text.HAL_UARTEx_EnableClockStopMode:00000000 HAL_UARTEx_EnableClockStopMode
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:172    .text.HAL_UARTEx_DisableClockStopMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:178    .text.HAL_UARTEx_DisableClockStopMode:00000000 HAL_UARTEx_DisableClockStopMode
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:215    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:221    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:250    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:256    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:318    .text.HAL_UARTEx_EnableStopMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:324    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:359    .text.HAL_UARTEx_DisableStopMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:365    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:400    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:406    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:570    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:576    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:631    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:637    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:693    .text.HAL_UARTEx_GetRxEventType:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccKRbxGk.s:699    .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:18     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:23     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:47     .text.HAL_RS485Ex_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:53     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:116    .text.HAL_UARTEx_WakeupCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:122    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:129    .text.HAL_UARTEx_EnableClockStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:135    .text.HAL_UARTEx_EnableClockStopMode:00000000 HAL_UARTEx_EnableClockStopMode
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:172    .text.HAL_UARTEx_DisableClockStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:178    .text.HAL_UARTEx_DisableClockStopMode:00000000 HAL_UARTEx_DisableClockStopMode
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:215    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:221    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:250    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:256    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:318    .text.HAL_UARTEx_EnableStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:324    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:359    .text.HAL_UARTEx_DisableStopMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:365    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:400    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:406    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:570    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:576    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:631    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:637    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:693    .text.HAL_UARTEx_GetRxEventType:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc1nWzgA.s:699    .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
 
 UNDEFINED SYMBOLS
 UART_SetConfig

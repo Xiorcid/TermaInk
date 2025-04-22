@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 1
   60 0000 FEE7     		b	.L6
   62              		.section	.text.BusFault_Handler,"ax",%progbits
   63              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s 			page 2
 
 
   64              		.global	BusFault_Handler
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 1
  127              		@ frame_needed = 0, uses_anonymous_args = 0
  128              		@ link register save eliminated.
  129 0000 7047     		bx	lr
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s 			page 3
 
 
  131              		.section	.text.SysTick_Handler,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 1
  192 0008 08BD     		pop	{r3, pc}
  193              	.L25:
  194 000a 00BF     		.align	2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s 			page 4
 
 
  195              	.L24:
@@ -200,61 +200,76 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 1
  213 000a 00BF     		.align	2
  214              	.L28:
  215 000c 00000000 		.word	hadc1
- 217              		.section	.text.USB_IRQHandler,"ax",%progbits
+ 217              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
  218              		.align	1
- 219              		.global	USB_IRQHandler
+ 219              		.global	EXTI9_5_IRQHandler
  220              		.syntax unified
  221              		.thumb
  222              		.thumb_func
- 224              	USB_IRQHandler:
+ 224              	EXTI9_5_IRQHandler:
  225              		@ args = 0, pretend = 0, frame = 0
  226              		@ frame_needed = 0, uses_anonymous_args = 0
  227 0000 08B5     		push	{r3, lr}
- 228 0002 0248     		ldr	r0, .L32
- 229 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 228 0002 2020     		movs	r0, #32
+ 229 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
  230 0008 08BD     		pop	{r3, pc}
- 231              	.L33:
- 232 000a 00BF     		.align	2
- 233              	.L32:
- 234 000c 00000000 		.word	hpcd_USB_FS
- 236              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s 			page 5
+ 232              		.section	.text.USB_IRQHandler,"ax",%progbits
+ 233              		.align	1
+ 234              		.global	USB_IRQHandler
+ 235              		.syntax unified
+ 236              		.thumb
+ 237              		.thumb_func
+ 239              	USB_IRQHandler:
+ 240              		@ args = 0, pretend = 0, frame = 0
+ 241              		@ frame_needed = 0, uses_anonymous_args = 0
+ 242 0000 08B5     		push	{r3, lr}
+ 243 0002 0248     		ldr	r0, .L34
+ 244 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 245 0008 08BD     		pop	{r3, pc}
+ 246              	.L35:
+ 247 000a 00BF     		.align	2
+ 248              	.L34:
+ 249 000c 00000000 		.word	hpcd_USB_FS
+ 251              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_it.c
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:18     .text.NMI_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:33     .text.HardFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:39     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:48     .text.MemManage_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:54     .text.MemManage_Handler:00000000 MemManage_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:63     .text.BusFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:69     .text.BusFault_Handler:00000000 BusFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:78     .text.UsageFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:84     .text.UsageFault_Handler:00000000 UsageFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:93     .text.SVC_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:99     .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:106    .text.DebugMon_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:112    .text.DebugMon_Handler:00000000 DebugMon_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:119    .text.PendSV_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:125    .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:132    .text.SysTick_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:138    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:146    .text.RTC_WKUP_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:152    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:162    .text.RTC_WKUP_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:165    .text.EXTI0_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:171    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:180    .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:186    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:196    .text.DMA1_Channel1_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:199    .text.ADC1_2_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:205    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:215    .text.ADC1_2_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:218    .text.USB_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:224    .text.USB_IRQHandler:00000000 USB_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccAS77Lr.s:234    .text.USB_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:18     .text.NMI_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:33     .text.HardFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:39     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:48     .text.MemManage_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:54     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:63     .text.BusFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:69     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:78     .text.UsageFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:84     .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:93     .text.SVC_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:99     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:106    .text.DebugMon_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:112    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:119    .text.PendSV_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:125    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:132    .text.SysTick_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:138    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:146    .text.RTC_WKUP_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:152    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:162    .text.RTC_WKUP_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:165    .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:171    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:180    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:186    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:196    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:199    .text.ADC1_2_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:205    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:215    .text.ADC1_2_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:218    .text.EXTI9_5_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:224    .text.EXTI9_5_IRQHandler:00000000 EXTI9_5_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:233    .text.USB_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:239    .text.USB_IRQHandler:00000000 USB_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc17ao3G.s:249    .text.USB_IRQHandler:0000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick

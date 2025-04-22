@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
   28:USB_DEVICE/App/usb_device.c **** 
   29:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN Includes */
   30:USB_DEVICE/App/usb_device.c **** #include "stdbool.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s 			page 2
 
 
   31:USB_DEVICE/App/usb_device.c **** /* USER CODE END Includes */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
   52              		.align	1
   53              		.global	MX_USB_DEVICE_Init
   54              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s 			page 3
 
 
   55              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
   88              		.loc 1 84 7 is_stmt 0 view .LVU12
   89 0018 0D49     		ldr	r1, .L14+12
   90 001a 0B48     		ldr	r0, .L14+4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s 			page 4
 
 
   91 001c FFF7FEFF 		bl	USBD_CDC_RegisterInterface
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
  130 0044 00000000 		.word	FS_Desc
  131 0048 00000000 		.word	hUsbDeviceFS
  132 004c 00000000 		.word	USBD_CDC
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s 			page 5
 
 
  133 0050 00000000 		.word	USBD_Interface_fops_FS
@@ -263,19 +263,19 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 1
  151              		.file 7 "USB_DEVICE/App/usbd_cdc_if.h"
  152              		.file 8 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
  153              		.file 9 "Core/Inc/main.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_device.c
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:21     .text.MX_USB_DEVICE_IsConnected:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:27     .text.MX_USB_DEVICE_IsConnected:00000000 MX_USB_DEVICE_IsConnected
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:47     .text.MX_USB_DEVICE_IsConnected:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:142    .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:52     .text.MX_USB_DEVICE_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:58     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:130    .text.MX_USB_DEVICE_Init:00000044 $d
-C:\Users\kroko\AppData\Local\Temp\cc3pYEdl.s:139    .bss.hUsbDeviceFS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:21     .text.MX_USB_DEVICE_IsConnected:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:27     .text.MX_USB_DEVICE_IsConnected:00000000 MX_USB_DEVICE_IsConnected
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:47     .text.MX_USB_DEVICE_IsConnected:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:142    .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:52     .text.MX_USB_DEVICE_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:58     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:130    .text.MX_USB_DEVICE_Init:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\ccHBdpzd.s:139    .bss.hUsbDeviceFS:00000000 $d
 
 UNDEFINED SYMBOLS
 USBD_Init

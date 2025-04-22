@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 1
   57              		.align	1
   58              		.global	HAL_PCDEx_ActivateBCD
   59              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s 			page 2
 
 
   60              		.thumb
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 1
  118              		.thumb_func
  120              	HAL_PCDEx_ActivateLPM:
  121              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s 			page 3
 
 
  122              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 1
  181              		.align	1
  182              		.weak	HAL_PCDEx_BCD_Callback
  183              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s 			page 4
 
 
  184              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 1
  241 0076 3220     		movs	r0, #50
  242 0078 FFF7FEFF 		bl	HAL_Delay
  243 007c B4F85830 		ldrh	r3, [r4, #88]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s 			page 5
 
 
  244 0080 13F0400F 		tst	r3, #64
@@ -279,27 +279,27 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 1
  279 00cc FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
  280 00d0 F9E7     		b	.L12
  282              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_pcd_ex.c
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:18     .text.HAL_PCDEx_PMAConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:24     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:57     .text.HAL_PCDEx_ActivateBCD:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:63     .text.HAL_PCDEx_ActivateBCD:00000000 HAL_PCDEx_ActivateBCD
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:92     .text.HAL_PCDEx_DeActivateBCD:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:98     .text.HAL_PCDEx_DeActivateBCD:00000000 HAL_PCDEx_DeActivateBCD
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:114    .text.HAL_PCDEx_ActivateLPM:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:120    .text.HAL_PCDEx_ActivateLPM:00000000 HAL_PCDEx_ActivateLPM
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:141    .text.HAL_PCDEx_DeActivateLPM:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:147    .text.HAL_PCDEx_DeActivateLPM:00000000 HAL_PCDEx_DeActivateLPM
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:168    .text.HAL_PCDEx_LPM_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:174    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:181    .text.HAL_PCDEx_BCD_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:187    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:194    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccHmczIh.s:200    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 HAL_PCDEx_BCD_VBUSDetect
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:18     .text.HAL_PCDEx_PMAConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:24     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:57     .text.HAL_PCDEx_ActivateBCD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:63     .text.HAL_PCDEx_ActivateBCD:00000000 HAL_PCDEx_ActivateBCD
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:92     .text.HAL_PCDEx_DeActivateBCD:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:98     .text.HAL_PCDEx_DeActivateBCD:00000000 HAL_PCDEx_DeActivateBCD
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:114    .text.HAL_PCDEx_ActivateLPM:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:120    .text.HAL_PCDEx_ActivateLPM:00000000 HAL_PCDEx_ActivateLPM
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:141    .text.HAL_PCDEx_DeActivateLPM:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:147    .text.HAL_PCDEx_DeActivateLPM:00000000 HAL_PCDEx_DeActivateLPM
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:168    .text.HAL_PCDEx_LPM_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:174    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:181    .text.HAL_PCDEx_BCD_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:187    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:194    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccoitzQz.s:200    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 HAL_PCDEx_BCD_VBUSDetect
 
 UNDEFINED SYMBOLS
 HAL_GetTick

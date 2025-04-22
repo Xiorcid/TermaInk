@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,149 +58,141 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s 			page 1
   62              	CDC_Receive_FS:
   63              		@ args = 0, pretend = 0, frame = 0
   64              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s 			page 2
 
 
   65 0000 38B5     		push	{r3, r4, r5, lr}
-  66 0002 0C46     		mov	r4, r1
-  67 0004 094D     		ldr	r5, .L6
-  68 0006 0146     		mov	r1, r0
-  69 0008 2846     		mov	r0, r5
-  70 000a FFF7FEFF 		bl	USBD_CDC_SetRxBuffer
+  66 0002 0446     		mov	r4, r0
+  67 0004 0968     		ldr	r1, [r1]
+  68 0006 FFF7FEFF 		bl	USB_CDC_RxHandler
+  69 000a 054D     		ldr	r5, .L6
+  70 000c 2146     		mov	r1, r4
   71 000e 2846     		mov	r0, r5
-  72 0010 FFF7FEFF 		bl	USBD_CDC_ReceivePacket
-  73 0014 064D     		ldr	r5, .L6+4
-  74 0016 2168     		ldr	r1, [r4]
-  75 0018 2846     		mov	r0, r5
-  76 001a FFF7FEFF 		bl	USB_CDC_RxHandler
-  77 001e 2268     		ldr	r2, [r4]
-  78 0020 0021     		movs	r1, #0
-  79 0022 2846     		mov	r0, r5
-  80 0024 FFF7FEFF 		bl	memset
-  81 0028 0020     		movs	r0, #0
-  82 002a 38BD     		pop	{r3, r4, r5, pc}
-  83              	.L7:
-  84              		.align	2
-  85              	.L6:
-  86 002c 00000000 		.word	hUsbDeviceFS
-  87 0030 00000000 		.word	UserRxBufferFS
-  89              		.section	.text.CDC_Init_FS,"ax",%progbits
-  90              		.align	1
-  91              		.syntax unified
-  92              		.thumb
-  93              		.thumb_func
-  95              	CDC_Init_FS:
-  96              		@ args = 0, pretend = 0, frame = 0
-  97              		@ frame_needed = 0, uses_anonymous_args = 0
-  98 0000 10B5     		push	{r4, lr}
-  99 0002 064C     		ldr	r4, .L10
- 100 0004 0022     		movs	r2, #0
- 101 0006 0649     		ldr	r1, .L10+4
- 102 0008 2046     		mov	r0, r4
- 103 000a FFF7FEFF 		bl	USBD_CDC_SetTxBuffer
- 104 000e 0549     		ldr	r1, .L10+8
- 105 0010 2046     		mov	r0, r4
- 106 0012 FFF7FEFF 		bl	USBD_CDC_SetRxBuffer
- 107 0016 0020     		movs	r0, #0
- 108 0018 10BD     		pop	{r4, pc}
- 109              	.L11:
- 110 001a 00BF     		.align	2
- 111              	.L10:
- 112 001c 00000000 		.word	hUsbDeviceFS
- 113 0020 00000000 		.word	UserTxBufferFS
- 114 0024 00000000 		.word	UserRxBufferFS
- 116              		.section	.text.CDC_Transmit_FS,"ax",%progbits
- 117              		.align	1
- 118              		.global	CDC_Transmit_FS
- 119              		.syntax unified
- 120              		.thumb
- 121              		.thumb_func
- 123              	CDC_Transmit_FS:
- 124              		@ args = 0, pretend = 0, frame = 0
- 125              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s 			page 3
+  72 0010 FFF7FEFF 		bl	USBD_CDC_SetRxBuffer
+  73 0014 2846     		mov	r0, r5
+  74 0016 FFF7FEFF 		bl	USBD_CDC_ReceivePacket
+  75 001a 0020     		movs	r0, #0
+  76 001c 38BD     		pop	{r3, r4, r5, pc}
+  77              	.L7:
+  78 001e 00BF     		.align	2
+  79              	.L6:
+  80 0020 00000000 		.word	hUsbDeviceFS
+  82              		.section	.text.CDC_Init_FS,"ax",%progbits
+  83              		.align	1
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  88              	CDC_Init_FS:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91 0000 10B5     		push	{r4, lr}
+  92 0002 064C     		ldr	r4, .L10
+  93 0004 0022     		movs	r2, #0
+  94 0006 0649     		ldr	r1, .L10+4
+  95 0008 2046     		mov	r0, r4
+  96 000a FFF7FEFF 		bl	USBD_CDC_SetTxBuffer
+  97 000e 0549     		ldr	r1, .L10+8
+  98 0010 2046     		mov	r0, r4
+  99 0012 FFF7FEFF 		bl	USBD_CDC_SetRxBuffer
+ 100 0016 0020     		movs	r0, #0
+ 101 0018 10BD     		pop	{r4, pc}
+ 102              	.L11:
+ 103 001a 00BF     		.align	2
+ 104              	.L10:
+ 105 001c 00000000 		.word	hUsbDeviceFS
+ 106 0020 00000000 		.word	UserTxBufferFS
+ 107 0024 00000000 		.word	UserRxBufferFS
+ 109              		.section	.text.CDC_Transmit_FS,"ax",%progbits
+ 110              		.align	1
+ 111              		.global	CDC_Transmit_FS
+ 112              		.syntax unified
+ 113              		.thumb
+ 114              		.thumb_func
+ 116              	CDC_Transmit_FS:
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119 0000 094B     		ldr	r3, .L20
+ 120 0002 D3F8BC32 		ldr	r3, [r3, #700]
+ 121 0006 D3F81432 		ldr	r3, [r3, #532]
+ 122 000a 0BB1     		cbz	r3, .L19
+ 123 000c 0120     		movs	r0, #1
+ 124 000e 7047     		bx	lr
+ 125              	.L19:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s 			page 3
 
 
- 126 0000 094B     		ldr	r3, .L20
- 127 0002 D3F8BC32 		ldr	r3, [r3, #700]
- 128 0006 D3F81432 		ldr	r3, [r3, #532]
- 129 000a 0BB1     		cbz	r3, .L19
- 130 000c 0120     		movs	r0, #1
- 131 000e 7047     		bx	lr
- 132              	.L19:
- 133 0010 10B5     		push	{r4, lr}
- 134 0012 054C     		ldr	r4, .L20
- 135 0014 0A46     		mov	r2, r1
- 136 0016 0146     		mov	r1, r0
- 137 0018 2046     		mov	r0, r4
- 138 001a FFF7FEFF 		bl	USBD_CDC_SetTxBuffer
- 139 001e 2046     		mov	r0, r4
- 140 0020 FFF7FEFF 		bl	USBD_CDC_TransmitPacket
- 141 0024 10BD     		pop	{r4, pc}
- 142              	.L21:
- 143 0026 00BF     		.align	2
- 144              	.L20:
- 145 0028 00000000 		.word	hUsbDeviceFS
- 147              		.global	USBD_Interface_fops_FS
- 148              		.section	.data.USBD_Interface_fops_FS,"aw"
- 149              		.align	2
- 152              	USBD_Interface_fops_FS:
- 153 0000 00000000 		.word	CDC_Init_FS
- 154 0004 00000000 		.word	CDC_DeInit_FS
- 155 0008 00000000 		.word	CDC_Control_FS
- 156 000c 00000000 		.word	CDC_Receive_FS
- 157 0010 00000000 		.word	CDC_TransmitCplt_FS
- 158              		.global	UserTxBufferFS
- 159              		.section	.bss.UserTxBufferFS,"aw",%nobits
+ 126 0010 10B5     		push	{r4, lr}
+ 127 0012 054C     		ldr	r4, .L20
+ 128 0014 0A46     		mov	r2, r1
+ 129 0016 0146     		mov	r1, r0
+ 130 0018 2046     		mov	r0, r4
+ 131 001a FFF7FEFF 		bl	USBD_CDC_SetTxBuffer
+ 132 001e 2046     		mov	r0, r4
+ 133 0020 FFF7FEFF 		bl	USBD_CDC_TransmitPacket
+ 134 0024 10BD     		pop	{r4, pc}
+ 135              	.L21:
+ 136 0026 00BF     		.align	2
+ 137              	.L20:
+ 138 0028 00000000 		.word	hUsbDeviceFS
+ 140              		.global	USBD_Interface_fops_FS
+ 141              		.section	.data.USBD_Interface_fops_FS,"aw"
+ 142              		.align	2
+ 145              	USBD_Interface_fops_FS:
+ 146 0000 00000000 		.word	CDC_Init_FS
+ 147 0004 00000000 		.word	CDC_DeInit_FS
+ 148 0008 00000000 		.word	CDC_Control_FS
+ 149 000c 00000000 		.word	CDC_Receive_FS
+ 150 0010 00000000 		.word	CDC_TransmitCplt_FS
+ 151              		.global	UserTxBufferFS
+ 152              		.section	.bss.UserTxBufferFS,"aw",%nobits
+ 153              		.align	2
+ 156              	UserTxBufferFS:
+ 157 0000 00000000 		.space	1024
+ 157      00000000 
+ 157      00000000 
+ 157      00000000 
+ 157      00000000 
+ 158              		.global	UserRxBufferFS
+ 159              		.section	.bss.UserRxBufferFS,"aw",%nobits
  160              		.align	2
- 163              	UserTxBufferFS:
+ 163              	UserRxBufferFS:
  164 0000 00000000 		.space	1024
  164      00000000 
  164      00000000 
  164      00000000 
  164      00000000 
- 165              		.global	UserRxBufferFS
- 166              		.section	.bss.UserRxBufferFS,"aw",%nobits
- 167              		.align	2
- 170              	UserRxBufferFS:
- 171 0000 00000000 		.space	1024
- 171      00000000 
- 171      00000000 
- 171      00000000 
- 171      00000000 
- 172              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s 			page 4
+ 165              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_cdc_if.c
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:18     .text.CDC_DeInit_FS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:23     .text.CDC_DeInit_FS:00000000 CDC_DeInit_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:31     .text.CDC_Control_FS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:36     .text.CDC_Control_FS:00000000 CDC_Control_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:44     .text.CDC_TransmitCplt_FS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:49     .text.CDC_TransmitCplt_FS:00000000 CDC_TransmitCplt_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:57     .text.CDC_Receive_FS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:62     .text.CDC_Receive_FS:00000000 CDC_Receive_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:86     .text.CDC_Receive_FS:0000002c $d
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:170    .bss.UserRxBufferFS:00000000 UserRxBufferFS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:90     .text.CDC_Init_FS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:95     .text.CDC_Init_FS:00000000 CDC_Init_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:112    .text.CDC_Init_FS:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:163    .bss.UserTxBufferFS:00000000 UserTxBufferFS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:117    .text.CDC_Transmit_FS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:123    .text.CDC_Transmit_FS:00000000 CDC_Transmit_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:145    .text.CDC_Transmit_FS:00000028 $d
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:152    .data.USBD_Interface_fops_FS:00000000 USBD_Interface_fops_FS
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:149    .data.USBD_Interface_fops_FS:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:160    .bss.UserTxBufferFS:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccIUdy48.s:167    .bss.UserRxBufferFS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:18     .text.CDC_DeInit_FS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:23     .text.CDC_DeInit_FS:00000000 CDC_DeInit_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:31     .text.CDC_Control_FS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:36     .text.CDC_Control_FS:00000000 CDC_Control_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:44     .text.CDC_TransmitCplt_FS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:49     .text.CDC_TransmitCplt_FS:00000000 CDC_TransmitCplt_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:57     .text.CDC_Receive_FS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:62     .text.CDC_Receive_FS:00000000 CDC_Receive_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:80     .text.CDC_Receive_FS:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:83     .text.CDC_Init_FS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:88     .text.CDC_Init_FS:00000000 CDC_Init_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:105    .text.CDC_Init_FS:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:156    .bss.UserTxBufferFS:00000000 UserTxBufferFS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:163    .bss.UserRxBufferFS:00000000 UserRxBufferFS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:110    .text.CDC_Transmit_FS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:116    .text.CDC_Transmit_FS:00000000 CDC_Transmit_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:138    .text.CDC_Transmit_FS:00000028 $d
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:145    .data.USBD_Interface_fops_FS:00000000 USBD_Interface_fops_FS
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:142    .data.USBD_Interface_fops_FS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:153    .bss.UserTxBufferFS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccQvQr2a.s:160    .bss.UserRxBufferFS:00000000 $d
 
 UNDEFINED SYMBOLS
+USB_CDC_RxHandler
 USBD_CDC_SetRxBuffer
 USBD_CDC_ReceivePacket
-USB_CDC_RxHandler
-memset
 hUsbDeviceFS
 USBD_CDC_SetTxBuffer
 USBD_CDC_TransmitPacket

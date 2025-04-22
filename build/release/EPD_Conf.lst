@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 1
   58 000e 0022     		movs	r2, #0
   59 0010 1021     		movs	r1, #16
   60 0012 4FF09040 		mov	r0, #1207959552
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s 			page 2
 
 
   61 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -92,18 +92,18 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 1
   91 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
   92 0026 08BD     		pop	{r3, pc}
   94              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 EPD_Conf.c
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:18     .text.DEV_SPI_WriteByte:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:24     .text.DEV_SPI_WriteByte:00000000 DEV_SPI_WriteByte
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:41     .text.DEV_SPI_WriteByte:00000020 $d
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:44     .text.DEV_Module_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:50     .text.DEV_Module_Init:00000000 DEV_Module_Init
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:70     .text.DEV_Module_Exit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccit9zjd.s:76     .text.DEV_Module_Exit:00000000 DEV_Module_Exit
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:18     .text.DEV_SPI_WriteByte:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:24     .text.DEV_SPI_WriteByte:00000000 DEV_SPI_WriteByte
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:41     .text.DEV_SPI_WriteByte:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:44     .text.DEV_Module_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:50     .text.DEV_Module_Init:00000000 DEV_Module_Init
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:70     .text.DEV_Module_Exit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccSkUHWe.s:76     .text.DEV_Module_Exit:00000000 DEV_Module_Exit
 
 UNDEFINED SYMBOLS
 HAL_SPI_Transmit

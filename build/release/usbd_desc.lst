@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
   59              		.global	USBD_FS_USR_BOSDescriptor
   60              		.syntax unified
   61              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 2
 
 
   62              		.thumb_func
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
  120              		.thumb_func
  122              	Get_SerialNum:
  123              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 3
 
 
  124              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
  179              		.thumb
  180              		.thumb_func
  182              	USBD_FS_ProductStrDescriptor:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 4
 
 
  183              		@ args = 0, pretend = 0, frame = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
  238              		.thumb_func
  240              	USBD_FS_ConfigStrDescriptor:
  241              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 5
 
 
  242              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
  295 0020 00000000 		.word	.LC2
  297              		.global	USBD_StringSerial
  298              		.section	.data.USBD_StringSerial,"aw"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 6
 
 
  299              		.align	2
@@ -352,55 +352,55 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 1
  346 0018 00000000 		.word	USBD_FS_InterfaceStrDescriptor
  347 001c 00000000 		.word	USBD_FS_USR_BOSDescriptor
  348              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_desc.c
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:18     .text.USBD_FS_DeviceDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:24     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:35     .text.USBD_FS_DeviceDescriptor:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:331    .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:38     .text.USBD_FS_LangIDStrDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:44     .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:55     .text.USBD_FS_LangIDStrDescriptor:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:317    .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:58     .text.USBD_FS_USR_BOSDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:64     .text.USBD_FS_USR_BOSDescriptor:00000000 USBD_FS_USR_BOSDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:75     .text.USBD_FS_USR_BOSDescriptor:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:324    .data.USBD_FS_BOSDesc:00000000 USBD_FS_BOSDesc
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:78     .text.IntToUnicode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:83     .text.IntToUnicode:00000000 IntToUnicode
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:117    .text.Get_SerialNum:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:122    .text.Get_SerialNum:00000000 Get_SerialNum
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:147    .text.Get_SerialNum:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:302    .data.USBD_StringSerial:00000000 USBD_StringSerial
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:151    .text.USBD_FS_SerialStrDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:157    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:169    .text.USBD_FS_SerialStrDescriptor:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:172    .rodata.USBD_FS_ProductStrDescriptor.str1.4:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:176    .text.USBD_FS_ProductStrDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:182    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:202    .text.USBD_FS_ProductStrDescriptor:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:310    .bss.USBD_StrDesc:00000000 USBD_StrDesc
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:206    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:212    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:226    .text.USBD_FS_ManufacturerStrDescriptor:00000014 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:230    .rodata.USBD_FS_ConfigStrDescriptor.str1.4:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:234    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:240    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:260    .text.USBD_FS_ConfigStrDescriptor:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:264    .rodata.USBD_FS_InterfaceStrDescriptor.str1.4:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:268    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:274    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:294    .text.USBD_FS_InterfaceStrDescriptor:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:299    .data.USBD_StringSerial:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:307    .bss.USBD_StrDesc:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:314    .data.USBD_LangIDDesc:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:321    .data.USBD_FS_BOSDesc:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:328    .data.USBD_FS_DeviceDesc:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:339    .data.FS_Desc:00000000 FS_Desc
-C:\Users\kroko\AppData\Local\Temp\ccPX7XXm.s:336    .data.FS_Desc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:18     .text.USBD_FS_DeviceDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:24     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:35     .text.USBD_FS_DeviceDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:331    .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:38     .text.USBD_FS_LangIDStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:44     .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:55     .text.USBD_FS_LangIDStrDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:317    .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:58     .text.USBD_FS_USR_BOSDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:64     .text.USBD_FS_USR_BOSDescriptor:00000000 USBD_FS_USR_BOSDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:75     .text.USBD_FS_USR_BOSDescriptor:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:324    .data.USBD_FS_BOSDesc:00000000 USBD_FS_BOSDesc
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:78     .text.IntToUnicode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:83     .text.IntToUnicode:00000000 IntToUnicode
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:117    .text.Get_SerialNum:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:122    .text.Get_SerialNum:00000000 Get_SerialNum
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:147    .text.Get_SerialNum:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:302    .data.USBD_StringSerial:00000000 USBD_StringSerial
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:151    .text.USBD_FS_SerialStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:157    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:169    .text.USBD_FS_SerialStrDescriptor:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:172    .rodata.USBD_FS_ProductStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:176    .text.USBD_FS_ProductStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:182    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:202    .text.USBD_FS_ProductStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:310    .bss.USBD_StrDesc:00000000 USBD_StrDesc
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:206    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:212    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:226    .text.USBD_FS_ManufacturerStrDescriptor:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:230    .rodata.USBD_FS_ConfigStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:234    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:240    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:260    .text.USBD_FS_ConfigStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:264    .rodata.USBD_FS_InterfaceStrDescriptor.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:268    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:274    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:294    .text.USBD_FS_InterfaceStrDescriptor:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:299    .data.USBD_StringSerial:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:307    .bss.USBD_StrDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:314    .data.USBD_LangIDDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:321    .data.USBD_FS_BOSDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:328    .data.USBD_FS_DeviceDesc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:339    .data.FS_Desc:00000000 FS_Desc
+C:\Users\kroko\AppData\Local\Temp\ccuMcC5D.s:336    .data.FS_Desc:00000000 $d
 
 UNDEFINED SYMBOLS
 USBD_GetString

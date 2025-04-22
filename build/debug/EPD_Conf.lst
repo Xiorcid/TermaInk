@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 1
   27:Core/Src/EPD_Conf.c **** # LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   28:Core/Src/EPD_Conf.c **** # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   29:Core/Src/EPD_Conf.c **** # THE SOFTWARE.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s 			page 2
 
 
   30:Core/Src/EPD_Conf.c **** #
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 1
   73              		@ args = 0, pretend = 0, frame = 0
   74              		@ frame_needed = 0, uses_anonymous_args = 0
   75 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s 			page 3
 
 
   76              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 1
  122 0002 0022     		movs	r2, #0
  123 0004 4021     		movs	r1, #64
  124 0006 4FF09040 		mov	r0, #1207959552
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s 			page 4
 
 
  125 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -214,18 +214,18 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 1
  150              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
  151              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  152              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccthS7go.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 EPD_Conf.c
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:21     .text.DEV_SPI_WriteByte:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:27     .text.DEV_SPI_WriteByte:00000000 DEV_SPI_WriteByte
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:58     .text.DEV_SPI_WriteByte:00000020 $d
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:63     .text.DEV_Module_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:69     .text.DEV_Module_Init:00000000 DEV_Module_Init
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:105    .text.DEV_Module_Exit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccthS7go.s:111    .text.DEV_Module_Exit:00000000 DEV_Module_Exit
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:21     .text.DEV_SPI_WriteByte:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:27     .text.DEV_SPI_WriteByte:00000000 DEV_SPI_WriteByte
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:58     .text.DEV_SPI_WriteByte:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:63     .text.DEV_Module_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:69     .text.DEV_Module_Init:00000000 DEV_Module_Init
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:105    .text.DEV_Module_Exit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMU5Hwg.s:111    .text.DEV_Module_Exit:00000000 DEV_Module_Exit
 
 UNDEFINED SYMBOLS
 HAL_SPI_Transmit

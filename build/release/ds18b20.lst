@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
   57              		.thumb
   58              		.thumb_func
   60              	ExecuteCommand:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 2
 
 
   61              		@ args = 0, pretend = 0, frame = 8
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  115 0068 A342     		cmp	r3, r4
  116 006a F5D8     		bhi	.L14
  117 006c CEE7     		b	.L10
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 3
 
 
  118              	.L17:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  176 0024 FFF7FEFF 		bl	WaitForConversionFinished
  177 0028 F6E7     		b	.L25
  178              	.L35:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 4
 
 
  179 002a 337C     		ldrb	r3, [r6, #16]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  235 002e 2174     		strb	r1, [r4, #16]
  236 0030 9DF80530 		ldrb	r3, [sp, #5]	@ zero_extendqisi2
  237 0034 9DF80420 		ldrb	r2, [sp, #4]	@ zero_extendqisi2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 5
 
 
  238 0038 42EA0322 		orr	r2, r2, r3, lsl #8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  293              		.section	.text.DS18B20_WriteScratchpad,"ax",%progbits
  294              		.align	1
  295              		.global	DS18B20_WriteScratchpad
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 6
 
 
  296              		.syntax unified
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  354              		.align	1
  355              		.global	DS18B20_ReadRom
  356              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 7
 
 
  357              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  415              		.thumb
  416              		.thumb_func
  418              	DS18B20_Init:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 8
 
 
  419              		@ args = 0, pretend = 0, frame = 0
@@ -461,42 +461,42 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 1
  467 0001 08       		.byte	8
  468 0002 00       		.byte	0
  469              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ds18b20.c
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:18     .text.CalculateChecksum:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:23     .text.CalculateChecksum:00000000 CalculateChecksum
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:55     .text.ExecuteCommand:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:60     .text.ExecuteCommand:00000000 ExecuteCommand
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:123    .text.WaitForConversionFinished:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:128    .text.WaitForConversionFinished:00000000 WaitForConversionFinished
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:147    .text.DS18B20_ConvertT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:153    .text.DS18B20_ConvertT:00000000 DS18B20_ConvertT
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:210    .text.DS18B20_ReadScratchpad:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:216    .text.DS18B20_ReadScratchpad:00000000 DS18B20_ReadScratchpad
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:291    .text.DS18B20_ReadScratchpad:000000b0 $d
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:294    .text.DS18B20_WriteScratchpad:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:300    .text.DS18B20_WriteScratchpad:00000000 DS18B20_WriteScratchpad
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:324    .text.DS18B20_InitializationCommand:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:330    .text.DS18B20_InitializationCommand:00000000 DS18B20_InitializationCommand
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:354    .text.DS18B20_ReadRom:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:360    .text.DS18B20_ReadRom:00000000 DS18B20_ReadRom
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:393    .text.DS18B20_SkipRom:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:399    .text.DS18B20_SkipRom:00000000 DS18B20_SkipRom
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:412    .text.DS18B20_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:418    .text.DS18B20_Init:00000000 DS18B20_Init
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:430    .rodata.convertT:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:433    .rodata.convertT:00000000 convertT
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:438    .rodata.writeScratchpad:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:441    .rodata.writeScratchpad:00000000 writeScratchpad
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:446    .rodata.readScratchpad:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:449    .rodata.readScratchpad:00000000 readScratchpad
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:454    .rodata.skipRom:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:457    .rodata.skipRom:00000000 skipRom
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:462    .rodata.readRom:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccROYD6m.s:465    .rodata.readRom:00000000 readRom
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:18     .text.CalculateChecksum:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:23     .text.CalculateChecksum:00000000 CalculateChecksum
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:55     .text.ExecuteCommand:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:60     .text.ExecuteCommand:00000000 ExecuteCommand
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:123    .text.WaitForConversionFinished:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:128    .text.WaitForConversionFinished:00000000 WaitForConversionFinished
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:147    .text.DS18B20_ConvertT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:153    .text.DS18B20_ConvertT:00000000 DS18B20_ConvertT
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:210    .text.DS18B20_ReadScratchpad:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:216    .text.DS18B20_ReadScratchpad:00000000 DS18B20_ReadScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:291    .text.DS18B20_ReadScratchpad:000000b0 $d
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:294    .text.DS18B20_WriteScratchpad:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:300    .text.DS18B20_WriteScratchpad:00000000 DS18B20_WriteScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:324    .text.DS18B20_InitializationCommand:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:330    .text.DS18B20_InitializationCommand:00000000 DS18B20_InitializationCommand
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:354    .text.DS18B20_ReadRom:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:360    .text.DS18B20_ReadRom:00000000 DS18B20_ReadRom
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:393    .text.DS18B20_SkipRom:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:399    .text.DS18B20_SkipRom:00000000 DS18B20_SkipRom
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:412    .text.DS18B20_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:418    .text.DS18B20_Init:00000000 DS18B20_Init
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:430    .rodata.convertT:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:433    .rodata.convertT:00000000 convertT
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:438    .rodata.writeScratchpad:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:441    .rodata.writeScratchpad:00000000 writeScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:446    .rodata.readScratchpad:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:449    .rodata.readScratchpad:00000000 readScratchpad
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:454    .rodata.skipRom:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:457    .rodata.skipRom:00000000 skipRom
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:462    .rodata.readRom:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccOWXlxC.s:465    .rodata.readRom:00000000 readRom
 
 UNDEFINED SYMBOLS
 OneWire_ProcessByte

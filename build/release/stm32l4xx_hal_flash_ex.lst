@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
   58 000a 0B60     		str	r3, [r1]
   59 000c C36A     		ldr	r3, [r0, #44]
   60 000e C3F30543 		ubfx	r3, r3, #16, #6
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 2
 
 
   61 0012 1360     		str	r3, [r2]
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  119              		@ frame_needed = 0, uses_anonymous_args = 0
  120              		@ link register save eliminated.
  121 0000 024B     		ldr	r3, .L18
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 3
 
 
  122 0002 186A     		ldr	r0, [r3, #32]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  180 0002 0446     		mov	r4, r0
  181 0004 0E46     		mov	r6, r1
  182 0006 1546     		mov	r5, r2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 4
 
 
  183 0008 4CF25030 		movw	r0, #50000
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  239 0014 23F0FF03 		bic	r3, r3, #255
  240 0018 2343     		orrs	r3, r3, r4
  241 001a 2B62     		str	r3, [r5, #32]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 5
 
 
  242 001c 6B69     		ldr	r3, [r5, #20]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  298 005a 0B43     		orrs	r3, r3, r1
  299 005c 42F48032 		orr	r2, r2, #65536
  300              	.L44:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 6
 
 
  301 0060 14F0100F 		tst	r4, #16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  355 00ee 43F40033 		orr	r3, r3, #131072
  356 00f2 6361     		str	r3, [r4, #20]
  357 00f4 4CF25030 		movw	r0, #50000
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 7
 
 
  358 00f8 FFF7FEFF 		bl	FLASH_WaitForLastOperation
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  414 005c 23F40033 		bic	r3, r3, #131072
  415 0060 6B61     		str	r3, [r5, #20]
  416              	.L58:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 8
 
 
  417 0062 70BD     		pop	{r4, r5, r6, pc}
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  473 004c 8168     		ldr	r1, [r0, #8]
  474 004e 4068     		ldr	r0, [r0, #4]
  475 0050 FFF7FEFF 		bl	FLASH_OB_WRPConfig
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 9
 
 
  476 0054 0546     		mov	r5, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  532 0018 A061     		str	r0, [r4, #24]
  533 001a E369     		ldr	r3, [r4, #28]
  534 001c 012B     		cmp	r3, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 10
 
 
  535 001e 09D0     		beq	.L87
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  593              		@ args = 0, pretend = 0, frame = 0
  594              		@ frame_needed = 0, uses_anonymous_args = 0
  595 0000 294A     		ldr	r2, .L104
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 11
 
 
  596 0002 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  650 0070 0E4A     		ldr	r2, .L104+4
  651 0072 1268     		ldr	r2, [r2]
  652 0074 12F4806F 		tst	r2, #1024
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 12
 
 
  653 0078 08D0     		beq	.L96
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  709 001e 1160     		str	r1, [r2]
  710 0020 1168     		ldr	r1, [r2]
  711 0022 21F40061 		bic	r1, r1, #2048
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 13
 
 
  712 0026 1160     		str	r1, [r2]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  768 0020 58D1     		bne	.L115
  769 0022 304B     		ldr	r3, .L129
  770 0024 0022     		movs	r2, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 14
 
 
  771 0026 5A60     		str	r2, [r3, #4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  825 009c 23F48063 		bic	r3, r3, #1024
  826 00a0 1360     		str	r3, [r2]
  827 00a2 104B     		ldr	r3, .L129
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 15
 
 
  828 00a4 0222     		movs	r2, #2
@@ -880,55 +880,55 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 1
  864 00e4 00000000 		.word	pFlash
  865 00e8 00200240 		.word	1073881088
  867              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_flash_ex.c
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:18     .text.FLASH_MassErase:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:23     .text.FLASH_MassErase:00000000 FLASH_MassErase
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:42     .text.FLASH_MassErase:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:45     .text.FLASH_OB_GetWRP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:50     .text.FLASH_OB_GetWRP:00000000 FLASH_OB_GetWRP
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:80     .text.FLASH_OB_GetWRP:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:83     .text.FLASH_OB_GetRDP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:88     .text.FLASH_OB_GetRDP:00000000 FLASH_OB_GetRDP
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:109    .text.FLASH_OB_GetRDP:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:112    .text.FLASH_OB_GetUser:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:117    .text.FLASH_OB_GetUser:00000000 FLASH_OB_GetUser
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:128    .text.FLASH_OB_GetUser:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:131    .text.FLASH_OB_GetPCROP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:136    .text.FLASH_OB_GetPCROP:00000000 FLASH_OB_GetPCROP
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:167    .text.FLASH_OB_GetPCROP:0000003c $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:171    .text.FLASH_OB_WRPConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:176    .text.FLASH_OB_WRPConfig:00000000 FLASH_OB_WRPConfig
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:218    .text.FLASH_OB_WRPConfig:00000058 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:221    .text.FLASH_OB_RDPConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:226    .text.FLASH_OB_RDPConfig:00000000 FLASH_OB_RDPConfig
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:254    .text.FLASH_OB_RDPConfig:00000038 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:257    .text.FLASH_OB_UserConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:262    .text.FLASH_OB_UserConfig:00000000 FLASH_OB_UserConfig
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:370    .text.FLASH_OB_UserConfig:0000010c $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:373    .text.FLASH_OB_PCROPConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:378    .text.FLASH_OB_PCROPConfig:00000000 FLASH_OB_PCROPConfig
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:421    .text.FLASH_OB_PCROPConfig:00000064 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:424    .text.HAL_FLASHEx_OBProgram:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:430    .text.HAL_FLASHEx_OBProgram:00000000 HAL_FLASHEx_OBProgram
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:509    .text.HAL_FLASHEx_OBProgram:00000090 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:512    .text.HAL_FLASHEx_OBGetConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:518    .text.HAL_FLASHEx_OBGetConfig:00000000 HAL_FLASHEx_OBGetConfig
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:556    .text.FLASH_PageErase:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:562    .text.FLASH_PageErase:00000000 FLASH_PageErase
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:583    .text.FLASH_PageErase:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:586    .text.HAL_FLASHEx_Erase_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:592    .text.HAL_FLASHEx_Erase_IT:00000000 HAL_FLASHEx_Erase_IT
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:681    .text.HAL_FLASHEx_Erase_IT:000000a8 $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:685    .text.FLASH_FlushCaches:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:691    .text.FLASH_FlushCaches:00000000 FLASH_FlushCaches
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:741    .text.FLASH_FlushCaches:0000005c $d
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:745    .text.HAL_FLASHEx_Erase:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:751    .text.HAL_FLASHEx_Erase:00000000 HAL_FLASHEx_Erase
-C:\Users\kroko\AppData\Local\Temp\ccGEnCpM.s:864    .text.HAL_FLASHEx_Erase:000000e4 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:18     .text.FLASH_MassErase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:23     .text.FLASH_MassErase:00000000 FLASH_MassErase
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:42     .text.FLASH_MassErase:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:45     .text.FLASH_OB_GetWRP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:50     .text.FLASH_OB_GetWRP:00000000 FLASH_OB_GetWRP
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:80     .text.FLASH_OB_GetWRP:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:83     .text.FLASH_OB_GetRDP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:88     .text.FLASH_OB_GetRDP:00000000 FLASH_OB_GetRDP
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:109    .text.FLASH_OB_GetRDP:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:112    .text.FLASH_OB_GetUser:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:117    .text.FLASH_OB_GetUser:00000000 FLASH_OB_GetUser
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:128    .text.FLASH_OB_GetUser:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:131    .text.FLASH_OB_GetPCROP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:136    .text.FLASH_OB_GetPCROP:00000000 FLASH_OB_GetPCROP
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:167    .text.FLASH_OB_GetPCROP:0000003c $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:171    .text.FLASH_OB_WRPConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:176    .text.FLASH_OB_WRPConfig:00000000 FLASH_OB_WRPConfig
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:218    .text.FLASH_OB_WRPConfig:00000058 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:221    .text.FLASH_OB_RDPConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:226    .text.FLASH_OB_RDPConfig:00000000 FLASH_OB_RDPConfig
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:254    .text.FLASH_OB_RDPConfig:00000038 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:257    .text.FLASH_OB_UserConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:262    .text.FLASH_OB_UserConfig:00000000 FLASH_OB_UserConfig
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:370    .text.FLASH_OB_UserConfig:0000010c $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:373    .text.FLASH_OB_PCROPConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:378    .text.FLASH_OB_PCROPConfig:00000000 FLASH_OB_PCROPConfig
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:421    .text.FLASH_OB_PCROPConfig:00000064 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:424    .text.HAL_FLASHEx_OBProgram:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:430    .text.HAL_FLASHEx_OBProgram:00000000 HAL_FLASHEx_OBProgram
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:509    .text.HAL_FLASHEx_OBProgram:00000090 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:512    .text.HAL_FLASHEx_OBGetConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:518    .text.HAL_FLASHEx_OBGetConfig:00000000 HAL_FLASHEx_OBGetConfig
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:556    .text.FLASH_PageErase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:562    .text.FLASH_PageErase:00000000 FLASH_PageErase
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:583    .text.FLASH_PageErase:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:586    .text.HAL_FLASHEx_Erase_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:592    .text.HAL_FLASHEx_Erase_IT:00000000 HAL_FLASHEx_Erase_IT
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:681    .text.HAL_FLASHEx_Erase_IT:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:685    .text.FLASH_FlushCaches:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:691    .text.FLASH_FlushCaches:00000000 FLASH_FlushCaches
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:741    .text.FLASH_FlushCaches:0000005c $d
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:745    .text.HAL_FLASHEx_Erase:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:751    .text.HAL_FLASHEx_Erase:00000000 HAL_FLASHEx_Erase
+C:\Users\kroko\AppData\Local\Temp\ccDYqYe3.s:864    .text.HAL_FLASHEx_Erase:000000e4 $d
 
 UNDEFINED SYMBOLS
 FLASH_WaitForLastOperation

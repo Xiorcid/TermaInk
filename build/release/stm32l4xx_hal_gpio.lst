@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
   56 0044 0EFA0CFE 		lsl	lr, lr, ip
   57 0048 24EA0E0E 		bic	lr, r4, lr
   58 004c 0C69     		ldr	r4, [r1, #16]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 2
 
 
   59 004e 04FA0CF4 		lsl	r4, r4, ip
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  113 00cc 0133     		adds	r3, r3, #1
  114              	.L2:
  115 00ce 0A68     		ldr	r2, [r1]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 3
 
 
  116 00d0 32FA03F4 		lsrs	r4, r2, r3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  170 0164 114C     		ldr	r4, .L22
  171 0166 54F82550 		ldr	r5, [r4, r5, lsl #2]
  172 016a 03F0030E 		and	lr, r3, #3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 4
 
 
  173 016e 4FEA8E0E 		lsl	lr, lr, #2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  229 0012 05FA0CF5 		lsl	r5, r5, ip
  230 0016 A542     		cmp	r5, r4
  231 0018 4FD0     		beq	.L38
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 5
 
 
  232              	.L28:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  286 00ae 0725     		movs	r5, #7
  287 00b0 AFE7     		b	.L27
  288              	.L31:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 6
 
 
  289 00b2 0125     		movs	r5, #1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  346              		.align	1
  347              		.global	HAL_GPIO_WritePin
  348              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 7
 
 
  349              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  408 0024 0020     		movs	r0, #0
  409              	.L51:
  410 0026 02B0     		add	sp, sp, #8
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 8
 
 
  411              		@ sp needed
@@ -463,29 +463,29 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 1
  454              	.L59:
  455 0018 00040140 		.word	1073808384
  457              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_gpio.c
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:18     .text.HAL_GPIO_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:24     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:203    .text.HAL_GPIO_Init:000001ac $d
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:209    .text.HAL_GPIO_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:215    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:321    .text.HAL_GPIO_DeInit:000000f4 $d
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:326    .text.HAL_GPIO_ReadPin:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:332    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:346    .text.HAL_GPIO_WritePin:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:352    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:364    .text.HAL_GPIO_TogglePin:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:370    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:382    .text.HAL_GPIO_LockPin:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:388    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:418    .text.HAL_GPIO_EXTI_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:424    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:431    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:437    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccmEBVhY.s:455    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:18     .text.HAL_GPIO_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:24     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:203    .text.HAL_GPIO_Init:000001ac $d
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:209    .text.HAL_GPIO_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:215    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:321    .text.HAL_GPIO_DeInit:000000f4 $d
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:326    .text.HAL_GPIO_ReadPin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:332    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:346    .text.HAL_GPIO_WritePin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:352    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:364    .text.HAL_GPIO_TogglePin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:370    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:382    .text.HAL_GPIO_LockPin:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:388    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:418    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:424    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:431    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:437    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccLyLCif.s:455    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
 
 NO UNDEFINED SYMBOLS

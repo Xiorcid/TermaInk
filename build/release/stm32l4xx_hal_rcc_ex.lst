@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
   56 0042 13F4807F 		tst	r3, #256
   57 0046 08D1     		bne	.L28
   58 0048 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 2
 
 
   59 004c 401B     		subs	r0, r0, r5
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  113 00ce E5D1     		bne	.L8
  114 00d0 FFF7FEFF 		bl	HAL_GetTick
  115 00d4 C01B     		subs	r0, r0, r7
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 3
 
 
  116 00d6 41F28833 		movw	r3, #5000
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  170 015e 216A     		ldr	r1, [r4, #32]
  171 0160 0B43     		orrs	r3, r3, r1
  172 0162 C2F88830 		str	r3, [r2, #136]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 4
 
 
  173              	.L16:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  227 01f0 2368     		ldr	r3, [r4]
  228 01f2 13F4802F 		tst	r3, #262144
  229 01f6 0CD0     		beq	.L22
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 5
 
 
  230 01f8 0C4A     		ldr	r2, .L32
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  286 002e D3F88820 		ldr	r2, [r3, #136]
  287 0032 02F44052 		and	r2, r2, #12288
  288 0036 4261     		str	r2, [r0, #20]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 6
 
 
  289 0038 D3F88820 		ldr	r2, [r3, #136]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  345 002a 13F0080F 		tst	r3, #8
  346 002e 37D0     		beq	.L45
  347 0030 9B4B     		ldr	r3, .L148
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 7
 
 
  348 0032 1B68     		ldr	r3, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  402 00be 13F40033 		ands	r3, r3, #131072
  403 00c2 02D0     		beq	.L44
  404 00c4 7A4B     		ldr	r3, .L148+16
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 8
 
 
  405 00c6 00E0     		b	.L44
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  459 014a F301     		.2byte	(.L109-.L51)/2
  460 014c F301     		.2byte	(.L109-.L51)/2
  461 014e F301     		.2byte	(.L109-.L51)/2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 9
 
 
  462 0150 F301     		.2byte	(.L109-.L51)/2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  516 01e6 94E1     		b	.L37
  517              	.L139:
  518 01e8 0020     		movs	r0, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 10
 
 
  519 01ea 92E1     		b	.L37
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  573 0276 032B     		cmp	r3, #3
  574 0278 00F24E81 		bhi	.L112
  575 027c DFE803F0 		tbb	[pc, r3]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 11
 
 
  576              	.L68:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  630 02f6 1E01     		.2byte	(.L115-.L73)/2
  631 02f8 1B00     		.2byte	(.L72-.L73)/2
  632              		.p2align 1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 12
 
 
  633              	.L76:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  687 0374 00F0CD80 		beq	.L37
  688 0378 7048     		ldr	r0, .L150+4
  689 037a CAE0     		b	.L37
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 13
 
 
  690              	.L50:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  744              	.L47:
  745 03fc 4E4B     		ldr	r3, .L150
  746 03fe D3F88830 		ldr	r3, [r3, #136]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 14
 
 
  747 0402 03F44043 		and	r3, r3, #49152
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  801 0482 0020     		movs	r0, #0
  802 0484 45E0     		b	.L37
  803              	.L95:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 15
 
 
  804 0486 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  858 0502 0020     		movs	r0, #0
  859 0504 05E0     		b	.L37
  860              	.L105:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 16
 
 
  861 0506 4FF4FA40 		mov	r0, #32000
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  917              	.L154:
  918 000e 00BF     		.align	2
  919              	.L153:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 17
 
 
  920 0010 00100240 		.word	1073876992
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  980 000e 9A69     		ldr	r2, [r3, #24]
  981 0010 22F40072 		bic	r2, r2, #512
  982 0014 9A61     		str	r2, [r3, #24]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 18
 
 
  983 0016 7047     		bx	lr
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1043 0000 08B5     		push	{r3, lr}
  1044 0002 064B     		ldr	r3, .L172
  1045 0004 DB69     		ldr	r3, [r3, #28]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 19
 
 
  1046 0006 13F4007F 		tst	r3, #512
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1102 004c 029B     		ldr	r3, [sp, #8]
  1103 004e 0124     		movs	r4, #1
  1104              	.L175:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 20
 
 
  1105 0050 124B     		ldr	r3, .L185+4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1161 000c 1BD1     		bne	.L192
  1162 000e 154B     		ldr	r3, .L198
  1163 0010 9A6D     		ldr	r2, [r3, #88]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 21
 
 
  1164 0012 42F08052 		orr	r2, r2, #268435456
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1220              		@ frame_needed = 0, uses_anonymous_args = 0
  1221              		@ link register save eliminated.
  1222 0000 024A     		ldr	r2, .L201
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 22
 
 
  1223 0002 1368     		ldr	r3, [r2]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1281 0028 5A60     		str	r2, [r3, #4]
  1282 002a 1A68     		ldr	r2, [r3]
  1283 002c 22F4FE42 		bic	r2, r2, #32512
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 23
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 23
 
 
  1284 0030 4169     		ldr	r1, [r0, #20]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1342 001e 7047     		bx	lr
  1343              	.L214:
  1344              		.align	2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 24
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 24
 
 
  1345              	.L213:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1401 0056 9B68     		ldr	r3, [r3, #8]
  1402 0058 13F4806F 		tst	r3, #1024
  1403 005c 04D0     		beq	.L219
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 25
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 25
 
 
  1404 005e 44F02004 		orr	r4, r4, #32
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1461              		.thumb_func
  1463              	HAL_RCCEx_CRS_SyncWarnCallback:
  1464              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 26
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 26
 
 
  1465              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1525 0030 1BD0     		beq	.L235
  1526 0032 12F0040F 		tst	r2, #4
  1527 0036 18D0     		beq	.L235
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 27
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 27
 
 
  1528 0038 13F48070 		ands	r0, r3, #256
@@ -1602,86 +1602,86 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 1
  1566              	.L248:
  1567 0084 00600040 		.word	1073766400
  1569              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 28
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_rcc_ex.c
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:18     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:24     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:257    .text.HAL_RCCEx_PeriphCLKConfig:0000022c $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:261    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:267    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:314    .text.HAL_RCCEx_GetPeriphCLKConfig:00000080 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:318    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:324    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:443    .text.HAL_RCCEx_GetPeriphCLKFreq:0000012a $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:475    .text.HAL_RCCEx_GetPeriphCLKFreq:0000016a $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:577    .text.HAL_RCCEx_GetPeriphCLKFreq:00000280 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:581    .text.HAL_RCCEx_GetPeriphCLKFreq:00000284 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:598    .text.HAL_RCCEx_GetPeriphCLKFreq:000002a0 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:605    .text.HAL_RCCEx_GetPeriphCLKFreq:000002b8 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:619    .text.HAL_RCCEx_GetPeriphCLKFreq:000002e0 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:632    .text.HAL_RCCEx_GetPeriphCLKFreq:000002fa $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:897    .text.HAL_RCCEx_GetPeriphCLKFreq:00000538 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:901    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:907    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000000 HAL_RCCEx_WakeUpStopCLKConfig
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:920    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:923    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:929    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000000 HAL_RCCEx_StandbyMSIRangeConfig
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:942    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000014 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:945    .text.HAL_RCCEx_EnableLSECSS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:951    .text.HAL_RCCEx_EnableLSECSS:00000000 HAL_RCCEx_EnableLSECSS
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:963    .text.HAL_RCCEx_EnableLSECSS:00000010 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:966    .text.HAL_RCCEx_DisableLSECSS:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:972    .text.HAL_RCCEx_DisableLSECSS:00000000 HAL_RCCEx_DisableLSECSS
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:987    .text.HAL_RCCEx_DisableLSECSS:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:990    .text.HAL_RCCEx_EnableLSECSS_IT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:996    .text.HAL_RCCEx_EnableLSECSS_IT:00000000 HAL_RCCEx_EnableLSECSS_IT
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1018   .text.HAL_RCCEx_EnableLSECSS_IT:0000002c $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1021   .text.HAL_RCCEx_LSECSS_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1027   .text.HAL_RCCEx_LSECSS_Callback:00000000 HAL_RCCEx_LSECSS_Callback
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1034   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1040   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 HAL_RCCEx_LSECSS_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1059   .text.HAL_RCCEx_LSECSS_IRQHandler:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1062   .text.HAL_RCCEx_EnableLSCO:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1068   .text.HAL_RCCEx_EnableLSCO:00000000 HAL_RCCEx_EnableLSCO
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1143   .text.HAL_RCCEx_EnableLSCO:00000098 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1147   .text.HAL_RCCEx_DisableLSCO:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1153   .text.HAL_RCCEx_DisableLSCO:00000000 HAL_RCCEx_DisableLSCO
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1208   .text.HAL_RCCEx_DisableLSCO:00000064 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1212   .text.HAL_RCCEx_EnableMSIPLLMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1218   .text.HAL_RCCEx_EnableMSIPLLMode:00000000 HAL_RCCEx_EnableMSIPLLMode
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1230   .text.HAL_RCCEx_EnableMSIPLLMode:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1233   .text.HAL_RCCEx_DisableMSIPLLMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1239   .text.HAL_RCCEx_DisableMSIPLLMode:00000000 HAL_RCCEx_DisableMSIPLLMode
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1251   .text.HAL_RCCEx_DisableMSIPLLMode:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1254   .text.HAL_RCCEx_CRSConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1260   .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1294   .text.HAL_RCCEx_CRSConfig:00000044 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1298   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1304   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1316   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:0000000c $d
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s 			page 29
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:18     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:24     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:257    .text.HAL_RCCEx_PeriphCLKConfig:0000022c $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:261    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:267    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:314    .text.HAL_RCCEx_GetPeriphCLKConfig:00000080 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:318    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:324    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:443    .text.HAL_RCCEx_GetPeriphCLKFreq:0000012a $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:475    .text.HAL_RCCEx_GetPeriphCLKFreq:0000016a $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:577    .text.HAL_RCCEx_GetPeriphCLKFreq:00000280 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:581    .text.HAL_RCCEx_GetPeriphCLKFreq:00000284 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:598    .text.HAL_RCCEx_GetPeriphCLKFreq:000002a0 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:605    .text.HAL_RCCEx_GetPeriphCLKFreq:000002b8 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:619    .text.HAL_RCCEx_GetPeriphCLKFreq:000002e0 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:632    .text.HAL_RCCEx_GetPeriphCLKFreq:000002fa $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:897    .text.HAL_RCCEx_GetPeriphCLKFreq:00000538 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:901    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:907    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000000 HAL_RCCEx_WakeUpStopCLKConfig
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:920    .text.HAL_RCCEx_WakeUpStopCLKConfig:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:923    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:929    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000000 HAL_RCCEx_StandbyMSIRangeConfig
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:942    .text.HAL_RCCEx_StandbyMSIRangeConfig:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:945    .text.HAL_RCCEx_EnableLSECSS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:951    .text.HAL_RCCEx_EnableLSECSS:00000000 HAL_RCCEx_EnableLSECSS
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:963    .text.HAL_RCCEx_EnableLSECSS:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:966    .text.HAL_RCCEx_DisableLSECSS:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:972    .text.HAL_RCCEx_DisableLSECSS:00000000 HAL_RCCEx_DisableLSECSS
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:987    .text.HAL_RCCEx_DisableLSECSS:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:990    .text.HAL_RCCEx_EnableLSECSS_IT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:996    .text.HAL_RCCEx_EnableLSECSS_IT:00000000 HAL_RCCEx_EnableLSECSS_IT
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1018   .text.HAL_RCCEx_EnableLSECSS_IT:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1021   .text.HAL_RCCEx_LSECSS_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1027   .text.HAL_RCCEx_LSECSS_Callback:00000000 HAL_RCCEx_LSECSS_Callback
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1034   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1040   .text.HAL_RCCEx_LSECSS_IRQHandler:00000000 HAL_RCCEx_LSECSS_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1059   .text.HAL_RCCEx_LSECSS_IRQHandler:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1062   .text.HAL_RCCEx_EnableLSCO:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1068   .text.HAL_RCCEx_EnableLSCO:00000000 HAL_RCCEx_EnableLSCO
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1143   .text.HAL_RCCEx_EnableLSCO:00000098 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1147   .text.HAL_RCCEx_DisableLSCO:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1153   .text.HAL_RCCEx_DisableLSCO:00000000 HAL_RCCEx_DisableLSCO
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1208   .text.HAL_RCCEx_DisableLSCO:00000064 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1212   .text.HAL_RCCEx_EnableMSIPLLMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1218   .text.HAL_RCCEx_EnableMSIPLLMode:00000000 HAL_RCCEx_EnableMSIPLLMode
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1230   .text.HAL_RCCEx_EnableMSIPLLMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1233   .text.HAL_RCCEx_DisableMSIPLLMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1239   .text.HAL_RCCEx_DisableMSIPLLMode:00000000 HAL_RCCEx_DisableMSIPLLMode
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1251   .text.HAL_RCCEx_DisableMSIPLLMode:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1254   .text.HAL_RCCEx_CRSConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1260   .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1294   .text.HAL_RCCEx_CRSConfig:00000044 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1298   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1304   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1316   .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:0000000c $d
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s 			page 29
 
 
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1319   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1325   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1346   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000020 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1349   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1355   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1441   .text.HAL_RCCEx_CRSWaitSynchronization:000000a8 $d
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1444   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1450   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1457   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1463   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1470   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1476   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1483   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1489   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1496   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1502   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccn4uxtI.s:1567   .text.HAL_RCCEx_CRS_IRQHandler:00000084 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1319   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1325   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1346   .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000020 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1349   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1355   .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1441   .text.HAL_RCCEx_CRSWaitSynchronization:000000a8 $d
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1444   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1450   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1457   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1463   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1470   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1476   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1483   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1489   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1496   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1502   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\cc4lzEcW.s:1567   .text.HAL_RCCEx_CRS_IRQHandler:00000084 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

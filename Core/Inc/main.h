@@ -74,6 +74,9 @@ void USB_CDC_RxHandler(uint8_t*, uint32_t);
 #define DOWN_GPIO_Port GPIOA
 #define UP_Pin GPIO_PIN_9
 #define UP_GPIO_Port GPIOA
+#define USB_WKUP_Pin GPIO_PIN_5
+#define USB_WKUP_GPIO_Port GPIOB
+#define USB_WKUP_EXTI_IRQn EXTI9_5_IRQn
 
 /* USER CODE BEGIN Private defines */
 

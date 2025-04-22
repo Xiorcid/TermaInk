@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
   58 0002 0446     		mov	r4, r0
   59 0004 FFF7FEFF 		bl	USBD_LL_Stop
   60 0008 0123     		movs	r3, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 2
 
 
   61 000a 84F89C32 		strb	r3, [r4, #668]
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  118              		.global	USBD_Start
  119              		.syntax unified
  120              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 3
 
 
  121              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  182              	.L24:
  183 000c 08BD     		pop	{r3, pc}
  184              	.L25:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 4
 
 
  185 000e 0020     		movs	r0, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  243 003c FFF7FEFF 		bl	USBD_StdItfReq
  244 0040 F9E7     		b	.L36
  245              	.L34:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 5
 
 
  246 0042 2946     		mov	r1, r5
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  302              	.L40:
  303 0058 0027     		movs	r7, #0
  304 005a E7E7     		b	.L39
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 6
 
 
  305              	.L41:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  365 0008 0020     		movs	r0, #0
  366 000a 7047     		bx	lr
  367              	.L50:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 7
 
 
  368 000c 90F89D32 		ldrb	r3, [r0, #669]	@ zero_extendqisi2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  426 0022 F9E7     		b	.L56
  427              	.L57:
  428 0024 0320     		movs	r0, #3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 8
 
 
  429 0026 F7E7     		b	.L56
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  489              	USBD_LL_DevDisconnected:
  490              		@ args = 0, pretend = 0, frame = 0
  491              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 9
 
 
  492 0000 08B5     		push	{r3, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  552 0008 41D1     		bne	.L79
  553 000a 1346     		mov	r3, r2
  554 000c D0F89422 		ldr	r2, [r0, #660]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 10
 
 
  555 0010 032A     		cmp	r2, #3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  609 0088 2046     		mov	r0, r4
  610 008a 9847     		blx	r3
  611 008c E8E7     		b	.L86
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 11
 
 
  612              	.L79:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  668              	.L97:
  669 0030 94F89C32 		ldrb	r3, [r4, #668]	@ zero_extendqisi2
  670 0034 032B     		cmp	r3, #3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 12
 
 
  671 0036 27D0     		beq	.L105
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  725 00b2 00F1AE03 		add	r3, r0, #174
  726 00b6 54F82330 		ldr	r3, [r4, r3, lsl #2]
  727 00ba 5A69     		ldr	r2, [r3, #20]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 13
 
 
  728 00bc 002A     		cmp	r2, #0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  786 0028 052B     		cmp	r3, #5
  787 002a F3D1     		bne	.L109
  788 002c 8378     		ldrb	r3, [r0, #2]	@ zero_extendqisi2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 14
 
 
  789 002e AB42     		cmp	r3, r5
@@ -794,59 +794,59 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 1
  799 003a 0020     		movs	r0, #0
  800 003c 7047     		bx	lr
  802              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_core.c
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:18     .text.USBD_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:24     .text.USBD_Init:00000000 USBD_Init
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:48     .text.USBD_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:54     .text.USBD_DeInit:00000000 USBD_DeInit
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:78     .text.USBD_RegisterClass:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:84     .text.USBD_RegisterClass:00000000 USBD_RegisterClass
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:117    .text.USBD_Start:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:123    .text.USBD_Start:00000000 USBD_Start
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:131    .text.USBD_Stop:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:137    .text.USBD_Stop:00000000 USBD_Stop
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:154    .text.USBD_RunTestMode:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:160    .text.USBD_RunTestMode:00000000 USBD_RunTestMode
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:168    .text.USBD_SetClassConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:174    .text.USBD_SetClassConfig:00000000 USBD_SetClassConfig
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:189    .text.USBD_ClrClassConfig:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:195    .text.USBD_ClrClassConfig:00000000 USBD_ClrClassConfig
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:210    .text.USBD_LL_SetupStage:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:216    .text.USBD_LL_SetupStage:00000000 USBD_LL_SetupStage
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:257    .text.USBD_LL_Reset:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:263    .text.USBD_LL_Reset:00000000 USBD_LL_Reset
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:313    .text.USBD_LL_SetSpeed:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:319    .text.USBD_LL_SetSpeed:00000000 USBD_LL_SetSpeed
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:328    .text.USBD_LL_Suspend:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:334    .text.USBD_LL_Suspend:00000000 USBD_LL_Suspend
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:351    .text.USBD_LL_Resume:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:357    .text.USBD_LL_Resume:00000000 USBD_LL_Resume
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:374    .text.USBD_LL_SOF:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:380    .text.USBD_LL_SOF:00000000 USBD_LL_SOF
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:401    .text.USBD_LL_IsoINIncomplete:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:407    .text.USBD_LL_IsoINIncomplete:00000000 USBD_LL_IsoINIncomplete
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:435    .text.USBD_LL_IsoOUTIncomplete:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:441    .text.USBD_LL_IsoOUTIncomplete:00000000 USBD_LL_IsoOUTIncomplete
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:469    .text.USBD_LL_DevConnected:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:475    .text.USBD_LL_DevConnected:00000000 USBD_LL_DevConnected
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:483    .text.USBD_LL_DevDisconnected:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:489    .text.USBD_LL_DevDisconnected:00000000 USBD_LL_DevDisconnected
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:511    .text.USBD_CoreFindIF:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:517    .text.USBD_CoreFindIF:00000000 USBD_CoreFindIF
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:525    .text.USBD_CoreFindEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:531    .text.USBD_CoreFindEP:00000000 USBD_CoreFindEP
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:539    .text.USBD_LL_DataOutStage:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:545    .text.USBD_LL_DataOutStage:00000000 USBD_LL_DataOutStage
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:635    .text.USBD_LL_DataInStage:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:641    .text.USBD_LL_DataInStage:00000000 USBD_LL_DataInStage
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:741    .text.USBD_GetNextDesc:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:747    .text.USBD_GetNextDesc:00000000 USBD_GetNextDesc
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:760    .text.USBD_GetEpDesc:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s:766    .text.USBD_GetEpDesc:00000000 USBD_GetEpDesc
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:18     .text.USBD_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:24     .text.USBD_Init:00000000 USBD_Init
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:48     .text.USBD_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:54     .text.USBD_DeInit:00000000 USBD_DeInit
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:78     .text.USBD_RegisterClass:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:84     .text.USBD_RegisterClass:00000000 USBD_RegisterClass
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:117    .text.USBD_Start:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:123    .text.USBD_Start:00000000 USBD_Start
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:131    .text.USBD_Stop:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:137    .text.USBD_Stop:00000000 USBD_Stop
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:154    .text.USBD_RunTestMode:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:160    .text.USBD_RunTestMode:00000000 USBD_RunTestMode
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:168    .text.USBD_SetClassConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:174    .text.USBD_SetClassConfig:00000000 USBD_SetClassConfig
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:189    .text.USBD_ClrClassConfig:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:195    .text.USBD_ClrClassConfig:00000000 USBD_ClrClassConfig
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:210    .text.USBD_LL_SetupStage:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:216    .text.USBD_LL_SetupStage:00000000 USBD_LL_SetupStage
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:257    .text.USBD_LL_Reset:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:263    .text.USBD_LL_Reset:00000000 USBD_LL_Reset
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:313    .text.USBD_LL_SetSpeed:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:319    .text.USBD_LL_SetSpeed:00000000 USBD_LL_SetSpeed
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:328    .text.USBD_LL_Suspend:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:334    .text.USBD_LL_Suspend:00000000 USBD_LL_Suspend
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:351    .text.USBD_LL_Resume:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:357    .text.USBD_LL_Resume:00000000 USBD_LL_Resume
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:374    .text.USBD_LL_SOF:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:380    .text.USBD_LL_SOF:00000000 USBD_LL_SOF
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:401    .text.USBD_LL_IsoINIncomplete:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:407    .text.USBD_LL_IsoINIncomplete:00000000 USBD_LL_IsoINIncomplete
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:435    .text.USBD_LL_IsoOUTIncomplete:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:441    .text.USBD_LL_IsoOUTIncomplete:00000000 USBD_LL_IsoOUTIncomplete
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:469    .text.USBD_LL_DevConnected:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:475    .text.USBD_LL_DevConnected:00000000 USBD_LL_DevConnected
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:483    .text.USBD_LL_DevDisconnected:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:489    .text.USBD_LL_DevDisconnected:00000000 USBD_LL_DevDisconnected
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:511    .text.USBD_CoreFindIF:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:517    .text.USBD_CoreFindIF:00000000 USBD_CoreFindIF
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:525    .text.USBD_CoreFindEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:531    .text.USBD_CoreFindEP:00000000 USBD_CoreFindEP
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:539    .text.USBD_LL_DataOutStage:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:545    .text.USBD_LL_DataOutStage:00000000 USBD_LL_DataOutStage
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:635    .text.USBD_LL_DataInStage:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:641    .text.USBD_LL_DataInStage:00000000 USBD_LL_DataInStage
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:741    .text.USBD_GetNextDesc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:747    .text.USBD_GetNextDesc:00000000 USBD_GetNextDesc
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:760    .text.USBD_GetEpDesc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s:766    .text.USBD_GetEpDesc:00000000 USBD_GetEpDesc
 
 UNDEFINED SYMBOLS
 USBD_LL_Init
@@ -854,7 +854,7 @@ USBD_LL_Stop
 USBD_LL_DeInit
 USBD_LL_Start
 USBD_ParseSetupRequest
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGn0cDk.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc2fF2bm.s 			page 16
 
 
 USBD_StdDevReq

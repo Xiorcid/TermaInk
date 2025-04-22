@@ -1,0 +1,249 @@
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"USB_storage.c"
+  16              		.text
+  17              		.section	.text.UDISK_init,"ax",%progbits
+  18              		.align	1
+  19              		.global	UDISK_init
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	UDISK_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 054B     		ldr	r3, .L2
+  29 0002 0122     		movs	r2, #1
+  30 0004 1A70     		strb	r2, [r3]
+  31 0006 0023     		movs	r3, #0
+  32 0008 044A     		ldr	r2, .L2+4
+  33 000a 1380     		strh	r3, [r2]	@ movhi
+  34 000c 044A     		ldr	r2, .L2+8
+  35 000e 1380     		strh	r3, [r2]	@ movhi
+  36 0010 044B     		ldr	r3, .L2+12
+  37 0012 054A     		ldr	r2, .L2+16
+  38 0014 1A60     		str	r2, [r3]
+  39 0016 7047     		bx	lr
+  40              	.L3:
+  41              		.align	2
+  42              	.L2:
+  43 0018 00000000 		.word	is_first_writing
+  44 001c 00000000 		.word	last_pointer
+  45 0020 00000000 		.word	length
+  46 0024 00000000 		.word	data_retention_code
+  47 0028 DFCAEBFD 		.word	-34878753
+  49              		.section	.text.UDISK_push,"ax",%progbits
+  50              		.align	1
+  51              		.global	UDISK_push
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  56              	UDISK_push:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 38B5     		push	{r3, r4, r5, lr}
+  60 0002 0446     		mov	r4, r0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s 			page 2
+
+
+  61 0004 0D46     		mov	r5, r1
+  62 0006 134B     		ldr	r3, .L10
+  63 0008 1A68     		ldr	r2, [r3]
+  64 000a 134B     		ldr	r3, .L10+4
+  65 000c 9A42     		cmp	r2, r3
+  66 000e 1DD1     		bne	.L9
+  67              	.L5:
+  68 0010 124B     		ldr	r3, .L10+8
+  69 0012 1D60     		str	r5, [r3]
+  70 0014 124A     		ldr	r2, .L10+12
+  71 0016 1388     		ldrh	r3, [r2]
+  72 0018 1249     		ldr	r1, .L10+16
+  73 001a 21F81340 		strh	r4, [r1, r3, lsl #1]	@ movhi
+  74 001e 0133     		adds	r3, r3, #1
+  75 0020 9BB2     		uxth	r3, r3
+  76 0022 1380     		strh	r3, [r2]	@ movhi
+  77 0024 1049     		ldr	r1, .L10+20
+  78 0026 0A88     		ldrh	r2, [r1]
+  79 0028 0132     		adds	r2, r2, #1
+  80 002a 0A80     		strh	r2, [r1]	@ movhi
+  81 002c B3F57F6F 		cmp	r3, #4080
+  82 0030 04D3     		bcc	.L6
+  83 0032 0023     		movs	r3, #0
+  84 0034 0D4A     		ldr	r2, .L10+24
+  85 0036 1370     		strb	r3, [r2]
+  86 0038 094A     		ldr	r2, .L10+12
+  87 003a 1380     		strh	r3, [r2]	@ movhi
+  88              	.L6:
+  89 003c 0B4B     		ldr	r3, .L10+24
+  90 003e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  91 0040 1BB9     		cbnz	r3, .L4
+  92 0042 094B     		ldr	r3, .L10+20
+  93 0044 40F6EF72 		movw	r2, #4079
+  94 0048 1A80     		strh	r2, [r3]	@ movhi
+  95              	.L4:
+  96 004a 38BD     		pop	{r3, r4, r5, pc}
+  97              	.L9:
+  98 004c FFF7FEFF 		bl	UDISK_init
+  99 0050 DEE7     		b	.L5
+ 100              	.L11:
+ 101 0052 00BF     		.align	2
+ 102              	.L10:
+ 103 0054 00000000 		.word	data_retention_code
+ 104 0058 DFCAEBFD 		.word	-34878753
+ 105 005c 00000000 		.word	last_timestamp
+ 106 0060 00000000 		.word	last_pointer
+ 107 0064 00000000 		.word	USBDisk
+ 108 0068 00000000 		.word	length
+ 109 006c 00000000 		.word	is_first_writing
+ 111              		.section	.text.UDISK_get,"ax",%progbits
+ 112              		.align	1
+ 113              		.global	UDISK_get
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 118              	UDISK_get:
+ 119              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s 			page 3
+
+
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121              		@ link register save eliminated.
+ 122 0000 0B4B     		ldr	r3, .L17
+ 123 0002 1A68     		ldr	r2, [r3]
+ 124 0004 0B4B     		ldr	r3, .L17+4
+ 125 0006 9A42     		cmp	r2, r3
+ 126 0008 0FD1     		bne	.L15
+ 127 000a 0B4B     		ldr	r3, .L17+8
+ 128 000c 1B88     		ldrh	r3, [r3]
+ 129 000e 1844     		add	r0, r0, r3
+ 130 0010 B0F57F6F 		cmp	r0, #4080
+ 131 0014 05DB     		blt	.L16
+ 132 0016 A0F57F60 		sub	r0, r0, #4080
+ 133 001a 084B     		ldr	r3, .L17+12
+ 134 001c 33F91000 		ldrsh	r0, [r3, r0, lsl #1]
+ 135 0020 7047     		bx	lr
+ 136              	.L16:
+ 137 0022 064B     		ldr	r3, .L17+12
+ 138 0024 33F91000 		ldrsh	r0, [r3, r0, lsl #1]
+ 139 0028 7047     		bx	lr
+ 140              	.L15:
+ 141 002a 0548     		ldr	r0, .L17+16
+ 142 002c 7047     		bx	lr
+ 143              	.L18:
+ 144 002e 00BF     		.align	2
+ 145              	.L17:
+ 146 0030 00000000 		.word	data_retention_code
+ 147 0034 DFCAEBFD 		.word	-34878753
+ 148 0038 00000000 		.word	last_pointer
+ 149 003c 00000000 		.word	USBDisk
+ 150 0040 0080FFFF 		.word	-32768
+ 152              		.section	.text.UDISK_len,"ax",%progbits
+ 153              		.align	1
+ 154              		.global	UDISK_len
+ 155              		.syntax unified
+ 156              		.thumb
+ 157              		.thumb_func
+ 159              	UDISK_len:
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162              		@ link register save eliminated.
+ 163 0000 014B     		ldr	r3, .L20
+ 164 0002 1888     		ldrh	r0, [r3]
+ 165 0004 7047     		bx	lr
+ 166              	.L21:
+ 167 0006 00BF     		.align	2
+ 168              	.L20:
+ 169 0008 00000000 		.word	length
+ 171              		.section	.text.UDISK_tst,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	UDISK_tst
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 178              	UDISK_tst:
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s 			page 4
+
+
+ 181              		@ link register save eliminated.
+ 182 0000 014B     		ldr	r3, .L23
+ 183 0002 1868     		ldr	r0, [r3]
+ 184 0004 7047     		bx	lr
+ 185              	.L24:
+ 186 0006 00BF     		.align	2
+ 187              	.L23:
+ 188 0008 00000000 		.word	last_timestamp
+ 190              		.global	data_retention_code
+ 191              		.section	.ram2_bss,"aw"
+ 192              		.align	2
+ 195              	data_retention_code:
+ 196 0000 00000000 		.space	4
+ 197              		.global	is_first_writing
+ 200              	is_first_writing:
+ 201 0004 00       		.space	1
+ 202              		.global	length
+ 203 0005 00       		.align	1
+ 206              	length:
+ 207 0006 0000     		.space	2
+ 208              		.global	last_pointer
+ 209              		.align	1
+ 212              	last_pointer:
+ 213 0008 0000     		.space	2
+ 214              		.global	last_timestamp
+ 215 000a 0000     		.align	2
+ 218              	last_timestamp:
+ 219 000c 00000000 		.space	4
+ 220              		.global	USBDisk
+ 221              		.align	2
+ 224              	USBDisk:
+ 225 0010 00000000 		.space	8160
+ 225      00000000 
+ 225      00000000 
+ 225      00000000 
+ 225      00000000 
+ 226              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 USB_storage.c
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:18     .text.UDISK_init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:24     .text.UDISK_init:00000000 UDISK_init
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:43     .text.UDISK_init:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:200    .ram2_bss:00000004 is_first_writing
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:212    .ram2_bss:00000008 last_pointer
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:206    .ram2_bss:00000006 length
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:195    .ram2_bss:00000000 data_retention_code
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:50     .text.UDISK_push:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:56     .text.UDISK_push:00000000 UDISK_push
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:103    .text.UDISK_push:00000054 $d
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:218    .ram2_bss:0000000c last_timestamp
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:224    .ram2_bss:00000010 USBDisk
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:112    .text.UDISK_get:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:118    .text.UDISK_get:00000000 UDISK_get
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:146    .text.UDISK_get:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:153    .text.UDISK_len:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:159    .text.UDISK_len:00000000 UDISK_len
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:169    .text.UDISK_len:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:172    .text.UDISK_tst:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:178    .text.UDISK_tst:00000000 UDISK_tst
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:188    .text.UDISK_tst:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\cc6d09vx.s:192    .ram2_bss:00000000 $d
+
+NO UNDEFINED SYMBOLS

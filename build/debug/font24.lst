@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
   41 004e 03800003 		.ascii	"\003\200\000\003\200\000\003\200\000\003\200\000\003"
   41      80000380 
   41      00038000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 2
 
 
   41      03
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
   54      00
   55 0113 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
   55      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 3
 
 
   55      00000000 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
   69 01d2 9C001DFC 		.ascii	"\234\000\035\374\000\030\360\000\030p\000\017\374\000"
   69      0018F000 
   69      1870000F 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 4
 
 
   69      FC00
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
   83      1C00000E 
   83      00000E00 
   83      00
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 5
 
 
   84 029a 07000007 		.ascii	"\007\000\000\007\000\000\003\200\000\003\200\000\003"
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
   97      00000000 
   97      00
   98 0354 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 6
 
 
   98      00000000 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  111      00
  112 040a 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
  112      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 7
 
 
  112      00000000 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  125      00
  126 04c8 00000000 		.ascii	"\000\000\000\000\000\000\000\200\000\007\200\000\037"
  126      00000080 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 8
 
 
  126      00078000 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  140 058a 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
  140      00000000 
  140      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 9
 
 
  140      00
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  154 064b 1FF0001C 		.ascii	"\037\360\000\0340\000\030\030\000\030\030\000\030\030"
  154      30001818 
  154      00181800 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 10
 
 
  154      1818
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  168      C0000FF0 
  168      001C3000 
  168      1818
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 11
 
 
  169 0719 00181800 		.ascii	"\000\030\030\000\030\030\000\0148\000\017\370\000\003"
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  182      000200
  183 07d0 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
  183      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 12
 
 
  183      00000000 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  197 088c 7800001E 		.ascii	"x\000\000\036\000\000x\000\001\340\000\007\200\000\036"
  197      00007800 
  197      01E00007 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 13
 
 
  197      80001E
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  211      001F8000 
  211      1FC00001 
  211      C0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 14
 
 
  212 0959 00036000 		.ascii	"\000\003`\000\003`\000\0060\000\0060\000\0140\000\017"
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  225 0a0e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
  225      00000000 
  225      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 15
 
 
  225      00
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  239      C0000FC0 
  239      000CC000 
  239      0C
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 16
 
 
  240 0ad5 C0000C00 		.ascii	"\300\000\014\000\000\014\000\000?\300\000?\300\000\000"
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  253      001FF800 
  253      1FF80001 
  253      80
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 17
 
 
  254 0b99 00018000 		.ascii	"\000\001\200\000\001\200\000\001\200\000\001\200\000"
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  267      00000000 
  267      00000000 
  267      00
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 18
 
 
  268 0c60 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\177\200\000\177"
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  281      1838007F 
  281      18007F18 
  281      000000
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 19
 
 
  282 0d25 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  295      1C00300C 
  295      00300C00 
  295      300C0030 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 20
 
 
  295      0C
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  309      00000000 
  309      0000003F 
  309      FC00
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 21
 
 
  310 0eac 3FFC0031 		.ascii	"?\374\0001\214\0001\214\0001\214\0001\214\000\001\200"
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  323      00000000 
  323      00000000 
  323      00
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 22
 
 
  324 0f6e 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  337      01
  338 1033 80000FF0 		.ascii	"\200\000\017\360\000\017\360\000\000\000\000\000\000"
  338      000FF000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 23
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 23
 
 
  338      00000000 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  352 10ed 00000600 		.ascii	"\000\000\006\000\000\006\000\000\003\000\000\003\000"
  352      00060000 
  352      03000003 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 24
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 24
 
 
  352      00
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  366 11a9 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
  366      00000000 
  366      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 25
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 25
 
 
  366      00
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  380      300007F0 
  380      001FF000 
  380      38300030 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 26
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 26
 
 
  380      3000
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  394      00007800 
  394      00180000 
  394      180007
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 27
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 27
 
 
  395 1333 D8001FF8 		.ascii	"\330\000\037\370\000\0308\0000\030\0000\030\0000\030"
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  408      00000000 
  408      00
  409 13f6 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 28
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 28
 
 
  409      00000000 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  422      003FFC00 
  422      3FFC00
  423 14bb 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 29
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 29
 
 
  423      00000000 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  436      00018000 
  436      01
  437 157f 80000180 		.ascii	"\200\000\001\200\000\001\200\000\001\200\000\001\200"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 30
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 30
 
 
  437      00018000 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  450      00000000 
  450      00
  451 1642 00000000 		.ascii	"\000\000\000\000\000\000\000\000\003\300\000\017\360"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 31
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 31
 
 
  451      00000000 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  464      18000018 
  464      00
  465 1704 00FE0000 		.ascii	"\000\376\000\000\376\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 32
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 32
 
 
  465      FE000000 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  478      0C0000
  479 17c1 0C00000C 		.ascii	"\014\000\000\014\000\000\014\000\000\014\034\000\007"
  479      00000C00 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 33
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 33
 
 
  479      000C1C00 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  493 1881 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000x<\000x<\0001\030"
  493      00000000 
  493      00783C00 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 34
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 34
 
 
  493      783C0031 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  506      C0000000 
  506      000000
  507 194f 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 35
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 35
 
 
  507      00000000 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  520      00
  521 1a07 01800001 		.ascii	"\001\200\000\001\200\000\001\200\000\001\200\000\001"
  521      80000180 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 36
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 36
 
 
  521      00018000 
@@ -2158,17 +2158,17 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 1
  537              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
  538              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  539              		.file 4 "Core/Inc/Fonts/fonts.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 37
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 37
 
 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s 			page 38
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 font24.c
-C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s:25     .data.Font24:00000000 Font24
-C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s:22     .data.Font24:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s:34     .rodata.Font24_Table:00000000 Font24_Table
-C:\Users\kroko\AppData\Local\Temp\ccmqCe4c.s:31     .rodata.Font24_Table:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s:25     .data.Font24:00000000 Font24
+C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s:22     .data.Font24:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s:34     .rodata.Font24_Table:00000000 Font24_Table
+C:\Users\kroko\AppData\Local\Temp\ccZubZAP.s:31     .rodata.Font24_Table:00000000 $d
 
 NO UNDEFINED SYMBOLS

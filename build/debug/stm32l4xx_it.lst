@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
   28:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN TD */
   29:Core/Src/stm32l4xx_it.c **** 
   30:Core/Src/stm32l4xx_it.c **** /* USER CODE END TD */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 2
 
 
   31:Core/Src/stm32l4xx_it.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
   78:Core/Src/stm32l4xx_it.c ****    while (1)
   36              		.loc 1 78 4 view .LVU1
   79:Core/Src/stm32l4xx_it.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 3
 
 
   80:Core/Src/stm32l4xx_it.c ****   }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
   98:Core/Src/stm32l4xx_it.c **** 
   99:Core/Src/stm32l4xx_it.c **** /**
  100:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Memory management fault.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 4
 
 
  101:Core/Src/stm32l4xx_it.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  125:Core/Src/stm32l4xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
  126:Core/Src/stm32l4xx_it.c ****   }
  106              		.loc 1 126 3 view .LVU14
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 5
 
 
  122:Core/Src/stm32l4xx_it.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  146:Core/Src/stm32l4xx_it.c ****   */
  147:Core/Src/stm32l4xx_it.c **** void SVC_Handler(void)
  148:Core/Src/stm32l4xx_it.c **** {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 6
 
 
  144              		.loc 1 148 1 view -0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  169:Core/Src/stm32l4xx_it.c **** 
  170:Core/Src/stm32l4xx_it.c **** /**
  171:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Pendable request for system service.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 7
 
 
  172:Core/Src/stm32l4xx_it.c ****   */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  214              		.cfi_endproc
  215              	.LFE327:
  217              		.section	.text.RTC_WKUP_IRQHandler,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 8
 
 
  218              		.align	1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  254              	EXTI0_IRQHandler:
  255              	.LFB329:
  217:Core/Src/stm32l4xx_it.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 9
 
 
  218:Core/Src/stm32l4xx_it.c **** /**
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  240:Core/Src/stm32l4xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
  290              		.loc 1 240 3 view .LVU36
  291 0002 0248     		ldr	r0, .L24
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 10
 
 
  292 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
@@ -597,22 +597,22 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  329 000c 00000000 		.word	hadc1
  330              		.cfi_endproc
  331              	.LFE331:
- 333              		.section	.text.USB_IRQHandler,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 11
+ 333              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 11
 
 
  334              		.align	1
- 335              		.global	USB_IRQHandler
+ 335              		.global	EXTI9_5_IRQHandler
  336              		.syntax unified
  337              		.thumb
  338              		.thumb_func
- 340              	USB_IRQHandler:
+ 340              	EXTI9_5_IRQHandler:
  341              	.LFB332:
  259:Core/Src/stm32l4xx_it.c **** 
  260:Core/Src/stm32l4xx_it.c **** /**
- 261:Core/Src/stm32l4xx_it.c ****   * @brief This function handles USB event interrupt through EXTI line 17.
+ 261:Core/Src/stm32l4xx_it.c ****   * @brief This function handles EXTI line[9:5] interrupts.
  262:Core/Src/stm32l4xx_it.c ****   */
- 263:Core/Src/stm32l4xx_it.c **** void USB_IRQHandler(void)
+ 263:Core/Src/stm32l4xx_it.c **** void EXTI9_5_IRQHandler(void)
  264:Core/Src/stm32l4xx_it.c **** {
  342              		.loc 1 264 1 is_stmt 1 view -0
  343              		.cfi_startproc
@@ -622,78 +622,121 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 1
  347              		.cfi_def_cfa_offset 8
  348              		.cfi_offset 3, -8
  349              		.cfi_offset 14, -4
- 265:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USB_IRQn 0 */
+ 265:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
  266:Core/Src/stm32l4xx_it.c **** 
- 267:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USB_IRQn 0 */
- 268:Core/Src/stm32l4xx_it.c ****   HAL_PCD_IRQHandler(&hpcd_USB_FS);
+ 267:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 0 */
+ 268:Core/Src/stm32l4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(USB_WKUP_Pin);
  350              		.loc 1 268 3 view .LVU42
- 351 0002 0248     		ldr	r0, .L32
- 352 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 351 0002 2020     		movs	r0, #32
+ 352 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
  353              	.LVL5:
- 269:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USB_IRQn 1 */
+ 269:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
  270:Core/Src/stm32l4xx_it.c **** 
- 271:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USB_IRQn 1 */
+ 271:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 1 */
  272:Core/Src/stm32l4xx_it.c **** }
  354              		.loc 1 272 1 is_stmt 0 view .LVU43
  355 0008 08BD     		pop	{r3, pc}
- 356              	.L33:
- 357 000a 00BF     		.align	2
- 358              	.L32:
- 359 000c 00000000 		.word	hpcd_USB_FS
- 360              		.cfi_endproc
- 361              	.LFE332:
- 363              		.text
- 364              	.Letext0:
- 365              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
- 366              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
- 367              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
- 368              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
- 369              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 370              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 371              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h"
- 372              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
- 373              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
- 374              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
- 375              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 376              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h"
- 377              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s 			page 12
+ 356              		.cfi_endproc
+ 357              	.LFE332:
+ 359              		.section	.text.USB_IRQHandler,"ax",%progbits
+ 360              		.align	1
+ 361              		.global	USB_IRQHandler
+ 362              		.syntax unified
+ 363              		.thumb
+ 364              		.thumb_func
+ 366              	USB_IRQHandler:
+ 367              	.LFB333:
+ 273:Core/Src/stm32l4xx_it.c **** 
+ 274:Core/Src/stm32l4xx_it.c **** /**
+ 275:Core/Src/stm32l4xx_it.c ****   * @brief This function handles USB event interrupt through EXTI line 17.
+ 276:Core/Src/stm32l4xx_it.c ****   */
+ 277:Core/Src/stm32l4xx_it.c **** void USB_IRQHandler(void)
+ 278:Core/Src/stm32l4xx_it.c **** {
+ 368              		.loc 1 278 1 is_stmt 1 view -0
+ 369              		.cfi_startproc
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372 0000 08B5     		push	{r3, lr}
+ 373              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 12
+
+
+ 374              		.cfi_offset 3, -8
+ 375              		.cfi_offset 14, -4
+ 279:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USB_IRQn 0 */
+ 280:Core/Src/stm32l4xx_it.c **** 
+ 281:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USB_IRQn 0 */
+ 282:Core/Src/stm32l4xx_it.c ****   HAL_PCD_IRQHandler(&hpcd_USB_FS);
+ 376              		.loc 1 282 3 view .LVU45
+ 377 0002 0248     		ldr	r0, .L34
+ 378 0004 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 379              	.LVL6:
+ 283:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN USB_IRQn 1 */
+ 284:Core/Src/stm32l4xx_it.c **** 
+ 285:Core/Src/stm32l4xx_it.c ****   /* USER CODE END USB_IRQn 1 */
+ 286:Core/Src/stm32l4xx_it.c **** }
+ 380              		.loc 1 286 1 is_stmt 0 view .LVU46
+ 381 0008 08BD     		pop	{r3, pc}
+ 382              	.L35:
+ 383 000a 00BF     		.align	2
+ 384              	.L34:
+ 385 000c 00000000 		.word	hpcd_USB_FS
+ 386              		.cfi_endproc
+ 387              	.LFE333:
+ 389              		.text
+ 390              	.Letext0:
+ 391              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
+ 392              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
+ 393              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l412xx.h"
+ 394              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
+ 395              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 396              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 397              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h"
+ 398              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
+ 399              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
+ 400              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
+ 401              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 402              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h"
+ 403              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_it.c
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:21     .text.NMI_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:27     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:44     .text.HardFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:67     .text.MemManage_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:90     .text.BusFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:113    .text.UsageFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:136    .text.SVC_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:142    .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:155    .text.DebugMon_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:174    .text.PendSV_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:193    .text.SysTick_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:218    .text.RTC_WKUP_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:224    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:243    .text.RTC_WKUP_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:248    .text.EXTI0_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:254    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:274    .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:280    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:299    .text.DMA1_Channel1_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:304    .text.ADC1_2_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:310    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:329    .text.ADC1_2_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:334    .text.USB_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:340    .text.USB_IRQHandler:00000000 USB_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccgdRD7U.s:359    .text.USB_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:21     .text.NMI_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:27     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:44     .text.HardFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:67     .text.MemManage_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:90     .text.BusFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:113    .text.UsageFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:136    .text.SVC_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:142    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:155    .text.DebugMon_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:174    .text.PendSV_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:193    .text.SysTick_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:218    .text.RTC_WKUP_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:224    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:243    .text.RTC_WKUP_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:248    .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:254    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:274    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:280    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:299    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:304    .text.ADC1_2_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:310    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:329    .text.ADC1_2_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:334    .text.EXTI9_5_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:340    .text.EXTI9_5_IRQHandler:00000000 EXTI9_5_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:360    .text.USB_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:366    .text.USB_IRQHandler:00000000 USB_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccMQV22T.s:385    .text.USB_IRQHandler:0000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick

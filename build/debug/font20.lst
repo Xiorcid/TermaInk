@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
   41 004e 00000000 		.ascii	"\000\000\000\000\000\000\034\340\034\340\034\340\010"
   41      00001CE0 
   41      1CE01CE0 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 2
 
 
   41      08
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
   55 0114 00000000 		.ascii	"\000\000\000\000\000\000\000\000\003\200\003\200\003"
   55      00000000 
   55      03800380 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 3
 
 
   55      03
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
   69      00000000 
   69      00000000 
   69      00
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 4
 
 
   70 01da 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
   83      60306030 
   83      60306018 
   83      C01FC00F 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 5
 
 
   84 029f 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\003\000"
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
   97      6030E03F 
   97      C01F8000 
   97      00
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 6
 
 
   98 0366 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\003"
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  110      00000003 
  110      80
  111 0428 03800380 		.ascii	"\003\200\003\200\000\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 7
 
 
  111      00000000 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  124      006001
  125 04e7 C0038003 		.ascii	"\300\003\200\003\000\000\000\000\000\007\000\007\000"
  125      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 8
 
 
  125      00070007 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  138      30303030 
  138      307030E0 
  138      7FC07F80 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 9
 
 
  138      00000000 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  151      1F
  152 0683 E0000000 		.ascii	"\340\000\000\000\000\000\000\000\000\000\000\000\000"
  152      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 10
 
 
  152      00000000 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  164      000000
  165 0755 00000000 		.ascii	"\000\000\000\000\000\000\000\007\200\017\300\034\340"
  165      00000007 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 11
 
 
  165      800FC01C 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  178 0822 00003FF0 		.ascii	"\000\000?\360?\360303030\003\000\003\000\003\000\003"
  178      3FF03330 
  178      33303330 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 12
 
 
  178      03000300 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  191      0CC00780 
  191      07800300 
  191      030003
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 13
 
 
  192 08fd 0003000F 		.ascii	"\000\003\000\017\300\017\300\000\000\000\000\000\000"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  205      0007000D 
  205      80
  206 09b8 18C03060 		.ascii	"\030\3000`  \000\000\000\000\000\000\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 14
 
 
  206      20200000 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  219      00000000 
  219      07
  220 0a83 B01FF018 		.ascii	"\260\037\360\0300000\0000\00080\037\360\017\300\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 15
 
 
  220      30303030 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  232      180018
  233 0b49 001BC01F 		.ascii	"\000\033\300\037\340\034`\030`\030`\030`\030`<\360<"
  233      E01C6018 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 16
 
 
  233      60186018 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  246      00
  247 0c0a 00000000 		.ascii	"\000\000\000\000\000\000\000\000~\340\177\360303030"
  247      00000000 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 17
 
 
  247      7EE07FF0 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  259      3CE03DF0 
  259      0F300E
  260 0ce1 000C000C 		.ascii	"\000\014\000\014\000\014\000?\300?\300\000\000\000\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 18
 
 
  260      000C003F 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  273      78F078F0 
  273      32603260 
  273      37E0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 19
 
 
  274 0dac 1DC01DC0 		.ascii	"\035\300\035\300\030\300\030\300\000\000\000\000\000"
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  287      00030003 
  287      00
  288 0e6a 03000300 		.ascii	"\003\000\003\000\003\000\003\000\003\000\003\000\003"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 20
 
 
  288      03000300 
@@ -1178,14 +1178,14 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 1
  299              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
  300              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  301              		.file 4 "Core/Inc/Fonts/fonts.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 font20.c
-C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s:25     .data.Font20:00000000 Font20
-C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s:22     .data.Font20:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s:34     .rodata.Font20_Table:00000000 Font20_Table
-C:\Users\kroko\AppData\Local\Temp\cc6XqO26.s:31     .rodata.Font20_Table:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s:25     .data.Font20:00000000 Font20
+C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s:22     .data.Font20:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s:34     .rodata.Font20_Table:00000000 Font20_Table
+C:\Users\kroko\AppData\Local\Temp\cctcFFUN.s:31     .rodata.Font20_Table:00000000 $d
 
 NO UNDEFINED SYMBOLS

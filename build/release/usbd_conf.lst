@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
   58              		@ sp needed
   59 0024 30BD     		pop	{r4, r5, pc}
   60              	.L7:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 2
 
 
   61 0026 4FF40053 		mov	r3, #8192
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  116              		.thumb_func
  118              	HAL_PCD_MspDeInit:
  119              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 3
 
 
  120              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  179              		.section	.text.HAL_PCD_DataInStageCallback,"ax",%progbits
  180              		.align	1
  181              		.global	HAL_PCD_DataInStageCallback
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 4
 
 
  182              		.syntax unified
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  242              		.thumb
  243              		.thumb_func
  245              	HAL_PCD_SuspendCallback:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 5
 
 
  246              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  304              		@ frame_needed = 0, uses_anonymous_args = 0
  305 0000 08B5     		push	{r3, lr}
  306 0002 D0F8DC02 		ldr	r0, [r0, #732]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 6
 
 
  307 0006 FFF7FEFF 		bl	USBD_LL_IsoOUTIncomplete
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  369 000a C0F8DC42 		str	r4, [r0, #732]
  370 000e C4F8C802 		str	r0, [r4, #712]
  371 0012 1D4B     		ldr	r3, .L52+4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 7
 
 
  372 0014 0360     		str	r3, [r0]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  427              		.thumb_func
  429              	USBD_LL_DeInit:
  430              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 8
 
 
  431              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  489              	USBD_LL_Stop:
  490              		@ args = 0, pretend = 0, frame = 0
  491              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 9
 
 
  492 0000 08B5     		push	{r3, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  549              		.thumb
  550              		.thumb_func
  552              	USBD_LL_CloseEP:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 10
 
 
  553              		@ args = 0, pretend = 0, frame = 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  610              		.thumb_func
  612              	USBD_LL_StallEP:
  613              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 11
 
 
  614              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  672              	USBD_LL_IsStallEP:
  673              		@ args = 0, pretend = 0, frame = 0
  674              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 12
 
 
  675              		@ link register save eliminated.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  733 0006 FFF7FEFF 		bl	HAL_PCD_EP_Transmit
  734 000a 0328     		cmp	r0, #3
  735 000c 05D8     		bhi	.L145
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 13
 
 
  736 000e DFE800F0 		tbb	[pc, r0]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  794 000a 08BD     		pop	{r3, pc}
  796              		.section	.text.HAL_PCDEx_LPM_Callback,"ax",%progbits
  797              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 14
 
 
  798              		.global	HAL_PCDEx_LPM_Callback
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  856              		.global	USBD_static_malloc
  857              		.syntax unified
  858              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 15
 
 
  859              		.thumb_func
@@ -881,111 +881,111 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 1
  897      00000000 
  897      00000000 
  898              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_conf.c
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:18     .text.SystemClockConfig_Resume:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:23     .text.SystemClockConfig_Resume:00000000 SystemClockConfig_Resume
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:31     .text.HAL_PCD_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:37     .text.HAL_PCD_MspInit:00000000 HAL_PCD_MspInit
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:108    .text.HAL_PCD_MspInit:00000094 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:112    .text.HAL_PCD_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:118    .text.HAL_PCD_MspDeInit:00000000 HAL_PCD_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:142    .text.HAL_PCD_MspDeInit:0000002c $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:146    .text.HAL_PCD_SetupStageCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:152    .text.HAL_PCD_SetupStageCallback:00000000 HAL_PCD_SetupStageCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:162    .text.HAL_PCD_DataOutStageCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:168    .text.HAL_PCD_DataOutStageCallback:00000000 HAL_PCD_DataOutStageCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:180    .text.HAL_PCD_DataInStageCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:186    .text.HAL_PCD_DataInStageCallback:00000000 HAL_PCD_DataInStageCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:198    .text.HAL_PCD_SOFCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:204    .text.HAL_PCD_SOFCallback:00000000 HAL_PCD_SOFCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:213    .text.HAL_PCD_ResetCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:219    .text.HAL_PCD_ResetCallback:00000000 HAL_PCD_ResetCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:239    .text.HAL_PCD_SuspendCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:245    .text.HAL_PCD_SuspendCallback:00000000 HAL_PCD_SuspendCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:263    .text.HAL_PCD_SuspendCallback:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:266    .text.HAL_PCD_ResumeCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:272    .text.HAL_PCD_ResumeCallback:00000000 HAL_PCD_ResumeCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:293    .text.HAL_PCD_ResumeCallback:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:296    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:302    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 HAL_PCD_ISOOUTIncompleteCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:311    .text.HAL_PCD_ISOINIncompleteCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:317    .text.HAL_PCD_ISOINIncompleteCallback:00000000 HAL_PCD_ISOINIncompleteCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:326    .text.HAL_PCD_ConnectCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:332    .text.HAL_PCD_ConnectCallback:00000000 HAL_PCD_ConnectCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:341    .text.HAL_PCD_DisconnectCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:347    .text.HAL_PCD_DisconnectCallback:00000000 HAL_PCD_DisconnectCallback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:356    .text.USBD_LL_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:362    .text.USBD_LL_Init:00000000 USBD_LL_Init
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:419    .text.USBD_LL_Init:00000084 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:896    .bss.hpcd_USB_FS:00000000 hpcd_USB_FS
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:423    .text.USBD_LL_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:429    .text.USBD_LL_DeInit:00000000 USBD_LL_DeInit
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:439    .text.USBD_LL_DeInit:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:443    .text.USBD_LL_DeInit:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:453    .text.USBD_LL_Start:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:459    .text.USBD_LL_Start:00000000 USBD_LL_Start
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:469    .text.USBD_LL_Start:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:473    .text.USBD_LL_Start:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:483    .text.USBD_LL_Stop:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:489    .text.USBD_LL_Stop:00000000 USBD_LL_Stop
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:499    .text.USBD_LL_Stop:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:503    .text.USBD_LL_Stop:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:513    .text.USBD_LL_OpenEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:519    .text.USBD_LL_OpenEP:00000000 USBD_LL_OpenEP
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:532    .text.USBD_LL_OpenEP:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:536    .text.USBD_LL_OpenEP:0000001c $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:546    .text.USBD_LL_CloseEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:552    .text.USBD_LL_CloseEP:00000000 USBD_LL_CloseEP
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:562    .text.USBD_LL_CloseEP:00000012 $d
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 17
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:18     .text.SystemClockConfig_Resume:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:23     .text.SystemClockConfig_Resume:00000000 SystemClockConfig_Resume
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:31     .text.HAL_PCD_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:37     .text.HAL_PCD_MspInit:00000000 HAL_PCD_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:108    .text.HAL_PCD_MspInit:00000094 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:112    .text.HAL_PCD_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:118    .text.HAL_PCD_MspDeInit:00000000 HAL_PCD_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:142    .text.HAL_PCD_MspDeInit:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:146    .text.HAL_PCD_SetupStageCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:152    .text.HAL_PCD_SetupStageCallback:00000000 HAL_PCD_SetupStageCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:162    .text.HAL_PCD_DataOutStageCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:168    .text.HAL_PCD_DataOutStageCallback:00000000 HAL_PCD_DataOutStageCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:180    .text.HAL_PCD_DataInStageCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:186    .text.HAL_PCD_DataInStageCallback:00000000 HAL_PCD_DataInStageCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:198    .text.HAL_PCD_SOFCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:204    .text.HAL_PCD_SOFCallback:00000000 HAL_PCD_SOFCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:213    .text.HAL_PCD_ResetCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:219    .text.HAL_PCD_ResetCallback:00000000 HAL_PCD_ResetCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:239    .text.HAL_PCD_SuspendCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:245    .text.HAL_PCD_SuspendCallback:00000000 HAL_PCD_SuspendCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:263    .text.HAL_PCD_SuspendCallback:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:266    .text.HAL_PCD_ResumeCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:272    .text.HAL_PCD_ResumeCallback:00000000 HAL_PCD_ResumeCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:293    .text.HAL_PCD_ResumeCallback:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:296    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:302    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 HAL_PCD_ISOOUTIncompleteCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:311    .text.HAL_PCD_ISOINIncompleteCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:317    .text.HAL_PCD_ISOINIncompleteCallback:00000000 HAL_PCD_ISOINIncompleteCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:326    .text.HAL_PCD_ConnectCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:332    .text.HAL_PCD_ConnectCallback:00000000 HAL_PCD_ConnectCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:341    .text.HAL_PCD_DisconnectCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:347    .text.HAL_PCD_DisconnectCallback:00000000 HAL_PCD_DisconnectCallback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:356    .text.USBD_LL_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:362    .text.USBD_LL_Init:00000000 USBD_LL_Init
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:419    .text.USBD_LL_Init:00000084 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:896    .bss.hpcd_USB_FS:00000000 hpcd_USB_FS
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:423    .text.USBD_LL_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:429    .text.USBD_LL_DeInit:00000000 USBD_LL_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:439    .text.USBD_LL_DeInit:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:443    .text.USBD_LL_DeInit:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:453    .text.USBD_LL_Start:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:459    .text.USBD_LL_Start:00000000 USBD_LL_Start
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:469    .text.USBD_LL_Start:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:473    .text.USBD_LL_Start:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:483    .text.USBD_LL_Stop:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:489    .text.USBD_LL_Stop:00000000 USBD_LL_Stop
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:499    .text.USBD_LL_Stop:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:503    .text.USBD_LL_Stop:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:513    .text.USBD_LL_OpenEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:519    .text.USBD_LL_OpenEP:00000000 USBD_LL_OpenEP
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:532    .text.USBD_LL_OpenEP:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:536    .text.USBD_LL_OpenEP:0000001c $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:546    .text.USBD_LL_CloseEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:552    .text.USBD_LL_CloseEP:00000000 USBD_LL_CloseEP
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:562    .text.USBD_LL_CloseEP:00000012 $d
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 17
 
 
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:566    .text.USBD_LL_CloseEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:576    .text.USBD_LL_FlushEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:582    .text.USBD_LL_FlushEP:00000000 USBD_LL_FlushEP
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:592    .text.USBD_LL_FlushEP:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:596    .text.USBD_LL_FlushEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:606    .text.USBD_LL_StallEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:612    .text.USBD_LL_StallEP:00000000 USBD_LL_StallEP
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:622    .text.USBD_LL_StallEP:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:626    .text.USBD_LL_StallEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:636    .text.USBD_LL_ClearStallEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:642    .text.USBD_LL_ClearStallEP:00000000 USBD_LL_ClearStallEP
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:652    .text.USBD_LL_ClearStallEP:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:656    .text.USBD_LL_ClearStallEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:666    .text.USBD_LL_IsStallEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:672    .text.USBD_LL_IsStallEP:00000000 USBD_LL_IsStallEP
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:692    .text.USBD_LL_SetUSBAddress:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:698    .text.USBD_LL_SetUSBAddress:00000000 USBD_LL_SetUSBAddress
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:708    .text.USBD_LL_SetUSBAddress:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:712    .text.USBD_LL_SetUSBAddress:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:722    .text.USBD_LL_Transmit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:728    .text.USBD_LL_Transmit:00000000 USBD_LL_Transmit
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:738    .text.USBD_LL_Transmit:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:742    .text.USBD_LL_Transmit:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:752    .text.USBD_LL_PrepareReceive:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:758    .text.USBD_LL_PrepareReceive:00000000 USBD_LL_PrepareReceive
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:768    .text.USBD_LL_PrepareReceive:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:772    .text.USBD_LL_PrepareReceive:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:782    .text.USBD_LL_GetRxDataSize:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:788    .text.USBD_LL_GetRxDataSize:00000000 USBD_LL_GetRxDataSize
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:797    .text.HAL_PCDEx_LPM_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:803    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:838    .text.HAL_PCDEx_LPM_Callback:00000040 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:841    .text.USBD_LL_Delay:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:847    .text.USBD_LL_Delay:00000000 USBD_LL_Delay
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:855    .text.USBD_static_malloc:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:861    .text.USBD_static_malloc:00000000 USBD_static_malloc
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:870    .text.USBD_static_malloc:00000004 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:889    .bss.mem.0:00000000 mem.0
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:873    .text.USBD_static_free:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:879    .text.USBD_static_free:00000000 USBD_static_free
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:886    .bss.mem.0:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s:893    .bss.hpcd_USB_FS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:566    .text.USBD_LL_CloseEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:576    .text.USBD_LL_FlushEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:582    .text.USBD_LL_FlushEP:00000000 USBD_LL_FlushEP
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:592    .text.USBD_LL_FlushEP:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:596    .text.USBD_LL_FlushEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:606    .text.USBD_LL_StallEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:612    .text.USBD_LL_StallEP:00000000 USBD_LL_StallEP
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:622    .text.USBD_LL_StallEP:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:626    .text.USBD_LL_StallEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:636    .text.USBD_LL_ClearStallEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:642    .text.USBD_LL_ClearStallEP:00000000 USBD_LL_ClearStallEP
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:652    .text.USBD_LL_ClearStallEP:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:656    .text.USBD_LL_ClearStallEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:666    .text.USBD_LL_IsStallEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:672    .text.USBD_LL_IsStallEP:00000000 USBD_LL_IsStallEP
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:692    .text.USBD_LL_SetUSBAddress:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:698    .text.USBD_LL_SetUSBAddress:00000000 USBD_LL_SetUSBAddress
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:708    .text.USBD_LL_SetUSBAddress:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:712    .text.USBD_LL_SetUSBAddress:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:722    .text.USBD_LL_Transmit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:728    .text.USBD_LL_Transmit:00000000 USBD_LL_Transmit
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:738    .text.USBD_LL_Transmit:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:742    .text.USBD_LL_Transmit:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:752    .text.USBD_LL_PrepareReceive:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:758    .text.USBD_LL_PrepareReceive:00000000 USBD_LL_PrepareReceive
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:768    .text.USBD_LL_PrepareReceive:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:772    .text.USBD_LL_PrepareReceive:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:782    .text.USBD_LL_GetRxDataSize:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:788    .text.USBD_LL_GetRxDataSize:00000000 USBD_LL_GetRxDataSize
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:797    .text.HAL_PCDEx_LPM_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:803    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:838    .text.HAL_PCDEx_LPM_Callback:00000040 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:841    .text.USBD_LL_Delay:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:847    .text.USBD_LL_Delay:00000000 USBD_LL_Delay
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:855    .text.USBD_static_malloc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:861    .text.USBD_static_malloc:00000000 USBD_static_malloc
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:870    .text.USBD_static_malloc:00000004 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:889    .bss.mem.0:00000000 mem.0
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:873    .text.USBD_static_free:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:879    .text.USBD_static_free:00000000 USBD_static_free
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:886    .bss.mem.0:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s:893    .bss.hpcd_USB_FS:00000000 $d
 
 UNDEFINED SYMBOLS
 SystemClock_Config
@@ -1001,7 +1001,7 @@ USBD_LL_SetupStage
 USBD_LL_DataOutStage
 USBD_LL_DataInStage
 USBD_LL_SOF
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc47H6Zc.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccGoDhXi.s 			page 18
 
 
 USBD_LL_SetSpeed

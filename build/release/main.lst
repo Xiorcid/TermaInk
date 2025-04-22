@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -25,8 +25,8 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 1
   23              	MX_GPIO_Init:
   24              		@ args = 0, pretend = 0, frame = 40
   25              		@ frame_needed = 0, uses_anonymous_args = 0
-  26 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
-  27 0004 8BB0     		sub	sp, sp, #44
+  26 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+  27 0004 8AB0     		sub	sp, sp, #40
   28 0006 05AD     		add	r5, sp, #20
   29 0008 0024     		movs	r4, #0
   30 000a 0594     		str	r4, [sp, #20]
@@ -34,7 +34,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 1
   32 000e 0794     		str	r4, [sp, #28]
   33 0010 0894     		str	r4, [sp, #32]
   34 0012 0994     		str	r4, [sp, #36]
-  35 0014 454B     		ldr	r3, .L3
+  35 0014 504B     		ldr	r3, .L3
   36 0016 DA6C     		ldr	r2, [r3, #76]
   37 0018 42F00402 		orr	r2, r2, #4
   38 001c DA64     		str	r2, [r3, #76]
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 1
   56 004a 039A     		ldr	r2, [sp, #12]
   57 004c DA6C     		ldr	r2, [r3, #76]
   58 004e 42F08002 		orr	r2, r2, #128
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 2
 
 
   59 0052 DA64     		str	r2, [r3, #76]
@@ -70,15 +70,15 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 1
   65 0060 5821     		movs	r1, #88
   66 0062 4FF09040 		mov	r0, #1207959552
   67 0066 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  68 006a DFF8C880 		ldr	r8, .L3+8
-  69 006e 2246     		mov	r2, r4
-  70 0070 0221     		movs	r1, #2
-  71 0072 4046     		mov	r0, r8
-  72 0074 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  73 0078 0126     		movs	r6, #1
-  74 007a 0596     		str	r6, [sp, #20]
-  75 007c 4FF48813 		mov	r3, #1114112
-  76 0080 0693     		str	r3, [sp, #24]
+  68 006a 3C4F     		ldr	r7, .L3+4
+  69 006c 2246     		mov	r2, r4
+  70 006e 0221     		movs	r1, #2
+  71 0070 3846     		mov	r0, r7
+  72 0072 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  73 0076 0126     		movs	r6, #1
+  74 0078 0596     		str	r6, [sp, #20]
+  75 007a 4FF4881A 		mov	r10, #1114112
+  76 007e CDF818A0 		str	r10, [sp, #24]
   77 0082 0794     		str	r4, [sp, #28]
   78 0084 2946     		mov	r1, r5
   79 0086 4FF09040 		mov	r0, #1207959552
@@ -106,2050 +106,2091 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 1
  101 00c4 2946     		mov	r1, r5
  102 00c6 4FF09040 		mov	r0, #1207959552
  103 00ca FFF7FEFF 		bl	HAL_GPIO_Init
- 104 00ce F123     		movs	r3, #241
+ 104 00ce D123     		movs	r3, #209
  105 00d0 0593     		str	r3, [sp, #20]
- 106 00d2 0327     		movs	r7, #3
- 107 00d4 0697     		str	r7, [sp, #24]
- 108 00d6 0794     		str	r4, [sp, #28]
- 109 00d8 2946     		mov	r1, r5
- 110 00da 4046     		mov	r0, r8
- 111 00dc FFF7FEFF 		bl	HAL_GPIO_Init
- 112 00e0 0223     		movs	r3, #2
- 113 00e2 0593     		str	r3, [sp, #20]
- 114 00e4 0696     		str	r6, [sp, #24]
- 115 00e6 0794     		str	r4, [sp, #28]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 3
+ 106 00d2 4FF00308 		mov	r8, #3
+ 107 00d6 CDF81880 		str	r8, [sp, #24]
+ 108 00da 0794     		str	r4, [sp, #28]
+ 109 00dc 2946     		mov	r1, r5
+ 110 00de 3846     		mov	r0, r7
+ 111 00e0 FFF7FEFF 		bl	HAL_GPIO_Init
+ 112 00e4 0223     		movs	r3, #2
+ 113 00e6 0593     		str	r3, [sp, #20]
+ 114 00e8 0696     		str	r6, [sp, #24]
+ 115 00ea 0794     		str	r4, [sp, #28]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 3
 
 
- 116 00e8 0894     		str	r4, [sp, #32]
- 117 00ea 2946     		mov	r1, r5
- 118 00ec 4046     		mov	r0, r8
- 119 00ee FFF7FEFF 		bl	HAL_GPIO_Init
- 120 00f2 4FF40443 		mov	r3, #33792
- 121 00f6 0593     		str	r3, [sp, #20]
- 122 00f8 0697     		str	r7, [sp, #24]
- 123 00fa 0794     		str	r4, [sp, #28]
- 124 00fc 2946     		mov	r1, r5
- 125 00fe 4FF09040 		mov	r0, #1207959552
- 126 0102 FFF7FEFF 		bl	HAL_GPIO_Init
- 127 0106 CDF81490 		str	r9, [sp, #20]
- 128 010a 0697     		str	r7, [sp, #24]
- 129 010c 0794     		str	r4, [sp, #28]
- 130 010e 2946     		mov	r1, r5
- 131 0110 0748     		ldr	r0, .L3+4
- 132 0112 FFF7FEFF 		bl	HAL_GPIO_Init
- 133 0116 2246     		mov	r2, r4
- 134 0118 2146     		mov	r1, r4
- 135 011a 0620     		movs	r0, #6
- 136 011c FFF7FEFF 		bl	HAL_NVIC_SetPriority
- 137 0120 0620     		movs	r0, #6
- 138 0122 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
- 139 0126 0BB0     		add	sp, sp, #44
- 140              		@ sp needed
- 141 0128 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
- 142              	.L4:
- 143              		.align	2
- 144              	.L3:
- 145 012c 00100240 		.word	1073876992
- 146 0130 001C0048 		.word	1207966720
- 147 0134 00040048 		.word	1207960576
- 149              		.section	.text.MX_DMA_Init,"ax",%progbits
- 150              		.align	1
- 151              		.syntax unified
- 152              		.thumb
- 153              		.thumb_func
- 155              	MX_DMA_Init:
- 156              		@ args = 0, pretend = 0, frame = 8
- 157              		@ frame_needed = 0, uses_anonymous_args = 0
- 158 0000 00B5     		push	{lr}
- 159 0002 83B0     		sub	sp, sp, #12
- 160 0004 0A4B     		ldr	r3, .L7
- 161 0006 9A6C     		ldr	r2, [r3, #72]
- 162 0008 42F00102 		orr	r2, r2, #1
- 163 000c 9A64     		str	r2, [r3, #72]
- 164 000e 9B6C     		ldr	r3, [r3, #72]
- 165 0010 03F00103 		and	r3, r3, #1
- 166 0014 0193     		str	r3, [sp, #4]
- 167 0016 019B     		ldr	r3, [sp, #4]
- 168 0018 0022     		movs	r2, #0
- 169 001a 1146     		mov	r1, r2
- 170 001c 0B20     		movs	r0, #11
- 171 001e FFF7FEFF 		bl	HAL_NVIC_SetPriority
- 172 0022 0B20     		movs	r0, #11
- 173 0024 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
- 174 0028 03B0     		add	sp, sp, #12
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 4
+ 116 00ec 0894     		str	r4, [sp, #32]
+ 117 00ee 2946     		mov	r1, r5
+ 118 00f0 3846     		mov	r0, r7
+ 119 00f2 FFF7FEFF 		bl	HAL_GPIO_Init
+ 120 00f6 4FF40443 		mov	r3, #33792
+ 121 00fa 0593     		str	r3, [sp, #20]
+ 122 00fc CDF81880 		str	r8, [sp, #24]
+ 123 0100 0794     		str	r4, [sp, #28]
+ 124 0102 2946     		mov	r1, r5
+ 125 0104 4FF09040 		mov	r0, #1207959552
+ 126 0108 FFF7FEFF 		bl	HAL_GPIO_Init
+ 127 010c 2023     		movs	r3, #32
+ 128 010e 0593     		str	r3, [sp, #20]
+ 129 0110 CDF818A0 		str	r10, [sp, #24]
+ 130 0114 0794     		str	r4, [sp, #28]
+ 131 0116 2946     		mov	r1, r5
+ 132 0118 3846     		mov	r0, r7
+ 133 011a FFF7FEFF 		bl	HAL_GPIO_Init
+ 134 011e CDF81490 		str	r9, [sp, #20]
+ 135 0122 CDF81880 		str	r8, [sp, #24]
+ 136 0126 0794     		str	r4, [sp, #28]
+ 137 0128 2946     		mov	r1, r5
+ 138 012a 0D48     		ldr	r0, .L3+8
+ 139 012c FFF7FEFF 		bl	HAL_GPIO_Init
+ 140 0130 2246     		mov	r2, r4
+ 141 0132 2146     		mov	r1, r4
+ 142 0134 0620     		movs	r0, #6
+ 143 0136 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 144 013a 0620     		movs	r0, #6
+ 145 013c FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 146 0140 2246     		mov	r2, r4
+ 147 0142 2146     		mov	r1, r4
+ 148 0144 1720     		movs	r0, #23
+ 149 0146 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 150 014a 1720     		movs	r0, #23
+ 151 014c FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 152 0150 0AB0     		add	sp, sp, #40
+ 153              		@ sp needed
+ 154 0152 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 155              	.L4:
+ 156 0156 00BF     		.align	2
+ 157              	.L3:
+ 158 0158 00100240 		.word	1073876992
+ 159 015c 00040048 		.word	1207960576
+ 160 0160 001C0048 		.word	1207966720
+ 162              		.section	.text.MX_DMA_Init,"ax",%progbits
+ 163              		.align	1
+ 164              		.syntax unified
+ 165              		.thumb
+ 166              		.thumb_func
+ 168              	MX_DMA_Init:
+ 169              		@ args = 0, pretend = 0, frame = 8
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171 0000 00B5     		push	{lr}
+ 172 0002 83B0     		sub	sp, sp, #12
+ 173 0004 0A4B     		ldr	r3, .L7
+ 174 0006 9A6C     		ldr	r2, [r3, #72]
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 4
 
 
- 175              		@ sp needed
- 176 002a 5DF804FB 		ldr	pc, [sp], #4
- 177              	.L8:
- 178 002e 00BF     		.align	2
- 179              	.L7:
- 180 0030 00100240 		.word	1073876992
- 182              		.section	.text.map,"ax",%progbits
- 183              		.align	1
- 184              		.global	map
- 185              		.syntax unified
- 186              		.thumb
- 187              		.thumb_func
- 189              	map:
- 190              		@ args = 4, pretend = 0, frame = 0
- 191              		@ frame_needed = 0, uses_anonymous_args = 0
- 192              		@ link register save eliminated.
- 193 0000 10B4     		push	{r4}
- 194 0002 9142     		cmp	r1, r2
- 195 0004 0CD0     		beq	.L13
- 196 0006 401A     		subs	r0, r0, r1
- 197 0008 019C     		ldr	r4, [sp, #4]
- 198 000a A4EB030C 		sub	ip, r4, r3
- 199 000e 0CFB00F0 		mul	r0, ip, r0
- 200 0012 521A     		subs	r2, r2, r1
- 201 0014 90FBF2F0 		sdiv	r0, r0, r2
- 202 0018 1844     		add	r0, r0, r3
- 203              	.L9:
- 204 001a 5DF8044B 		ldr	r4, [sp], #4
- 205 001e 7047     		bx	lr
- 206              	.L13:
- 207 0020 019A     		ldr	r2, [sp, #4]
- 208 0022 1344     		add	r3, r3, r2
- 209 0024 03EBD373 		add	r3, r3, r3, lsr #31
- 210 0028 5810     		asrs	r0, r3, #1
- 211 002a F6E7     		b	.L9
- 213              		.section	.rodata.plot.str1.4,"aMS",%progbits,1
- 214              		.align	2
- 215              	.LC0:
- 216 0000 256400   		.ascii	"%d\000"
- 217 0003 00       		.align	2
- 218              	.LC1:
- 219 0004 25642E25 		.ascii	"%d.%d\000"
- 219      6400
- 220 000a 0000     		.align	2
- 221              	.LC2:
- 222 000c 25642E25 		.ascii	"%d.%d*C/div\000"
- 222      642A432F 
- 222      64697600 
- 223              		.align	2
- 224              	.LC3:
- 225 0018 25642E30 		.ascii	"%d.0%d*C/div\000"
- 225      25642A43 
- 225      2F646976 
- 225      00
- 226 0025 000000   		.align	2
- 227              	.LC4:
- 228 0028 25642A43 		.ascii	"%d*C/div\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 5
+ 175 0008 42F00102 		orr	r2, r2, #1
+ 176 000c 9A64     		str	r2, [r3, #72]
+ 177 000e 9B6C     		ldr	r3, [r3, #72]
+ 178 0010 03F00103 		and	r3, r3, #1
+ 179 0014 0193     		str	r3, [sp, #4]
+ 180 0016 019B     		ldr	r3, [sp, #4]
+ 181 0018 0022     		movs	r2, #0
+ 182 001a 1146     		mov	r1, r2
+ 183 001c 0B20     		movs	r0, #11
+ 184 001e FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 185 0022 0B20     		movs	r0, #11
+ 186 0024 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 187 0028 03B0     		add	sp, sp, #12
+ 188              		@ sp needed
+ 189 002a 5DF804FB 		ldr	pc, [sp], #4
+ 190              	.L8:
+ 191 002e 00BF     		.align	2
+ 192              	.L7:
+ 193 0030 00100240 		.word	1073876992
+ 195              		.section	.text.map,"ax",%progbits
+ 196              		.align	1
+ 197              		.global	map
+ 198              		.syntax unified
+ 199              		.thumb
+ 200              		.thumb_func
+ 202              	map:
+ 203              		@ args = 4, pretend = 0, frame = 0
+ 204              		@ frame_needed = 0, uses_anonymous_args = 0
+ 205              		@ link register save eliminated.
+ 206 0000 10B4     		push	{r4}
+ 207 0002 9142     		cmp	r1, r2
+ 208 0004 0CD0     		beq	.L13
+ 209 0006 401A     		subs	r0, r0, r1
+ 210 0008 019C     		ldr	r4, [sp, #4]
+ 211 000a A4EB030C 		sub	ip, r4, r3
+ 212 000e 0CFB00F0 		mul	r0, ip, r0
+ 213 0012 521A     		subs	r2, r2, r1
+ 214 0014 90FBF2F0 		sdiv	r0, r0, r2
+ 215 0018 1844     		add	r0, r0, r3
+ 216              	.L9:
+ 217 001a 5DF8044B 		ldr	r4, [sp], #4
+ 218 001e 7047     		bx	lr
+ 219              	.L13:
+ 220 0020 019A     		ldr	r2, [sp, #4]
+ 221 0022 1344     		add	r3, r3, r2
+ 222 0024 03EBD373 		add	r3, r3, r3, lsr #31
+ 223 0028 5810     		asrs	r0, r3, #1
+ 224 002a F6E7     		b	.L9
+ 226              		.section	.text.shutdown,"ax",%progbits
+ 227              		.align	1
+ 228              		.global	shutdown
+ 229              		.syntax unified
+ 230              		.thumb
+ 231              		.thumb_func
+ 233              	shutdown:
+ 234              		@ args = 0, pretend = 0, frame = 24
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 5
 
 
- 228      2F646976 
- 228      00
- 229 0031 000000   		.align	2
- 230              	.LC5:
- 231 0034 25642E25 		.ascii	"%d.%dC\000"
- 231      644300
- 232              		.section	.text.plot,"ax",%progbits
- 233              		.align	1
- 234              		.global	plot
- 235              		.syntax unified
- 236              		.thumb
- 237              		.thumb_func
- 239              	plot:
- 240              		@ args = 0, pretend = 0, frame = 80
- 241              		@ frame_needed = 0, uses_anonymous_args = 0
- 242 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
- 243 0004 99B0     		sub	sp, sp, #100
- 244 0006 B54D     		ldr	r5, .L75
- 245 0008 FF24     		movs	r4, #255
- 246 000a 0094     		str	r4, [sp]
- 247 000c 5A23     		movs	r3, #90
- 248 000e FA22     		movs	r2, #250
- 249 0010 7A21     		movs	r1, #122
- 250 0012 2846     		mov	r0, r5
- 251 0014 FFF7FEFF 		bl	EPD_NewImage
- 252 0018 2846     		mov	r0, r5
- 253 001a FFF7FEFF 		bl	EPD_SelectImage
- 254 001e 2046     		mov	r0, r4
- 255 0020 FFF7FEFF 		bl	EPD_Clear
- 256 0024 0020     		movs	r0, #0
- 257 0026 FFF7FEFF 		bl	q_get
- 258 002a 05B2     		sxth	r5, r0
- 259 002c 0020     		movs	r0, #0
- 260 002e FFF7FEFF 		bl	q_get
- 261 0032 07B2     		sxth	r7, r0
- 262 0034 0024     		movs	r4, #0
- 263 0036 06E0     		b	.L15
- 264              	.L62:
- 265 0038 2046     		mov	r0, r4
- 266 003a FFF7FEFF 		bl	q_get
- 267 003e 05B2     		sxth	r5, r0
- 268 0040 0AE0     		b	.L16
- 269              	.L17:
- 270 0042 0134     		adds	r4, r4, #1
- 271 0044 E4B2     		uxtb	r4, r4
- 272              	.L15:
- 273 0046 FFF7FEFF 		bl	q_len
- 274 004a 8442     		cmp	r4, r0
- 275 004c 0ED2     		bcs	.L61
- 276 004e 2046     		mov	r0, r4
- 277 0050 FFF7FEFF 		bl	q_get
- 278 0054 A842     		cmp	r0, r5
- 279 0056 EFDD     		ble	.L62
- 280              	.L16:
- 281 0058 2046     		mov	r0, r4
- 282 005a FFF7FEFF 		bl	q_get
- 283 005e B842     		cmp	r0, r7
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 6
+ 236 0000 00B5     		push	{lr}
+ 237 0002 87B0     		sub	sp, sp, #28
+ 238 0004 FFF7FEFF 		bl	EPD_Sleep
+ 239 0008 FFF7FEFF 		bl	EPD_Exit
+ 240 000c 124A     		ldr	r2, .L16
+ 241 000e 136E     		ldr	r3, [r2, #96]
+ 242 0010 23F48053 		bic	r3, r3, #4096
+ 243 0014 1366     		str	r3, [r2, #96]
+ 244 0016 1148     		ldr	r0, .L16+4
+ 245 0018 FFF7FEFF 		bl	HAL_SPI_DeInit
+ 246 001c 01A9     		add	r1, sp, #4
+ 247 001e 0023     		movs	r3, #0
+ 248 0020 0193     		str	r3, [sp, #4]
+ 249 0022 4B60     		str	r3, [r1, #4]
+ 250 0024 8B60     		str	r3, [r1, #8]
+ 251 0026 CB60     		str	r3, [r1, #12]
+ 252 0028 0B61     		str	r3, [r1, #16]
+ 253 002a FA23     		movs	r3, #250
+ 254 002c 0193     		str	r3, [sp, #4]
+ 255 002e 0323     		movs	r3, #3
+ 256 0030 0293     		str	r3, [sp, #8]
+ 257 0032 4FF09040 		mov	r0, #1207959552
+ 258 0036 FFF7FEFF 		bl	HAL_GPIO_Init
+ 259 003a FFF7FEFF 		bl	HAL_SuspendTick
+ 260 003e 4FF0FF30 		mov	r0, #-1
+ 261 0042 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 262 0046 FFF7FEFF 		bl	HAL_PWREx_EnableLowPowerRunMode
+ 263 004a 0120     		movs	r0, #1
+ 264 004c FFF7FEFF 		bl	HAL_PWREx_EnterSTOP2Mode
+ 265 0050 07B0     		add	sp, sp, #28
+ 266              		@ sp needed
+ 267 0052 5DF804FB 		ldr	pc, [sp], #4
+ 268              	.L17:
+ 269 0056 00BF     		.align	2
+ 270              	.L16:
+ 271 0058 00100240 		.word	1073876992
+ 272 005c 00000000 		.word	hspi1
+ 274              		.section	.text.DS18_INIT,"ax",%progbits
+ 275              		.align	1
+ 276              		.global	DS18_INIT
+ 277              		.syntax unified
+ 278              		.thumb
+ 279              		.thumb_func
+ 281              	DS18_INIT:
+ 282              		@ args = 0, pretend = 0, frame = 8
+ 283              		@ frame_needed = 0, uses_anonymous_args = 0
+ 284 0000 10B5     		push	{r4, lr}
+ 285 0002 82B0     		sub	sp, sp, #8
+ 286 0004 114C     		ldr	r4, .L20
+ 287 0006 1249     		ldr	r1, .L20+4
+ 288 0008 2046     		mov	r0, r4
+ 289 000a FFF7FEFF 		bl	DS18B20_Init
+ 290 000e 2046     		mov	r0, r4
+ 291 0010 FFF7FEFF 		bl	DS18B20_InitializationCommand
+ 292 0014 2046     		mov	r0, r4
+ 293 0016 FFF7FEFF 		bl	DS18B20_ReadRom
+ 294 001a 2046     		mov	r0, r4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 6
 
 
- 284 0060 EFDB     		blt	.L17
- 285 0062 2046     		mov	r0, r4
- 286 0064 FFF7FEFF 		bl	q_get
- 287 0068 07B2     		sxth	r7, r0
- 288 006a EAE7     		b	.L17
- 289              	.L61:
- 290 006c BD42     		cmp	r5, r7
- 291 006e 1AD0     		beq	.L63
- 292              	.L19:
- 293 0070 002D     		cmp	r5, #0
- 294 0072 1DDB     		blt	.L64
- 295              	.L20:
- 296 0074 3E46     		mov	r6, r7
- 297 0076 A846     		mov	r8, r5
- 298 0078 A7EB050C 		sub	ip, r7, r5
- 299 007c BCF5C87F 		cmp	ip, #400
- 300 0080 40DA     		bge	.L21
- 301 0082 BCF1FA0F 		cmp	ip, #250
- 302 0086 59DA     		bge	.L50
- 303 0088 BCF1630F 		cmp	ip, #99
- 304 008c 30DC     		bgt	.L23
- 305 008e BCF1320F 		cmp	ip, #50
- 306 0092 63DA     		bge	.L51
- 307 0094 BCF1180F 		cmp	ip, #24
- 308 0098 20DC     		bgt	.L24
- 309 009a BCF1000F 		cmp	ip, #0
- 310 009e 60DB     		blt	.L52
- 311 00a0 4FF00509 		mov	r9, #5
- 312 00a4 4CE0     		b	.L22
- 313              	.L63:
- 314 00a6 0A3D     		subs	r5, r5, #10
- 315 00a8 2DB2     		sxth	r5, r5
- 316 00aa 0A37     		adds	r7, r7, #10
- 317 00ac 3FB2     		sxth	r7, r7
- 318 00ae DFE7     		b	.L19
- 319              	.L64:
- 320 00b0 002F     		cmp	r7, #0
- 321 00b2 DFDD     		ble	.L20
- 322 00b4 1623     		movs	r3, #22
- 323 00b6 0093     		str	r3, [sp]
- 324 00b8 6E23     		movs	r3, #110
- 325 00ba 3A46     		mov	r2, r7
- 326 00bc 2946     		mov	r1, r5
- 327 00be 0020     		movs	r0, #0
- 328 00c0 FFF7FEFF 		bl	map
- 329 00c4 81B2     		uxth	r1, r0
- 330 00c6 0023     		movs	r3, #0
- 331 00c8 0293     		str	r3, [sp, #8]
- 332 00ca 0122     		movs	r2, #1
- 333 00cc 0192     		str	r2, [sp, #4]
- 334 00ce 0093     		str	r3, [sp]
- 335 00d0 0B46     		mov	r3, r1
- 336 00d2 FA22     		movs	r2, #250
- 337 00d4 0A20     		movs	r0, #10
- 338 00d6 FFF7FEFF 		bl	EPD_DrawLine
- 339 00da CBE7     		b	.L20
- 340              	.L24:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 7
+ 295 001c FFF7FEFF 		bl	DS18B20_ReadScratchpad
+ 296 0020 E37B     		ldrb	r3, [r4, #15]	@ zero_extendqisi2
+ 297 0022 8DF80430 		strb	r3, [sp, #4]
+ 298 0026 A37B     		ldrb	r3, [r4, #14]	@ zero_extendqisi2
+ 299 0028 8DF80530 		strb	r3, [sp, #5]
+ 300 002c 7F23     		movs	r3, #127
+ 301 002e 8DF80630 		strb	r3, [sp, #6]
+ 302 0032 2046     		mov	r0, r4
+ 303 0034 FFF7FEFF 		bl	DS18B20_InitializationCommand
+ 304 0038 2046     		mov	r0, r4
+ 305 003a FFF7FEFF 		bl	DS18B20_SkipRom
+ 306 003e 01A9     		add	r1, sp, #4
+ 307 0040 2046     		mov	r0, r4
+ 308 0042 FFF7FEFF 		bl	DS18B20_WriteScratchpad
+ 309 0046 02B0     		add	sp, sp, #8
+ 310              		@ sp needed
+ 311 0048 10BD     		pop	{r4, pc}
+ 312              	.L21:
+ 313 004a 00BF     		.align	2
+ 314              	.L20:
+ 315 004c 00000000 		.word	temperatureSensor
+ 316 0050 00000000 		.word	huart2
+ 318              		.section	.text.DS18_GET,"ax",%progbits
+ 319              		.align	1
+ 320              		.global	DS18_GET
+ 321              		.syntax unified
+ 322              		.thumb
+ 323              		.thumb_func
+ 325              	DS18_GET:
+ 326              		@ args = 0, pretend = 0, frame = 0
+ 327              		@ frame_needed = 0, uses_anonymous_args = 0
+ 328 0000 10B5     		push	{r4, lr}
+ 329 0002 0B4C     		ldr	r4, .L24
+ 330 0004 2046     		mov	r0, r4
+ 331 0006 FFF7FEFF 		bl	DS18B20_InitializationCommand
+ 332 000a 2046     		mov	r0, r4
+ 333 000c FFF7FEFF 		bl	DS18B20_SkipRom
+ 334 0010 0121     		movs	r1, #1
+ 335 0012 2046     		mov	r0, r4
+ 336 0014 FFF7FEFF 		bl	DS18B20_ConvertT
+ 337 0018 2046     		mov	r0, r4
+ 338 001a FFF7FEFF 		bl	DS18B20_InitializationCommand
+ 339 001e 2046     		mov	r0, r4
+ 340 0020 FFF7FEFF 		bl	DS18B20_SkipRom
+ 341 0024 2046     		mov	r0, r4
+ 342 0026 FFF7FEFF 		bl	DS18B20_ReadScratchpad
+ 343 002a 94ED050A 		vldr.32	s0, [r4, #20]
+ 344 002e 10BD     		pop	{r4, pc}
+ 345              	.L25:
+ 346              		.align	2
+ 347              	.L24:
+ 348 0030 00000000 		.word	temperatureSensor
+ 350              		.section	.rodata.set_time.str1.4,"aMS",%progbits,1
+ 351              		.align	2
+ 352              	.LC0:
+ 353 0000 630C1F17 		.ascii	"c\014\037\027;\000"
+ 353      3B00
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 7
 
 
- 341 00dc ACF11903 		sub	r3, ip, #25
- 342 00e0 182B     		cmp	r3, #24
- 343 00e2 02D8     		bhi	.L65
- 344 00e4 4FF00A09 		mov	r9, #10
- 345 00e8 2AE0     		b	.L22
- 346              	.L65:
- 347 00ea 4FF4FA69 		mov	r9, #2000
- 348 00ee 27E0     		b	.L22
- 349              	.L23:
- 350 00f0 ACF16403 		sub	r3, ip, #100
- 351 00f4 952B     		cmp	r3, #149
- 352 00f6 02D8     		bhi	.L66
- 353 00f8 4FF03209 		mov	r9, #50
- 354 00fc 20E0     		b	.L22
- 355              	.L66:
- 356 00fe 4FF4FA69 		mov	r9, #2000
- 357 0102 1DE0     		b	.L22
- 358              	.L21:
- 359 0104 BCF5FA6F 		cmp	ip, #2000
- 360 0108 0DDA     		bge	.L25
- 361 010a BCF5487F 		cmp	ip, #800
- 362 010e 2BDA     		bge	.L55
- 363 0110 ACF5C873 		sub	r3, ip, #400
- 364 0114 B3F5C87F 		cmp	r3, #400
- 365 0118 02D2     		bcs	.L67
- 366 011a 4FF0C809 		mov	r9, #200
- 367 011e 0FE0     		b	.L22
- 368              	.L67:
- 369 0120 4FF4FA69 		mov	r9, #2000
- 370 0124 0CE0     		b	.L22
- 371              	.L25:
- 372 0126 ACF5FA63 		sub	r3, ip, #2000
- 373 012a B3F5FA6F 		cmp	r3, #2000
- 374 012e 02D8     		bhi	.L68
- 375 0130 4FF47A79 		mov	r9, #1000
- 376 0134 04E0     		b	.L22
- 377              	.L68:
- 378 0136 4FF4FA69 		mov	r9, #2000
- 379 013a 01E0     		b	.L22
- 380              	.L50:
- 381 013c 4FF06409 		mov	r9, #100
- 382              	.L22:
- 383 0140 002D     		cmp	r5, #0
- 384 0142 14DB     		blt	.L69
- 385 0144 09F1FF34 		add	r4, r9, #-1
- 386              	.L27:
- 387 0148 4444     		add	r4, r4, r8
- 388 014a CA46     		mov	r10, r9
- 389 014c 94FBF9F4 		sdiv	r4, r4, r9
- 390 0150 14FB09F4 		smulbb	r4, r4, r9
- 391 0154 24B2     		sxth	r4, r4
- 392 0156 CDF810C0 		str	ip, [sp, #16]
- 393 015a 38E0     		b	.L28
- 394              	.L51:
- 395 015c 4FF01409 		mov	r9, #20
- 396 0160 EEE7     		b	.L22
- 397              	.L52:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 8
+ 354              		.section	.text.set_time,"ax",%progbits
+ 355              		.align	1
+ 356              		.global	set_time
+ 357              		.syntax unified
+ 358              		.thumb
+ 359              		.thumb_func
+ 361              	set_time:
+ 362              		@ args = 0, pretend = 0, frame = 112
+ 363              		@ frame_needed = 0, uses_anonymous_args = 0
+ 364 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 365 0004 9CB0     		sub	sp, sp, #112
+ 366 0006 17AF     		add	r7, sp, #92
+ 367 0008 0024     		movs	r4, #0
+ 368 000a 1794     		str	r4, [sp, #92]
+ 369 000c 1894     		str	r4, [sp, #96]
+ 370 000e 1994     		str	r4, [sp, #100]
+ 371 0010 1A94     		str	r4, [sp, #104]
+ 372 0012 1B94     		str	r4, [sp, #108]
+ 373 0014 4FF09043 		mov	r3, #1207959552
+ 374 0018 1793     		str	r3, [sp, #92]
+ 375 001a 4FF00108 		mov	r8, #1
+ 376 001e ADF86080 		strh	r8, [sp, #96]	@ movhi
+ 377 0022 12AE     		add	r6, sp, #72
+ 378 0024 1294     		str	r4, [sp, #72]
+ 379 0026 1394     		str	r4, [sp, #76]
+ 380 0028 1494     		str	r4, [sp, #80]
+ 381 002a 1594     		str	r4, [sp, #84]
+ 382 002c 1694     		str	r4, [sp, #88]
+ 383 002e 1293     		str	r3, [sp, #72]
+ 384 0030 4FF48072 		mov	r2, #256
+ 385 0034 ADF84C20 		strh	r2, [sp, #76]	@ movhi
+ 386 0038 0DAD     		add	r5, sp, #52
+ 387 003a 0D94     		str	r4, [sp, #52]
+ 388 003c 0E94     		str	r4, [sp, #56]
+ 389 003e 0F94     		str	r4, [sp, #60]
+ 390 0040 1094     		str	r4, [sp, #64]
+ 391 0042 1194     		str	r4, [sp, #68]
+ 392 0044 0D93     		str	r3, [sp, #52]
+ 393 0046 4FF40073 		mov	r3, #512
+ 394 004a ADF83830 		strh	r3, [sp, #56]	@ movhi
+ 395 004e 244B     		ldr	r3, .L28
+ 396 0050 0B93     		str	r3, [sp, #44]
+ 397 0052 8DF83040 		strb	r4, [sp, #48]
+ 398 0056 234B     		ldr	r3, .L28+4
+ 399 0058 93E80300 		ldm	r3, {r0, r1}
+ 400 005c 0990     		str	r0, [sp, #36]
+ 401 005e 8DF82810 		strb	r1, [sp, #40]
+ 402 0062 214B     		ldr	r3, .L28+8
+ 403 0064 0793     		str	r3, [sp, #28]
+ 404 0066 8DF82040 		strb	r4, [sp, #32]
+ 405 006a FFF7FEFF 		bl	HAL_GetTick
+ 406 006e 3846     		mov	r0, r7
+ 407 0070 FFF7FEFF 		bl	tick
+ 408 0074 2846     		mov	r0, r5
+ 409 0076 FFF7FEFF 		bl	tick
+ 410 007a 3046     		mov	r0, r6
+ 411 007c FFF7FEFF 		bl	tick
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 8
 
 
- 398 0162 4FF4FA69 		mov	r9, #2000
- 399 0166 EBE7     		b	.L22
- 400              	.L55:
- 401 0168 4FF4FA79 		mov	r9, #500
- 402 016c E8E7     		b	.L22
- 403              	.L69:
- 404 016e C9F10104 		rsb	r4, r9, #1
- 405 0172 E9E7     		b	.L27
- 406              	.L58:
- 407 0174 4FF0000B 		mov	fp, #0
- 408 0178 32E0     		b	.L29
- 409              	.L70:
- 410 017a 594B     		ldr	r3, .L75+4
- 411 017c 83FB0423 		smull	r2, r3, r3, r4
- 412 0180 E217     		asrs	r2, r4, #31
- 413 0182 C2EB6312 		rsb	r2, r2, r3, asr #5
- 414 0186 12B2     		sxth	r2, r2
- 415 0188 5649     		ldr	r1, .L75+8
- 416 018a 06A8     		add	r0, sp, #24
- 417 018c FFF7FEFF 		bl	sprintf
- 418 0190 5FFA80FB 		uxtb	fp, r0
- 419              	.L33:
- 420 0194 0020     		movs	r0, #0
- 421 0196 FFF7FEFF 		bl	EPD_SetRotate
- 422 019a 5823     		movs	r3, #88
- 423 019c 0093     		str	r3, [sp]
- 424 019e 0223     		movs	r3, #2
- 425 01a0 3246     		mov	r2, r6
- 426 01a2 4146     		mov	r1, r8
- 427 01a4 2846     		mov	r0, r5
- 428 01a6 FFF7FEFF 		bl	map
- 429 01aa A0EB4B00 		sub	r0, r0, fp, lsl #1
- 430 01ae 80B2     		uxth	r0, r0
- 431 01b0 0830     		adds	r0, r0, #8
- 432 01b2 0021     		movs	r1, #0
- 433 01b4 0191     		str	r1, [sp, #4]
- 434 01b6 FF23     		movs	r3, #255
- 435 01b8 0093     		str	r3, [sp]
- 436 01ba 4B4B     		ldr	r3, .L75+12
- 437 01bc 06AA     		add	r2, sp, #24
- 438 01be 80B2     		uxth	r0, r0
- 439 01c0 FFF7FEFF 		bl	EPD_DrawString_EN
- 440 01c4 5A20     		movs	r0, #90
- 441 01c6 FFF7FEFF 		bl	EPD_SetRotate
- 442              	.L36:
- 443 01ca 4C44     		add	r4, r4, r9
- 444 01cc 24B2     		sxth	r4, r4
- 445              	.L28:
- 446 01ce 2546     		mov	r5, r4
- 447 01d0 06EB0A03 		add	r3, r6, r10
- 448 01d4 9C42     		cmp	r4, r3
- 449 01d6 76DA     		bge	.L37
- 450 01d8 002C     		cmp	r4, #0
- 451 01da CBD0     		beq	.L58
- 452 01dc 4FF0010B 		mov	fp, #1
- 453              	.L29:
- 454 01e0 A742     		cmp	r7, r4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 9
+ 412 0080 3846     		mov	r0, r7
+ 413 0082 FFF7FEFF 		bl	isClicked
+ 414 0086 3046     		mov	r0, r6
+ 415 0088 FFF7FEFF 		bl	isClicked
+ 416 008c 2846     		mov	r0, r5
+ 417 008e FFF7FEFF 		bl	isClicked
+ 418 0092 02AD     		add	r5, sp, #8
+ 419 0094 0294     		str	r4, [sp, #8]
+ 420 0096 0394     		str	r4, [sp, #12]
+ 421 0098 0494     		str	r4, [sp, #16]
+ 422 009a 0594     		str	r4, [sp, #20]
+ 423 009c 0694     		str	r4, [sp, #24]
+ 424 009e 0194     		str	r4, [sp, #4]
+ 425 00a0 0C23     		movs	r3, #12
+ 426 00a2 8DF80830 		strb	r3, [sp, #8]
+ 427 00a6 1923     		movs	r3, #25
+ 428 00a8 8DF80730 		strb	r3, [sp, #7]
+ 429 00ac 0323     		movs	r3, #3
+ 430 00ae 8DF80530 		strb	r3, [sp, #5]
+ 431 00b2 1823     		movs	r3, #24
+ 432 00b4 8DF80630 		strb	r3, [sp, #6]
+ 433 00b8 8DF80480 		strb	r8, [sp, #4]
+ 434 00bc 4FF48033 		mov	r3, #65536
+ 435 00c0 0593     		str	r3, [sp, #20]
+ 436 00c2 0A4E     		ldr	r6, .L28+12
+ 437 00c4 2246     		mov	r2, r4
+ 438 00c6 01A9     		add	r1, sp, #4
+ 439 00c8 3046     		mov	r0, r6
+ 440 00ca FFF7FEFF 		bl	HAL_RTC_SetDate
+ 441 00ce 2246     		mov	r2, r4
+ 442 00d0 2946     		mov	r1, r5
+ 443 00d2 3046     		mov	r0, r6
+ 444 00d4 FFF7FEFF 		bl	HAL_RTC_SetTime
+ 445 00d8 1CB0     		add	sp, sp, #112
+ 446              		@ sp needed
+ 447 00da BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 448              	.L29:
+ 449 00de 00BF     		.align	2
+ 450              	.L28:
+ 451 00e0 1903180C 		.word	202900249
+ 452 00e4 00000000 		.word	.LC0
+ 453 00e8 00010100 		.word	65792
+ 454 00ec 00000000 		.word	hrtc
+ 456              		.section	.text.timestamp_to_time,"ax",%progbits
+ 457              		.align	1
+ 458              		.global	timestamp_to_time
+ 459              		.syntax unified
+ 460              		.thumb
+ 461              		.thumb_func
+ 463              	timestamp_to_time:
+ 464              		@ args = 0, pretend = 0, frame = 0
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466              		@ link register save eliminated.
+ 467 0000 10B4     		push	{r4}
+ 468 0002 0C4B     		ldr	r3, .L32
+ 469 0004 A3FB0043 		umull	r4, r3, r3, r0
+ 470 0008 1B0C     		lsrs	r3, r3, #16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 9
 
 
- 455 01e2 09DA     		bge	.L30
- 456 01e4 1623     		movs	r3, #22
- 457 01e6 0093     		str	r3, [sp]
- 458 01e8 6E23     		movs	r3, #110
- 459 01ea 3246     		mov	r2, r6
- 460 01ec 4146     		mov	r1, r8
- 461 01ee 2846     		mov	r0, r5
- 462 01f0 FFF7FEFF 		bl	map
- 463 01f4 1528     		cmp	r0, #21
- 464 01f6 66DD     		ble	.L37
- 465              	.L30:
- 466 01f8 1623     		movs	r3, #22
- 467 01fa 0093     		str	r3, [sp]
- 468 01fc 6E23     		movs	r3, #110
- 469 01fe 3246     		mov	r2, r6
- 470 0200 4146     		mov	r1, r8
- 471 0202 2846     		mov	r0, r5
- 472 0204 FFF7FEFF 		bl	map
- 473 0208 81B2     		uxth	r1, r0
- 474 020a CDF808B0 		str	fp, [sp, #8]
- 475 020e 0123     		movs	r3, #1
- 476 0210 0193     		str	r3, [sp, #4]
- 477 0212 0023     		movs	r3, #0
- 478 0214 0093     		str	r3, [sp]
- 479 0216 0B46     		mov	r3, r1
- 480 0218 FA22     		movs	r2, #250
- 481 021a 0A20     		movs	r0, #10
- 482 021c FFF7FEFF 		bl	EPD_DrawLine
- 483 0220 2F4A     		ldr	r2, .L75+4
- 484 0222 82FB0432 		smull	r3, r2, r2, r4
- 485 0226 E317     		asrs	r3, r4, #31
- 486 0228 C3EB6213 		rsb	r3, r3, r2, asr #5
- 487 022c 6422     		movs	r2, #100
- 488 022e 02FB1343 		mls	r3, r2, r3, r4
- 489 0232 1BB2     		sxth	r3, r3
- 490 0234 002B     		cmp	r3, #0
- 491 0236 A0D0     		beq	.L70
- 492 0238 2C49     		ldr	r1, .L75+16
- 493 023a 81FB0421 		smull	r2, r1, r1, r4
- 494 023e E217     		asrs	r2, r4, #31
- 495 0240 C2EBA102 		rsb	r2, r2, r1, asr #2
- 496 0244 02EB8202 		add	r2, r2, r2, lsl #2
- 497 0248 A4EB4202 		sub	r2, r4, r2, lsl #1
- 498 024c 12B2     		sxth	r2, r2
- 499 024e 12B9     		cbnz	r2, .L34
- 500 0250 049A     		ldr	r2, [sp, #16]
- 501 0252 632A     		cmp	r2, #99
- 502 0254 1DDD     		ble	.L71
- 503              	.L34:
- 504 0256 2549     		ldr	r1, .L75+16
- 505 0258 81FB0421 		smull	r2, r1, r1, r4
- 506 025c E217     		asrs	r2, r4, #31
- 507 025e C2EB6102 		rsb	r2, r2, r1, asr #1
- 508 0262 02EB8202 		add	r2, r2, r2, lsl #2
- 509 0266 A21A     		subs	r2, r4, r2
- 510 0268 12B2     		sxth	r2, r2
- 511 026a 002A     		cmp	r2, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 10
+ 471 000a 0B4C     		ldr	r4, .L32+4
+ 472 000c 04FB1303 		mls	r3, r4, r3, r0
+ 473 0010 0A48     		ldr	r0, .L32+8
+ 474 0012 A0FB0340 		umull	r4, r0, r0, r3
+ 475 0016 C00A     		lsrs	r0, r0, #11
+ 476 0018 0870     		strb	r0, [r1]
+ 477 001a 4FF46161 		mov	r1, #3600
+ 478 001e 01FB1033 		mls	r3, r1, r0, r3
+ 479 0022 0749     		ldr	r1, .L32+12
+ 480 0024 A1FB0313 		umull	r1, r3, r1, r3
+ 481 0028 5B09     		lsrs	r3, r3, #5
+ 482 002a 1370     		strb	r3, [r2]
+ 483 002c 5DF8044B 		ldr	r4, [sp], #4
+ 484 0030 7047     		bx	lr
+ 485              	.L33:
+ 486 0032 00BF     		.align	2
+ 487              	.L32:
+ 488 0034 07452EC2 		.word	-1037155065
+ 489 0038 80510100 		.word	86400
+ 490 003c C5B3A291 		.word	-1851608123
+ 491 0040 89888888 		.word	-2004318071
+ 493              		.section	.rodata.plot.str1.4,"aMS",%progbits,1
+ 494              		.align	2
+ 495              	.LC1:
+ 496 0000 256400   		.ascii	"%d\000"
+ 497 0003 00       		.align	2
+ 498              	.LC2:
+ 499 0004 25642E25 		.ascii	"%d.%d\000"
+ 499      6400
+ 500 000a 0000     		.align	2
+ 501              	.LC3:
+ 502 000c 25643A25 		.ascii	"%d:%d\000"
+ 502      6400
+ 503 0012 0000     		.align	2
+ 504              	.LC4:
+ 505 0014 25642E25 		.ascii	"%d.%d*C/div\000"
+ 505      642A432F 
+ 505      64697600 
+ 506              		.align	2
+ 507              	.LC5:
+ 508 0020 25642E30 		.ascii	"%d.0%d*C/div\000"
+ 508      25642A43 
+ 508      2F646976 
+ 508      00
+ 509 002d 000000   		.align	2
+ 510              	.LC6:
+ 511 0030 25642A43 		.ascii	"%d*C/div\000"
+ 511      2F646976 
+ 511      00
+ 512 0039 000000   		.align	2
+ 513              	.LC7:
+ 514 003c 25642E25 		.ascii	"%d.%dC\000"
+ 514      644300
+ 515              		.section	.text.plot,"ax",%progbits
+ 516              		.align	1
+ 517              		.global	plot
+ 518              		.syntax unified
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 10
 
 
- 512 026c ADD1     		bne	.L36
- 513 026e 049A     		ldr	r2, [sp, #16]
- 514 0270 092A     		cmp	r2, #9
- 515 0272 AADC     		bgt	.L36
- 516 0274 1A49     		ldr	r1, .L75+4
- 517 0276 81FB0421 		smull	r2, r1, r1, r4
- 518 027a E217     		asrs	r2, r4, #31
- 519 027c C2EB6112 		rsb	r2, r2, r1, asr #5
- 520 0280 DBB2     		uxtb	r3, r3
- 521 0282 D2B2     		uxtb	r2, r2
- 522 0284 1A49     		ldr	r1, .L75+20
- 523 0286 06A8     		add	r0, sp, #24
- 524 0288 FFF7FEFF 		bl	sprintf
- 525 028c 5FFA80FB 		uxtb	fp, r0
- 526 0290 80E7     		b	.L33
- 527              	.L71:
- 528 0292 6B1D     		adds	r3, r5, #5
- 529 0294 154A     		ldr	r2, .L75+16
- 530 0296 82FB0312 		smull	r1, r2, r2, r3
- 531 029a DB17     		asrs	r3, r3, #31
- 532 029c C3EBA203 		rsb	r3, r3, r2, asr #2
- 533 02a0 9BB2     		uxth	r3, r3
- 534 02a2 144A     		ldr	r2, .L75+24
- 535 02a4 A2FB0312 		umull	r1, r2, r2, r3
- 536 02a8 D108     		lsrs	r1, r2, #3
- 537 02aa 01EB8101 		add	r1, r1, r1, lsl #2
- 538 02ae A3EB4103 		sub	r3, r3, r1, lsl #1
- 539 02b2 DBB2     		uxtb	r3, r3
- 540 02b4 C2F3C702 		ubfx	r2, r2, #3, #8
- 541 02b8 0D49     		ldr	r1, .L75+20
- 542 02ba 06A8     		add	r0, sp, #24
- 543 02bc FFF7FEFF 		bl	sprintf
- 544 02c0 5FFA80FB 		uxtb	fp, r0
- 545 02c4 66E7     		b	.L33
- 546              	.L37:
- 547 02c6 0521     		movs	r1, #5
- 548 02c8 0B48     		ldr	r0, .L75+28
- 549 02ca FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 550 02ce 8346     		mov	fp, r0
- 551 02d0 0027     		movs	r7, #0
- 552 02d2 CDF814A0 		str	r10, [sp, #20]
- 553 02d6 B246     		mov	r10, r6
- 554 02d8 39E0     		b	.L39
- 555              	.L76:
- 556 02da 00BF     		.align	2
- 557              	.L75:
- 558 02dc 00000000 		.word	BlackImage
- 559 02e0 1F85EB51 		.word	1374389535
- 560 02e4 00000000 		.word	.LC0
- 561 02e8 00000000 		.word	Font8
- 562 02ec 67666666 		.word	1717986919
- 563 02f0 04000000 		.word	.LC1
- 564 02f4 CDCCCCCC 		.word	-858993459
- 565 02f8 00000000 		.word	hrtc
- 566              	.L40:
- 567 02fc 3846     		mov	r0, r7
- 568 02fe FFF7FEFF 		bl	q_get
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 11
+ 519              		.thumb
+ 520              		.thumb_func
+ 522              	plot:
+ 523              		@ args = 0, pretend = 0, frame = 88
+ 524              		@ frame_needed = 0, uses_anonymous_args = 0
+ 525 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 526 0004 9BB0     		sub	sp, sp, #108
+ 527 0006 B54D     		ldr	r5, .L95
+ 528 0008 FF24     		movs	r4, #255
+ 529 000a 0094     		str	r4, [sp]
+ 530 000c 5A23     		movs	r3, #90
+ 531 000e FA22     		movs	r2, #250
+ 532 0010 7A21     		movs	r1, #122
+ 533 0012 2846     		mov	r0, r5
+ 534 0014 FFF7FEFF 		bl	EPD_NewImage
+ 535 0018 2846     		mov	r0, r5
+ 536 001a FFF7FEFF 		bl	EPD_SelectImage
+ 537 001e 2046     		mov	r0, r4
+ 538 0020 FFF7FEFF 		bl	EPD_Clear
+ 539 0024 0020     		movs	r0, #0
+ 540 0026 FFF7FEFF 		bl	q_get
+ 541 002a 05B2     		sxth	r5, r0
+ 542 002c 0020     		movs	r0, #0
+ 543 002e FFF7FEFF 		bl	q_get
+ 544 0032 07B2     		sxth	r7, r0
+ 545 0034 0024     		movs	r4, #0
+ 546 0036 06E0     		b	.L35
+ 547              	.L82:
+ 548 0038 2046     		mov	r0, r4
+ 549 003a FFF7FEFF 		bl	q_get
+ 550 003e 05B2     		sxth	r5, r0
+ 551 0040 0AE0     		b	.L36
+ 552              	.L37:
+ 553 0042 0134     		adds	r4, r4, #1
+ 554 0044 E4B2     		uxtb	r4, r4
+ 555              	.L35:
+ 556 0046 FFF7FEFF 		bl	q_len
+ 557 004a 8442     		cmp	r4, r0
+ 558 004c 0ED2     		bcs	.L81
+ 559 004e 2046     		mov	r0, r4
+ 560 0050 FFF7FEFF 		bl	q_get
+ 561 0054 A842     		cmp	r0, r5
+ 562 0056 EFDD     		ble	.L82
+ 563              	.L36:
+ 564 0058 2046     		mov	r0, r4
+ 565 005a FFF7FEFF 		bl	q_get
+ 566 005e B842     		cmp	r0, r7
+ 567 0060 EFDB     		blt	.L37
+ 568 0062 2046     		mov	r0, r4
+ 569 0064 FFF7FEFF 		bl	q_get
+ 570 0068 07B2     		sxth	r7, r0
+ 571 006a EAE7     		b	.L37
+ 572              	.L81:
+ 573 006c BD42     		cmp	r5, r7
+ 574 006e 1AD0     		beq	.L83
+ 575              	.L39:
+ 576 0070 002D     		cmp	r5, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 11
 
 
- 569 0302 1626     		movs	r6, #22
- 570 0304 0096     		str	r6, [sp]
- 571 0306 6E23     		movs	r3, #110
- 572 0308 5246     		mov	r2, r10
- 573 030a 4146     		mov	r1, r8
- 574 030c FFF7FEFF 		bl	map
- 575 0310 0490     		str	r0, [sp, #16]
- 576 0312 7C1C     		adds	r4, r7, #1
- 577 0314 E7B2     		uxtb	r7, r4
- 578 0316 3846     		mov	r0, r7
- 579 0318 FFF7FEFF 		bl	q_get
- 580 031c 0096     		str	r6, [sp]
- 581 031e 6E23     		movs	r3, #110
- 582 0320 5246     		mov	r2, r10
- 583 0322 4146     		mov	r1, r8
- 584 0324 FFF7FEFF 		bl	map
- 585 0328 04EB8404 		add	r4, r4, r4, lsl #2
- 586 032c 04F10A02 		add	r2, r4, #10
- 587 0330 05EB8505 		add	r5, r5, r5, lsl #2
- 588 0334 0A35     		adds	r5, r5, #10
- 589 0336 0021     		movs	r1, #0
- 590 0338 0291     		str	r1, [sp, #8]
- 591 033a 0123     		movs	r3, #1
- 592 033c 0193     		str	r3, [sp, #4]
- 593 033e 0091     		str	r1, [sp]
- 594 0340 83B2     		uxth	r3, r0
- 595 0342 92B2     		uxth	r2, r2
- 596 0344 BDF81010 		ldrh	r1, [sp, #16]
- 597 0348 A8B2     		uxth	r0, r5
- 598 034a FFF7FEFF 		bl	EPD_DrawLine
- 599              	.L39:
- 600 034e 3D46     		mov	r5, r7
- 601 0350 FFF7FEFF 		bl	q_len
- 602 0354 8742     		cmp	r7, r0
- 603 0356 D1D3     		bcc	.L40
- 604 0358 DDF814A0 		ldr	r10, [sp, #20]
- 605 035c FFF7FEFF 		bl	q_len
- 606 0360 44B2     		sxtb	r4, r0
- 607 0362 01E0     		b	.L41
- 608              	.L43:
- 609 0364 083C     		subs	r4, r4, #8
- 610 0366 64B2     		sxtb	r4, r4
- 611              	.L41:
- 612 0368 002C     		cmp	r4, #0
- 613 036a 2CDD     		ble	.L72
- 614 036c FFF7FEFF 		bl	q_len
- 615 0370 8442     		cmp	r4, r0
- 616 0372 F7D0     		beq	.L43
- 617 0374 04EB8405 		add	r5, r4, r4, lsl #2
- 618 0378 ADB2     		uxth	r5, r5
- 619 037a 0A35     		adds	r5, r5, #10
- 620 037c ADB2     		uxth	r5, r5
- 621 037e 0123     		movs	r3, #1
- 622 0380 0293     		str	r3, [sp, #8]
- 623 0382 0193     		str	r3, [sp, #4]
- 624 0384 0026     		movs	r6, #0
- 625 0386 0096     		str	r6, [sp]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 12
+ 577 0072 1DDB     		blt	.L84
+ 578              	.L40:
+ 579 0074 3E46     		mov	r6, r7
+ 580 0076 A846     		mov	r8, r5
+ 581 0078 A7EB050C 		sub	ip, r7, r5
+ 582 007c BCF5C87F 		cmp	ip, #400
+ 583 0080 40DA     		bge	.L41
+ 584 0082 BCF1FA0F 		cmp	ip, #250
+ 585 0086 59DA     		bge	.L70
+ 586 0088 BCF1630F 		cmp	ip, #99
+ 587 008c 30DC     		bgt	.L43
+ 588 008e BCF1320F 		cmp	ip, #50
+ 589 0092 63DA     		bge	.L71
+ 590 0094 BCF1180F 		cmp	ip, #24
+ 591 0098 20DC     		bgt	.L44
+ 592 009a BCF1000F 		cmp	ip, #0
+ 593 009e 60DB     		blt	.L72
+ 594 00a0 4FF00509 		mov	r9, #5
+ 595 00a4 4CE0     		b	.L42
+ 596              	.L83:
+ 597 00a6 0A3D     		subs	r5, r5, #10
+ 598 00a8 2DB2     		sxth	r5, r5
+ 599 00aa 0A37     		adds	r7, r7, #10
+ 600 00ac 3FB2     		sxth	r7, r7
+ 601 00ae DFE7     		b	.L39
+ 602              	.L84:
+ 603 00b0 002F     		cmp	r7, #0
+ 604 00b2 DFDD     		ble	.L40
+ 605 00b4 1623     		movs	r3, #22
+ 606 00b6 0093     		str	r3, [sp]
+ 607 00b8 6E23     		movs	r3, #110
+ 608 00ba 3A46     		mov	r2, r7
+ 609 00bc 2946     		mov	r1, r5
+ 610 00be 0020     		movs	r0, #0
+ 611 00c0 FFF7FEFF 		bl	map
+ 612 00c4 81B2     		uxth	r1, r0
+ 613 00c6 0023     		movs	r3, #0
+ 614 00c8 0293     		str	r3, [sp, #8]
+ 615 00ca 0122     		movs	r2, #1
+ 616 00cc 0192     		str	r2, [sp, #4]
+ 617 00ce 0093     		str	r3, [sp]
+ 618 00d0 0B46     		mov	r3, r1
+ 619 00d2 FA22     		movs	r2, #250
+ 620 00d4 0A20     		movs	r0, #10
+ 621 00d6 FFF7FEFF 		bl	EPD_DrawLine
+ 622 00da CBE7     		b	.L40
+ 623              	.L44:
+ 624 00dc ACF11903 		sub	r3, ip, #25
+ 625 00e0 182B     		cmp	r3, #24
+ 626 00e2 02D8     		bhi	.L85
+ 627 00e4 4FF00A09 		mov	r9, #10
+ 628 00e8 2AE0     		b	.L42
+ 629              	.L85:
+ 630 00ea 4FF4FA69 		mov	r9, #2000
+ 631 00ee 27E0     		b	.L42
+ 632              	.L43:
+ 633 00f0 ACF16403 		sub	r3, ip, #100
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 12
 
 
- 626 0388 7023     		movs	r3, #112
- 627 038a 2A46     		mov	r2, r5
- 628 038c 1421     		movs	r1, #20
- 629 038e 2846     		mov	r0, r5
- 630 0390 FFF7FEFF 		bl	EPD_DrawLine
- 631 0394 FFF7FEFF 		bl	q_len
- 632 0398 001B     		subs	r0, r0, r4
- 633 039a 0138     		subs	r0, r0, #1
- 634 039c 4FF4E163 		mov	r3, #1800
- 635 03a0 03FB10B0 		mls	r0, r3, r0, fp
- 636 03a4 06AF     		add	r7, sp, #24
- 637 03a6 6C4A     		ldr	r2, .L77+8
- 638 03a8 0244     		add	r2, r2, r0
- 639 03aa 6C49     		ldr	r1, .L77+12
- 640 03ac 3846     		mov	r0, r7
- 641 03ae FFF7FEFF 		bl	sprintf
- 642 03b2 0196     		str	r6, [sp, #4]
- 643 03b4 FF23     		movs	r3, #255
- 644 03b6 0093     		str	r3, [sp]
- 645 03b8 694B     		ldr	r3, .L77+16
- 646 03ba 3A46     		mov	r2, r7
- 647 03bc 7221     		movs	r1, #114
- 648 03be 2846     		mov	r0, r5
- 649 03c0 FFF7FEFF 		bl	EPD_DrawString_EN
- 650 03c4 CEE7     		b	.L43
- 651              	.L72:
- 652 03c6 A9F10A03 		sub	r3, r9, #10
- 653 03ca 9BB2     		uxth	r3, r3
- 654 03cc 592B     		cmp	r3, #89
- 655 03ce 40F29A80 		bls	.L73
- 656 03d2 B9F1090F 		cmp	r9, #9
- 657 03d6 00F2A180 		bhi	.L47
- 658 03da 624A     		ldr	r2, .L77+20
- 659 03dc A2FB0992 		umull	r9, r2, r2, r9
- 660 03e0 AAEB5213 		sub	r3, r10, r2, lsr #5
- 661 03e4 5209     		lsrs	r2, r2, #5
- 662 03e6 6049     		ldr	r1, .L77+24
- 663 03e8 15A8     		add	r0, sp, #84
- 664 03ea FFF7FEFF 		bl	sprintf
- 665              	.L46:
- 666 03ee 0020     		movs	r0, #0
- 667 03f0 0190     		str	r0, [sp, #4]
- 668 03f2 FF23     		movs	r3, #255
- 669 03f4 0093     		str	r3, [sp]
- 670 03f6 5D4B     		ldr	r3, .L77+28
- 671 03f8 15AA     		add	r2, sp, #84
- 672 03fa 0146     		mov	r1, r0
- 673 03fc FFF7FEFF 		bl	EPD_DrawString_EN
- 674 0400 5B4B     		ldr	r3, .L77+32
- 675 0402 1888     		ldrh	r0, [r3]
- 676 0404 FFF7FEFF 		bl	__aeabi_i2d
- 677 0408 0246     		mov	r2, r0
- 678 040a 0B46     		mov	r3, r1
- 679 040c 50A1     		adr	r1, .L77
- 680 040e D1E90001 		ldrd	r0, [r1]
- 681 0412 FFF7FEFF 		bl	__aeabi_ddiv
- 682 0416 FFF7FEFF 		bl	__aeabi_d2f
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 13
+ 634 00f4 952B     		cmp	r3, #149
+ 635 00f6 02D8     		bhi	.L86
+ 636 00f8 4FF03209 		mov	r9, #50
+ 637 00fc 20E0     		b	.L42
+ 638              	.L86:
+ 639 00fe 4FF4FA69 		mov	r9, #2000
+ 640 0102 1DE0     		b	.L42
+ 641              	.L41:
+ 642 0104 BCF5FA6F 		cmp	ip, #2000
+ 643 0108 0DDA     		bge	.L45
+ 644 010a BCF5487F 		cmp	ip, #800
+ 645 010e 2BDA     		bge	.L75
+ 646 0110 ACF5C873 		sub	r3, ip, #400
+ 647 0114 B3F5C87F 		cmp	r3, #400
+ 648 0118 02D2     		bcs	.L87
+ 649 011a 4FF0C809 		mov	r9, #200
+ 650 011e 0FE0     		b	.L42
+ 651              	.L87:
+ 652 0120 4FF4FA69 		mov	r9, #2000
+ 653 0124 0CE0     		b	.L42
+ 654              	.L45:
+ 655 0126 ACF5FA63 		sub	r3, ip, #2000
+ 656 012a B3F5FA6F 		cmp	r3, #2000
+ 657 012e 02D8     		bhi	.L88
+ 658 0130 4FF47A79 		mov	r9, #1000
+ 659 0134 04E0     		b	.L42
+ 660              	.L88:
+ 661 0136 4FF4FA69 		mov	r9, #2000
+ 662 013a 01E0     		b	.L42
+ 663              	.L70:
+ 664 013c 4FF06409 		mov	r9, #100
+ 665              	.L42:
+ 666 0140 002D     		cmp	r5, #0
+ 667 0142 14DB     		blt	.L89
+ 668 0144 09F1FF34 		add	r4, r9, #-1
+ 669              	.L47:
+ 670 0148 4444     		add	r4, r4, r8
+ 671 014a CA46     		mov	r10, r9
+ 672 014c 94FBF9F4 		sdiv	r4, r4, r9
+ 673 0150 14FB09F4 		smulbb	r4, r4, r9
+ 674 0154 24B2     		sxth	r4, r4
+ 675 0156 CDF810C0 		str	ip, [sp, #16]
+ 676 015a 38E0     		b	.L48
+ 677              	.L71:
+ 678 015c 4FF01409 		mov	r9, #20
+ 679 0160 EEE7     		b	.L42
+ 680              	.L72:
+ 681 0162 4FF4FA69 		mov	r9, #2000
+ 682 0166 EBE7     		b	.L42
+ 683              	.L75:
+ 684 0168 4FF4FA79 		mov	r9, #500
+ 685 016c E8E7     		b	.L42
+ 686              	.L89:
+ 687 016e C9F10104 		rsb	r4, r9, #1
+ 688 0172 E9E7     		b	.L47
+ 689              	.L78:
+ 690 0174 4FF0000B 		mov	fp, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 13
 
 
- 683 041a 07EE900A 		vmov	s15, r0
- 684 041e 554B     		ldr	r3, .L77+36
- 685 0420 1860     		str	r0, [r3]	@ float
- 686 0422 B0EE027A 		vmov.f32	s14, #2.25e+0
- 687 0426 F4EEC77A 		vcmpe.f32	s15, s14
- 688 042a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 689 042e 7ED4     		bmi	.L74
- 690              	.L48:
- 691 0430 0024     		movs	r4, #0
- 692 0432 0294     		str	r4, [sp, #8]
- 693 0434 0125     		movs	r5, #1
- 694 0436 0195     		str	r5, [sp, #4]
- 695 0438 0094     		str	r4, [sp]
- 696 043a 7023     		movs	r3, #112
- 697 043c FA22     		movs	r2, #250
- 698 043e 1946     		mov	r1, r3
- 699 0440 0A20     		movs	r0, #10
- 700 0442 FFF7FEFF 		bl	EPD_DrawLine
- 701 0446 0294     		str	r4, [sp, #8]
- 702 0448 0195     		str	r5, [sp, #4]
- 703 044a 0094     		str	r4, [sp]
- 704 044c 7023     		movs	r3, #112
- 705 044e 0A22     		movs	r2, #10
- 706 0450 1421     		movs	r1, #20
- 707 0452 1046     		mov	r0, r2
- 708 0454 FFF7FEFF 		bl	EPD_DrawLine
- 709 0458 10A9     		add	r1, sp, #64
- 710 045a 1094     		str	r4, [sp, #64]
- 711 045c 4C60     		str	r4, [r1, #4]
- 712 045e 8C60     		str	r4, [r1, #8]
- 713 0460 CC60     		str	r4, [r1, #12]
- 714 0462 0C61     		str	r4, [r1, #16]
- 715 0464 0F94     		str	r4, [sp, #60]
- 716 0466 444D     		ldr	r5, .L77+40
- 717 0468 2246     		mov	r2, r4
- 718 046a 2846     		mov	r0, r5
- 719 046c FFF7FEFF 		bl	HAL_RTC_GetTime
- 720 0470 2246     		mov	r2, r4
- 721 0472 0FA9     		add	r1, sp, #60
- 722 0474 2846     		mov	r0, r5
- 723 0476 FFF7FEFF 		bl	HAL_RTC_GetDate
- 724 047a 9DF83E30 		ldrb	r3, [sp, #62]	@ zero_extendqisi2
- 725 047e 8DF83730 		strb	r3, [sp, #55]
- 726 0482 9DF83D30 		ldrb	r3, [sp, #61]	@ zero_extendqisi2
- 727 0486 8DF83630 		strb	r3, [sp, #54]
- 728 048a 9DF83F30 		ldrb	r3, [sp, #63]	@ zero_extendqisi2
- 729 048e ADF83430 		strh	r3, [sp, #52]	@ movhi
- 730 0492 3A4E     		ldr	r6, .L77+44
- 731 0494 0194     		str	r4, [sp, #4]
- 732 0496 FF27     		movs	r7, #255
- 733 0498 0097     		str	r7, [sp]
- 734 049a 3346     		mov	r3, r6
- 735 049c 0DAA     		add	r2, sp, #52
- 736 049e 2146     		mov	r1, r4
- 737 04a0 AF20     		movs	r0, #175
- 738 04a2 FFF7FEFF 		bl	EPD_DrawDate
- 739 04a6 FFF7FEFF 		bl	q_len
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 14
+ 691 0178 32E0     		b	.L49
+ 692              	.L90:
+ 693 017a 594B     		ldr	r3, .L95+4
+ 694 017c 83FB0423 		smull	r2, r3, r3, r4
+ 695 0180 E217     		asrs	r2, r4, #31
+ 696 0182 C2EB6312 		rsb	r2, r2, r3, asr #5
+ 697 0186 12B2     		sxth	r2, r2
+ 698 0188 5649     		ldr	r1, .L95+8
+ 699 018a 08A8     		add	r0, sp, #32
+ 700 018c FFF7FEFF 		bl	sprintf
+ 701 0190 5FFA80FB 		uxtb	fp, r0
+ 702              	.L53:
+ 703 0194 0020     		movs	r0, #0
+ 704 0196 FFF7FEFF 		bl	EPD_SetRotate
+ 705 019a 5823     		movs	r3, #88
+ 706 019c 0093     		str	r3, [sp]
+ 707 019e 0223     		movs	r3, #2
+ 708 01a0 3246     		mov	r2, r6
+ 709 01a2 4146     		mov	r1, r8
+ 710 01a4 2846     		mov	r0, r5
+ 711 01a6 FFF7FEFF 		bl	map
+ 712 01aa A0EB4B00 		sub	r0, r0, fp, lsl #1
+ 713 01ae 80B2     		uxth	r0, r0
+ 714 01b0 0830     		adds	r0, r0, #8
+ 715 01b2 0021     		movs	r1, #0
+ 716 01b4 0191     		str	r1, [sp, #4]
+ 717 01b6 FF23     		movs	r3, #255
+ 718 01b8 0093     		str	r3, [sp]
+ 719 01ba 4B4B     		ldr	r3, .L95+12
+ 720 01bc 08AA     		add	r2, sp, #32
+ 721 01be 80B2     		uxth	r0, r0
+ 722 01c0 FFF7FEFF 		bl	EPD_DrawString_EN
+ 723 01c4 5A20     		movs	r0, #90
+ 724 01c6 FFF7FEFF 		bl	EPD_SetRotate
+ 725              	.L56:
+ 726 01ca 4C44     		add	r4, r4, r9
+ 727 01cc 24B2     		sxth	r4, r4
+ 728              	.L48:
+ 729 01ce 2546     		mov	r5, r4
+ 730 01d0 06EB0A03 		add	r3, r6, r10
+ 731 01d4 9C42     		cmp	r4, r3
+ 732 01d6 76DA     		bge	.L57
+ 733 01d8 002C     		cmp	r4, #0
+ 734 01da CBD0     		beq	.L78
+ 735 01dc 4FF0010B 		mov	fp, #1
+ 736              	.L49:
+ 737 01e0 A742     		cmp	r7, r4
+ 738 01e2 09DA     		bge	.L50
+ 739 01e4 1623     		movs	r3, #22
+ 740 01e6 0093     		str	r3, [sp]
+ 741 01e8 6E23     		movs	r3, #110
+ 742 01ea 3246     		mov	r2, r6
+ 743 01ec 4146     		mov	r1, r8
+ 744 01ee 2846     		mov	r0, r5
+ 745 01f0 FFF7FEFF 		bl	map
+ 746 01f4 1528     		cmp	r0, #21
+ 747 01f6 66DD     		ble	.L57
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 14
 
 
- 740 04aa 0138     		subs	r0, r0, #1
- 741 04ac C0B2     		uxtb	r0, r0
- 742 04ae FFF7FEFF 		bl	q_get
- 743 04b2 0546     		mov	r5, r0
- 744 04b4 FFF7FEFF 		bl	q_len
- 745 04b8 0138     		subs	r0, r0, #1
- 746 04ba C0B2     		uxtb	r0, r0
- 747 04bc FFF7FEFF 		bl	q_get
- 748 04c0 284A     		ldr	r2, .L77+20
- 749 04c2 A2FB0013 		umull	r1, r3, r2, r0
- 750 04c6 5B09     		lsrs	r3, r3, #5
- 751 04c8 4FF06408 		mov	r8, #100
- 752 04cc 08FB1303 		mls	r3, r8, r3, r0
- 753 04d0 A2FB0512 		umull	r1, r2, r2, r5
- 754 04d4 0AAD     		add	r5, sp, #40
- 755 04d6 9BB2     		uxth	r3, r3
- 756 04d8 C2F34F12 		ubfx	r2, r2, #5, #16
- 757 04dc 2849     		ldr	r1, .L77+48
- 758 04de 2846     		mov	r0, r5
- 759 04e0 FFF7FEFF 		bl	sprintf
- 760 04e4 0194     		str	r4, [sp, #4]
- 761 04e6 0097     		str	r7, [sp]
- 762 04e8 3346     		mov	r3, r6
- 763 04ea 2A46     		mov	r2, r5
- 764 04ec 2146     		mov	r1, r4
- 765 04ee 5520     		movs	r0, #85
- 766 04f0 FFF7FEFF 		bl	EPD_DrawString_EN
- 767 04f4 2348     		ldr	r0, .L77+52
- 768 04f6 FFF7FEFF 		bl	EPD_Display_Base
- 769 04fa 4046     		mov	r0, r8
- 770 04fc FFF7FEFF 		bl	HAL_Delay
- 771 0500 19B0     		add	sp, sp, #100
- 772              		@ sp needed
- 773 0502 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
- 774              	.L73:
- 775 0506 174A     		ldr	r2, .L77+20
- 776 0508 A2FB0992 		umull	r9, r2, r2, r9
- 777 050c AAEB5213 		sub	r3, r10, r2, lsr #5
- 778 0510 5209     		lsrs	r2, r2, #5
- 779 0512 1D49     		ldr	r1, .L77+56
- 780 0514 15A8     		add	r0, sp, #84
- 781 0516 FFF7FEFF 		bl	sprintf
- 782 051a 68E7     		b	.L46
- 783              	.L47:
- 784 051c 114B     		ldr	r3, .L77+20
- 785 051e A3FB0932 		umull	r3, r2, r3, r9
- 786 0522 5209     		lsrs	r2, r2, #5
- 787 0524 1949     		ldr	r1, .L77+60
- 788 0526 15A8     		add	r0, sp, #84
- 789 0528 FFF7FEFF 		bl	sprintf
- 790 052c 5FE7     		b	.L46
- 791              	.L74:
- 792 052e 0020     		movs	r0, #0
- 793 0530 FFF7FEFF 		bl	EPD_SetRotate
- 794 0534 164B     		ldr	r3, .L77+64
- 795 0536 0093     		str	r3, [sp]
- 796 0538 1A23     		movs	r3, #26
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 15
+ 748              	.L50:
+ 749 01f8 1623     		movs	r3, #22
+ 750 01fa 0093     		str	r3, [sp]
+ 751 01fc 6E23     		movs	r3, #110
+ 752 01fe 3246     		mov	r2, r6
+ 753 0200 4146     		mov	r1, r8
+ 754 0202 2846     		mov	r0, r5
+ 755 0204 FFF7FEFF 		bl	map
+ 756 0208 81B2     		uxth	r1, r0
+ 757 020a CDF808B0 		str	fp, [sp, #8]
+ 758 020e 0123     		movs	r3, #1
+ 759 0210 0193     		str	r3, [sp, #4]
+ 760 0212 0023     		movs	r3, #0
+ 761 0214 0093     		str	r3, [sp]
+ 762 0216 0B46     		mov	r3, r1
+ 763 0218 FA22     		movs	r2, #250
+ 764 021a 0A20     		movs	r0, #10
+ 765 021c FFF7FEFF 		bl	EPD_DrawLine
+ 766 0220 2F4A     		ldr	r2, .L95+4
+ 767 0222 82FB0432 		smull	r3, r2, r2, r4
+ 768 0226 E317     		asrs	r3, r4, #31
+ 769 0228 C3EB6213 		rsb	r3, r3, r2, asr #5
+ 770 022c 6422     		movs	r2, #100
+ 771 022e 02FB1343 		mls	r3, r2, r3, r4
+ 772 0232 1BB2     		sxth	r3, r3
+ 773 0234 002B     		cmp	r3, #0
+ 774 0236 A0D0     		beq	.L90
+ 775 0238 2C49     		ldr	r1, .L95+16
+ 776 023a 81FB0421 		smull	r2, r1, r1, r4
+ 777 023e E217     		asrs	r2, r4, #31
+ 778 0240 C2EBA102 		rsb	r2, r2, r1, asr #2
+ 779 0244 02EB8202 		add	r2, r2, r2, lsl #2
+ 780 0248 A4EB4202 		sub	r2, r4, r2, lsl #1
+ 781 024c 12B2     		sxth	r2, r2
+ 782 024e 12B9     		cbnz	r2, .L54
+ 783 0250 049A     		ldr	r2, [sp, #16]
+ 784 0252 632A     		cmp	r2, #99
+ 785 0254 1DDD     		ble	.L91
+ 786              	.L54:
+ 787 0256 2549     		ldr	r1, .L95+16
+ 788 0258 81FB0421 		smull	r2, r1, r1, r4
+ 789 025c E217     		asrs	r2, r4, #31
+ 790 025e C2EB6102 		rsb	r2, r2, r1, asr #1
+ 791 0262 02EB8202 		add	r2, r2, r2, lsl #2
+ 792 0266 A21A     		subs	r2, r4, r2
+ 793 0268 12B2     		sxth	r2, r2
+ 794 026a 002A     		cmp	r2, #0
+ 795 026c ADD1     		bne	.L56
+ 796 026e 049A     		ldr	r2, [sp, #16]
+ 797 0270 092A     		cmp	r2, #9
+ 798 0272 AADC     		bgt	.L56
+ 799 0274 1A49     		ldr	r1, .L95+4
+ 800 0276 81FB0421 		smull	r2, r1, r1, r4
+ 801 027a E217     		asrs	r2, r4, #31
+ 802 027c C2EB6112 		rsb	r2, r2, r1, asr #5
+ 803 0280 DBB2     		uxtb	r3, r3
+ 804 0282 D2B2     		uxtb	r2, r2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 15
 
 
- 797 053a 1022     		movs	r2, #16
- 798 053c 5F21     		movs	r1, #95
- 799 053e 6B20     		movs	r0, #107
- 800 0540 FFF7FEFF 		bl	EPD_DrawBMP
- 801 0544 5A20     		movs	r0, #90
- 802 0546 FFF7FEFF 		bl	EPD_SetRotate
- 803 054a 71E7     		b	.L48
- 804              	.L78:
- 805 054c AFF30080 		.align	3
- 806              	.L77:
- 807 0550 99999999 		.word	-1717986919
- 808 0554 19E0B240 		.word	1085464601
- 809 0558 00B54998 		.word	-1740000000
- 810 055c 00000000 		.word	.LC0
- 811 0560 00000000 		.word	Font8
- 812 0564 1F85EB51 		.word	1374389535
- 813 0568 18000000 		.word	.LC3
- 814 056c 00000000 		.word	Font12
- 815 0570 00000000 		.word	adcData
- 816 0574 00000000 		.word	mcuVoltage
- 817 0578 00000000 		.word	hrtc
- 818 057c 00000000 		.word	Font16
- 819 0580 34000000 		.word	.LC5
- 820 0584 00000000 		.word	BlackImage
- 821 0588 0C000000 		.word	.LC2
- 822 058c 28000000 		.word	.LC4
- 823 0590 00000000 		.word	dead_batt_26x16
- 825              		.section	.text.shutdown,"ax",%progbits
- 826              		.align	1
- 827              		.global	shutdown
- 828              		.syntax unified
- 829              		.thumb
- 830              		.thumb_func
- 832              	shutdown:
- 833              		@ args = 0, pretend = 0, frame = 24
- 834              		@ frame_needed = 0, uses_anonymous_args = 0
- 835 0000 10B5     		push	{r4, lr}
- 836 0002 86B0     		sub	sp, sp, #24
- 837 0004 0446     		mov	r4, r0
- 838 0006 FFF7FEFF 		bl	EPD_Sleep
- 839 000a FFF7FEFF 		bl	EPD_Exit
- 840 000e 1B4A     		ldr	r2, .L85
- 841 0010 136E     		ldr	r3, [r2, #96]
- 842 0012 23F48053 		bic	r3, r3, #4096
- 843 0016 1366     		str	r3, [r2, #96]
- 844 0018 1948     		ldr	r0, .L85+4
- 845 001a FFF7FEFF 		bl	HAL_SPI_DeInit
- 846 001e 01A9     		add	r1, sp, #4
- 847 0020 0023     		movs	r3, #0
- 848 0022 0193     		str	r3, [sp, #4]
- 849 0024 4B60     		str	r3, [r1, #4]
- 850 0026 8B60     		str	r3, [r1, #8]
- 851 0028 CB60     		str	r3, [r1, #12]
- 852 002a 0B61     		str	r3, [r1, #16]
- 853 002c FA23     		movs	r3, #250
- 854 002e 0193     		str	r3, [sp, #4]
- 855 0030 0323     		movs	r3, #3
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 16
+ 805 0284 1A49     		ldr	r1, .L95+20
+ 806 0286 08A8     		add	r0, sp, #32
+ 807 0288 FFF7FEFF 		bl	sprintf
+ 808 028c 5FFA80FB 		uxtb	fp, r0
+ 809 0290 80E7     		b	.L53
+ 810              	.L91:
+ 811 0292 6B1D     		adds	r3, r5, #5
+ 812 0294 154A     		ldr	r2, .L95+16
+ 813 0296 82FB0312 		smull	r1, r2, r2, r3
+ 814 029a DB17     		asrs	r3, r3, #31
+ 815 029c C3EBA203 		rsb	r3, r3, r2, asr #2
+ 816 02a0 9BB2     		uxth	r3, r3
+ 817 02a2 144A     		ldr	r2, .L95+24
+ 818 02a4 A2FB0312 		umull	r1, r2, r2, r3
+ 819 02a8 D108     		lsrs	r1, r2, #3
+ 820 02aa 01EB8101 		add	r1, r1, r1, lsl #2
+ 821 02ae A3EB4103 		sub	r3, r3, r1, lsl #1
+ 822 02b2 DBB2     		uxtb	r3, r3
+ 823 02b4 C2F3C702 		ubfx	r2, r2, #3, #8
+ 824 02b8 0D49     		ldr	r1, .L95+20
+ 825 02ba 08A8     		add	r0, sp, #32
+ 826 02bc FFF7FEFF 		bl	sprintf
+ 827 02c0 5FFA80FB 		uxtb	fp, r0
+ 828 02c4 66E7     		b	.L53
+ 829              	.L57:
+ 830 02c6 0521     		movs	r1, #5
+ 831 02c8 0B48     		ldr	r0, .L95+28
+ 832 02ca FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 833 02ce 8346     		mov	fp, r0
+ 834 02d0 0027     		movs	r7, #0
+ 835 02d2 CDF814A0 		str	r10, [sp, #20]
+ 836 02d6 B246     		mov	r10, r6
+ 837 02d8 39E0     		b	.L59
+ 838              	.L96:
+ 839 02da 00BF     		.align	2
+ 840              	.L95:
+ 841 02dc 00000000 		.word	BlackImage
+ 842 02e0 1F85EB51 		.word	1374389535
+ 843 02e4 00000000 		.word	.LC1
+ 844 02e8 00000000 		.word	Font8
+ 845 02ec 67666666 		.word	1717986919
+ 846 02f0 04000000 		.word	.LC2
+ 847 02f4 CDCCCCCC 		.word	-858993459
+ 848 02f8 00000000 		.word	hrtc
+ 849              	.L60:
+ 850 02fc 3846     		mov	r0, r7
+ 851 02fe FFF7FEFF 		bl	q_get
+ 852 0302 1626     		movs	r6, #22
+ 853 0304 0096     		str	r6, [sp]
+ 854 0306 6E23     		movs	r3, #110
+ 855 0308 5246     		mov	r2, r10
+ 856 030a 4146     		mov	r1, r8
+ 857 030c FFF7FEFF 		bl	map
+ 858 0310 0490     		str	r0, [sp, #16]
+ 859 0312 7C1C     		adds	r4, r7, #1
+ 860 0314 E7B2     		uxtb	r7, r4
+ 861 0316 3846     		mov	r0, r7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 16
 
 
- 856 0032 0293     		str	r3, [sp, #8]
- 857 0034 4FF09040 		mov	r0, #1207959552
- 858 0038 FFF7FEFF 		bl	HAL_GPIO_Init
- 859 003c FFF7FEFF 		bl	HAL_SuspendTick
- 860 0040 4FF0FF30 		mov	r0, #-1
- 861 0044 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
- 862 0048 5CB1     		cbz	r4, .L81
- 863 004a 0E4B     		ldr	r3, .L85+8
- 864 004c 9B69     		ldr	r3, [r3, #24]
- 865 004e 13F4806F 		tst	r3, #1024
- 866 0052 01D1     		bne	.L84
- 867 0054 0A21     		movs	r1, #10
- 868 0056 05E0     		b	.L80
- 869              	.L84:
- 870 0058 0B48     		ldr	r0, .L85+12
- 871 005a FFF7FEFF 		bl	HAL_RTCEx_GetWakeUpTimer
- 872 005e 0146     		mov	r1, r0
- 873 0060 00E0     		b	.L80
- 874              	.L81:
- 875 0062 0A21     		movs	r1, #10
- 876              	.L80:
- 877 0064 0023     		movs	r3, #0
- 878 0066 0422     		movs	r2, #4
- 879 0068 0748     		ldr	r0, .L85+12
- 880 006a FFF7FEFF 		bl	HAL_RTCEx_SetWakeUpTimer_IT
- 881 006e FFF7FEFF 		bl	HAL_PWREx_EnableLowPowerRunMode
- 882 0072 0120     		movs	r0, #1
- 883 0074 FFF7FEFF 		bl	HAL_PWREx_EnterSTOP2Mode
- 884 0078 06B0     		add	sp, sp, #24
- 885              		@ sp needed
- 886 007a 10BD     		pop	{r4, pc}
- 887              	.L86:
- 888              		.align	2
- 889              	.L85:
- 890 007c 00100240 		.word	1073876992
- 891 0080 00000000 		.word	hspi1
- 892 0084 00280040 		.word	1073752064
- 893 0088 00000000 		.word	hrtc
- 895              		.section	.text.DS18_INIT,"ax",%progbits
- 896              		.align	1
- 897              		.global	DS18_INIT
- 898              		.syntax unified
- 899              		.thumb
- 900              		.thumb_func
- 902              	DS18_INIT:
- 903              		@ args = 0, pretend = 0, frame = 8
- 904              		@ frame_needed = 0, uses_anonymous_args = 0
- 905 0000 10B5     		push	{r4, lr}
- 906 0002 82B0     		sub	sp, sp, #8
- 907 0004 114C     		ldr	r4, .L89
- 908 0006 1249     		ldr	r1, .L89+4
- 909 0008 2046     		mov	r0, r4
- 910 000a FFF7FEFF 		bl	DS18B20_Init
- 911 000e 2046     		mov	r0, r4
- 912 0010 FFF7FEFF 		bl	DS18B20_InitializationCommand
- 913 0014 2046     		mov	r0, r4
- 914 0016 FFF7FEFF 		bl	DS18B20_ReadRom
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 17
+ 862 0318 FFF7FEFF 		bl	q_get
+ 863 031c 0096     		str	r6, [sp]
+ 864 031e 6E23     		movs	r3, #110
+ 865 0320 5246     		mov	r2, r10
+ 866 0322 4146     		mov	r1, r8
+ 867 0324 FFF7FEFF 		bl	map
+ 868 0328 04EB8404 		add	r4, r4, r4, lsl #2
+ 869 032c 04F10A02 		add	r2, r4, #10
+ 870 0330 05EB8505 		add	r5, r5, r5, lsl #2
+ 871 0334 0A35     		adds	r5, r5, #10
+ 872 0336 0021     		movs	r1, #0
+ 873 0338 0291     		str	r1, [sp, #8]
+ 874 033a 0123     		movs	r3, #1
+ 875 033c 0193     		str	r3, [sp, #4]
+ 876 033e 0091     		str	r1, [sp]
+ 877 0340 83B2     		uxth	r3, r0
+ 878 0342 92B2     		uxth	r2, r2
+ 879 0344 BDF81010 		ldrh	r1, [sp, #16]
+ 880 0348 A8B2     		uxth	r0, r5
+ 881 034a FFF7FEFF 		bl	EPD_DrawLine
+ 882              	.L59:
+ 883 034e 3D46     		mov	r5, r7
+ 884 0350 FFF7FEFF 		bl	q_len
+ 885 0354 8742     		cmp	r7, r0
+ 886 0356 D1D3     		bcc	.L60
+ 887 0358 DDF814A0 		ldr	r10, [sp, #20]
+ 888 035c FFF7FEFF 		bl	q_len
+ 889 0360 44B2     		sxtb	r4, r0
+ 890 0362 01E0     		b	.L61
+ 891              	.L63:
+ 892 0364 083C     		subs	r4, r4, #8
+ 893 0366 64B2     		sxtb	r4, r4
+ 894              	.L61:
+ 895 0368 002C     		cmp	r4, #0
+ 896 036a 34DD     		ble	.L92
+ 897 036c FFF7FEFF 		bl	q_len
+ 898 0370 8442     		cmp	r4, r0
+ 899 0372 F7D0     		beq	.L63
+ 900 0374 04EB8405 		add	r5, r4, r4, lsl #2
+ 901 0378 ADB2     		uxth	r5, r5
+ 902 037a 0A35     		adds	r5, r5, #10
+ 903 037c ADB2     		uxth	r5, r5
+ 904 037e 0123     		movs	r3, #1
+ 905 0380 0293     		str	r3, [sp, #8]
+ 906 0382 0193     		str	r3, [sp, #4]
+ 907 0384 0026     		movs	r6, #0
+ 908 0386 0096     		str	r6, [sp]
+ 909 0388 7023     		movs	r3, #112
+ 910 038a 2A46     		mov	r2, r5
+ 911 038c 1421     		movs	r1, #20
+ 912 038e 2846     		mov	r0, r5
+ 913 0390 FFF7FEFF 		bl	EPD_DrawLine
+ 914 0394 FFF7FEFF 		bl	q_len
+ 915 0398 001B     		subs	r0, r0, r4
+ 916 039a 0138     		subs	r0, r0, #1
+ 917 039c 0DF11F02 		add	r2, sp, #31
+ 918 03a0 0DF11E01 		add	r1, sp, #30
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 17
 
 
- 915 001a 2046     		mov	r0, r4
- 916 001c FFF7FEFF 		bl	DS18B20_ReadScratchpad
- 917 0020 E37B     		ldrb	r3, [r4, #15]	@ zero_extendqisi2
- 918 0022 8DF80430 		strb	r3, [sp, #4]
- 919 0026 A37B     		ldrb	r3, [r4, #14]	@ zero_extendqisi2
- 920 0028 8DF80530 		strb	r3, [sp, #5]
- 921 002c 7F23     		movs	r3, #127
- 922 002e 8DF80630 		strb	r3, [sp, #6]
- 923 0032 2046     		mov	r0, r4
- 924 0034 FFF7FEFF 		bl	DS18B20_InitializationCommand
- 925 0038 2046     		mov	r0, r4
- 926 003a FFF7FEFF 		bl	DS18B20_SkipRom
- 927 003e 01A9     		add	r1, sp, #4
- 928 0040 2046     		mov	r0, r4
- 929 0042 FFF7FEFF 		bl	DS18B20_WriteScratchpad
- 930 0046 02B0     		add	sp, sp, #8
- 931              		@ sp needed
- 932 0048 10BD     		pop	{r4, pc}
- 933              	.L90:
- 934 004a 00BF     		.align	2
- 935              	.L89:
- 936 004c 00000000 		.word	temperatureSensor
- 937 0050 00000000 		.word	huart2
- 939              		.section	.text.DS18_GET,"ax",%progbits
- 940              		.align	1
- 941              		.global	DS18_GET
- 942              		.syntax unified
- 943              		.thumb
- 944              		.thumb_func
- 946              	DS18_GET:
- 947              		@ args = 0, pretend = 0, frame = 0
- 948              		@ frame_needed = 0, uses_anonymous_args = 0
- 949 0000 10B5     		push	{r4, lr}
- 950 0002 0B4C     		ldr	r4, .L93
- 951 0004 2046     		mov	r0, r4
- 952 0006 FFF7FEFF 		bl	DS18B20_InitializationCommand
- 953 000a 2046     		mov	r0, r4
- 954 000c FFF7FEFF 		bl	DS18B20_SkipRom
- 955 0010 0121     		movs	r1, #1
- 956 0012 2046     		mov	r0, r4
- 957 0014 FFF7FEFF 		bl	DS18B20_ConvertT
- 958 0018 2046     		mov	r0, r4
- 959 001a FFF7FEFF 		bl	DS18B20_InitializationCommand
- 960 001e 2046     		mov	r0, r4
- 961 0020 FFF7FEFF 		bl	DS18B20_SkipRom
- 962 0024 2046     		mov	r0, r4
- 963 0026 FFF7FEFF 		bl	DS18B20_ReadScratchpad
- 964 002a 94ED050A 		vldr.32	s0, [r4, #20]
- 965 002e 10BD     		pop	{r4, pc}
- 966              	.L94:
- 967              		.align	2
- 968              	.L93:
- 969 0030 00000000 		.word	temperatureSensor
- 971              		.section	.rodata.set_time.str1.4,"aMS",%progbits,1
- 972              		.align	2
- 973              	.LC6:
- 974 0000 630C1F17 		.ascii	"c\014\037\027;\000"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 18
+ 919 03a4 4FF4E163 		mov	r3, #1800
+ 920 03a8 03FB10B0 		mls	r0, r3, r0, fp
+ 921 03ac FFF7FEFF 		bl	timestamp_to_time
+ 922 03b0 08AF     		add	r7, sp, #32
+ 923 03b2 9DF81F30 		ldrb	r3, [sp, #31]	@ zero_extendqisi2
+ 924 03b6 9DF81E20 		ldrb	r2, [sp, #30]	@ zero_extendqisi2
+ 925 03ba 6B49     		ldr	r1, .L97+8
+ 926 03bc 3846     		mov	r0, r7
+ 927 03be FFF7FEFF 		bl	sprintf
+ 928 03c2 0196     		str	r6, [sp, #4]
+ 929 03c4 FF23     		movs	r3, #255
+ 930 03c6 0093     		str	r3, [sp]
+ 931 03c8 684B     		ldr	r3, .L97+12
+ 932 03ca 3A46     		mov	r2, r7
+ 933 03cc 7221     		movs	r1, #114
+ 934 03ce 2846     		mov	r0, r5
+ 935 03d0 FFF7FEFF 		bl	EPD_DrawString_EN
+ 936 03d4 C6E7     		b	.L63
+ 937              	.L92:
+ 938 03d6 A9F10A03 		sub	r3, r9, #10
+ 939 03da 9BB2     		uxth	r3, r3
+ 940 03dc 592B     		cmp	r3, #89
+ 941 03de 40F29A80 		bls	.L93
+ 942 03e2 B9F1090F 		cmp	r9, #9
+ 943 03e6 00F2A180 		bhi	.L67
+ 944 03ea 614A     		ldr	r2, .L97+16
+ 945 03ec A2FB0992 		umull	r9, r2, r2, r9
+ 946 03f0 AAEB5213 		sub	r3, r10, r2, lsr #5
+ 947 03f4 5209     		lsrs	r2, r2, #5
+ 948 03f6 5F49     		ldr	r1, .L97+20
+ 949 03f8 17A8     		add	r0, sp, #92
+ 950 03fa FFF7FEFF 		bl	sprintf
+ 951              	.L66:
+ 952 03fe 0020     		movs	r0, #0
+ 953 0400 0190     		str	r0, [sp, #4]
+ 954 0402 FF23     		movs	r3, #255
+ 955 0404 0093     		str	r3, [sp]
+ 956 0406 5C4B     		ldr	r3, .L97+24
+ 957 0408 17AA     		add	r2, sp, #92
+ 958 040a 0146     		mov	r1, r0
+ 959 040c FFF7FEFF 		bl	EPD_DrawString_EN
+ 960 0410 5A4B     		ldr	r3, .L97+28
+ 961 0412 1888     		ldrh	r0, [r3]
+ 962 0414 FFF7FEFF 		bl	__aeabi_i2d
+ 963 0418 0246     		mov	r2, r0
+ 964 041a 0B46     		mov	r3, r1
+ 965 041c 50A1     		adr	r1, .L97
+ 966 041e D1E90001 		ldrd	r0, [r1]
+ 967 0422 FFF7FEFF 		bl	__aeabi_ddiv
+ 968 0426 FFF7FEFF 		bl	__aeabi_d2f
+ 969 042a 07EE900A 		vmov	s15, r0
+ 970 042e 544B     		ldr	r3, .L97+32
+ 971 0430 1860     		str	r0, [r3]	@ float
+ 972 0432 B0EE027A 		vmov.f32	s14, #2.25e+0
+ 973 0436 F4EEC77A 		vcmpe.f32	s15, s14
+ 974 043a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 975 043e 7ED4     		bmi	.L94
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 18
 
 
- 974      3B00
- 975              		.section	.text.set_time,"ax",%progbits
- 976              		.align	1
- 977              		.global	set_time
- 978              		.syntax unified
- 979              		.thumb
- 980              		.thumb_func
- 982              	set_time:
- 983              		@ args = 0, pretend = 0, frame = 112
- 984              		@ frame_needed = 0, uses_anonymous_args = 0
- 985 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 986 0004 9CB0     		sub	sp, sp, #112
- 987 0006 17AF     		add	r7, sp, #92
- 988 0008 0024     		movs	r4, #0
- 989 000a 1794     		str	r4, [sp, #92]
- 990 000c 1894     		str	r4, [sp, #96]
- 991 000e 1994     		str	r4, [sp, #100]
- 992 0010 1A94     		str	r4, [sp, #104]
- 993 0012 1B94     		str	r4, [sp, #108]
- 994 0014 4FF09043 		mov	r3, #1207959552
- 995 0018 1793     		str	r3, [sp, #92]
- 996 001a 4FF00108 		mov	r8, #1
- 997 001e ADF86080 		strh	r8, [sp, #96]	@ movhi
- 998 0022 12AE     		add	r6, sp, #72
- 999 0024 1294     		str	r4, [sp, #72]
- 1000 0026 1394     		str	r4, [sp, #76]
- 1001 0028 1494     		str	r4, [sp, #80]
- 1002 002a 1594     		str	r4, [sp, #84]
- 1003 002c 1694     		str	r4, [sp, #88]
- 1004 002e 1293     		str	r3, [sp, #72]
- 1005 0030 4FF48072 		mov	r2, #256
- 1006 0034 ADF84C20 		strh	r2, [sp, #76]	@ movhi
- 1007 0038 0DAD     		add	r5, sp, #52
- 1008 003a 0D94     		str	r4, [sp, #52]
- 1009 003c 0E94     		str	r4, [sp, #56]
- 1010 003e 0F94     		str	r4, [sp, #60]
- 1011 0040 1094     		str	r4, [sp, #64]
- 1012 0042 1194     		str	r4, [sp, #68]
- 1013 0044 0D93     		str	r3, [sp, #52]
- 1014 0046 4FF40073 		mov	r3, #512
- 1015 004a ADF83830 		strh	r3, [sp, #56]	@ movhi
- 1016 004e 244B     		ldr	r3, .L97
- 1017 0050 0B93     		str	r3, [sp, #44]
- 1018 0052 8DF83040 		strb	r4, [sp, #48]
- 1019 0056 234B     		ldr	r3, .L97+4
- 1020 0058 93E80300 		ldm	r3, {r0, r1}
- 1021 005c 0990     		str	r0, [sp, #36]
- 1022 005e 8DF82810 		strb	r1, [sp, #40]
- 1023 0062 214B     		ldr	r3, .L97+8
- 1024 0064 0793     		str	r3, [sp, #28]
- 1025 0066 8DF82040 		strb	r4, [sp, #32]
- 1026 006a FFF7FEFF 		bl	HAL_GetTick
- 1027 006e 3846     		mov	r0, r7
- 1028 0070 FFF7FEFF 		bl	tick
- 1029 0074 2846     		mov	r0, r5
- 1030 0076 FFF7FEFF 		bl	tick
- 1031 007a 3046     		mov	r0, r6
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 19
+ 976              	.L68:
+ 977 0440 0024     		movs	r4, #0
+ 978 0442 0294     		str	r4, [sp, #8]
+ 979 0444 0125     		movs	r5, #1
+ 980 0446 0195     		str	r5, [sp, #4]
+ 981 0448 0094     		str	r4, [sp]
+ 982 044a 7023     		movs	r3, #112
+ 983 044c FA22     		movs	r2, #250
+ 984 044e 1946     		mov	r1, r3
+ 985 0450 0A20     		movs	r0, #10
+ 986 0452 FFF7FEFF 		bl	EPD_DrawLine
+ 987 0456 0294     		str	r4, [sp, #8]
+ 988 0458 0195     		str	r5, [sp, #4]
+ 989 045a 0094     		str	r4, [sp]
+ 990 045c 7023     		movs	r3, #112
+ 991 045e 0A22     		movs	r2, #10
+ 992 0460 1421     		movs	r1, #20
+ 993 0462 1046     		mov	r0, r2
+ 994 0464 FFF7FEFF 		bl	EPD_DrawLine
+ 995 0468 12A9     		add	r1, sp, #72
+ 996 046a 1294     		str	r4, [sp, #72]
+ 997 046c 4C60     		str	r4, [r1, #4]
+ 998 046e 8C60     		str	r4, [r1, #8]
+ 999 0470 CC60     		str	r4, [r1, #12]
+ 1000 0472 0C61     		str	r4, [r1, #16]
+ 1001 0474 1194     		str	r4, [sp, #68]
+ 1002 0476 434D     		ldr	r5, .L97+36
+ 1003 0478 2246     		mov	r2, r4
+ 1004 047a 2846     		mov	r0, r5
+ 1005 047c FFF7FEFF 		bl	HAL_RTC_GetTime
+ 1006 0480 2246     		mov	r2, r4
+ 1007 0482 11A9     		add	r1, sp, #68
+ 1008 0484 2846     		mov	r0, r5
+ 1009 0486 FFF7FEFF 		bl	HAL_RTC_GetDate
+ 1010 048a 9DF84630 		ldrb	r3, [sp, #70]	@ zero_extendqisi2
+ 1011 048e 8DF83F30 		strb	r3, [sp, #63]
+ 1012 0492 9DF84530 		ldrb	r3, [sp, #69]	@ zero_extendqisi2
+ 1013 0496 8DF83E30 		strb	r3, [sp, #62]
+ 1014 049a 9DF84730 		ldrb	r3, [sp, #71]	@ zero_extendqisi2
+ 1015 049e ADF83C30 		strh	r3, [sp, #60]	@ movhi
+ 1016 04a2 394E     		ldr	r6, .L97+40
+ 1017 04a4 0194     		str	r4, [sp, #4]
+ 1018 04a6 FF27     		movs	r7, #255
+ 1019 04a8 0097     		str	r7, [sp]
+ 1020 04aa 3346     		mov	r3, r6
+ 1021 04ac 0FAA     		add	r2, sp, #60
+ 1022 04ae 2146     		mov	r1, r4
+ 1023 04b0 AF20     		movs	r0, #175
+ 1024 04b2 FFF7FEFF 		bl	EPD_DrawDate
+ 1025 04b6 FFF7FEFF 		bl	q_len
+ 1026 04ba 0138     		subs	r0, r0, #1
+ 1027 04bc C0B2     		uxtb	r0, r0
+ 1028 04be FFF7FEFF 		bl	q_get
+ 1029 04c2 0546     		mov	r5, r0
+ 1030 04c4 FFF7FEFF 		bl	q_len
+ 1031 04c8 0138     		subs	r0, r0, #1
+ 1032 04ca C0B2     		uxtb	r0, r0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 19
 
 
- 1032 007c FFF7FEFF 		bl	tick
- 1033 0080 3846     		mov	r0, r7
- 1034 0082 FFF7FEFF 		bl	isClicked
- 1035 0086 3046     		mov	r0, r6
- 1036 0088 FFF7FEFF 		bl	isClicked
- 1037 008c 2846     		mov	r0, r5
- 1038 008e FFF7FEFF 		bl	isClicked
- 1039 0092 02AD     		add	r5, sp, #8
- 1040 0094 0294     		str	r4, [sp, #8]
- 1041 0096 0394     		str	r4, [sp, #12]
- 1042 0098 0494     		str	r4, [sp, #16]
- 1043 009a 0594     		str	r4, [sp, #20]
- 1044 009c 0694     		str	r4, [sp, #24]
- 1045 009e 0194     		str	r4, [sp, #4]
- 1046 00a0 0C23     		movs	r3, #12
- 1047 00a2 8DF80830 		strb	r3, [sp, #8]
- 1048 00a6 1923     		movs	r3, #25
- 1049 00a8 8DF80730 		strb	r3, [sp, #7]
- 1050 00ac 0323     		movs	r3, #3
- 1051 00ae 8DF80530 		strb	r3, [sp, #5]
- 1052 00b2 1823     		movs	r3, #24
- 1053 00b4 8DF80630 		strb	r3, [sp, #6]
- 1054 00b8 8DF80480 		strb	r8, [sp, #4]
- 1055 00bc 4FF48033 		mov	r3, #65536
- 1056 00c0 0593     		str	r3, [sp, #20]
- 1057 00c2 0A4E     		ldr	r6, .L97+12
- 1058 00c4 2246     		mov	r2, r4
- 1059 00c6 01A9     		add	r1, sp, #4
- 1060 00c8 3046     		mov	r0, r6
- 1061 00ca FFF7FEFF 		bl	HAL_RTC_SetDate
- 1062 00ce 2246     		mov	r2, r4
- 1063 00d0 2946     		mov	r1, r5
- 1064 00d2 3046     		mov	r0, r6
- 1065 00d4 FFF7FEFF 		bl	HAL_RTC_SetTime
- 1066 00d8 1CB0     		add	sp, sp, #112
- 1067              		@ sp needed
- 1068 00da BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 1069              	.L98:
- 1070 00de 00BF     		.align	2
- 1071              	.L97:
- 1072 00e0 1903180C 		.word	202900249
- 1073 00e4 00000000 		.word	.LC6
- 1074 00e8 00010100 		.word	65792
- 1075 00ec 00000000 		.word	hrtc
- 1077              		.section	.text.USB_CDC_RxHandler,"ax",%progbits
- 1078              		.align	1
- 1079              		.global	USB_CDC_RxHandler
- 1080              		.syntax unified
- 1081              		.thumb
- 1082              		.thumb_func
- 1084              	USB_CDC_RxHandler:
- 1085              		@ args = 0, pretend = 0, frame = 0
- 1086              		@ frame_needed = 0, uses_anonymous_args = 0
- 1087 0000 08B5     		push	{r3, lr}
- 1088 0002 89B2     		uxth	r1, r1
- 1089 0004 FFF7FEFF 		bl	CDC_Transmit_FS
- 1090 0008 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 20
+ 1033 04cc FFF7FEFF 		bl	q_get
+ 1034 04d0 274A     		ldr	r2, .L97+16
+ 1035 04d2 A2FB0013 		umull	r1, r3, r2, r0
+ 1036 04d6 5B09     		lsrs	r3, r3, #5
+ 1037 04d8 4FF06408 		mov	r8, #100
+ 1038 04dc 08FB1303 		mls	r3, r8, r3, r0
+ 1039 04e0 A2FB0512 		umull	r1, r2, r2, r5
+ 1040 04e4 0CAD     		add	r5, sp, #48
+ 1041 04e6 9BB2     		uxth	r3, r3
+ 1042 04e8 C2F34F12 		ubfx	r2, r2, #5, #16
+ 1043 04ec 2749     		ldr	r1, .L97+44
+ 1044 04ee 2846     		mov	r0, r5
+ 1045 04f0 FFF7FEFF 		bl	sprintf
+ 1046 04f4 0194     		str	r4, [sp, #4]
+ 1047 04f6 0097     		str	r7, [sp]
+ 1048 04f8 3346     		mov	r3, r6
+ 1049 04fa 2A46     		mov	r2, r5
+ 1050 04fc 2146     		mov	r1, r4
+ 1051 04fe 5520     		movs	r0, #85
+ 1052 0500 FFF7FEFF 		bl	EPD_DrawString_EN
+ 1053 0504 2248     		ldr	r0, .L97+48
+ 1054 0506 FFF7FEFF 		bl	EPD_Display_Base
+ 1055 050a 4046     		mov	r0, r8
+ 1056 050c FFF7FEFF 		bl	HAL_Delay
+ 1057 0510 1BB0     		add	sp, sp, #108
+ 1058              		@ sp needed
+ 1059 0512 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1060              	.L93:
+ 1061 0516 164A     		ldr	r2, .L97+16
+ 1062 0518 A2FB0992 		umull	r9, r2, r2, r9
+ 1063 051c AAEB5213 		sub	r3, r10, r2, lsr #5
+ 1064 0520 5209     		lsrs	r2, r2, #5
+ 1065 0522 1C49     		ldr	r1, .L97+52
+ 1066 0524 17A8     		add	r0, sp, #92
+ 1067 0526 FFF7FEFF 		bl	sprintf
+ 1068 052a 68E7     		b	.L66
+ 1069              	.L67:
+ 1070 052c 104B     		ldr	r3, .L97+16
+ 1071 052e A3FB0932 		umull	r3, r2, r3, r9
+ 1072 0532 5209     		lsrs	r2, r2, #5
+ 1073 0534 1849     		ldr	r1, .L97+56
+ 1074 0536 17A8     		add	r0, sp, #92
+ 1075 0538 FFF7FEFF 		bl	sprintf
+ 1076 053c 5FE7     		b	.L66
+ 1077              	.L94:
+ 1078 053e 0020     		movs	r0, #0
+ 1079 0540 FFF7FEFF 		bl	EPD_SetRotate
+ 1080 0544 154B     		ldr	r3, .L97+60
+ 1081 0546 0093     		str	r3, [sp]
+ 1082 0548 1A23     		movs	r3, #26
+ 1083 054a 1022     		movs	r2, #16
+ 1084 054c 5F21     		movs	r1, #95
+ 1085 054e 6B20     		movs	r0, #107
+ 1086 0550 FFF7FEFF 		bl	EPD_DrawBMP
+ 1087 0554 5A20     		movs	r0, #90
+ 1088 0556 FFF7FEFF 		bl	EPD_SetRotate
+ 1089 055a 71E7     		b	.L68
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 20
 
 
- 1092              		.section	.text.HAL_RTCEx_WakeUpTimerEventCallback,"ax",%progbits
- 1093              		.align	1
- 1094              		.global	HAL_RTCEx_WakeUpTimerEventCallback
- 1095              		.syntax unified
- 1096              		.thumb
- 1097              		.thumb_func
- 1099              	HAL_RTCEx_WakeUpTimerEventCallback:
- 1100              		@ args = 0, pretend = 0, frame = 0
- 1101              		@ frame_needed = 0, uses_anonymous_args = 0
- 1102 0000 08B5     		push	{r3, lr}
- 1103 0002 044B     		ldr	r3, .L103
- 1104 0004 0122     		movs	r2, #1
- 1105 0006 1A70     		strb	r2, [r3]
- 1106 0008 FFF7FEFF 		bl	MX_USB_DEVICE_IsConnected
- 1107 000c 024B     		ldr	r3, .L103+4
- 1108 000e 1870     		strb	r0, [r3]
- 1109 0010 08BD     		pop	{r3, pc}
- 1110              	.L104:
- 1111 0012 00BF     		.align	2
- 1112              	.L103:
- 1113 0014 00000000 		.word	measure
- 1114 0018 00000000 		.word	send_usb
- 1116              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
- 1117              		.align	1
- 1118              		.global	HAL_GPIO_EXTI_Callback
- 1119              		.syntax unified
- 1120              		.thumb
- 1121              		.thumb_func
- 1123              	HAL_GPIO_EXTI_Callback:
- 1124              		@ args = 0, pretend = 0, frame = 0
- 1125              		@ frame_needed = 0, uses_anonymous_args = 0
- 1126 0000 0128     		cmp	r0, #1
- 1127 0002 01D0     		beq	.L112
+ 1090              	.L98:
+ 1091 055c AFF30080 		.align	3
+ 1092              	.L97:
+ 1093 0560 99999999 		.word	-1717986919
+ 1094 0564 19E0B240 		.word	1085464601
+ 1095 0568 0C000000 		.word	.LC3
+ 1096 056c 00000000 		.word	Font8
+ 1097 0570 1F85EB51 		.word	1374389535
+ 1098 0574 20000000 		.word	.LC5
+ 1099 0578 00000000 		.word	Font12
+ 1100 057c 00000000 		.word	adcData
+ 1101 0580 00000000 		.word	mcuVoltage
+ 1102 0584 00000000 		.word	hrtc
+ 1103 0588 00000000 		.word	Font16
+ 1104 058c 3C000000 		.word	.LC7
+ 1105 0590 00000000 		.word	BlackImage
+ 1106 0594 14000000 		.word	.LC4
+ 1107 0598 30000000 		.word	.LC6
+ 1108 059c 00000000 		.word	dead_batt_26x16
+ 1110              		.section	.text.USB_CDC_RxHandler,"ax",%progbits
+ 1111              		.align	1
+ 1112              		.global	USB_CDC_RxHandler
+ 1113              		.syntax unified
+ 1114              		.thumb
+ 1115              		.thumb_func
+ 1117              	USB_CDC_RxHandler:
+ 1118              		@ args = 0, pretend = 0, frame = 0
+ 1119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1120 0000 08B5     		push	{r3, lr}
+ 1121 0002 89B2     		uxth	r1, r1
+ 1122 0004 FFF7FEFF 		bl	CDC_Transmit_FS
+ 1123 0008 08BD     		pop	{r3, pc}
+ 1125              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 1126              		.align	1
+ 1127              		.global	HAL_GPIO_EXTI_Callback
  1128              		.syntax unified
- 1129              	@ 945 "Core/Src/main.c" 1
- 1130 0004 00BF     		nop
- 1131              	@ 0 "" 2
- 1132              		.thumb
- 1133              		.syntax unified
- 1134 0006 7047     		bx	lr
- 1135              	.L112:
- 1136 0008 08B5     		push	{r3, lr}
- 1137 000a FFF7FEFF 		bl	MX_USB_DEVICE_IsConnected
- 1138 000e 10B9     		cbnz	r0, .L105
- 1139 0010 014B     		ldr	r3, .L113
- 1140 0012 0122     		movs	r2, #1
- 1141 0014 1A70     		strb	r2, [r3]
- 1142              	.L105:
- 1143 0016 08BD     		pop	{r3, pc}
- 1144              	.L114:
- 1145              		.align	2
- 1146              	.L113:
- 1147 0018 00000000 		.word	initialise_usb_connection
- 1149              		.section	.text.Error_Handler,"ax",%progbits
- 1150              		.align	1
- 1151              		.global	Error_Handler
- 1152              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 21
+ 1129              		.thumb
+ 1130              		.thumb_func
+ 1132              	HAL_GPIO_EXTI_Callback:
+ 1133              		@ args = 0, pretend = 0, frame = 0
+ 1134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1135              		@ link register save eliminated.
+ 1136 0000 2028     		cmp	r0, #32
+ 1137 0002 01D0     		beq	.L104
+ 1138              		.syntax unified
+ 1139              	@ 980 "Core/Src/main.c" 1
+ 1140 0004 00BF     		nop
+ 1141              	@ 0 "" 2
+ 1142              		.thumb
+ 1143              		.syntax unified
+ 1144 0006 7047     		bx	lr
+ 1145              	.L104:
+ 1146 0008 014B     		ldr	r3, .L105
+ 1147 000a 0122     		movs	r2, #1
+ 1148 000c 1A70     		strb	r2, [r3]
+ 1149 000e 7047     		bx	lr
+ 1150              	.L106:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 21
 
 
- 1153              		.thumb
- 1154              		.thumb_func
- 1156              	Error_Handler:
- 1157              		@ Volatile: function does not return.
- 1158              		@ args = 0, pretend = 0, frame = 0
- 1159              		@ frame_needed = 0, uses_anonymous_args = 0
- 1160              		@ link register save eliminated.
- 1161              		.syntax unified
- 1162              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 1163 0000 72B6     		cpsid i
- 1164              	@ 0 "" 2
- 1165              		.thumb
- 1166              		.syntax unified
- 1167              	.L116:
- 1168 0002 FEE7     		b	.L116
- 1170              		.section	.text.MX_SPI1_Init,"ax",%progbits
- 1171              		.align	1
- 1172              		.syntax unified
- 1173              		.thumb
- 1174              		.thumb_func
- 1176              	MX_SPI1_Init:
- 1177              		@ args = 0, pretend = 0, frame = 0
- 1178              		@ frame_needed = 0, uses_anonymous_args = 0
- 1179 0000 08B5     		push	{r3, lr}
- 1180 0002 1148     		ldr	r0, .L121
- 1181 0004 114B     		ldr	r3, .L121+4
- 1182 0006 0360     		str	r3, [r0]
- 1183 0008 4FF48273 		mov	r3, #260
- 1184 000c 4360     		str	r3, [r0, #4]
- 1185 000e 4FF40043 		mov	r3, #32768
- 1186 0012 8360     		str	r3, [r0, #8]
- 1187 0014 4FF4E063 		mov	r3, #1792
- 1188 0018 C360     		str	r3, [r0, #12]
- 1189 001a 0023     		movs	r3, #0
- 1190 001c 0361     		str	r3, [r0, #16]
- 1191 001e 4361     		str	r3, [r0, #20]
- 1192 0020 4FF40072 		mov	r2, #512
- 1193 0024 8261     		str	r2, [r0, #24]
- 1194 0026 1822     		movs	r2, #24
- 1195 0028 C261     		str	r2, [r0, #28]
- 1196 002a 0362     		str	r3, [r0, #32]
- 1197 002c 4362     		str	r3, [r0, #36]
- 1198 002e 8362     		str	r3, [r0, #40]
- 1199 0030 0722     		movs	r2, #7
- 1200 0032 C262     		str	r2, [r0, #44]
- 1201 0034 0363     		str	r3, [r0, #48]
- 1202 0036 0823     		movs	r3, #8
- 1203 0038 4363     		str	r3, [r0, #52]
- 1204 003a FFF7FEFF 		bl	HAL_SPI_Init
- 1205 003e 00B9     		cbnz	r0, .L120
- 1206 0040 08BD     		pop	{r3, pc}
- 1207              	.L120:
- 1208 0042 FFF7FEFF 		bl	Error_Handler
- 1209              	.L122:
- 1210 0046 00BF     		.align	2
- 1211              	.L121:
- 1212 0048 00000000 		.word	hspi1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 22
+ 1151              		.align	2
+ 1152              	.L105:
+ 1153 0010 00000000 		.word	initialise_usb_connection
+ 1155              		.section	.text.USB_DEVICE_IsConnected,"ax",%progbits
+ 1156              		.align	1
+ 1157              		.global	USB_DEVICE_IsConnected
+ 1158              		.syntax unified
+ 1159              		.thumb
+ 1160              		.thumb_func
+ 1162              	USB_DEVICE_IsConnected:
+ 1163              		@ args = 0, pretend = 0, frame = 0
+ 1164              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1165 0000 08B5     		push	{r3, lr}
+ 1166 0002 2021     		movs	r1, #32
+ 1167 0004 0348     		ldr	r0, .L109
+ 1168 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 1169 000a 0038     		subs	r0, r0, #0
+ 1170 000c 18BF     		it	ne
+ 1171 000e 0120     		movne	r0, #1
+ 1172 0010 08BD     		pop	{r3, pc}
+ 1173              	.L110:
+ 1174 0012 00BF     		.align	2
+ 1175              	.L109:
+ 1176 0014 00040048 		.word	1207960576
+ 1178              		.section	.text.HAL_RTCEx_WakeUpTimerEventCallback,"ax",%progbits
+ 1179              		.align	1
+ 1180              		.global	HAL_RTCEx_WakeUpTimerEventCallback
+ 1181              		.syntax unified
+ 1182              		.thumb
+ 1183              		.thumb_func
+ 1185              	HAL_RTCEx_WakeUpTimerEventCallback:
+ 1186              		@ args = 0, pretend = 0, frame = 0
+ 1187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1188 0000 08B5     		push	{r3, lr}
+ 1189 0002 044B     		ldr	r3, .L113
+ 1190 0004 0122     		movs	r2, #1
+ 1191 0006 1A70     		strb	r2, [r3]
+ 1192 0008 FFF7FEFF 		bl	USB_DEVICE_IsConnected
+ 1193 000c 024B     		ldr	r3, .L113+4
+ 1194 000e 1870     		strb	r0, [r3]
+ 1195 0010 08BD     		pop	{r3, pc}
+ 1196              	.L114:
+ 1197 0012 00BF     		.align	2
+ 1198              	.L113:
+ 1199 0014 00000000 		.word	measure
+ 1200 0018 00000000 		.word	send_usb
+ 1202              		.section	.text.Error_Handler,"ax",%progbits
+ 1203              		.align	1
+ 1204              		.global	Error_Handler
+ 1205              		.syntax unified
+ 1206              		.thumb
+ 1207              		.thumb_func
+ 1209              	Error_Handler:
+ 1210              		@ Volatile: function does not return.
+ 1211              		@ args = 0, pretend = 0, frame = 0
+ 1212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1213              		@ link register save eliminated.
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 22
 
 
- 1213 004c 00300140 		.word	1073819648
- 1215              		.section	.text.MX_RTC_Init,"ax",%progbits
- 1216              		.align	1
- 1217              		.syntax unified
+ 1214              		.syntax unified
+ 1215              	@ 209 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1216 0000 72B6     		cpsid i
+ 1217              	@ 0 "" 2
  1218              		.thumb
- 1219              		.thumb_func
- 1221              	MX_RTC_Init:
- 1222              		@ args = 0, pretend = 0, frame = 24
- 1223              		@ frame_needed = 0, uses_anonymous_args = 0
- 1224 0000 30B5     		push	{r4, r5, lr}
- 1225 0002 87B0     		sub	sp, sp, #28
- 1226 0004 0025     		movs	r5, #0
- 1227 0006 0195     		str	r5, [sp, #4]
- 1228 0008 0295     		str	r5, [sp, #8]
- 1229 000a 0395     		str	r5, [sp, #12]
- 1230 000c 0495     		str	r5, [sp, #16]
- 1231 000e 0595     		str	r5, [sp, #20]
- 1232 0010 0095     		str	r5, [sp]
- 1233 0012 244C     		ldr	r4, .L133
- 1234 0014 0621     		movs	r1, #6
- 1235 0016 2046     		mov	r0, r4
- 1236 0018 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
- 1237 001c 224B     		ldr	r3, .L133+4
- 1238 001e 2360     		str	r3, [r4]
- 1239 0020 A560     		str	r5, [r4, #8]
- 1240 0022 7F23     		movs	r3, #127
- 1241 0024 E360     		str	r3, [r4, #12]
- 1242 0026 FF23     		movs	r3, #255
- 1243 0028 2361     		str	r3, [r4, #16]
- 1244 002a 6561     		str	r5, [r4, #20]
- 1245 002c A561     		str	r5, [r4, #24]
- 1246 002e E561     		str	r5, [r4, #28]
- 1247 0030 4FF08043 		mov	r3, #1073741824
- 1248 0034 2362     		str	r3, [r4, #32]
- 1249 0036 6562     		str	r5, [r4, #36]
- 1250 0038 2046     		mov	r0, r4
- 1251 003a FFF7FEFF 		bl	HAL_RTC_Init
- 1252 003e 40BB     		cbnz	r0, .L129
- 1253 0040 0023     		movs	r3, #0
- 1254 0042 8DF80430 		strb	r3, [sp, #4]
- 1255 0046 8DF80530 		strb	r3, [sp, #5]
- 1256 004a 8DF80630 		strb	r3, [sp, #6]
- 1257 004e 4FF48032 		mov	r2, #65536
- 1258 0052 0492     		str	r2, [sp, #16]
- 1259 0054 0593     		str	r3, [sp, #20]
- 1260 0056 0122     		movs	r2, #1
- 1261 0058 01A9     		add	r1, sp, #4
- 1262 005a 1248     		ldr	r0, .L133
- 1263 005c FFF7FEFF 		bl	HAL_RTC_SetTime
- 1264 0060 C8B9     		cbnz	r0, .L130
- 1265 0062 0122     		movs	r2, #1
- 1266 0064 8DF80020 		strb	r2, [sp]
- 1267 0068 8DF80120 		strb	r2, [sp, #1]
- 1268 006c 8DF80220 		strb	r2, [sp, #2]
- 1269 0070 2523     		movs	r3, #37
- 1270 0072 8DF80330 		strb	r3, [sp, #3]
- 1271 0076 6946     		mov	r1, sp
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 23
+ 1219              		.syntax unified
+ 1220              	.L116:
+ 1221 0002 FEE7     		b	.L116
+ 1223              		.section	.text.MX_SPI1_Init,"ax",%progbits
+ 1224              		.align	1
+ 1225              		.syntax unified
+ 1226              		.thumb
+ 1227              		.thumb_func
+ 1229              	MX_SPI1_Init:
+ 1230              		@ args = 0, pretend = 0, frame = 0
+ 1231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1232 0000 08B5     		push	{r3, lr}
+ 1233 0002 1148     		ldr	r0, .L121
+ 1234 0004 114B     		ldr	r3, .L121+4
+ 1235 0006 0360     		str	r3, [r0]
+ 1236 0008 4FF48273 		mov	r3, #260
+ 1237 000c 4360     		str	r3, [r0, #4]
+ 1238 000e 4FF40043 		mov	r3, #32768
+ 1239 0012 8360     		str	r3, [r0, #8]
+ 1240 0014 4FF4E063 		mov	r3, #1792
+ 1241 0018 C360     		str	r3, [r0, #12]
+ 1242 001a 0023     		movs	r3, #0
+ 1243 001c 0361     		str	r3, [r0, #16]
+ 1244 001e 4361     		str	r3, [r0, #20]
+ 1245 0020 4FF40072 		mov	r2, #512
+ 1246 0024 8261     		str	r2, [r0, #24]
+ 1247 0026 1822     		movs	r2, #24
+ 1248 0028 C261     		str	r2, [r0, #28]
+ 1249 002a 0362     		str	r3, [r0, #32]
+ 1250 002c 4362     		str	r3, [r0, #36]
+ 1251 002e 8362     		str	r3, [r0, #40]
+ 1252 0030 0722     		movs	r2, #7
+ 1253 0032 C262     		str	r2, [r0, #44]
+ 1254 0034 0363     		str	r3, [r0, #48]
+ 1255 0036 0823     		movs	r3, #8
+ 1256 0038 4363     		str	r3, [r0, #52]
+ 1257 003a FFF7FEFF 		bl	HAL_SPI_Init
+ 1258 003e 00B9     		cbnz	r0, .L120
+ 1259 0040 08BD     		pop	{r3, pc}
+ 1260              	.L120:
+ 1261 0042 FFF7FEFF 		bl	Error_Handler
+ 1262              	.L122:
+ 1263 0046 00BF     		.align	2
+ 1264              	.L121:
+ 1265 0048 00000000 		.word	hspi1
+ 1266 004c 00300140 		.word	1073819648
+ 1268              		.section	.text.MX_RTC_Init,"ax",%progbits
+ 1269              		.align	1
+ 1270              		.syntax unified
+ 1271              		.thumb
+ 1272              		.thumb_func
+ 1274              	MX_RTC_Init:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 23
 
 
- 1272 0078 0A48     		ldr	r0, .L133
- 1273 007a FFF7FEFF 		bl	HAL_RTC_SetDate
- 1274 007e 60B9     		cbnz	r0, .L131
- 1275 0080 0023     		movs	r3, #0
- 1276 0082 0422     		movs	r2, #4
- 1277 0084 1E21     		movs	r1, #30
- 1278 0086 0748     		ldr	r0, .L133
- 1279 0088 FFF7FEFF 		bl	HAL_RTCEx_SetWakeUpTimer_IT
- 1280 008c 38B9     		cbnz	r0, .L132
- 1281 008e 07B0     		add	sp, sp, #28
- 1282              		@ sp needed
- 1283 0090 30BD     		pop	{r4, r5, pc}
- 1284              	.L129:
- 1285 0092 FFF7FEFF 		bl	Error_Handler
- 1286              	.L130:
- 1287 0096 FFF7FEFF 		bl	Error_Handler
- 1288              	.L131:
- 1289 009a FFF7FEFF 		bl	Error_Handler
- 1290              	.L132:
- 1291 009e FFF7FEFF 		bl	Error_Handler
- 1292              	.L134:
- 1293 00a2 00BF     		.align	2
- 1294              	.L133:
- 1295 00a4 00000000 		.word	hrtc
- 1296 00a8 00280040 		.word	1073752064
- 1298              		.section	.text.MX_USART2_UART_Init,"ax",%progbits
- 1299              		.align	1
- 1300              		.syntax unified
- 1301              		.thumb
- 1302              		.thumb_func
- 1304              	MX_USART2_UART_Init:
- 1305              		@ args = 0, pretend = 0, frame = 0
- 1306              		@ frame_needed = 0, uses_anonymous_args = 0
- 1307 0000 08B5     		push	{r3, lr}
- 1308 0002 0B48     		ldr	r0, .L139
- 1309 0004 0B4B     		ldr	r3, .L139+4
- 1310 0006 0360     		str	r3, [r0]
- 1311 0008 4FF4E133 		mov	r3, #115200
- 1312 000c 4360     		str	r3, [r0, #4]
- 1313 000e 0023     		movs	r3, #0
- 1314 0010 8360     		str	r3, [r0, #8]
- 1315 0012 C360     		str	r3, [r0, #12]
- 1316 0014 0361     		str	r3, [r0, #16]
- 1317 0016 0C22     		movs	r2, #12
- 1318 0018 4261     		str	r2, [r0, #20]
- 1319 001a 8361     		str	r3, [r0, #24]
- 1320 001c C361     		str	r3, [r0, #28]
- 1321 001e 0362     		str	r3, [r0, #32]
- 1322 0020 4362     		str	r3, [r0, #36]
- 1323 0022 FFF7FEFF 		bl	HAL_HalfDuplex_Init
- 1324 0026 00B9     		cbnz	r0, .L138
- 1325 0028 08BD     		pop	{r3, pc}
- 1326              	.L138:
- 1327 002a FFF7FEFF 		bl	Error_Handler
- 1328              	.L140:
- 1329 002e 00BF     		.align	2
- 1330              	.L139:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 24
+ 1275              		@ args = 0, pretend = 0, frame = 24
+ 1276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1277 0000 30B5     		push	{r4, r5, lr}
+ 1278 0002 87B0     		sub	sp, sp, #28
+ 1279 0004 0025     		movs	r5, #0
+ 1280 0006 0195     		str	r5, [sp, #4]
+ 1281 0008 0295     		str	r5, [sp, #8]
+ 1282 000a 0395     		str	r5, [sp, #12]
+ 1283 000c 0495     		str	r5, [sp, #16]
+ 1284 000e 0595     		str	r5, [sp, #20]
+ 1285 0010 0095     		str	r5, [sp]
+ 1286 0012 244C     		ldr	r4, .L133
+ 1287 0014 0621     		movs	r1, #6
+ 1288 0016 2046     		mov	r0, r4
+ 1289 0018 FFF7FEFF 		bl	HAL_RTCEx_BKUPRead
+ 1290 001c 224B     		ldr	r3, .L133+4
+ 1291 001e 2360     		str	r3, [r4]
+ 1292 0020 A560     		str	r5, [r4, #8]
+ 1293 0022 7F23     		movs	r3, #127
+ 1294 0024 E360     		str	r3, [r4, #12]
+ 1295 0026 FF23     		movs	r3, #255
+ 1296 0028 2361     		str	r3, [r4, #16]
+ 1297 002a 6561     		str	r5, [r4, #20]
+ 1298 002c A561     		str	r5, [r4, #24]
+ 1299 002e E561     		str	r5, [r4, #28]
+ 1300 0030 4FF08043 		mov	r3, #1073741824
+ 1301 0034 2362     		str	r3, [r4, #32]
+ 1302 0036 6562     		str	r5, [r4, #36]
+ 1303 0038 2046     		mov	r0, r4
+ 1304 003a FFF7FEFF 		bl	HAL_RTC_Init
+ 1305 003e 40BB     		cbnz	r0, .L129
+ 1306 0040 0023     		movs	r3, #0
+ 1307 0042 8DF80430 		strb	r3, [sp, #4]
+ 1308 0046 8DF80530 		strb	r3, [sp, #5]
+ 1309 004a 8DF80630 		strb	r3, [sp, #6]
+ 1310 004e 4FF48032 		mov	r2, #65536
+ 1311 0052 0492     		str	r2, [sp, #16]
+ 1312 0054 0593     		str	r3, [sp, #20]
+ 1313 0056 0122     		movs	r2, #1
+ 1314 0058 01A9     		add	r1, sp, #4
+ 1315 005a 1248     		ldr	r0, .L133
+ 1316 005c FFF7FEFF 		bl	HAL_RTC_SetTime
+ 1317 0060 C8B9     		cbnz	r0, .L130
+ 1318 0062 0122     		movs	r2, #1
+ 1319 0064 8DF80020 		strb	r2, [sp]
+ 1320 0068 8DF80120 		strb	r2, [sp, #1]
+ 1321 006c 8DF80220 		strb	r2, [sp, #2]
+ 1322 0070 2523     		movs	r3, #37
+ 1323 0072 8DF80330 		strb	r3, [sp, #3]
+ 1324 0076 6946     		mov	r1, sp
+ 1325 0078 0A48     		ldr	r0, .L133
+ 1326 007a FFF7FEFF 		bl	HAL_RTC_SetDate
+ 1327 007e 60B9     		cbnz	r0, .L131
+ 1328 0080 0023     		movs	r3, #0
+ 1329 0082 0422     		movs	r2, #4
+ 1330 0084 0A21     		movs	r1, #10
+ 1331 0086 0748     		ldr	r0, .L133
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 24
 
 
- 1331 0030 00000000 		.word	huart2
- 1332 0034 00440040 		.word	1073759232
- 1334              		.section	.text.MX_ADC1_Init,"ax",%progbits
- 1335              		.align	1
- 1336              		.syntax unified
- 1337              		.thumb
- 1338              		.thumb_func
- 1340              	MX_ADC1_Init:
- 1341              		@ args = 0, pretend = 0, frame = 40
- 1342              		@ frame_needed = 0, uses_anonymous_args = 0
- 1343 0000 00B5     		push	{lr}
- 1344 0002 8BB0     		sub	sp, sp, #44
- 1345 0004 0023     		movs	r3, #0
- 1346 0006 0793     		str	r3, [sp, #28]
- 1347 0008 0893     		str	r3, [sp, #32]
- 1348 000a 0993     		str	r3, [sp, #36]
- 1349 000c 0193     		str	r3, [sp, #4]
- 1350 000e 0293     		str	r3, [sp, #8]
- 1351 0010 0393     		str	r3, [sp, #12]
- 1352 0012 0493     		str	r3, [sp, #16]
- 1353 0014 0593     		str	r3, [sp, #20]
- 1354 0016 0693     		str	r3, [sp, #24]
- 1355 0018 1C48     		ldr	r0, .L149
- 1356 001a 1D4A     		ldr	r2, .L149+4
- 1357 001c 0260     		str	r2, [r0]
- 1358 001e 4360     		str	r3, [r0, #4]
- 1359 0020 8360     		str	r3, [r0, #8]
- 1360 0022 C360     		str	r3, [r0, #12]
- 1361 0024 0361     		str	r3, [r0, #16]
- 1362 0026 0422     		movs	r2, #4
- 1363 0028 4261     		str	r2, [r0, #20]
- 1364 002a 0376     		strb	r3, [r0, #24]
- 1365 002c 0122     		movs	r2, #1
- 1366 002e 4276     		strb	r2, [r0, #25]
- 1367 0030 C261     		str	r2, [r0, #28]
- 1368 0032 80F82030 		strb	r3, [r0, #32]
- 1369 0036 8362     		str	r3, [r0, #40]
- 1370 0038 C362     		str	r3, [r0, #44]
- 1371 003a 80F83030 		strb	r3, [r0, #48]
- 1372 003e 4363     		str	r3, [r0, #52]
- 1373 0040 80F83830 		strb	r3, [r0, #56]
- 1374 0044 FFF7FEFF 		bl	HAL_ADC_Init
- 1375 0048 D0B9     		cbnz	r0, .L146
- 1376 004a 0023     		movs	r3, #0
- 1377 004c 0793     		str	r3, [sp, #28]
- 1378 004e 07A9     		add	r1, sp, #28
- 1379 0050 0E48     		ldr	r0, .L149
- 1380 0052 FFF7FEFF 		bl	HAL_ADCEx_MultiModeConfigChannel
- 1381 0056 A8B9     		cbnz	r0, .L147
- 1382 0058 0E4B     		ldr	r3, .L149+8
- 1383 005a 0193     		str	r3, [sp, #4]
- 1384 005c 0623     		movs	r3, #6
- 1385 005e 0293     		str	r3, [sp, #8]
- 1386 0060 0023     		movs	r3, #0
- 1387 0062 0393     		str	r3, [sp, #12]
- 1388 0064 7F22     		movs	r2, #127
- 1389 0066 0492     		str	r2, [sp, #16]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 25
+ 1332 0088 FFF7FEFF 		bl	HAL_RTCEx_SetWakeUpTimer_IT
+ 1333 008c 38B9     		cbnz	r0, .L132
+ 1334 008e 07B0     		add	sp, sp, #28
+ 1335              		@ sp needed
+ 1336 0090 30BD     		pop	{r4, r5, pc}
+ 1337              	.L129:
+ 1338 0092 FFF7FEFF 		bl	Error_Handler
+ 1339              	.L130:
+ 1340 0096 FFF7FEFF 		bl	Error_Handler
+ 1341              	.L131:
+ 1342 009a FFF7FEFF 		bl	Error_Handler
+ 1343              	.L132:
+ 1344 009e FFF7FEFF 		bl	Error_Handler
+ 1345              	.L134:
+ 1346 00a2 00BF     		.align	2
+ 1347              	.L133:
+ 1348 00a4 00000000 		.word	hrtc
+ 1349 00a8 00280040 		.word	1073752064
+ 1351              		.section	.text.MX_USART2_UART_Init,"ax",%progbits
+ 1352              		.align	1
+ 1353              		.syntax unified
+ 1354              		.thumb
+ 1355              		.thumb_func
+ 1357              	MX_USART2_UART_Init:
+ 1358              		@ args = 0, pretend = 0, frame = 0
+ 1359              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1360 0000 08B5     		push	{r3, lr}
+ 1361 0002 0B48     		ldr	r0, .L139
+ 1362 0004 0B4B     		ldr	r3, .L139+4
+ 1363 0006 0360     		str	r3, [r0]
+ 1364 0008 4FF4E133 		mov	r3, #115200
+ 1365 000c 4360     		str	r3, [r0, #4]
+ 1366 000e 0023     		movs	r3, #0
+ 1367 0010 8360     		str	r3, [r0, #8]
+ 1368 0012 C360     		str	r3, [r0, #12]
+ 1369 0014 0361     		str	r3, [r0, #16]
+ 1370 0016 0C22     		movs	r2, #12
+ 1371 0018 4261     		str	r2, [r0, #20]
+ 1372 001a 8361     		str	r3, [r0, #24]
+ 1373 001c C361     		str	r3, [r0, #28]
+ 1374 001e 0362     		str	r3, [r0, #32]
+ 1375 0020 4362     		str	r3, [r0, #36]
+ 1376 0022 FFF7FEFF 		bl	HAL_HalfDuplex_Init
+ 1377 0026 00B9     		cbnz	r0, .L138
+ 1378 0028 08BD     		pop	{r3, pc}
+ 1379              	.L138:
+ 1380 002a FFF7FEFF 		bl	Error_Handler
+ 1381              	.L140:
+ 1382 002e 00BF     		.align	2
+ 1383              	.L139:
+ 1384 0030 00000000 		.word	huart2
+ 1385 0034 00440040 		.word	1073759232
+ 1387              		.section	.text.MX_ADC1_Init,"ax",%progbits
+ 1388              		.align	1
+ 1389              		.syntax unified
+ 1390              		.thumb
+ 1391              		.thumb_func
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 25
 
 
- 1390 0068 0422     		movs	r2, #4
- 1391 006a 0592     		str	r2, [sp, #20]
- 1392 006c 0693     		str	r3, [sp, #24]
- 1393 006e 0DEB0201 		add	r1, sp, r2
- 1394 0072 0648     		ldr	r0, .L149
- 1395 0074 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 1396 0078 30B9     		cbnz	r0, .L148
- 1397 007a 0BB0     		add	sp, sp, #44
- 1398              		@ sp needed
- 1399 007c 5DF804FB 		ldr	pc, [sp], #4
- 1400              	.L146:
- 1401 0080 FFF7FEFF 		bl	Error_Handler
- 1402              	.L147:
- 1403 0084 FFF7FEFF 		bl	Error_Handler
- 1404              	.L148:
- 1405 0088 FFF7FEFF 		bl	Error_Handler
- 1406              	.L150:
- 1407              		.align	2
- 1408              	.L149:
- 1409 008c 00000000 		.word	hadc1
- 1410 0090 00000450 		.word	1342439424
- 1411 0094 01000080 		.word	-2147483647
- 1413              		.section	.text.SystemClock_Config,"ax",%progbits
- 1414              		.align	1
- 1415              		.global	SystemClock_Config
- 1416              		.syntax unified
- 1417              		.thumb
- 1418              		.thumb_func
- 1420              	SystemClock_Config:
- 1421              		@ args = 0, pretend = 0, frame = 88
- 1422              		@ frame_needed = 0, uses_anonymous_args = 0
- 1423 0000 00B5     		push	{lr}
- 1424 0002 97B0     		sub	sp, sp, #92
- 1425 0004 4422     		movs	r2, #68
- 1426 0006 0021     		movs	r1, #0
- 1427 0008 05A8     		add	r0, sp, #20
- 1428 000a FFF7FEFF 		bl	memset
- 1429 000e 0023     		movs	r3, #0
- 1430 0010 0093     		str	r3, [sp]
- 1431 0012 0193     		str	r3, [sp, #4]
- 1432 0014 0293     		str	r3, [sp, #8]
- 1433 0016 0393     		str	r3, [sp, #12]
- 1434 0018 0493     		str	r3, [sp, #16]
- 1435 001a 4FF40070 		mov	r0, #512
- 1436 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
- 1437 0022 38BB     		cbnz	r0, .L156
- 1438 0024 FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
- 1439 0028 154A     		ldr	r2, .L159
- 1440 002a D2F89030 		ldr	r3, [r2, #144]
- 1441 002e 23F01803 		bic	r3, r3, #24
- 1442 0032 C2F89030 		str	r3, [r2, #144]
- 1443 0036 3423     		movs	r3, #52
- 1444 0038 0593     		str	r3, [sp, #20]
- 1445 003a 0123     		movs	r3, #1
- 1446 003c 0793     		str	r3, [sp, #28]
- 1447 003e 0F93     		str	r3, [sp, #60]
- 1448 0040 0C93     		str	r3, [sp, #48]
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 26
+ 1393              	MX_ADC1_Init:
+ 1394              		@ args = 0, pretend = 0, frame = 40
+ 1395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1396 0000 00B5     		push	{lr}
+ 1397 0002 8BB0     		sub	sp, sp, #44
+ 1398 0004 0023     		movs	r3, #0
+ 1399 0006 0793     		str	r3, [sp, #28]
+ 1400 0008 0893     		str	r3, [sp, #32]
+ 1401 000a 0993     		str	r3, [sp, #36]
+ 1402 000c 0193     		str	r3, [sp, #4]
+ 1403 000e 0293     		str	r3, [sp, #8]
+ 1404 0010 0393     		str	r3, [sp, #12]
+ 1405 0012 0493     		str	r3, [sp, #16]
+ 1406 0014 0593     		str	r3, [sp, #20]
+ 1407 0016 0693     		str	r3, [sp, #24]
+ 1408 0018 1C48     		ldr	r0, .L149
+ 1409 001a 1D4A     		ldr	r2, .L149+4
+ 1410 001c 0260     		str	r2, [r0]
+ 1411 001e 4360     		str	r3, [r0, #4]
+ 1412 0020 8360     		str	r3, [r0, #8]
+ 1413 0022 C360     		str	r3, [r0, #12]
+ 1414 0024 0361     		str	r3, [r0, #16]
+ 1415 0026 0422     		movs	r2, #4
+ 1416 0028 4261     		str	r2, [r0, #20]
+ 1417 002a 0376     		strb	r3, [r0, #24]
+ 1418 002c 0122     		movs	r2, #1
+ 1419 002e 4276     		strb	r2, [r0, #25]
+ 1420 0030 C261     		str	r2, [r0, #28]
+ 1421 0032 80F82030 		strb	r3, [r0, #32]
+ 1422 0036 8362     		str	r3, [r0, #40]
+ 1423 0038 C362     		str	r3, [r0, #44]
+ 1424 003a 80F83030 		strb	r3, [r0, #48]
+ 1425 003e 4363     		str	r3, [r0, #52]
+ 1426 0040 80F83830 		strb	r3, [r0, #56]
+ 1427 0044 FFF7FEFF 		bl	HAL_ADC_Init
+ 1428 0048 D0B9     		cbnz	r0, .L146
+ 1429 004a 0023     		movs	r3, #0
+ 1430 004c 0793     		str	r3, [sp, #28]
+ 1431 004e 07A9     		add	r1, sp, #28
+ 1432 0050 0E48     		ldr	r0, .L149
+ 1433 0052 FFF7FEFF 		bl	HAL_ADCEx_MultiModeConfigChannel
+ 1434 0056 A8B9     		cbnz	r0, .L147
+ 1435 0058 0E4B     		ldr	r3, .L149+8
+ 1436 005a 0193     		str	r3, [sp, #4]
+ 1437 005c 0623     		movs	r3, #6
+ 1438 005e 0293     		str	r3, [sp, #8]
+ 1439 0060 0023     		movs	r3, #0
+ 1440 0062 0393     		str	r3, [sp, #12]
+ 1441 0064 7F22     		movs	r2, #127
+ 1442 0066 0492     		str	r2, [sp, #16]
+ 1443 0068 0422     		movs	r2, #4
+ 1444 006a 0592     		str	r2, [sp, #20]
+ 1445 006c 0693     		str	r3, [sp, #24]
+ 1446 006e 0DEB0201 		add	r1, sp, r2
+ 1447 0072 0648     		ldr	r0, .L149
+ 1448 0074 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 1449 0078 30B9     		cbnz	r0, .L148
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 26
 
 
- 1449 0042 0023     		movs	r3, #0
- 1450 0044 0D93     		str	r3, [sp, #52]
- 1451 0046 8022     		movs	r2, #128
- 1452 0048 0E92     		str	r2, [sp, #56]
- 1453 004a 1093     		str	r3, [sp, #64]
- 1454 004c 05A8     		add	r0, sp, #20
- 1455 004e FFF7FEFF 		bl	HAL_RCC_OscConfig
- 1456 0052 88B9     		cbnz	r0, .L157
- 1457 0054 0F23     		movs	r3, #15
- 1458 0056 0093     		str	r3, [sp]
- 1459 0058 0021     		movs	r1, #0
- 1460 005a 0191     		str	r1, [sp, #4]
- 1461 005c 0291     		str	r1, [sp, #8]
- 1462 005e 0391     		str	r1, [sp, #12]
- 1463 0060 0491     		str	r1, [sp, #16]
- 1464 0062 6846     		mov	r0, sp
- 1465 0064 FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 1466 0068 40B9     		cbnz	r0, .L158
- 1467 006a FFF7FEFF 		bl	HAL_RCCEx_EnableMSIPLLMode
- 1468 006e 17B0     		add	sp, sp, #92
- 1469              		@ sp needed
- 1470 0070 5DF804FB 		ldr	pc, [sp], #4
- 1471              	.L156:
- 1472 0074 FFF7FEFF 		bl	Error_Handler
- 1473              	.L157:
- 1474 0078 FFF7FEFF 		bl	Error_Handler
- 1475              	.L158:
- 1476 007c FFF7FEFF 		bl	Error_Handler
- 1477              	.L160:
- 1478              		.align	2
- 1479              	.L159:
- 1480 0080 00100240 		.word	1073876992
- 1482              		.section	.text.power_on,"ax",%progbits
- 1483              		.align	1
- 1484              		.global	power_on
- 1485              		.syntax unified
- 1486              		.thumb
- 1487              		.thumb_func
- 1489              	power_on:
- 1490              		@ args = 0, pretend = 0, frame = 0
- 1491              		@ frame_needed = 0, uses_anonymous_args = 0
- 1492 0000 08B5     		push	{r3, lr}
- 1493 0002 0748     		ldr	r0, .L163
- 1494 0004 FFF7FEFF 		bl	HAL_RTCEx_DeactivateWakeUpTimer
- 1495 0008 FFF7FEFF 		bl	HAL_ResumeTick
- 1496 000c FFF7FEFF 		bl	SystemClock_Config
- 1497 0010 FFF7FEFF 		bl	MX_GPIO_Init
- 1498 0014 FFF7FEFF 		bl	MX_SPI1_Init
- 1499 0018 FFF7FEFF 		bl	EPD_Init
- 1500 001c 08BD     		pop	{r3, pc}
- 1501              	.L164:
- 1502 001e 00BF     		.align	2
- 1503              	.L163:
- 1504 0020 00000000 		.word	hrtc
- 1506              		.section	.rodata.get_data.str1.4,"aMS",%progbits,1
- 1507              		.align	2
- 1508              	.LC7:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 27
+ 1450 007a 0BB0     		add	sp, sp, #44
+ 1451              		@ sp needed
+ 1452 007c 5DF804FB 		ldr	pc, [sp], #4
+ 1453              	.L146:
+ 1454 0080 FFF7FEFF 		bl	Error_Handler
+ 1455              	.L147:
+ 1456 0084 FFF7FEFF 		bl	Error_Handler
+ 1457              	.L148:
+ 1458 0088 FFF7FEFF 		bl	Error_Handler
+ 1459              	.L150:
+ 1460              		.align	2
+ 1461              	.L149:
+ 1462 008c 00000000 		.word	hadc1
+ 1463 0090 00000450 		.word	1342439424
+ 1464 0094 01000080 		.word	-2147483647
+ 1466              		.section	.text.SystemClock_Config,"ax",%progbits
+ 1467              		.align	1
+ 1468              		.global	SystemClock_Config
+ 1469              		.syntax unified
+ 1470              		.thumb
+ 1471              		.thumb_func
+ 1473              	SystemClock_Config:
+ 1474              		@ args = 0, pretend = 0, frame = 88
+ 1475              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1476 0000 00B5     		push	{lr}
+ 1477 0002 97B0     		sub	sp, sp, #92
+ 1478 0004 4422     		movs	r2, #68
+ 1479 0006 0021     		movs	r1, #0
+ 1480 0008 05A8     		add	r0, sp, #20
+ 1481 000a FFF7FEFF 		bl	memset
+ 1482 000e 0023     		movs	r3, #0
+ 1483 0010 0093     		str	r3, [sp]
+ 1484 0012 0193     		str	r3, [sp, #4]
+ 1485 0014 0293     		str	r3, [sp, #8]
+ 1486 0016 0393     		str	r3, [sp, #12]
+ 1487 0018 0493     		str	r3, [sp, #16]
+ 1488 001a 4FF40070 		mov	r0, #512
+ 1489 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
+ 1490 0022 38BB     		cbnz	r0, .L156
+ 1491 0024 FFF7FEFF 		bl	HAL_PWR_EnableBkUpAccess
+ 1492 0028 154A     		ldr	r2, .L159
+ 1493 002a D2F89030 		ldr	r3, [r2, #144]
+ 1494 002e 23F01803 		bic	r3, r3, #24
+ 1495 0032 C2F89030 		str	r3, [r2, #144]
+ 1496 0036 3423     		movs	r3, #52
+ 1497 0038 0593     		str	r3, [sp, #20]
+ 1498 003a 0123     		movs	r3, #1
+ 1499 003c 0793     		str	r3, [sp, #28]
+ 1500 003e 0F93     		str	r3, [sp, #60]
+ 1501 0040 0C93     		str	r3, [sp, #48]
+ 1502 0042 0023     		movs	r3, #0
+ 1503 0044 0D93     		str	r3, [sp, #52]
+ 1504 0046 8022     		movs	r2, #128
+ 1505 0048 0E92     		str	r2, [sp, #56]
+ 1506 004a 1093     		str	r3, [sp, #64]
+ 1507 004c 05A8     		add	r0, sp, #20
+ 1508 004e FFF7FEFF 		bl	HAL_RCC_OscConfig
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 27
 
 
- 1509 0000 48656C6C 		.ascii	"Hello\012\015\000"
- 1509      6F0A0D00 
- 1510              		.section	.text.get_data,"ax",%progbits
- 1511              		.align	1
- 1512              		.global	get_data
- 1513              		.syntax unified
- 1514              		.thumb
- 1515              		.thumb_func
- 1517              	get_data:
- 1518              		@ args = 0, pretend = 0, frame = 0
- 1519              		@ frame_needed = 0, uses_anonymous_args = 0
- 1520 0000 10B5     		push	{r4, lr}
- 1521 0002 2DED028B 		vpush.64	{d8}
- 1522 0006 0446     		mov	r4, r0
- 1523 0008 0028     		cmp	r0, #0
- 1524 000a 3CD0     		beq	.L166
- 1525 000c FFF7FEFF 		bl	power_on
- 1526              	.L167:
- 1527 0010 FFF7FEFF 		bl	q_load
- 1528 0014 FFF7FEFF 		bl	DS18_GET
- 1529 0018 9FED218A 		vldr.32	s16, .L171
- 1530 001c 20EE080A 		vmul.f32	s0, s0, s16
- 1531 0020 BCEEC00A 		vcvt.u32.f32	s0, s0
- 1532 0024 10EE103A 		vmov	r3, s0	@ int
- 1533 0028 98B2     		uxth	r0, r3
- 1534 002a FFF7FEFF 		bl	q_push
- 1535 002e FFF7FEFF 		bl	DS18_GET
- 1536 0032 20EE080A 		vmul.f32	s0, s0, s16
- 1537 0036 BCEEC00A 		vcvt.u32.f32	s0, s0
- 1538 003a 10EE103A 		vmov	r3, s0	@ int
- 1539 003e 98B2     		uxth	r0, r3
- 1540 0040 FFF7FEFF 		bl	q_push
- 1541 0044 FFF7FEFF 		bl	DS18_GET
- 1542 0048 20EE080A 		vmul.f32	s0, s0, s16
- 1543 004c BCEEC00A 		vcvt.u32.f32	s0, s0
- 1544 0050 10EE103A 		vmov	r3, s0	@ int
- 1545 0054 98B2     		uxth	r0, r3
- 1546 0056 FFF7FEFF 		bl	q_push
- 1547 005a FFF7FEFF 		bl	DS18_GET
- 1548 005e 20EE080A 		vmul.f32	s0, s0, s16
- 1549 0062 BCEEC00A 		vcvt.u32.f32	s0, s0
- 1550 0066 10EE103A 		vmov	r3, s0	@ int
- 1551 006a 98B2     		uxth	r0, r3
- 1552 006c FFF7FEFF 		bl	q_push
- 1553 0070 FFF7FEFF 		bl	plot
- 1554 0074 FFF7FEFF 		bl	q_save
- 1555 0078 54B1     		cbz	r4, .L168
- 1556 007a 0020     		movs	r0, #0
- 1557 007c FFF7FEFF 		bl	shutdown
- 1558              	.L165:
- 1559 0080 BDEC028B 		vldm	sp!, {d8}
- 1560 0084 10BD     		pop	{r4, pc}
- 1561              	.L166:
- 1562 0086 0821     		movs	r1, #8
- 1563 0088 0648     		ldr	r0, .L171+4
- 1564 008a FFF7FEFF 		bl	CDC_Transmit_FS
- 1565 008e BFE7     		b	.L167
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 28
+ 1509 0052 88B9     		cbnz	r0, .L157
+ 1510 0054 0F23     		movs	r3, #15
+ 1511 0056 0093     		str	r3, [sp]
+ 1512 0058 0021     		movs	r1, #0
+ 1513 005a 0191     		str	r1, [sp, #4]
+ 1514 005c 0291     		str	r1, [sp, #8]
+ 1515 005e 0391     		str	r1, [sp, #12]
+ 1516 0060 0491     		str	r1, [sp, #16]
+ 1517 0062 6846     		mov	r0, sp
+ 1518 0064 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 1519 0068 40B9     		cbnz	r0, .L158
+ 1520 006a FFF7FEFF 		bl	HAL_RCCEx_EnableMSIPLLMode
+ 1521 006e 17B0     		add	sp, sp, #92
+ 1522              		@ sp needed
+ 1523 0070 5DF804FB 		ldr	pc, [sp], #4
+ 1524              	.L156:
+ 1525 0074 FFF7FEFF 		bl	Error_Handler
+ 1526              	.L157:
+ 1527 0078 FFF7FEFF 		bl	Error_Handler
+ 1528              	.L158:
+ 1529 007c FFF7FEFF 		bl	Error_Handler
+ 1530              	.L160:
+ 1531              		.align	2
+ 1532              	.L159:
+ 1533 0080 00100240 		.word	1073876992
+ 1535              		.section	.text.power_on,"ax",%progbits
+ 1536              		.align	1
+ 1537              		.global	power_on
+ 1538              		.syntax unified
+ 1539              		.thumb
+ 1540              		.thumb_func
+ 1542              	power_on:
+ 1543              		@ args = 0, pretend = 0, frame = 0
+ 1544              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1545 0000 08B5     		push	{r3, lr}
+ 1546 0002 FFF7FEFF 		bl	HAL_ResumeTick
+ 1547 0006 FFF7FEFF 		bl	SystemClock_Config
+ 1548 000a FFF7FEFF 		bl	MX_GPIO_Init
+ 1549 000e FFF7FEFF 		bl	MX_SPI1_Init
+ 1550 0012 FFF7FEFF 		bl	EPD_Init
+ 1551 0016 08BD     		pop	{r3, pc}
+ 1553              		.section	.rodata.get_data.str1.4,"aMS",%progbits,1
+ 1554              		.align	2
+ 1555              	.LC8:
+ 1556 0000 48656C6C 		.ascii	"Hello\012\015\000"
+ 1556      6F0A0D00 
+ 1557              		.section	.text.get_data,"ax",%progbits
+ 1558              		.align	1
+ 1559              		.global	get_data
+ 1560              		.syntax unified
+ 1561              		.thumb
+ 1562              		.thumb_func
+ 1564              	get_data:
+ 1565              		@ args = 0, pretend = 0, frame = 0
+ 1566              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1567 0000 10B5     		push	{r4, lr}
+ 1568 0002 2DED028B 		vpush.64	{d8}
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 28
 
 
- 1566              	.L168:
- 1567 0090 0023     		movs	r3, #0
- 1568 0092 0422     		movs	r2, #4
- 1569 0094 0A21     		movs	r1, #10
- 1570 0096 0448     		ldr	r0, .L171+8
- 1571 0098 FFF7FEFF 		bl	HAL_RTCEx_SetWakeUpTimer_IT
- 1572 009c F0E7     		b	.L165
- 1573              	.L172:
- 1574 009e 00BF     		.align	2
- 1575              	.L171:
- 1576 00a0 0000C842 		.word	1120403456
- 1577 00a4 00000000 		.word	.LC7
- 1578 00a8 00000000 		.word	hrtc
- 1580              		.section	.text.main,"ax",%progbits
- 1581              		.align	1
- 1582              		.global	main
- 1583              		.syntax unified
- 1584              		.thumb
- 1585              		.thumb_func
- 1587              	main:
- 1588              		@ args = 0, pretend = 0, frame = 0
- 1589              		@ frame_needed = 0, uses_anonymous_args = 0
- 1590 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1591 0002 2DED028B 		vpush.64	{d8}
- 1592 0006 FFF7FEFF 		bl	HAL_Init
- 1593 000a FFF7FEFF 		bl	SystemClock_Config
- 1594 000e FFF7FEFF 		bl	MX_GPIO_Init
- 1595 0012 FFF7FEFF 		bl	MX_DMA_Init
- 1596 0016 FFF7FEFF 		bl	MX_SPI1_Init
- 1597 001a FFF7FEFF 		bl	MX_RTC_Init
- 1598 001e FFF7FEFF 		bl	MX_USART2_UART_Init
- 1599 0022 FFF7FEFF 		bl	MX_ADC1_Init
- 1600 0026 FFF7FEFF 		bl	MX_USB_DEVICE_Init
- 1601 002a 0122     		movs	r2, #1
- 1602 002c 5449     		ldr	r1, .L189
- 1603 002e 5548     		ldr	r0, .L189+4
- 1604 0030 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 1605 0034 FFF7FEFF 		bl	DS18_INIT
- 1606 0038 FFF7FEFF 		bl	EPD_Init
- 1607 003c FFF7FEFF 		bl	q_init
- 1608 0040 FFF7FEFF 		bl	q_load
- 1609 0044 0028     		cmp	r0, #0
- 1610 0046 41D0     		beq	.L174
- 1611 0048 0120     		movs	r0, #1
- 1612 004a FFF7FEFF 		bl	shutdown
- 1613 004e FFF7FEFF 		bl	power_on
- 1614              	.L175:
- 1615 0052 FFF7FEFF 		bl	DS18_GET
- 1616 0056 9FED4C8A 		vldr.32	s16, .L189+8
- 1617 005a 60EE087A 		vmul.f32	s15, s0, s16
- 1618 005e FCEEE77A 		vcvt.u32.f32	s15, s15
- 1619 0062 17EE903A 		vmov	r3, s15	@ int
- 1620 0066 98B2     		uxth	r0, r3
- 1621 0068 FFF7FEFF 		bl	q_push
- 1622 006c FFF7FEFF 		bl	DS18_GET
- 1623 0070 60EE087A 		vmul.f32	s15, s0, s16
- 1624 0074 FCEEE77A 		vcvt.u32.f32	s15, s15
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 29
+ 1569 0006 0446     		mov	r4, r0
+ 1570 0008 C8B3     		cbz	r0, .L164
+ 1571 000a FFF7FEFF 		bl	power_on
+ 1572              	.L165:
+ 1573 000e FFF7FEFF 		bl	q_load
+ 1574 0012 FFF7FEFF 		bl	DS18_GET
+ 1575 0016 9FED1E8A 		vldr.32	s16, .L169
+ 1576 001a 20EE080A 		vmul.f32	s0, s0, s16
+ 1577 001e BCEEC00A 		vcvt.u32.f32	s0, s0
+ 1578 0022 10EE103A 		vmov	r3, s0	@ int
+ 1579 0026 98B2     		uxth	r0, r3
+ 1580 0028 FFF7FEFF 		bl	q_push
+ 1581 002c FFF7FEFF 		bl	DS18_GET
+ 1582 0030 20EE080A 		vmul.f32	s0, s0, s16
+ 1583 0034 BCEEC00A 		vcvt.u32.f32	s0, s0
+ 1584 0038 10EE103A 		vmov	r3, s0	@ int
+ 1585 003c 98B2     		uxth	r0, r3
+ 1586 003e FFF7FEFF 		bl	q_push
+ 1587 0042 FFF7FEFF 		bl	DS18_GET
+ 1588 0046 20EE080A 		vmul.f32	s0, s0, s16
+ 1589 004a BCEEC00A 		vcvt.u32.f32	s0, s0
+ 1590 004e 10EE103A 		vmov	r3, s0	@ int
+ 1591 0052 98B2     		uxth	r0, r3
+ 1592 0054 FFF7FEFF 		bl	q_push
+ 1593 0058 FFF7FEFF 		bl	DS18_GET
+ 1594 005c 20EE080A 		vmul.f32	s0, s0, s16
+ 1595 0060 BCEEC00A 		vcvt.u32.f32	s0, s0
+ 1596 0064 10EE103A 		vmov	r3, s0	@ int
+ 1597 0068 98B2     		uxth	r0, r3
+ 1598 006a FFF7FEFF 		bl	q_push
+ 1599 006e FFF7FEFF 		bl	plot
+ 1600 0072 FFF7FEFF 		bl	q_save
+ 1601 0076 3CB9     		cbnz	r4, .L168
+ 1602              	.L163:
+ 1603 0078 BDEC028B 		vldm	sp!, {d8}
+ 1604 007c 10BD     		pop	{r4, pc}
+ 1605              	.L164:
+ 1606 007e 0821     		movs	r1, #8
+ 1607 0080 0448     		ldr	r0, .L169+4
+ 1608 0082 FFF7FEFF 		bl	CDC_Transmit_FS
+ 1609 0086 C2E7     		b	.L165
+ 1610              	.L168:
+ 1611 0088 0020     		movs	r0, #0
+ 1612 008a FFF7FEFF 		bl	shutdown
+ 1613 008e F3E7     		b	.L163
+ 1614              	.L170:
+ 1615              		.align	2
+ 1616              	.L169:
+ 1617 0090 0000C842 		.word	1120403456
+ 1618 0094 00000000 		.word	.LC8
+ 1620              		.section	.text.main,"ax",%progbits
+ 1621              		.align	1
+ 1622              		.global	main
+ 1623              		.syntax unified
+ 1624              		.thumb
+ 1625              		.thumb_func
+ 1627              	main:
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 29
 
 
- 1625 0078 17EE903A 		vmov	r3, s15	@ int
- 1626 007c 98B2     		uxth	r0, r3
- 1627 007e FFF7FEFF 		bl	q_push
- 1628 0082 FFF7FEFF 		bl	DS18_GET
- 1629 0086 60EE087A 		vmul.f32	s15, s0, s16
- 1630 008a FCEEE77A 		vcvt.u32.f32	s15, s15
- 1631 008e 17EE903A 		vmov	r3, s15	@ int
- 1632 0092 98B2     		uxth	r0, r3
- 1633 0094 FFF7FEFF 		bl	q_push
- 1634 0098 FFF7FEFF 		bl	DS18_GET
- 1635 009c 60EE087A 		vmul.f32	s15, s0, s16
- 1636 00a0 FCEEE77A 		vcvt.u32.f32	s15, s15
- 1637 00a4 17EE903A 		vmov	r3, s15	@ int
- 1638 00a8 98B2     		uxth	r0, r3
- 1639 00aa FFF7FEFF 		bl	q_push
- 1640 00ae FFF7FEFF 		bl	q_save
- 1641 00b2 FFF7FEFF 		bl	plot
- 1642 00b6 FFF7FEFF 		bl	MX_USB_DEVICE_IsConnected
- 1643 00ba 50B1     		cbz	r0, .L176
- 1644 00bc 0023     		movs	r3, #0
- 1645 00be 0422     		movs	r2, #4
- 1646 00c0 0A21     		movs	r1, #10
- 1647 00c2 3248     		ldr	r0, .L189+12
- 1648 00c4 FFF7FEFF 		bl	HAL_RTCEx_SetWakeUpTimer_IT
- 1649              	.L177:
- 1650 00c8 0024     		movs	r4, #0
- 1651 00ca 46E0     		b	.L185
- 1652              	.L174:
- 1653 00cc FFF7FEFF 		bl	set_time
- 1654 00d0 BFE7     		b	.L175
- 1655              	.L176:
- 1656 00d2 0020     		movs	r0, #0
- 1657 00d4 FFF7FEFF 		bl	shutdown
- 1658 00d8 F6E7     		b	.L177
- 1659              	.L187:
- 1660 00da 0026     		movs	r6, #0
- 1661 00dc 2C4B     		ldr	r3, .L189+16
- 1662 00de 1E70     		strb	r6, [r3]
- 1663 00e0 2C4D     		ldr	r5, .L189+20
- 1664 00e2 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
- 1665 00e4 80F00100 		eor	r0, r0, #1
- 1666 00e8 FFF7FEFF 		bl	get_data
- 1667 00ec 2E70     		strb	r6, [r5]
- 1668 00ee 38E0     		b	.L178
- 1669              	.L188:
- 1670 00f0 294B     		ldr	r3, .L189+24
- 1671 00f2 0022     		movs	r2, #0
- 1672 00f4 1A70     		strb	r2, [r3]
- 1673 00f6 FFF7FEFF 		bl	power_on
- 1674 00fa FFF7FEFF 		bl	HAL_GetTick
- 1675 00fe 0546     		mov	r5, r0
- 1676 0100 02E0     		b	.L180
- 1677              	.L181:
- 1678 0102 FFF7FEFF 		bl	MX_USB_DEVICE_IsConnected
- 1679 0106 A8B9     		cbnz	r0, .L182
- 1680              	.L180:
- 1681 0108 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 30
+ 1628              		@ args = 0, pretend = 0, frame = 0
+ 1629              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1630 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1631 0002 2DED028B 		vpush.64	{d8}
+ 1632 0006 FFF7FEFF 		bl	HAL_Init
+ 1633 000a FFF7FEFF 		bl	SystemClock_Config
+ 1634 000e FFF7FEFF 		bl	MX_GPIO_Init
+ 1635 0012 FFF7FEFF 		bl	MX_DMA_Init
+ 1636 0016 FFF7FEFF 		bl	MX_SPI1_Init
+ 1637 001a FFF7FEFF 		bl	MX_RTC_Init
+ 1638 001e FFF7FEFF 		bl	MX_USART2_UART_Init
+ 1639 0022 FFF7FEFF 		bl	MX_ADC1_Init
+ 1640 0026 FFF7FEFF 		bl	MX_USB_DEVICE_Init
+ 1641 002a 0122     		movs	r2, #1
+ 1642 002c 4849     		ldr	r1, .L186
+ 1643 002e 4948     		ldr	r0, .L186+4
+ 1644 0030 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 1645 0034 FFF7FEFF 		bl	DS18_INIT
+ 1646 0038 FFF7FEFF 		bl	EPD_Init
+ 1647 003c FFF7FEFF 		bl	q_init
+ 1648 0040 FFF7FEFF 		bl	q_load
+ 1649 0044 D8B3     		cbz	r0, .L172
+ 1650 0046 0120     		movs	r0, #1
+ 1651 0048 FFF7FEFF 		bl	shutdown
+ 1652 004c FFF7FEFF 		bl	power_on
+ 1653              	.L173:
+ 1654 0050 FFF7FEFF 		bl	DS18_GET
+ 1655 0054 9FED408A 		vldr.32	s16, .L186+8
+ 1656 0058 60EE087A 		vmul.f32	s15, s0, s16
+ 1657 005c FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1658 0060 17EE903A 		vmov	r3, s15	@ int
+ 1659 0064 98B2     		uxth	r0, r3
+ 1660 0066 FFF7FEFF 		bl	q_push
+ 1661 006a FFF7FEFF 		bl	DS18_GET
+ 1662 006e 60EE087A 		vmul.f32	s15, s0, s16
+ 1663 0072 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1664 0076 17EE903A 		vmov	r3, s15	@ int
+ 1665 007a 98B2     		uxth	r0, r3
+ 1666 007c FFF7FEFF 		bl	q_push
+ 1667 0080 FFF7FEFF 		bl	DS18_GET
+ 1668 0084 60EE087A 		vmul.f32	s15, s0, s16
+ 1669 0088 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1670 008c 17EE903A 		vmov	r3, s15	@ int
+ 1671 0090 98B2     		uxth	r0, r3
+ 1672 0092 FFF7FEFF 		bl	q_push
+ 1673 0096 FFF7FEFF 		bl	DS18_GET
+ 1674 009a 60EE087A 		vmul.f32	s15, s0, s16
+ 1675 009e FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1676 00a2 17EE903A 		vmov	r3, s15	@ int
+ 1677 00a6 98B2     		uxth	r0, r3
+ 1678 00a8 FFF7FEFF 		bl	q_push
+ 1679 00ac FFF7FEFF 		bl	q_save
+ 1680 00b0 FFF7FEFF 		bl	plot
+ 1681 00b4 FFF7FEFF 		bl	USB_DEVICE_IsConnected
+ 1682 00b8 20B1     		cbz	r0, .L183
+ 1683              	.L174:
+ 1684 00ba 0024     		movs	r4, #0
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 30
 
 
- 1682 010c 431B     		subs	r3, r0, r5
- 1683 010e 41F28732 		movw	r2, #4999
- 1684 0112 9342     		cmp	r3, r2
- 1685 0114 0ED8     		bhi	.L182
- 1686 0116 1E4B     		ldr	r3, .L189+16
- 1687 0118 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 1688 011a 002B     		cmp	r3, #0
- 1689 011c F1D0     		beq	.L181
- 1690 011e 0027     		movs	r7, #0
- 1691 0120 1B4B     		ldr	r3, .L189+16
- 1692 0122 1F70     		strb	r7, [r3]
- 1693 0124 1B4E     		ldr	r6, .L189+20
- 1694 0126 3078     		ldrb	r0, [r6]	@ zero_extendqisi2
- 1695 0128 80F00100 		eor	r0, r0, #1
- 1696 012c FFF7FEFF 		bl	get_data
- 1697 0130 3770     		strb	r7, [r6]
- 1698 0132 E6E7     		b	.L181
- 1699              	.L182:
- 1700 0134 194B     		ldr	r3, .L189+28
- 1701 0136 9B69     		ldr	r3, [r3, #24]
- 1702 0138 13F4806F 		tst	r3, #1024
- 1703 013c 15D0     		beq	.L179
- 1704 013e 134D     		ldr	r5, .L189+12
- 1705 0140 2846     		mov	r0, r5
- 1706 0142 FFF7FEFF 		bl	HAL_RTCEx_GetWakeUpTimer
- 1707 0146 0146     		mov	r1, r0
- 1708 0148 0023     		movs	r3, #0
- 1709 014a 0422     		movs	r2, #4
- 1710 014c 2846     		mov	r0, r5
- 1711 014e FFF7FEFF 		bl	HAL_RTCEx_SetWakeUpTimer_IT
- 1712 0152 0AE0     		b	.L179
- 1713              	.L184:
- 1714 0154 FFF7FEFF 		bl	MX_USB_DEVICE_IsConnected
- 1715 0158 0446     		mov	r4, r0
- 1716              	.L185:
- 1717 015a 0D4B     		ldr	r3, .L189+16
- 1718 015c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 1719 015e 002B     		cmp	r3, #0
- 1720 0160 BBD1     		bne	.L187
- 1721              	.L178:
- 1722 0162 0D4B     		ldr	r3, .L189+24
- 1723 0164 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 1724 0166 002B     		cmp	r3, #0
- 1725 0168 C2D1     		bne	.L188
- 1726              	.L179:
- 1727 016a FFF7FEFF 		bl	MX_USB_DEVICE_IsConnected
- 1728 016e 0028     		cmp	r0, #0
- 1729 0170 F0D1     		bne	.L184
- 1730 0172 002C     		cmp	r4, #0
- 1731 0174 EED0     		beq	.L184
- 1732 0176 0120     		movs	r0, #1
- 1733 0178 FFF7FEFF 		bl	shutdown
- 1734 017c EAE7     		b	.L184
- 1735              	.L190:
- 1736 017e 00BF     		.align	2
- 1737              	.L189:
- 1738 0180 00000000 		.word	adcData
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 31
+ 1685 00bc 35E0     		b	.L181
+ 1686              	.L172:
+ 1687 00be FFF7FEFF 		bl	set_time
+ 1688 00c2 C5E7     		b	.L173
+ 1689              	.L183:
+ 1690 00c4 FFF7FEFF 		bl	shutdown
+ 1691 00c8 F7E7     		b	.L174
+ 1692              	.L184:
+ 1693 00ca 0026     		movs	r6, #0
+ 1694 00cc 234B     		ldr	r3, .L186+12
+ 1695 00ce 1E70     		strb	r6, [r3]
+ 1696 00d0 234D     		ldr	r5, .L186+16
+ 1697 00d2 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 1698 00d4 80F00100 		eor	r0, r0, #1
+ 1699 00d8 FFF7FEFF 		bl	get_data
+ 1700 00dc 2E70     		strb	r6, [r5]
+ 1701 00de 28E0     		b	.L175
+ 1702              	.L185:
+ 1703 00e0 204B     		ldr	r3, .L186+20
+ 1704 00e2 0022     		movs	r2, #0
+ 1705 00e4 1A70     		strb	r2, [r3]
+ 1706 00e6 FFF7FEFF 		bl	power_on
+ 1707 00ea FFF7FEFF 		bl	HAL_GetTick
+ 1708 00ee 0546     		mov	r5, r0
+ 1709 00f0 02E0     		b	.L177
+ 1710              	.L178:
+ 1711 00f2 FFF7FEFF 		bl	USB_DEVICE_IsConnected
+ 1712 00f6 00BB     		cbnz	r0, .L176
+ 1713              	.L177:
+ 1714 00f8 FFF7FEFF 		bl	HAL_GetTick
+ 1715 00fc 431B     		subs	r3, r0, r5
+ 1716 00fe 41F28732 		movw	r2, #4999
+ 1717 0102 9342     		cmp	r3, r2
+ 1718 0104 19D8     		bhi	.L176
+ 1719 0106 154B     		ldr	r3, .L186+12
+ 1720 0108 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1721 010a 002B     		cmp	r3, #0
+ 1722 010c F1D0     		beq	.L178
+ 1723 010e 0027     		movs	r7, #0
+ 1724 0110 124B     		ldr	r3, .L186+12
+ 1725 0112 1F70     		strb	r7, [r3]
+ 1726 0114 124E     		ldr	r6, .L186+16
+ 1727 0116 3078     		ldrb	r0, [r6]	@ zero_extendqisi2
+ 1728 0118 80F00100 		eor	r0, r0, #1
+ 1729 011c FFF7FEFF 		bl	get_data
+ 1730 0120 3770     		strb	r7, [r6]
+ 1731 0122 E6E7     		b	.L178
+ 1732              	.L180:
+ 1733 0124 FFF7FEFF 		bl	USB_DEVICE_IsConnected
+ 1734 0128 0446     		mov	r4, r0
+ 1735              	.L181:
+ 1736 012a 0C4B     		ldr	r3, .L186+12
+ 1737 012c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1738 012e 002B     		cmp	r3, #0
+ 1739 0130 CBD1     		bne	.L184
+ 1740              	.L175:
+ 1741 0132 0C4B     		ldr	r3, .L186+20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 31
 
 
- 1739 0184 00000000 		.word	hadc1
- 1740 0188 0000C842 		.word	1120403456
- 1741 018c 00000000 		.word	hrtc
- 1742 0190 00000000 		.word	measure
- 1743 0194 00000000 		.word	send_usb
- 1744 0198 00000000 		.word	initialise_usb_connection
- 1745 019c 00280040 		.word	1073752064
- 1747              		.global	initialise_usb_connection
- 1748              		.section	.bss.initialise_usb_connection,"aw",%nobits
- 1751              	initialise_usb_connection:
- 1752 0000 00       		.space	1
- 1753              		.global	measure
- 1754              		.section	.bss.measure,"aw",%nobits
- 1757              	measure:
- 1758 0000 00       		.space	1
- 1759              		.global	send_usb
- 1760              		.section	.bss.send_usb,"aw",%nobits
- 1763              	send_usb:
- 1764 0000 00       		.space	1
- 1765              		.global	BlackImage
- 1766              		.section	.ram2_bss,"aw"
- 1767              		.align	2
- 1770              	BlackImage:
- 1771 0000 00000000 		.space	4000
- 1771      00000000 
- 1771      00000000 
- 1771      00000000 
- 1771      00000000 
- 1772              		.global	temp
- 1773              		.section	.bss.temp,"aw",%nobits
- 1774              		.align	2
- 1777              	temp:
- 1778 0000 00000000 		.space	4
- 1779              		.global	temperatureSensor
- 1780              		.section	.bss.temperatureSensor,"aw",%nobits
- 1781              		.align	2
- 1784              	temperatureSensor:
- 1785 0000 00000000 		.space	24
- 1785      00000000 
- 1785      00000000 
- 1785      00000000 
- 1785      00000000 
- 1786              		.global	adcData
- 1787              		.section	.bss.adcData,"aw",%nobits
- 1788              		.align	1
- 1791              	adcData:
- 1792 0000 0000     		.space	2
- 1793              		.global	mcuVoltage
- 1794              		.section	.bss.mcuVoltage,"aw",%nobits
- 1795              		.align	2
- 1798              	mcuVoltage:
- 1799 0000 00000000 		.space	4
- 1800              		.global	huart2
- 1801              		.section	.bss.huart2,"aw",%nobits
- 1802              		.align	2
- 1805              	huart2:
- 1806 0000 00000000 		.space	136
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 32
+ 1742 0134 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1743 0136 002B     		cmp	r3, #0
+ 1744 0138 D2D1     		bne	.L185
+ 1745              	.L176:
+ 1746 013a FFF7FEFF 		bl	USB_DEVICE_IsConnected
+ 1747 013e 0028     		cmp	r0, #0
+ 1748 0140 F0D1     		bne	.L180
+ 1749 0142 002C     		cmp	r4, #0
+ 1750 0144 EED0     		beq	.L180
+ 1751 0146 0120     		movs	r0, #1
+ 1752 0148 FFF7FEFF 		bl	shutdown
+ 1753 014c EAE7     		b	.L180
+ 1754              	.L187:
+ 1755 014e 00BF     		.align	2
+ 1756              	.L186:
+ 1757 0150 00000000 		.word	adcData
+ 1758 0154 00000000 		.word	hadc1
+ 1759 0158 0000C842 		.word	1120403456
+ 1760 015c 00000000 		.word	measure
+ 1761 0160 00000000 		.word	send_usb
+ 1762 0164 00000000 		.word	initialise_usb_connection
+ 1764              		.global	initialise_usb_connection
+ 1765              		.section	.bss.initialise_usb_connection,"aw",%nobits
+ 1768              	initialise_usb_connection:
+ 1769 0000 00       		.space	1
+ 1770              		.global	measure
+ 1771              		.section	.bss.measure,"aw",%nobits
+ 1774              	measure:
+ 1775 0000 00       		.space	1
+ 1776              		.global	send_usb
+ 1777              		.section	.bss.send_usb,"aw",%nobits
+ 1780              	send_usb:
+ 1781 0000 00       		.space	1
+ 1782              		.global	BlackImage
+ 1783              		.section	.bss.BlackImage,"aw",%nobits
+ 1784              		.align	2
+ 1787              	BlackImage:
+ 1788 0000 00000000 		.space	4000
+ 1788      00000000 
+ 1788      00000000 
+ 1788      00000000 
+ 1788      00000000 
+ 1789              		.global	temp
+ 1790              		.section	.bss.temp,"aw",%nobits
+ 1791              		.align	2
+ 1794              	temp:
+ 1795 0000 00000000 		.space	4
+ 1796              		.global	temperatureSensor
+ 1797              		.section	.bss.temperatureSensor,"aw",%nobits
+ 1798              		.align	2
+ 1801              	temperatureSensor:
+ 1802 0000 00000000 		.space	24
+ 1802      00000000 
+ 1802      00000000 
+ 1802      00000000 
+ 1802      00000000 
+ 1803              		.global	adcData
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 32
 
 
- 1806      00000000 
- 1806      00000000 
- 1806      00000000 
- 1806      00000000 
- 1807              		.global	hspi1
- 1808              		.section	.bss.hspi1,"aw",%nobits
- 1809              		.align	2
- 1812              	hspi1:
- 1813 0000 00000000 		.space	100
- 1813      00000000 
- 1813      00000000 
- 1813      00000000 
- 1813      00000000 
- 1814              		.global	hrtc
- 1815              		.section	.bss.hrtc,"aw",%nobits
- 1816              		.align	2
- 1819              	hrtc:
- 1820 0000 00000000 		.space	44
- 1820      00000000 
- 1820      00000000 
- 1820      00000000 
- 1820      00000000 
- 1821              		.global	hdma_adc1
- 1822              		.section	.bss.hdma_adc1,"aw",%nobits
- 1823              		.align	2
- 1826              	hdma_adc1:
- 1827 0000 00000000 		.space	72
- 1827      00000000 
- 1827      00000000 
- 1827      00000000 
- 1827      00000000 
- 1828              		.global	hadc1
- 1829              		.section	.bss.hadc1,"aw",%nobits
- 1830              		.align	2
- 1833              	hadc1:
- 1834 0000 00000000 		.space	100
- 1834      00000000 
- 1834      00000000 
- 1834      00000000 
- 1834      00000000 
- 1835              		.global	dead_batt_26x16
- 1836              		.section	.rodata.dead_batt_26x16,"a"
- 1837              		.align	2
- 1840              	dead_batt_26x16:
- 1841 0000 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
- 1841      01010101 
- 1841      01010101 
- 1841      01
- 1842 000d 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
- 1842      01010101 
- 1842      01010101 
- 1842      01
- 1843 001a 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
- 1843      01010101 
- 1843      01010101 
- 1843      01
- 1844 0027 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 33
+ 1804              		.section	.bss.adcData,"aw",%nobits
+ 1805              		.align	1
+ 1808              	adcData:
+ 1809 0000 0000     		.space	2
+ 1810              		.global	mcuVoltage
+ 1811              		.section	.bss.mcuVoltage,"aw",%nobits
+ 1812              		.align	2
+ 1815              	mcuVoltage:
+ 1816 0000 00000000 		.space	4
+ 1817              		.global	huart2
+ 1818              		.section	.bss.huart2,"aw",%nobits
+ 1819              		.align	2
+ 1822              	huart2:
+ 1823 0000 00000000 		.space	136
+ 1823      00000000 
+ 1823      00000000 
+ 1823      00000000 
+ 1823      00000000 
+ 1824              		.global	hspi1
+ 1825              		.section	.bss.hspi1,"aw",%nobits
+ 1826              		.align	2
+ 1829              	hspi1:
+ 1830 0000 00000000 		.space	100
+ 1830      00000000 
+ 1830      00000000 
+ 1830      00000000 
+ 1830      00000000 
+ 1831              		.global	hrtc
+ 1832              		.section	.bss.hrtc,"aw",%nobits
+ 1833              		.align	2
+ 1836              	hrtc:
+ 1837 0000 00000000 		.space	44
+ 1837      00000000 
+ 1837      00000000 
+ 1837      00000000 
+ 1837      00000000 
+ 1838              		.global	hdma_adc1
+ 1839              		.section	.bss.hdma_adc1,"aw",%nobits
+ 1840              		.align	2
+ 1843              	hdma_adc1:
+ 1844 0000 00000000 		.space	72
+ 1844      00000000 
+ 1844      00000000 
+ 1844      00000000 
+ 1844      00000000 
+ 1845              		.global	hadc1
+ 1846              		.section	.bss.hadc1,"aw",%nobits
+ 1847              		.align	2
+ 1850              	hadc1:
+ 1851 0000 00000000 		.space	100
+ 1851      00000000 
+ 1851      00000000 
+ 1851      00000000 
+ 1851      00000000 
+ 1852              		.global	dead_batt_26x16
+ 1853              		.section	.rodata.dead_batt_26x16,"a"
+ 1854              		.align	2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 33
 
 
- 1844      01010101 
- 1844      01010101 
- 1844      01
- 1845 0034 01010100 		.ascii	"\001\001\001\000\000\000\000\000\000\000\000\000\000"
- 1845      00000000 
- 1845      00000000 
- 1845      00
- 1846 0041 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\001\001\001\001"
- 1846      00000000 
- 1846      00010101 
- 1846      01
- 1847 004e 01010000 		.ascii	"\001\001\000\000\001\001\001\001\001\001\001\001\001"
- 1847      01010101 
- 1847      01010101 
- 1847      01
- 1848 005b 01010101 		.ascii	"\001\001\001\001\001\001\001\001\000\000\001\001\001"
- 1848      01010101 
- 1848      00000101 
- 1848      01
- 1849 0068 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1849      01000001 
- 1849      01010101 
- 1849      01
- 1850 0075 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
- 1850      01010101 
- 1850      01000101 
- 1850      01
- 1851 0082 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1851      01000001 
- 1851      01010101 
- 1851      01
- 1852 008f 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
- 1852      01010101 
- 1852      01000101 
- 1852      01
- 1853 009c 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1853      01000001 
- 1853      01010101 
- 1853      01
- 1854 00a9 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
- 1854      01010101 
- 1854      01000000 
- 1854      01
- 1855 00b6 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1855      01000001 
- 1855      01010101 
- 1855      01
- 1856 00c3 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
- 1856      01010101 
- 1856      01000000 
- 1856      01
- 1857 00d0 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1857      01000001 
- 1857      01010101 
- 1857      01
- 1858 00dd 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
+ 1857              	dead_batt_26x16:
+ 1858 0000 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
  1858      01010101 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 34
-
-
- 1858      01000000 
+ 1858      01010101 
  1858      01
- 1859 00ea 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1859      01000001 
+ 1859 000d 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
+ 1859      01010101 
  1859      01010101 
  1859      01
- 1860 00f7 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
+ 1860 001a 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
  1860      01010101 
- 1860      01000000 
+ 1860      01010101 
  1860      01
- 1861 0104 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1861      01000001 
+ 1861 0027 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
+ 1861      01010101 
  1861      01010101 
  1861      01
- 1862 0111 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
- 1862      01010101 
- 1862      01000000 
- 1862      01
- 1863 011e 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1863      01000001 
- 1863      01010101 
+ 1862 0034 01010100 		.ascii	"\001\001\001\000\000\000\000\000\000\000\000\000\000"
+ 1862      00000000 
+ 1862      00000000 
+ 1862      00
+ 1863 0041 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\001\001\001\001"
+ 1863      00000000 
+ 1863      00010101 
  1863      01
- 1864 012b 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
+ 1864 004e 01010000 		.ascii	"\001\001\000\000\001\001\001\001\001\001\001\001\001"
  1864      01010101 
- 1864      01000101 
+ 1864      01010101 
  1864      01
- 1865 0138 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
- 1865      01000001 
+ 1865 005b 01010101 		.ascii	"\001\001\001\001\001\001\001\001\000\000\001\001\001"
  1865      01010101 
+ 1865      00000101 
  1865      01
- 1866 0145 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
+ 1866 0068 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1866      01000001 
  1866      01010101 
- 1866      01000101 
  1866      01
- 1867 0152 01010000 		.ascii	"\001\001\000\000\001\001\001\001\001\001\001\001\001"
+ 1867 0075 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
  1867      01010101 
- 1867      01010101 
+ 1867      01000101 
  1867      01
- 1868 015f 01010101 		.ascii	"\001\001\001\001\001\001\001\001\000\000\001\001\001"
+ 1868 0082 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1868      01000001 
  1868      01010101 
- 1868      00000101 
  1868      01
- 1869 016c 01010100 		.ascii	"\001\001\001\000\000\000\000\000\000\000\000\000\000"
- 1869      00000000 
- 1869      00000000 
- 1869      00
- 1870 0179 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\001\001\001\001"
- 1870      00000000 
- 1870      00010101 
+ 1869 008f 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
+ 1869      01010101 
+ 1869      01000101 
+ 1869      01
+ 1870 009c 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1870      01000001 
+ 1870      01010101 
  1870      01
- 1871 0186 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
+ 1871 00a9 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
  1871      01010101 
- 1871      01010101 
+ 1871      01000000 
  1871      01
- 1872 0193 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
- 1872      01010101 
- 1872      01010101 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 35
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 34
 
 
+ 1872 00b6 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1872      01000001 
+ 1872      01010101 
  1872      01
- 1873              		.global	__aeabi_d2f
- 1874              		.global	__aeabi_ddiv
- 1875              		.global	__aeabi_i2d
- 1876              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 36
+ 1873 00c3 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
+ 1873      01010101 
+ 1873      01000000 
+ 1873      01
+ 1874 00d0 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1874      01000001 
+ 1874      01010101 
+ 1874      01
+ 1875 00dd 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
+ 1875      01010101 
+ 1875      01000000 
+ 1875      01
+ 1876 00ea 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1876      01000001 
+ 1876      01010101 
+ 1876      01
+ 1877 00f7 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
+ 1877      01010101 
+ 1877      01000000 
+ 1877      01
+ 1878 0104 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1878      01000001 
+ 1878      01010101 
+ 1878      01
+ 1879 0111 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\000\000\001"
+ 1879      01010101 
+ 1879      01000000 
+ 1879      01
+ 1880 011e 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1880      01000001 
+ 1880      01010101 
+ 1880      01
+ 1881 012b 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
+ 1881      01010101 
+ 1881      01000101 
+ 1881      01
+ 1882 0138 01010000 		.ascii	"\001\001\000\000\001\000\000\001\001\001\001\001\001"
+ 1882      01000001 
+ 1882      01010101 
+ 1882      01
+ 1883 0145 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\000\001\001\001"
+ 1883      01010101 
+ 1883      01000101 
+ 1883      01
+ 1884 0152 01010000 		.ascii	"\001\001\000\000\001\001\001\001\001\001\001\001\001"
+ 1884      01010101 
+ 1884      01010101 
+ 1884      01
+ 1885 015f 01010101 		.ascii	"\001\001\001\001\001\001\001\001\000\000\001\001\001"
+ 1885      01010101 
+ 1885      00000101 
+ 1885      01
+ 1886 016c 01010100 		.ascii	"\001\001\001\000\000\000\000\000\000\000\000\000\000"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 35
+
+
+ 1886      00000000 
+ 1886      00000000 
+ 1886      00
+ 1887 0179 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\001\001\001\001"
+ 1887      00000000 
+ 1887      00010101 
+ 1887      01
+ 1888 0186 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
+ 1888      01010101 
+ 1888      01010101 
+ 1888      01
+ 1889 0193 01010101 		.ascii	"\001\001\001\001\001\001\001\001\001\001\001\001\001"
+ 1889      01010101 
+ 1889      01010101 
+ 1889      01
+ 1890              		.global	__aeabi_d2f
+ 1891              		.global	__aeabi_ddiv
+ 1892              		.global	__aeabi_i2d
+ 1893              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:18     .text.MX_GPIO_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:23     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:145    .text.MX_GPIO_Init:0000012c $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:150    .text.MX_DMA_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:155    .text.MX_DMA_Init:00000000 MX_DMA_Init
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:180    .text.MX_DMA_Init:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:183    .text.map:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:189    .text.map:00000000 map
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:214    .rodata.plot.str1.4:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:233    .text.plot:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:239    .text.plot:00000000 plot
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:558    .text.plot:000002dc $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1770   .ram2_bss:00000000 BlackImage
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1819   .bss.hrtc:00000000 hrtc
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:567    .text.plot:000002fc $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:807    .text.plot:00000550 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1791   .bss.adcData:00000000 adcData
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1798   .bss.mcuVoltage:00000000 mcuVoltage
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1840   .rodata.dead_batt_26x16:00000000 dead_batt_26x16
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:826    .text.shutdown:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:832    .text.shutdown:00000000 shutdown
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:890    .text.shutdown:0000007c $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1812   .bss.hspi1:00000000 hspi1
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:896    .text.DS18_INIT:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:902    .text.DS18_INIT:00000000 DS18_INIT
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:936    .text.DS18_INIT:0000004c $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1784   .bss.temperatureSensor:00000000 temperatureSensor
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1805   .bss.huart2:00000000 huart2
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:940    .text.DS18_GET:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:946    .text.DS18_GET:00000000 DS18_GET
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:969    .text.DS18_GET:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:972    .rodata.set_time.str1.4:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:976    .text.set_time:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:982    .text.set_time:00000000 set_time
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1072   .text.set_time:000000e0 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1078   .text.USB_CDC_RxHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1084   .text.USB_CDC_RxHandler:00000000 USB_CDC_RxHandler
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1093   .text.HAL_RTCEx_WakeUpTimerEventCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1099   .text.HAL_RTCEx_WakeUpTimerEventCallback:00000000 HAL_RTCEx_WakeUpTimerEventCallback
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1113   .text.HAL_RTCEx_WakeUpTimerEventCallback:00000014 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1757   .bss.measure:00000000 measure
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1763   .bss.send_usb:00000000 send_usb
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1117   .text.HAL_GPIO_EXTI_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1123   .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1147   .text.HAL_GPIO_EXTI_Callback:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1751   .bss.initialise_usb_connection:00000000 initialise_usb_connection
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1150   .text.Error_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1156   .text.Error_Handler:00000000 Error_Handler
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1171   .text.MX_SPI1_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1176   .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1212   .text.MX_SPI1_Init:00000048 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1216   .text.MX_RTC_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1221   .text.MX_RTC_Init:00000000 MX_RTC_Init
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1295   .text.MX_RTC_Init:000000a4 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1299   .text.MX_USART2_UART_Init:00000000 $t
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 37
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:23     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:158    .text.MX_GPIO_Init:00000158 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:163    .text.MX_DMA_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:168    .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:193    .text.MX_DMA_Init:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:196    .text.map:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:202    .text.map:00000000 map
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:227    .text.shutdown:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:233    .text.shutdown:00000000 shutdown
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:271    .text.shutdown:00000058 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1829   .bss.hspi1:00000000 hspi1
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:275    .text.DS18_INIT:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:281    .text.DS18_INIT:00000000 DS18_INIT
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:315    .text.DS18_INIT:0000004c $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1801   .bss.temperatureSensor:00000000 temperatureSensor
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1822   .bss.huart2:00000000 huart2
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:319    .text.DS18_GET:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:325    .text.DS18_GET:00000000 DS18_GET
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:348    .text.DS18_GET:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:351    .rodata.set_time.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:355    .text.set_time:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:361    .text.set_time:00000000 set_time
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:451    .text.set_time:000000e0 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1836   .bss.hrtc:00000000 hrtc
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:457    .text.timestamp_to_time:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:463    .text.timestamp_to_time:00000000 timestamp_to_time
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:488    .text.timestamp_to_time:00000034 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:494    .rodata.plot.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:516    .text.plot:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:522    .text.plot:00000000 plot
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:841    .text.plot:000002dc $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1787   .bss.BlackImage:00000000 BlackImage
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:850    .text.plot:000002fc $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1093   .text.plot:00000560 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1808   .bss.adcData:00000000 adcData
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1815   .bss.mcuVoltage:00000000 mcuVoltage
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1857   .rodata.dead_batt_26x16:00000000 dead_batt_26x16
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1111   .text.USB_CDC_RxHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1117   .text.USB_CDC_RxHandler:00000000 USB_CDC_RxHandler
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1126   .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1132   .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1153   .text.HAL_GPIO_EXTI_Callback:00000010 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1768   .bss.initialise_usb_connection:00000000 initialise_usb_connection
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1156   .text.USB_DEVICE_IsConnected:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1162   .text.USB_DEVICE_IsConnected:00000000 USB_DEVICE_IsConnected
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1176   .text.USB_DEVICE_IsConnected:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1179   .text.HAL_RTCEx_WakeUpTimerEventCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1185   .text.HAL_RTCEx_WakeUpTimerEventCallback:00000000 HAL_RTCEx_WakeUpTimerEventCallback
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1199   .text.HAL_RTCEx_WakeUpTimerEventCallback:00000014 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1774   .bss.measure:00000000 measure
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1780   .bss.send_usb:00000000 send_usb
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1203   .text.Error_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1209   .text.Error_Handler:00000000 Error_Handler
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1224   .text.MX_SPI1_Init:00000000 $t
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 37
 
 
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1304   .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1331   .text.MX_USART2_UART_Init:00000030 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1335   .text.MX_ADC1_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1340   .text.MX_ADC1_Init:00000000 MX_ADC1_Init
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1409   .text.MX_ADC1_Init:0000008c $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1833   .bss.hadc1:00000000 hadc1
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1414   .text.SystemClock_Config:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1420   .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1480   .text.SystemClock_Config:00000080 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1483   .text.power_on:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1489   .text.power_on:00000000 power_on
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1504   .text.power_on:00000020 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1507   .rodata.get_data.str1.4:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1511   .text.get_data:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1517   .text.get_data:00000000 get_data
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1576   .text.get_data:000000a0 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1581   .text.main:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1587   .text.main:00000000 main
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1738   .text.main:00000180 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1752   .bss.initialise_usb_connection:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1758   .bss.measure:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1764   .bss.send_usb:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1767   .ram2_bss:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1777   .bss.temp:00000000 temp
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1774   .bss.temp:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1781   .bss.temperatureSensor:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1788   .bss.adcData:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1795   .bss.mcuVoltage:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1802   .bss.huart2:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1809   .bss.hspi1:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1816   .bss.hrtc:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1826   .bss.hdma_adc1:00000000 hdma_adc1
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1823   .bss.hdma_adc1:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1830   .bss.hadc1:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s:1837   .rodata.dead_batt_26x16:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1229   .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1265   .text.MX_SPI1_Init:00000048 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1269   .text.MX_RTC_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1274   .text.MX_RTC_Init:00000000 MX_RTC_Init
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1348   .text.MX_RTC_Init:000000a4 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1352   .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1357   .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1384   .text.MX_USART2_UART_Init:00000030 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1388   .text.MX_ADC1_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1393   .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1462   .text.MX_ADC1_Init:0000008c $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1850   .bss.hadc1:00000000 hadc1
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1467   .text.SystemClock_Config:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1473   .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1533   .text.SystemClock_Config:00000080 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1536   .text.power_on:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1542   .text.power_on:00000000 power_on
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1554   .rodata.get_data.str1.4:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1558   .text.get_data:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1564   .text.get_data:00000000 get_data
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1617   .text.get_data:00000090 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1621   .text.main:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1627   .text.main:00000000 main
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1757   .text.main:00000150 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1769   .bss.initialise_usb_connection:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1775   .bss.measure:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1781   .bss.send_usb:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1784   .bss.BlackImage:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1794   .bss.temp:00000000 temp
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1791   .bss.temp:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1798   .bss.temperatureSensor:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1805   .bss.adcData:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1812   .bss.mcuVoltage:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1819   .bss.huart2:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1826   .bss.hspi1:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1833   .bss.hrtc:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1843   .bss.hdma_adc1:00000000 hdma_adc1
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1840   .bss.hdma_adc1:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1847   .bss.hadc1:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s:1854   .rodata.dead_batt_26x16:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
 HAL_GPIO_Init
 HAL_NVIC_SetPriority
 HAL_NVIC_EnableIRQ
+EPD_Sleep
+EPD_Exit
+HAL_SPI_DeInit
+HAL_SuspendTick
+HAL_NVIC_DisableIRQ
+HAL_PWREx_EnableLowPowerRunMode
+HAL_PWREx_EnterSTOP2Mode
+DS18B20_Init
+DS18B20_InitializationCommand
+DS18B20_ReadRom
+DS18B20_ReadScratchpad
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\cc6TJg10.s 			page 38
+
+
+DS18B20_SkipRom
+DS18B20_WriteScratchpad
+DS18B20_ConvertT
+HAL_GetTick
+tick
+isClicked
+HAL_RTC_SetDate
+HAL_RTC_SetTime
 EPD_NewImage
 EPD_SelectImage
 EPD_Clear
@@ -2166,40 +2207,17 @@ __aeabi_ddiv
 __aeabi_d2f
 HAL_RTC_GetTime
 HAL_RTC_GetDate
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccNGKpsK.s 			page 38
-
-
 EPD_DrawDate
 EPD_Display_Base
 HAL_Delay
 EPD_DrawBMP
 Font12
 Font16
-EPD_Sleep
-EPD_Exit
-HAL_SPI_DeInit
-HAL_SuspendTick
-HAL_NVIC_DisableIRQ
-HAL_RTCEx_GetWakeUpTimer
-HAL_RTCEx_SetWakeUpTimer_IT
-HAL_PWREx_EnableLowPowerRunMode
-HAL_PWREx_EnterSTOP2Mode
-DS18B20_Init
-DS18B20_InitializationCommand
-DS18B20_ReadRom
-DS18B20_ReadScratchpad
-DS18B20_SkipRom
-DS18B20_WriteScratchpad
-DS18B20_ConvertT
-HAL_GetTick
-tick
-isClicked
-HAL_RTC_SetDate
-HAL_RTC_SetTime
 CDC_Transmit_FS
-MX_USB_DEVICE_IsConnected
+HAL_GPIO_ReadPin
 HAL_SPI_Init
 HAL_RTC_Init
+HAL_RTCEx_SetWakeUpTimer_IT
 HAL_HalfDuplex_Init
 HAL_ADC_Init
 HAL_ADCEx_MultiModeConfigChannel
@@ -2210,7 +2228,6 @@ HAL_PWR_EnableBkUpAccess
 HAL_RCC_OscConfig
 HAL_RCC_ClockConfig
 HAL_RCCEx_EnableMSIPLLMode
-HAL_RTCEx_DeactivateWakeUpTimer
 HAL_ResumeTick
 EPD_Init
 q_load

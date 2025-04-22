@@ -100,6 +100,7 @@ void DS18_INIT();
 void set_time();
 void get_data(bool goto_sleep);
 void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes);
+bool USB_DEVICE_IsConnected();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -107,6 +108,7 @@ void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes);
 bool send_usb;
 bool measure;
 bool initialise_usb_connection;
+uint32_t usb_conn_tmr;
 /* USER CODE END 0 */
 
 /**
@@ -168,7 +170,7 @@ int main(void)
   q_push(DS18_GET()*100);
   q_save();
   plot();
-  if(!MX_USB_DEVICE_IsConnected()){
+  if(!USB_DEVICE_IsConnected()){
     shutdown(false);
   }
   /* USER CODE END 2 */
@@ -186,25 +188,26 @@ int main(void)
     if(initialise_usb_connection){
       initialise_usb_connection = false;
       power_on();
+      usb_conn_tmr = HAL_GetTick();
 
-      uint32_t usbinit_tmr = HAL_GetTick();
-      while(HAL_GetTick()-usbinit_tmr < 5000){
-        if(measure){
-          measure = false;
-          get_data(!send_usb);
-          send_usb = false;
-        }
-        if(MX_USB_DEVICE_IsConnected()){break;}
-      }
+      // uint32_t usbinit_tmr = HAL_GetTick();
+      // while(HAL_GetTick()-usbinit_tmr < 5000){
+      //   if(measure){
+      //     measure = false;
+      //     get_data(!send_usb);
+      //     send_usb = false;
+      //   }
+      //   if(USB_DEVICE_IsConnected()){break;}
+      // }
 
-      uint32_t sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
+      // uint32_t sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
       // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
     }
 
-    if(!MX_USB_DEVICE_IsConnected() && old_usb_state){
+    if(!USB_DEVICE_IsConnected() && old_usb_state && HAL_GetTick()-usb_conn_tmr>150){
       shutdown(true);
     }
-    old_usb_state = MX_USB_DEVICE_IsConnected();
+    old_usb_state = USB_DEVICE_IsConnected();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -399,7 +402,7 @@ static void MX_RTC_Init(void)
 
   /** Enable the WakeUp
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, MEASURMENTS_DELTA_SEC, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
+  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -549,10 +552,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB0 PB4 PB5 PB6
-                           PB7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6
-                          |GPIO_PIN_7;
+  /*Configure GPIO pins : PB0 PB4 PB6 PB7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_4|GPIO_PIN_6|GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -570,6 +571,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : USB_WKUP_Pin */
+  GPIO_InitStruct.Pin = USB_WKUP_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(USB_WKUP_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : PH3 */
   GPIO_InitStruct.Pin = GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
@@ -579,6 +586,9 @@ static void MX_GPIO_Init(void)
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -737,11 +747,10 @@ void plot(){
   // sprintf(timest_buf, "%d", timestamp);
   // EPD_DrawString_EN(85, 35, timest_buf, &Font12, WHITE, BLACK);
   //
-
   char temp_buf[10];
   sprintf(temp_buf, "%d.%dC", q_get(q_len()-1)/100, q_get(q_len()-1)%100);
   EPD_DrawString_EN(85, 0, temp_buf, &Font16, WHITE, BLACK);
-
+  
   EPD_Display_Base(BlackImage);
   HAL_Delay(100);
 }
@@ -766,11 +775,11 @@ void shutdown(bool skipRTC){
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   HAL_SuspendTick();
-  HAL_NVIC_DisableIRQ(SysTick_IRQn); 
-  uint32_t sleep_time = MEASURMENTS_DELTA_SEC;
-  if(skipRTC && ((RTC->CR & RTC_CR_WUTE) != 0)){
-    sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
-  }
+  HAL_NVIC_DisableIRQ(SysTick_IRQn);
+  // uint32_t sleep_time = MEASURMENTS_DELTA_SEC;
+  // if(skipRTC && ((RTC->CR & RTC_CR_WUTE) != 0)){
+  //   sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
+  // }
   // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
   HAL_PWREx_EnableLowPowerRunMode();
   HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
@@ -906,7 +915,7 @@ void get_data(bool goto_sleep){
   if(goto_sleep){
     power_on();
   }else{
-    CDC_Transmit_FS("Hello\n\r", 8);
+    CDC_Transmit_FS("Hello\r\n", 8);
   }
 
   q_load();
@@ -919,8 +928,6 @@ void get_data(bool goto_sleep){
 
   if(goto_sleep){
     shutdown(false);
-  }else{
-    // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, MEASURMENTS_DELTA_SEC, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
   }
 }
 
@@ -940,24 +947,39 @@ void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes) {
 void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 {
   CDC_Transmit_FS(Buf, Len);
+  // HAL_Delay(1);
+  // char buf[15];
+  // if(Buf[0] == 'G'){
+  //   uint16_t len = UDISK_len();
+  //   for (uint8_t i = 0; i < len; i++){
+  //     memset(buf, 0x00, 15);
+  //     uint8_t ln = sprintf(buf, "%d\n\r", UDISK_get(i));
+  //     CDC_Transmit_FS(buf, ln);
+  //     HAL_Delay(1);
+  //   }
+  // }
+  // memset(buf, 0x00, 15);
+  // uint8_t ln = sprintf(buf, "T%d\n\r", UDISK_tst());
+  // CDC_Transmit_FS(buf, ln);
 }
 
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
   measure = true;
-  send_usb = MX_USB_DEVICE_IsConnected();
+  send_usb = USB_DEVICE_IsConnected();
 }
 
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  if(GPIO_Pin == GPIO_PIN_0) {
-    if(MX_USB_DEVICE_IsConnected()){return;}
-    // uint32_t sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
-    // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+  if(GPIO_Pin == GPIO_PIN_5) {
     initialise_usb_connection = true;
   } else {
       __NOP();
   }
+}
+
+bool USB_DEVICE_IsConnected(){
+  return HAL_GPIO_ReadPin(USB_WKUP_GPIO_Port, USB_WKUP_Pin);
 }
 /* USER CODE END 4 */
 

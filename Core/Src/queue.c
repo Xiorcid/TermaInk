@@ -53,8 +53,8 @@ void q_push(uint16_t temp){
 
     UDISK_push(temp, (long) t_of_day);
     // TEST
-    uint32_t testtime = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5)+1800;
-    HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) testtime);
+    // uint32_t testtime = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5)+1800;
+    // HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) testtime);
 }
 
 uint16_t q_get(uint8_t pos){
