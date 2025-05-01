@@ -1,3 +1,5 @@
+import time
+from datetime import datetime
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QTableWidget, QTableWidgetItem, QFileDialog, QMessageBox, QErrorMessage
 from PyQt6.QtSerialPort import QSerialPortInfo
@@ -6,6 +8,8 @@ from PyQt6.QtCore import QTimer
 from pathlib import Path, PurePath
 import serial
 from sys import exit
+import os
+import calendar
 
 from fontTools.misc.timeTools import timestampNow, timestampToString
 
@@ -14,6 +18,7 @@ ui = uic.loadUi("termaink.ui")
 
 arrayOfTemp = [25.2, 26.6, 14.88, 6.66]
 lastMeasurementTimestamp = timestampNow()
+epoch_diff = calendar.timegm((1904, 1, 1, 0, 0, 0, 0, 0, 0))
 
 useCelsius = True
 
@@ -43,20 +48,31 @@ def openport():
         print(ret)
         if ret != "Termaink Ready":
             ser.close()
-            showCOMerror()
+            showCOMerror("Communication error")
             return 1
         devPort = ser
         ui.state.setText(f"Connected on {ser.name}")
         devConnected = True
     except Exception as ex:
         print(ex)
-        showCOMerror()
+        showCOMerror(str(ex))
         return 1
 
+def closeport():
+    global devConnected, devPort
+    if not devConnected:
+        return 1
+    devPort.close()
+    devConnected = False
+    ui.state.setText(f"Not Connected")
 
-def showCOMerror():
+
+
+def showCOMerror(error):
     ui.state.setText("Error")
-    errBox = QErrorMessage()
+    errBox = QMessageBox()
+    errBox.setIcon(QMessageBox.Icon.Critical)
+    errBox.setText(error)
     errBox.setWindowTitle("Termaink GUI")
     errBox.exec()
 
@@ -68,8 +84,6 @@ def saveFile():
     file_dialog.setViewMode(QFileDialog.ViewMode.Detail)
     file_dialog.setNameFilter("*.csv")
     file_dialog.setDefaultSuffix(".csv")
-
-
     if file_dialog.exec():
         selected_files = file_dialog.selectedFiles()
         print("Selected File:", selected_files[0])
@@ -77,20 +91,49 @@ def saveFile():
             for i in range(len(arrayOfTemp)):
                 file.write(f"{timestampToString(lastMeasurementTimestamp-1800*i)}, {arrayOfTemp[i] if useCelsius else round(arrayOfTemp[i] * 9/5 + 32, 2)}\n")
 
+
 def getData():
-    global lastMeasurementTimestamp
-    ser.write(bytes("sync", 'utf-8'))
-    timeReceived = False
-    while True:
-        ret = ser.readline().rstrip().decode("utf-8")
-        if ret == "EOD":
-            return
-        if not timeReceived:
-            lastMeasurementTimestamp = int(ret)
-        else:
-            arrayOfTemp.append(float(ret))
+    global lastMeasurementTimestamp, devConnected
+    if not devConnected:
+        return 1
+    n = 0
+    try:
+        print("Receiving data")
+        ser.write(bytes("get", 'utf-8'))
+        arrayOfTemp.clear()
+        max = ser.readline().rstrip().decode("utf-8").replace("\r", "").replace("\x00", "")
+        ui.progressBar.setMaximum(int(max))
+        while True:
+            ret = ser.readline().rstrip().decode("utf-8").replace("\r", "").replace("\x00", "")
+            n+=1
+            print(ret)
+            if 'T' in ret:
+                ui.progressBar.setValue(int(max))
+                lastMeasurementTimestamp = int(ret.replace("T", ""))
+                lastMeasurementTimestamp = timestampConv(lastMeasurementTimestamp)
+                fillTable()
+                return
+            try:
+                arrayOfTemp.append(round(float(ret)/100, 2))
+            except Exception as ex:
+                print(ex)
+            ui.progressBar.setValue(n)
+    except Exception as ex:
+        showCOMerror(ex)
+
+def timestampConv(time):
+    source_date_epoch = os.environ.get("SOURCE_DATE_EPOCH")
+    if source_date_epoch is not None:
+        return int(source_date_epoch) - epoch_diff
+    return int(time - epoch_diff)
 
 def syncRTC():
+    global devConnected, devPort
+    if not devConnected:
+        return 1
+    time_now = datetime.now()
+    print(f"s{time_now.hour}:{time_now.minute}:{time_now.second}/{time_now.day}.{time_now.month}.{time_now.year-2000}")
+    ser.write(bytes(f"s{time_now.hour}.{time_now.minute}.{time_now.second}.{time_now.year-2000}.{time_now.month}.{time_now.day}", 'utf-8'))
     msgBox = QMessageBox()
     msgBox.setText("The RTC has been synchronised.")
     msgBox.setWindowTitle("Termaink GUI")
@@ -104,8 +147,11 @@ def changeUnit():
 def configureUI():
     ui.update.clicked.connect(updateports)
     ui.conn.clicked.connect(openport)
+    ui.disconn.clicked.connect(closeport)
     ui.open.clicked.connect(saveFile)
     ui.sync.clicked.connect(syncRTC)
+    ui.progressBar.setValue(0)
+    ui.save.clicked.connect(getData)
     ui.actionExit.triggered.connect(exit)
     ui.actionSave.triggered.connect(saveFile)
     ui.setWindowTitle(f"Termaink GUI")

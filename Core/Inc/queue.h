@@ -16,8 +16,8 @@ typedef struct queue
 } queue;
 
 void q_init(void);
-void q_push(uint16_t temp);
-uint16_t q_get(uint8_t pos);
+void q_push(int16_t temp);
+int16_t q_get(uint8_t pos);
 void q_save(void);
 bool q_load(void);
 uint16_t q_len(void);

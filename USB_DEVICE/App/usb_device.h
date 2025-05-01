@@ -32,7 +32,7 @@
 #include "usbd_def.h"
 
 /* USER CODE BEGIN INCLUDE */
-#include "stdbool.h"
+
 /* USER CODE END INCLUDE */
 
 /** @addtogroup USBD_OTG_DRIVER
@@ -81,7 +81,7 @@ void MX_USB_DEVICE_Init(void);
  * -- Insert functions declaration here --
  */
 /* USER CODE BEGIN FD */
-bool MX_USB_DEVICE_IsConnected(void);
+
 /* USER CODE END FD */
 /**
   * @}

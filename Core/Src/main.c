@@ -101,13 +101,18 @@ void set_time();
 void get_data(bool goto_sleep);
 void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes);
 bool USB_DEVICE_IsConnected();
+void USB_SendAllData();
+void syncRTC();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 bool send_usb;
+bool send_usb_data;
 bool measure;
 bool initialise_usb_connection;
+bool set_rtc;
+char rtc_buf[25];
 uint32_t usb_conn_tmr;
 /* USER CODE END 0 */
 
@@ -202,6 +207,16 @@ int main(void)
 
       // uint32_t sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
       // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+    }
+
+    if(send_usb_data){
+      send_usb_data = false;
+      USB_SendAllData();
+    }
+
+    if(set_rtc){
+      set_rtc = false;
+      syncRTC();
     }
 
     if(!USB_DEVICE_IsConnected() && old_usb_state && HAL_GetTick()-usb_conn_tmr>150){
@@ -744,8 +759,8 @@ void plot(){
 
   //
   // char timest_buf[15];
-  // sprintf(timest_buf, "%d", timestamp);
-  // EPD_DrawString_EN(85, 35, timest_buf, &Font12, WHITE, BLACK);
+  // sprintf(timest_buf, "%d",  UDISK_get(0));
+  // EPD_DrawString_EN(85, 35, rtc_buf, &Font12, WHITE, BLACK);
   //
   char temp_buf[10];
   sprintf(temp_buf, "%d.%dC", q_get(q_len()-1)/100, q_get(q_len()-1)%100);
@@ -791,6 +806,7 @@ void power_on(void){
   SystemClock_Config();
   MX_GPIO_Init();
   MX_SPI1_Init();
+  MX_USB_DEVICE_Init();
   EPD_Init();
 }
 
@@ -914,8 +930,6 @@ void set_time(){
 void get_data(bool goto_sleep){
   if(goto_sleep){
     power_on();
-  }else{
-    CDC_Transmit_FS("Hello\r\n", 8);
   }
 
   q_load();
@@ -946,21 +960,62 @@ void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes) {
 
 void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 {
-  CDC_Transmit_FS(Buf, Len);
-  // HAL_Delay(1);
-  // char buf[15];
-  // if(Buf[0] == 'G'){
-  //   uint16_t len = UDISK_len();
-  //   for (uint8_t i = 0; i < len; i++){
-  //     memset(buf, 0x00, 15);
-  //     uint8_t ln = sprintf(buf, "%d\n\r", UDISK_get(i));
-  //     CDC_Transmit_FS(buf, ln);
-  //     HAL_Delay(1);
-  //   }
-  // }
-  // memset(buf, 0x00, 15);
-  // uint8_t ln = sprintf(buf, "T%d\n\r", UDISK_tst());
-  // CDC_Transmit_FS(buf, ln);
+  switch(Buf[0]){
+    case 't':
+      CDC_Transmit_FS("Termaink Ready\n\r", 17);
+      break;
+    case 'g':
+      send_usb_data = true;
+      break;
+    case 's':
+      set_rtc = true;
+      memcpy(rtc_buf, Buf, 25);
+      break;
+  }
+}
+
+void syncRTC(){
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+
+
+
+  uint8_t day, month, year, hours, minutes, seconds;
+
+  uint8_t matched = sscanf(rtc_buf, "s%02d.%02d.%02d.%02d.%02d.%02d", &hours, &minutes, &seconds, &year , &month, &day);
+  if (matched < 6){
+    return;
+  }
+
+  sTime.Hours = hours;
+  sTime.Minutes = minutes;
+  sTime.Seconds = seconds;
+  sDate.Year = year;
+  sDate.Month = month;
+  sDate.Date = day;
+
+  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_ADD1H;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+
+  HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+}
+
+void USB_SendAllData(){
+  char buf[20];
+  uint16_t len = UDISK_len();
+  uint8_t ln = sprintf(buf, "%d\n\r", len);
+  CDC_Transmit_FS(buf, ln);
+  for (uint16_t i = len; i > 0; i--){
+    memset(buf, 0x00, 20);
+    ln = sprintf(buf, "%d\n\r", UDISK_get(i));
+    CDC_Transmit_FS(buf, ln);
+    HAL_Delay(1);
+  }
+  memset(buf, 0x00, 20);
+  ln = sprintf(buf, "T%d\n\r", UDISK_tst());
+  CDC_Transmit_FS(buf, ln);
 }
 
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){

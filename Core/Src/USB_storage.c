@@ -1,5 +1,6 @@
 #include "USB_storage.h"
 #include "stdbool.h"
+#include "string.h"
 
 int16_t USBDisk[4080] __attribute__((section(".ram2_bss"))); // Space for 85 days
 
@@ -13,11 +14,12 @@ void UDISK_init(){
     is_first_writing = true;
     last_pointer = 0;
     length = 0;
-    data_retention_code = 0xFDEBCADF;
+    data_retention_code = 0xAAFF55FF;
+    memset(USBDisk, 0x00, 4080);
 }
 
-void UDISK_push(uint16_t temp, uint32_t timestamp){
-    if(data_retention_code != 0xFDEBCADF){
+void UDISK_push(int16_t temp, uint32_t timestamp){
+    if(data_retention_code != 0xAAFF55FF){
         UDISK_init();
     }
     last_timestamp = timestamp;
@@ -34,13 +36,16 @@ void UDISK_push(uint16_t temp, uint32_t timestamp){
 }
 
 int16_t UDISK_get(uint16_t i){
-    if(data_retention_code != 0xFDEBCADF){
+    if(data_retention_code != 0xAAFF55FF){
         return -32768;
     }
-    if(last_pointer+i < 4080){
-        return USBDisk[last_pointer+i];
+    if(is_first_writing){
+        return USBDisk[i];
     }
-    return USBDisk[last_pointer+i-4080];
+    if(last_pointer+i-1 < 4080){
+        return USBDisk[last_pointer+i-1];
+    }
+    return USBDisk[last_pointer+i-4081];
 }
 
 uint16_t UDISK_len(){

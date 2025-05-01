@@ -15,7 +15,7 @@ void q_init(void){
     data_queue.start_ptr = 0;
 }
 
-void q_push(uint16_t temp){
+void q_push(int16_t temp){
     // TIME - REG5
     data_queue.data[data_queue.write_ptr] = temp;
     data_queue.write_ptr++;
@@ -57,7 +57,7 @@ void q_push(uint16_t temp){
     // HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR5, (long) testtime);
 }
 
-uint16_t q_get(uint8_t pos){
+int16_t q_get(uint8_t pos){
     uint8_t ptr = pos + data_queue.start_ptr;
     if(ptr>=48){
         ptr -= 48;
@@ -85,8 +85,8 @@ bool q_load(void){
     // DATA REG8 - 31
     if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR6) != KEY){return false;}
     for (int i = 0; i < 24; i++) {
-        data_queue.data[2*i] = (uint16_t)(HAL_RTCEx_BKUPRead(&hrtc, 8+i) >> 16);       
-        data_queue.data[2*i + 1] = (uint16_t)(HAL_RTCEx_BKUPRead(&hrtc, 8+i) & 0xFFFF);
+        data_queue.data[2*i] = (int16_t)(HAL_RTCEx_BKUPRead(&hrtc, 8+i) >> 16);       
+        data_queue.data[2*i + 1] = (int16_t)(HAL_RTCEx_BKUPRead(&hrtc, 8+i) & 0xFFFF);
     }
     data_queue.length = (uint8_t)(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR7) >> 24);
     data_queue.start_ptr = (uint8_t)(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR7) >> 16);
