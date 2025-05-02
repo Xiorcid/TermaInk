@@ -112,7 +112,7 @@ bool send_usb_data;
 bool measure;
 bool initialise_usb_connection;
 bool set_rtc;
-char rtc_buf[25];
+char rtc_buf[30];
 uint32_t usb_conn_tmr;
 /* USER CODE END 0 */
 
@@ -170,9 +170,9 @@ int main(void)
   }
 
   q_push(DS18_GET()*100);
-  q_push(DS18_GET()*100);
-  q_push(DS18_GET()*100);
-  q_push(DS18_GET()*100);
+  // q_push(DS18_GET()*100);
+  // q_push(DS18_GET()*100);
+  // q_push(DS18_GET()*100);
   q_save();
   plot();
   if(!USB_DEVICE_IsConnected()){
@@ -369,9 +369,7 @@ static void MX_RTC_Init(void)
   RTC_DateTypeDef sDate = {0};
 
   /* USER CODE BEGIN RTC_Init 1 */
-  if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR6) == RTC_key){
 
-  }
   /* USER CODE END RTC_Init 1 */
 
   /** Initialize RTC Only
@@ -391,7 +389,9 @@ static void MX_RTC_Init(void)
   }
 
   /* USER CODE BEGIN Check_RTC_BKUP */
-
+  if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR6) == RTC_key){
+    return;
+  }
   /* USER CODE END Check_RTC_BKUP */
 
   /** Initialize RTC and set the Time and Date
@@ -703,7 +703,7 @@ void plot(){
   for (int8_t i = q_len(); i > 0; i-=8){
     if(i == q_len()){continue;}
     EPD_DrawLine(10+(i*5), 20, 10+(i*5), 112, BLACK, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
-    uint32_t this_time = timestamp - 1800*(q_len()-i-1);
+    uint32_t this_time = timestamp - MEASURMENTS_DELTA_SEC*(q_len()-i-1);
     // struct tm  ts;
     // ts = *localtime((time_t*) &this_time);
     // char t_buf[15];
@@ -716,7 +716,7 @@ void plot(){
 
     uint8_t hours, minutes;
     timestamp_to_time(this_time, &hours, &minutes);
-    sprintf(timest_buf, "%d:%d", hours, minutes);
+    sprintf(timest_buf, "%02d:%02d", hours, minutes);
     EPD_DrawString_EN(10+(i*5), 114, timest_buf, &Font8, WHITE, BLACK);
   }
 
@@ -759,8 +759,10 @@ void plot(){
 
   //
   // char timest_buf[15];
-  // sprintf(timest_buf, "%d",  UDISK_get(0));
-  // EPD_DrawString_EN(85, 35, rtc_buf, &Font12, WHITE, BLACK);
+  // uint8_t day, month, year, hours, minutes, seconds;
+  // sscanf(rtc_buf, "s%02d.%02d.%02d.%02d.%02d.%02d", &hours, &minutes, &seconds, &year, &month, &day);
+  // sprintf(timest_buf, "%d/%d/%d",  hours, minutes, seconds);
+  // EPD_DrawString_EN(85, 35, timest_buf, &Font12, WHITE, BLACK);
   //
   char temp_buf[10];
   sprintf(temp_buf, "%d.%dC", q_get(q_len()-1)/100, q_get(q_len()-1)%100);
@@ -835,7 +837,7 @@ float DS18_GET(){
 }
 
 void set_time(){
-  bool flag = true; // true ONLY FOR DEBUG!!!
+  bool flag = false; // true ONLY FOR DEBUG!!!
   Button bt_ok = {GPIOA, GPIO_PIN_0, TYPE_LOW_PULL};
   Button bt_down = {GPIOA, GPIO_PIN_8, TYPE_LOW_PULL};
   Button bt_up = {GPIOA, GPIO_PIN_9, TYPE_LOW_PULL};
@@ -875,10 +877,24 @@ void set_time(){
     }else{
       EPD_DrawLine(-38+(edit_ptr*42), 84, -38+(edit_ptr*42)+30, 84, BLACK, 2, LINE_STYLE_SOLID);
     } 
+
+    EPD_DrawChar(26, 0, '+', &Font16, BLACK, WHITE);
+    EPD_DrawChar(80, 0, '-', &Font16, BLACK, WHITE);
+    EPD_DrawString_EN(124, 0, "OK", &Font16, WHITE, BLACK);
     EPD_Display_Base(BlackImage);
 
     edited = false;
     for(;;){
+
+      if(set_rtc){
+        syncRTC();
+        if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
+        {
+          Error_Handler();
+        }
+        return;
+      }
+
       tick(&bt_ok);
       tick(&bt_up);
       tick(&bt_down);
@@ -920,7 +936,7 @@ void set_time(){
   sDate.Month = d_time[1];
   sDate.Date = d_time[2];
   sDate.WeekDay = RTC_WEEKDAY_MONDAY;
-  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_ADD1H;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
 	sTime.StoreOperation = RTC_STOREOPERATION_RESET;
 
   HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
@@ -934,9 +950,9 @@ void get_data(bool goto_sleep){
 
   q_load();
   q_push(DS18_GET()*100);
-  q_push(DS18_GET()*100);
-  q_push(DS18_GET()*100);
-  q_push(DS18_GET()*100);
+  // q_push(DS18_GET()*100);
+  // q_push(DS18_GET()*100);
+  // q_push(DS18_GET()*100);
   plot();
   q_save();
 
@@ -977,29 +993,39 @@ void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 void syncRTC(){
   RTC_TimeTypeDef sTime = {0};
   RTC_DateTypeDef sDate = {0};
+  uint8_t day[2], month[2], year[2], hours[2], minutes[2], seconds[2];
 
+  // uint8_t matched = sscanf(rtc_buf, "s%02d.%02d.%02d.%02d.%02d.%02d", &hours, &minutes, &seconds, &year , &month, &day);
+  // if (matched < 6){
+  //   CDC_Transmit_FS("ERR\n\r", 6);
+  //   return;
+  // }
 
-
-  uint8_t day, month, year, hours, minutes, seconds;
-
-  uint8_t matched = sscanf(rtc_buf, "s%02d.%02d.%02d.%02d.%02d.%02d", &hours, &minutes, &seconds, &year , &month, &day);
-  if (matched < 6){
-    return;
-  }
-
-  sTime.Hours = hours;
-  sTime.Minutes = minutes;
-  sTime.Seconds = seconds;
-  sDate.Year = year;
-  sDate.Month = month;
-  sDate.Date = day;
+  memcpy(hours, &rtc_buf[1], 2);
+  memcpy(minutes, &rtc_buf[4], 2);
+  memcpy(seconds, &rtc_buf[7], 2);
+  memcpy(year, &rtc_buf[10], 2);
+  memcpy(month, &rtc_buf[13], 2);
+  memcpy(day, &rtc_buf[16], 2);
+  
+  sTime.Hours = atoi(hours);
+  sTime.Minutes = atoi(minutes);
+  sTime.Seconds = atoi(seconds);
+  sDate.Year = atoi(year);
+  sDate.Month = atoi(month);
+  sDate.Date = atoi(day);
 
   sDate.WeekDay = RTC_WEEKDAY_MONDAY;
-  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_ADD1H;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
   sTime.StoreOperation = RTC_STOREOPERATION_RESET;
 
-  HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
   HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+  HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+
+  HAL_PWR_EnableBkUpAccess();  
+  HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR6, KEY);
+  
+  CDC_Transmit_FS("OK\n\r", 5);
 }
 
 void USB_SendAllData(){
@@ -1019,6 +1045,7 @@ void USB_SendAllData(){
 }
 
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
+  HAL_RTCEx_SetWakeUpTimer_IT(hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
   measure = true;
   send_usb = USB_DEVICE_IsConnected();
 }

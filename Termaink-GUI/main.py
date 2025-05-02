@@ -16,7 +16,7 @@ from fontTools.misc.timeTools import timestampNow, timestampToString
 app = QtWidgets.QApplication([])
 ui = uic.loadUi("termaink.ui")
 
-arrayOfTemp = [25.2, 26.6, 14.88, 6.66]
+arrayOfTemp = [None]
 lastMeasurementTimestamp = timestampNow()
 epoch_diff = calendar.timegm((1904, 1, 1, 0, 0, 0, 0, 0, 0))
 
@@ -132,8 +132,10 @@ def syncRTC():
     if not devConnected:
         return 1
     time_now = datetime.now()
-    print(f"s{time_now.hour}:{time_now.minute}:{time_now.second}/{time_now.day}.{time_now.month}.{time_now.year-2000}")
-    ser.write(bytes(f"s{time_now.hour}.{time_now.minute}.{time_now.second}.{time_now.year-2000}.{time_now.month}.{time_now.day}", 'utf-8'))
+    print(f"s{time_now.hour:02}.{time_now.minute:02}.{time_now.second:02}.{time_now.year-2000:02}.{time_now.month:02}.{time_now.day:02}\0")
+    ser.write(bytes(f"s{time_now.hour:02}.{time_now.minute:02}.{time_now.second:02}.{time_now.year-2000:02}.{time_now.month:02}.{time_now.day:02}\0", 'utf-8'))
+    if "OK" not in ser.readline().rstrip().decode("utf-8"):
+        return 1
     msgBox = QMessageBox()
     msgBox.setText("The RTC has been synchronised.")
     msgBox.setWindowTitle("Termaink GUI")
