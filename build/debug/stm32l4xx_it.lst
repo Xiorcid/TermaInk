@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
   28:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN TD */
   29:Core/Src/stm32l4xx_it.c **** 
   30:Core/Src/stm32l4xx_it.c **** /* USER CODE END TD */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 2
 
 
   31:Core/Src/stm32l4xx_it.c **** 
@@ -91,7 +91,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
   58:Core/Src/stm32l4xx_it.c **** extern PCD_HandleTypeDef hpcd_USB_FS;
   59:Core/Src/stm32l4xx_it.c **** extern DMA_HandleTypeDef hdma_adc1;
   60:Core/Src/stm32l4xx_it.c **** extern ADC_HandleTypeDef hadc1;
-  61:Core/Src/stm32l4xx_it.c **** extern RTC_HandleTypeDef hrtc;
+  61:Core/Src/stm32l4xx_it.c **** extern LPTIM_HandleTypeDef hlptim1;
   62:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN EV */
   63:Core/Src/stm32l4xx_it.c **** 
   64:Core/Src/stm32l4xx_it.c **** /* USER CODE END EV */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
   78:Core/Src/stm32l4xx_it.c ****    while (1)
   36              		.loc 1 78 4 view .LVU1
   79:Core/Src/stm32l4xx_it.c ****   {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 3
 
 
   80:Core/Src/stm32l4xx_it.c ****   }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
   98:Core/Src/stm32l4xx_it.c **** 
   99:Core/Src/stm32l4xx_it.c **** /**
  100:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Memory management fault.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 4
 
 
  101:Core/Src/stm32l4xx_it.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  125:Core/Src/stm32l4xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
  126:Core/Src/stm32l4xx_it.c ****   }
  106              		.loc 1 126 3 view .LVU14
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 5
 
 
  122:Core/Src/stm32l4xx_it.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  146:Core/Src/stm32l4xx_it.c ****   */
  147:Core/Src/stm32l4xx_it.c **** void SVC_Handler(void)
  148:Core/Src/stm32l4xx_it.c **** {
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 6
 
 
  144              		.loc 1 148 1 view -0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  169:Core/Src/stm32l4xx_it.c **** 
  170:Core/Src/stm32l4xx_it.c **** /**
  171:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Pendable request for system service.
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 7
 
 
  172:Core/Src/stm32l4xx_it.c ****   */
@@ -417,16 +417,16 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  213 0006 08BD     		pop	{r3, pc}
  214              		.cfi_endproc
  215              	.LFE327:
- 217              		.section	.text.RTC_WKUP_IRQHandler,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 8
+ 217              		.section	.text.EXTI0_IRQHandler,"ax",%progbits
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 8
 
 
  218              		.align	1
- 219              		.global	RTC_WKUP_IRQHandler
+ 219              		.global	EXTI0_IRQHandler
  220              		.syntax unified
  221              		.thumb
  222              		.thumb_func
- 224              	RTC_WKUP_IRQHandler:
+ 224              	EXTI0_IRQHandler:
  225              	.LFB328:
  196:Core/Src/stm32l4xx_it.c **** 
  197:Core/Src/stm32l4xx_it.c **** /******************************************************************************/
@@ -437,9 +437,9 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  202:Core/Src/stm32l4xx_it.c **** /******************************************************************************/
  203:Core/Src/stm32l4xx_it.c **** 
  204:Core/Src/stm32l4xx_it.c **** /**
- 205:Core/Src/stm32l4xx_it.c ****   * @brief This function handles RTC wake-up interrupt through EXTI line 20.
+ 205:Core/Src/stm32l4xx_it.c ****   * @brief This function handles EXTI line0 interrupt.
  206:Core/Src/stm32l4xx_it.c ****   */
- 207:Core/Src/stm32l4xx_it.c **** void RTC_WKUP_IRQHandler(void)
+ 207:Core/Src/stm32l4xx_it.c **** void EXTI0_IRQHandler(void)
  208:Core/Src/stm32l4xx_it.c **** {
  226              		.loc 1 208 1 is_stmt 1 view -0
  227              		.cfi_startproc
@@ -449,80 +449,80 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  231              		.cfi_def_cfa_offset 8
  232              		.cfi_offset 3, -8
  233              		.cfi_offset 14, -4
- 209:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN RTC_WKUP_IRQn 0 */
+ 209:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI0_IRQn 0 */
  210:Core/Src/stm32l4xx_it.c **** 
- 211:Core/Src/stm32l4xx_it.c ****   /* USER CODE END RTC_WKUP_IRQn 0 */
- 212:Core/Src/stm32l4xx_it.c ****   HAL_RTCEx_WakeUpTimerIRQHandler(&hrtc);
+ 211:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI0_IRQn 0 */
+ 212:Core/Src/stm32l4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(OK_Pin);
  234              		.loc 1 212 3 view .LVU30
- 235 0002 0248     		ldr	r0, .L18
- 236 0004 FFF7FEFF 		bl	HAL_RTCEx_WakeUpTimerIRQHandler
+ 235 0002 0120     		movs	r0, #1
+ 236 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
  237              	.LVL1:
- 213:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN RTC_WKUP_IRQn 1 */
+ 213:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI0_IRQn 1 */
  214:Core/Src/stm32l4xx_it.c **** 
- 215:Core/Src/stm32l4xx_it.c ****   /* USER CODE END RTC_WKUP_IRQn 1 */
+ 215:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI0_IRQn 1 */
  216:Core/Src/stm32l4xx_it.c **** }
  238              		.loc 1 216 1 is_stmt 0 view .LVU31
  239 0008 08BD     		pop	{r3, pc}
- 240              	.L19:
- 241 000a 00BF     		.align	2
- 242              	.L18:
- 243 000c 00000000 		.word	hrtc
- 244              		.cfi_endproc
- 245              	.LFE328:
- 247              		.section	.text.EXTI0_IRQHandler,"ax",%progbits
- 248              		.align	1
- 249              		.global	EXTI0_IRQHandler
- 250              		.syntax unified
- 251              		.thumb
- 252              		.thumb_func
- 254              	EXTI0_IRQHandler:
- 255              	.LFB329:
+ 240              		.cfi_endproc
+ 241              	.LFE328:
+ 243              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
+ 244              		.align	1
+ 245              		.global	DMA1_Channel1_IRQHandler
+ 246              		.syntax unified
+ 247              		.thumb
+ 248              		.thumb_func
+ 250              	DMA1_Channel1_IRQHandler:
+ 251              	.LFB329:
  217:Core/Src/stm32l4xx_it.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 9
-
-
  218:Core/Src/stm32l4xx_it.c **** /**
- 219:Core/Src/stm32l4xx_it.c ****   * @brief This function handles EXTI line0 interrupt.
+ 219:Core/Src/stm32l4xx_it.c ****   * @brief This function handles DMA1 channel1 global interrupt.
  220:Core/Src/stm32l4xx_it.c ****   */
- 221:Core/Src/stm32l4xx_it.c **** void EXTI0_IRQHandler(void)
+ 221:Core/Src/stm32l4xx_it.c **** void DMA1_Channel1_IRQHandler(void)
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 9
+
+
  222:Core/Src/stm32l4xx_it.c **** {
- 256              		.loc 1 222 1 is_stmt 1 view -0
- 257              		.cfi_startproc
- 258              		@ args = 0, pretend = 0, frame = 0
- 259              		@ frame_needed = 0, uses_anonymous_args = 0
- 260 0000 08B5     		push	{r3, lr}
- 261              		.cfi_def_cfa_offset 8
- 262              		.cfi_offset 3, -8
- 263              		.cfi_offset 14, -4
- 223:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI0_IRQn 0 */
+ 252              		.loc 1 222 1 is_stmt 1 view -0
+ 253              		.cfi_startproc
+ 254              		@ args = 0, pretend = 0, frame = 0
+ 255              		@ frame_needed = 0, uses_anonymous_args = 0
+ 256 0000 08B5     		push	{r3, lr}
+ 257              		.cfi_def_cfa_offset 8
+ 258              		.cfi_offset 3, -8
+ 259              		.cfi_offset 14, -4
+ 223:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
  224:Core/Src/stm32l4xx_it.c **** 
- 225:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI0_IRQn 0 */
- 226:Core/Src/stm32l4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(OK_Pin);
- 264              		.loc 1 226 3 view .LVU33
- 265 0002 0120     		movs	r0, #1
- 266 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
- 267              	.LVL2:
- 227:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI0_IRQn 1 */
+ 225:Core/Src/stm32l4xx_it.c ****   /* USER CODE END DMA1_Channel1_IRQn 0 */
+ 226:Core/Src/stm32l4xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
+ 260              		.loc 1 226 3 view .LVU33
+ 261 0002 0248     		ldr	r0, .L20
+ 262 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 263              	.LVL2:
+ 227:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
  228:Core/Src/stm32l4xx_it.c **** 
- 229:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI0_IRQn 1 */
+ 229:Core/Src/stm32l4xx_it.c ****   /* USER CODE END DMA1_Channel1_IRQn 1 */
  230:Core/Src/stm32l4xx_it.c **** }
- 268              		.loc 1 230 1 is_stmt 0 view .LVU34
- 269 0008 08BD     		pop	{r3, pc}
+ 264              		.loc 1 230 1 is_stmt 0 view .LVU34
+ 265 0008 08BD     		pop	{r3, pc}
+ 266              	.L21:
+ 267 000a 00BF     		.align	2
+ 268              	.L20:
+ 269 000c 00000000 		.word	hdma_adc1
  270              		.cfi_endproc
  271              	.LFE329:
- 273              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
+ 273              		.section	.text.ADC1_2_IRQHandler,"ax",%progbits
  274              		.align	1
- 275              		.global	DMA1_Channel1_IRQHandler
+ 275              		.global	ADC1_2_IRQHandler
  276              		.syntax unified
  277              		.thumb
  278              		.thumb_func
- 280              	DMA1_Channel1_IRQHandler:
+ 280              	ADC1_2_IRQHandler:
  281              	.LFB330:
  231:Core/Src/stm32l4xx_it.c **** 
  232:Core/Src/stm32l4xx_it.c **** /**
- 233:Core/Src/stm32l4xx_it.c ****   * @brief This function handles DMA1 channel1 global interrupt.
+ 233:Core/Src/stm32l4xx_it.c ****   * @brief This function handles ADC1 and ADC2 interrupts.
  234:Core/Src/stm32l4xx_it.c ****   */
- 235:Core/Src/stm32l4xx_it.c **** void DMA1_Channel1_IRQHandler(void)
+ 235:Core/Src/stm32l4xx_it.c **** void ADC1_2_IRQHandler(void)
  236:Core/Src/stm32l4xx_it.c **** {
  282              		.loc 1 236 1 is_stmt 1 view -0
  283              		.cfi_startproc
@@ -532,42 +532,42 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  287              		.cfi_def_cfa_offset 8
  288              		.cfi_offset 3, -8
  289              		.cfi_offset 14, -4
- 237:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+ 237:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN ADC1_2_IRQn 0 */
  238:Core/Src/stm32l4xx_it.c **** 
- 239:Core/Src/stm32l4xx_it.c ****   /* USER CODE END DMA1_Channel1_IRQn 0 */
- 240:Core/Src/stm32l4xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
+ 239:Core/Src/stm32l4xx_it.c ****   /* USER CODE END ADC1_2_IRQn 0 */
+ 240:Core/Src/stm32l4xx_it.c ****   HAL_ADC_IRQHandler(&hadc1);
  290              		.loc 1 240 3 view .LVU36
  291 0002 0248     		ldr	r0, .L24
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 10
 
 
- 292 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 292 0004 FFF7FEFF 		bl	HAL_ADC_IRQHandler
  293              	.LVL3:
- 241:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+ 241:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN ADC1_2_IRQn 1 */
  242:Core/Src/stm32l4xx_it.c **** 
- 243:Core/Src/stm32l4xx_it.c ****   /* USER CODE END DMA1_Channel1_IRQn 1 */
+ 243:Core/Src/stm32l4xx_it.c ****   /* USER CODE END ADC1_2_IRQn 1 */
  244:Core/Src/stm32l4xx_it.c **** }
  294              		.loc 1 244 1 is_stmt 0 view .LVU37
  295 0008 08BD     		pop	{r3, pc}
  296              	.L25:
  297 000a 00BF     		.align	2
  298              	.L24:
- 299 000c 00000000 		.word	hdma_adc1
+ 299 000c 00000000 		.word	hadc1
  300              		.cfi_endproc
  301              	.LFE330:
- 303              		.section	.text.ADC1_2_IRQHandler,"ax",%progbits
+ 303              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
  304              		.align	1
- 305              		.global	ADC1_2_IRQHandler
+ 305              		.global	EXTI9_5_IRQHandler
  306              		.syntax unified
  307              		.thumb
  308              		.thumb_func
- 310              	ADC1_2_IRQHandler:
+ 310              	EXTI9_5_IRQHandler:
  311              	.LFB331:
  245:Core/Src/stm32l4xx_it.c **** 
  246:Core/Src/stm32l4xx_it.c **** /**
- 247:Core/Src/stm32l4xx_it.c ****   * @brief This function handles ADC1 and ADC2 interrupts.
+ 247:Core/Src/stm32l4xx_it.c ****   * @brief This function handles EXTI line[9:5] interrupts.
  248:Core/Src/stm32l4xx_it.c ****   */
- 249:Core/Src/stm32l4xx_it.c **** void ADC1_2_IRQHandler(void)
+ 249:Core/Src/stm32l4xx_it.c **** void EXTI9_5_IRQHandler(void)
  250:Core/Src/stm32l4xx_it.c **** {
  312              		.loc 1 250 1 is_stmt 1 view -0
  313              		.cfi_startproc
@@ -577,65 +577,65 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  317              		.cfi_def_cfa_offset 8
  318              		.cfi_offset 3, -8
  319              		.cfi_offset 14, -4
- 251:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN ADC1_2_IRQn 0 */
+ 251:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
  252:Core/Src/stm32l4xx_it.c **** 
- 253:Core/Src/stm32l4xx_it.c ****   /* USER CODE END ADC1_2_IRQn 0 */
- 254:Core/Src/stm32l4xx_it.c ****   HAL_ADC_IRQHandler(&hadc1);
+ 253:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 0 */
+ 254:Core/Src/stm32l4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(USB_WKUP_Pin);
  320              		.loc 1 254 3 view .LVU39
- 321 0002 0248     		ldr	r0, .L28
- 322 0004 FFF7FEFF 		bl	HAL_ADC_IRQHandler
+ 321 0002 2020     		movs	r0, #32
+ 322 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
  323              	.LVL4:
- 255:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN ADC1_2_IRQn 1 */
+ 255:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
  256:Core/Src/stm32l4xx_it.c **** 
- 257:Core/Src/stm32l4xx_it.c ****   /* USER CODE END ADC1_2_IRQn 1 */
+ 257:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 1 */
  258:Core/Src/stm32l4xx_it.c **** }
  324              		.loc 1 258 1 is_stmt 0 view .LVU40
  325 0008 08BD     		pop	{r3, pc}
- 326              	.L29:
- 327 000a 00BF     		.align	2
- 328              	.L28:
- 329 000c 00000000 		.word	hadc1
- 330              		.cfi_endproc
- 331              	.LFE331:
- 333              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 11
+ 326              		.cfi_endproc
+ 327              	.LFE331:
+ 329              		.section	.text.LPTIM1_IRQHandler,"ax",%progbits
+ 330              		.align	1
+ 331              		.global	LPTIM1_IRQHandler
+ 332              		.syntax unified
+ 333              		.thumb
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 11
 
 
- 334              		.align	1
- 335              		.global	EXTI9_5_IRQHandler
- 336              		.syntax unified
- 337              		.thumb
- 338              		.thumb_func
- 340              	EXTI9_5_IRQHandler:
- 341              	.LFB332:
+ 334              		.thumb_func
+ 336              	LPTIM1_IRQHandler:
+ 337              	.LFB332:
  259:Core/Src/stm32l4xx_it.c **** 
  260:Core/Src/stm32l4xx_it.c **** /**
- 261:Core/Src/stm32l4xx_it.c ****   * @brief This function handles EXTI line[9:5] interrupts.
+ 261:Core/Src/stm32l4xx_it.c ****   * @brief This function handles LPTIM1 global interrupt.
  262:Core/Src/stm32l4xx_it.c ****   */
- 263:Core/Src/stm32l4xx_it.c **** void EXTI9_5_IRQHandler(void)
+ 263:Core/Src/stm32l4xx_it.c **** void LPTIM1_IRQHandler(void)
  264:Core/Src/stm32l4xx_it.c **** {
- 342              		.loc 1 264 1 is_stmt 1 view -0
- 343              		.cfi_startproc
- 344              		@ args = 0, pretend = 0, frame = 0
- 345              		@ frame_needed = 0, uses_anonymous_args = 0
- 346 0000 08B5     		push	{r3, lr}
- 347              		.cfi_def_cfa_offset 8
- 348              		.cfi_offset 3, -8
- 349              		.cfi_offset 14, -4
- 265:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+ 338              		.loc 1 264 1 is_stmt 1 view -0
+ 339              		.cfi_startproc
+ 340              		@ args = 0, pretend = 0, frame = 0
+ 341              		@ frame_needed = 0, uses_anonymous_args = 0
+ 342 0000 08B5     		push	{r3, lr}
+ 343              		.cfi_def_cfa_offset 8
+ 344              		.cfi_offset 3, -8
+ 345              		.cfi_offset 14, -4
+ 265:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN LPTIM1_IRQn 0 */
  266:Core/Src/stm32l4xx_it.c **** 
- 267:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 0 */
- 268:Core/Src/stm32l4xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(USB_WKUP_Pin);
- 350              		.loc 1 268 3 view .LVU42
- 351 0002 2020     		movs	r0, #32
- 352 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
- 353              	.LVL5:
- 269:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+ 267:Core/Src/stm32l4xx_it.c ****   /* USER CODE END LPTIM1_IRQn 0 */
+ 268:Core/Src/stm32l4xx_it.c ****   HAL_LPTIM_IRQHandler(&hlptim1);
+ 346              		.loc 1 268 3 view .LVU42
+ 347 0002 0248     		ldr	r0, .L30
+ 348 0004 FFF7FEFF 		bl	HAL_LPTIM_IRQHandler
+ 349              	.LVL5:
+ 269:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN LPTIM1_IRQn 1 */
  270:Core/Src/stm32l4xx_it.c **** 
- 271:Core/Src/stm32l4xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 1 */
+ 271:Core/Src/stm32l4xx_it.c ****   /* USER CODE END LPTIM1_IRQn 1 */
  272:Core/Src/stm32l4xx_it.c **** }
- 354              		.loc 1 272 1 is_stmt 0 view .LVU43
- 355 0008 08BD     		pop	{r3, pc}
+ 350              		.loc 1 272 1 is_stmt 0 view .LVU43
+ 351 0008 08BD     		pop	{r3, pc}
+ 352              	.L31:
+ 353 000a 00BF     		.align	2
+ 354              	.L30:
+ 355 000c 00000000 		.word	hlptim1
  356              		.cfi_endproc
  357              	.LFE332:
  359              		.section	.text.USB_IRQHandler,"ax",%progbits
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  371              		@ frame_needed = 0, uses_anonymous_args = 0
  372 0000 08B5     		push	{r3, lr}
  373              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 12
 
 
  374              		.cfi_offset 3, -8
@@ -692,60 +692,59 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 1
  395              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  396              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  397              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h"
- 398              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
- 399              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
- 400              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
+ 398              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_lptim.h"
+ 399              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
+ 400              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
  401              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 402              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h"
- 403              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccglp56P.s 			page 13
+ 402              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_it.c
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:21     .text.NMI_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:27     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:44     .text.HardFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:67     .text.MemManage_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:90     .text.BusFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:113    .text.UsageFault_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:136    .text.SVC_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:142    .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:155    .text.DebugMon_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:174    .text.PendSV_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:193    .text.SysTick_Handler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:218    .text.RTC_WKUP_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:224    .text.RTC_WKUP_IRQHandler:00000000 RTC_WKUP_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:243    .text.RTC_WKUP_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:248    .text.EXTI0_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:254    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:274    .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:280    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:299    .text.DMA1_Channel1_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:304    .text.ADC1_2_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:310    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:329    .text.ADC1_2_IRQHandler:0000000c $d
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:334    .text.EXTI9_5_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:340    .text.EXTI9_5_IRQHandler:00000000 EXTI9_5_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:360    .text.USB_IRQHandler:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:366    .text.USB_IRQHandler:00000000 USB_IRQHandler
-C:\Users\kroko\AppData\Local\Temp\ccglp56P.s:385    .text.USB_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:21     .text.NMI_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:27     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:44     .text.HardFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:67     .text.MemManage_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:73     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:90     .text.BusFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:96     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:113    .text.UsageFault_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:136    .text.SVC_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:142    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:155    .text.DebugMon_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:161    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:174    .text.PendSV_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:180    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:193    .text.SysTick_Handler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:199    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:218    .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:224    .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:244    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:250    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:269    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:274    .text.ADC1_2_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:280    .text.ADC1_2_IRQHandler:00000000 ADC1_2_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:299    .text.ADC1_2_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:304    .text.EXTI9_5_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:310    .text.EXTI9_5_IRQHandler:00000000 EXTI9_5_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:330    .text.LPTIM1_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:336    .text.LPTIM1_IRQHandler:00000000 LPTIM1_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:355    .text.LPTIM1_IRQHandler:0000000c $d
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:360    .text.USB_IRQHandler:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:366    .text.USB_IRQHandler:00000000 USB_IRQHandler
+C:\Users\kroko\AppData\Local\Temp\ccrvgzNk.s:385    .text.USB_IRQHandler:0000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
-HAL_RTCEx_WakeUpTimerIRQHandler
-hrtc
 HAL_GPIO_EXTI_IRQHandler
 HAL_DMA_IRQHandler
 hdma_adc1
 HAL_ADC_IRQHandler
 hadc1
+HAL_LPTIM_IRQHandler
+hlptim1
 HAL_PCD_IRQHandler
 hpcd_USB_FS

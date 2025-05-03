@@ -59,6 +59,8 @@
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
+LPTIM_HandleTypeDef hlptim1;
+
 RTC_HandleTypeDef hrtc;
 
 SPI_HandleTypeDef hspi1;
@@ -90,6 +92,7 @@ static void MX_SPI1_Init(void);
 static void MX_RTC_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_ADC1_Init(void);
+static void MX_LPTIM1_Init(void);
 /* USER CODE BEGIN PFP */
 long map(long x, long in_min, long in_max, long out_min, long out_max);
 void plot();
@@ -103,6 +106,8 @@ void timestamp_to_time(uint32_t timestamp, uint8_t* hours, uint8_t* minutes);
 bool USB_DEVICE_IsConnected();
 void USB_SendAllData();
 void syncRTC();
+void Start_Timer();
+void Start_Next_Interval();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -110,10 +115,15 @@ void syncRTC();
 bool send_usb;
 bool send_usb_data;
 bool measure;
+bool ready;
 bool initialise_usb_connection;
+bool go_to_sleep;
 bool set_rtc;
 char rtc_buf[30];
 uint32_t usb_conn_tmr;
+
+volatile uint32_t seconds_passed = 0;
+#define TICKS_PER_SEC (32768 / 128) // = 256
 /* USER CODE END 0 */
 
 /**
@@ -151,6 +161,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_ADC1_Init();
   MX_USB_DEVICE_Init();
+  MX_LPTIM1_Init();
   /* USER CODE BEGIN 2 */
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&adcData, 1);
   DS18_INIT();
@@ -163,11 +174,17 @@ int main(void)
  bool old_usb_state = false;
 
   if (is_RTC_retained) {
-    shutdown(true);
-    power_on();
+    // shutdown(true);
+    // power_on();
+    // Start_Timer();
   }else{
     set_time();
   }
+
+  // HAL_GPIO_WritePin(TEST_GPIO_Port, TEST_Pin, GPIO_PIN_SET);
+  HAL_NVIC_SetPriority(LPTIM1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(LPTIM1_IRQn);
+  Start_Timer();
 
   q_push(DS18_GET()*100);
   // q_push(DS18_GET()*100);
@@ -175,7 +192,7 @@ int main(void)
   // q_push(DS18_GET()*100);
   q_save();
   plot();
-  if(!USB_DEVICE_IsConnected()){
+  if(!USB_DEVICE_IsConnected()){  
     shutdown(false);
   }
   /* USER CODE END 2 */
@@ -188,6 +205,7 @@ int main(void)
       measure = false;
       get_data(!send_usb);
       send_usb = false;
+      ready = true;
     }
     
     if(initialise_usb_connection){
@@ -219,10 +237,15 @@ int main(void)
       syncRTC();
     }
 
-    if(!USB_DEVICE_IsConnected() && old_usb_state && HAL_GetTick()-usb_conn_tmr>150){
-      shutdown(true);
+    // if(!USB_DEVICE_IsConnected() && old_usb_state && HAL_GetTick()-usb_conn_tmr>150){
+    //   shutdown(true);
+    //   // SleepForSeconds(10);
+    // }
+    // old_usb_state = USB_DEVICE_IsConnected();
+
+    if(go_to_sleep){
+      HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
     }
-    old_usb_state = USB_DEVICE_IsConnected();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -354,6 +377,41 @@ static void MX_ADC1_Init(void)
 }
 
 /**
+  * @brief LPTIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_LPTIM1_Init(void)
+{
+
+  /* USER CODE BEGIN LPTIM1_Init 0 */
+
+  /* USER CODE END LPTIM1_Init 0 */
+
+  /* USER CODE BEGIN LPTIM1_Init 1 */
+
+  /* USER CODE END LPTIM1_Init 1 */
+  hlptim1.Instance = LPTIM1;
+  hlptim1.Init.Clock.Source = LPTIM_CLOCKSOURCE_APBCLOCK_LPOSC;
+  hlptim1.Init.Clock.Prescaler = LPTIM_PRESCALER_DIV128;
+  hlptim1.Init.Trigger.Source = LPTIM_TRIGSOURCE_SOFTWARE;
+  hlptim1.Init.OutputPolarity = LPTIM_OUTPUTPOLARITY_HIGH;
+  hlptim1.Init.UpdateMode = LPTIM_UPDATE_IMMEDIATE;
+  hlptim1.Init.CounterSource = LPTIM_COUNTERSOURCE_INTERNAL;
+  hlptim1.Init.Input1Source = LPTIM_INPUT1SOURCE_GPIO;
+  hlptim1.Init.Input2Source = LPTIM_INPUT2SOURCE_GPIO;
+  hlptim1.Init.RepetitionCounter = 0;
+  if (HAL_LPTIM_Init(&hlptim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN LPTIM1_Init 2 */
+
+  /* USER CODE END LPTIM1_Init 2 */
+
+}
+
+/**
   * @brief RTC Initialization Function
   * @param None
   * @retval None
@@ -411,13 +469,6 @@ static void MX_RTC_Init(void)
   sDate.Year = 0x25;
 
   if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Enable the WakeUp
-  */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -791,25 +842,53 @@ void shutdown(bool skipRTC){
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  go_to_sleep = true;
+
   HAL_SuspendTick();
-  HAL_NVIC_DisableIRQ(SysTick_IRQn);
-  // uint32_t sleep_time = MEASURMENTS_DELTA_SEC;
-  // if(skipRTC && ((RTC->CR & RTC_CR_WUTE) != 0)){
-  //   sleep_time = HAL_RTCEx_GetWakeUpTimer(&hrtc);
-  // }
-  // HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, sleep_time, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
-  HAL_PWREx_EnableLowPowerRunMode();
   HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
 }
 
 void power_on(void){
-  // HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
   HAL_ResumeTick();
   SystemClock_Config();
   MX_GPIO_Init();
   MX_SPI1_Init();
   MX_USB_DEVICE_Init();
   EPD_Init();
+}
+
+void Start_Timer(){
+  HAL_LPTIM_Counter_Start_IT(&hlptim1, 256);
+}
+
+void Start_Next_Interval(){
+  // if (ticks_left == 0){
+  //   measure = true;
+  //   send_usb = USB_DEVICE_IsConnected();
+  //   power_on();
+  //   ticks_left = MEASURMENTS_DELTA_SEC * ticks_per_sec;
+  //   return;
+  // }
+
+  // uint32_t interval = (ticks_left > 256) ? 256 : ticks_left;
+  // HAL_LPTIM_TimeOut_Start_IT(&hlptim1, 0xFFFF, interval);
+  // ticks_left -= interval;
+}
+
+
+void HAL_LPTIM_AutoReloadMatchCallback(LPTIM_HandleTypeDef *hlptim)
+{
+  // HAL_GPIO_TogglePin(TEST_GPIO_Port, TEST_Pin);
+  seconds_passed++;
+
+  if (seconds_passed >= MEASURMENTS_DELTA_SEC)
+  {
+      measure = true;
+      ready = false;
+      go_to_sleep = false;
+      send_usb = USB_DEVICE_IsConnected();
+      seconds_passed = 0;
+  } 
 }
 
 void DS18_INIT(){
@@ -837,7 +916,7 @@ float DS18_GET(){
 }
 
 void set_time(){
-  bool flag = false; // true ONLY FOR DEBUG!!!
+  bool flag = true; // true ONLY FOR DEBUG!!!
   Button bt_ok = {GPIOA, GPIO_PIN_0, TYPE_LOW_PULL};
   Button bt_down = {GPIOA, GPIO_PIN_8, TYPE_LOW_PULL};
   Button bt_up = {GPIOA, GPIO_PIN_9, TYPE_LOW_PULL};
@@ -888,10 +967,6 @@ void set_time(){
 
       if(set_rtc){
         syncRTC();
-        if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0) != HAL_OK)
-        {
-          Error_Handler();
-        }
         return;
       }
 
@@ -941,6 +1016,8 @@ void set_time(){
 
   HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
   HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
+  Start_Timer();
 }
 
 void get_data(bool goto_sleep){
@@ -1044,11 +1121,11 @@ void USB_SendAllData(){
   CDC_Transmit_FS(buf, ln);
 }
 
-void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
-  HAL_RTCEx_SetWakeUpTimer_IT(hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
-  measure = true;
-  send_usb = USB_DEVICE_IsConnected();
-}
+// void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
+//   HAL_RTCEx_SetWakeUpTimer_IT(hrtc, 10, RTC_WAKEUPCLOCK_CK_SPRE_16BITS, 0);
+//   measure = true;
+//   send_usb = USB_DEVICE_IsConnected();
+// }
 
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)

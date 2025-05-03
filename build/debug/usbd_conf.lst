@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
   29:USB_DEVICE/Target/usbd_conf.c **** 
   30:USB_DEVICE/Target/usbd_conf.c **** /* USER CODE END Includes */
   31:USB_DEVICE/Target/usbd_conf.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 2
 
 
   32:USB_DEVICE/Target/usbd_conf.c **** /* Private typedef -----------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
   86:USB_DEVICE/Target/usbd_conf.c ****     }
   87:USB_DEVICE/Target/usbd_conf.c **** 
   88:USB_DEVICE/Target/usbd_conf.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 3
 
 
   89:USB_DEVICE/Target/usbd_conf.c ****     /**USB GPIO Configuration
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  143:USB_DEVICE/Target/usbd_conf.c **** static void PCD_SetupStageCallback(PCD_HandleTypeDef *hpcd)
  144:USB_DEVICE/Target/usbd_conf.c **** #else
  145:USB_DEVICE/Target/usbd_conf.c **** void HAL_PCD_SetupStageCallback(PCD_HandleTypeDef *hpcd)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 4
 
 
  146:USB_DEVICE/Target/usbd_conf.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  200:USB_DEVICE/Target/usbd_conf.c **** #if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
  201:USB_DEVICE/Target/usbd_conf.c **** static void PCD_ResetCallback(PCD_HandleTypeDef *hpcd)
  202:USB_DEVICE/Target/usbd_conf.c **** #else
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 5
 
 
  203:USB_DEVICE/Target/usbd_conf.c **** void HAL_PCD_ResetCallback(PCD_HandleTypeDef *hpcd)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  257:USB_DEVICE/Target/usbd_conf.c ****   if (hpcd->Init.low_power_enable)
  258:USB_DEVICE/Target/usbd_conf.c ****   {
  259:USB_DEVICE/Target/usbd_conf.c ****     /* Reset SLEEPDEEP bit of Cortex System Control Register. */
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 6
 
 
  260:USB_DEVICE/Target/usbd_conf.c ****     SCB->SCR &= (uint32_t)~((uint32_t)(SCB_SCR_SLEEPDEEP_Msk | SCB_SCR_SLEEPONEXIT_Msk));
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  314:USB_DEVICE/Target/usbd_conf.c ****   * @retval None
  315:USB_DEVICE/Target/usbd_conf.c ****   */
  316:USB_DEVICE/Target/usbd_conf.c **** #if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 7
 
 
  317:USB_DEVICE/Target/usbd_conf.c **** static void PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  371:USB_DEVICE/Target/usbd_conf.c ****   /* USER CODE BEGIN EndPoint_Configuration */
  372:USB_DEVICE/Target/usbd_conf.c ****   HAL_PCDEx_PMAConfig((PCD_HandleTypeDef*)pdev->pData , 0x00 , PCD_SNG_BUF, 0x18);
  373:USB_DEVICE/Target/usbd_conf.c ****   HAL_PCDEx_PMAConfig((PCD_HandleTypeDef*)pdev->pData , 0x80 , PCD_SNG_BUF, 0x58);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 8
 
 
  374:USB_DEVICE/Target/usbd_conf.c ****   /* USER CODE END EndPoint_Configuration */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  428:USB_DEVICE/Target/usbd_conf.c ****     case HAL_OK :
  429:USB_DEVICE/Target/usbd_conf.c ****       usb_status = USBD_OK;
  430:USB_DEVICE/Target/usbd_conf.c ****     break;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 9
 
 
  431:USB_DEVICE/Target/usbd_conf.c ****     case HAL_ERROR :
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  485:USB_DEVICE/Target/usbd_conf.c ****   * @retval USBD status
  486:USB_DEVICE/Target/usbd_conf.c ****   */
  487:USB_DEVICE/Target/usbd_conf.c **** USBD_StatusTypeDef USBD_LL_OpenEP(USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t ep_type, uint1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 10
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 10
 
 
  488:USB_DEVICE/Target/usbd_conf.c **** {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  542:USB_DEVICE/Target/usbd_conf.c ****     break;
  543:USB_DEVICE/Target/usbd_conf.c ****   }
  544:USB_DEVICE/Target/usbd_conf.c ****   return usb_status;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 11
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 11
 
 
  545:USB_DEVICE/Target/usbd_conf.c **** }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  599:USB_DEVICE/Target/usbd_conf.c ****     break;
  600:USB_DEVICE/Target/usbd_conf.c ****     case HAL_BUSY :
  601:USB_DEVICE/Target/usbd_conf.c ****       usb_status = USBD_BUSY;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 12
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 12
 
 
  602:USB_DEVICE/Target/usbd_conf.c ****     break;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  656:USB_DEVICE/Target/usbd_conf.c ****   if((ep_addr & 0x80) == 0x80)
  657:USB_DEVICE/Target/usbd_conf.c ****   {
  658:USB_DEVICE/Target/usbd_conf.c ****     return hpcd->IN_ep[ep_addr & 0x7F].is_stall;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 13
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 13
 
 
  659:USB_DEVICE/Target/usbd_conf.c ****   }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  713:USB_DEVICE/Target/usbd_conf.c **** 
  714:USB_DEVICE/Target/usbd_conf.c ****   switch (hal_status) {
  715:USB_DEVICE/Target/usbd_conf.c ****     case HAL_OK :
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 14
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 14
 
 
  716:USB_DEVICE/Target/usbd_conf.c ****       usb_status = USBD_OK;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  770:USB_DEVICE/Target/usbd_conf.c ****   * @brief  Returns the last transferred packet size.
  771:USB_DEVICE/Target/usbd_conf.c ****   * @param  pdev: Device handle
  772:USB_DEVICE/Target/usbd_conf.c ****   * @param  ep_addr: Endpoint number
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 15
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 15
 
 
  773:USB_DEVICE/Target/usbd_conf.c ****   * @retval Received Data Size
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  827:USB_DEVICE/Target/usbd_conf.c ****   * @retval None
  828:USB_DEVICE/Target/usbd_conf.c ****   */
  829:USB_DEVICE/Target/usbd_conf.c **** void *USBD_static_malloc(uint32_t size)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 16
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 16
 
 
  830:USB_DEVICE/Target/usbd_conf.c **** {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
   70:USB_DEVICE/Target/usbd_conf.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
   58              		.loc 1 70 1 is_stmt 0 view .LVU4
   59 0000 30B5     		push	{r4, r5, lr}
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 17
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 17
 
 
   60              		.cfi_def_cfa_offset 12
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  103 0026 4FF40053 		mov	r3, #8192
  104 002a 0293     		str	r3, [sp, #8]
   82:USB_DEVICE/Target/usbd_conf.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 18
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 18
 
 
  105              		.loc 1 82 5 is_stmt 1 view .LVU16
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  143 0054 1195     		str	r5, [sp, #68]
   96:USB_DEVICE/Target/usbd_conf.c ****     GPIO_InitStruct.Alternate = GPIO_AF10_USB_FS;
  144              		.loc 1 96 5 is_stmt 1 view .LVU33
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 19
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 19
 
 
   96:USB_DEVICE/Target/usbd_conf.c ****     GPIO_InitStruct.Alternate = GPIO_AF10_USB_FS;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
   85:USB_DEVICE/Target/usbd_conf.c ****     }
  186              		.loc 1 85 7 is_stmt 1 view .LVU47
  187 008c FFF7FEFF 		bl	Error_Handler
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 20
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 20
 
 
  188              	.LVL12:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  126:USB_DEVICE/Target/usbd_conf.c **** 
  236              		.loc 1 126 5 view .LVU56
  237 0016 4FF4C051 		mov	r1, #6144
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 21
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 21
 
 
  238 001a 4FF09040 		mov	r0, #1207959552
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  286              	.LFE325:
  288              		.section	.text.HAL_PCD_DataOutStageCallback,"ax",%progbits
  289              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 22
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 22
 
 
  290              		.global	HAL_PCD_DataOutStageCallback
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  178:USB_DEVICE/Target/usbd_conf.c **** }
  340              		.loc 1 178 3 is_stmt 1 view .LVU72
  341 0002 01EB8103 		add	r3, r1, r1, lsl #2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 23
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 23
 
 
  342 0006 00EBC303 		add	r3, r0, r3, lsl #3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  393              	.LFB329:
  205:USB_DEVICE/Target/usbd_conf.c ****   USBD_SpeedTypeDef speed = USBD_SPEED_FULL;
  394              		.loc 1 205 1 is_stmt 1 view -0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 24
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 24
 
 
  395              		.cfi_startproc
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  440              		.thumb_func
  442              	HAL_PCD_SuspendCallback:
  443              	.LVL38:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 25
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 25
 
 
  444              	.LFB330:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  487              		.global	HAL_PCD_ResumeCallback
  488              		.syntax unified
  489              		.thumb
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 26
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 26
 
 
  490              		.thumb_func
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  533 0022 00BF     		.align	2
  534              	.L38:
  535 0024 00ED00E0 		.word	-536810240
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 27
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 27
 
 
  536              		.cfi_endproc
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  587              		.cfi_offset 14, -4
  294:USB_DEVICE/Target/usbd_conf.c **** }
  588              		.loc 1 294 3 is_stmt 1 view .LVU122
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 28
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 28
 
 
  589 0002 D0F8DC02 		ldr	r0, [r0, #732]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  639              		.loc 1 321 1 is_stmt 1 view -0
  640              		.cfi_startproc
  641              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 29
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 29
 
 
  642              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  687              		.loc 1 341 15 is_stmt 0 view .LVU141
  688 000e C4F8C802 		str	r0, [r4, #712]
  343:USB_DEVICE/Target/usbd_conf.c ****   hpcd_USB_FS.Init.dev_endpoints = 8;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 30
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 30
 
 
  689              		.loc 1 343 3 is_stmt 1 view .LVU142
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  724              		.loc 1 372 3 is_stmt 1 view .LVU161
  725 0030 1823     		movs	r3, #24
  726 0032 0022     		movs	r2, #0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 31
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 31
 
 
  727 0034 1146     		mov	r1, r2
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  774              		.cfi_endproc
  775              	.LFE336:
  777              		.section	.text.USBD_LL_DeInit,"ax",%progbits
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 32
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 32
 
 
  778              		.align	1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  822              	.LVL74:
  823              	.L55:
  412:USB_DEVICE/Target/usbd_conf.c **** }
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 33
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 33
 
 
  824              		.loc 1 412 3 is_stmt 1 view .LVU180
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  869 000e DFE800F0 		tbb	[pc, r0]
  870              	.L66:
  871 0012 03       		.byte	(.L64-.L66)/2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 34
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 34
 
 
  872 0013 04       		.byte	(.L69-.L66)/2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  455:USB_DEVICE/Target/usbd_conf.c **** 
  918              		.loc 1 455 3 view .LVU202
  457:USB_DEVICE/Target/usbd_conf.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 35
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 35
 
 
  919              		.loc 1 457 3 view .LVU203
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  965              	.LVL93:
  966              	.LFB340:
  488:USB_DEVICE/Target/usbd_conf.c ****   HAL_StatusTypeDef hal_status = HAL_OK;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 36
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 36
 
 
  967              		.loc 1 488 1 is_stmt 1 view -0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1009              		.loc 1 511 3 is_stmt 1 view .LVU226
  512:USB_DEVICE/Target/usbd_conf.c **** 
  1010              		.loc 1 512 1 is_stmt 0 view .LVU227
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 37
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 37
 
 
  1011 001e 08BD     		pop	{r3, pc}
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1057 0013 04       		.byte	(.L96-.L93)/2
  1058 0014 02       		.byte	(.L94-.L93)/2
  1059 0015 03       		.byte	(.L91-.L93)/2
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 38
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 38
 
 
  1060              		.p2align 1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1104              		.loc 1 558 3 view .LVU249
  558:USB_DEVICE/Target/usbd_conf.c **** 
  1105              		.loc 1 558 16 is_stmt 0 view .LVU250
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 39
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 39
 
 
  1106 0002 D0F8C802 		ldr	r0, [r0, #712]
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1152              		.loc 1 587 1 is_stmt 1 view -0
  1153              		.cfi_startproc
  1154              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 40
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 40
 
 
  1155              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1196              	.LVL125:
  598:USB_DEVICE/Target/usbd_conf.c ****     break;
  1197              		.loc 1 598 18 view .LVU274
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 41
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 41
 
 
  1198 001c FCE7     		b	.L109
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1244              		.loc 1 635 5 view .LVU284
  634:USB_DEVICE/Target/usbd_conf.c ****     break;
  1245              		.loc 1 634 18 is_stmt 0 view .LVU285
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 42
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 42
 
 
  1246 0016 0120     		movs	r0, #1
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1290 000e 01EB8101 		add	r1, r1, r1, lsl #2
  1291 0012 03EBC103 		add	r3, r3, r1, lsl #3
  1292              	.LVL137:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 43
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 43
 
 
  662:USB_DEVICE/Target/usbd_conf.c ****   }
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  677:USB_DEVICE/Target/usbd_conf.c **** 
  1338              		.loc 1 677 3 view .LVU309
  677:USB_DEVICE/Target/usbd_conf.c **** 
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 44
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 44
 
 
  1339              		.loc 1 677 16 is_stmt 0 view .LVU310
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  708:USB_DEVICE/Target/usbd_conf.c ****   HAL_StatusTypeDef hal_status = HAL_OK;
  1386              		.loc 1 708 1 is_stmt 1 view -0
  1387              		.cfi_startproc
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 45
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 45
 
 
  1388              		@ args = 0, pretend = 0, frame = 0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1429 001a 0320     		movs	r0, #3
  1430              	.LVL158:
  719:USB_DEVICE/Target/usbd_conf.c ****     break;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 46
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 46
 
 
  1431              		.loc 1 719 18 view .LVU334
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  758:USB_DEVICE/Target/usbd_conf.c ****     case HAL_TIMEOUT :
  1478              		.loc 1 758 5 view .LVU344
  757:USB_DEVICE/Target/usbd_conf.c ****     break;
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 47
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 47
 
 
  1479              		.loc 1 757 18 is_stmt 0 view .LVU345
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1525              	.LFE349:
  1527              		.section	.text.HAL_PCDEx_LPM_Callback,"ax",%progbits
  1528              		.align	1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 48
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 48
 
 
  1529              		.global	HAL_PCDEx_LPM_Callback
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1572              	.L160:
  791:USB_DEVICE/Target/usbd_conf.c ****     {
  1573              		.loc 1 791 5 is_stmt 1 view .LVU368
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 49
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 49
 
 
  791:USB_DEVICE/Target/usbd_conf.c ****     {
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1620              		@ args = 0, pretend = 0, frame = 0
  1621              		@ frame_needed = 0, uses_anonymous_args = 0
  820:USB_DEVICE/Target/usbd_conf.c ****   HAL_Delay(Delay);
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 50
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 50
 
 
  1622              		.loc 1 820 1 is_stmt 0 view .LVU379
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1673              	.LFB353:
  841:USB_DEVICE/Target/usbd_conf.c **** 
  1674              		.loc 1 841 1 is_stmt 1 view -0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 51
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 51
 
 
  1675              		.cfi_startproc
@@ -3046,111 +3046,111 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 1
  1713              		.file 16 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
  1714              		.file 17 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
  1715              		.file 18 "<built-in>"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 52
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 52
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_conf.c
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:21     .text.SystemClockConfig_Resume:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:26     .text.SystemClockConfig_Resume:00000000 SystemClockConfig_Resume
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:45     .text.HAL_PCD_MspInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:51     .text.HAL_PCD_MspInit:00000000 HAL_PCD_MspInit
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:193    .text.HAL_PCD_MspInit:00000094 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:199    .text.HAL_PCD_MspDeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:205    .text.HAL_PCD_MspDeInit:00000000 HAL_PCD_MspDeInit
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:252    .text.HAL_PCD_MspDeInit:0000002c $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:258    .text.HAL_PCD_SetupStageCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:264    .text.HAL_PCD_SetupStageCallback:00000000 HAL_PCD_SetupStageCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:289    .text.HAL_PCD_DataOutStageCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:295    .text.HAL_PCD_DataOutStageCallback:00000000 HAL_PCD_DataOutStageCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:322    .text.HAL_PCD_DataInStageCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:328    .text.HAL_PCD_DataInStageCallback:00000000 HAL_PCD_DataInStageCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:355    .text.HAL_PCD_SOFCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:361    .text.HAL_PCD_SOFCallback:00000000 HAL_PCD_SOFCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:385    .text.HAL_PCD_ResetCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:391    .text.HAL_PCD_ResetCallback:00000000 HAL_PCD_ResetCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:436    .text.HAL_PCD_SuspendCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:442    .text.HAL_PCD_SuspendCallback:00000000 HAL_PCD_SuspendCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:481    .text.HAL_PCD_SuspendCallback:0000001c $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:486    .text.HAL_PCD_ResumeCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:492    .text.HAL_PCD_ResumeCallback:00000000 HAL_PCD_ResumeCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:535    .text.HAL_PCD_ResumeCallback:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:540    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:546    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 HAL_PCD_ISOOUTIncompleteCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:570    .text.HAL_PCD_ISOINIncompleteCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:576    .text.HAL_PCD_ISOINIncompleteCallback:00000000 HAL_PCD_ISOINIncompleteCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:600    .text.HAL_PCD_ConnectCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:606    .text.HAL_PCD_ConnectCallback:00000000 HAL_PCD_ConnectCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:630    .text.HAL_PCD_DisconnectCallback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:636    .text.HAL_PCD_DisconnectCallback:00000000 HAL_PCD_DisconnectCallback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:660    .text.USBD_LL_Init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:666    .text.USBD_LL_Init:00000000 USBD_LL_Init
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:772    .text.USBD_LL_Init:00000084 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1695   .bss.hpcd_USB_FS:00000000 hpcd_USB_FS
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:778    .text.USBD_LL_DeInit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:784    .text.USBD_LL_DeInit:00000000 USBD_LL_DeInit
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:811    .text.USBD_LL_DeInit:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:815    .text.USBD_LL_DeInit:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:838    .text.USBD_LL_Start:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:844    .text.USBD_LL_Start:00000000 USBD_LL_Start
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:871    .text.USBD_LL_Start:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:875    .text.USBD_LL_Start:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:898    .text.USBD_LL_Stop:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:904    .text.USBD_LL_Stop:00000000 USBD_LL_Stop
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:931    .text.USBD_LL_Stop:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:935    .text.USBD_LL_Stop:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:958    .text.USBD_LL_OpenEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:964    .text.USBD_LL_OpenEP:00000000 USBD_LL_OpenEP
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:996    .text.USBD_LL_OpenEP:00000018 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1000   .text.USBD_LL_OpenEP:0000001c $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1023   .text.USBD_LL_CloseEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1029   .text.USBD_LL_CloseEP:00000000 USBD_LL_CloseEP
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1056   .text.USBD_LL_CloseEP:00000012 $d
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 53
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:21     .text.SystemClockConfig_Resume:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:26     .text.SystemClockConfig_Resume:00000000 SystemClockConfig_Resume
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:45     .text.HAL_PCD_MspInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:51     .text.HAL_PCD_MspInit:00000000 HAL_PCD_MspInit
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:193    .text.HAL_PCD_MspInit:00000094 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:199    .text.HAL_PCD_MspDeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:205    .text.HAL_PCD_MspDeInit:00000000 HAL_PCD_MspDeInit
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:252    .text.HAL_PCD_MspDeInit:0000002c $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:258    .text.HAL_PCD_SetupStageCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:264    .text.HAL_PCD_SetupStageCallback:00000000 HAL_PCD_SetupStageCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:289    .text.HAL_PCD_DataOutStageCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:295    .text.HAL_PCD_DataOutStageCallback:00000000 HAL_PCD_DataOutStageCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:322    .text.HAL_PCD_DataInStageCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:328    .text.HAL_PCD_DataInStageCallback:00000000 HAL_PCD_DataInStageCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:355    .text.HAL_PCD_SOFCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:361    .text.HAL_PCD_SOFCallback:00000000 HAL_PCD_SOFCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:385    .text.HAL_PCD_ResetCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:391    .text.HAL_PCD_ResetCallback:00000000 HAL_PCD_ResetCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:436    .text.HAL_PCD_SuspendCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:442    .text.HAL_PCD_SuspendCallback:00000000 HAL_PCD_SuspendCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:481    .text.HAL_PCD_SuspendCallback:0000001c $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:486    .text.HAL_PCD_ResumeCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:492    .text.HAL_PCD_ResumeCallback:00000000 HAL_PCD_ResumeCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:535    .text.HAL_PCD_ResumeCallback:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:540    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:546    .text.HAL_PCD_ISOOUTIncompleteCallback:00000000 HAL_PCD_ISOOUTIncompleteCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:570    .text.HAL_PCD_ISOINIncompleteCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:576    .text.HAL_PCD_ISOINIncompleteCallback:00000000 HAL_PCD_ISOINIncompleteCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:600    .text.HAL_PCD_ConnectCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:606    .text.HAL_PCD_ConnectCallback:00000000 HAL_PCD_ConnectCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:630    .text.HAL_PCD_DisconnectCallback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:636    .text.HAL_PCD_DisconnectCallback:00000000 HAL_PCD_DisconnectCallback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:660    .text.USBD_LL_Init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:666    .text.USBD_LL_Init:00000000 USBD_LL_Init
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:772    .text.USBD_LL_Init:00000084 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1695   .bss.hpcd_USB_FS:00000000 hpcd_USB_FS
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:778    .text.USBD_LL_DeInit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:784    .text.USBD_LL_DeInit:00000000 USBD_LL_DeInit
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:811    .text.USBD_LL_DeInit:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:815    .text.USBD_LL_DeInit:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:838    .text.USBD_LL_Start:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:844    .text.USBD_LL_Start:00000000 USBD_LL_Start
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:871    .text.USBD_LL_Start:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:875    .text.USBD_LL_Start:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:898    .text.USBD_LL_Stop:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:904    .text.USBD_LL_Stop:00000000 USBD_LL_Stop
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:931    .text.USBD_LL_Stop:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:935    .text.USBD_LL_Stop:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:958    .text.USBD_LL_OpenEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:964    .text.USBD_LL_OpenEP:00000000 USBD_LL_OpenEP
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:996    .text.USBD_LL_OpenEP:00000018 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1000   .text.USBD_LL_OpenEP:0000001c $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1023   .text.USBD_LL_CloseEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1029   .text.USBD_LL_CloseEP:00000000 USBD_LL_CloseEP
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1056   .text.USBD_LL_CloseEP:00000012 $d
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 53
 
 
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1060   .text.USBD_LL_CloseEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1083   .text.USBD_LL_FlushEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1089   .text.USBD_LL_FlushEP:00000000 USBD_LL_FlushEP
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1116   .text.USBD_LL_FlushEP:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1120   .text.USBD_LL_FlushEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1143   .text.USBD_LL_StallEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1149   .text.USBD_LL_StallEP:00000000 USBD_LL_StallEP
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1176   .text.USBD_LL_StallEP:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1180   .text.USBD_LL_StallEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1203   .text.USBD_LL_ClearStallEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1209   .text.USBD_LL_ClearStallEP:00000000 USBD_LL_ClearStallEP
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1236   .text.USBD_LL_ClearStallEP:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1240   .text.USBD_LL_ClearStallEP:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1263   .text.USBD_LL_IsStallEP:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1269   .text.USBD_LL_IsStallEP:00000000 USBD_LL_IsStallEP
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1317   .text.USBD_LL_SetUSBAddress:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1323   .text.USBD_LL_SetUSBAddress:00000000 USBD_LL_SetUSBAddress
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1350   .text.USBD_LL_SetUSBAddress:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1354   .text.USBD_LL_SetUSBAddress:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1377   .text.USBD_LL_Transmit:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1383   .text.USBD_LL_Transmit:00000000 USBD_LL_Transmit
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1410   .text.USBD_LL_Transmit:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1414   .text.USBD_LL_Transmit:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1437   .text.USBD_LL_PrepareReceive:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1443   .text.USBD_LL_PrepareReceive:00000000 USBD_LL_PrepareReceive
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1470   .text.USBD_LL_PrepareReceive:00000012 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1474   .text.USBD_LL_PrepareReceive:00000016 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1497   .text.USBD_LL_GetRxDataSize:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1503   .text.USBD_LL_GetRxDataSize:00000000 USBD_LL_GetRxDataSize
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1528   .text.HAL_PCDEx_LPM_Callback:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1534   .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1604   .text.HAL_PCDEx_LPM_Callback:00000040 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1609   .text.USBD_LL_Delay:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1615   .text.USBD_LL_Delay:00000000 USBD_LL_Delay
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1636   .text.USBD_static_malloc:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1642   .text.USBD_static_malloc:00000000 USBD_static_malloc
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1660   .text.USBD_static_malloc:00000004 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1688   .bss.mem.0:00000000 mem.0
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1665   .text.USBD_static_free:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1671   .text.USBD_static_free:00000000 USBD_static_free
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1685   .bss.mem.0:00000000 $d
-C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s:1692   .bss.hpcd_USB_FS:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1060   .text.USBD_LL_CloseEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1083   .text.USBD_LL_FlushEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1089   .text.USBD_LL_FlushEP:00000000 USBD_LL_FlushEP
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1116   .text.USBD_LL_FlushEP:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1120   .text.USBD_LL_FlushEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1143   .text.USBD_LL_StallEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1149   .text.USBD_LL_StallEP:00000000 USBD_LL_StallEP
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1176   .text.USBD_LL_StallEP:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1180   .text.USBD_LL_StallEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1203   .text.USBD_LL_ClearStallEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1209   .text.USBD_LL_ClearStallEP:00000000 USBD_LL_ClearStallEP
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1236   .text.USBD_LL_ClearStallEP:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1240   .text.USBD_LL_ClearStallEP:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1263   .text.USBD_LL_IsStallEP:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1269   .text.USBD_LL_IsStallEP:00000000 USBD_LL_IsStallEP
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1317   .text.USBD_LL_SetUSBAddress:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1323   .text.USBD_LL_SetUSBAddress:00000000 USBD_LL_SetUSBAddress
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1350   .text.USBD_LL_SetUSBAddress:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1354   .text.USBD_LL_SetUSBAddress:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1377   .text.USBD_LL_Transmit:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1383   .text.USBD_LL_Transmit:00000000 USBD_LL_Transmit
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1410   .text.USBD_LL_Transmit:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1414   .text.USBD_LL_Transmit:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1437   .text.USBD_LL_PrepareReceive:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1443   .text.USBD_LL_PrepareReceive:00000000 USBD_LL_PrepareReceive
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1470   .text.USBD_LL_PrepareReceive:00000012 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1474   .text.USBD_LL_PrepareReceive:00000016 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1497   .text.USBD_LL_GetRxDataSize:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1503   .text.USBD_LL_GetRxDataSize:00000000 USBD_LL_GetRxDataSize
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1528   .text.HAL_PCDEx_LPM_Callback:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1534   .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1604   .text.HAL_PCDEx_LPM_Callback:00000040 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1609   .text.USBD_LL_Delay:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1615   .text.USBD_LL_Delay:00000000 USBD_LL_Delay
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1636   .text.USBD_static_malloc:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1642   .text.USBD_static_malloc:00000000 USBD_static_malloc
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1660   .text.USBD_static_malloc:00000004 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1688   .bss.mem.0:00000000 mem.0
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1665   .text.USBD_static_free:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1671   .text.USBD_static_free:00000000 USBD_static_free
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1685   .bss.mem.0:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s:1692   .bss.hpcd_USB_FS:00000000 $d
 
 UNDEFINED SYMBOLS
 SystemClock_Config
@@ -3166,7 +3166,7 @@ USBD_LL_SetupStage
 USBD_LL_DataOutStage
 USBD_LL_DataInStage
 USBD_LL_SOF
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccdzhA1j.s 			page 54
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccaqfFSx.s 			page 54
 
 
 USBD_LL_SetSpeed

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
   15:Core/Src/USB_storage.c ****     last_pointer = 0;
   42              		.loc 1 15 5 is_stmt 1 view .LVU3
   43              		.loc 1 15 18 is_stmt 0 view .LVU4
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 2
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 2
 
 
   44 0008 0021     		movs	r1, #0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
   94              		.cfi_offset 5, -8
   95              		.cfi_offset 14, -4
   96 0002 0446     		mov	r4, r0
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 3
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 3
 
 
   97 0004 0D46     		mov	r5, r1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
  141 0038 094A     		ldr	r2, .L11+12
  142 003a 1380     		strh	r3, [r2]	@ movhi
  143              	.L7:
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 4
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 4
 
 
   32:Core/Src/USB_storage.c ****     }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
  191              		@ frame_needed = 0, uses_anonymous_args = 0
  192              		@ link register save eliminated.
   39:Core/Src/USB_storage.c ****     if(data_retention_code != 0xAAFF55FF){
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 5
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 5
 
 
  193              		.loc 1 39 5 view .LVU40
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
   46:Core/Src/USB_storage.c ****         return USBDisk[last_pointer+i-1];
  234              		.loc 1 46 38 is_stmt 0 view .LVU56
  235 0030 0138     		subs	r0, r0, #1
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 6
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 6
 
 
   46:Core/Src/USB_storage.c ****         return USBDisk[last_pointer+i-1];
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
  286              		.align	1
  287              		.global	UDISK_tst
  288              		.syntax unified
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 7
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 7
 
 
  289              		.thumb
@@ -418,38 +418,38 @@ ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 1
  349              		.file 2 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/ma
  350              		.file 3 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/sy
  351              		.file 4 "Core/Inc/USB_storage.h"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 8
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 8
 
 
  352              		.file 5 "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include/st
  353              		.file 6 "<built-in>"
-ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s 			page 9
+ARM GAS  C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 USB_storage.c
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:21     .text.UDISK_init:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:27     .text.UDISK_init:00000000 UDISK_init
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:66     .text.UDISK_init:00000024 $d
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:321    .ram2_bss:00000004 is_first_writing
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:333    .ram2_bss:00000008 last_pointer
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:327    .ram2_bss:00000006 length
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:316    .ram2_bss:00000000 data_retention_code
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:345    .ram2_bss:00000010 USBDisk
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:76     .text.UDISK_push:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:82     .text.UDISK_push:00000000 UDISK_push
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:168    .text.UDISK_push:00000054 $d
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:339    .ram2_bss:0000000c last_timestamp
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:179    .text.UDISK_get:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:185    .text.UDISK_get:00000000 UDISK_get
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:250    .text.UDISK_get:00000040 $d
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:260    .text.UDISK_len:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:266    .text.UDISK_len:00000000 UDISK_len
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:281    .text.UDISK_len:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:286    .text.UDISK_tst:00000000 $t
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:292    .text.UDISK_tst:00000000 UDISK_tst
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:307    .text.UDISK_tst:00000008 $d
-C:\Users\kroko\AppData\Local\Temp\ccoYMrie.s:313    .ram2_bss:00000000 $d
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:21     .text.UDISK_init:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:27     .text.UDISK_init:00000000 UDISK_init
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:66     .text.UDISK_init:00000024 $d
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:321    .ram2_bss:00000004 is_first_writing
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:333    .ram2_bss:00000008 last_pointer
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:327    .ram2_bss:00000006 length
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:316    .ram2_bss:00000000 data_retention_code
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:345    .ram2_bss:00000010 USBDisk
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:76     .text.UDISK_push:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:82     .text.UDISK_push:00000000 UDISK_push
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:168    .text.UDISK_push:00000054 $d
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:339    .ram2_bss:0000000c last_timestamp
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:179    .text.UDISK_get:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:185    .text.UDISK_get:00000000 UDISK_get
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:250    .text.UDISK_get:00000040 $d
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:260    .text.UDISK_len:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:266    .text.UDISK_len:00000000 UDISK_len
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:281    .text.UDISK_len:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:286    .text.UDISK_tst:00000000 $t
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:292    .text.UDISK_tst:00000000 UDISK_tst
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:307    .text.UDISK_tst:00000008 $d
+C:\Users\kroko\AppData\Local\Temp\ccwnWGUF.s:313    .ram2_bss:00000000 $d
 
 UNDEFINED SYMBOLS
 memset
