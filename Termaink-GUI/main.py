@@ -22,6 +22,8 @@ epoch_diff = calendar.timegm((1904, 1, 1, 0, 0, 0, 0, 0, 0))
 
 useCelsius = True
 
+delta_time = 10 # time in seconds, normal - 1800, test - 10
+
 #some flags
 devConnected = False
 devPort = None
@@ -89,7 +91,7 @@ def saveFile():
         print("Selected File:", selected_files[0])
         with open(selected_files[0], "w") as file:
             for i in range(len(arrayOfTemp)):
-                file.write(f"{timestampToString(lastMeasurementTimestamp-1800*i)}, {arrayOfTemp[i] if useCelsius else round(arrayOfTemp[i] * 9/5 + 32, 2)}\n")
+                file.write(f"{timestampToString(lastMeasurementTimestamp-delta_time*i)}, {arrayOfTemp[i] if useCelsius else round(arrayOfTemp[i] * 9/5 + 32, 2)}\n")
 
 
 def getData():
@@ -114,6 +116,8 @@ def getData():
                 fillTable()
                 return
             try:
+                if n == 1 and float(ret) == 0.0:
+                    continue
                 arrayOfTemp.append(round(float(ret)/100, 2))
             except Exception as ex:
                 print(ex)
@@ -168,7 +172,7 @@ def fillTable():
     ui.tableWidget.setRowCount(len(arrayOfTemp))
     for n in range(len(arrayOfTemp)):
         ui.tableWidget.setItem(n, 1, QTableWidgetItem(str(arrayOfTemp[n] if useCelsius else round(arrayOfTemp[n] * 9/5 + 32, 2))))
-        ui.tableWidget.setItem(n, 0, QTableWidgetItem(str(timestampToString(lastMeasurementTimestamp-1800*n))))
+        ui.tableWidget.setItem(n, 0, QTableWidgetItem(str(timestampToString(lastMeasurementTimestamp-delta_time*n))))
 
 def setProgState(code):
     # 0 - Error

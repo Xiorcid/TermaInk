@@ -107,7 +107,6 @@ bool USB_DEVICE_IsConnected();
 void USB_SendAllData();
 void syncRTC();
 void Start_Timer();
-void Start_Next_Interval();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -237,13 +236,13 @@ int main(void)
       syncRTC();
     }
 
-    // if(!USB_DEVICE_IsConnected() && old_usb_state && HAL_GetTick()-usb_conn_tmr>150){
-    //   shutdown(true);
-    //   // SleepForSeconds(10);
-    // }
-    // old_usb_state = USB_DEVICE_IsConnected();
+    if(!USB_DEVICE_IsConnected() && old_usb_state && HAL_GetTick()-usb_conn_tmr>150){
+      shutdown(true);
+      // SleepForSeconds(10);
+    }
+    old_usb_state = USB_DEVICE_IsConnected();
 
-    if(go_to_sleep){
+    if(go_to_sleep && !USB_DEVICE_IsConnected()){
       HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
     }
     /* USER CODE END WHILE */
@@ -746,7 +745,8 @@ void plot(){
   }
 
   // Plot graf
-  uint32_t timestamp = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5);
+  // uint32_t timestamp = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR5);
+  uint32_t timestamp = UDISK_tst();
   for (uint8_t i = 0; i < q_len(); i++){
     EPD_DrawLine(10+(i*5), map(q_get(i), min, max, 110, 22), 10+((i+1)*5), map(q_get(i+1), min, max, 110, 22), BLACK, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
   }
@@ -860,21 +860,6 @@ void power_on(void){
 void Start_Timer(){
   HAL_LPTIM_Counter_Start_IT(&hlptim1, 256);
 }
-
-void Start_Next_Interval(){
-  // if (ticks_left == 0){
-  //   measure = true;
-  //   send_usb = USB_DEVICE_IsConnected();
-  //   power_on();
-  //   ticks_left = MEASURMENTS_DELTA_SEC * ticks_per_sec;
-  //   return;
-  // }
-
-  // uint32_t interval = (ticks_left > 256) ? 256 : ticks_left;
-  // HAL_LPTIM_TimeOut_Start_IT(&hlptim1, 0xFFFF, interval);
-  // ticks_left -= interval;
-}
-
 
 void HAL_LPTIM_AutoReloadMatchCallback(LPTIM_HandleTypeDef *hlptim)
 {
