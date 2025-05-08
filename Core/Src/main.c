@@ -45,7 +45,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 // #define VREFINT_CAL_ADDR    ((uint32_t*)0x1FFF75AA)
-#define MEASURMENTS_DELTA_SEC 10
+uint16_t MEASURMENTS_DELTA_SEC = 10;
 #define SAMPLES_PER_GRAPH 48
 #define IMG_SIZE  ((EPD_WIDTH % 8 == 0)? (EPD_WIDTH / 8 ): (EPD_WIDTH / 8 + 1)) * EPD_HEIGHT
 /* USER CODE END PD */
@@ -173,6 +173,7 @@ int main(void)
  bool old_usb_state = false;
 
   if (is_RTC_retained) {
+    MEASURMENTS_DELTA_SEC = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR4);
     // shutdown(true);
     // power_on();
     // Start_Timer();
@@ -901,14 +902,14 @@ float DS18_GET(){
 }
 
 void set_time(){
-  bool flag = true; // true ONLY FOR DEBUG!!!
+  bool flag = false; // true ONLY FOR DEBUG!!!
   Button bt_ok = {GPIOA, GPIO_PIN_0, TYPE_LOW_PULL};
   Button bt_down = {GPIOA, GPIO_PIN_8, TYPE_LOW_PULL};
   Button bt_up = {GPIOA, GPIO_PIN_9, TYPE_LOW_PULL};
 
-  int8_t d_time[5] = {25, 03, 24, 12, 00};
-  uint8_t up_lim[5] = {99, 12, 31, 23, 59};
-  uint8_t down_lim[5] = {0, 1, 1, 0, 0};
+  int8_t d_time[6] = {25, 03, 24, 12, 00, 24};
+  uint8_t up_lim[6] = {99, 12, 31, 23, 59, 48};
+  uint8_t down_lim[6] = {0, 1, 1, 0, 0, 1};
   uint8_t edit_ptr = 0;
 
   uint32_t upd_tmr = HAL_GetTick();
@@ -935,12 +936,17 @@ void set_time(){
 
     EPD_DrawDate(64, 32, &datetime, &Font24, WHITE, BLACK);
     EPD_DrawTime(86, 64, &datetime, &Font24, WHITE, BLACK);
+    char scaleBuf[15];
+    sprintf(scaleBuf, "Scale: %dh", d_time[5]);
+    EPD_DrawString_EN(66, 92, scaleBuf, &Font16, WHITE, BLACK);
     
     if(edit_ptr < 3){
       EPD_DrawLine(150-(edit_ptr*42), 52, 150-(edit_ptr*42)+30, 52, BLACK, 2, LINE_STYLE_SOLID);
-    }else{
+    }else if(edit_ptr < 5){
       EPD_DrawLine(-38+(edit_ptr*42), 84, -38+(edit_ptr*42)+30, 84, BLACK, 2, LINE_STYLE_SOLID);
-    } 
+    } else{
+      EPD_DrawLine(144, 108, 168, 108, BLACK, 2, LINE_STYLE_SOLID);
+    }
 
     EPD_DrawChar(26, 0, '+', &Font16, BLACK, WHITE);
     EPD_DrawChar(80, 0, '-', &Font16, BLACK, WHITE);
@@ -960,7 +966,7 @@ void set_time(){
       tick(&bt_down);
       if(isClicked(&bt_ok)){
         edit_ptr++;
-        if(edit_ptr == 5){
+        if(edit_ptr == 6){
           flag = true;
         }
         break;
@@ -1001,6 +1007,10 @@ void set_time(){
 
   HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
   HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+
+  MEASURMENTS_DELTA_SEC = d_time[5]*75;
+  HAL_PWR_EnableBkUpAccess();
+  HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR4, (long) MEASURMENTS_DELTA_SEC);
 
   Start_Timer();
 }
@@ -1055,7 +1065,7 @@ void USB_CDC_RxHandler(uint8_t* Buf, uint32_t Len)
 void syncRTC(){
   RTC_TimeTypeDef sTime = {0};
   RTC_DateTypeDef sDate = {0};
-  uint8_t day[2], month[2], year[2], hours[2], minutes[2], seconds[2];
+  uint8_t day[2], month[2], year[2], hours[2], minutes[2], seconds[2], scale[2];
 
   // uint8_t matched = sscanf(rtc_buf, "s%02d.%02d.%02d.%02d.%02d.%02d", &hours, &minutes, &seconds, &year , &month, &day);
   // if (matched < 6){
@@ -1069,6 +1079,7 @@ void syncRTC(){
   memcpy(year, &rtc_buf[10], 2);
   memcpy(month, &rtc_buf[13], 2);
   memcpy(day, &rtc_buf[16], 2);
+  memcpy(scale, &rtc_buf[19], 2);
   
   sTime.Hours = atoi(hours);
   sTime.Minutes = atoi(minutes);
@@ -1076,6 +1087,9 @@ void syncRTC(){
   sDate.Year = atoi(year);
   sDate.Month = atoi(month);
   sDate.Date = atoi(day);
+  MEASURMENTS_DELTA_SEC = atoi(scale)*75;
+  HAL_PWR_EnableBkUpAccess();
+  HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR4, (long) MEASURMENTS_DELTA_SEC);
 
   sDate.WeekDay = RTC_WEEKDAY_MONDAY;
   sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
@@ -1104,6 +1118,10 @@ void USB_SendAllData(){
   memset(buf, 0x00, 20);
   ln = sprintf(buf, "T%d\n\r", UDISK_tst());
   CDC_Transmit_FS(buf, ln);
+  HAL_Delay(2);
+  memset(buf, 0x00, 20);
+  ln = sprintf(buf, "D%d\n\r", MEASURMENTS_DELTA_SEC);
+  CDC_Transmit_FS(buf, ln);
 }
 
 // void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc){
@@ -1117,6 +1135,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   if(GPIO_Pin == GPIO_PIN_5) {
     initialise_usb_connection = true;
+    // power_on();
   } else {
       __NOP();
   }

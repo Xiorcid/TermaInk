@@ -95,7 +95,7 @@ def saveFile():
 
 
 def getData():
-    global lastMeasurementTimestamp, devConnected
+    global lastMeasurementTimestamp, devConnected, delta_time
     if not devConnected:
         return 1
     n = 0
@@ -113,6 +113,9 @@ def getData():
                 ui.progressBar.setValue(int(max))
                 lastMeasurementTimestamp = int(ret.replace("T", ""))
                 lastMeasurementTimestamp = timestampConv(lastMeasurementTimestamp)
+                continue
+            if 'D' in ret:
+                delta_time = int(ret.replace("D", ""))
                 fillTable()
                 return
             try:
@@ -136,8 +139,8 @@ def syncRTC():
     if not devConnected:
         return 1
     time_now = datetime.now()
-    print(f"s{time_now.hour:02}.{time_now.minute:02}.{time_now.second:02}.{time_now.year-2000:02}.{time_now.month:02}.{time_now.day:02}\0")
-    ser.write(bytes(f"s{time_now.hour:02}.{time_now.minute:02}.{time_now.second:02}.{time_now.year-2000:02}.{time_now.month:02}.{time_now.day:02}\0", 'utf-8'))
+    print(f"s{time_now.hour:02}.{time_now.minute:02}.{time_now.second:02}.{time_now.year-2000:02}.{time_now.month:02}.{time_now.day:02}.{ui.scale.currentText().split()[0]}\0")
+    ser.write(bytes(f"s{time_now.hour:02}.{time_now.minute:02}.{time_now.second:02}.{time_now.year-2000:02}.{time_now.month:02}.{time_now.day:02}.{ui.scale.currentText().split()[0]}\0", 'utf-8'))
     if "OK" not in ser.readline().rstrip().decode("utf-8"):
         return 1
     msgBox = QMessageBox()
@@ -161,6 +164,8 @@ def configureUI():
     ui.actionExit.triggered.connect(exit)
     ui.actionSave.triggered.connect(saveFile)
     ui.setWindowTitle(f"Termaink GUI")
+    ui.scale.clear()
+    ui.scale.addItems(["1 hour", "3 hours", "6 hours", "12 hours", "24 hours"])
     ui.tableWidget.setColumnCount(2)
     ui.actionUse_Farenheit.triggered.connect(changeUnit)
     ui.tableWidget.setRowCount(1)
