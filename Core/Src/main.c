@@ -121,7 +121,7 @@ bool set_rtc;
 char rtc_buf[30];
 uint32_t usb_conn_tmr;
 
-volatile uint32_t seconds_passed = 0;
+volatile uint32_t seconds_passed __attribute__((section(".ram2_bss")));
 #define TICKS_PER_SEC (32768 / 128) // = 256
 /* USER CODE END 0 */
 
@@ -172,19 +172,25 @@ int main(void)
 
  bool old_usb_state = false;
 
+   HAL_NVIC_SetPriority(LPTIM1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(LPTIM1_IRQn);
+  Start_Timer();
+
   if (is_RTC_retained) {
     MEASURMENTS_DELTA_SEC = HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR4);
-    // shutdown(true);
-    // power_on();
+    if(!USB_DEVICE_IsConnected()){
+      shutdown(true);
+      power_on();
+      seconds_passed = 0;
+    }
     // Start_Timer();
   }else{
     set_time();
+    seconds_passed = 0;
   }
 
   // HAL_GPIO_WritePin(TEST_GPIO_Port, TEST_Pin, GPIO_PIN_SET);
-  HAL_NVIC_SetPriority(LPTIM1_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(LPTIM1_IRQn);
-  Start_Timer();
+
 
   q_push(DS18_GET()*100);
   // q_push(DS18_GET()*100);
